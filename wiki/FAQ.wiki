@@ -1,8 +1,6 @@
-=FAQ=
-
 ==What is the latest version of GRIMOIRES==
 
-1.7.0. It can be downloaded from [/downloads/list here].
+1.7.0. It can be downloaded from [http://grimoires.googlecode.com/files/grimoires-1.7.0-src.tar.gz here].
 
 ==Where is the documentation for GRIMORIES==
 
