@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=INFN-NAPOLI-PAMELA,mds-vo-name=INFN-NAPOLI-PAMELA">
+    <Name>INFN-NAPOLI-PAMELA</Name>
+    <Description>INFN-NAPOLI-PAMELA</Description>
+    <UserSupportContact>mailto:grid-prod@na.infn.it</UserSupportContact>
+    <SysAdminContact>mailto:grid-prod@na.infn.it</SysAdminContact>
+    <SecurityContact>mailto:grid-prod@na.infn.it</SecurityContact>
+    <Location>Napoli, Italy</Location>
+    <Latitude>40.8527</Latitude>
+    <Longitude>14.2363</Longitude>
+    <Web>http://www.na.infn.it</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>CNAF-T1</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=pamelace01.na.infn.it,mds-vo-name=INFN-NAPOLI-PAMELA">
+        <Name>pamelace01.na.infn.it</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=pamelace01.na.infn.it,GlueClusterUniqueID=pamelace01.na.infn.it,mds-vo-name=INFN-NAPOLI-PAMELA">
+            <Name>pamelace01.na.infn.it</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SLC" Release="3.0.4" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="Opteron" ClockSpeed="2000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1025" RAMSize="2000"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1600" SF00="0"/>
+            <Location LocalID="VO-lhcb-Gauss-v25r11">
+                <Name>VO-lhcb-Gauss-v25r11</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2">
+                <Name>VO-lhcb-XmlDDDB-v22r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r14">
+                <Name>VO-lhcb-XmlDDDB-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v12r10">
+                <Name>VO-lhcb-Boole-v12r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r6">
+                <Name>VO-lhcb-DaVinci-v17r6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r7">
+                <Name>VO-lhcb-DaVinci-v17r7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r8">
+                <Name>VO-lhcb-DaVinci-v17r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v18r0">
+                <Name>VO-lhcb-DaVinci-v18r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r0">
+                <Name>VO-lhcb-DaVinci-v19r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r1">
+                <Name>VO-lhcb-DaVinci-v19r1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r2">
+                <Name>VO-lhcb-DaVinci-v19r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r3">
+                <Name>VO-lhcb-DaVinci-v19r3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r4">
+                <Name>VO-lhcb-DaVinci-v19r4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r17">
+                <Name>VO-lhcb-Brunel-v30r17</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r11">
+                <Name>VO-lhcb-DecFiles-v13r11</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v5r0">
+                <Name>VO-lhcb-ParamFiles-v5r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r12">
+                <Name>VO-lhcb-DecFiles-v13r12</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r10">
+                <Name>VO-lhcb-DecFiles-v13r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r12">
+                <Name>VO-lhcb-Gauss-v25r12</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r5">
+                <Name>VO-lhcb-DaVinci-v19r5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=pamelase01.na.infn.it,mds-vo-name=INFN-NAPOLI-PAMELA">
+        <InformationServiceURL>ldap://pamelase01.na.infn.it:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/flatfiles/SE00/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>47259224</UsedSpace>
+            <AvailableSpace>43990360</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/flatfiles/SE00/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>47259224</UsedSpace>
+            <AvailableSpace>43990360</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/flatfiles/SE00/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>47259224</UsedSpace>
+            <AvailableSpace>43990360</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/flatfiles/SE00/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>47259224</UsedSpace>
+            <AvailableSpace>43990360</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/flatfiles/SE00/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>47259224</UsedSpace>
+            <AvailableSpace>43990360</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/flatfiles/SE00/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>47259224</UsedSpace>
+            <AvailableSpace>43990360</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="infngrid">
+            <Path>/flatfiles/SE00/infngrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>47259224</UsedSpace>
+            <AvailableSpace>43990360</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="virgo">
+            <Path>/flatfiles/SE00/virgo</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>47259224</UsedSpace>
+            <AvailableSpace>43990360</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="babar">
+            <Path>/flatfiles/SE00/babar</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>47259224</UsedSpace>
+            <AvailableSpace>43990360</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gridit">
+            <Path>/flatfiles/SE00/gridit</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>47259224</UsedSpace>
+            <AvailableSpace>43990360</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="argo">
+            <Path>/flatfiles/SE00/argo</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>47259224</UsedSpace>
+            <AvailableSpace>43990360</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="pamela">
+            <Path>/flatfiles/SE00/pamela</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1146823956</UsedSpace>
+            <AvailableSpace>130490892</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://pamelase01.na.infn.it</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=pamelase01.na.infn.it:2136,mds-vo-name=INFN-NAPOLI-PAMELA">
+        <Name>INFN-NAPOLI-PAMELA-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://pamelase01.na.infn.it:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>infngrid</Owner>
+        <Owner>virgo</Owner>
+        <Owner>babar</Owner>
+        <Owner>gridit</Owner>
+        <Owner>argo</Owner>
+        <Owner>pamela</Owner>
+    </Service>
+</Site>

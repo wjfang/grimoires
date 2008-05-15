@@ -1,0 +1,1395 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=DESY-HH,mds-vo-name=DESY-HH">
+    <Name>DESY-HH</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:egee@desy.de</UserSupportContact>
+    <SysAdminContact>mailto:egee@desy.de</SysAdminContact>
+    <SecurityContact>mailto:egee@desy.de</SecurityContact>
+    <Location>Hamburg, Germany</Location>
+    <Latitude>53.58</Latitude>
+    <Longitude>9.88</Longitude>
+    <Web>http://grid.desy.de/</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>lcg-gridka-ce.fzk.de</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=grid-ce3.desy.de,mds-vo-name=DESY-HH">
+        <Name>grid-ce3.desy.de</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=grid-ce3.desy.de,GlueClusterUniqueID=grid-ce3.desy.de,mds-vo-name=DESY-HH">
+            <Name>grid-ce3.desy.de</Name>
+            <PhysicalCPUs>652</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.4" Name="ScientificSL"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel" Model="XEON" ClockSpeed="3070"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="2048"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1200" SF00="1200"/>
+            <Location LocalID="VO-atlas-cloud-DE">
+                <Name>VO-atlas-cloud-DE</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6">
+                <Name>VO-atlas-production-12.0.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.95">
+                <Name>VO-atlas-production-12.0.95</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.20">
+                <Name>VO-atlas-production-13.0.20</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.30">
+                <Name>VO-atlas-production-13.0.30</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-tier-T2">
+                <Name>VO-atlas-tier-T2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_4">
+                <Name>VO-cms-CMSSW_1_4_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_6">
+                <Name>VO-cms-CMSSW_1_4_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0">
+                <Name>VO-cms-CMSSW_1_6_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_1">
+                <Name>VO-cms-CMSSW_1_6_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_3">
+                <Name>VO-cms-CMSSW_1_6_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_4">
+                <Name>VO-cms-CMSSW_1_6_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_5">
+                <Name>VO-cms-CMSSW_1_6_5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc4_ia32_gcc345">
+                <Name>VO-cms-slc4_ia32_gcc345</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dech-CMSSW_1_4_6">
+                <Name>VO-dech-CMSSW_1_4_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DECH_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-desy-test1">
+                <Name>VO-desy-test1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DESY_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-desy-test2">
+                <Name>VO-desy-test2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DESY_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-hermes-primakoff-ver3.gmc">
+                <Name>VO-hermes-primakoff-ver3.gmc</Name>
+                <Version>Prod</Version>
+                <Path>$VO_HERMES_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-hermes-pink">
+                <Name>VO-hermes-pink</Name>
+                <Version>Prod</Version>
+                <Path>$VO_HERMES_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-hermes-gmc_aroma">
+                <Name>VO-hermes-gmc_aroma</Name>
+                <Version>Prod</Version>
+                <Path>$VO_HERMES_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-hermes-floyd">
+                <Name>VO-hermes-floyd</Name>
+                <Version>Prod</Version>
+                <Path>$VO_HERMES_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-hermes-hexe">
+                <Name>VO-hermes-hexe</Name>
+                <Version>Prod</Version>
+                <Path>$VO_HERMES_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-hermes-gmc_lepto">
+                <Name>VO-hermes-gmc_lepto</Name>
+                <Version>Prod</Version>
+                <Path>$VO_HERMES_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-hermes-hep">
+                <Name>VO-hermes-hep</Name>
+                <Version>Prod</Version>
+                <Path>$VO_HERMES_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-hermes-hmc">
+                <Name>VO-hermes-hmc</Name>
+                <Version>Prod</Version>
+                <Path>$VO_HERMES_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-hermes-gmc_epep">
+                <Name>VO-hermes-gmc_epep</Name>
+                <Version>Prod</Version>
+                <Path>$VO_HERMES_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-hermes-pinky">
+                <Name>VO-hermes-pinky</Name>
+                <Version>Prod</Version>
+                <Path>$VO_HERMES_SW_DIR</Path>
+            </Location>
+            <Location LocalID="this-is-a-dirty-hack-to-prevent-getting-warnings-from-the-sam-tests-as-long-as-the-ops-people-do-not-fill-this-file-with-some-meaningful-information">
+                <Name>this-is-a-dirty-hack-to-prevent-getting-warnings-from-the-sam-tests-as-long-as-the-ops-people-do-not-fill-this-file-with-some-meaningful-information</Name>
+                <Version>Prod</Version>
+                <Path>$VO_OPS_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=zeus-ce1.desy.de,mds-vo-name=DESY-HH">
+        <Name>zeus-ce1.desy.de</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=zeus-ce1.desy.de,GlueClusterUniqueID=zeus-ce1.desy.de,mds-vo-name=DESY-HH">
+            <Name>zeus-ce1.desy.de</Name>
+            <PhysicalCPUs>16</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.4" Name="ScientificSL"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel" Model="XEON" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1024" RAMSize="1024"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1000" SF00="1000"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=grid-se2.desy.de,mds-vo-name=DESY-HH">
+        <InformationServiceURL>ldap://grid-se2.desy.de:2170/mds-vo-name=resource,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/storage/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>125526276</UsedSpace>
+            <AvailableSpace>8675024</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/storage/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>125526276</UsedSpace>
+            <AvailableSpace>8675024</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="calice">
+            <Path>/storage/calice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>125526276</UsedSpace>
+            <AvailableSpace>8675024</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>/storage/geant4</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>125526276</UsedSpace>
+            <AvailableSpace>8675024</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="hermes">
+            <Path>/storage/hermes</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>125526276</UsedSpace>
+            <AvailableSpace>8675024</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="hone">
+            <Path>/storage/hone</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>125526276</UsedSpace>
+            <AvailableSpace>8675024</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="icecube">
+            <Path>/storage/icecube</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>125526276</UsedSpace>
+            <AvailableSpace>8675024</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ilc">
+            <Path>/storage/ilc</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>125526276</UsedSpace>
+            <AvailableSpace>8675024</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ildg">
+            <Path>/storage/ildg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>125526276</UsedSpace>
+            <AvailableSpace>8675024</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="zeus">
+            <Path>/storage/zeus</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>125526276</UsedSpace>
+            <AvailableSpace>8675024</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/storage/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>125526276</UsedSpace>
+            <AvailableSpace>8675024</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/storage/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>125526276</UsedSpace>
+            <AvailableSpace>8675024</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dech">
+            <Path>/storage/dech</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>125526276</UsedSpace>
+            <AvailableSpace>8675024</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dgtest">
+            <Path>/storage/dgtest</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>125526276</UsedSpace>
+            <AvailableSpace>8675024</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ghep">
+            <Path>/storage/ghep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>125526276</UsedSpace>
+            <AvailableSpace>8675024</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="desy">
+            <Path>/storage/desy</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>125526276</UsedSpace>
+            <AvailableSpace>8675024</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://grid-se2.desy.de</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=grid-se3.desy.de,mds-vo-name=DESY-HH">
+        <InformationServiceURL>ldap://grid-se3.desy.de:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>2927</SizeTotal>
+        <SizeFree>1939</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/pnfs/desy.de/data/atlas</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>287692325</UsedSpace>
+            <AvailableSpace>21545320</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dcms">
+            <Path>/pnfs/desy.de/data/dcms</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>309237645</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/pnfs/desy.de/data/cms</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>7375645</UsedSpace>
+            <AvailableSpace>301862001</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="baikal">
+            <Path>/pnfs/desy.de/data/baikal</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4192570</UsedSpace>
+            <AvailableSpace>285717722</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="calice">
+            <Path>/pnfs/desy.de/data/calice</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>72023877</UsedSpace>
+            <AvailableSpace>237213768</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dgtest">
+            <Path>/pnfs/desy.de/data/dgtest</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>178427958</UsedSpace>
+            <AvailableSpace>57795243</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>/pnfs/desy.de/data/geant4</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>236223201</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gear">
+            <Path>/pnfs/desy.de/data/gear</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4192570</UsedSpace>
+            <AvailableSpace>285717722</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="herab">
+            <Path>/pnfs/desy.de/data/herab</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4192570</UsedSpace>
+            <AvailableSpace>285717722</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="hermes">
+            <Path>/pnfs/desy.de/data/hermes</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4192570</UsedSpace>
+            <AvailableSpace>285717722</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="hone">
+            <Path>/pnfs/desy.de/data/hone</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>305247000</UsedSpace>
+            <AvailableSpace>3990645</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="icecube">
+            <Path>/pnfs/desy.de/data/icecube</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4192570</UsedSpace>
+            <AvailableSpace>285717722</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ilc">
+            <Path>/pnfs/desy.de/data/ilc</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>72023877</UsedSpace>
+            <AvailableSpace>237213768</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ildg">
+            <Path>/pnfs/desy.de/data/ildg</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1035</UsedSpace>
+            <AvailableSpace>309236611</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="zeus">
+            <Path>/pnfs/desy.de/data/zeus</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>133096434</UsedSpace>
+            <AvailableSpace>176141211</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/pnfs/desy.de/data/dteam</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>178427958</UsedSpace>
+            <AvailableSpace>57795243</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/pnfs/desy.de/data/ops</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>178427958</UsedSpace>
+            <AvailableSpace>57795243</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dech">
+            <Path>/pnfs/desy.de/data/dech</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4192570</UsedSpace>
+            <AvailableSpace>285717722</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ghep">
+            <Path>/pnfs/desy.de/data/ghep</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4192570</UsedSpace>
+            <AvailableSpace>285717722</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="desy">
+            <Path>/pnfs/desy.de/data/desy</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4192570</UsedSpace>
+            <AvailableSpace>285717722</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp@grid-se3.desy.de">
+            <Endpoint>gsiftp://grid-se3.desy.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0</Version>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gridftp@grid-se3.desy.de">
+            <Endpoint>gridftp://grid-se3.desy.de:2811</Endpoint>
+            <Type>gridftp</Type>
+            <Version>1.0</Version>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsidcap@grid-se3.desy.de">
+            <Endpoint>gsidcap://grid-se3.desy.de:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.0</Version>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-gsi-grid-se3@gsidcap-grid-se3Domain">
+            <Endpoint>gsidcap://grid-se3.desy.de:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-grid-se3@gridftp-grid-se3Domain">
+            <Endpoint>gsiftp://grid-se3.desy.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-grid-se3@dcap-grid-se3Domain">
+            <Endpoint>dcap://grid-se3.desy.de:22125</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <ControlProtocol LocalID="SRM@grid-se3.desy.de">
+            <Endpoint>httpg://grid-se3.desy.de:8443/srm/managerv1</Endpoint>
+            <Type>SRM</Type>
+            <Version>1.1.0</Version>
+            <Capability>space allocation</Capability>
+            <Capability>space management</Capability>
+        </ControlProtocol>
+        <ControlProtocol LocalID="SRM-grid-se3@srm-grid-se3Domain">
+            <Endpoint>httpg://grid-se3.desy.de:8443/srm/managerv1</Endpoint>
+            <Type>SRM</Type>
+            <Version>1.1.1</Version>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=dcache-se-atlas.desy.de,mds-vo-name=DESY-HH">
+        <InformationServiceURL>ldap://dcache-se-atlas:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>24288</SizeTotal>
+        <SizeFree>23238</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/pnfs/desy.de/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/pnfs/desy.de/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3998981</UsedSpace>
+            <AvailableSpace>468447421</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/pnfs/desy.de/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3998981</UsedSpace>
+            <AvailableSpace>468447421</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="desy">
+            <Path>/pnfs/desy.de/desy</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3998981</UsedSpace>
+            <AvailableSpace>468447421</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://dcache-se-atlas.desy.de</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsidcap">
+            <Endpoint>httpg://dcache-se-atlas.desy.de</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://dcache-se-atlas.desy.de</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=dcache-se-cms.desy.de,mds-vo-name=DESY-HH">
+        <InformationServiceURL>ldap://dcache-se-cms:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>48114</SizeTotal>
+        <SizeFree>26734</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="cms">
+            <Path>/pnfs/desy.de//cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/pnfs/desy.de//dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>954381</UsedSpace>
+            <AvailableSpace>471492022</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/pnfs/desy.de//ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>954381</UsedSpace>
+            <AvailableSpace>471492022</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="desy">
+            <Path>/pnfs/desy.de//desy</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>954381</UsedSpace>
+            <AvailableSpace>471492022</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://dcache-se-cms.desy.de</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsidcap">
+            <Endpoint>httpg://dcache-se-cms.desy.de</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://dcache-se-cms.desy.de</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=srm-dcache.desy.de,mds-vo-name=DESY-HH">
+        <InformationServiceURL>ldap://srm-dcache.desy.de:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>109689</SizeTotal>
+        <SizeFree>58027</SizeFree>
+        <StorageArea LocalID="atlas">
+            <Path>atlas:/pnfs/desy.de/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>12345</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>8647899423</UsedSpace>
+            <AvailableSpace>1850074390</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>cms:/pnfs/desy.de/cms</Path>
+            <Type>permanent</Type>
+            <Quota>12345</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>8647899423</UsedSpace>
+            <AvailableSpace>1850074390</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dcms">
+            <Path>dcms:/pnfs/desy.de/dcms</Path>
+            <Type>permanent</Type>
+            <Quota>12345</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>8404238485</UsedSpace>
+            <AvailableSpace>1849995934</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ilc">
+            <Path>ilc:/pnfs/desy.de/ilc</Path>
+            <Type>permanent</Type>
+            <Quota>12345</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2040109466</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="zeus">
+            <Path>zeus:/pnfs/desy.de/zeus</Path>
+            <Type>permanent</Type>
+            <Quota>12345</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2008660</UsedSpace>
+            <AvailableSpace>69924040</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="hone">
+            <Path>hone:/pnfs/desy.de/hone</Path>
+            <Type>permanent</Type>
+            <Quota>12345</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2008660</UsedSpace>
+            <AvailableSpace>69924040</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ildg">
+            <Path>ildg:/pnfs/desy.de/ildg</Path>
+            <Type>permanent</Type>
+            <Quota>12345</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2008660</UsedSpace>
+            <AvailableSpace>69924040</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>dteam:/pnfs/desy.de/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>12345</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>8899138736</UsedSpace>
+            <AvailableSpace>1850090664</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>ops:/pnfs/desy.de/ops</Path>
+            <Type>permanent</Type>
+            <Quota>12345</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494900251</UsedSpace>
+            <AvailableSpace>94730</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>geant4:/pnfs/desy.de/geant4</Path>
+            <Type>permanent</Type>
+            <Quota>12345</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2008660</UsedSpace>
+            <AvailableSpace>69924040</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>calice:/pnfs/desy.de/calice</Path>
+            <Type>permanent</Type>
+            <Quota>12345</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2008660</UsedSpace>
+            <AvailableSpace>69924040</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>desy:/pnfs/desy.de/desy</Path>
+            <Type>permanent</Type>
+            <Quota>12345</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494900251</UsedSpace>
+            <AvailableSpace>94730</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>baikal:/pnfs/desy.de/baikal</Path>
+            <Type>permanent</Type>
+            <Quota>12345</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2008660</UsedSpace>
+            <AvailableSpace>69924040</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>icecube:/pnfs/desy.de/icecube</Path>
+            <Type>permanent</Type>
+            <Quota>12345</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2008660</UsedSpace>
+            <AvailableSpace>69924040</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="hermes">
+            <Path>hermes:/pnfs/desy.de/hermes</Path>
+            <Type>permanent</Type>
+            <Quota>12345</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>1020054733</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>ghep:/pnfs/desy.de/ghep</Path>
+            <Type>permanent</Type>
+            <Quota>12345</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2008660</UsedSpace>
+            <AvailableSpace>69924040</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>dech:/pnfs/desy.de/dech</Path>
+            <Type>permanent</Type>
+            <Quota>12345</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2008660</UsedSpace>
+            <AvailableSpace>69924040</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="GFTP-dcache41@gridftp-dcache41Domain">
+            <Endpoint>gsiftp://dcache41.desy.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcache39@gridftp-dcache39Domain">
+            <Endpoint>gsiftp://dcache39.desy.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcache40@gridftp-dcache40Domain">
+            <Endpoint>gsiftp://dcache40.desy.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-srm-dcache@dcap-srm-dcacheDomain">
+            <Endpoint>dcap://srm-dcache.desy.de:22125</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcache-ftpdoor01@gridftp-dcache-ftpdoor01Domain">
+            <Endpoint>gsiftp://dcache-ftpdoor01.desy.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcache20@gridftp-dcache20Domain">
+            <Endpoint>gsiftp://dcache20.desy.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-dcache-dr01@dcap-dcache-dr01Domain">
+            <Endpoint>dcap://dcache-dr01.desy.de:22125</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcache38@gridftp-dcache38Domain">
+            <Endpoint>gsiftp://dcache38.desy.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcache21@gridftp-dcache21Domain">
+            <Endpoint>gsiftp://dcache21.desy.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcache30@gridftp-dcache30Domain">
+            <Endpoint>gsiftp://dcache30.desy.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcache22@gridftp-dcache22Domain">
+            <Endpoint>gsiftp://dcache22.desy.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcache31@gridftp-dcache31Domain">
+            <Endpoint>gsiftp://dcache31.desy.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <ControlProtocol LocalID="SRM-srm-dcache@srm-srm-dcacheDomain">
+            <Endpoint>httpg://srm-dcache.desy.de:8443/srm/managerv1</Endpoint>
+            <Type>SRM</Type>
+            <Version>1.1.1</Version>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=http://grid-lfc0.desy.de:8085/,mds-vo-name=DESY-HH">
+        <Name>DESY-HH-lfc-dli</Name>
+        <Type>data-location-interface</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>http://grid-lfc0.desy.de:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-08-21T16:51:28.000+02:00</StartTime>
+        <Owner>calice</Owner>
+        <Owner>desy</Owner>
+        <Owner>ghep</Owner>
+        <Owner>hermes</Owner>
+        <Owner>hone</Owner>
+        <Owner>icecube</Owner>
+        <Owner>ilc</Owner>
+        <Owner>ildg</Owner>
+        <Owner>zeus</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=grid-lfc0.desy.de,mds-vo-name=DESY-HH">
+        <Name>DESY-HH-lfc</Name>
+        <Type>lcg-file-catalog</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>grid-lfc0.desy.de</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-08-21T16:51:28.000+02:00</StartTime>
+        <Owner>calice</Owner>
+        <Owner>desy</Owner>
+        <Owner>ghep</Owner>
+        <Owner>hermes</Owner>
+        <Owner>hone</Owner>
+        <Owner>icecube</Owner>
+        <Owner>ilc</Owner>
+        <Owner>ildg</Owner>
+        <Owner>zeus</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=grid-pxy0.desy.de:7512,mds-vo-name=DESY-HH">
+        <Name>DESY-HH-myproxy</Name>
+        <Type>MyProxy</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>grid-pxy0.desy.de:7512</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=grid-rb0.desy.de:7772,mds-vo-name=DESY-HH">
+        <Name>DESY-HH-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>grid-rb0.desy.de:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>dech</Owner>
+        <Owner>desy</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=grid-rb1.desy.de:7772,mds-vo-name=DESY-HH">
+        <Name>DESY-HH-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>grid-rb1.desy.de:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>calice</Owner>
+        <Owner>geant4</Owner>
+        <Owner>hermes</Owner>
+        <Owner>hone</Owner>
+        <Owner>icecube</Owner>
+        <Owner>ilc</Owner>
+        <Owner>ildg</Owner>
+        <Owner>zeus</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>dech</Owner>
+        <Owner>dgtest</Owner>
+        <Owner>ghep</Owner>
+        <Owner>desy</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=grid-rb2.desy.de:7772,mds-vo-name=DESY-HH">
+        <Name>DESY-HH-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>grid-rb2.desy.de:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>calice</Owner>
+        <Owner>hermes</Owner>
+        <Owner>hone</Owner>
+        <Owner>icecube</Owner>
+        <Owner>ilc</Owner>
+        <Owner>ildg</Owner>
+        <Owner>zeus</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>dech</Owner>
+        <Owner>ghep</Owner>
+        <Owner>desy</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=grid-rb4.desy.de:7772,mds-vo-name=DESY-HH">
+        <Name>DESY-HH-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>grid-rb4.desy.de:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>calice</Owner>
+        <Owner>hermes</Owner>
+        <Owner>hone</Owner>
+        <Owner>icecube</Owner>
+        <Owner>ilc</Owner>
+        <Owner>ildg</Owner>
+        <Owner>zeus</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>dech</Owner>
+        <Owner>ghep</Owner>
+        <Owner>desy</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://grid-se3.desy.de:8443/srm/managerv1,mds-vo-name=DESY-HH">
+        <Name>DESY-HH-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://grid-se3.desy.de:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://dcache-se-atlas.desy.de:8443/srm/managerv1,mds-vo-name=DESY-HH">
+        <Name>DESY-HH-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://dcache-se-atlas.desy.de:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://dcache-se-atlas.desy.de:8443/srm/managerv2,mds-vo-name=DESY-HH">
+        <Name>DESY-HH-srm</Name>
+        <Type>srm</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://dcache-se-atlas.desy.de:8443/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://dcache-se-cms.desy.de:8443/srm/managerv1,mds-vo-name=DESY-HH">
+        <Name>DESY-HH-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://dcache-se-cms.desy.de:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://dcache-se-cms.desy.de:8443/srm/managerv2,mds-vo-name=DESY-HH">
+        <Name>DESY-HH-srm</Name>
+        <Type>srm</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://dcache-se-cms.desy.de:8443/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://srm-dcache.desy.de:8443/srm/managerv1,mds-vo-name=DESY-HH">
+        <Name>DESY-HH-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://srm-dcache.desy.de:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=grid-wms0.desy.de:7772,mds-vo-name=DESY-HH">
+        <Name>DESY-HH-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>grid-wms0.desy.de:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>calice</Owner>
+        <Owner>cms</Owner>
+        <Owner>geant4</Owner>
+        <Owner>ghep</Owner>
+        <Owner>hermes</Owner>
+        <Owner>hone</Owner>
+        <Owner>icecube</Owner>
+        <Owner>ilc</Owner>
+        <Owner>ildg</Owner>
+        <Owner>zeus</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>dech</Owner>
+        <Owner>desy</Owner>
+        <Owner>dgtest</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=grid-wms1.desy.de:7772,mds-vo-name=DESY-HH">
+        <Name>DESY-HH-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>grid-wms1.desy.de:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>calice</Owner>
+        <Owner>geant4</Owner>
+        <Owner>ghep</Owner>
+        <Owner>hermes</Owner>
+        <Owner>hone</Owner>
+        <Owner>icecube</Owner>
+        <Owner>ilc</Owner>
+        <Owner>ildg</Owner>
+        <Owner>zeus</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>dech</Owner>
+        <Owner>desy</Owner>
+        <Owner>dgtest</Owner>
+    </Service>
+</Site>

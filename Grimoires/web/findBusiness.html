@@ -1,0 +1,147 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-gb">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Find Business</title>
+
+<script type="text/javascript">
+// See http://www.webreference.com/programming/javascript/definitive2/index.html
+function run() {
+	// get input script
+	var name = document.form.name.value; //.getElementById("input").value;
+	var input = "find business by name=\"" + name + "\";";
+	
+	// get an ajax object
+	var xmlHttp;
+  	try {
+	    // Firefox, Opera 8.0+, Safari
+	    xmlHttp=new XMLHttpRequest();
+    } catch (e) {
+    	// Internet Explorer
+    	try {
+    		xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+		} catch (e) {
+			try {
+				xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+			} catch (e) {
+        		alert("Your browser does not support AJAX!");
+        		return false;
+        	}
+		}
+	}
+	
+	// callback
+	xmlHttp.onreadystatechange=function() {
+		if(xmlHttp.readyState==4) {
+			var text = xmlHttp.responseText;
+			var doc;			
+			if (typeof DOMParser != "undefined") { 
+	        	// Mozilla, Firefox, and related browsers 
+	        	doc = (new DOMParser()).parseFromString(text, "application/xml"); 
+	    	} else if (typeof ActiveXObject != "undefined") { 
+	        	// Internet Explorer. 
+	        	doc = new ActiveXObject("MSXML2.DOMDocument");  // Create an empty document 
+	        	doc.loadXML(text);            // Parse text into it 
+	        }
+			
+			var schema = { 
+	        	rowtag: "businessEntity", 
+	        	columns: [ 
+	            	{ tagname: "name", label: "Name" }, 
+	            	{ tagname: "@businessKey", label: "Key" } 
+	        	] 
+	    	};
+	    	
+			if (doc != null) {
+				makeTable(doc, schema, "table");  // Convert to an HTML table 
+			} 
+	    	
+		}
+	}
+	
+	// send request
+	xmlHttp.open("POST", "interpreter.jsp", true);
+	xmlHttp.send(input);
+}
+
+function makeTable(xmldoc, schema, element) { 
+	// Create the <table> element 
+	var table = document.createElement("table"); 
+	// Create the header row of <th> elements in a <tr> in a <thead> 
+	var thead = document.createElement("thead"); 
+	var header = document.createElement("tr"); 
+	for(var i = 0; i < schema.columns.length; i++) { 
+		var c = schema.columns[i]; 
+		var label = (typeof c == "string")?c:c.label; 
+		var cell = document.createElement("th"); 
+		cell.appendChild(document.createTextNode(label)); 
+		header.appendChild(cell); 
+	} 
+	// Put the header into the table 
+	thead.appendChild(header); 
+	table.appendChild(thead); 
+	// The remaining rows of the table go in a <tbody> 
+	var tbody = document.createElement("tbody"); 
+	table.appendChild(tbody); 
+	// Now get the elements that contain our data from the xml document 
+	var xmlrows = xmldoc.getElementsByTagName(schema.rowtag); 
+	// Loop through these elements. Each one contains a row of the table. 
+	for(var r=0; r < xmlrows.length; r++) { 
+		// This is the XML element that holds the data for the row 
+		var xmlrow = xmlrows[r]; 
+		// Create an HTML element to display the data in the row 
+		var row = document.createElement("tr"); 
+		// Loop through the columns specified by the schema object 
+		for(var c = 0; c < schema.columns.length; c++) { 
+			var sc = schema.columns[c]; 
+			var tagname = (typeof sc == "string")?sc:sc.tagname; 
+			var celltext; 
+			if (tagname.charAt(0) == '@') { 
+				// If the tagname begins with '@', it is an attribute name 
+				celltext = xmlrow.getAttribute(tagname.substring(1)); 
+			} else { 
+				// Find the XML element that holds the data for this column 
+				var xmlcell = xmlrow.getElementsByTagName(tagname)[0]; 
+				// Assume that element has a text node as its first child 
+				var celltext = xmlcell.firstChild.data; 
+			} 
+			// Create the HTML element for this cell 
+			var cell = document.createElement("td"); 
+			// Put the text data into the HTML cell 
+			cell.appendChild(document.createTextNode(celltext)); 
+			// Add the cell to the row 
+			row.appendChild(cell); 
+		} 
+		// And add the row to the tbody of the table 
+		tbody.appendChild(row); 
+	} 
+	// Set an HTML attribute on the table element by setting a property. 
+	// Note that in XML we must use setAttribute() instead. 
+	table.frame = "border"; 
+	// Now that we've created the HTML table, add it to the specified element. 
+	// If that element is a string, assume it is an element ID. 
+	if (typeof element == "string") element = document.getElementById(element); 
+	element.appendChild(table); 
+} 
+</script>
+</head>
+
+<body>
+
+<h2>Find Business</h2>
+
+<!-- <form method="POST" action="--WEBBOT-SELF--"> -->
+<form name="form">
+<h3>Name: <input type="text" name="T1" size="20" name="name" id="name"></h3>
+<p>
+	<input type="button" value="Submit" onclick="run()">
+	<input type="reset" value="Reset">
+</p>
+</form>
+
+<div id="table"><!--table will be inserted here --></div>
+
+</body>
+
+</html>

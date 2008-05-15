@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=INAF-TRIESTE,mds-vo-name=INAF-TRIESTE">
+    <Name>INAF-TRIESTE</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:grid-prod@oats.inaf.it</UserSupportContact>
+    <SysAdminContact>mailto:grid-prod@oats.inaf.it</SysAdminContact>
+    <SecurityContact>mailto:grid-prod@oats.inaf.it</SecurityContact>
+    <Location>Trieste, Italy</Location>
+    <Latitude>45.6496</Latitude>
+    <Longitude>13.7689</Longitude>
+    <Web>http://www.si.inaf.it</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-3</OtherInfo>
+    <OtherInfo>CNAF-T1</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=grid001.oat.ts.astro.it,mds-vo-name=INAF-TRIESTE">
+        <Name>grid001.oat.ts.astro.it</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=grid001.oat.ts.astro.it,GlueClusterUniqueID=grid001.oat.ts.astro.it,mds-vo-name=INAF-TRIESTE">
+            <Name>grid001.oat.ts.astro.it</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SLC" Release="3.0.8" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="PIII" ClockSpeed="1001"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="2048"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="381" SF00="0"/>
+            <Location LocalID="VO-gridit-GEANT4CATANIA-aborted-install">
+                <Name>VO-gridit-GEANT4CATANIA-aborted-install</Name>
+                <Version>Prod</Version>
+                <Path>$VO_GRIDIT_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-gridit-GEANT4CT">
+                <Name>VO-gridit-GEANT4CT</Name>
+                <Version>Prod</Version>
+                <Path>$VO_GRIDIT_SW_DIR</Path>
+            </Location>
+            <Location LocalID="/usr/local/HealPix/bin">
+                <Name>/usr/local/HealPix/bin</Name>
+                <Version>Prod</Version>
+                <Path>$VO_PLANCK_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=grid002.oat.ts.astro.it,mds-vo-name=INAF-TRIESTE">
+        <InformationServiceURL>ldap://grid002.oat.ts.astro.it:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="infngrid">
+            <Path>/flatfiles/SE00/infngrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1216861152</UsedSpace>
+            <AvailableSpace>345589120</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/flatfiles/SE00/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1216861152</UsedSpace>
+            <AvailableSpace>345589120</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/flatfiles/SE00/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1216861152</UsedSpace>
+            <AvailableSpace>345589120</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="planck">
+            <Path>/flatfiles/SE00/planck</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1216861152</UsedSpace>
+            <AvailableSpace>345589120</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gridit">
+            <Path>/flatfiles/SE00/gridit</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1216861152</UsedSpace>
+            <AvailableSpace>345589120</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="inaf">
+            <Path>/flatfiles/SE00/inaf</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1216861152</UsedSpace>
+            <AvailableSpace>345589120</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="egrid">
+            <Path>/flatfiles/SE00/egrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1216861152</UsedSpace>
+            <AvailableSpace>345589120</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://grid002.oat.ts.astro.it</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=grid002.oat.ts.astro.it:2136,mds-vo-name=INAF-TRIESTE">
+        <Name>INAF-TRIESTE-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://grid002.oat.ts.astro.it:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>infngrid</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>planck</Owner>
+        <Owner>gridit</Owner>
+        <Owner>inaf</Owner>
+        <Owner>egrid</Owner>
+    </Service>
+</Site>

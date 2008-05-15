@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=INFN-ROMA1-CMS,mds-vo-name=INFN-ROMA1-CMS">
+    <Name>INFN-ROMA1-CMS</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto: grid-prod@roma1.infn.it</UserSupportContact>
+    <SysAdminContact>mailto: grid-prod@roma1.infn.it</SysAdminContact>
+    <SecurityContact>mailto: grid-prod@roma1.infn.it</SecurityContact>
+    <Location>Rome, Italy</Location>
+    <Latitude>41.7827</Latitude>
+    <Longitude>13.0256</Longitude>
+    <Web>http://www.roma1.infn.it</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER 2</OtherInfo>
+    <OtherInfo>CNAF-T1</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=cmsrm-ce01.roma1.infn.it,mds-vo-name=INFN-ROMA1-CMS">
+        <Name>cmsrm-ce01.roma1.infn.it</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=cmsrm-ce01.roma1.infn.it,GlueClusterUniqueID=cmsrm-ce01.roma1.infn.it,mds-vo-name=INFN-ROMA1-CMS">
+            <Name>cmsrm-ce01.roma1.infn.it</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.5" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="PIII" ClockSpeed="1001"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="4096" RAMSize="2048"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="381" SF00="300"/>
+            <Location LocalID="VO-cms-CMSSW_0_8_4">
+                <Name>VO-cms-CMSSW_0_8_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_0_6">
+                <Name>VO-cms-CMSSW_1_0_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_1_2">
+                <Name>VO-cms-CMSSW_1_1_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_0">
+                <Name>VO-cms-CMSSW_1_2_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_1">
+                <Name>VO-cms-CMSSW_1_2_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_2">
+                <Name>VO-cms-CMSSW_1_2_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_3">
+                <Name>VO-cms-CMSSW_1_2_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_4">
+                <Name>VO-cms-CMSSW_1_2_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_6">
+                <Name>VO-cms-CMSSW_1_2_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_0">
+                <Name>VO-cms-CMSSW_1_3_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1">
+                <Name>VO-cms-CMSSW_1_3_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1_HLT6">
+                <Name>VO-cms-CMSSW_1_3_1_HLT6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_2">
+                <Name>VO-cms-CMSSW_1_3_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_3">
+                <Name>VO-cms-CMSSW_1_3_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_4">
+                <Name>VO-cms-CMSSW_1_3_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_5">
+                <Name>VO-cms-CMSSW_1_3_5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_0">
+                <Name>VO-cms-CMSSW_1_4_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_1">
+                <Name>VO-cms-CMSSW_1_4_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_2">
+                <Name>VO-cms-CMSSW_1_4_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_3">
+                <Name>VO-cms-CMSSW_1_4_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_4">
+                <Name>VO-cms-CMSSW_1_4_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_5">
+                <Name>VO-cms-CMSSW_1_4_5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_6">
+                <Name>VO-cms-CMSSW_1_4_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0">
+                <Name>VO-cms-CMSSW_1_6_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_1">
+                <Name>VO-cms-CMSSW_1_6_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_2_pre1">
+                <Name>VO-cms-CMSSW_1_6_2_pre1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO_cms-CMSSW_1_6_3">
+                <Name>VO_cms-CMSSW_1_6_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO_cms-CMSSW_1_6_4">
+                <Name>VO_cms-CMSSW_1_6_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc4_ia32_gcc345">
+                <Name>VO-cms-slc4_ia32_gcc345</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-test">
+                <Name>VO-cms-test</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=cmsrm-se01.roma1.infn.it,mds-vo-name=INFN-ROMA1-CMS">
+        <InformationServiceURL>ldap://cmsrm-se01.roma1.infn.it:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/roma1.infn.it/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>0</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/roma1.infn.it/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>0</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/roma1.infn.it/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>0</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="infngrid">
+            <Path>/dpm/roma1.infn.it/home/infngrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>0</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://cmsrm-se01.roma1.infn.it</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://cmsrm-se01.roma1.infn.it</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://cmsrm-se01.roma1.infn.it</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=httpg://cmsrm-se01.roma1.infn.it:8443/srm/managerv1,mds-vo-name=INFN-ROMA1-CMS">
+        <Name>INFN-ROMA1-CMS-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://cmsrm-se01.roma1.infn.it:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://cmsrm-se01.roma1.infn.it:8446/srm/managerv2,mds-vo-name=INFN-ROMA1-CMS">
+        <Name>INFN-ROMA1-CMS-srm</Name>
+        <Type>srm</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://cmsrm-se01.roma1.infn.it:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

@@ -1,0 +1,2730 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=Taiwan-LCG2,mds-vo-name=Taiwan-LCG2">
+    <Name>Taiwan-LCG2</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto: asgc-t1@lists.grid.sinica.edu.tw</UserSupportContact>
+    <SysAdminContact>mailto: asgc-t1@lists.grid.sinica.edu.tw</SysAdminContact>
+    <SecurityContact>mailto: asgc-t1@lists.grid.sinica.edu.tw</SecurityContact>
+    <Location>Taipei, Taiwan</Location>
+    <Latitude>25.067</Latitude>
+    <Longitude>121.6167</Longitude>
+    <Web>http://www.twgrid.org/aproc</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER 1</OtherInfo>
+    <OtherInfo>http://www.twgrid.org/aproc</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=lcg00125.grid.sinica.edu.tw,mds-vo-name=Taiwan-LCG2">
+        <Name>lcg00125.grid.sinica.edu.tw</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=lcg00125.grid.sinica.edu.tw,GlueClusterUniqueID=lcg00125.grid.sinica.edu.tw,mds-vo-name=Taiwan-LCG2">
+            <Name>lcg00125.grid.sinica.edu.tw</Name>
+            <PhysicalCPUs>352</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.6" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="P4" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1025" RAMSize="1024"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1850" SF00="1900"/>
+            <Location LocalID="VO-cms-CMSSW_1_2_6">
+                <Name>VO-cms-CMSSW_1_2_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.30">
+                <Name>VO-atlas-production-13.0.30</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-testingthesite1">
+                <Name>VO-dteam-testingthesite1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-GATE-1.1.0-3">
+                <Name>VO-biomed-GATE-1.1.0-3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-ITUtest1">
+                <Name>VO-dteam-ITUtest1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_4">
+                <Name>VO-cms-CMSSW_1_3_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_2">
+                <Name>VO-cms-CMSSW_1_2_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-tier-T1">
+                <Name>VO-atlas-tier-T1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-alice-geant42ndProd_p01">
+                <Name>VO-alice-geant42ndProd_p01</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ALICE_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_2">
+                <Name>VO-cms-CMSSW_1_4_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1">
+                <Name>VO-cms-CMSSW_1_3_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_3">
+                <Name>VO-cms-CMSSW_1_3_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final-cand2">
+                <Name>VO-dteam-december05prod-final-cand2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_3">
+                <Name>VO-cms-CMSSW_1_2_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final">
+                <Name>VO-dteam-december05prod-final</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.5.0">
+                <Name>VO-atlas-release-11.5.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-cloud-TW">
+                <Name>VO-atlas-cloud-TW</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-alice-geant42ndProd">
+                <Name>VO-alice-geant42ndProd</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ALICE_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.42">
+                <Name>VO-atlas-release-11.0.42</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.31">
+                <Name>VO-atlas-production-12.0.31</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6">
+                <Name>VO-atlas-production-12.0.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_3">
+                <Name>VO-cms-CMSSW_1_4_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-v22Nov">
+                <Name>VO-dteam-december05prod-v22Nov</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_4">
+                <Name>VO-cms-CMSSW_1_2_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-autodock-3-0">
+                <Name>VO-biomed-autodock-3-0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_0">
+                <Name>VO-cms-CMSSW_1_3_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_2">
+                <Name>VO-cms-CMSSW_1_3_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=quanta.grid.sinica.edu.tw,mds-vo-name=Taiwan-LCG2">
+        <Name>quanta.grid.sinica.edu.tw</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=quanta.grid.sinica.edu.tw,GlueClusterUniqueID=quanta.grid.sinica.edu.tw,mds-vo-name=Taiwan-LCG2">
+            <Name>quanta.grid.sinica.edu.tw</Name>
+            <PhysicalCPUs>88</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.6" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="P4" ClockSpeed="3200"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="4000" RAMSize="2000"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1381" SF00="1500"/>
+            <Location LocalID="VO-atlas-release-10.0.1">
+                <Name>VO-atlas-release-10.0.1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.42">
+                <Name>VO-atlas-release-11.0.42</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.5">
+                <Name>VO-atlas-release-11.0.5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.5.0">
+                <Name>VO-atlas-release-11.5.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-offline-12.0.1">
+                <Name>VO-atlas-offline-12.0.1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-alice-geant42ndProd">
+                <Name>VO-alice-geant42ndProd</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ALICE_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-alice-geant42ndProd_p01">
+                <Name>VO-alice-geant42ndProd_p01</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ALICE_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMKIN_6_0_0">
+                <Name>VO-cms-CMKIN_6_0_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_8_0">
+                <Name>VO-cms-CMSSW_0_8_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_6_1">
+                <Name>VO-cms-CMSSW_0_6_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_8_1">
+                <Name>VO-cms-CMSSW_0_8_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_8_2-processing-install">
+                <Name>VO-cms-CMSSW_0_8_2-processing-install</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-testingthesite1">
+                <Name>VO-dteam-testingthesite1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-ITUtest1">
+                <Name>VO-dteam-ITUtest1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-v22Nov">
+                <Name>VO-dteam-december05prod-v22Nov</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final">
+                <Name>VO-dteam-december05prod-final</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final-cand2">
+                <Name>VO-dteam-december05prod-final-cand2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-autodock-3-0">
+                <Name>VO-biomed-autodock-3-0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-GATE-1.1.0-3">
+                <Name>VO-biomed-GATE-1.1.0-3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=w-ce01.grid.sinica.edu.tw,mds-vo-name=Taiwan-LCG2">
+        <Name>w-ce01.grid.sinica.edu.tw</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=w-ce01.grid.sinica.edu.tw,GlueClusterUniqueID=w-ce01.grid.sinica.edu.tw,mds-vo-name=Taiwan-LCG2">
+            <Name>w-ce01.grid.sinica.edu.tw</Name>
+            <PhysicalCPUs>240</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="4.5" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="P4" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1025" RAMSize="1024"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1381" SF00="1500"/>
+            <Location LocalID="VO-atlas-production-13.0.30">
+                <Name>VO-atlas-production-13.0.30</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0">
+                <Name>VO-cms-CMSSW_1_6_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_1">
+                <Name>VO-cms-CMSSW_1_6_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_3">
+                <Name>VO-cms-CMSSW_1_6_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_4">
+                <Name>VO-cms-CMSSW_1_6_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc4_ia32_gcc345">
+                <Name>VO-cms-slc4_ia32_gcc345</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=dpm01.grid.sinica.edu.tw,mds-vo-name=Taiwan-LCG2">
+        <InformationServiceURL>ldap://dpm01.grid.sinica.edu.tw:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>59</SizeTotal>
+        <SizeFree>46</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/grid.sinica.edu.tw/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>13090000</UsedSpace>
+            <AvailableSpace>45970000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/dpm/grid.sinica.edu.tw/home/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>13090000</UsedSpace>
+            <AvailableSpace>45970000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/grid.sinica.edu.tw/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>13090000</UsedSpace>
+            <AvailableSpace>45970000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomed">
+            <Path>/dpm/grid.sinica.edu.tw/home/biomed</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>13090000</UsedSpace>
+            <AvailableSpace>45970000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="twgrid">
+            <Path>/dpm/grid.sinica.edu.tw/home/twgrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>13090000</UsedSpace>
+            <AvailableSpace>45970000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="apesci">
+            <Path>/dpm/grid.sinica.edu.tw/home/apesci</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>13090000</UsedSpace>
+            <AvailableSpace>45970000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/grid.sinica.edu.tw/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>13090000</UsedSpace>
+            <AvailableSpace>45970000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="belle">
+            <Path>/dpm/grid.sinica.edu.tw/home/belle</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>13090000</UsedSpace>
+            <AvailableSpace>45970000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://dpm01.grid.sinica.edu.tw</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://dpm01.grid.sinica.edu.tw</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://dpm01.grid.sinica.edu.tw</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=castorsc.grid.sinica.edu.tw,mds-vo-name=Taiwan-LCG2">
+        <InformationServiceURL>ldap://dpm01.grid.sinica.edu.tw:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/castor/grid.sinica.edu.tw/sc/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>54910000000</UsedSpace>
+            <AvailableSpace>13030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/castor/grid.sinica.edu.tw/sc/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>54910000000</UsedSpace>
+            <AvailableSpace>13030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/castor/grid.sinica.edu.tw/sc/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>54910000000</UsedSpace>
+            <AvailableSpace>13030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/castor/grid.sinica.edu.tw/sc/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>54910000000</UsedSpace>
+            <AvailableSpace>13030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomed">
+            <Path>/castor/grid.sinica.edu.tw/sc/biomed</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>54910000000</UsedSpace>
+            <AvailableSpace>13030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="twgrid">
+            <Path>/castor/grid.sinica.edu.tw/sc/twgrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>54910000000</UsedSpace>
+            <AvailableSpace>13030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/castor/grid.sinica.edu.tw/sc/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>54910000000</UsedSpace>
+            <AvailableSpace>13030000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://castorsc.grid.sinica.edu.tw</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://castorsc.grid.sinica.edu.tw</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://castorsc.grid.sinica.edu.tw</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=srm.grid.sinica.edu.tw,mds-vo-name=Taiwan-LCG2">
+        <InformationServiceURL>ldap://dpm01.grid.sinica.edu.tw:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/castor/grid.sinica.edu.tw/d1t0/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>60000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/castor/grid.sinica.edu.tw/d1t0/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>60000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/castor/grid.sinica.edu.tw/d0t0/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>60000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="twgrid">
+            <Path>/castor/grid.sinica.edu.tw/d0t0/twgrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>60000000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://srm.grid.sinica.edu.tw</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://srm.grid.sinica.edu.tw</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://srm.grid.sinica.edu.tw</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=STAR-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-PROTVINO_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-PROTVINO_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-PROTVINO_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-PROTVINO_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-NDGF_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-NDGF_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-KNU_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-KNU_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNL-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>BNL-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-BNL_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-BNL_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-NIU_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-NIU_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-NTU_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-NTU_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=RAL-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>RAL-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-T2_HEPGRID_UERJ_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-T2_HEPGRID_UERJ_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-RWTH_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-RWTH_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=RWTH-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>RWTH-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-DESY_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-DESY_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-AU_ATLAS_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-AU_ATLAS_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-TOKYO_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-TOKYO_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-FTT_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-FTT_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-STAR_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-STAR_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-KNU_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-KNU_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=IPAS-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>IPAS-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=KNU-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>KNU-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-KEK2_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-KEK2_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=KEK2-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>KEK2-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-NEBRASKA_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-NEBRASKA_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-FLORIDA_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-FLORIDA_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-MIT_CMS_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-MIT_CMS_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CNAF-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>CNAF-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=NDGF-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>NDGF-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-TRIUMF_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-TRIUMF_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-FZK_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-FZK_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FZK-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>FZK-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-PIC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-PIC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=PIC-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>PIC-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-SARA_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-SARA_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=SARA-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>SARA-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TRIUMF-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>TRIUMF-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=NCUHEP-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>NCUHEP-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=AU-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>AU-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TOKYO-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>TOKYO-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-IN_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-IN_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-ESTONIA_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-ESTONIA_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TWT2-STAR_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>TWT2-STAR_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-UCSD_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-UCSD_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-PURDUE_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-PURDUE_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-CALTECH_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-CALTECH_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-STAR_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-STAR_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-AU_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-AU_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-BEIJING_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-BEIJING_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-FTT_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-FTT_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-IPAS_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-IPAS_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-KEK_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-KEK_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-NCUHEP_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-NCUHEP_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-NIU_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-NIU_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-THU_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-THU_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-TOKYO_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-TOKYO_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>twgrid</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-AU_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-AU_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-NTU_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-NTU_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>FNAL-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-FNAL_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-FNAL_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ESTONIA-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ESTONIA-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=PISA-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>PISA-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-CNAF_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-CNAF_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-IN_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-IN_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-NCUHEP_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-NCUHEP_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>twgrid</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-IPAS_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-IPAS_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FTT-NCUHEP_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>FTT-NCUHEP_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FTT-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>FTT-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=T2_HEPGRID_UERJ-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>T2_HEPGRID_UERJ-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=IN2P3-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>IN2P3-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-PAKGRID_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-PAKGRID_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=PAKGRID-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>PAKGRID-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=IN-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>IN-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=NIKHEF-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>NIKHEF-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-IN2P3-CC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-IN2P3-CC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=AU_ATLAS-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>AU_ATLAS-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CERN-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>CERN-ASGC_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-CERN_fts.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-CERN_fts.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_fts.grid.sinica.edu.tw_org.glite.FileTransfer,mds-vo-name=Taiwan-LCG2">
+        <Name>glite-data-transfer-fts_fts.grid.sinica.edu.tw</Name>
+        <Type>org.glite.FileTransfer</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>https://fts.grid.sinica.edu.tw:8443/glite-data-transfer-fts/services/FileTransfer</Endpoint>
+        <WSDL>https://fts.grid.sinica.edu.tw:8443/glite-data-transfer-fts/services/FileTransfer?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+        <Owner>twgrid</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_fts.grid.sinica.edu.tw_org.glite.ChannelManagement,mds-vo-name=Taiwan-LCG2">
+        <Name>glite-data-transfer-fts_fts.grid.sinica.edu.tw-channel</Name>
+        <Type>org.glite.ChannelManagement</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>https://fts.grid.sinica.edu.tw:8443/glite-data-transfer-fts/services/ChannelManagement</Endpoint>
+        <WSDL>https://fts.grid.sinica.edu.tw:8443/glite-data-transfer-fts/services/ChannelManagement?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+        <Owner>twgrid</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_fts.grid.sinica.edu.tw_org.glite.FileTransferStats,mds-vo-name=Taiwan-LCG2">
+        <Name>glite-data-transfer-fts_fts.grid.sinica.edu.tw-stats</Name>
+        <Type>org.glite.FileTransferStats</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>https://fts.grid.sinica.edu.tw:8443/glite-data-transfer-fts/services/FileTransferStats</Endpoint>
+        <WSDL>https://fts.grid.sinica.edu.tw:8443/glite-data-transfer-fts/services/FileTransferStats?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+        <Owner>twgrid</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_fts.grid.sinica.edu.tw_org.glite.Delegation,mds-vo-name=Taiwan-LCG2">
+        <Name>glite-data-transfer-fts_fts.grid.sinica.edu.tw-stats</Name>
+        <Type>org.glite.Delegation</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>https://fts.grid.sinica.edu.tw:8443/glite-data-transfer-fts/services/Delegation</Endpoint>
+        <WSDL>https://fts.grid.sinica.edu.tw:8443/glite-data-transfer-fts/services/Delegation?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T09:37:31.000Z</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+        <Owner>twgrid</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-ESTONIA_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-ESTONIA_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ESTONIA-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ESTONIA-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-NTU_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-NTU_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-PAKGRID_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-PAKGRID_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-NCUHEP_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-NCUHEP_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-FZK_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-FZK_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-PROTVINO_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-PROTVINO_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-BNL_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-BNL_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_w-fts01.grid.sinica.edu.tw_org.glite.Delegation,mds-vo-name=Taiwan-LCG2">
+        <Name>glite-data-transfer-fts_w-fts01.grid.sinica.edu.tw-delegation</Name>
+        <Type>org.glite.Delegation</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://w-fts01.grid.sinica.edu.tw:8443/glite-data-transfer-fts/services/gridsite-delegation</Endpoint>
+        <WSDL>https://w-fts01.grid.sinica.edu.tw:8443/glite-data-transfer-fts/services/gridsite-delegation?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>CMS</Owner>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>twgrid</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-FLORIDA_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-FLORIDA_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-FTT_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-FTT_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FTT-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>FTT-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=NIKHEF-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>NIKHEF-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-NCUHEP_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-NCUHEP_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>twgrid</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-IPAS_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-IPAS_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-KEK2_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-KEK2_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=AU-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>AU-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=PAKGRID-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>PAKGRID-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-KEK_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-KEK_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TRIUMF-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>TRIUMF-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TOKYO-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>TOKYO-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=SARA-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>SARA-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-PIC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-PIC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-T2HEPGRIDUERJ_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-T2HEPGRIDUERJ_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-AUATLAS_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-AUATLAS_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-FNAL_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-FNAL_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-IN2P3_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-IN2P3_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-UCSD_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-UCSD_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-RWTH_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-RWTH_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-KNU_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-KNU_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=PISA-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>PISA-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-NEBRASKA_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-NEBRASKA_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-SARA_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-SARA_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-FTT_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-FTT_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-TOKYO_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-TOKYO_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>twgrid</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-KNU_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-KNU_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FTT-NCUHEP_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>FTT-NCUHEP_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CNAF-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>CNAF-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=AUATLAS-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>AUATLAS-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-BEIJING_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-BEIJING_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FZK-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>FZK-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=NCUHEP-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>NCUHEP-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=T2HEPGRIDUERJ-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>T2HEPGRIDUERJ-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-CNAF_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-CNAF_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-STAR_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-STAR_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-TRIUMF_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-TRIUMF_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_w-fts01.grid.sinica.edu.tw_org.glite.ChannelManagement,mds-vo-name=Taiwan-LCG2">
+        <Name>glite-data-transfer-fts_w-fts01.grid.sinica.edu.tw-channel</Name>
+        <Type>org.glite.ChannelManagement</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://w-fts01.grid.sinica.edu.tw:8443/glite-data-transfer-fts/services/ChannelManagement</Endpoint>
+        <WSDL>https://w-fts01.grid.sinica.edu.tw:8443/glite-data-transfer-fts/services/ChannelManagement?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>CMS</Owner>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>twgrid</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-CALTECH_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-CALTECH_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-AU_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-AU_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CERN-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>CERN-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-STAR_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-STAR_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-AU_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-AU_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-DESY_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-DESY_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-NTU_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-NTU_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-CERN_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-CERN_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TWT2-STAR_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>TWT2-STAR_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-IN_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-IN_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=KEK2-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>KEK2-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=PIC-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>PIC-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=KNU-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>KNU-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-MITCMS_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-MITCMS_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNL-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>BNL-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-PROTVINO_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-PROTVINO_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-TOKYO_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-TOKYO_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-THU_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-THU_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-IPAS_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-IPAS_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=IN2P3-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>IN2P3-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>FNAL-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=RAL-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>RAL-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=RWTH-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>RWTH-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-NIU_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-NIU_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=NDGF-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>NDGF-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=IPAS-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>IPAS-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-NDGF_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-NDGF_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=IN-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>IN-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_w-fts01.grid.sinica.edu.tw_org.glite.FileTransfer,mds-vo-name=Taiwan-LCG2">
+        <Name>glite-data-transfer-fts_w-fts01.grid.sinica.edu.tw</Name>
+        <Type>org.glite.FileTransfer</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://w-fts01.grid.sinica.edu.tw:8443/glite-data-transfer-fts/services/FileTransfer</Endpoint>
+        <WSDL>https://w-fts01.grid.sinica.edu.tw:8443/glite-data-transfer-fts/services/FileTransfer?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>CMS</Owner>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>twgrid</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-IN_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-IN_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-ASGC_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-NIU_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>STAR-NIU_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-PURDUE_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent,mds-vo-name=Taiwan-LCG2">
+        <Name>ASGC-PURDUE_w-fts01.grid.sinica.edu.tw_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T08:40:40.000Z</StartTime>
+        <Owner>CMS</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://lfc.grid.sinica.edu.tw:8085/,mds-vo-name=Taiwan-LCG2">
+        <Name>Taiwan-LCG2-lfc-dli</Name>
+        <Type>data-location-interface</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>http://lfc.grid.sinica.edu.tw:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>twgrid</Owner>
+        <Owner>apesci</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lfc.grid.sinica.edu.tw,mds-vo-name=Taiwan-LCG2">
+        <Name>Taiwan-LCG2-lfc</Name>
+        <Type>lcg-file-catalog</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>lfc.grid.sinica.edu.tw</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>twgrid</Owner>
+        <Owner>apesci</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://lfc.grid.sinica.edu.tw:8085/,o=local,mds-vo-name=Taiwan-LCG2">
+        <Name>Taiwan-LCG2-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>http://lfc.grid.sinica.edu.tw:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lfc.grid.sinica.edu.tw,o=local,mds-vo-name=Taiwan-LCG2">
+        <Name>Taiwan-LCG2-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>lfc.grid.sinica.edu.tw</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lcg00127.grid.sinica.edu.tw:7512,mds-vo-name=Taiwan-LCG2">
+        <Name>Taiwan-LCG2-myproxy</Name>
+        <Type>myproxy</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>lcg00127.grid.sinica.edu.tw:7512</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lcg00124.grid.sinica.edu.tw:7772,mds-vo-name=Taiwan-LCG2">
+        <Name>Taiwan-LCG2-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>lcg00124.grid.sinica.edu.tw:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>dteam</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>biomed</Owner>
+        <Owner>twgrid</Owner>
+        <Owner>apesci</Owner>
+        <Owner>ops</Owner>
+        <Owner>belle</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://dpm01.grid.sinica.edu.tw:8443/srm/managerv1,mds-vo-name=Taiwan-LCG2">
+        <Name>Taiwan-LCG2-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://dpm01.grid.sinica.edu.tw:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://castorsc.grid.sinica.edu.tw:8443/srm/managerv1,mds-vo-name=Taiwan-LCG2">
+        <Name>Taiwan-LCG2-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://castorsc.grid.sinica.edu.tw:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://castor.grid.sinica.edu.tw:8443/srm/managerv1,mds-vo-name=Taiwan-LCG2">
+        <Name>Taiwan-LCG2-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://castor.grid.sinica.edu.tw:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://srm.grid.sinica.edu.tw:8443/srm/managerv1,mds-vo-name=Taiwan-LCG2">
+        <Name>Taiwan-LCG2-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://srm.grid.sinica.edu.tw:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lcg00127.grid.sinica.edu.tw:7512,mds-vo-name=Taiwan-NCUCC-LCG2">
+        <Name>Taiwan-LCG2-myproxy</Name>
+        <Type>myproxy</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>lcg00127.grid.sinica.edu.tw:7512</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lcg00124.grid.sinica.edu.tw:7772,mds-vo-name=Taiwan-NCUCC-LCG2">
+        <Name>Taiwan-LCG2-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>lcg00124.grid.sinica.edu.tw:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>dteam</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>biomed</Owner>
+        <Owner>twgrid</Owner>
+        <Owner>apesci</Owner>
+        <Owner>ops</Owner>
+        <Owner>belle</Owner>
+    </Service>
+</Site>

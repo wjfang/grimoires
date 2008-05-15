@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.grimoires.org/metadata.xsd" 
+  xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:meta="http://www.grimoires.org/metadata.xsd" 
+  xmlns:uddi="urn:uddi-org:api_v2" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  elementFormDefault="qualified" attributeFormDefault="unqualified">
+  
+  <xsd:import namespace="urn:uddi-org:api_v2"
+    schemaLocation="./uddi_v2.xsd"/>
+
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">
+      Schema for the UDDI metadata interface for Grimoires
+    </xsd:documentation>
+  </xsd:annotation>
+
+  <!-- include entityReference construct -->
+  <include schemaLocation="metadata.xsd"/>
+
+  <!-- <xsd:element name="uddiReference"  type="meta:UddiReference" substitutionGroup="entityReference"/>
+  <xsd:complexType name="UddiReference">
+    <xsd:complexContent>
+      <xsd:extension base="meta:EntityReference">
+        <xsd:choice>
+          <xsd:element ref="uddi:businessKey"/>
+	  <xsd:element ref="uddi:serviceKey"/>
+	  <xsd:element ref="uddi:tModelKey"/>
+          <xsd:element ref="uddi:bindingKey"/>
+	</xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType> -->
+  
+  <!-- messages -->
+  
+  <!-- uddi v2 -->
+  <!-- messages here are similar to their UDDI v2 counterparts -->
+  
+  <xsd:element name="find_service" type="meta:Find_service"/>
+  <xsd:complexType name="Find_service">
+    <xsd:sequence>
+      <xsd:element ref="meta:findQualifiers" minOccurs="0"/>
+      <xsd:element ref="uddi:name" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="uddi:categoryBag" minOccurs="0"/>
+      <xsd:element ref="uddi:tModelBag" minOccurs="0"/>
+      <xsd:element ref="meta:metadataQueryBag" minOccurs="0"/>
+    </xsd:sequence>
+    <xsd:attribute name="generic" type="string" use="required"/>
+    <xsd:attribute name="maxRows" type="int" use="optional"/>
+    <xsd:attribute name="businessKey" type="uddi:businessKey" use="optional"/>
+  </xsd:complexType>
+    
+</xsd:schema>

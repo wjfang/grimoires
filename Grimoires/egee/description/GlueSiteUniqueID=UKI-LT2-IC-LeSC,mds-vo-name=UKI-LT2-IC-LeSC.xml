@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=UKI-LT2-IC-LeSC,mds-vo-name=UKI-LT2-IC-LeSC">
+    <Name>UKI-LT2-IC-LeSC</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto: lesc-lcg-site-admin@imperial.ac.uk</UserSupportContact>
+    <SysAdminContact>mailto: lesc-lcg-site-admin@imperial.ac.uk</SysAdminContact>
+    <SecurityContact>mailto: lesc-lcg-site-admin@imperial.ac.uk</SecurityContact>
+    <Location>London, UK</Location>
+    <Latitude>51.49899</Latitude>
+    <Longitude>-0.17921</Longitude>
+    <Web>http://www.lesc.ic.ac.uk/</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>London Tier 2</OtherInfo>
+    <OtherInfo>http://helpdesk.lesc.ic.ac.uk/</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=mars-ce2.mars.lesc.doc.ic.ac.uk,mds-vo-name=UKI-LT2-IC-LeSC">
+        <Name>mars-ce2.mars.lesc.doc.ic.ac.uk</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=mars-ce2.mars.lesc.doc.ic.ac.uk,GlueClusterUniqueID=mars-ce2.mars.lesc.doc.ic.ac.uk,mds-vo-name=UKI-LT2-IC-LeSC">
+            <Name>mars-ce2.mars.lesc.doc.ic.ac.uk</Name>
+            <PhysicalCPUs>200</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="3" Release="3" Name="RedHatEnterpriseAS"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="Opteron" ClockSpeed="1800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1024" RAMSize="1024"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1324" SF00="1653"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=viking-ce0.viking.lesc.doc.ic.ac.uk,mds-vo-name=UKI-LT2-IC-LeSC">
+        <Name>viking-ce0.viking.lesc.doc.ic.ac.uk</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=viking-ce0.viking.lesc.doc.ic.ac.uk,GlueClusterUniqueID=viking-ce0.viking.lesc.doc.ic.ac.uk,mds-vo-name=UKI-LT2-IC-LeSC">
+            <Name>viking-ce0.viking.lesc.doc.ic.ac.uk</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.5" Name="ScientificSL"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="PIV" ClockSpeed="2000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1024" RAMSize="1024"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="750" SF00="750"/>
+            <Location LocalID="VO-biomed-TestU01-DistRNG">
+                <Name>VO-biomed-TestU01-DistRNG</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <Service UniqueID="GlueServiceUniqueID=mars-se2.mars.lesc.doc.ic.ac.uk:2136,mds-vo-name=UKI-LT2-IC-LeSC">
+        <Name>UKI-LT2-IC-LeSC-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://mars-se2.mars.lesc.doc.ic.ac.uk:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>babar</Owner>
+        <Owner>biomed</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>dzero</Owner>
+        <Owner>geant4</Owner>
+        <Owner>hone</Owner>
+        <Owner>ilc</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ltwo</Owner>
+        <Owner>na48</Owner>
+        <Owner>pheno</Owner>
+        <Owner>sixt</Owner>
+        <Owner>t2k</Owner>
+        <Owner>zeus</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=mars-se2.mars.lesc.doc.ic.ac.uk,o=local,mds-vo-name=UKI-LT2-IC-LeSC">
+        <Name>UKI-LT2-IC-LeSC-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>mars-se2.mars.lesc.doc.ic.ac.uk</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>babar</Owner>
+        <Owner>biomed</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>dzero</Owner>
+        <Owner>geant4</Owner>
+        <Owner>hone</Owner>
+        <Owner>ilc</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ltwo</Owner>
+        <Owner>na48</Owner>
+        <Owner>pheno</Owner>
+        <Owner>sixt</Owner>
+        <Owner>t2k</Owner>
+        <Owner>zeus</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://mars-se2.mars.lesc.doc.ic.ac.uk:8085/,o=local,mds-vo-name=UKI-LT2-IC-LeSC">
+        <Name>UKI-LT2-IC-LeSC-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>http://mars-se2.mars.lesc.doc.ic.ac.uk:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>babar</Owner>
+        <Owner>biomed</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>dzero</Owner>
+        <Owner>geant4</Owner>
+        <Owner>hone</Owner>
+        <Owner>ilc</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ltwo</Owner>
+        <Owner>na48</Owner>
+        <Owner>pheno</Owner>
+        <Owner>sixt</Owner>
+        <Owner>t2k</Owner>
+        <Owner>zeus</Owner>
+        <Owner>ops</Owner>
+    </Service>
+</Site>

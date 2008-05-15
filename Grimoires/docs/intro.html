@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Grimoires Documentation - Introduction</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url('i_arrow_down.gif');
+	}	        
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script>
+</head>
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1><a name="Introduction_to_Grimoires"> </a> Introduction to Grimoires </h1>
+<p />
+A Grimoire is a magician's manual for invoking demons (Oxford English Dictionary). Likewise, the Grimoires registry hosts descriptions of services and workflows, which a scientist can use for forming their complex scientific experiments. However, service and workflow interfaces are sometimes underspecified and therefore difficult to use in an automated manner; hence, the 
+Grimoires registry provides the ability to augment interfaces with metadata such 
+as functionality, semantic information about their inputs and outputs, or various metrics (e.g. perceived quality of service, trust). 
+<p />
+As a UDDIv2 compliant registry for Web Services, Grimoires is,
+itself, implemented as a Web Service. The clients interact with Grimoires by sending and receiving SOAP messages. In
+addition to the UDDIv2 interface, Grimoires also provides some
+other interfaces, such as a metadata interface and a WSDL interface, which allow clients
+to publish and inquire over metadata and WSDL-related data,
+respectively. An access control layer within Grimoires can enforce
+fine-grained access control for each published entity, which could
+be a UDDI service, a piece of metadata, or a WSDL description. All
+the data published through various interfaces are internally represented as RDF triples, which can be queried and reasoned over in
+a uniform way. The published data, i.e., the RDF triples, can
+reside in a database, a file, or simply in memory, to allow
+deployers to balance persistence with performance.
+<p />
+From the functionality perspective, Grimoires has the following
+features.
+<p />
+<h4><a name="Registration_of_semantic_descrip"> </a> Registration of semantic descriptions </h4>
+<p />
+Grimoires has the
+ability to publish and inquire over metadata. Metadata are 
+pieces of data giving extra information about existing entities in the
+registry. Currently, entities to which metadata can be attached
+are UDDI BusinessEntity, BusinessService, tModel, BindingTemplate,
+and WSDL operation and message part.
+<p />
+A piece of metadata is in the form of an RDF triple: the subject
+is the entity to be annotated, the predicate is the type of the
+relationship, and the object is the value. The metadata value can
+be a string, a URI, or structured data in RDF. For example, to
+describe the quality of a service, the pair (mygrid:NumericRating,
+8.5) can be used for the relationship and value of metadata
+attachment, which assigns a rating of 8.5 to the service.
+<p />
+A unique key is assigned to every piece of metadata published.
+Therefore, metadata attachments can be updated without
+republishing the service. This presents an efficient way of
+capturing ephemeral information about services that changes often,
+such as the current load of a service.
+<p />
+<h4><a name="Multiple_metadata_attachments"> </a> Multiple metadata attachments  </h4>
+<p />
+There is no limit to the
+number of attachments each entity can have. Since each piece of
+metadata has its own unique key, it can be updated without
+republishing other metadata attached to the same entity.
+<p />
+<h4><a name="Third_party_annotations"> </a> Third party annotations </h4>
+<p />
+The ability to publish metadata
+is available to both service providers and third parties. This
+provides the flexibility of allowing users with expert knowledge
+to enrich service descriptions in ways that might not be
+conceivable to the original publishers. For instance, users can
+provide their personal ratings on services.
+<p />
+<h4><a name="Inquiry_with_metadata"> </a> Inquiry with metadata </h4>
+<p />
+Multiple search patterns are
+supported in Grimoires. An entity can be found according to a
+metadata expressed as either a sequence of (type, value) pairs or
+an RDQL statement. The operation returns a list of entities
+annotated by metadata matching the query. To support queries over
+both metadata and data (such as the name of a service), we
+have extended the UDDI service finding operation with similar
+metadata query facility.
+<p />
+<h4><a name="Signature_based_authentication"> </a> Signature based authentication </h4>
+<p />
+UDDIv2 and v3
+specifications rely primarily on the use of authentication tokens
+to authenticate users for publisher API calls. In implementations
+such as jUDDI, this is generally achieved through a
+username/password credential scheme. However, this authentication
+method does not scale well for most Grid environments, which
+typically use certificate-based authentication schemes. The OMII
+framework provides an implementation of SOAP message signing and
+verification in accordance with WS-Security standards.
+When deployed within the OMII container, Grimoires can extract
+the Distinguished Name (DN) from the submitted X509 client
+certificate for authentication purposes. Incorporating signature
+usage in this way makes it easier to integrate Grimoires into
+existing Grid security infrastructures, as well as providing an
+important building block for single sign-on capabilities, an
+important requirement for many Grid applications.
+<p />
+<h4><a name="Access_control"> </a> Access control </h4>
+<p />
+Access control is on the basis of
+authenticated identity, and is applied on the granularity of each
+registered data entry, e.g., a service, a WSDL file, or a piece of
+metadata. The access control assertions are represented as
+metadata and are attached to the corresponding data entries.
+</div>
+</body></html>

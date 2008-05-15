@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+	<serviceDescription>
+		<serviceName>SHoundGODBGetAllAncestors</serviceName>
+		<organisation>
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundGODBGetAllAncestors</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundGODBGetAllAncestors?wsdl</interfaceWSDL>
+		<serviceDescriptionText>retrieves all the ancestors (parents, grandparents ...) of a given gene ontology id.
+This function operates on Gene Ontology (GO) vocabulary graphs. It retrieves a list of all processes, functions or components situated above a given GO identifier in the graphs.</serviceDescriptionText>
+		<operations>
+			<serviceOperation>
+				<operationName>SHoundGODBGetAllAncestors</operationName>
+				<operationDescriptionText>This function operates on Gene Ontology (GO) vocabulary graphs. It retrieves a list of all processes, functions or components situated above a given GO identifier in the graphs.
+Note- no gene ontology databases associated</operationDescriptionText>
+				<operationInputs>
+					<parameter>
+						<parameterName>goid</parameterName>
+						<parameterDescription>Gene Ontology Identifier</parameterDescription>
+						<semanticType>http://www.mygrid.org.uk/ontology#Gene_Ontology_term_id</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs>
+					<parameter>
+						<parameterName>result</parameterName>
+						<parameterDescription>Collection of all processes, functions and components</parameterDescription>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_data</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Collection</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#retrieving</operationTask>
+				<operationResource>http://www.mygrid.org.uk/ontology#bioinformatics_database</operationResource>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

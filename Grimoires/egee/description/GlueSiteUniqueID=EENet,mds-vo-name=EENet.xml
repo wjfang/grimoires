@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=EENet,mds-vo-name=EENet">
+    <Name>EENet</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:grid-admins@eenet.ee</UserSupportContact>
+    <SysAdminContact>mailto:grid-admins@eenet.ee</SysAdminContact>
+    <SecurityContact>mailto:grid-admins@eenet.ee</SecurityContact>
+    <Location>Tartu, Estonia</Location>
+    <Latitude>58.38</Latitude>
+    <Longitude>26.72</Longitude>
+    <Web>http://grid.eenet.ee</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>https://goc.grid-support.ac.uk/gridsite/gocdb2/index.php?siteSelect=270</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=kriit.eenet.ee,mds-vo-name=EENet">
+        <Name>kriit.eenet.ee</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=kriit.eenet.ee,GlueClusterUniqueID=kriit.eenet.ee,mds-vo-name=EENet">
+            <Name>kriit.eenet.ee</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.6" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="Athlon" ClockSpeed="2100"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="true"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1000" RAMSize="512"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1000" SF00="1000"/>
+            <Location LocalID="VO-bgtut-strange-tag-bgss15">
+                <Name>VO-bgtut-strange-tag-bgss15</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BGTUT_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-bgtut-genome2-neobug">
+                <Name>VO-bgtut-genome2-neobug</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BGTUT_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-bgtut-testapp-">
+                <Name>VO-bgtut-testapp-</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BGTUT_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-bgtut-root-rafala">
+                <Name>VO-bgtut-root-rafala</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BGTUT_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-bgtut-genome2">
+                <Name>VO-bgtut-genome2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BGTUT_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-scilab-4.0">
+                <Name>VO-balticgrid-scilab-4.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-weka-3.4.8a">
+                <Name>VO-balticgrid-weka-3.4.8a</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ATLAS-3.6.0_LAPACK">
+                <Name>VO-balticgrid-ATLAS-3.6.0_LAPACK</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-APPS/CHEM/DALTON-2.0">
+                <Name>VO-balticgrid-APPS/CHEM/DALTON-2.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu">
+                <Name>VO-balticgrid-ktu</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu/APPS/MATH/ATLAS/3.6.0">
+                <Name>VO-balticgrid-ktu/APPS/MATH/ATLAS/3.6.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu/APPS/MATH/ATLAS_LAPACK/3.6.0">
+                <Name>VO-balticgrid-ktu/APPS/MATH/ATLAS_LAPACK/3.6.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu/APPS/MATH/LAPACK/3.0">
+                <Name>VO-balticgrid-ktu/APPS/MATH/LAPACK/3.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu/ENV/MPI/openmpi/1.1.3">
+                <Name>VO-balticgrid-ktu/ENV/MPI/openmpi/1.1.3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu/ENV/MPI/MPICH2/1.0.5">
+                <Name>VO-balticgrid-ktu/ENV/MPI/MPICH2/1.0.5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-APPS/GRAPH/POVRAY-3.6">
+                <Name>VO-balticgrid-APPS/GRAPH/POVRAY-3.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-DEVEL-SUBVERSION-1.4.3">
+                <Name>VO-balticgrid-E-DEVEL-SUBVERSION-1.4.3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-DEVEL-GCC-4.2.0">
+                <Name>VO-balticgrid-E-DEVEL-GCC-4.2.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-DEVEL-G95-0.91">
+                <Name>VO-balticgrid-E-DEVEL-G95-0.91</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-A-MATH-ATLAS-3.6.0">
+                <Name>VO-balticgrid-A-MATH-ATLAS-3.6.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-PARALLEL-MPICH2-1.0.5">
+                <Name>VO-balticgrid-E-PARALLEL-MPICH2-1.0.5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-PARALLEL-MPICH2-1.0.5-G95-0.91">
+                <Name>VO-balticgrid-E-PARALLEL-MPICH2-1.0.5-G95-0.91</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-PARALLEL-MPIEXEC-0.82">
+                <Name>VO-balticgrid-E-PARALLEL-MPIEXEC-0.82</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-A-MATH-R-2.5.1">
+                <Name>VO-balticgrid-A-MATH-R-2.5.1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-PARALLEL-OPENMPI-1.2.3">
+                <Name>VO-balticgrid-E-PARALLEL-OPENMPI-1.2.3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-PARALLEL-OPENMPI-1.2.3-GCC-4.2.0">
+                <Name>VO-balticgrid-E-PARALLEL-OPENMPI-1.2.3-GCC-4.2.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_0">
+                <Name>VO-cms-CMSSW_1_2_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-gamess-GAMESS-socket-Jun272005R3">
+                <Name>VO-gamess-GAMESS-socket-Jun272005R3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_GAMESS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-gamess-GAMESS-sockets-Jun272005R5">
+                <Name>VO-gamess-GAMESS-sockets-Jun272005R5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_GAMESS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-gamess-GAMESS">
+                <Name>VO-gamess-GAMESS</Name>
+                <Version>Prod</Version>
+                <Path>$VO_GAMESS_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=kriit.eenet.ee,mds-vo-name=EENet">
+        <InformationServiceURL>ldap://kriit.eenet.ee:2170/mds-vo-name=resource,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="balticgrid">
+            <Path>/store/SE/balticgrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1377958280</UsedSpace>
+            <AvailableSpace>672682492</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="estonia">
+            <Path>/store/SE/estonia</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1377958280</UsedSpace>
+            <AvailableSpace>672682492</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/store/SE/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1377958280</UsedSpace>
+            <AvailableSpace>672682492</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/store/SE/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1377958280</UsedSpace>
+            <AvailableSpace>672682492</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/store/SE/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1377958280</UsedSpace>
+            <AvailableSpace>672682492</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gamess">
+            <Path>/store/SE/gamess</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1377958280</UsedSpace>
+            <AvailableSpace>672682492</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="bgtut">
+            <Path>/store/SE/bgtut</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1377958280</UsedSpace>
+            <AvailableSpace>672682492</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biit">
+            <Path>/store/SE/biit</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1377958280</UsedSpace>
+            <AvailableSpace>672682492</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://kriit.eenet.ee</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=kriit.eenet.ee:2136,mds-vo-name=EENet">
+        <Name>EENet-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://kriit.eenet.ee:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>balticgrid</Owner>
+        <Owner>estonia</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>gamess</Owner>
+        <Owner>bgtut</Owner>
+        <Owner>biit</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://lfc.balticgrid.org:8085/,mds-vo-name=EENet">
+        <Name>EENet-lfc-dli</Name>
+        <Type>data-location-interface</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>http://lfc.balticgrid.org:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-09-04T16:58:09.000+03:00</StartTime>
+        <Owner>balticgrid</Owner>
+        <Owner>estonia</Owner>
+        <Owner>biit</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lfc.balticgrid.org,mds-vo-name=EENet">
+        <Name>EENet-lfc</Name>
+        <Type>lcg-file-catalog</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>lfc.balticgrid.org</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-09-04T16:58:09.000+03:00</StartTime>
+        <Owner>balticgrid</Owner>
+        <Owner>estonia</Owner>
+        <Owner>biit</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=broker.eenet.ee:7772,mds-vo-name=EENet">
+        <Name>EENet-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>broker.eenet.ee:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>balticgrid</Owner>
+        <Owner>estonia</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>gamess</Owner>
+        <Owner>bgtut</Owner>
+        <Owner>biit</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=broker.eenet.ee:7512,mds-vo-name=EENet">
+        <Name>EENet-myproxy</Name>
+        <Type>MyProxy</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>broker.eenet.ee:7512</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://lfc.balticgrid.org:8085/,mds-vo-name=VU-MIF-LCG2">
+        <Name>EENet-lfc-dli</Name>
+        <Type>data-location-interface</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>http://lfc.balticgrid.org:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-09-04T16:58:09.000+03:00</StartTime>
+        <Owner>balticgrid</Owner>
+        <Owner>estonia</Owner>
+        <Owner>biit</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lfc.balticgrid.org,mds-vo-name=VU-MIF-LCG2">
+        <Name>EENet-lfc</Name>
+        <Type>lcg-file-catalog</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>lfc.balticgrid.org</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-09-04T16:58:09.000+03:00</StartTime>
+        <Owner>balticgrid</Owner>
+        <Owner>estonia</Owner>
+        <Owner>biit</Owner>
+    </Service>
+</Site>

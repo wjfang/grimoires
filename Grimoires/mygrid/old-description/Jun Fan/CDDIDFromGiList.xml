@@ -1,0 +1,48 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<serviceDescriptions  xmlns="pd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="pd /C:/Program Files/taverna-workbench-1.2/./plugins/pedro/services/model/common.xsd">
+	<serviceDescription >
+		<serviceName>SHoundCDDIDFromGiList</serviceName>
+		<organisation >
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundCDDIDFromGiList</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundCDDIDFromGiList?wsdl</interfaceWSDL>
+		<serviceDescriptionText>retrieve the domain identifiers for a specified protein gi array. Information returned by this function was originally retrieved for proteins found in NCBI&apos;s LocusLink database. If the query protein gi identifier is not used by the LocusLink record then no information will be returned. The query protein gi identifier could be used to first retrieve a list of redundant (identical) sequence gi identifiers using {@link #SHoundRedundantGroup(int)} and then using these returned protein gi identifiers to query the LocusLink data. For more conserved domain information (for all proteins found in NCBI&apos;s nr dataset) see API functions under RPS BLAST DOMAINS</serviceDescriptionText>
+		<operations >
+			<serviceOperation >
+				<operationName>SHoundCDDIDFromGiList</operationName>
+				<operationInputs >
+					<parameter >
+						<parameterName>giList</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#biological_sequence_id</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Collection</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs >
+					<parameter >
+						<parameterName>result</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_identifier</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Collection</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#retrieving</operationTask>
+				<operationResource>http://www.mygrid.org.uk/ontology#bioinformatics_database</operationResource>
+				<operationResourceContent>http://www.mygrid.org.uk/ontology#model_organism</operationResourceContent>
+				<operationMethod>http://www.mygrid.org.uk/ontology#bioinformatics_algorithm</operationMethod>
+				<operationApplication>http://www.mygrid.org.uk/ontology#bioinformatics_application</operationApplication>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

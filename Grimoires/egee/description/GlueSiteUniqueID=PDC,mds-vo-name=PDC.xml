@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=PDC,mds-vo-name=PDC">
+    <Name>PDC</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:grid-staff@pdc.kth.se</UserSupportContact>
+    <SysAdminContact>mailto:grid-staff@pdc.kth.se</SysAdminContact>
+    <SecurityContact>mailto:grid-staff@pdc.kth.se</SecurityContact>
+    <Location>Stockholm, Sweden</Location>
+    <Latitude>59.348456</Latitude>
+    <Longitude>18.072919</Longitude>
+    <Web>http://www.pdc.kth.se/</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>http://www.egge-ne.org/</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=g03n02.pdc.kth.se,mds-vo-name=PDC">
+        <Name>g03n02.pdc.kth.se</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=g03n02.pdc.kth.se,GlueClusterUniqueID=g03n02.pdc.kth.se,mds-vo-name=PDC">
+            <Name>g03n02.pdc.kth.se</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.8" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="P4" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="513" RAMSize="1800"/>
+            <Architecture SMPSize="1"/>
+            <Benchmark SI00="836" SF00="0"/>
+            <Location LocalID="VO-atlas-production-12.0.7">
+                <Name>VO-atlas-production-12.0.7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.95">
+                <Name>VO-atlas-production-12.0.95</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.20">
+                <Name>VO-atlas-production-13.0.20</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.30">
+                <Name>VO-atlas-production-13.0.30</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-TestU01-DistRNG">
+                <Name>VO-biomed-TestU01-DistRNG</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-make_SFT_happy">
+                <Name>VO-balticgrid-make_SFT_happy</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=g03n05.pdc.kth.se,mds-vo-name=PDC">
+        <InformationServiceURL>ldap://g03n05.pdc.kth.se:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="ops">
+            <Path>/storage/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>94031200</UsedSpace>
+            <AvailableSpace>1452938912</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/storage/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>94031200</UsedSpace>
+            <AvailableSpace>1452938912</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/storage/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>94031200</UsedSpace>
+            <AvailableSpace>1452938912</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/storage/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>94031200</UsedSpace>
+            <AvailableSpace>1452938912</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/storage/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>94031200</UsedSpace>
+            <AvailableSpace>1452938912</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/storage/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>94031200</UsedSpace>
+            <AvailableSpace>1452938912</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomed">
+            <Path>/storage/biomed</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>94031200</UsedSpace>
+            <AvailableSpace>1452938912</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="pdc">
+            <Path>/storage/pdc</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>94031200</UsedSpace>
+            <AvailableSpace>1452938912</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="sbc">
+            <Path>/storage/sbc</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>94031200</UsedSpace>
+            <AvailableSpace>1452938912</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="balticgrid">
+            <Path>/storage/balticgrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>94031200</UsedSpace>
+            <AvailableSpace>1452938912</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="pamela">
+            <Path>/storage/pamela</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>94031200</UsedSpace>
+            <AvailableSpace>1452938912</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="embrace">
+            <Path>/storage/embrace</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>94031200</UsedSpace>
+            <AvailableSpace>1452938912</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://g03n05.pdc.kth.se</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=g03n03.pdc.kth.se:7772,mds-vo-name=PDC">
+        <Name>PDC-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>g03n03.pdc.kth.se:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>cms</Owner>
+        <Owner>biomed</Owner>
+        <Owner>pdc</Owner>
+        <Owner>sbc</Owner>
+        <Owner>balticgrid</Owner>
+        <Owner>pamela</Owner>
+        <Owner>embrace</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=g03n05.pdc.kth.se:2136,mds-vo-name=PDC">
+        <Name>PDC-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://g03n05.pdc.kth.se:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>cms</Owner>
+        <Owner>biomed</Owner>
+        <Owner>pdc</Owner>
+        <Owner>sbc</Owner>
+        <Owner>balticgrid</Owner>
+        <Owner>pamela</Owner>
+        <Owner>embrace</Owner>
+    </Service>
+</Site>

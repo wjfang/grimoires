@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=Kharkov-KIPT-LCG2,mds-vo-name=Kharkov-KIPT-LCG2">
+    <Name>Kharkov-KIPT-LCG2</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:grid_support@kipt.kharkov.ua</UserSupportContact>
+    <SysAdminContact>mailto:grid_support@kipt.kharkov.ua</SysAdminContact>
+    <SecurityContact>mailto:grid_support@kipt.kharkov.ua</SecurityContact>
+    <Location>Kharkov, Ukraine</Location>
+    <Latitude>50.087361111</Latitude>
+    <Longitude>36.250138889</Longitude>
+    <Web>http://www.kipt.kharkov.ua/~cms/</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>egee.sinp.msu.ru</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=cms-eth0-1.kipt.kharkov.ua,mds-vo-name=Kharkov-KIPT-LCG2">
+        <Name>cms-eth0-1.kipt.kharkov.ua</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=cms-eth0-1.kipt.kharkov.ua,GlueClusterUniqueID=cms-eth0-1.kipt.kharkov.ua,mds-vo-name=Kharkov-KIPT-LCG2">
+            <Name>cms-eth0-1.kipt.kharkov.ua</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="4.5" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon_EM64T" ClockSpeed="3400"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="4096" RAMSize="4096"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1500" SF00="1700"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=cms2-eth0-1.kipt.kharkov.ua,mds-vo-name=Kharkov-KIPT-LCG2">
+        <InformationServiceURL>ldap://cms2-eth0-1.kipt.kharkov.ua:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>2860</SizeTotal>
+        <SizeFree>2680</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/kipt.kharkov.ua/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4</UsedSpace>
+            <AvailableSpace>2680000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/kipt.kharkov.ua/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>335</UsedSpace>
+            <AvailableSpace>2680000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/kipt.kharkov.ua/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>467</UsedSpace>
+            <AvailableSpace>2680000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="rgstest">
+            <Path>/dpm/kipt.kharkov.ua/home/rgstest</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2680000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="rdteam">
+            <Path>/dpm/kipt.kharkov.ua/home/rdteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2680000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="rfusion">
+            <Path>/dpm/kipt.kharkov.ua/home/rfusion</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2680000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://cms2-eth0-1.kipt.kharkov.ua</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://cms2-eth0-1.kipt.kharkov.ua</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://cms2-eth0-1.kipt.kharkov.ua</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=cms-eth0-1.kipt.kharkov.ua:2136,mds-vo-name=Kharkov-KIPT-LCG2">
+        <Name>Kharkov-KIPT-LCG2-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://cms-eth0-1.kipt.kharkov.ua:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>cms</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>rgstest</Owner>
+        <Owner>rdteam</Owner>
+        <Owner>rfusion</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=cms-eth0-1.kipt.kharkov.ua:7772,mds-vo-name=Kharkov-KIPT-LCG2">
+        <Name>Kharkov-KIPT-LCG2-wms</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>cms-eth0-1.kipt.kharkov.ua:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>cms</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>rgstest</Owner>
+        <Owner>rdteam</Owner>
+        <Owner>fusion_rdig</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://cms2-eth0-1.kipt.kharkov.ua:8443/srm/managerv1,mds-vo-name=Kharkov-KIPT-LCG2">
+        <Name>Kharkov-KIPT-LCG2-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://cms2-eth0-1.kipt.kharkov.ua:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://cms2-eth0-1.kipt.kharkov.ua:8446/srm/managerv2,mds-vo-name=Kharkov-KIPT-LCG2">
+        <Name>Kharkov-KIPT-LCG2-srm</Name>
+        <Type>srm</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://cms2-eth0-1.kipt.kharkov.ua:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=cms2-eth0-1.kipt.kharkov.ua:2136,mds-vo-name=Kharkov-KIPT-LCG2">
+        <Name>Kharkov-KIPT-LCG2-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://cms2-eth0-1.kipt.kharkov.ua:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>cms</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>rgstest</Owner>
+        <Owner>rdteam</Owner>
+        <Owner>fusion_rdig</Owner>
+    </Service>
+</Site>

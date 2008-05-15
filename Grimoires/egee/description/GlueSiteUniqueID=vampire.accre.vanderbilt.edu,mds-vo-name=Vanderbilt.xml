@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=vampire.accre.vanderbilt.edu,mds-vo-name=Vanderbilt">
+    <Name>Vanderbilt</Name>
+    <Description>OSG Site</Description>
+    <UserSupportContact>mailto: klb@accre.vanderbilt.edu</UserSupportContact>
+    <SysAdminContact>mailto: klb@accre.vanderbilt.edu</SysAdminContact>
+    <SecurityContact>mailto: klb@accre.vanderbilt.edu</SecurityContact>
+    <Location>Nashville ,USA</Location>
+    <Latitude>36.1445</Latitude>
+    <Longitude>-86.8057</Longitude>
+    <Web>http://vampire.accre.vanderbilt.edu</Web>
+    <Sponsor>UNAVAILABLE</Sponsor>
+    <OtherInfo>UNAVAILABLE</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=vampire.accre.vanderbilt.edu,mds-vo-name=Vanderbilt">
+        <Name>vampire.accre.vanderbilt.edu</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=vampire.accre.vanderbilt.edu,GlueClusterUniqueID=vampire.accre.vanderbilt.edu,mds-vo-name=Vanderbilt">
+            <Name>vampire.accre.vanderbilt.edu</Name>
+            <PhysicalCPUs>1</PhysicalCPUs>
+            <LogicalCPUs>2</LogicalCPUs>
+            <TmpDir>/gpfs1/grid/grid-data</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Nash" Release="4.4" Name="RedHatEnterpriseAS"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AuthenticAMD" Model="Dual Core AMD Opteron(tm) Processor 265" ClockSpeed="1000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1024" RAMSize="512"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="400" SF00="380"/>
+            <Location LocalID="SAMPLE_LOCATION">
+                <Name>SAMPLE_LOCATION</Name>
+                <Version>default</Version>
+                <Path>/SAMPLE-path</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_3">
+                <Name>VO-cms-CMSSW_1_2_3</Name>
+                <Version>CMSSW_1_2_3</Version>
+                <Path>/home/grid-app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_6">
+                <Name>VO-cms-CMSSW_1_4_6</Name>
+                <Version>CMSSW_1_4_6</Version>
+                <Path>/gpfs1/grid/grid-app/cmssoft/cms</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=vampire.accre.vanderbilt.edu,mds-vo-name=Vanderbilt">
+        <InformationServiceURL>ldap://is.grid.iu.edu:2170/mds-vo-name=Vanderbilt,mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>9370649088</SizeTotal>
+        <SizeFree>6985574400</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="cdf">
+            <Path>/gpfs1/grid/grid-data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2385074688</UsedSpace>
+            <AvailableSpace>6985574400</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/gpfs1/grid/grid-data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2385074688</UsedSpace>
+            <AvailableSpace>6985574400</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="mis">
+            <Path>/gpfs1/grid/grid-data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2385074688</UsedSpace>
+            <AvailableSpace>6985574400</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="fmri">
+            <Path>/gpfs1/grid/grid-data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2385074688</UsedSpace>
+            <AvailableSpace>6985574400</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gadu">
+            <Path>/gpfs1/grid/grid-data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2385074688</UsedSpace>
+            <AvailableSpace>6985574400</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="glow">
+            <Path>/gpfs1/grid/grid-data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2385074688</UsedSpace>
+            <AvailableSpace>6985574400</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="grow">
+            <Path>/gpfs1/grid/grid-data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2385074688</UsedSpace>
+            <AvailableSpace>6985574400</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="sdss">
+            <Path>/gpfs1/grid/grid-data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2385074688</UsedSpace>
+            <AvailableSpace>6985574400</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="star">
+            <Path>/gpfs1/grid/grid-data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2385074688</UsedSpace>
+            <AvailableSpace>6985574400</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/gpfs1/grid/grid-data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2385074688</UsedSpace>
+            <AvailableSpace>6985574400</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="grase">
+            <Path>/gpfs1/grid/grid-data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2385074688</UsedSpace>
+            <AvailableSpace>6985574400</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ivdgl">
+            <Path>/gpfs1/grid/grid-data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2385074688</UsedSpace>
+            <AvailableSpace>6985574400</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="engage">
+            <Path>/gpfs1/grid/grid-data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2385074688</UsedSpace>
+            <AvailableSpace>6985574400</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="nanohub">
+            <Path>/gpfs1/grid/grid-data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2385074688</UsedSpace>
+            <AvailableSpace>6985574400</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="fermilab">
+            <Path>/gpfs1/grid/grid-data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2385074688</UsedSpace>
+            <AvailableSpace>6985574400</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+    </StorageElement>
+</Site>

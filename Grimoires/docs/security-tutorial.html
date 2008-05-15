@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Grimoires Documentation - Tutorial - Secure GShell Client</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url('i_arrow_down.gif');
+	}
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script>
+</head>
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1><a name="security_tutorial"></a>Tutorial - Secure GShell Client</h1>
+<p />
+<div class="twikiToc">
+<ul>
+<li> <a href="#security_tutorial">Tutorial - Secure GShell Client</a>
+<ul>
+<li> <a href="#Introduction">Introduction</a></li>
+<li> <a href="#Installing_client">Installing OMII Client</a></li>
+<li> <a href="#Deploy_grimoires">Deploying Grimoires securely</a></li>
+<li> <a href="#run_example">Running the example</a></li>
+<li> <a href="#multiple_users">Secure client for multiple users</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p />
+<h2><a name="Introduction"></a>Introduction </h2>
+<p>
+
+This tutorial demonstrates how security works in a secure Grimoires deployment, using a secure GShell client. It is assumed that you have read the <b><u><a class="twikiLink" href="./security.html">security guide</a></b></u>, and the security relevant sections of the installation  guides for <b><u><a class="twikiLink" href="./installation.html">Grimoires</a></b></u> and <b><u><a class="twikiLink" href="./install-gs.html">GShell</a></b></u>. You should also have attempted the <b><u><a class="twikiLink" href="./gshell-tutorial.html">GShell Client tutorial</a></b></u>.
+
+<p />
+<h2><a name="Installing_client"></a>Installing OMII Client</h2>
+<p />
+
+As noted in the GShell installation guide, an installation of the OMII client is necessary in order to run GShell as a secure client. We will need to have three separate installations of the OMII client in order to obtain three different certificates and key pairs. Assuming that your home directory is home/myhome, create three subdirectories, client1, client2 and client3 to accomodate these separate installations. If you have not done so already, download the OMII client package and start the <b><u><a class="twikiLink" href="http://www.omii.ac.uk/downloads/documentation/omii_2_0_0/index.htm">installation process</a></b></u>. For the first client, when prompted:
+
+<p />
+<pre>
+[java] Enter the directory where you want the OMII client to be installed (default is home/myhome):
+</pre>
+<p />
+
+enter home/myhome/client1. Next, if prompted to generate a new keystore, accept. Then for the user details, enter the following:
+
+<p />
+<pre>
+[echo] Please enter your details
+[input] Fully qualified machine name (default: )
+client1
+[java] Organisation:
+UK
+[java] Organisational Unit:
+UK
+[java] Location:
+UK
+[java] State:
+UK
+[java] Country:
+UK
+[java] Email Address:
+client1@hotmail.com
+</pre>
+<p />
+
+and go through the requisite testing. Then repeat the installation process, but this time installing to home/myhome/client2. Then, for the user details, enter the following:
+
+<p />
+<pre>
+[echo] Please enter your details
+[input] Fully qualified machine name (default: )
+client2
+[java] Organisation:
+US
+[java] Organisational Unit:
+US
+[java] Location:
+US
+[java] State:
+US
+[java] Country:
+US
+[java] Email Address:
+client2@hotmail.com
+</pre>
+<p />
+
+and finally, repeat this process for client3.
+
+<p />
+<h2><a name="Deploy_grimoires"></a>Deploying Grimoires securely</h2>
+<p />
+
+Download, install and start the OMII container. If Grimoires is already deployed in the container, <b><u><a class="twikiLink" href="./installation.html#Deployment">undeploy</a></b></u> it first. Make the appropriate changes to the <b><u><a class="twikiLink" href="./installation.html#security_options">configuration parameters</a></b></u> for secure deployment, and modify the <b><u><a class="twikiLink" href="./security.html#Grimoires_ACL">access control list</a></b></u> to:
+
+<p />
+<pre>
+&lt;authlist&gt;
+
+   &lt;groupIdentity groupName = "admin"
+	   identityList = "EMAILADDRESS=client1@hotmail.com, CN=client1, OU=UK, O=UK, L=none, ST=UK, C=UK //
+      EMAILADDRESS=client2@hotmail.com, CN=client2, OU=UK, O=UK, L=none, ST=UK, C=UK"/&gt;
+
+   &lt;groupIdentity groupName = "staff"
+	   identityList = "EMAILADDRESS=client3@hotmail.com, CN=client3, OU=UK, O=UK, L=none, ST=UK, C=UK "/&gt;
+
+   &lt;groupOperation groupName = "save" operationList = " save_business // save_service // save_binding // save_service // save_tModel "/&gt;
+
+   &lt;groupOperation groupName = "find" operationList = " find_binding  //  find_business  //  find_service "/&gt;
+
+   &lt;groupOperation groupName = "get" operationList = " get_bindingDetail  //  get_serviceDetail  // get_bindingDetail  "/&gt;
+
+   &lt;permission identity= "admin" operationList = " save // find // get " mode = "allow"/&gt;
+
+   &lt;permission identity = "staff" operationList = "save " mode="restrict"/&gt;
+
+&lt;/authlist&gt;
+
+</pre>
+<p />
+
+Note that the L parameter for the X509DN is set to none, as this value is not taken into account when distinguishing between different X509DNs. Ensure the other <b><u><a class="twikiLink" href="./installation.html#init_properties">configuration parameters</a></b></u> are correct:
+<p />
+
+1. Set "container = omii-sec" and "securitype = acl" in init.properties<p />
+2. Ensure that the authfile parameter in grimoires.properties reflects the correct location of your OMII container installation.<p />
+
+Deploy Grimoires.
+
+<p />
+<h2><a name="run_example"></a>Running the example</h2>
+<p />
+
+First,
+
+
+<b><u><a class="twikiLink" href="./install-gs.html">install and start GShell</a></b></u> to run in a non-secure manner. Now attempt to run some operations like PublishBusiness or SaveBusiness. You should receive back a trace of error messages, which commences in this manner:
+
+<p />
+<pre>
+AxisFault
+ faultCode: {http://schemas.xmlsoap.org/soap/envelope/}Server.generalException
+ faultSubcode:
+ faultString: SecurityContextInitHandler: Request does not contain required Security header
+ faultActor:
+ faultNode:
+</pre>
+<p />
+
+This error message indicates that a signature was expected with the SOAP message at the OMII container where Grimoires is deployed in, but none was received. We now setup GShell to run securely. Change <b><u><a class="twikiLink" href="./install-gs.html#gshell_secure">crypto.properties</a></b></u> so that org.apache.ws.security.crypto.merlin.file hold the value /home/myhome/client1/OMIICLIENT/omii.ks and then re-install GShell securely by doing:
+<p />
+1. ant clean
+<p />
+2. ant
+<p />
+3. ant secure
+<p />
+Now, any outgoing messages from GShell will be signed and associated with the X509DN = "EMAILADDRESS=client1@hotmail.com, CN=client1, OU=UK, O=UK, L=none, ST=UK, C=UK", which corresponds to the client certificate created in the keystore in /home/myhome/client1/OMIICLIENT/. As we saw from the ACL that we had created earlier, this identity is within the group "admin", and hence permitted to perform the various operations from the three groups "save", "find" and "get". Start GShell, and try to perform some <b><u><a class="twikiLink" href="./gshell.html">commands</a></b></u> like PublishService and InquireService (which correspond to the operations save_service, find_service and get_serviceDetail). This should all work fine. Now attempt a command like PublishWSDL (which invokes the addMetadataToEntity operation). As this is not authorized for client1, a trace of error messages will be received back
+
+only permitted two operations: save_service and get_serviceDetail (corresponding to the PublishService and InquireService operations available in GShell). Start GShell, and attempt to do an operation like PublishBusiness. You should receive back a trace of error messages, which commences in this manner:
+
+<p />
+<pre>
+AxisFault
+ faultCode: {http://schemas.xmlsoap.org/soap/envelope/}Server.generalException
+ faultSubcode:
+ faultString: Entity name : EMAILADDRESS=client1@hotmail.com, CN=client1, OU=UK, O=UK, L=none, ST=UK, C=UK recognized,
+ however operation addMetadataToEntity unauthorized !
+ faultActor:
+ faultNode:
+</pre>
+<p />
+
+This indicates the X509DN is valid (i.e. existing in the Grimoires ACL), but it pertains to an unauthorized  operation. Now exit GShell, and change crypto.properties to refer to client2's location instead and then repeat the example above. You should obtain the same set of results as client1 and client2 are both in the same group in the ACL. Finally, exit Gshell again and restart again after having changed crypto.properties to refer to client3. As seen from the ACL, client3 is allowed to perform all actions except save-type operations. Verify this is the case, for example, by trying to issue a PublishService or InquireService command.
+
+<p />
+
+Modify the access control list again to include the use of <b><u><a class="twikiLink" href="./security.html#wildcard">wildcard references</a></b></u> "#AllUsers#" and "#AllOperations#" and repeat the example to note the effect of their use. Note that the wildcard references must be in permission statements that precede all other statements in the access control list in order for them to have the desired effect.
+
+
+<p />
+<h2><a name="multiple_users"></a>Secure client for multiple users</h2>
+<p />
+
+It is possible to allow a single GShell client and OMII client installation to be used by multiple users in order to access a secure Grimoires deployment. In this case, the key pairs and certificates of the individual users will be stored in the default OMII client keystore. The crypto.properties then has to be changed prior to running GShell, so that the correct key pair/certificate of the designated user is retrieved and used to sign the outgoing SOAP message at runtime. Refer to <b><u><a class="twikiLink" href="http://www.omii.ac.uk/downloads/documentation/omii_2_0_0/index.htm">OMII documentation</a></b></u> for further details.
+
+
+</div>
+
+</body></html>

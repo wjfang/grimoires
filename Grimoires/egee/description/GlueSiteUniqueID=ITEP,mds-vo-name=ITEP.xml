@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=ITEP,mds-vo-name=ITEP">
+    <Name>ITEP</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:lublev@itep.ru</UserSupportContact>
+    <SysAdminContact>mailto:lublev@itep.ru</SysAdminContact>
+    <SecurityContact>mailto:lublev@itep.ru</SecurityContact>
+    <Location>Moscow, Russia</Location>
+    <Latitude>55.5</Latitude>
+    <Longitude>37.37</Longitude>
+    <Web>http://egee.itep.ru</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>my-bigger-site.their_domain</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ceitep.itep.ru,mds-vo-name=ITEP">
+        <Name>ceitep.itep.ru</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ceitep.itep.ru,GlueClusterUniqueID=ceitep.itep.ru,mds-vo-name=ITEP">
+            <Name>ceitep.itep.ru</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="4.4" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="intel" ClockSpeed="2660"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="8192" RAMSize="8192"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="2764" SF00="2761"/>
+            <Location LocalID="VO-atlas-cloud-NL">
+                <Name>VO-atlas-cloud-NL</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-offline-12.0.1">
+                <Name>VO-atlas-offline-12.0.1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-offline-12.0.2">
+                <Name>VO-atlas-offline-12.0.2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.3">
+                <Name>VO-atlas-production-12.0.3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.31">
+                <Name>VO-atlas-production-12.0.31</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.4">
+                <Name>VO-atlas-production-12.0.4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.5">
+                <Name>VO-atlas-production-12.0.5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6">
+                <Name>VO-atlas-production-12.0.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.42">
+                <Name>VO-atlas-release-11.0.42</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.5">
+                <Name>VO-atlas-release-11.0.5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-tier-T2">
+                <Name>VO-atlas-tier-T2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r8">
+                <Name>VO-lhcb-Gauss-v25r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2">
+                <Name>VO-lhcb-XmlDDDB-v22r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r14">
+                <Name>VO-lhcb-XmlDDDB-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v12r10">
+                <Name>VO-lhcb-Boole-v12r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v12r18">
+                <Name>VO-lhcb-DaVinci-v12r18</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r6">
+                <Name>VO-lhcb-DaVinci-v17r6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r7">
+                <Name>VO-lhcb-DaVinci-v17r7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r8">
+                <Name>VO-lhcb-DaVinci-v17r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r14">
+                <Name>VO-lhcb-Brunel-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r8">
+                <Name>VO-lhcb-DecFiles-v13r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v5r0">
+                <Name>VO-lhcb-ParamFiles-v5r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r15">
+                <Name>VO-lhcb-Brunel-v30r15</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r9">
+                <Name>VO-lhcb-Gauss-v25r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v18r0">
+                <Name>VO-lhcb-DaVinci-v18r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r9">
+                <Name>VO-lhcb-DecFiles-v13r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r0">
+                <Name>VO-lhcb-DaVinci-v19r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r1">
+                <Name>VO-lhcb-DaVinci-v19r1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r17">
+                <Name>VO-lhcb-Brunel-v30r17</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r10">
+                <Name>VO-lhcb-Gauss-v25r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r2">
+                <Name>VO-lhcb-DaVinci-v19r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r10">
+                <Name>VO-lhcb-DecFiles-v13r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_6_0">
+                <Name>VO-cms-CMSSW_0_6_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_6_1">
+                <Name>VO-cms-CMSSW_0_6_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_7_0">
+                <Name>VO-cms-CMSSW_0_7_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_7_2">
+                <Name>VO-cms-CMSSW_0_7_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_8_3">
+                <Name>VO-cms-CMSSW_0_8_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_8_4">
+                <Name>VO-cms-CMSSW_0_8_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_0_1">
+                <Name>VO-cms-CMSSW_1_0_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_0_6">
+                <Name>VO-cms-CMSSW_1_0_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_1_1">
+                <Name>VO-cms-CMSSW_1_1_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_1_2">
+                <Name>VO-cms-CMSSW_1_1_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_0">
+                <Name>VO-cms-CMSSW_1_2_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_1">
+                <Name>VO-cms-CMSSW_1_2_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_2">
+                <Name>VO-cms-CMSSW_1_2_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_3">
+                <Name>VO-cms-CMSSW_1_2_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1">
+                <Name>VO-cms-CMSSW_1_3_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_4">
+                <Name>VO-cms-CMSSW_1_2_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-testingthesite1">
+                <Name>VO-dteam-testingthesite1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-ITUtest1">
+                <Name>VO-dteam-ITUtest1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final">
+                <Name>VO-dteam-december05prod-final</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final-cand2">
+                <Name>VO-dteam-december05prod-final-cand2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ceglite.itep.ru,mds-vo-name=ITEP">
+        <Name>ceglite.itep.ru</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ceglite.itep.ru,GlueClusterUniqueID=ceglite.itep.ru,mds-vo-name=ITEP">
+            <Name>ceglite.itep.ru</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="4.4" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="intel" ClockSpeed="2660"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="8192" RAMSize="8192"/>
+            <Architecture SMPSize="4"/>
+            <Benchmark SI00="2764" SF00="2761"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=se2.itep.ru,mds-vo-name=ITEP">
+        <InformationServiceURL>ldap://se2.itep.ru:2170/mds-vo-name=resource,o=grid</InformationServiceURL>
+        <SizeTotal>1970</SizeTotal>
+        <SizeFree>651</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/dpm/itep.ru/home/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1229833165</UsedSpace>
+            <AvailableSpace>650990000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/dpm/itep.ru/home/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>144</UsedSpace>
+            <AvailableSpace>650990000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/dpm/itep.ru/home/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>650990000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/itep.ru/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>25098</UsedSpace>
+            <AvailableSpace>650990000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/itep.ru/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1049659</UsedSpace>
+            <AvailableSpace>650990000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="photon">
+            <Path>/dpm/itep.ru/home/photon</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3846679</UsedSpace>
+            <AvailableSpace>650990000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/itep.ru/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1245</UsedSpace>
+            <AvailableSpace>650990000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://se2.itep.ru</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://se2.itep.ru</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://se2.itep.ru</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=se3.itep.ru,mds-vo-name=ITEP">
+        <InformationServiceURL>ldap://se3.itep.ru:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>5171</SizeTotal>
+        <SizeFree>1328</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/pnfs/itep.ru/data/atlas</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1793780103</UsedSpace>
+            <AvailableSpace>713407056</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/pnfs/itep.ru/data/alice</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1793780103</UsedSpace>
+            <AvailableSpace>713407056</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/pnfs/itep.ru/data/lhcb</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1793780103</UsedSpace>
+            <AvailableSpace>713407056</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/pnfs/itep.ru/data/cms</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1293914854</UsedSpace>
+            <AvailableSpace>465947996</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/pnfs/itep.ru/data/dteam</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>951148136</UsedSpace>
+            <AvailableSpace>356669405</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="photon">
+            <Path>/pnfs/itep.ru/data/photon</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>755793629</UsedSpace>
+            <AvailableSpace>148296987</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/pnfs/itep.ru/data/ops</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>951148136</UsedSpace>
+            <AvailableSpace>356669405</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp@se3.itep.ru">
+            <Endpoint>gsiftp://se3.itep.ru:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0</Version>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gridftp@se3.itep.ru">
+            <Endpoint>gridftp://se3.itep.ru:2811</Endpoint>
+            <Type>gridftp</Type>
+            <Version>1.0</Version>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsiftp@rrcdsk6.itep.ru">
+            <Endpoint>gsiftp://rrcdsk6.itep.ru:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gridftp@rrcdsk6.itep.ru">
+            <Endpoint>gridftp://rrcdsk6.itep.ru:2811</Endpoint>
+            <Type>gridftp</Type>
+            <Version>1.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsiftp@seitep.itep.ru">
+            <Endpoint>gsiftp://seitep.itep.ru:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gridftp@seitep.itep.ru">
+            <Endpoint>gridftp://seitep.itep.ru:2811</Endpoint>
+            <Type>gridftp</Type>
+            <Version>1.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsidcap@se3.itep.ru">
+            <Endpoint>gsidcap://se3.itep.ru:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.0</Version>
+            <Capability>file transfer</Capability>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsidcap@rrcdsk6.itep.ru">
+            <Endpoint>gsidcap://rrcdsk6.itep.ru:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsidcap@seitep.itep.ru">
+            <Endpoint>gsidcap://seitep.itep.ru:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-se3@gridftp-se3Domain">
+            <Endpoint>gsiftp://se3.itep.ru:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-se3@dcap-se3Domain">
+            <Endpoint>dcap://se3.itep.ru:22125</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-gsi-se3@gsidcap-se3Domain">
+            <Endpoint>gsidcap://se3.itep.ru:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1@se3.itep.ru">
+            <Endpoint>httpg://se3.itep.ru:8443/srm/managerv1</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.1.0</Version>
+            <Capability>space allocation</Capability>
+            <Capability>space management</Capability>
+        </ControlProtocol>
+        <ControlProtocol LocalID="SRM-se3@srm-se3Domain">
+            <Endpoint>httpg://se3.itep.ru:8443/srm/managerv1</Endpoint>
+            <Type>SRM</Type>
+            <Version>1.1.1</Version>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=ceglite.itep.ru:2119,mds-vo-name=ITEP">
+        <Name>ITEP-org.glite.ce</Name>
+        <Type>org.glite.ce</Type>
+        <Version>2.4.20</Version>
+        <Endpoint>ceglite.itep.ru:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>photon</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://glwms.itep.ru:8085/,o=local,mds-vo-name=ITEP">
+        <Name>ITEP-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>http://glwms.itep.ru:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>photon</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glwms.itep.ru,o=local,mds-vo-name=ITEP">
+        <Name>ITEP-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>glwms.itep.ru</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>photon</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-http://glwms.itep.ru:8085/,mds-vo-name=ITEP">
+        <Name>ITEP-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>http://glwms.itep.ru:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-02T11:19:47.000+04:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>photon</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-glwms.itep.ru,mds-vo-name=ITEP">
+        <Name>ITEP-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>glwms.itep.ru</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-02T11:19:47.000+04:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>photon</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lcfgmon.itep.ru:2136,mds-vo-name=ITEP">
+        <Name>ITEP-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://lcfgmon.itep.ru:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>photon</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://se2.itep.ru:8443/srm/managerv1,mds-vo-name=ITEP">
+        <Name>ITEP-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://se2.itep.ru:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://se2.itep.ru:8446/srm/managerv2,mds-vo-name=ITEP">
+        <Name>ITEP-srm</Name>
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://se2.itep.ru:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://se3.itep.ru:8443/srm/managerv1,mds-vo-name=ITEP">
+        <Name>ITEP-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://se3.itep.ru:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=gsissh://vobox.itep.ru:1975,mds-vo-name=ITEP">
+        <Name>ITEP-vobox</Name>
+        <Type>VOBOX</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>gsissh://vobox.itep.ru:1975</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=wmslb.itep.ru:7772,mds-vo-name=ITEP">
+        <Name>ITEP-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>wmslb.itep.ru:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>photon</Owner>
+        <Owner>ops</Owner>
+    </Service>
+</Site>

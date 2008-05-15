@@ -1,0 +1,21 @@
+<save_service generic="2.0" xmlns="urn:uddi-org:api_v2">
+	<authInfo>AUTHINFO</authInfo>
+	<businessService businessKey="e9aa95e8-adbd-4631-8f5a-f91540b2b57d">
+		<name>Blast</name>
+		<description>A DDBJ Web Service</description>
+		<bindingTemplates>
+			<bindingTemplate>
+				<accessPoint>http://xml.nig.ac.jp/xddbj/Blast</accessPoint>
+				<tModelInstanceDetails>
+					<tModelInstanceInfo>
+						<instanceDetails>
+							<overviewDoc>
+								<overviewURL>http://xml.nig.ac.jp/wsdl/Blast.wsdl</overviewURL>
+							</overviewDoc>
+						</instanceDetails>
+					</tModelInstanceInfo>
+				</tModelInstanceDetails>
+			</bindingTemplate>
+		</bindingTemplates>
+	</businessService>	
+</save_service>

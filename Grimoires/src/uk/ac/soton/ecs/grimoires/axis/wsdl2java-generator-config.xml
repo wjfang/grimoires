@@ -1,0 +1,147 @@
+<config>
+  <!-- Metadata -->
+  <element 
+    name="Metadata,MetadataInfo,MetadataInfos,TriplesAssertion,MetadataValue,MetadataQuery,MetadataQueryBag,UriBag,FindQualifiers,EntityReference,MetadataReference,EntityReferenceList,MessagePartReference,MessagePartMetadataQueryBag,OperationReference,OperationReferenceList,OperationMetadataQueryBag,UddiReference"
+    namespace="http://www.grimoires.org/metadata.xsd">
+    <import name="uk.ac.soton.ecs.grimoires.server.impl.VariableGenerator" />
+    <import name="uk.ac.soton.ecs.grimoires.server.impl.StoreException" />
+    <import name="uk.ac.soton.ecs.grimoires.server.impl.RDQLQueryQualifier" />
+    <import name="com.hp.hpl.jena.rdf.model.Model" />
+    <import name="com.hp.hpl.jena.rdf.model.RDFException" />
+    <import name="com.hp.hpl.jena.rdf.model.Resource" />
+    <import name="com.hp.hpl.jena.rdf.model.RDFNode" />
+    <import name="java.util.Hashtable" />
+    <import name="java.util.Vector" />
+    <implements name="MetadataModelVisitable" />
+    <!-- extends -->
+    <method text=" /** Grimoires specific methods and constructors */ " />
+    <method text="  public Object accept (MetadataModelVisitor v) { return v.process(this); }" />
+    <method text='    public ${classname} (Model m, Resource r) throws RDFException, StoreException {
+      throw new UnsupportedOperationException ("No implementation for constructor taking (Model, Resource) in ${classname}");
+      }' 
+      />
+  </element>
+
+
+  <element name="AddMetadataToEntity,DeleteMetadata"
+    namespace="http://www.grimoires.org/metadata.xsd">
+    <import name="uk.ac.soton.ecs.grimoires.server.impl.AbstractMessage" />
+    <import name="uk.ac.soton.ecs.grimoires.server.impl.Message" />
+    <import name="uk.ac.soton.ecs.grimoires.server.impl.metadata.handlers.PublishMetadataHandler" />
+    <implements name="PublishMetadataMessage" />
+    <implements name="PublishMetadataProcessable" />
+    <extends name="AbstractMessage" />
+    <method text="    public Object accept (PublishMetadataHandler v) {
+      return v.process(this);
+      }" 
+      />
+  </element>
+
+  <element name="Find_entityByMetadata,Get_entityMetadata,Get_supportedEntityType,Get_metadataDetail"
+    namespace="http://www.grimoires.org/metadata.xsd">
+    <import name="uk.ac.soton.ecs.grimoires.server.impl.AbstractMessage" />
+    <import name="uk.ac.soton.ecs.grimoires.server.impl.Message" />
+    <import name="uk.ac.soton.ecs.grimoires.server.impl.metadata.handlers.InquireMetadataHandler" />
+    <implements name="InquireMetadataMessage" />
+    <implements name="InquireMetadataProcessable" />
+    <extends name="AbstractMessage" />
+    <method text="    public Object accept (InquireMetadataHandler v) {
+      return v.process(this);
+      }" 
+      />
+  </element>
+
+  <element name="Find_interfaceByMessagePartMetadata,Find_operation,Find_interfaceByOperationMetadata"
+    namespace="http://www.grimoires.org/metadata.xsd">
+    <import name="uk.ac.soton.ecs.grimoires.server.impl.AbstractMessage" />
+    <import name="uk.ac.soton.ecs.grimoires.server.impl.Message" />
+    <import name="uk.ac.soton.ecs.grimoires.server.impl.metadata.handlers.InquireWsdlMetadataHandler" />
+    <implements name="InquireWsdlMetadataMessage" />
+    <implements name="InquireWsdlMetadataProcessable" />
+    <extends name="AbstractMessage" />
+    <method text="    public Object accept (InquireWsdlMetadataHandler v) {
+      return v.process(this);
+      }" 
+      />
+  </element>
+
+  <element name="Find_service"
+    namespace="http://www.grimoires.org/metadata.xsd">
+    <import name="uk.ac.soton.ecs.grimoires.server.impl.AbstractMessage" />
+    <import name="uk.ac.soton.ecs.grimoires.server.impl.Message" />
+    <import name="uk.ac.soton.ecs.grimoires.server.impl.metadata.handlers.InquireUddiMetadataHandler" />
+    <implements name="InquireUddiMetadataMessage" />
+    <implements name="InquireUddiMetadataProcessable" />
+    <extends name="AbstractMessage" />
+    <method text="    public Object accept (InquireUddiMetadataHandler v) {
+      return v.process(this);
+      }" 
+      />
+  </element>
+
+  <element name="FaultDetailList"
+    namespace="http://www.grimoires.org/metadata.xsd">
+    <extends name="org.apache.axis.AxisFault"/>
+    <method text="    /**
+      * Writes the exception data to the faultDetails
+      */
+      public void writeDetails(javax.xml.namespace.QName qname, org.apache.axis.encoding.SerializationContext context) throws java.io.IOException {
+      context.serialize(qname, null, this);
+      }"
+      />
+  </element>
+
+  <!-- UDDIv2 -->
+
+  <element
+    name="add_publisherAssertions,delete_binding,delete_business,delete_publisherAssertions,delete_service,delete_tModel,discard_authToken,get_assertionStatusReport,get_authToken,get_publisherAssertions,get_registeredInfo,save_binding,save_business,save_service,save_tModel,set_publisherAssertions,validate_values"
+    namespace="urn:uddi-org:api_v2">
+    <extends name="uk.ac.soton.ecs.grimoires.server.impl.AbstractMessage" />
+    <!-- Dispatch is done explicitly.
+    <implements name="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.message.PublishMessage" />
+    <implements name="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.message.PublishProcessable" />
+    <method text="	/** Grimoires specific methods and constructors */ " />
+    <method text='	public Object accept(uk.ac.soton.ecs.grimoires.server.impl.uddiv2.message.PublishHandler v) {
+    return v.process(this);
+    }
+    ' />
+    -->
+    <implements name="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.handlers.UDDIv2DataModelVisitable" />
+    <method text="	/** Grimoires specific methods and constructors */ " />
+    <method text='	public Object accept(uk.ac.soton.ecs.grimoires.server.impl.uddiv2.handlers.UDDIv2DataModelVisitor v) throws Exception {
+      return v.process(this);
+      }
+      ' />
+  </element>
+
+  <element name="find_binding,find_business,find_relatedBusinesses,find_service,find_tModel,get_bindingDetail,get_businessDetail,get_businessDetailExt,get_serviceDetail,get_tModelDetail"
+    namespace="urn:uddi-org:api_v2">
+    <extends name="uk.ac.soton.ecs.grimoires.server.impl.AbstractMessage" />
+    <!-- Dispatch is done explicitly.
+    <implements name="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.message.InquiryMessage" />
+    <implements name="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.message.InquiryProcessable" />
+    <method text="	/** Grimoires specific methods and constructors */ " />
+    <method text='	public Object accept(uk.ac.soton.ecs.grimoires.server.impl.uddiv2.message.InquiryHandler v) {
+    return v.process(this);
+    }
+    ' />
+    -->
+    <implements name="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.handlers.UDDIv2DataModelVisitable" />
+    <method text="	/** Grimoires specific methods and constructors */ " />
+    <method text='	public Object accept(uk.ac.soton.ecs.grimoires.server.impl.uddiv2.handlers.UDDIv2DataModelVisitor v) throws Exception {
+      return v.process(this);
+      }
+      ' />
+  </element>
+
+  <element name="accessPoint,address,addressLine,assertionStatusItem,assertionStatusReport,authToken,bindingDetail,bindingTemplate,bindingTemplates,businessDetailExt,businessDetail,businessEntityExt,businessEntity,businessInfo,businessInfos,businessList,businessService,businessServices,categoryBag,contact,contacts,description,direction,discoveryURL,discoveryURLs,email,findQualifiers,hostingRedirector,identifierBag,instanceDetails,keyedReference,keysOwned,name,overviewDoc,phone,publisherAssertion,publisherAssertions,registeredInfo,relatedBusinessesList,relatedBusinessInfo,relatedBusinessInfos,serviceDetail,serviceInfo,serviceInfos,serviceList,sharedRelationships,tModelBag,tModelDetail,tModelInfo,tModelInfos,tModelInstanceDetails,tModelInstanceInfo,tModel,tModelList"
+    namespace="urn:uddi-org:api_v2">
+    <implements name="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.handlers.UDDIv2DataModelVisitable" />
+    <method text="	/** Grimoires specific methods and constructors */ " />
+    <method text='	public Object accept(uk.ac.soton.ecs.grimoires.server.impl.uddiv2.handlers.UDDIv2DataModelVisitor v) throws Exception {
+      return v.process(this);
+      }
+      ' />
+  </element>
+</config>
+

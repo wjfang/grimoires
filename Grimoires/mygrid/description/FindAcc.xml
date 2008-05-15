@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+	<serviceDescription>
+		<serviceName>SHoundFindAcc</serviceName>
+		<organisation>
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundFindAcc</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundFindAcc?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Converts an accession number for a sequence into a GenInfo identifier - GI. This function will not accept a version number (e.g. NP_116609.1). The '.1' must be removed from the example version number to form a valid accession. SeqHound only stores and returns the latest version of</serviceDescriptionText>
+		<operations>
+			<serviceOperation>
+				<operationName>SHoundFindAcc</operationName>
+				<operationDescriptionText>Converts an accession number to a GI accession number.  This function name is deprecated and should be replaced by SHoundGiFromGBAcc.
+</operationDescriptionText>
+				<operationInputs>
+					<parameter>
+						<parameterName>acc</parameterName>
+						<parameterDescription>An accession number that needs to be converted to a GI accession number</parameterDescription>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_record_id</semanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs>
+					<parameter>
+						<parameterName>result</parameterName>
+						<parameterDescription>GI accession number</parameterDescription>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_record_id</semanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#bioinformatics_task</operationTask>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

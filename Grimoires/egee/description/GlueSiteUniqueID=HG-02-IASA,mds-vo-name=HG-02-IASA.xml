@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=HG-02-IASA,mds-vo-name=HG-02-IASA">
+    <Name>HG-02-IASA</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:grid-support@iasa.gr</UserSupportContact>
+    <SysAdminContact>mailto:grid-support@iasa.gr</SysAdminContact>
+    <SecurityContact>mailto:grid-support@iasa.gr</SecurityContact>
+    <Location>Athens, Greece</Location>
+    <Latitude>37.58</Latitude>
+    <Longitude>23.43</Longitude>
+    <Web>http://www.iasa.gr</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>HG-01-GRNET</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ce01.marie.hellasgrid.gr,mds-vo-name=HG-02-IASA">
+        <Name>ce01.marie.hellasgrid.gr</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce01.marie.hellasgrid.gr,GlueClusterUniqueID=ce01.marie.hellasgrid.gr,mds-vo-name=HG-02-IASA">
+            <Name>ce01.marie.hellasgrid.gr</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.5" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="3400"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="true"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1024" RAMSize="2048"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1367" SF00="0"/>
+            <Location LocalID="VO-atlas-cloud-NL">
+                <Name>VO-atlas-cloud-NL</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.31">
+                <Name>VO-atlas-production-12.0.31</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6">
+                <Name>VO-atlas-production-12.0.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.95">
+                <Name>VO-atlas-production-12.0.95</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.10">
+                <Name>VO-atlas-production-13.0.10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.20">
+                <Name>VO-atlas-production-13.0.20</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.42">
+                <Name>VO-atlas-release-11.0.42</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.5">
+                <Name>VO-atlas-release-11.0.5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-tier-T3">
+                <Name>VO-atlas-tier-T3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-Gate3.0.0-LCG">
+                <Name>VO-biomed-Gate3.0.0-LCG</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-Gate3.0.0-JR">
+                <Name>VO-biomed-Gate3.0.0-JR</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-TestU01-DistRNG">
+                <Name>VO-biomed-TestU01-DistRNG</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r8">
+                <Name>VO-lhcb-Gauss-v25r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2">
+                <Name>VO-lhcb-XmlDDDB-v22r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r14">
+                <Name>VO-lhcb-XmlDDDB-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v12r10">
+                <Name>VO-lhcb-Boole-v12r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v12r18">
+                <Name>VO-lhcb-DaVinci-v12r18</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r6">
+                <Name>VO-lhcb-DaVinci-v17r6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r7">
+                <Name>VO-lhcb-DaVinci-v17r7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r8">
+                <Name>VO-lhcb-DaVinci-v17r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r14">
+                <Name>VO-lhcb-Brunel-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r8">
+                <Name>VO-lhcb-DecFiles-v13r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v5r0">
+                <Name>VO-lhcb-ParamFiles-v5r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r15">
+                <Name>VO-lhcb-Brunel-v30r15</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r9">
+                <Name>VO-lhcb-Gauss-v25r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v18r0">
+                <Name>VO-lhcb-DaVinci-v18r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r9">
+                <Name>VO-lhcb-DecFiles-v13r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r0">
+                <Name>VO-lhcb-DaVinci-v19r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r10">
+                <Name>VO-lhcb-Gauss-v25r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r1">
+                <Name>VO-lhcb-DaVinci-v19r1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r2">
+                <Name>VO-lhcb-DaVinci-v19r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r17">
+                <Name>VO-lhcb-Brunel-v30r17</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r10">
+                <Name>VO-lhcb-DecFiles-v13r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r3">
+                <Name>VO-lhcb-DaVinci-v19r3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r4">
+                <Name>VO-lhcb-DaVinci-v19r4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r5">
+                <Name>VO-lhcb-DaVinci-v19r5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r12">
+                <Name>VO-lhcb-DecFiles-v13r12</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r12">
+                <Name>VO-lhcb-Gauss-v25r12</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-see-octave-2.1.73">
+                <Name>VO-see-octave-2.1.73</Name>
+                <Version>Prod</Version>
+                <Path>$VO_SEE_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-see-gsl-1.9">
+                <Name>VO-see-gsl-1.9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_SEE_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=glite-ce01.marie.hellasgrid.gr,mds-vo-name=HG-02-IASA">
+        <Name>glite-ce01.marie.hellasgrid.gr</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=glite-ce01.marie.hellasgrid.gr,GlueClusterUniqueID=glite-ce01.marie.hellasgrid.gr,mds-vo-name=HG-02-IASA">
+            <Name>glite-ce01.marie.hellasgrid.gr</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.5" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="3400"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="true"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1024" RAMSize="2048"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1367" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=se01.marie.hellasgrid.gr,mds-vo-name=HG-02-IASA">
+        <InformationServiceURL>ldap://se01.marie.hellasgrid.gr:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>3220</SizeTotal>
+        <SizeFree>2990</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="alice">
+            <Path>/dpm/marie.hellasgrid.gr/home/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>2990000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/dpm/marie.hellasgrid.gr/home/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>22175086</UsedSpace>
+            <AvailableSpace>2990000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomed">
+            <Path>/dpm/marie.hellasgrid.gr/home/biomed</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1048607</UsedSpace>
+            <AvailableSpace>2990000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/marie.hellasgrid.gr/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2990000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="compchem">
+            <Path>/dpm/marie.hellasgrid.gr/home/compchem</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2990000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/marie.hellasgrid.gr/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3875</UsedSpace>
+            <AvailableSpace>2990000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="esr">
+            <Path>/dpm/marie.hellasgrid.gr/home/esr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>5462</UsedSpace>
+            <AvailableSpace>2990000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="hgdemo">
+            <Path>/dpm/marie.hellasgrid.gr/home/hgdemo</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>7175</UsedSpace>
+            <AvailableSpace>2990000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/dpm/marie.hellasgrid.gr/home/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2990000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="magic">
+            <Path>/dpm/marie.hellasgrid.gr/home/magic</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2990000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/marie.hellasgrid.gr/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>8815</UsedSpace>
+            <AvailableSpace>2990000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="planck">
+            <Path>/dpm/marie.hellasgrid.gr/home/planck</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>88161</UsedSpace>
+            <AvailableSpace>2990000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="see">
+            <Path>/dpm/marie.hellasgrid.gr/home/see</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6470508</UsedSpace>
+            <AvailableSpace>2990000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="sixt">
+            <Path>/dpm/marie.hellasgrid.gr/home/sixt</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2990000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gridcc">
+            <Path>/dpm/marie.hellasgrid.gr/home/gridcc</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>5304130</UsedSpace>
+            <AvailableSpace>2990000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="scier">
+            <Path>/dpm/marie.hellasgrid.gr/home/scier</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2990000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://se01.marie.hellasgrid.gr</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://se01.marie.hellasgrid.gr</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://se01.marie.hellasgrid.gr</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=httpg://se01.marie.hellasgrid.gr:8443/srm/managerv1,mds-vo-name=HG-02-IASA">
+        <Name>HG-02-IASA-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://se01.marie.hellasgrid.gr:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://se01.marie.hellasgrid.gr:8446/srm/managerv2,mds-vo-name=HG-02-IASA">
+        <Name>HG-02-IASA-srm</Name>
+        <Type>srm</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://se01.marie.hellasgrid.gr:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-ce01.marie.hellasgrid.gr:2119,mds-vo-name=HG-02-IASA">
+        <Name>HG-02-IASA-org.glite.ce</Name>
+        <Type>org.glite.ce</Type>
+        <Version>2.4.20</Version>
+        <Endpoint>glite-ce01.marie.hellasgrid.gr:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>biomed</Owner>
+        <Owner>cms</Owner>
+        <Owner>compchem</Owner>
+        <Owner>dteam</Owner>
+        <Owner>esr</Owner>
+        <Owner>hgdemo</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>magic</Owner>
+        <Owner>ops</Owner>
+        <Owner>planck</Owner>
+        <Owner>see</Owner>
+        <Owner>sixt</Owner>
+        <Owner>gridcc</Owner>
+        <Owner>scier</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=mon.marie.hellasgrid.gr:2136,mds-vo-name=HG-02-IASA">
+        <Name>HG-02-IASA-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://mon.marie.hellasgrid.gr:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>biomed</Owner>
+        <Owner>cms</Owner>
+        <Owner>compchem</Owner>
+        <Owner>dteam</Owner>
+        <Owner>esr</Owner>
+        <Owner>hgdemo</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>magic</Owner>
+        <Owner>ops</Owner>
+        <Owner>planck</Owner>
+        <Owner>see</Owner>
+        <Owner>sixt</Owner>
+        <Owner>gridcc</Owner>
+        <Owner>scier</Owner>
+    </Service>
+</Site>

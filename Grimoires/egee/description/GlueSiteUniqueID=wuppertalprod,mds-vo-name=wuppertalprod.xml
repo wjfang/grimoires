@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=wuppertalprod,mds-vo-name=wuppertalprod">
+    <Name>wuppertalprod</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:lcg-admin@physik.uni-wuppertal.de</UserSupportContact>
+    <SysAdminContact>mailto:lcg-admin@physik.uni-wuppertal.de</SysAdminContact>
+    <SecurityContact>mailto:lcg-admin@physik.uni-wuppertal.de</SecurityContact>
+    <Location>Wuppertal, Germany</Location>
+    <Latitude>51.24564</Latitude>
+    <Longitude>7.14941</Longitude>
+    <Web>h</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>h</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=grid-ce.physik.uni-wuppertal.de,mds-vo-name=wuppertalprod">
+        <Name>grid-ce.physik.uni-wuppertal.de</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=grid-ce.physik.uni-wuppertal.de,GlueClusterUniqueID=grid-ce.physik.uni-wuppertal.de,mds-vo-name=wuppertalprod">
+            <Name>grid-ce.physik.uni-wuppertal.de</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Final" Release="4.5" Name="CentOS"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="PIV" ClockSpeed="2000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1024" RAMSize="1538"/>
+            <Architecture SMPSize="4"/>
+            <Benchmark SI00="2100" SF00="2100"/>
+            <Location LocalID="VO-atlas-cloud-DE">
+                <Name>VO-atlas-cloud-DE</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.31">
+                <Name>VO-atlas-production-12.0.31</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.4">
+                <Name>VO-atlas-production-12.0.4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.5">
+                <Name>VO-atlas-production-12.0.5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6">
+                <Name>VO-atlas-production-12.0.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.10">
+                <Name>VO-atlas-production-13.0.10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-tier-T2">
+                <Name>VO-atlas-tier-T2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-ITUtest1">
+                <Name>VO-dteam-ITUtest1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dech-GEANT">
+                <Name>VO-dech-GEANT</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DECH_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dech-GKS05">
+                <Name>VO-dech-GKS05</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DECH_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=grid-se.physik.uni-wuppertal.de,mds-vo-name=wuppertalprod">
+        <InformationServiceURL>ldap://grid-se.physik.uni-wuppertal.de:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>45988</SizeTotal>
+        <SizeFree>34683</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/pnfs/physik.uni-wuppertal.de/data/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>10563003642</UsedSpace>
+            <AvailableSpace>10997732184</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dzero">
+            <Path>/pnfs/physik.uni-wuppertal.de/data/dzero</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>10563003642</UsedSpace>
+            <AvailableSpace>10997732184</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/pnfs/physik.uni-wuppertal.de/data/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>10563003642</UsedSpace>
+            <AvailableSpace>10997732184</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/pnfs/physik.uni-wuppertal.de/data/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>10563003642</UsedSpace>
+            <AvailableSpace>10997732184</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dech">
+            <Path>/pnfs/physik.uni-wuppertal.de/data/dech</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>10563003642</UsedSpace>
+            <AvailableSpace>10997732184</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ghep">
+            <Path>/pnfs/physik.uni-wuppertal.de/data/ghep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>10563003642</UsedSpace>
+            <AvailableSpace>10997732184</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://grid-se.physik.uni-wuppertal.de</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsidcap">
+            <Endpoint>httpg://grid-se.physik.uni-wuppertal.de</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dgrid-store2@gridftp-dgrid-store2Domain">
+            <Endpoint>gsiftp://dgrid-store2.physik.uni-wuppertal.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-gsi-dgrid-store2@gsidcap-dgrid-store2Domain">
+            <Endpoint>gsidcap://dgrid-store2.physik.uni-wuppertal.de:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-dgrid-store1@dcap-dgrid-store1Domain">
+            <Endpoint>dcap://dgrid-store1.physik.uni-wuppertal.de:22125</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-grid-se@dcap-grid-seDomain">
+            <Endpoint>dcap://grid-se.physik.uni-wuppertal.de:22125</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dgrid-store1@gridftp-dgrid-store1Domain">
+            <Endpoint>gsiftp://dgrid-store1.physik.uni-wuppertal.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-gsi-dgrid-store1@gsidcap-dgrid-store1Domain">
+            <Endpoint>gsidcap://dgrid-store1.physik.uni-wuppertal.de:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://grid-se.physik.uni-wuppertal.de</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+        <ControlProtocol LocalID="SRM-grid-se@srm-grid-seDomain">
+            <Endpoint>httpg://grid-se.physik.uni-wuppertal.de:8443/srm/managerv1</Endpoint>
+            <Type>SRM</Type>
+            <Version>1.1.1</Version>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=http://grid-lfc.physik.uni-wuppertal.de:8085/,o=local,mds-vo-name=wuppertalprod">
+        <Name>wuppertalprod-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>http://grid-lfc.physik.uni-wuppertal.de:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>dzero</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>dech</Owner>
+        <Owner>ghep</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=grid-lfc.physik.uni-wuppertal.de,o=local,mds-vo-name=wuppertalprod">
+        <Name>wuppertalprod-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>grid-lfc.physik.uni-wuppertal.de</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>dzero</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>dech</Owner>
+        <Owner>ghep</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://grid-lfc.physik.uni-wuppertal.de:8085/,mds-vo-name=wuppertalprod">
+        <Name>wuppertalprod-lfc-dli</Name>
+        <Type>data-location-interface</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>http://grid-lfc.physik.uni-wuppertal.de:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-08-20T12:03:37.000+02:00</StartTime>
+        <Owner>dzero</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=grid-lfc.physik.uni-wuppertal.de,mds-vo-name=wuppertalprod">
+        <Name>wuppertalprod-lfc</Name>
+        <Type>lcg-file-catalog</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>grid-lfc.physik.uni-wuppertal.de</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-08-20T12:03:37.000+02:00</StartTime>
+        <Owner>dzero</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=grid-rb.physik.uni-wuppertal.de:7512,mds-vo-name=wuppertalprod">
+        <Name>wuppertalprod-myproxy</Name>
+        <Type>MyProxy</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>grid-rb.physik.uni-wuppertal.de:7512</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=grid-rb.physik.uni-wuppertal.de:7772,mds-vo-name=wuppertalprod">
+        <Name>wuppertalprod-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>grid-rb.physik.uni-wuppertal.de:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>dzero</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>dech</Owner>
+        <Owner>ghep</Owner>
+        <Owner>dgtest</Owner>
+        <Owner>md</Owner>
+        <Owner>as</Owner>
+        <Owner>c3</Owner>
+        <Owner>in</Owner>
+        <Owner>tx</Owner>
+        <Owner>ws</Owner>
+        <Owner>hp</Owner>
+        <Owner>kg</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://grid-se.physik.uni-wuppertal.de:8443/srm/managerv1,mds-vo-name=wuppertalprod">
+        <Name>wuppertalprod-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://grid-se.physik.uni-wuppertal.de:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://grid-se.physik.uni-wuppertal.de:8443/srm/managerv2,mds-vo-name=wuppertalprod">
+        <Name>wuppertalprod-srm</Name>
+        <Type>srm</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://grid-se.physik.uni-wuppertal.de:8443/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=grid-se.physik.uni-wuppertal.de:2136,mds-vo-name=wuppertalprod">
+        <Name>wuppertalprod-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://grid-se.physik.uni-wuppertal.de:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>dzero</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>dech</Owner>
+        <Owner>ghep</Owner>
+    </Service>
+</Site>

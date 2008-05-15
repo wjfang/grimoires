@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title> Grimoires Documentation - Test Report</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url('i_arrow_down.gif');
+	}	        
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script>
+</head>
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1><a name="Test_Report"> </a> Test Report </h1>
+<p />
+<div class="twikiToc">
+<ul>
+<li> <a href="#Test_Report">Test Report</a>
+<ul>
+<li> <a href="#introduction">Introduction</a>
+</li>
+<li> <a href="#Functionality_test">Functionality test</a>
+</li>
+<li> <a href="#Performance_Test">Performance Test</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p />
+<h2><a name="introduction"> </a>Introduction </h2>
+<p />
+<p>This document describes the test method and test results of the Grimoires 
+project.</p>
+<p />
+<h2><a name="Functionality_test"> </a> Functionality test </h2>
+<p />
+<p>JUnit is used as a test tool in the Grimoires project. </p>
+<p>In Grimoires' build.xml, there is an ant target &quot;test-junit&quot;, which runs the 
+junit test suite to test against a deployed Grimoires. Before run this target, 
+you need to set up the &quot;wstester/bos.properties&quot; file. For instance, if 
+Grimoires is deployed on the http://localhost:18080/grimoires/, registryBaseURL 
+= http://localhost:18080/grimoires/services. </p>
+<p>We have maintained an online
+<a href="http://www.ecs.soton.ac.uk/~sw2/wstests/" target="_top">nightly JUnit test report</a>, 
+which will be run at each night.</p>
+<p>If Jena is used as the triple store, the JUnit test expects 2 errors and 5 
+failures:</p>
+<p>&nbsp;</p>
+<table border="1" width="100%" id="table1">
+	<tr>
+		<td>Test case </td>
+		<td>Error/failure reason</td>
+	</tr>
+	<tr>
+		<td>testGetBusinessDetail2</td>
+		<td>The test case itself does not follow the Java binding spec. This is 
+		not a bug in Grimoires service.</td>
+	</tr>
+	<tr>
+		<td>testRelationshipFindRelatedBusinesses1</td>
+		<td>Grimoires does not fully support &quot;business relationship&quot;-related 
+		operations.</td>
+	</tr>
+	<tr>
+		<td>testRelationshipGetAssertionStatusReport1</td>
+		<td>Grimoires does not fully support &quot;business relationship&quot;-related 
+		operations.</td>
+	</tr>
+	<tr>
+		<td>testRelationshipDeletePublishAssertions1</td>
+		<td>Grimoires does not fully support &quot;business relationship&quot;-related 
+		operations.</td>
+	</tr>
+	<tr>
+		<td>testRelationshipSetPublishAssertions1</td>
+		<td>Grimoires does not fully support &quot;business relationship&quot;-related 
+		operations.</td>
+	</tr>
+	<tr>
+		<td>testRelationshipGetPublishAssertions1</td>
+		<td>Grimoires does not fully support &quot;business relationship&quot;-related 
+		operations.</td>
+	</tr>
+	<tr>
+		<td>testUserGetRegisteredInfo1</td>
+		<td>Grimoires does not fully support UDDI <a name="_Toc13195624">
+		get_registeredInfo</a> operation.</td>
+	</tr>
+</table>
+<p>If Sesame is used as the triple store instead of Jena, more errors/failures are expected. This is because Sesame does not support regular expression in searching. 
+Note regular expression is not required by the UDDI specification. </p>
+<p />
+<h2><a name="Performance_Test"> </a> Performance Test </h2>
+<p />
+<p>There is <a href="perf.pdf">a</a><a href="./perf.pdf" target="_top"> paper describing the performance benchmark methodology and results</a>.
+
+</body></html>

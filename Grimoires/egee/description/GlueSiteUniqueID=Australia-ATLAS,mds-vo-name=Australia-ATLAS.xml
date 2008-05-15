@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=Australia-ATLAS,mds-vo-name=Australia-ATLAS">
+    <Name>Australia-ATLAS</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:tier2@physics.unimelb.edu.au</UserSupportContact>
+    <SysAdminContact>mailto:tier2@physics.unimelb.edu.au</SysAdminContact>
+    <SecurityContact>mailto:tier2@physics.unimelb.edu.au</SecurityContact>
+    <Location>Melbourne, Australia</Location>
+    <Latitude>-37.48141</Latitude>
+    <Longitude>144.57351</Longitude>
+    <Web>http://epp.ph.unimelb.edu.au/</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>http://www.twgrid.org/aproc/</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=agh2.atlas.unimelb.edu.au,mds-vo-name=Australia-ATLAS">
+        <Name>agh2.atlas.unimelb.edu.au</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=agh2.atlas.unimelb.edu.au,GlueClusterUniqueID=agh2.atlas.unimelb.edu.au,mds-vo-name=Australia-ATLAS">
+            <Name>agh2.atlas.unimelb.edu.au</Name>
+            <PhysicalCPUs>32</PhysicalCPUs>
+            <LogicalCPUs>32</LogicalCPUs>
+            <TmpDir>${HOME}</TmpDir>
+            <WNTmpDir>${HOME}</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.4" Name="ScientificSL"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="Opteron" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="true"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="4096" RAMSize="8117"/>
+            <Architecture SMPSize="4"/>
+            <Benchmark SI00="1968" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=agh3.atlas.unimelb.edu.au,mds-vo-name=Australia-ATLAS">
+        <InformationServiceURL>ldap://agh3.atlas.unimelb.edu.au:2170/mds-vo-name=resource,o=grid</InformationServiceURL>
+        <SizeTotal>23980</SizeTotal>
+        <SizeFree>23870</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/dpm/atlas.unimelb.edu.au/home/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>106138807</UsedSpace>
+            <AvailableSpace>23870000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="belle">
+            <Path>/dpm/atlas.unimelb.edu.au/home/belle</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>23870000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomed">
+            <Path>/dpm/atlas.unimelb.edu.au/home/biomed</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>30</UsedSpace>
+            <AvailableSpace>23870000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/atlas.unimelb.edu.au/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>9560</UsedSpace>
+            <AvailableSpace>23870000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/atlas.unimelb.edu.au/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291</UsedSpace>
+            <AvailableSpace>23870000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://agh3.atlas.unimelb.edu.au</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://agh3.atlas.unimelb.edu.au</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://agh3.atlas.unimelb.edu.au</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=agh5.atlas.unimelb.edu.au:7772,mds-vo-name=Australia-ATLAS">
+        <Name>Australia-ATLAS-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>agh5.atlas.unimelb.edu.au:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>belle</Owner>
+        <Owner>biomed</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://agh3.atlas.unimelb.edu.au:8443/srm/managerv1,mds-vo-name=Australia-ATLAS">
+        <Name>Australia-ATLAS-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://agh3.atlas.unimelb.edu.au:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://agh3.atlas.unimelb.edu.au:8446/srm/managerv2,mds-vo-name=Australia-ATLAS">
+        <Name>Australia-ATLAS-srm</Name>
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://agh3.atlas.unimelb.edu.au:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+	<serviceDescription>
+		<serviceName>SHoundCDDIDFromGi</serviceName>
+		<organisation>
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundCDDIDFromGi</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundCDDIDFromGi?wsdl</interfaceWSDL>
+		<serviceDescriptionText>retrieves the domains for a specified protein gi. Information returned by this function was originally retrieved for proteins found in NCBI's LocusLink database. If the query protein gi identifier is not used by the LocusLink record then no information will be returned. The query protein gi identifier could be used to first retrieve a list of redundant (identical) sequence gi identifiers using {@link #SHoundRedundantGroup(int)} and then using these returned protein gi identifiers to query the LocusLink data. For more conserved domain information (for all proteins found in NCBI's nr dataset) see API functions under RPS BLAST DOMAINS</serviceDescriptionText>
+		<operations>
+			<serviceOperation>
+				<operationName>SHoundCDDIDFromGi</operationName>
+				<operationInputs>
+					<parameter>
+						<parameterName>gi</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_data</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs>
+					<parameter>
+						<parameterName>result</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_metadata</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Collection</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#retrieving</operationTask>
+				<operationResource>http://www.mygrid.org.uk/ontology#ProDom</operationResource>
+				<operationResourceContent>http://www.mygrid.org.uk/ontology#Homo_sapiens</operationResourceContent>
+				<operationMethod>file:/C:/descriptions/mygrid-services-lite.rdfs#gene_prediction_algorithm</operationMethod>
+				<operationApplication>http://www.mygrid.org.uk/ontology#EMBOSS</operationApplication>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

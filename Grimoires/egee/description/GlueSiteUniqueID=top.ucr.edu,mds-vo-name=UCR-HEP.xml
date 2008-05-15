@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=top.ucr.edu,mds-vo-name=UCR-HEP">
+    <Name>UCR-HEP</Name>
+    <Description>OSG Site</Description>
+    <UserSupportContact>mailto: william.strossman@ucr.edu</UserSupportContact>
+    <SysAdminContact>mailto: william.strossman@ucr.edu</SysAdminContact>
+    <SecurityContact>mailto: william.strossman@ucr.edu</SecurityContact>
+    <Location>Riverside,CA ,USA</Location>
+    <Latitude>33.974</Latitude>
+    <Longitude>-117.324</Longitude>
+    <Web>https://twiki.grid.iu.edu/twiki/bin/view/Education/UCRiversideTier3</Web>
+    <Sponsor>UNAVAILABLE</Sponsor>
+    <OtherInfo>UNAVAILABLE</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=top.ucr.edu,mds-vo-name=UCR-HEP">
+        <Name>top.ucr.edu</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=top.ucr.edu,GlueClusterUniqueID=top.ucr.edu,mds-vo-name=UCR-HEP">
+            <Name>top.ucr.edu</Name>
+            <PhysicalCPUs>1</PhysicalCPUs>
+            <LogicalCPUs>2</LogicalCPUs>
+            <TmpDir>/data/strange/osg_data</TmpDir>
+            <WNTmpDir>/data2/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.2" Name="ScientificSL"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AuthenticAMD" Model="AMD Opteron(tm) Processor 250" ClockSpeed="1000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1024" RAMSize="512"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="400" SF00="380"/>
+            <Location LocalID="SAMPLE_LOCATION">
+                <Name>SAMPLE_LOCATION</Name>
+                <Version>default</Version>
+                <Path>/SAMPLE-path</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_0">
+                <Name>VO-cms-CMSSW_1_5_0</Name>
+                <Version>CMSSW_1_5_0</Version>
+                <Path>/data/bottom/osg_app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_2">
+                <Name>VO-cms-CMSSW_1_5_2</Name>
+                <Version>CMSSW_1_5_2</Version>
+                <Path>/data/bottom/osg_app/cmssoft/cms</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=top.ucr.edu,mds-vo-name=UCR-HEP">
+        <InformationServiceURL>ldap://is.grid.iu.edu:2170/mds-vo-name=UCR-HEP,mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>6559959320</SizeTotal>
+        <SizeFree>6537979296</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="cdf">
+            <Path>/data/strange/osg_data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>21980024</UsedSpace>
+            <AvailableSpace>6537979296</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/data/strange/osg_data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>21980024</UsedSpace>
+            <AvailableSpace>6537979296</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="mis">
+            <Path>/data/strange/osg_data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>21980024</UsedSpace>
+            <AvailableSpace>6537979296</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/data/strange/osg_data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>21980024</UsedSpace>
+            <AvailableSpace>6537979296</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="engage">
+            <Path>/data/strange/osg_data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>21980024</UsedSpace>
+            <AvailableSpace>6537979296</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="fermilab">
+            <Path>/data/strange/osg_data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>21980024</UsedSpace>
+            <AvailableSpace>6537979296</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+    </StorageElement>
+</Site>

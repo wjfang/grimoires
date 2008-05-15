@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.grimoires.org/query_document/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:uddi="urn:uddi-org:api_v2"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"    
+    xmlns:metadata="http://www.grimoires.org/metadata.xsd"
+    xmlns:tns="http://www.grimoires.org/query_document/"
+    attributeFormDefault="unqualified" 
+    elementFormDefault="qualified">
+    
+    <!-- The schema of the XML view for Grimoires. -->
+    
+    <xsd:import namespace="urn:uddi-org:api_v2" schemaLocation="./uddi_v2.xsd"/>
+	<xsd:import namespace="http://www.grimoires.org/metadata.xsd" schemaLocation="./metadata.xsd"/>
+	<xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" schemaLocation="http://schemas.xmlsoap.org/wsdl/"/>
+    
+    <xsd:element name="root">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="uddi:businessEntity" minOccurs="0" maxOccurs="unbounded" />
+				<xsd:element ref="uddi:tModel" minOccurs="0" maxOccurs="unbounded" />
+				<xsd:element ref="wsdl:definitions" minOccurs="0" maxOccurs="unbounded" />
+				<xsd:element ref="tns:annotation" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="annotation">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="metadata:entityReference"/>
+				<xsd:element ref="metadata:metadataInfos" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+</xsd:schema>

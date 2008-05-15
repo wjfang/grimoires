@@ -1,0 +1,85 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-gb">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>GrimoiresScript Interpreter</title>
+
+<script type="text/javascript">
+function run() {
+	// get input script
+	var input = document.form.input.value; //.getElementById("input").value;
+	
+	// get an ajax object
+	var xmlHttp;
+  	try {
+	    // Firefox, Opera 8.0+, Safari
+	    xmlHttp=new XMLHttpRequest();
+    } catch (e) {
+    	// Internet Explorer
+    	try {
+    		xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+		} catch (e) {
+			try {
+				xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+			} catch (e) {
+        		alert("Your browser does not support AJAX!");
+        		return false;
+        	}
+		}
+	}
+	
+	// set to print the output
+	xmlHttp.onreadystatechange=function() {
+		if(xmlHttp.readyState==4) {
+			document.form.output.value = xmlHttp.responseText; //getElementById("output").value = input;			
+		}
+	}
+	
+	// send request
+	xmlHttp.open("POST", "interpreter.jsp", true);
+	xmlHttp.send(input);
+}
+</script>
+</head>
+
+<body>
+
+<h2>GrimoiresScript Interpreter</h2>
+
+<!-- <form method="POST" action="--WEBBOT-SELF--"> -->
+<form name="form">
+	<h3>Input script:</h3>
+	<p><textarea rows="10" name="input" cols="80" id="input"></textarea></p>
+	<p><input type="button" value="Submit" onclick="run()"><input type="reset" value="Reset"></p>
+	<h3>Execution result:</h3>
+	<p><textarea rows="10" name="output" cols="80" id="output"></textarea></p>
+</form>
+<h3>Usage</h3>
+<p><font face="Courier">publish business (name=<b>&quot;name&quot;</b>, description=<b>&quot;description&quot;</b>) [-&gt; $variable_name];</font></p>
+<p><font face="Courier">publish service (name=<b>&quot;name&quot;</b>, description=<b>&quot;description&quot;</b>, bkey=<b>&quot;business_key&quot;</b>, wsdl=<b>&quot;wsdl_url&quot;</b>, address=<b>&quot;service_endpoint&quot;</b>) [-&gt; $variable_name];</font></p>
+<p><font face="Courier">attach metadata (type=<b>&quot;metadata_type_uri&quot;</b>, value=<b>&quot;metadata_value&quot;</b>) 
+to service (key=<b>&quot;service_key&quot;</b>) [-&gt; $variable_name];</font></p>
+<p><font face="Courier">attach metadata (type=<b>&quot;metadata_type_uri&quot;</b>, value=<b>&quot;metadata_value&quot;</b>) 
+to business (key=<b>&quot;business_key&quot;</b>) [-&gt; $variable_name];</font></p>
+<p><font face="Courier">find business by name=<b>&quot;name&quot;</b>;</font></p>
+<p><font face="Courier">find service by name=<b>&quot;name&quot;</b>;</font></p>
+<p><font face="Courier">find business by metadata (type=<b>&quot;metadata_type_uri&quot;</b>, value=<b>&quot;metadata_value&quot;</b>);</font></p>
+<p><font face="Courier">find service by metadata (type=<b>&quot;metadata_type_uri&quot;</b>, value=<b>&quot;metadata_value&quot;</b>);</font></p>
+<p><font face="Courier">delete business (key=<b>&quot;key&quot;</b>);</font></p>
+<p><font face="Courier">delete service (key=<b>&quot;key&quot;</b>);</font></p>
+<p><font face="Courier">delete metadata (key=<b>&quot;key&quot;</b>);</font></p>
+<h4>Note:</h4>
+<ul>
+	<li>Texts in black are arguments. Arguments should be enclosed in quotes.</li>
+	<li>Texts beginning with a &quot;$&quot; sign are variables that can be used at 
+	anywhere requiring arguments, for instance, <font face="Courier">
+	bkey=$bk</font>. Variables do not need to be enclosed in quotes.</li>
+	<li>Publishing business returns business key, publishing service returns 
+	service key, and attaching metadata returns metadata keys. The returned keys 
+	can be saved into variables.</li>
+</ul>
+
+</body>
+
+</html>

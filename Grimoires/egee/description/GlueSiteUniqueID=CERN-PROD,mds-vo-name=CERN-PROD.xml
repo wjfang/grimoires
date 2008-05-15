@@ -1,0 +1,2248 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=CERN-PROD,mds-vo-name=CERN-PROD">
+    <Name>CERN-PROD</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:grid-cern-prod-admins@cern.ch</UserSupportContact>
+    <SysAdminContact>mailto:grid-cern-prod-admins@cern.ch</SysAdminContact>
+    <SecurityContact>mailto:grid-cern-prod-admins@cern.ch</SecurityContact>
+    <Location>Geneva, Switzerland</Location>
+    <Latitude>46.2325</Latitude>
+    <Longitude>6.0458</Longitude>
+    <Web>http://www.cern.ch</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-</OtherInfo>
+    <OtherInfo>CERN-PROD</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ce101.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>ce101.cern.ch</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce101.cern.ch,GlueClusterUniqueID=ce101.cern.ch,mds-vo-name=CERN-PROD">
+            <Name>ce101.cern.ch</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.8" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1000"/>
+            <Architecture SMPSize="2" PlatformType="i686"/>
+            <Benchmark SI00="916" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce102.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>ce102.cern.ch</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce102.cern.ch,GlueClusterUniqueID=ce102.cern.ch,mds-vo-name=CERN-PROD">
+            <Name>ce102.cern.ch</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.8" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1000"/>
+            <Architecture SMPSize="2" PlatformType="i686"/>
+            <Benchmark SI00="916" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce106.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>ce106.cern.ch</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce106.cern.ch,GlueClusterUniqueID=ce106.cern.ch,mds-vo-name=CERN-PROD">
+            <Name>ce106.cern.ch</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.8" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1000"/>
+            <Architecture SMPSize="2" PlatformType="i686"/>
+            <Benchmark SI00="916" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce107.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>ce107.cern.ch</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce107.cern.ch,GlueClusterUniqueID=ce107.cern.ch,mds-vo-name=CERN-PROD">
+            <Name>ce107.cern.ch</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.8" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1000"/>
+            <Architecture SMPSize="2" PlatformType="i686"/>
+            <Benchmark SI00="916" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce108.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>ce108.cern.ch</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce108.cern.ch,GlueClusterUniqueID=ce108.cern.ch,mds-vo-name=CERN-PROD">
+            <Name>ce108.cern.ch</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.8" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1000"/>
+            <Architecture SMPSize="2" PlatformType="i686"/>
+            <Benchmark SI00="916" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce113.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>ce113.cern.ch</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce113.cern.ch,GlueClusterUniqueID=ce113.cern.ch,mds-vo-name=CERN-PROD">
+            <Name>ce113.cern.ch</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.5" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="8192" RAMSize="2000"/>
+            <Architecture SMPSize="2" PlatformType="x86_64"/>
+            <Benchmark SI00="2069" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce114.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>ce114.cern.ch</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce114.cern.ch,GlueClusterUniqueID=ce114.cern.ch,mds-vo-name=CERN-PROD">
+            <Name>ce114.cern.ch</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.5" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="8192" RAMSize="2000"/>
+            <Architecture SMPSize="2" PlatformType="x86_64"/>
+            <Benchmark SI00="2069" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce109.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>ce109.cern.ch</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce109.cern.ch,GlueClusterUniqueID=ce109.cern.ch,mds-vo-name=CERN-PROD">
+            <Name>ce109.cern.ch</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.5" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1000"/>
+            <Architecture SMPSize="2" PlatformType="x86_64"/>
+            <Benchmark SI00="2069" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce115.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>ce115.cern.ch</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce115.cern.ch,GlueClusterUniqueID=ce115.cern.ch,mds-vo-name=CERN-PROD">
+            <Name>ce115.cern.ch</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.5" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="8192" RAMSize="2000"/>
+            <Architecture SMPSize="2" PlatformType="x86_64"/>
+            <Benchmark SI00="2069" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce112.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>ce112.cern.ch</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce112.cern.ch,GlueClusterUniqueID=ce112.cern.ch,mds-vo-name=CERN-PROD">
+            <Name>ce112.cern.ch</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.5" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1000"/>
+            <Architecture SMPSize="2" PlatformType="x86_64"/>
+            <Benchmark SI00="2069" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce116.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>ce116.cern.ch</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce116.cern.ch,GlueClusterUniqueID=ce116.cern.ch,mds-vo-name=CERN-PROD">
+            <Name>ce116.cern.ch</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.5" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1000"/>
+            <Architecture SMPSize="2" PlatformType="x86_64"/>
+            <Benchmark SI00="2069" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce117.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>ce117.cern.ch</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce117.cern.ch,GlueClusterUniqueID=ce117.cern.ch,mds-vo-name=CERN-PROD">
+            <Name>ce117.cern.ch</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.5" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1000"/>
+            <Architecture SMPSize="2" PlatformType="x86_64"/>
+            <Benchmark SI00="2069" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce118.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>ce118.cern.ch</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce118.cern.ch,GlueClusterUniqueID=ce118.cern.ch,mds-vo-name=CERN-PROD">
+            <Name>ce118.cern.ch</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.5" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1000"/>
+            <Architecture SMPSize="2" PlatformType="x86_64"/>
+            <Benchmark SI00="2069" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce119.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>ce119.cern.ch</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce119.cern.ch,GlueClusterUniqueID=ce119.cern.ch,mds-vo-name=CERN-PROD">
+            <Name>ce119.cern.ch</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.5" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1000"/>
+            <Architecture SMPSize="2" PlatformType="x86_64"/>
+            <Benchmark SI00="2069" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce120.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>ce120.cern.ch</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce120.cern.ch,GlueClusterUniqueID=ce120.cern.ch,mds-vo-name=CERN-PROD">
+            <Name>ce120.cern.ch</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.5" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1000"/>
+            <Architecture SMPSize="2" PlatformType="x86_64"/>
+            <Benchmark SI00="2069" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce121.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>ce121.cern.ch</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce121.cern.ch,GlueClusterUniqueID=ce121.cern.ch,mds-vo-name=CERN-PROD">
+            <Name>ce121.cern.ch</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.5" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1000"/>
+            <Architecture SMPSize="2" PlatformType="i686"/>
+            <Benchmark SI00="2069" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce122.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>ce122.cern.ch</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce122.cern.ch,GlueClusterUniqueID=ce122.cern.ch,mds-vo-name=CERN-PROD">
+            <Name>ce122.cern.ch</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.5" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1000"/>
+            <Architecture SMPSize="2" PlatformType="i686"/>
+            <Benchmark SI00="2069" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce123.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>ce123.cern.ch</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce123.cern.ch,GlueClusterUniqueID=ce123.cern.ch,mds-vo-name=CERN-PROD">
+            <Name>ce123.cern.ch</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.8" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1000"/>
+            <Architecture SMPSize="2" PlatformType="i686"/>
+            <Benchmark SI00="916" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=lxdpm101.cern.ch,mds-vo-name=CERN-PROD">
+        <InformationServiceURL>ldap://lxdpm101.cern.ch:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>203</SizeTotal>
+        <SizeFree>190</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="alice">
+            <Path>/dpm/cern.ch/home/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>190050000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/dpm/cern.ch/home/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1111</UsedSpace>
+            <AvailableSpace>190050000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/cern.ch/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>208</UsedSpace>
+            <AvailableSpace>190050000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/dpm/cern.ch/home/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>190050000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/cern.ch/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2155</UsedSpace>
+            <AvailableSpace>190050000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/cern.ch/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2404750</UsedSpace>
+            <AvailableSpace>190050000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gin">
+            <Path>/dpm/cern.ch/home/gin</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>190050000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://lxdpm101.cern.ch</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://lxdpm101.cern.ch</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://lxdpm101.cern.ch</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=castorgrid.cern.ch,mds-vo-name=CERN-PROD">
+        <StorageArea LocalID="alice">
+            <Path>/castor/cern.ch/grid/alice</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/castor/cern.ch/grid/atlas</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/castor/cern.ch/grid/cms</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/castor/cern.ch/grid/dteam</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="unosat">
+            <Path>/castor/cern.ch/grid/unosat</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/castor/cern.ch/grid/ops</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Type>rfio</Type>
+        </AccessProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=castorgridsc.cern.ch,mds-vo-name=CERN-PROD">
+        <StorageArea LocalID="eela">
+            <Path>/castor/cern.ch/grid/eela</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/castor/cern.ch/grid/ops</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>/storage/geant4</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="sixt">
+            <Path>/castor/cern.ch/grid/sixt</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/castor/cern.ch/grid/atlas</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/castor/cern.ch/grid/alice</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/castor/cern.ch/grid/lhcb</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gear">
+            <Path>/storage/gear</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/castor/cern.ch/grid/dteam</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="unosat">
+            <Path>/castor/cern.ch/grid/unosat</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="rfio">
+            <Type>rfio</Type>
+        </AccessProtocol>
+        <AccessProtocol LocalID="root">
+            <Type>root</Type>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+        </AccessProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=castorsrm.cern.ch,mds-vo-name=CERN-PROD">
+        <StorageArea LocalID="eela">
+            <Path>/castor/cern.ch/grid/eela</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/castor/cern.ch/grid/ops</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>/storage/geant4</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="sixt">
+            <Path>/castor/cern.ch/grid/sixt</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/castor/cern.ch/grid/atlas</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/castor/cern.ch/grid/alice</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/castor/cern.ch/grid/lhcb</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gear">
+            <Path>/storage/gear</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/castor/cern.ch/grid/dteam</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="unosat">
+            <Path>/castor/cern.ch/grid/unosat</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="rfio">
+            <Type>rfio</Type>
+        </AccessProtocol>
+        <AccessProtocol LocalID="root">
+            <Type>root</Type>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+        </AccessProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=srm-durable-atlas.cern.ch,mds-vo-name=CERN-PROD">
+        <StorageArea LocalID="ops">
+            <Path>/castor/cern.ch/grid/ops</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/castor/cern.ch/grid/atlas</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="rfio">
+            <Type>rfio</Type>
+        </AccessProtocol>
+        <AccessProtocol LocalID="root">
+            <Type>root</Type>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+        </AccessProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=srm-durable-lhcb.cern.ch,mds-vo-name=CERN-PROD">
+        <StorageArea LocalID="ops">
+            <Path>/castor/cern.ch/grid/ops</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/castor/cern.ch/grid/lhcb</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="rfio">
+            <Type>rfio</Type>
+        </AccessProtocol>
+        <AccessProtocol LocalID="root">
+            <Type>root</Type>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+        </AccessProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=srm-v2.cern.ch,mds-vo-name=CERN-PROD">
+        <StorageArea LocalID="ops">
+            <Path>/castor/cern.ch/grid/ops</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/castor/cern.ch/grid/lhcb</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/castor/cern.ch/grid/atlas</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/castor/cern.ch/grid/dteam</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="rfio">
+            <Type>rfio</Type>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+        </AccessProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=srm.cern.ch,mds-vo-name=CERN-PROD">
+        <StorageArea LocalID="eela">
+            <Path>/castor/cern.ch/grid/eela</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/castor/cern.ch/grid/ops</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/castor/cern.ch/grid/cms</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>/storage/geant4</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="sixt">
+            <Path>/castor/cern.ch/grid/sixt</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/castor/cern.ch/grid/atlas</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/castor/cern.ch/grid/alice</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/castor/cern.ch/grid/lhcb</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gear">
+            <Path>/storage/gear</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/castor/cern.ch/grid/dteam</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="unosat">
+            <Path>/castor/cern.ch/grid/unosat</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="rfio">
+            <Type>rfio</Type>
+        </AccessProtocol>
+        <AccessProtocol LocalID="root">
+            <Type>root</Type>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+        </AccessProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=CERN-PIC_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>CERN-PIC_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CERN-IN2P3_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>CERN-IN2P3_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>altas</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=NDGF-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>NDGF-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CERN-SARA_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>CERN-SARA_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_prod-fts-ws.cern.ch_org.glite.FileTransfer,mds-vo-name=CERN-PROD">
+        <Name>glite-data-transfer-fts_prod-fts-ws.cern.ch</Name>
+        <Type>org.glite.FileTransfer</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://prod-fts-ws.cern.ch:8443/glite-data-transfer-fts/services/FileTransfer</Endpoint>
+        <WSDL>https://prod-fts-ws.cern.ch:8443/glite-data-transfer-fts/services/FileTransfer?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>altas</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=SARA-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>SARA-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=RAL-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>RAL-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CERN-FNAL_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>CERN-FNAL_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>FNAL-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASCC-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>ASCC-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CERN-RAL_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>CERN-RAL_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TRIUMF-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>TRIUMF-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CERN-KOLKATA_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>CERN-KOLKATA_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CERN-INFN_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>CERN-INFN_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CERN-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>CERN-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_prod-fts-ws.cern.ch_org.glite.Delegation,mds-vo-name=CERN-PROD">
+        <Name>glite-data-transfer-fts_prod-fts-ws.cern.ch-delegation</Name>
+        <Type>org.glite.Delegation</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://prod-fts-ws.cern.ch:8443/glite-data-transfer-fts/services/gridsite-delegation</Endpoint>
+        <WSDL>https://prod-fts-ws.cern.ch:8443/glite-data-transfer-fts/services/gridsite-delegation?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>altas</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CERN-NDGF_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>CERN-NDGF_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CERN-ASCC_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>CERN-ASCC_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CERN-GRIDKA_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>CERN-GRIDKA_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=INFN-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>INFN-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=DESY-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>DESY-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CERN-BNL_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>CERN-BNL_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>STAR-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNL-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>BNL-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=IN2P3-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>IN2P3-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=KOLKATA-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>KOLKATA-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CERN-DESY_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>CERN-DESY_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=GRIDKA-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>GRIDKA-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CERN-TRIUMF_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>CERN-TRIUMF_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CERN-STAR_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>CERN-STAR_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_prod-fts-ws.cern.ch_org.glite.ChannelManagement,mds-vo-name=CERN-PROD">
+        <Name>glite-data-transfer-fts_prod-fts-ws.cern.ch-channel</Name>
+        <Type>org.glite.ChannelManagement</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://prod-fts-ws.cern.ch:8443/glite-data-transfer-fts/services/ChannelManagement</Endpoint>
+        <WSDL>https://prod-fts-ws.cern.ch:8443/glite-data-transfer-fts/services/ChannelManagement?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>altas</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=PIC-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>PIC-CERN_prod-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T11:23:46.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_tiertwo-fts-ws.cern.ch_org.glite.Delegation,mds-vo-name=CERN-PROD">
+        <Name>glite-data-transfer-fts_tiertwo-fts-ws.cern.ch-delegation</Name>
+        <Type>org.glite.Delegation</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://tiertwo-fts-ws.cern.ch:8443/glite-data-transfer-fts/services/gridsite-delegation</Endpoint>
+        <WSDL>https://tiertwo-fts-ws.cern.ch:8443/glite-data-transfer-fts/services/gridsite-delegation?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T14:04:53.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-CERN_tiertwo-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>STAR-CERN_tiertwo-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T14:04:53.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_tiertwo-fts-ws.cern.ch_org.glite.ChannelManagement,mds-vo-name=CERN-PROD">
+        <Name>glite-data-transfer-fts_tiertwo-fts-ws.cern.ch-channel</Name>
+        <Type>org.glite.ChannelManagement</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://tiertwo-fts-ws.cern.ch:8443/glite-data-transfer-fts/services/ChannelManagement</Endpoint>
+        <WSDL>https://tiertwo-fts-ws.cern.ch:8443/glite-data-transfer-fts/services/ChannelManagement?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T14:04:53.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_tiertwo-fts-ws.cern.ch_org.glite.FileTransfer,mds-vo-name=CERN-PROD">
+        <Name>glite-data-transfer-fts_tiertwo-fts-ws.cern.ch</Name>
+        <Type>org.glite.FileTransfer</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://tiertwo-fts-ws.cern.ch:8443/glite-data-transfer-fts/services/FileTransfer</Endpoint>
+        <WSDL>https://tiertwo-fts-ws.cern.ch:8443/glite-data-transfer-fts/services/FileTransfer?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T14:04:53.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=JINR-CERN_tiertwo-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>JINR-CERN_tiertwo-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T14:04:53.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=KOLKATA-CERN_tiertwo-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>KOLKATA-CERN_tiertwo-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T14:04:53.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CERN-STAR_tiertwo-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>CERN-STAR_tiertwo-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T14:04:53.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CERN-KOLKATA_tiertwo-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>CERN-KOLKATA_tiertwo-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T14:04:53.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=PROTOVINO-CERN_tiertwo-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>PROTOVINO-CERN_tiertwo-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T14:04:53.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CERN-INDIACMS_tiertwo-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>CERN-INDIACMS_tiertwo-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T14:04:53.000+02:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CERN-PROTOVINO_tiertwo-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROTOVINO_tiertwo-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T14:04:53.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CERN-JINR_tiertwo-fts-ws.cern.ch_org.glite.ChannelAgent,mds-vo-name=CERN-PROD">
+        <Name>CERN-JINR_tiertwo-fts-ws.cern.ch_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-28T14:04:53.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-http://prod-lfc-alice-local.cern.ch:8085/,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.6.3</Version>
+        <Endpoint>http://prod-lfc-alice-local.cern.ch:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-08-31T17:34:18.000+02:00</StartTime>
+        <Owner>alice</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-prod-lfc-alice-local.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.6.3</Version>
+        <Endpoint>prod-lfc-alice-local.cern.ch</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-08-31T17:34:18.000+02:00</StartTime>
+        <Owner>alice</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://prod-lfc-atlas-central.cern.ch:8085/,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-lfc-dli</Name>
+        <Type>data-location-interface</Type>
+        <Version>1.6.3</Version>
+        <Endpoint>http://prod-lfc-atlas-central.cern.ch:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-11T11:25:53.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=prod-lfc-atlas-central.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-lfc</Name>
+        <Type>lcg-file-catalog</Type>
+        <Version>1.6.3</Version>
+        <Endpoint>prod-lfc-atlas-central.cern.ch</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-11T11:25:53.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-http://prod-lfc-atlas-local.cern.ch:8085/,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.6.3</Version>
+        <Endpoint>http://prod-lfc-atlas-local.cern.ch:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-08T17:36:45.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-prod-lfc-atlas-local.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.6.3</Version>
+        <Endpoint>prod-lfc-atlas-local.cern.ch</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-08T17:36:45.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://prod-lfc-cms-central.cern.ch:8085/,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-lfc-dli</Name>
+        <Type>data-location-interface</Type>
+        <Version>1.6.3</Version>
+        <Endpoint>http://prod-lfc-cms-central.cern.ch:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-08T17:36:48.000+02:00</StartTime>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=prod-lfc-cms-central.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-lfc</Name>
+        <Type>lcg-file-catalog</Type>
+        <Version>1.6.3</Version>
+        <Endpoint>prod-lfc-cms-central.cern.ch</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-08T17:36:48.000+02:00</StartTime>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://prod-lfc-lhcb-central.cern.ch:8085/,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-lfc-dli</Name>
+        <Type>data-location-interface</Type>
+        <Version>1.6.3</Version>
+        <Endpoint>http://prod-lfc-lhcb-central.cern.ch:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-11T18:33:01.000+02:00</StartTime>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=prod-lfc-lhcb-central.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-lfc</Name>
+        <Type>lcg-file-catalog</Type>
+        <Version>1.6.3</Version>
+        <Endpoint>prod-lfc-lhcb-central.cern.ch</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-11T18:33:01.000+02:00</StartTime>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://prod-lfc-lhcb-ro.cern.ch:8085/,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-lfc-dli</Name>
+        <Type>data-location-interface</Type>
+        <Version>1.6.3</Version>
+        <Endpoint>http://prod-lfc-lhcb-ro.cern.ch:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-08T15:20:12.000+02:00</StartTime>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=prod-lfc-lhcb-ro.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-lfc</Name>
+        <Type>lcg-file-catalog</Type>
+        <Version>1.6.3</Version>
+        <Endpoint>prod-lfc-lhcb-ro.cern.ch</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-08T15:20:12.000+02:00</StartTime>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://prod-lfc-shared-central.cern.ch:8085/,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-lfc-dli</Name>
+        <Type>data-location-interface</Type>
+        <Version>1.6.3</Version>
+        <Endpoint>http://prod-lfc-shared-central.cern.ch:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-12T15:41:26.000+02:00</StartTime>
+        <Owner>dteam</Owner>
+        <Owner>geant4</Owner>
+        <Owner>gear</Owner>
+        <Owner>ops</Owner>
+        <Owner>sixt</Owner>
+        <Owner>unosat</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=prod-lfc-shared-central.cern.ch,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-lfc</Name>
+        <Type>lcg-file-catalog</Type>
+        <Version>1.6.3</Version>
+        <Endpoint>prod-lfc-shared-central.cern.ch</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-12T15:41:26.000+02:00</StartTime>
+        <Owner>dteam</Owner>
+        <Owner>geant4</Owner>
+        <Owner>gear</Owner>
+        <Owner>ops</Owner>
+        <Owner>sixt</Owner>
+        <Owner>unosat</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=myproxy-fts.cern.ch:7512,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-myproxy</Name>
+        <Type>myproxy</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>myproxy-fts.cern.ch:7512</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=prod-px.cern.ch:7512,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-myproxy</Name>
+        <Type>myproxy</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>prod-px.cern.ch:7512</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb104.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb104.cern.ch:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>unosat</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>sixt</Owner>
+        <Owner>gear</Owner>
+        <Owner>geant4</Owner>
+        <Owner>compass</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb105.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb105.cern.ch:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb106.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb106.cern.ch:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>gear</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb107.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb107.cern.ch:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>cms</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb113.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb113.cern.ch:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb114.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb114.cern.ch:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb115.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb115.cern.ch:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb119.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb119.cern.ch:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>cms</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb120.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb120.cern.ch:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb121.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb121.cern.ch:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb122.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb122.cern.ch:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>cms</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb123.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb123.cern.ch:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb124.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb124.cern.ch:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>cms</Owner>
+        <Owner>unosat</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>sixt</Owner>
+        <Owner>gear</Owner>
+        <Owner>geant4</Owner>
+        <Owner>compass</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb127.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb127.cern.ch:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb128.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb128.cern.ch:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>cms</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb129.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb129.cern.ch:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://lxdpm101.cern.ch:8443/srm/managerv1,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://lxdpm101.cern.ch:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://lxdpm101.cern.ch:8446/srm/managerv2,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-srm</Name>
+        <Type>srm</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://lxdpm101.cern.ch:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://castorgridsc.cern.ch:8443/srm/managerv1,mds-vo-name=CERN-PROD">
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://castorgridsc.cern.ch:8443/srm/managerv1</Endpoint>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://castorsrm.cern.ch:8443/srm/managerv1,mds-vo-name=CERN-PROD">
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://castorsrm.cern.ch:8443/srm/managerv1</Endpoint>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://srm-durable-atlas.cern.ch:8443/srm/managerv1,mds-vo-name=CERN-PROD">
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://srm-durable-atlas.cern.ch:8443/srm/managerv1</Endpoint>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://srm-durable-lhcb.cern.ch:8443/srm/managerv1,mds-vo-name=CERN-PROD">
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://srm-durable-lhcb.cern.ch:8443/srm/managerv1</Endpoint>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://srm-v2.cern.ch:8443/srm/managerv2,mds-vo-name=CERN-PROD">
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://srm-v2.cern.ch:8443/srm/managerv2</Endpoint>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://srm.cern.ch:8443/srm/managerv1,mds-vo-name=CERN-PROD">
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://srm.cern.ch:8443/srm/managerv1</Endpoint>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=wms101.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>wms101.cern.ch:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>lhcb</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=wms102.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>wms102.cern.ch:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=wms103.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>wms103.cern.ch:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=wms104.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>wms104.cern.ch:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=wms105.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>wms105.cern.ch:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=wms106.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>wms106.cern.ch:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>lhcb</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=wms107.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>wms107.cern.ch:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=wms108.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>wms108.cern.ch:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>geant4</Owner>
+        <Owner>gear</Owner>
+        <Owner>sixt</Owner>
+        <Owner>unosat</Owner>
+        <Owner>eela</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=wms109.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>wms109.cern.ch:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=wms110.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>wms110.cern.ch:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=wms111.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>wms111.cern.ch:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=wms112.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>wms112.cern.ch:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>geant4</Owner>
+        <Owner>gear</Owner>
+        <Owner>sixt</Owner>
+        <Owner>unosat</Owner>
+        <Owner>eela</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb118.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>rb118.cern.ch:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>cms</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb108.cern.ch:7772,mds-vo-name=CERN-PROD">
+        <Name>CERN-PROD-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>rb108.cern.ch:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+</Site>

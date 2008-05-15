@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=BIFI,mds-vo-name=BIFI">
+    <Name>BIFI</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto: bifires@unizar.es</UserSupportContact>
+    <SysAdminContact>mailto: bifires@unizar.es</SysAdminContact>
+    <SecurityContact>mailto: bifires@unizar.es</SecurityContact>
+    <Location>Zaragoza, Spain</Location>
+    <Latitude>41.64388683092849</Latitude>
+    <Longitude>-0.8975636959075928</Longitude>
+    <Web>http://bifi.unizar.es</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER 2</OtherInfo>
+    <OtherInfo>pic</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ce-egee.bifi.unizar.es,mds-vo-name=BIFI">
+        <Name>ce-egee.bifi.unizar.es</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce-egee.bifi.unizar.es,GlueClusterUniqueID=ce-egee.bifi.unizar.es,mds-vo-name=BIFI">
+            <Name>ce-egee.bifi.unizar.es</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.6" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="P4" ClockSpeed="3194"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1025" RAMSize="513"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1363" SF00="1287"/>
+            <Location LocalID="VO-atlas-release-11.0.42">
+                <Name>VO-atlas-release-11.0.42</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-offline-12.0.1">
+                <Name>VO-atlas-offline-12.0.1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.5">
+                <Name>VO-atlas-release-11.0.5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-offline-12.0.2">
+                <Name>VO-atlas-offline-12.0.2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.3">
+                <Name>VO-atlas-production-12.0.3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-cloud-ES">
+                <Name>VO-atlas-cloud-ES</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-tier-T3">
+                <Name>VO-atlas-tier-T3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r3">
+                <Name>VO-lhcb-XmlDDDB-v30r3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v12r1">
+                <Name>VO-lhcb-DecFiles-v12r1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v4r1">
+                <Name>VO-lhcb-ParamFiles-v4r1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v11r2">
+                <Name>VO-lhcb-Boole-v11r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r4">
+                <Name>VO-lhcb-XmlDDDB-v30r4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v4r2">
+                <Name>VO-lhcb-ParamFiles-v4r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v12r16">
+                <Name>VO-lhcb-DaVinci-v12r16</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r3">
+                <Name>VO-lhcb-XmlDDDB-v22r3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v24r5">
+                <Name>VO-lhcb-Gauss-v24r5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v24r7">
+                <Name>VO-lhcb-Gauss-v24r7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r8">
+                <Name>VO-lhcb-XmlDDDB-v30r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v12r2">
+                <Name>VO-lhcb-DecFiles-v12r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v4r3">
+                <Name>VO-lhcb-ParamFiles-v4r3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v12r3">
+                <Name>VO-lhcb-DecFiles-v12r3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r5">
+                <Name>VO-lhcb-Brunel-v30r5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v12r3">
+                <Name>VO-lhcb-Boole-v12r3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r0">
+                <Name>VO-lhcb-DaVinci-v17r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r6">
+                <Name>VO-lhcb-Brunel-v30r6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r9">
+                <Name>VO-lhcb-XmlDDDB-v30r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r1">
+                <Name>VO-lhcb-DaVinci-v17r1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r2">
+                <Name>VO-lhcb-Gauss-v25r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v4r4">
+                <Name>VO-lhcb-ParamFiles-v4r4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v12r5">
+                <Name>VO-lhcb-Boole-v12r5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r3">
+                <Name>VO-lhcb-Gauss-v25r3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r10">
+                <Name>VO-lhcb-XmlDDDB-v30r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v12r6">
+                <Name>VO-lhcb-Boole-v12r6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r10">
+                <Name>VO-lhcb-Brunel-v30r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v12r5">
+                <Name>VO-lhcb-DecFiles-v12r5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r2">
+                <Name>VO-lhcb-DaVinci-v17r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-LCG-2_6_0">
+                <Name>VO-dteam-LCG-2_6_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-v22Nov">
+                <Name>VO-dteam-december05prod-v22Nov</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final">
+                <Name>VO-dteam-december05prod-final</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final-cand2">
+                <Name>VO-dteam-december05prod-final-cand2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=se-egee.bifi.unizar.es,mds-vo-name=BIFI">
+        <InformationServiceURL>ldap://se-egee.bifi.unizar.es:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="fusion">
+            <Path>/storage/fusion</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>41973140</UsedSpace>
+            <AvailableSpace>66575684</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/storage/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>41973140</UsedSpace>
+            <AvailableSpace>66575684</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/storage/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>41973140</UsedSpace>
+            <AvailableSpace>66575684</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="swetest">
+            <Path>/storage/swetest</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>41973140</UsedSpace>
+            <AvailableSpace>66575684</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/storage/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>41973140</UsedSpace>
+            <AvailableSpace>66575684</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/storage/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>41973136</UsedSpace>
+            <AvailableSpace>66575688</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://se-egee.bifi.unizar.es</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=http://rb-egee.bifi.unizar.es:8085/,mds-vo-name=BIFI">
+        <Name>BIFI-lfc-dli</Name>
+        <Type>data-location-interface</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>http://rb-egee.bifi.unizar.es:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>fusion</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb-egee.bifi.unizar.es,mds-vo-name=BIFI">
+        <Name>BIFI-lfc</Name>
+        <Type>lcg-file-catalog</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>rb-egee.bifi.unizar.es</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>fusion</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://rb-egee.bifi.unizar.es:8085/,o=local,mds-vo-name=BIFI">
+        <Name>BIFI-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>http://rb-egee.bifi.unizar.es:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>swetest</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb-egee.bifi.unizar.es,o=local,mds-vo-name=BIFI">
+        <Name>BIFI-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>rb-egee.bifi.unizar.es</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>swetest</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb-egee.bifi.unizar.es:7772,mds-vo-name=BIFI">
+        <Name>BIFI-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb-egee.bifi.unizar.es:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>fusion</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>swetest</Owner>
+        <Owner>atlas</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=bdii-egee.bifi.unizar.es:7512,mds-vo-name=BIFI">
+        <Name>BIFI-myproxy</Name>
+        <Type>MyProxy</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>bdii-egee.bifi.unizar.es:7512</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=se-egee.bifi.unizar.es:2136,mds-vo-name=BIFI">
+        <Name>BIFI-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://se-egee.bifi.unizar.es:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>fusion</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>swetest</Owner>
+        <Owner>atlas</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+</Site>

@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=TR-01-ULAKBIM,mds-vo-name=TR-01-ULAKBIM">
+    <Name>TR-01-ULAKBIM</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:grid@ulakbim.gov.tr</UserSupportContact>
+    <SysAdminContact>mailto:grid@ulakbim.gov.tr</SysAdminContact>
+    <SecurityContact>mailto:grid@ulakbim.gov.tr</SecurityContact>
+    <Location>Ankara, Turkey</Location>
+    <Latitude>39.99</Latitude>
+    <Longitude>33.02</Longitude>
+    <Web>http://www.grid.org.tr</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>HG-01-GRNET</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ce.ulakbim.gov.tr,mds-vo-name=TR-01-ULAKBIM">
+        <Name>ce.ulakbim.gov.tr</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce.ulakbim.gov.tr,GlueClusterUniqueID=ce.ulakbim.gov.tr,mds-vo-name=TR-01-ULAKBIM">
+            <Name>ce.ulakbim.gov.tr</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.5" Name="ScientificSL"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="PIV" ClockSpeed="2665"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1024" RAMSize="1024"/>
+            <Architecture SMPSize="1"/>
+            <Benchmark SI00="945" SF00="945"/>
+            <Location LocalID="VO-atlas-cloud-NL">
+                <Name>VO-atlas-cloud-NL</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-offline-12.0.1">
+                <Name>VO-atlas-offline-12.0.1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-offline-12.0.2">
+                <Name>VO-atlas-offline-12.0.2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.3">
+                <Name>VO-atlas-production-12.0.3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.31">
+                <Name>VO-atlas-production-12.0.31</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6">
+                <Name>VO-atlas-production-12.0.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.95">
+                <Name>VO-atlas-production-12.0.95</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.30">
+                <Name>VO-atlas-production-13.0.30</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.42">
+                <Name>VO-atlas-release-11.0.42</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.5">
+                <Name>VO-atlas-release-11.0.5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-tier-T3">
+                <Name>VO-atlas-tier-T3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_6">
+                <Name>VO-cms-CMSSW_1_4_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-ORCA_8_7_4">
+                <Name>VO-cms-ORCA_8_7_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r7">
+                <Name>VO-lhcb-DaVinci-v17r7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r8">
+                <Name>VO-lhcb-DaVinci-v17r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r14">
+                <Name>VO-lhcb-Brunel-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r8">
+                <Name>VO-lhcb-DecFiles-v13r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v5r0">
+                <Name>VO-lhcb-ParamFiles-v5r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r8">
+                <Name>VO-lhcb-Gauss-v25r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2">
+                <Name>VO-lhcb-XmlDDDB-v22r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r14">
+                <Name>VO-lhcb-XmlDDDB-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v12r10">
+                <Name>VO-lhcb-Boole-v12r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v12r18">
+                <Name>VO-lhcb-DaVinci-v12r18</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r6">
+                <Name>VO-lhcb-DaVinci-v17r6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r15">
+                <Name>VO-lhcb-Brunel-v30r15</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r9">
+                <Name>VO-lhcb-Gauss-v25r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v18r0">
+                <Name>VO-lhcb-DaVinci-v18r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r9">
+                <Name>VO-lhcb-DecFiles-v13r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r0">
+                <Name>VO-lhcb-DaVinci-v19r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r1">
+                <Name>VO-lhcb-DaVinci-v19r1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r16">
+                <Name>VO-lhcb-Brunel-v30r16</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r17">
+                <Name>VO-lhcb-Brunel-v30r17</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r10">
+                <Name>VO-lhcb-Gauss-v25r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r2">
+                <Name>VO-lhcb-DaVinci-v19r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r3">
+                <Name>VO-lhcb-DaVinci-v19r3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r4">
+                <Name>VO-lhcb-DaVinci-v19r4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r10">
+                <Name>VO-lhcb-DecFiles-v13r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r11">
+                <Name>VO-lhcb-Gauss-v25r11</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r11">
+                <Name>VO-lhcb-DecFiles-v13r11</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r12">
+                <Name>VO-lhcb-DecFiles-v13r12</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r5">
+                <Name>VO-lhcb-DaVinci-v19r5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r12">
+                <Name>VO-lhcb-Gauss-v25r12</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-geant42ndProd">
+                <Name>VO-dteam-geant42ndProd</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-geant42ndProd_p01">
+                <Name>VO-dteam-geant42ndProd_p01</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-geant42ndProd_p02">
+                <Name>VO-dteam-geant42ndProd_p02</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-ITUtest1">
+                <Name>VO-dteam-ITUtest1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final">
+                <Name>VO-dteam-december05prod-final</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-seegrid-vive-0.4.2">
+                <Name>VO-seegrid-vive-0.4.2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_SEEGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-seegrid-vive-0.4.3">
+                <Name>VO-seegrid-vive-0.4.3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_SEEGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-trgrida-g03">
+                <Name>VO-trgrida-g03</Name>
+                <Version>Prod</Version>
+                <Path>$VO_TRGRIDA_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-trgride-VASP">
+                <Name>VO-trgride-VASP</Name>
+                <Version>Prod</Version>
+                <Path>$VO_TRGRIDE_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-alice-geant42ndProd">
+                <Name>VO-alice-geant42ndProd</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ALICE_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-eumed-MM5V3-NCARG">
+                <Name>VO-eumed-MM5V3-NCARG</Name>
+                <Version>Prod</Version>
+                <Path>$VO_EUMED_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-eumed-MM5V3-INTEL">
+                <Name>VO-eumed-MM5V3-INTEL</Name>
+                <Version>Prod</Version>
+                <Path>$VO_EUMED_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-eumed-PARAVIEW-2.4">
+                <Name>VO-eumed-PARAVIEW-2.4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_EUMED_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=se.ulakbim.gov.tr,mds-vo-name=TR-01-ULAKBIM">
+        <InformationServiceURL>ldap://se.ulakbim.gov.tr:2170/mds-vo-name=resource,o=grid</InformationServiceURL>
+        <SizeTotal>3540</SizeTotal>
+        <SizeFree>2150</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/ulakbim.gov.tr/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3668</UsedSpace>
+            <AvailableSpace>2150000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/ulakbim.gov.tr/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1350459</UsedSpace>
+            <AvailableSpace>2150000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/dpm/ulakbim.gov.tr/home/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>28078012</UsedSpace>
+            <AvailableSpace>2150000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/ulakbim.gov.tr/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2150000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/dpm/ulakbim.gov.tr/home/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2150000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="see">
+            <Path>/dpm/ulakbim.gov.tr/home/see</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>14786</UsedSpace>
+            <AvailableSpace>2150000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="seegrid">
+            <Path>/dpm/ulakbim.gov.tr/home/seegrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4111500</UsedSpace>
+            <AvailableSpace>2150000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="eumed">
+            <Path>/dpm/ulakbim.gov.tr/home/eumed</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>5769</UsedSpace>
+            <AvailableSpace>2150000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="trgrida">
+            <Path>/dpm/ulakbim.gov.tr/home/trgrida</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2150000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="trgridb">
+            <Path>/dpm/ulakbim.gov.tr/home/trgridb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1117962</UsedSpace>
+            <AvailableSpace>2150000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="trgridc">
+            <Path>/dpm/ulakbim.gov.tr/home/trgridc</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2150000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="trgridd">
+            <Path>/dpm/ulakbim.gov.tr/home/trgridd</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>5546910</UsedSpace>
+            <AvailableSpace>2150000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="trgride">
+            <Path>/dpm/ulakbim.gov.tr/home/trgride</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2150000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="trgridf">
+            <Path>/dpm/ulakbim.gov.tr/home/trgridf</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2150000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="trgridg">
+            <Path>/dpm/ulakbim.gov.tr/home/trgridg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2150000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="sgdemo">
+            <Path>/dpm/ulakbim.gov.tr/home/sgdemo</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>495200</UsedSpace>
+            <AvailableSpace>2150000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://se.ulakbim.gov.tr</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://se.ulakbim.gov.tr</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://se.ulakbim.gov.tr</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=http://lfc.ulakbim.gov.tr:8085/,mds-vo-name=TR-01-ULAKBIM">
+        <Name>TR-01-ULAKBIM-lfc-dli</Name>
+        <Type>data-location-interface</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>http://lfc.ulakbim.gov.tr:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>trgrida</Owner>
+        <Owner>trgridb</Owner>
+        <Owner>trgridc</Owner>
+        <Owner>trgridd</Owner>
+        <Owner>trgride</Owner>
+        <Owner>trgridf</Owner>
+        <Owner>trgridg</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lfc.ulakbim.gov.tr,mds-vo-name=TR-01-ULAKBIM">
+        <Name>TR-01-ULAKBIM-lfc</Name>
+        <Type>lcg-file-catalog</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>lfc.ulakbim.gov.tr</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>trgrida</Owner>
+        <Owner>trgridb</Owner>
+        <Owner>trgridc</Owner>
+        <Owner>trgridd</Owner>
+        <Owner>trgride</Owner>
+        <Owner>trgridf</Owner>
+        <Owner>trgridg</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://lfc.ulakbim.gov.tr:8085/,o=local,mds-vo-name=TR-01-ULAKBIM">
+        <Name>TR-01-ULAKBIM-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>http://lfc.ulakbim.gov.tr:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>trgrida</Owner>
+        <Owner>trgridb</Owner>
+        <Owner>trgridc</Owner>
+        <Owner>trgridd</Owner>
+        <Owner>trgride</Owner>
+        <Owner>trgridf</Owner>
+        <Owner>trgridg</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lfc.ulakbim.gov.tr,o=local,mds-vo-name=TR-01-ULAKBIM">
+        <Name>TR-01-ULAKBIM-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>lfc.ulakbim.gov.tr</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>trgrida</Owner>
+        <Owner>trgridb</Owner>
+        <Owner>trgridc</Owner>
+        <Owner>trgridd</Owner>
+        <Owner>trgride</Owner>
+        <Owner>trgridf</Owner>
+        <Owner>trgridg</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-http://lfc.ulakbim.gov.tr:8085/,mds-vo-name=TR-01-ULAKBIM">
+        <Name>TR-01-ULAKBIM-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>http://lfc.ulakbim.gov.tr:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-07-03T00:01:44.000+03:00</StartTime>
+        <Owner>trgrida</Owner>
+        <Owner>trgridb</Owner>
+        <Owner>trgridc</Owner>
+        <Owner>trgridd</Owner>
+        <Owner>trgride</Owner>
+        <Owner>trgridf</Owner>
+        <Owner>trgridg</Owner>
+        <Owner>sgdemo</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-lfc.ulakbim.gov.tr,mds-vo-name=TR-01-ULAKBIM">
+        <Name>TR-01-ULAKBIM-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>lfc.ulakbim.gov.tr</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-07-03T00:01:44.000+03:00</StartTime>
+        <Owner>trgrida</Owner>
+        <Owner>trgridb</Owner>
+        <Owner>trgridc</Owner>
+        <Owner>trgridd</Owner>
+        <Owner>trgride</Owner>
+        <Owner>trgridf</Owner>
+        <Owner>trgridg</Owner>
+        <Owner>sgdemo</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=myproxy.ulakbim.gov.tr:7512,mds-vo-name=TR-01-ULAKBIM">
+        <Name>TR-01-ULAKBIM-myproxy</Name>
+        <Type>MyProxy</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>myproxy.ulakbim.gov.tr:7512</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb.ulakbim.gov.tr:7772,mds-vo-name=TR-01-ULAKBIM">
+        <Name>TR-01-ULAKBIM-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb.ulakbim.gov.tr:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>see</Owner>
+        <Owner>seegrid</Owner>
+        <Owner>eumed</Owner>
+        <Owner>trgrida</Owner>
+        <Owner>trgridb</Owner>
+        <Owner>trgridc</Owner>
+        <Owner>trgridd</Owner>
+        <Owner>trgride</Owner>
+        <Owner>trgridf</Owner>
+        <Owner>trgridg</Owner>
+        <Owner>sgdemo</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://se.ulakbim.gov.tr:8445/srm/managerv1,mds-vo-name=TR-01-ULAKBIM">
+        <Name>TR-01-ULAKBIM-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://se.ulakbim.gov.tr:8445/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://se.ulakbim.gov.tr:8446/srm/managerv2,mds-vo-name=TR-01-ULAKBIM">
+        <Name>TR-01-ULAKBIM-srm</Name>
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://se.ulakbim.gov.tr:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=se.ulakbim.gov.tr:2136,mds-vo-name=TR-01-ULAKBIM">
+        <Name>TR-01-ULAKBIM-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://se.ulakbim.gov.tr:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>see</Owner>
+        <Owner>seegrid</Owner>
+        <Owner>eumed</Owner>
+        <Owner>trgrida</Owner>
+        <Owner>trgridb</Owner>
+        <Owner>trgridc</Owner>
+        <Owner>trgridd</Owner>
+        <Owner>trgride</Owner>
+        <Owner>trgridf</Owner>
+        <Owner>trgridg</Owner>
+        <Owner>sgdemo</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=wms.ulakbim.gov.tr:7772,mds-vo-name=TR-01-ULAKBIM">
+        <Name>TR-01-ULAKBIM-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>wms.ulakbim.gov.tr:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>see</Owner>
+        <Owner>seegrid</Owner>
+        <Owner>eumed</Owner>
+        <Owner>trgrida</Owner>
+        <Owner>trgridb</Owner>
+        <Owner>trgridc</Owner>
+        <Owner>trgridd</Owner>
+        <Owner>trgride</Owner>
+        <Owner>trgridf</Owner>
+        <Owner>trgridg</Owner>
+        <Owner>sgdemo</Owner>
+    </Service>
+</Site>

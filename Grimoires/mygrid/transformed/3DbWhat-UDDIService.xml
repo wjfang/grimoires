@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<businessService businessKey="Blueprint" serviceKey="SHound3DbWhat" xmlns="urn:uddi-org:api_v2">
+ <name>
+SHound3DbWhat </name>
+ <description>
+Finds out what kind of molecules are contained in a 3-D structure. </description>
+ <bindingTemplates>
+  <bindingTemplate bindingKey="http://seqhound.blueprint.org/" serviceKey="SHound3DbWhat">
+   <accessPoint>
+http://seqhound.blueprint.org/   </accessPoint>
+   <tModelInstanceDetails>
+    <tModelInstanceInfo tModelKey="http://seqhound.blueprint.org/"/>
+   </tModelInstanceDetails>
+  </bindingTemplate>
+ </bindingTemplates>
+ <categoryBag>
+  <keyedReference keyName="serviceType" keyValue="SeqHound service" tModelKey="grimoires:service:metadata"/>
+ </categoryBag>
+</businessService>

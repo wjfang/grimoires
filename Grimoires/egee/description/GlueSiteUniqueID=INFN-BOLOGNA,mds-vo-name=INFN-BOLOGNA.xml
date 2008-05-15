@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=INFN-BOLOGNA,mds-vo-name=INFN-BOLOGNA">
+    <Name>INFN-BOLOGNA</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:Franco.Semeria@bo.infn.it</UserSupportContact>
+    <SysAdminContact>mailto:Franco.Semeria@bo.infn.it</SysAdminContact>
+    <SecurityContact>mailto:Franco.Semeria@bo.infn.it</SecurityContact>
+    <Location>Bologna, Italy</Location>
+    <Latitude>44.4948</Latitude>
+    <Longitude>11.3417</Longitude>
+    <Web>http://www.bo.infn.it</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-3</OtherInfo>
+    <OtherInfo>CNAF-T1</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=bogrid5.bo.infn.it,mds-vo-name=INFN-BOLOGNA">
+        <Name>bogrid5.bo.infn.it</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=bogrid5.bo.infn.it,GlueClusterUniqueID=bogrid5.bo.infn.it,mds-vo-name=INFN-BOLOGNA">
+            <Name>bogrid5.bo.infn.it</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SLC" Release="3.0.8" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="3066"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="4096" RAMSize="2048"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1167" SF00="1568"/>
+            <Location LocalID="VO-atlas-cloud-IT">
+                <Name>VO-atlas-cloud-IT</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-offline-12.0.1">
+                <Name>VO-atlas-offline-12.0.1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-offline-12.0.2">
+                <Name>VO-atlas-offline-12.0.2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.3">
+                <Name>VO-atlas-production-12.0.3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.31">
+                <Name>VO-atlas-production-12.0.31</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.4">
+                <Name>VO-atlas-production-12.0.4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.5">
+                <Name>VO-atlas-production-12.0.5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.42">
+                <Name>VO-atlas-release-11.0.42</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.5">
+                <Name>VO-atlas-release-11.0.5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-tier-T3">
+                <Name>VO-atlas-tier-T3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-alice-geant42ndProd">
+                <Name>VO-alice-geant42ndProd</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ALICE_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-alice-torinoproduction">
+                <Name>VO-alice-torinoproduction</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ALICE_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-alice-torinoproduction-2">
+                <Name>VO-alice-torinoproduction-2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ALICE_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r8">
+                <Name>VO-lhcb-Gauss-v25r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2">
+                <Name>VO-lhcb-XmlDDDB-v22r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r14">
+                <Name>VO-lhcb-XmlDDDB-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v12r10">
+                <Name>VO-lhcb-Boole-v12r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v12r18">
+                <Name>VO-lhcb-DaVinci-v12r18</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r6">
+                <Name>VO-lhcb-DaVinci-v17r6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r7">
+                <Name>VO-lhcb-DaVinci-v17r7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r8">
+                <Name>VO-lhcb-DaVinci-v17r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r14">
+                <Name>VO-lhcb-Brunel-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r8">
+                <Name>VO-lhcb-DecFiles-v13r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v5r0">
+                <Name>VO-lhcb-ParamFiles-v5r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r9">
+                <Name>VO-lhcb-Gauss-v25r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v18r0">
+                <Name>VO-lhcb-DaVinci-v18r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r15">
+                <Name>VO-lhcb-Brunel-v30r15</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r9">
+                <Name>VO-lhcb-DecFiles-v13r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r0">
+                <Name>VO-lhcb-DaVinci-v19r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r1">
+                <Name>VO-lhcb-DaVinci-v19r1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r10">
+                <Name>VO-lhcb-Gauss-v25r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r2">
+                <Name>VO-lhcb-DaVinci-v19r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r17">
+                <Name>VO-lhcb-Brunel-v30r17</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r10">
+                <Name>VO-lhcb-DecFiles-v13r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r3">
+                <Name>VO-lhcb-DaVinci-v19r3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r4">
+                <Name>VO-lhcb-DaVinci-v19r4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMKIN_4_2_0_dar">
+                <Name>VO-cms-CMKIN_4_2_0_dar</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMKIN_4_4_0_dar">
+                <Name>VO-cms-CMKIN_4_4_0_dar</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-ORCA_8_7_1_SLC3_dar">
+                <Name>VO-cms-ORCA_8_7_1_SLC3_dar</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-OSCAR_3_6_5_SLC3_dar">
+                <Name>VO-cms-OSCAR_3_6_5_SLC3_dar</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-geant42ndProd">
+                <Name>VO-dteam-geant42ndProd</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-geant42ndProd_p01">
+                <Name>VO-dteam-geant42ndProd_p01</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-LCG-2_6_0">
+                <Name>VO-dteam-LCG-2_6_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-geant42ndProd_p02">
+                <Name>VO-dteam-geant42ndProd_p02</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-ITUtest1">
+                <Name>VO-dteam-ITUtest1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final">
+                <Name>VO-dteam-december05prod-final</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final-cand2">
+                <Name>VO-dteam-december05prod-final-cand2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-geant4-jun06prod-test1-cand01">
+                <Name>VO-geant4-jun06prod-test1-cand01</Name>
+                <Version>Prod</Version>
+                <Path>$VO_GEANT4_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-geant4-jun06prod-test2-cand01">
+                <Name>VO-geant4-jun06prod-test2-cand01</Name>
+                <Version>Prod</Version>
+                <Path>$VO_GEANT4_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=boalice1.bo.infn.it,mds-vo-name=INFN-BOLOGNA">
+        <InformationServiceURL>ldap://boalice1.bo.infn.it:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/flatfiles/SE00/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>63583160</UsedSpace>
+            <AvailableSpace>11194320</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/flatfiles/SE00/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>63583160</UsedSpace>
+            <AvailableSpace>11194320</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/flatfiles/SE00/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>63583160</UsedSpace>
+            <AvailableSpace>11194320</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/flatfiles/SE00/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>63583160</UsedSpace>
+            <AvailableSpace>11194320</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/flatfiles/SE00/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>63583160</UsedSpace>
+            <AvailableSpace>11194320</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/flatfiles/SE00/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>63583160</UsedSpace>
+            <AvailableSpace>11194320</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="infngrid">
+            <Path>/flatfiles/SE00/infngrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>63583160</UsedSpace>
+            <AvailableSpace>11194320</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gridit">
+            <Path>/flatfiles/SE00/gridit</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>63583160</UsedSpace>
+            <AvailableSpace>11194320</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://boalice1.bo.infn.it</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=boalice1.bo.infn.it:2136,mds-vo-name=INFN-BOLOGNA">
+        <Name>INFN-BOLOGNA-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://boalice1.bo.infn.it:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>infngrid</Owner>
+        <Owner>gridit</Owner>
+    </Service>
+</Site>

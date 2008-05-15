@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=SARA-LISA,mds-vo-name=SARA-MATRIX">
+    <Name>SARA-LISA</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:grid.support@sara.nl</UserSupportContact>
+    <SysAdminContact>mailto:grid.support@sara.nl</SysAdminContact>
+    <SecurityContact>mailto:grid.support@sara.nl</SecurityContact>
+    <Location>Almere, The Netherlands</Location>
+    <Latitude>52.3787</Latitude>
+    <Longitude>5.2274</Longitude>
+    <Web>http://www.sara.nl</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-1</OtherInfo>
+    <OtherInfo>CERN-CIC</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=mu9.matrix.sara.nl,mds-vo-name=SARA-LISA">
+        <Name>mu9.matrix.sara.nl</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=mu9.matrix.sara.nl,GlueClusterUniqueID=mu9.matrix.sara.nl,mds-vo-name=SARA-LISA">
+            <Name>mu9.matrix.sara.nl</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="etch" Release="4.0" Name="Debian"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel" Model="Xeon" ClockSpeed="3400"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="2048"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1636" SF00="1782"/>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2-slc4_ia32_gcc41">
+                <Name>VO-lhcb-XmlDDDB-v22r2-slc4_ia32_gcc41</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2">
+                <Name>VO-lhcb-XmlDDDB-v22r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2-slc4_ia32_gcc41">
+                <Name>VO-lhcb-XmlDDDB-v22r2-slc4_ia32_gcc41</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2">
+                <Name>VO-lhcb-XmlDDDB-v22r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=mu9.matrix.sara.nl,GlueClusterUniqueID=mu9.matrix.sara.nl,mds-vo-name=SARA-MATRIX">
+            <Name>mu9.matrix.sara.nl</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="etch" Release="4.0" Name="Debian"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel" Model="Xeon" ClockSpeed="3400"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="2048"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1636" SF00="1782"/>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2-slc4_ia32_gcc41">
+                <Name>VO-lhcb-XmlDDDB-v22r2-slc4_ia32_gcc41</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2">
+                <Name>VO-lhcb-XmlDDDB-v22r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2-slc4_ia32_gcc41">
+                <Name>VO-lhcb-XmlDDDB-v22r2-slc4_ia32_gcc41</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2">
+                <Name>VO-lhcb-XmlDDDB-v22r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=mu9.matrix.sara.nl,mds-vo-name=SARA-MATRIX">
+        <Name>mu9.matrix.sara.nl</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=mu9.matrix.sara.nl,GlueClusterUniqueID=mu9.matrix.sara.nl,mds-vo-name=SARA-LISA">
+            <Name>mu9.matrix.sara.nl</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="etch" Release="4.0" Name="Debian"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel" Model="Xeon" ClockSpeed="3400"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="2048"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1636" SF00="1782"/>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2-slc4_ia32_gcc41">
+                <Name>VO-lhcb-XmlDDDB-v22r2-slc4_ia32_gcc41</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2">
+                <Name>VO-lhcb-XmlDDDB-v22r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2-slc4_ia32_gcc41">
+                <Name>VO-lhcb-XmlDDDB-v22r2-slc4_ia32_gcc41</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2">
+                <Name>VO-lhcb-XmlDDDB-v22r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=mu9.matrix.sara.nl,GlueClusterUniqueID=mu9.matrix.sara.nl,mds-vo-name=SARA-MATRIX">
+            <Name>mu9.matrix.sara.nl</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="etch" Release="4.0" Name="Debian"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel" Model="Xeon" ClockSpeed="3400"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="2048"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1636" SF00="1782"/>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2-slc4_ia32_gcc41">
+                <Name>VO-lhcb-XmlDDDB-v22r2-slc4_ia32_gcc41</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2">
+                <Name>VO-lhcb-XmlDDDB-v22r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2-slc4_ia32_gcc41">
+                <Name>VO-lhcb-XmlDDDB-v22r2-slc4_ia32_gcc41</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2">
+                <Name>VO-lhcb-XmlDDDB-v22r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+</Site>

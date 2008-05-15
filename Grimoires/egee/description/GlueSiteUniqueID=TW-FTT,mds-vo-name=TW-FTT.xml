@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=TW-FTT,mds-vo-name=TW-FTT">
+    <Name>TW-FTT</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto: roc@lists.grid.sinica.edu.tw</UserSupportContact>
+    <SysAdminContact>mailto: roc@lists.grid.sinica.edu.tw</SysAdminContact>
+    <SecurityContact>mailto: roc@lists.grid.sinica.edu.tw</SecurityContact>
+    <Location>Taipei, Taiwan</Location>
+    <Latitude>25.067</Latitude>
+    <Longitude>121.6167</Longitude>
+    <Web>http://www.twgrid.org/aproc</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER 2</OtherInfo>
+    <OtherInfo>http://www.twgrid.org/aproc</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=f-ce01.grid.sinica.edu.tw,mds-vo-name=TW-FTT">
+        <Name>f-ce01.grid.sinica.edu.tw</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=f-ce01.grid.sinica.edu.tw,GlueClusterUniqueID=f-ce01.grid.sinica.edu.tw,mds-vo-name=TW-FTT">
+            <Name>f-ce01.grid.sinica.edu.tw</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.6" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="P4" ClockSpeed="2660"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1025" RAMSize="1024"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1515" SF00="1771"/>
+            <Location LocalID="VO-cms-CMSSW_0_8_4">
+                <Name>VO-cms-CMSSW_0_8_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_2">
+                <Name>VO-cms-CMSSW_1_2_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_3">
+                <Name>VO-cms-CMSSW_1_2_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_4">
+                <Name>VO-cms-CMSSW_1_2_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_6">
+                <Name>VO-cms-CMSSW_1_2_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_0">
+                <Name>VO-cms-CMSSW_1_3_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1">
+                <Name>VO-cms-CMSSW_1_3_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1_HLT6">
+                <Name>VO-cms-CMSSW_1_3_1_HLT6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_2">
+                <Name>VO-cms-CMSSW_1_3_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_3">
+                <Name>VO-cms-CMSSW_1_3_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_4">
+                <Name>VO-cms-CMSSW_1_3_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_5">
+                <Name>VO-cms-CMSSW_1_3_5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_2">
+                <Name>VO-cms-CMSSW_1_4_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_3">
+                <Name>VO-cms-CMSSW_1_4_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_4">
+                <Name>VO-cms-CMSSW_1_4_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_5">
+                <Name>VO-cms-CMSSW_1_4_5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_6">
+                <Name>VO-cms-CMSSW_1_4_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.3">
+                <Name>VO-atlas-production-12.0.3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.31">
+                <Name>VO-atlas-production-12.0.31</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6">
+                <Name>VO-atlas-production-12.0.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.30">
+                <Name>VO-atlas-production-13.0.30</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=f-dpm001.grid.sinica.edu.tw,mds-vo-name=TW-FTT">
+        <InformationServiceURL>ldap://f-dpm001.grid.sinica.edu.tw:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>42960</SizeTotal>
+        <SizeFree>9640</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/grid.sinica.edu.tw/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>33320000000</UsedSpace>
+            <AvailableSpace>9640000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/grid.sinica.edu.tw/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>33320000000</UsedSpace>
+            <AvailableSpace>9640000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/grid.sinica.edu.tw/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>33320000000</UsedSpace>
+            <AvailableSpace>9640000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/dpm/grid.sinica.edu.tw/home/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>33320000000</UsedSpace>
+            <AvailableSpace>9640000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://f-dpm001.grid.sinica.edu.tw</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://f-dpm001.grid.sinica.edu.tw</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://f-dpm001.grid.sinica.edu.tw</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=httpg://f-dpm001.grid.sinica.edu.tw:8443/srm/managerv1,mds-vo-name=TW-FTT">
+        <Name>TW-FTT-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://f-dpm001.grid.sinica.edu.tw:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://f-dpm001.grid.sinica.edu.tw:8446/srm/managerv2,mds-vo-name=TW-FTT">
+        <Name>TW-FTT-srm</Name>
+        <Type>srm</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://f-dpm001.grid.sinica.edu.tw:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

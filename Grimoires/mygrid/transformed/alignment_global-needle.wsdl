@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://industry.ebi.ac.uk/soap/soaplab/alignment_global::needle?wsdl" tns:dummy="" xmlns:feta="http://www.mygrid.org.uk/feta/" xmlns:sawsdl="http://www.w3.org/2002/ws/sawsdl/spec/sawsdl#" xmlns:tns="http://industry.ebi.ac.uk/soap/soaplab/alignment_global::needle?wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:documentation>
+Performs a global alignment using Needleman-Wunsch </wsdl:documentation>
+ <wsdl:message name="request">
+  <wsdl:part name="asequence_usa" type="xsd:string"/>
+  <wsdl:part name="asequence_direct_data" type="xsd:string"/>
+  <wsdl:part name="sformat1" type="xsd:string"/>
+  <wsdl:part name="sbegin1" type="xsd:string"/>
+  <wsdl:part name="send1" type="xsd:string"/>
+  <wsdl:part name="sprotein1" type="xsd:string"/>
+  <wsdl:part name="snucleotide1" type="xsd:string"/>
+  <wsdl:part name="sreverse1" type="xsd:string"/>
+  <wsdl:part name="slower1" type="xsd:string"/>
+  <wsdl:part name="supper1" type="xsd:string"/>
+  <wsdl:part name="bsequence_usa" type="xsd:string"/>
+  <wsdl:part name="bsequence_direct_data" type="xsd:string"/>
+  <wsdl:part name="sformat2" type="xsd:string"/>
+  <wsdl:part name="sbegin2" type="xsd:string"/>
+  <wsdl:part name="send2" type="xsd:string"/>
+  <wsdl:part name="sprotein2" type="xsd:string"/>
+  <wsdl:part name="snucleotide2" type="xsd:string"/>
+  <wsdl:part name="sreverse2" type="xsd:string"/>
+  <wsdl:part name="slower2" type="xsd:string"/>
+  <wsdl:part name="supper2" type="xsd:string"/>
+  <wsdl:part name="gapopen" type="xsd:string"/>
+  <wsdl:part name="gapextend" type="xsd:string"/>
+  <wsdl:part name="datafile_d" type="xsd:string"/>
+  <wsdl:part name="datafile_url" type="xsd:string"/>
+  <wsdl:part name="brief" type="xsd:string"/>
+ </wsdl:message>
+ <wsdl:message name="response">
+  <wsdl:part name="report" type="xsd:string"/>
+  <wsdl:part name="detailed_status" type="xsd:string"/>
+  <wsdl:part name="outfile" type="xsd:string"/>
+ </wsdl:message>
+ <wsdl:portType name="alignment_global::needle">
+  <wsdl:operation name="alignment_global::needle">
+   <wsdl:input message="tns:request"/>
+   <wsdl:output message="tns:response"/>
+  </wsdl:operation>
+ </wsdl:portType>
+</wsdl:definitions>

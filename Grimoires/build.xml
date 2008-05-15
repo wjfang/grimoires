@@ -1,0 +1,1491 @@
+<project basedir="." default="jar" name="Grimoires">
+	<!-- init.properties contains property values specific to the operating environment -->
+	<property file="init.properties"/>
+	<property environment="env"/>
+
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- 				Grimoires information					-->
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!--
+	<property name="grimoires.name" value="GRIMOIRES Grid Registry"/>
+	<property name="grimoires.version" value=""/>
+	<property name="grimories.date" value=""/>
+	<property name="grimoires.homepage" value="http://www.grimoires.org"/>
+	-->
+
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- 				Variables and Classpath					-->
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<property name="server.jar"  value="grimoires-server.jar"/>
+	<property name="client.jar"  value="grimoires-client.jar"/>
+	<property name="build.dir"  value="build/classes"/>
+	<property name="generated.dir"  value="src"/>
+
+	<mkdir dir="build"/>
+	<mkdir dir="${build.dir}"/>
+
+	<!--  jug junit uddi4j ant-contrib -->
+	<property name="ext.lib" value="lib\misc"/>
+	<!-- axis lib, mail, activation, xmlsec -->
+	<property name="axis.lib" value="lib\axis1.2rc3"/>
+	<!-- xerces -->
+	<property name="xerces.lib" value="lib\xerces"/>
+	<!-- omii 3.0 -->
+	<property name="omii.lib" value="lib\omii3"/>
+	<!-- Tomcat jars: for servlet, war deployment -->
+	<property name="tomcat.lib" value="lib\tomcat"/>
+	<!-- Jena jars -->
+	<property name="jena.lib" value="lib\jena2.2"/>
+	<!-- Sesame jars -->
+	<property name="sesame.lib" value="lib\sesame1.2"/>
+	<!-- SunXACML jars -->
+	<property name="xacml.lib" value="lib\sunxacml"/>
+
+
+	<!-- common classpath -->
+	<path id="common.classpath">
+		<fileset dir="${ext.lib}">
+			<include name="*.jar"/>
+		</fileset>
+		<fileset dir="${jena.lib}">
+			<include name="*.jar"/>
+		</fileset>
+		<fileset dir="${sesame.lib}">
+			<include name="*.jar"/>
+		</fileset>
+		<fileset dir="${tomcat.lib}">
+			<include name="*.jar"/>
+		</fileset>
+		<fileset dir="${xacml.lib}">
+			<include name="*.jar"/>
+		</fileset>
+		<dirset dir="${build.dir}"/>
+	</path>
+
+	<!-- classpath of grimoires for omii container -->
+	<path id="omii.classpath">
+		<!-- common -->
+		<path refid="common.classpath"/>
+		<!-- omii specific -->
+		<fileset dir="${env.OMII_HOME}/tomcat/shared/lib">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+
+	<!-- classpath of grimoires for axis container -->
+	<path id="axis.classpath">
+		<!-- common -->
+		<path refid="common.classpath"/>
+		<!-- axis specific -->
+		<fileset dir="${axis.lib}">
+			<include name="*.jar"/>
+		</fileset>
+		<fileset dir="${xerces.lib}">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+
+	<!-- classpath of grimoires for gt4 container -->
+	<path id="gt4.classpath">
+		<!-- common -->
+		<path refid="common.classpath"/>
+		<!-- gt4 specific -->
+		<fileset dir="${gt4.home}/lib">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+
+	<taskdef resource="net/sf/antcontrib/antlib.xml">
+		<classpath>
+			<pathelement location="lib/misc/ant-contrib.jar"/>
+		</classpath>
+	</taskdef>
+
+	<switch value="${container}">
+		<case value="omii">
+			<path id="grimoires.classpath">
+				<path refid="omii.classpath"/>
+			</path>
+		</case>
+		<case value="omii-sec">
+			<path id="grimoires.classpath">
+				<path refid="omii.classpath"/>
+			</path>
+		</case>
+		<case value="axis">
+			<path id="grimoires.classpath">
+				<path refid="axis.classpath"/>
+			</path>
+		</case>
+		<case value="gt4">
+			<path id="grimoires.classpath">
+				<path refid="gt4.classpath"/>
+			</path>
+		</case>
+	</switch>
+
+	<taskdef resource="axis-tasks.properties" classpathref="grimoires.classpath"/>
+
+	<!-- wsdl2java on metadata interface, stubs and skeletons are generated to
+		the directory specified in $metadata.gen.dir this task deletes existing
+		generated files in $metadata.gen.dir -->
+	<property name="metadata.gen.dir" value="src" />
+	<property name="metadata.api.dir" value="${metadata.gen.dir}/uk/ac/soton/ecs/grimoires/server/impl/metadata/api/" />
+
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- 						General							-->
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<target name="checkEnv">
+		<switch value="${container}">
+			<case value="omii">
+				<antcall target="checkOMII" />
+			</case>
+
+			<case value="omii-sec">
+				<antcall target="checkOMII" />
+			</case>
+
+			<case value="axis">
+				<!-- nothing to do -->
+			</case>
+
+			<case value="gt4">
+				<!-- nothing to do -->
+			</case>
+		</switch>
+	</target>
+
+	<target name="checkOMII">
+		<fail unless="env.OMII_HOME" message="OMII_HOME has not been set"/>
+		<echo>OMII_HOME = ${env.OMII_HOME}</echo>
+	</target>
+
+	<target name="init" depends="checkEnv">
+		<mkdir dir="build"/>
+		<mkdir dir="${build.dir}"/>
+		<mkdir dir="dist"/>
+		<mkdir dir="dist/server"/>
+		<mkdir dir="dist/client"/>
+	</target>
+
+	<target name="axis.generator" depends="init">
+		<javac destdir="${build.dir}"
+	           includes="uk/ac/soton/ecs/grimoires/axis/**/*.java"
+		   	   srcdir="src"
+		   	   debug="on">
+			<classpath>
+				<path refid="grimoires.classpath"/>
+			</classpath>
+		</javac>
+		<copy file="src/uk/ac/soton/ecs/grimoires/axis/wsdl2java-generator-config.xml"
+			  todir="${build.dir}/uk/ac/soton/ecs/grimoires/axis"/>
+	</target>
+
+	<!-- source="1.5" -->
+	<target name="compile" description="Compile the service" depends="init">
+		<javac sourcepath=""
+			srcdir="src"
+           	destdir="${build.dir}"
+    		includes="uk/ac/soton/ecs/grimoires/**"
+			excludes="uk/ac/soton/ecs/grimoires/axis/**"
+			nowarn="on"
+	   		debug="on">
+			<classpath>
+				<path refid="grimoires.classpath"/>
+			</classpath>
+		</javac>
+		<copy todir="${build.dir}">
+			<fileset file="src/*.properties"/>
+		</copy>
+	</target>
+
+	<target name="clean" description="Remove files gathered or created in build" depends="clean-gshell">
+		<delete>
+			<fileset dir="${build.dir}" includes="**/*.class"/>
+		</delete>
+		<delete file="lib/*"/>
+		<delete dir="dist"/>
+	</target>
+
+	<target name="jar" depends="compile"
+  		description="Builds the JAR file that contains the server library">
+		<jar destfile="lib/${server.jar}"
+      		 basedir="${build.dir}"
+  			 includes="uk/ac/soton/ecs/grimoires/*.class
+					   uk/ac/soton/ecs/grimoires/server/**/*.class
+					   uk/ac/soton/ecs/grimoires/jena/**/*.class
+			   		   uk/ac/soton/ecs/grimoires/proxy/**/*.class
+					   uk/ac/soton/ecs/grimoires/monitor/**/*.class
+					   uk/ac/soton/ecs/grimoires/test/**/*.class
+					   uk/ac/soton/ecs/grimoires/jmx/**/*.class"
+  		/>
+		<copy todir="lib/">
+			<fileset file="${build.dir}/*.properties"/>
+		</copy>
+		<copy tofile="GShell/lib/${client.jar}">
+			<fileset file="lib/${server.jar}"/>
+		</copy>
+	</target>
+
+	<target name="_deploy" depends="jar">
+		<copy todir="${axis.rt.lib}">
+			<!--
+			<fileset dir="${ext.lib}" includes="*.jar"/>
+			<fileset dir="${axis.lib}" includes="*.jar"/>
+			<fileset dir="${jena.lib}" includes="*.jar"/>
+			<fileset dir="${sesame.lib}" includes="*.jar"/>
+			-->
+			<fileset dir="lib" includes="${server.jar}"/>
+		</copy>
+		<!--
+		<copy todir="${axis.rt.lib}/../classes/">
+			<fileset dir="lib" includes="*.properties"/>
+		</copy>
+		-->
+	</target>
+
+	<target name="_undeploy">
+		<delete>
+			<fileset dir="${axis.rt.lib}" includes="*.jar"/>
+		</delete>
+	</target>
+
+	<target name="deployWithWSDD">
+		<antcall target="uddiv2.undeployWithWSDD"/>
+		<antcall target="metadata.undeployWithWSDD"/>
+		<antcall target="wsdl.undeployWithWSDD"/>
+
+		<antcall target="uddiv2.deployWithWSDD"/>
+		<antcall target="metadata.deployWithWSDD"/>
+		<antcall target="wsdl.deployWithWSDD"/>
+	</target>
+
+	<target name="undeployWithWSDD">
+		<antcall target="uddiv2.undeployWithWSDD"/>
+		<antcall target="metadata.undeployWithWSDD"/>
+		<antcall target="wsdl.undeployWithWSDD"/>
+	</target>
+
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- 						General							-->
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+	<property name="gshell.build.dir" value="GShell/build/classes"/>
+	<property name="gshell.lib" value="GShell/lib"/>
+	<property name="gshell.jar" value="grimoires-shell.jar"/>
+	<property name="proxy.jar" value="grimoires-proxy.jar"/>
+
+	<target name="init-gshell">
+		<mkdir dir="${gshell.build.dir}"/>
+		<mkdir dir="${gshell.lib}"/>
+	</target>
+
+	<target name="clean-gshell">
+		<delete dir="${gshell.build.dir}"/>
+		<delete>
+			<fileset dir="${gshell.lib}" includes="*.jar"/>
+		</delete>
+	</target>
+
+	<target name="compile-gshell" depends="clean-gshell, init-gshell, jar">
+		<javac sourcepath=""
+			srcdir="GShell/src"
+           	destdir="${gshell.build.dir}"
+    		includes="**"
+			excludes="**/*FetaCommand.java"
+           	nowarn="on"
+	   		debug="on">
+			<classpath>
+				<path refid="grimoires.classpath"/>
+				<fileset dir="${gshell.lib}">
+					<include name="${client.jar}"/>
+				</fileset>
+				<!-- For Feta commands in GShell 
+				<fileset dir="Feta/lib/" includes="**/*.jar"/>
+				-->
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="jar-gshell" depends="compile-gshell">
+		<jar destfile="${gshell.lib}/${gshell.jar}"
+      		 basedir="${gshell.build.dir}"
+  			 includes="uk/ac/soton/ecs/grimoires/**/*.class"
+  		/>
+		<jar destfile="${gshell.lib}/${proxy.jar}"
+      		 basedir="${build.dir}"
+		  	 includes="uk/ac/soton/ecs/grimoires/proxy/*.class
+					   uk/ac/soton/ecs/grimoires/Constants.class"
+		/>
+	</target>
+
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- 					UDDI Specific						-->
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!--
+	<property name="axis1.2rc3.generated" value="gen12rc3"/>
+	<target name="axis1.2rc3.wsdl2java">
+		<mkdir dir="${axis1.2rc3.generated}"/>
+		<delete includeemptydirs="true">
+			<fileset dir="${axis1.2rc3.generated}" includes="**/*" />
+		</delete>
+
+		<axis-wsdl2java  output="${axis1.2rc3.generated}"
+	                     testcase="true"
+	                     all="true"
+	                     verbose="false"
+			     		 serverside="true"
+			             skeletondeploy="true"
+	                     helpergen="true"
+	                     url="wsdl/publish_v2.wsdl">
+
+			<mapping namespace="urn:uddi-org:inquiry_v2"
+	               	 package="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.inquiry"/>
+			<mapping namespace="urn:uddi-org:publication_v2"
+	               	 package="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.publication"/>
+			<mapping namespace="urn:uddi-org:api_v2"
+	               	 package="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel"/>
+		</axis-wsdl2java>
+
+		<axis-wsdl2java  output="${axis1.2rc3.generated}"
+	                     testcase="true"
+	                     all="true"
+	                     verbose="false"
+			     		 serverside="true"
+			     		 skeletondeploy="true"
+	                     helpergen="true"
+	                     url="wsdl/inquire_v2.wsdl">
+
+			<mapping namespace="urn:uddi-org:inquiry_v2"
+	               	 package="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.inquiry"/>
+			<mapping namespace="urn:uddi-org:publication_v2"
+	               	 package="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.publication"/>
+			<mapping namespace="urn:uddi-org:api_v2"
+	               	 package="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel"/>
+		</axis-wsdl2java>
+	</target>
+-->
+	<target name="uddiv2.wsdl2java" depends="axis.generator">
+		<axis-wsdl2java  output="${generated.dir}"
+	                     testcase="true"
+	                     all="true"
+	                     verbose="false"
+			     		 serverside="true"
+			             skeletondeploy="true"
+	                     helpergen="true"
+	                     url="wsdl/publish_v2.wsdl"
+	    				 factory="uk.ac.soton.ecs.grimoires.axis.JavaGeneratorFactory">
+
+			<mapping namespace="urn:uddi-org:inquiry_v2"
+	               	 package="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.inquiry"/>
+			<mapping namespace="urn:uddi-org:publication_v2"
+	               	 package="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.publication"/>
+			<mapping namespace="urn:uddi-org:api_v2"
+	               	 package="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel"/>
+		</axis-wsdl2java>
+
+		<axis-wsdl2java  output="${generated.dir}"
+	                     testcase="true"
+	                     all="true"
+	                     verbose="false"
+			     		 serverside="true"
+			     		 skeletondeploy="true"
+	                     helpergen="true"
+	                     url="wsdl/inquire_v2.wsdl"
+						 factory="uk.ac.soton.ecs.grimoires.axis.JavaGeneratorFactory">
+
+			<mapping namespace="urn:uddi-org:inquiry_v2"
+	               	 package="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.inquiry"/>
+			<mapping namespace="urn:uddi-org:publication_v2"
+	               	 package="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.publication"/>
+			<mapping namespace="urn:uddi-org:api_v2"
+	               	 package="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel"/>
+		</axis-wsdl2java>
+
+		<replace file="src/uk/ac/soton/ecs/grimoires/server/impl/uddiv2/inquiry/deploy.wsdd"
+				 token="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.inquiry.InquireSoapSkeleton"
+				 value="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.handlers.GrimoiresUDDIv2InquireSkeleton"/>
+
+		<replace file="src/uk/ac/soton/ecs/grimoires/server/impl/uddiv2/publication/deploy.wsdd"
+				 token="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.publication.PublishSoapSkeleton"
+				 value="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.handlers.GrimoiresUDDIv2PublishSkeleton"/>
+	</target>
+
+	<target name="uddiv2.deployWithWSDD" depends="_deploy">
+		<java classname="org.apache.axis.client.AdminClient" fork="true"
+			dir="src/uk/ac/soton/ecs/grimoires/server/impl/uddiv2/inquiry">
+			<arg value="deploy.wsdd"/>
+			<classpath>
+				<path refid="grimoires.classpath"/>
+			</classpath>
+		</java>
+		<java classname="org.apache.axis.client.AdminClient" fork="true"
+			dir="src/uk/ac/soton/ecs/grimoires/server/impl/uddiv2/publication">
+			<arg value="deploy.wsdd"/>
+			<classpath>
+				<path refid="grimoires.classpath"/>
+			</classpath>
+		</java>
+	</target>
+
+	<target name="uddiv2.undeployWithWSDD">
+		<java classname="org.apache.axis.client.AdminClient" fork="true"
+			dir="src/uk/ac/soton/ecs/grimoires/server/impl/uddiv2/inquiry">
+			<arg value="undeploy.wsdd"/>
+			<classpath>
+				<path refid="axis.classpath"/>
+			</classpath>
+		</java>
+		<java classname="org.apache.axis.client.AdminClient" fork="true"
+			dir="src/uk/ac/soton/ecs/grimoires/server/impl/uddiv2/publication">
+			<arg value="undeploy.wsdd"/>
+			<classpath>
+				<path refid="grimoires.classpath"/>
+			</classpath>
+		</java>
+	</target>
+
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- 					Metadata Specific					-->
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<target name="metadata.wsdl2java" depends="axis.generator">
+		<!--
+		<delete includeemptydirs="true">
+			<fileset dir="${metadata.gen.dir}" includes="**/*" />
+		</delete>
+		-->
+
+
+		<java classname="org.apache.axis.wsdl.WSDL2Java" fork="on">
+			<arg value="--verbose" />
+			<arg value="--server-side" />
+			<arg value="--skeletonDeploy" />
+			<arg value="true" />
+			<arg value="--noWrapped" />
+			<arg value="-x urn:uddi-org:api_v2" />
+			<arg value="--NStoPkg" />
+			<arg value="urn:uddi-org:api_v2=uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel" />
+			<arg value="--NStoPkg" />
+			<arg value="http://www.grimoires.org/metadata.xsd=uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel" />
+			<arg value="--NStoPkg" />
+			<arg value="http://www.grimoires.org/inquire_metadata.wsdl=uk.ac.soton.ecs.grimoires.server.impl.metadata.api" />
+			<arg value="--output" />
+			<arg path="${metadata.gen.dir}" />
+			<arg value="--testCase" />
+			<arg value="--factory" />
+			<arg value="uk.ac.soton.ecs.grimoires.axis.JavaGeneratorFactory" />
+			<arg value="--helperGen" />
+			<arg value="wsdl/inquire_metadata.wsdl" />
+			<classpath>
+				<path refid="grimoires.classpath"/>
+			</classpath>
+		</java>
+
+		<replace file="${metadata.api.dir}/deploy.wsdd" 
+			token="uk.ac.soton.ecs.grimoires.server.impl.metadata.api.InquireMetadataSoapSkeleton" 
+			value="uk.ac.soton.ecs.grimoires.server.impl.metadata.handlers.GrimoiresInquireMetadataSoapSkeleton" />
+		<mkdir dir="${metadata.api.dir}/inquire" />
+		<move todir="${metadata.api.dir}/inquire">
+			<fileset dir="${metadata.api.dir}">
+				<include name="Grimoires*.java" />
+				<include name="*.wsdd" />
+			</fileset>
+		</move>
+		<replace dir="${metadata.api.dir}/inquire/" 
+			token="package uk.ac.soton.ecs.grimoires.server.impl.metadata.api;" 
+			value="package uk.ac.soton.ecs.grimoires.server.impl.metadata.api.inquire;" />
+		<replace dir="${metadata.api.dir}/inquire/" 
+			token="uk.ac.soton.ecs.grimoires.server.impl.metadata.api.GrimoiresLocator" 
+			value="uk.ac.soton.ecs.grimoires.server.impl.metadata.api.inquire.GrimoiresLocator" />
+		<replace dir="${metadata.api.dir}/inquire/" 
+			token="uk.ac.soton.ecs.grimoires.server.impl.metadata.api.Grimoires" 
+			value="uk.ac.soton.ecs.grimoires.server.impl.metadata.api.inquire.Grimoires" />
+
+		<java classname="org.apache.axis.wsdl.WSDL2Java" fork="on">
+			<arg value="--verbose" />
+			<arg value="--server-side" />
+			<arg value="--skeletonDeploy" />
+			<arg value="true" />
+			<arg value="--noWrapped" />
+			<arg value="-x urn:uddi-org:api_v2" />
+			<arg value="--NStoPkg" />
+			<arg value="urn:uddi-org:api_v2=uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel" />
+			<arg value="--NStoPkg" />
+			<arg value="http://www.grimoires.org/metadata.xsd=uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel" />
+			<arg value="--NStoPkg" />
+			<arg value="http://www.grimoires.org/publish_metadata.wsdl=uk.ac.soton.ecs.grimoires.server.impl.metadata.api" />
+			<arg value="--output" />
+			<arg path="${metadata.gen.dir}" />
+			<arg value="--testCase" />
+			<arg value="--factory" />
+			<arg value="uk.ac.soton.ecs.grimoires.axis.JavaGeneratorFactory" />
+			<arg value="--helperGen" />
+			<arg value="wsdl/publish_metadata.wsdl" />
+			<classpath>
+				<path refid="grimoires.classpath"/>
+			</classpath>
+		</java>
+
+		<replace file="${metadata.api.dir}/deploy.wsdd" token="uk.ac.soton.ecs.grimoires.server.impl.metadata.api.PublishMetadataSoapSkeleton" value="uk.ac.soton.ecs.grimoires.server.impl.metadata.handlers.GrimoiresPublishMetadataSoapSkeleton" />
+		<mkdir dir="${metadata.api.dir}/publish" />
+		<move todir="${metadata.api.dir}/publish">
+			<fileset dir="${metadata.api.dir}">
+				<include name="Grimoires*.java" />
+				<include name="*.wsdd" />
+			</fileset>
+		</move>
+		<replace dir="${metadata.api.dir}/publish/" 
+			token="package uk.ac.soton.ecs.grimoires.server.impl.metadata.api;" 
+			value="package uk.ac.soton.ecs.grimoires.server.impl.metadata.api.publish;" />
+		<replace dir="${metadata.api.dir}/publish/" 
+			token="uk.ac.soton.ecs.grimoires.server.impl.metadata.api.GrimoiresLocator" 
+			value="uk.ac.soton.ecs.grimoires.server.impl.metadata.api.publish.GrimoiresLocator" />
+		<replace dir="${metadata.api.dir}/publish/" 
+			token="uk.ac.soton.ecs.grimoires.server.impl.metadata.api.Grimoires" 
+			value="uk.ac.soton.ecs.grimoires.server.impl.metadata.api.publish.Grimoires" />
+	</target>
+
+	<!-- This target should not be used. -->
+	<target name="metadata.uddi.wsdl.wsdl2java">
+		<java classname="org.apache.axis.wsdl.WSDL2Java" fork="on">
+			<arg value="--verbose" />
+			<arg value="--server-side" />
+			<arg value="--skeletonDeploy" />
+			<arg value="true" />
+			<arg value="--noWrapped" />
+			<arg value="--NStoPkg" />
+			<arg value="urn:uddi-org:api_v2=uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel" />
+			<arg value="--NStoPkg" />
+			<arg value="http://www.grimoires.org/metadata.xsd=uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel" />
+			<arg value="--NStoPkg" />
+			<arg value="http://www.grimoires.org/inquire_uddiMetadata.wsdl=uk.ac.soton.ecs.grimoires.server.impl.metadata.api" />
+			<arg value="-x urn:uddi-org:api_v2" />
+			<arg value="--output" />
+			<arg path="${metadata.gen.dir}" />
+			<arg value="--testCase" />
+			<arg value="--factory" />
+			<arg value="uk.ac.soton.ecs.grimoires.axis.JavaGeneratorFactory" />
+			<arg value="--helperGen" />
+			<arg value="wsdl/inquire_uddiMetadata.wsdl" />
+			<classpath>
+				<path refid="grimoires.classpath"/>
+			</classpath>
+		</java>
+
+		<replace file="${metadata.api.dir}/deploy.wsdd" token="uk.ac.soton.ecs.grimoires.server.impl.metadata.api.InquireUddiMetadataSoapSkeleton" value="uk.ac.soton.ecs.grimoires.server.impl.metadata.handlers.GrimoiresInquireUddiMetadataSoapSkeleton" />
+		<mkdir dir="${metadata.api.dir}/uddi" />
+		<move todir="${metadata.api.dir}/uddi">
+			<fileset dir="${metadata.api.dir}">
+				<include name="Grimoires*.java" />
+				<include name="*.wsdd" />
+			</fileset>
+		</move>
+		<replace dir="${metadata.api.dir}/uddi/" 
+			token="package uk.ac.soton.ecs.grimoires.server.impl.metadata.api;" 
+			value="package uk.ac.soton.ecs.grimoires.server.impl.metadata.api.uddi;" />
+		<replace dir="${metadata.api.dir}/uddi/" 
+			token="uk.ac.soton.ecs.grimoires.server.impl.metadata.api.GrimoiresLocator" 
+			value="uk.ac.soton.ecs.grimoires.server.impl.metadata.api.uddi.GrimoiresLocator" />
+		<replace dir="${metadata.api.dir}/uddi/" 
+			token="uk.ac.soton.ecs.grimoires.server.impl.metadata.api.Grimoires " 
+			value="uk.ac.soton.ecs.grimoires.server.impl.metadata.api.uddi.Grimoires " />
+
+		<java classname="org.apache.axis.wsdl.WSDL2Java" fork="on">
+			<arg value="--verbose" />
+			<arg value="--server-side" />
+			<arg value="--skeletonDeploy" />
+			<arg value="true" />
+			<arg value="--noWrapped" />
+			<arg value="--NStoPkg" />
+			<arg value="http://www.grimoires.org/metadata.xsd=uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel" />
+			<arg value="--NStoPkg" />
+			<arg value="http://www.grimoires.org/inquire_wsdlMetadata.wsdl=uk.ac.soton.ecs.grimoires.server.impl.metadata.api" />
+			<arg value="--output" />
+			<arg path="${metadata.gen.dir}" />
+			<arg value="--testCase" />
+			<arg value="--factory" />
+			<arg value="uk.ac.soton.ecs.grimoires.axis.JavaGeneratorFactory" />
+			<arg value="--helperGen" />
+			<arg value="wsdl/inquire_wsdlMetadata.wsdl" />
+			<classpath>
+				<path refid="grimoires.classpath"/>
+			</classpath>
+		</java>
+
+		<replace file="${metadata.api.dir}/deploy.wsdd" token="uk.ac.soton.ecs.grimoires.server.impl.metadata.api.InquireWsdlMetadataSoapSkeleton" value="uk.ac.soton.ecs.grimoires.server.impl.metadata.handlers.GrimoiresInquireWsdlMetadataSoapSkeleton" />
+		<mkdir dir="${metadata.api.dir}/wsdl" />
+		<move todir="${metadata.api.dir}/wsdl">
+			<fileset dir="${metadata.api.dir}">
+				<include name="Grimoires*.java" />
+				<include name="*.wsdd" />
+			</fileset>
+		</move>
+		<replace dir="${metadata.api.dir}/wsdl/" 
+			token="package uk.ac.soton.ecs.grimoires.server.impl.metadata.api;" 
+			value="package uk.ac.soton.ecs.grimoires.server.impl.metadata.api.wsdl;" />
+		<replace dir="${metadata.api.dir}/wsdl/" 
+			token="uk.ac.soton.ecs.grimoires.server.impl.metadata.api.GrimoiresLocator" 
+			value="uk.ac.soton.ecs.grimoires.server.impl.metadata.api.wsdl.GrimoiresLocator" />
+		<replace dir="${metadata.api.dir}/wsdl/" 
+			token="uk.ac.soton.ecs.grimoires.server.impl.metadata.api.Grimoires" 
+			value="uk.ac.soton.ecs.grimoires.server.impl.metadata.api.wsdl.Grimoires" />
+	</target>
+
+	<target name="metadata.deployWithWSDD" depends="_deploy">
+		<java classname="org.apache.axis.client.AdminClient" fork="true" 
+			dir="src/uk/ac/soton/ecs/grimoires/server/impl/metadata/api/publish">
+			<arg value="deploy.wsdd" />
+			<classpath>
+				<path refid="grimoires.classpath" />
+			</classpath>
+		</java>
+		<java classname="org.apache.axis.client.AdminClient" fork="true" 
+			dir="src/uk/ac/soton/ecs/grimoires/server/impl/metadata/api/inquire">
+			<arg value="deploy.wsdd" />
+			<classpath>
+				<path refid="grimoires.classpath" />
+			</classpath>
+		</java>
+		<java classname="org.apache.axis.client.AdminClient" fork="true"
+			dir="src/uk/ac/soton/ecs/grimoires/server/impl/metadata/api/uddi">
+			<arg value="deploy.wsdd" />
+			<classpath>
+				<path refid="grimoires.classpath" />
+			</classpath>
+		</java>
+		<java classname="org.apache.axis.client.AdminClient" fork="true" 
+			dir="src/uk/ac/soton/ecs/grimoires/server/impl/metadata/api/wsdl">
+			<arg value="deploy.wsdd" />
+			<classpath>
+				<path refid="grimoires.classpath" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="metadata.undeployWithWSDD">
+		<java classname="org.apache.axis.client.AdminClient" fork="true" 
+			dir="src/uk/ac/soton/ecs/grimoires/server/impl/metadata/api/publish">
+			<arg value="undeploy.wsdd"/>
+			<classpath>
+				<path refid="grimoires.classpath"/>
+			</classpath>
+		</java>
+		<java classname="org.apache.axis.client.AdminClient" fork="true" 
+			dir="src/uk/ac/soton/ecs/grimoires/server/impl/metadata/api/inquire">
+			<arg value="undeploy.wsdd"/>
+			<classpath>
+				<path refid="grimoires.classpath"/>
+			</classpath>
+		</java>
+		<java classname="org.apache.axis.client.AdminClient" fork="true" 
+			dir="src/uk/ac/soton/ecs/grimoires/server/impl/metadata/api/uddi">
+			<arg value="undeploy.wsdd" />
+			<classpath>
+				<path refid="grimoires.classpath" />
+			</classpath>
+		</java>
+		<java classname="org.apache.axis.client.AdminClient" fork="true" 
+			dir="src/uk/ac/soton/ecs/grimoires/server/impl/metadata/api/wsdl">
+			<arg value="undeploy.wsdd" />
+			<classpath>
+				<path refid="grimoires.classpath" />
+			</classpath>
+		</java>
+	</target>
+
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- 						WSDL Specific					-->
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<target name="wsdl.wsdl2java">
+		<delete>
+			<fileset dir="src/uk/ac/soton/ecs/grimoires/server/impl/wsdl/autogen" includes="*.java"/>
+		</delete>
+		<axis-wsdl2java  output="src"
+	                     testcase="true"
+	                     all="true"
+	                     verbose="false"
+			     		 serverside="true"
+			             skeletondeploy="true"
+	                     helpergen="true" 
+						 url="wsdl/wsdl.wsdl">
+
+			<mapping namespace="http://www.grimoires.org/wsdl"
+				     package="uk.ac.soton.ecs.grimoires.server.impl.wsdl.autogen"/>
+
+			<mapping namespace="http://www.grimoires.org/wsdl/type"
+					 package="uk.ac.soton.ecs.grimoires.server.impl.wsdl.autogen"/>
+
+		</axis-wsdl2java>
+
+		<replace file="src/uk/ac/soton/ecs/grimoires/server/impl/wsdl/autogen/deploy.wsdd" 
+				 token="uk.ac.soton.ecs.grimoires.server.impl.wsdl.autogen.WsdlSoapBindingSkeleton" 
+				 value="uk.ac.soton.ecs.grimoires.server.impl.wsdl.handlers.GrimoiresWSDLSkeleton"/>
+	</target>
+
+	<target name="wsdl.deployWithWSDD" depends="_deploy">
+		<java classname="org.apache.axis.client.AdminClient" fork="true" 
+			dir="src/uk/ac/soton/ecs/grimoires/server/impl/wsdl/autogen">
+			<arg value="deploy.wsdd"/>
+			<classpath>
+				<path refid="grimoires.classpath"/>
+			</classpath>
+		</java>
+	</target>
+
+	<target name="wsdl.undeployWithWSDD">
+		<java classname="org.apache.axis.client.AdminClient" fork="true" 
+			dir="src/uk/ac/soton/ecs/grimoires/server/impl/wsdl/autogen">
+			<arg value="undeploy.wsdd"/>
+			<classpath>
+				<path refid="grimoires.classpath"/>
+			</classpath>
+		</java>
+	</target>
+
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- 						RDF Specific					-->
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<target name="rdf.wsdl2java">
+		<axis-wsdl2java  output="src"
+	                     testcase="true"
+	                     all="true"
+	                     verbose="false"
+			     		 serverside="true"
+			             skeletondeploy="true"
+	                     helpergen="true" 
+						 url="wsdl/rdf.wsdl">
+
+			<mapping namespace="http://www.grimoires.org/rdf"
+				     package="uk.ac.soton.ecs.grimoires.server.impl.rdf"/>
+
+		</axis-wsdl2java>
+	</target>
+
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!--				Query Document Specific					-->
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!--
+	<target name="querydoc.wsdl2java">
+		<axis-wsdl2java  output="src"
+	                     testcase="false"
+	                     all="true"
+	                     verbose="false"
+			     		 serverside="true"
+			             skeletondeploy="true"
+	                     helpergen="true" 
+						 url="wsdl/query_document.wsdl">
+
+			<mapping namespace="http://www.grimoires.org/query_document/"
+				     package="uk.ac.soton.ecs.grimoires.server.impl.querydoc.stub"/>
+
+		</axis-wsdl2java>
+	</target>
+	-->
+
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!--			XML-View interface Specific					-->
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<target name="xmlview.wsdl2java">
+		<axis-wsdl2java  output="src"
+	                     testcase="false"
+	                     all="true"
+	                     verbose="false"
+			     		 serverside="true"
+			             skeletondeploy="true"
+	                     helpergen="true" 
+						 url="wsdl/xmlview.wsdl">
+
+			<mapping namespace="http://www.grimoires.org/xmlview/"
+				     package="uk.ac.soton.ecs.grimoires.server.impl.xmlview.stub"/>
+
+		</axis-wsdl2java>
+	</target>
+
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- 						Test							-->
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<target name="service.perf.bl" 
+			description="Service operation overhead against regsitry data size, business logic.">
+		<java classname="uk.ac.soton.ecs.grimoires.test.uddiv2.ServiceBLPerformanceTestCase" 
+			fork="true">
+			<jvmarg value="-Xmx1024m"/>
+			<!--
+			<jvmarg value="-Xloggc:gc.txt"/>
+			-->
+			<!-- Grimoires/gc.txt -->
+			<classpath>
+				<path refid="grimoires.classpath"/>
+			</classpath>
+		</java>
+	</target>
+
+	<target name="service.perf"
+			description="Service operation overhead against regsitry data size, web service.">
+		<java classname="uk.ac.soton.ecs.grimoires.test.uddiv2.ServicePerformanceTestCase"
+			fork="true">
+			<classpath>
+				<path refid="grimoires.classpath"/>
+			</classpath>
+		</java>
+	</target>
+
+	<target name="sesame.vs.jena"
+			description="Compare the performance between Sesame and Jena.">
+		<!--
+		<java classname="uk.ac.soton.ecs.grimoires.test.JenaVsSesame.SesameTester"
+			fork="true">
+			<jvmarg value="-Xmx1024m"/>
+			<jvmarg value="-Xloggc:gc-sesame.txt"/>
+			<classpath>
+				<path refid="grimoires.classpath"/>
+			</classpath>
+		</java>
+-->
+		<java classname="uk.ac.soton.ecs.grimoires.test.JenaVsSesame.JenaTester"
+			fork="true">
+			<jvmarg value="-Xmx1024m"/>
+			<jvmarg value="-Xloggc:gc-jena.txt"/>
+			<!-- Grimoires/gc.txt -->
+			<classpath>
+				<path refid="grimoires.classpath"/>
+			</classpath>
+		</java>
+	</target>
+
+	<target name="junit.ws" description="junit ws test">
+		<java classname="uk.ac.soton.ecs.grimoires.test.WebServiceTestSuite" fork="true">
+			<classpath>
+				<path refid="grimoires.classpath" />
+			</classpath>
+		</java>
+	</target>
+
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!--														-->
+	<!--				Targets for Public Use					-->
+	<!--														-->
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!--		 			OMII Specific						-->
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+	<property name="omii.tomcat.url" value="${tomcat.host}:${tomcat.port}"/>
+	<!--	<property name="omii.dist" value="dist/server/omii"/> -->
+	<property name="omii.dist" value="dist/server"/>
+	<property name="omii-sec.dist" value="dist/server/"/>
+	<property name="omii.war.name" value="grimoires.war"/>
+
+	<target name="omii.makeWar" depends="jar">
+		<mkdir dir="${omii.dist}"/>
+
+		<war destfile="${omii.dist}/${omii.war.name}" webxml="config/omii/web.xml">
+			<webinf file="config/omii/server-config.wsdd"/>
+			<!-- activation.jar and mail.jar are not included. -->
+			<lib dir="${ext.lib}" 
+				includes="ant-contrib.jar
+						jug.jar
+						junit.jar
+						uddi4j.jar
+						commons-beanutils.jar"/>
+			<lib dir="${jena.lib}" includes="*.jar"/>
+			<!-- to release in omii3, omii jars should not be included. 
+			<lib dir="${omii.lib}" includes="*.jar"/> -->
+			<lib dir="${sesame.lib}" includes="*.jar"/>
+			<lib dir="${xacml.lib}" includes="*.jar"/>
+			<lib file="lib/${server.jar}"/>
+			<classes dir="wsdl"/>
+			<classes dir="lib" includes="*.properties"/>
+			<!-- Create a "data" directory to hold the triple store. DOES NOT WORK.
+			<zipfileset dir="config/omii/" includes="sesame.rdf" prefix="data"/> -->
+			<classes dir="${build.dir}" includes="uk/ac/soton/ecs/grimoires/monitor/**"/>
+			<fileset dir="web"/>
+			<fileset dir="." includes="docs/**"/>
+		</war>
+		<copy file="config/omii/build.xml" todir="${omii.dist}"/>
+		<copy file="config/omii/manifest.properties" todir="${omii.dist}"/>
+		<copy file="LICENCE" todir="${omii.dist}"/>
+	</target>
+
+	<!-- Temporary hack to put mainpolicy.xml into config/omii-sec/WEB-INF" 
+	
+	<target name="omii.makeWar" depends="jar">
+		<mkdir dir="${omii.dist}"/>
+		<mkdir dir="config/omii/WEB-INF"/>
+		<copy file="config/omii-sec/xacml/mainpolicy.xml" todir="config/omii/WEB-INF"/>
+		<copy file="config/omii/server-config.wsdd" todir="config/omii/WEB-INF"/>
+
+		<war destfile="${omii.dist}/${omii.war.name}" webxml="config/omii/web.xml">
+			<webinf dir="config/omii/WEB-INF" includes="*.*"/>
+			<lib dir="${ext.lib}" 
+				includes="ant-contrib.jar
+						jug.jar
+						junit.jar
+						uddi4j.jar"/>			
+			<lib dir="${jena.lib}" includes="*.jar"/>
+			<lib dir="${omii.lib}" includes="*.jar"/>
+			<lib dir="${sesame.lib}" includes="*.jar"/>
+			<lib dir="${xacml.lib}" includes="*.jar"/>
+			<lib file="lib/${server.jar}"/>
+			<classes dir="wsdl"/>
+			<classes dir="lib" includes="*.properties"/>
+		</war>
+		<delete>
+			<fileset dir="config/omii/WEB-INF" includes="*.*"/>
+		</delete>	
+		
+		<copy file="config/omii/build.xml" todir="${omii.dist}"/>
+		<copy file="config/omii/manifest.properties" todir="${omii.dist}"/>
+		<copy file="LICENCE" todir="${omii.dist}"/>
+	</target>
+-->
+
+	<target name="omii-sec.makeWar" depends="jar">
+		<mkdir dir="${omii-sec.dist}"/>
+
+		<switch value="${securitytype}">
+			<case value="basic">
+				<war destfile="${omii-sec.dist}/${omii.war.name}" webxml="config/omii-sec/web.xml">
+					<webinf file="config/omii-sec/basic/server-config.wsdd"/>
+					<!-- activation.jar and mail.jar are not included. -->
+					<lib dir="${ext.lib}" 
+						includes="ant-contrib.jar
+									jug.jar
+									junit.jar
+									uddi4j.jar
+									commons-beanutils.jar"/>
+					<lib dir="${jena.lib}" includes="*.jar"/>
+					<!-- to release in omii3, omii jars should not be included. 
+					<lib dir="${omii.lib}" includes="*.jar"/> -->
+					<lib dir="${sesame.lib}" includes="*.jar"/>
+					<lib dir="${xacml.lib}" includes="*.jar"/>
+					<lib file="lib/${server.jar}"/>
+					<classes dir="wsdl"/>
+					<classes dir="lib" includes="*.properties"/>
+					<!-- <classes dir="config/omii-sec/classes/conf" excludes="crypto.properties"/> -->
+					<!-- Create a "data" directory to hold the triple store. DOES NOT WORK.
+					<zipfileset dir="config/omii" prefix="data"/> -->
+					<fileset dir="web"/>
+					<fileset dir="." includes="docs/**"/>
+				</war>
+			</case>
+			<case value="acl">
+				<war destfile="${omii-sec.dist}/${omii.war.name}" webxml="config/omii-sec/web.xml">
+					<webinf file="config/omii-sec/acl/server-config.wsdd" />
+					<lib dir="${ext.lib}"
+						 includes="*.jar"
+						 excludes="activation.jar
+								   itinnov*.jar
+								   mail.jar" 
+					/>
+					<lib dir="${jena.lib}" includes="*.jar" />
+					<!-- to release in omii3, omii jars should not be included. 
+					<lib dir="${omii.lib}" includes="*.jar" /> -->
+					<lib dir="${sesame.lib}" includes="*.jar" />
+					<lib dir="${xacml.lib}" includes="*.jar" />
+					<lib file="lib/${server.jar}" />
+					<classes dir="config/wsdl"/>
+					<classes dir="lib" includes="*.properties" />
+					<!-- <classes dir="config/omii-sec/classes/conf" excludes="crypto.properties"/> -->
+					<classes file="config/omii-sec/acl/authlist*" />
+					<classes dir="." includes="translator/**/*" />
+					<fileset dir="web"/>
+					<fileset dir="config" includes="xsd/**"/>
+					<fileset dir="." includes="docs/**"/>
+				</war>
+			</case>
+		</switch>
+
+		<copy file="config/omii/build.xml" todir="${omii.dist}" />
+		<copy file="config/omii/manifest.properties" todir="${omii.dist}" />
+		<copy file="LICENCE" todir="${omii.dist}"/>
+	</target>
+
+	<target name="omii.deployWar">
+		<taskdef classname="org.apache.catalina.ant.DeployTask"
+			classpath="lib/tomcat/catalina-ant.jar"
+			name="deploy"/>
+		<deploy username="${omii.tomcat.username}"
+			password="${omii.tomcat.password}"
+			url="${omii.tomcat.url}/manager"
+			path="/${omii.context.path}"
+			war="file:${omii.dist}/${omii.war.name}"/>
+	</target>
+
+	<target name="omii-sec.deployWar">
+		<taskdef classname="org.apache.catalina.ant.DeployTask"
+			classpath="lib/tomcat/catalina-ant.jar"
+			name="deploy" />
+		<deploy username="${omii.tomcat.username}"
+			password="${omii.tomcat.password}"
+			url="${omii.tomcat.url}/manager"
+			path="/${omii.context.path}"
+			war="file:${omii-sec.dist}/${omii.war.name}" />
+	</target>
+
+	<target name="omii.undeployWar">
+		<taskdef classname="org.apache.catalina.ant.UndeployTask"
+			classpath="lib/tomcat/catalina-ant.jar"
+			name="undeploy"/>
+		<undeploy username="${omii.tomcat.username}"
+			password="${omii.tomcat.password}"
+			url="${omii.tomcat.url}/manager"
+			path="/${omii.context.path}"/>
+	</target>
+
+	<target name="omii.testTomcat">
+		<taskdef classname="org.apache.catalina.ant.ServerinfoTask"
+			classpath="lib/tomcat/catalina-ant.jar"
+			name="server-info"/>
+		<server-info username="${omii.tomcat.username}"
+			password="${omii.tomcat.password}"
+			url="${omii.tomcat.url}/manager"/>
+	</target>
+
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!--		 			Axis Specific						-->
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+	<property name="axis.dist" value="dist/server/"/>
+	<property name="axis.war.name" value="grimoires.war"/>
+
+	<target name="axis.makeWar" depends="jar">
+		<mkdir dir="${axis.dist}"/>
+		<war destfile="${axis.dist}/${axis.war.name}" webxml="config/axis/web.xml">
+			<webinf file="config/axis/server-config.wsdd"/>
+			<lib dir="${ext.lib}" includes="*.jar"/>
+			<lib dir="${jena.lib}" includes="*.jar"/>
+			<lib dir="${axis.lib}" includes="*.jar"/>
+			<lib dir="${xerces.lib}" includes="*.jar"/>
+			<lib dir="${sesame.lib}" includes="*.jar"/>
+			<lib file="lib/${server.jar}"/>
+			<classes dir="config/wsdl"/>
+			<classes dir="lib" includes="*.properties"/>
+			<classes dir="." includes="translator/**/*"/>
+			<fileset dir="web"/>
+			<fileset dir="config" includes="xsd/**"/>
+			<!-- make deploy faster -->
+			<fileset dir="." includes="docs/**"/>
+		</war>
+	</target>
+
+	<target name="axis.deployWar">
+		<taskdef classname="org.apache.catalina.ant.DeployTask"
+			classpath="lib/tomcat/catalina-ant.jar"
+			name="deploy"/>
+		<deploy username="${axis.tomcat.username}"
+			password="${axis.tomcat.password}"
+			url="${axis.tomcat.url}/manager"
+			path="/${axis.context.path}"
+			war="file:${axis.dist}/${axis.war.name}"/>
+	</target>
+
+	<target name="axis.undeployWar">
+		<taskdef classname="org.apache.catalina.ant.UndeployTask"
+			classpath="lib/tomcat/catalina-ant.jar"
+			name="undeploy"/>
+		<undeploy username="${axis.tomcat.username}"
+			password="${axis.tomcat.password}"
+			url="${axis.tomcat.url}/manager"
+			path="/${axis.context.path}"/>
+	</target>
+
+	<target name="axis.testTomcat">
+		<taskdef classname="org.apache.catalina.ant.ServerinfoTask"
+			classpath="lib/tomcat/catalina-ant.jar"
+			name="server-info"/>
+		<server-info username="${axis.tomcat.username}"
+			password="${axis.tomcat.password}"
+			url="${axis.tomcat.url}/manager"/>
+	</target>
+
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- 					GT4 Specific						-->
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+	<property name="gt4.dist" value="dist/server/"/>
+
+	<target name="gt4.init">
+		<mkdir dir="${gt4.dist}/lib"/>
+		<mkdir dir="${gt4.dist}/schema"/>
+		<mkdir dir="${gt4.dist}/schema/grimoires"/>
+		<mkdir dir="${gt4.dist}/etc"/>
+
+		<!--
+		<copy todir="${gt4.dist}/lib">
+			<fileset file="lib/*.properties"/>
+		</copy>
+		-->
+
+		<copy todir="${gt4.dist}/lib">
+			<fileset dir="${ext.lib}" includes="*.jar"/>
+			<!-- concurrent.jar is already inside GT4 -->
+			<fileset dir="${jena.lib}" includes="*.jar" excludes="concurrent.jar"/>
+			<fileset dir="${sesame.lib}" includes="*.jar"/>
+			<fileset file="lib/*.jar"/>
+		</copy>
+
+		<!-- Add grimoires.properties into grimoires-server.jar. -->
+		<jar destfile="${gt4.dist}/lib/${server.jar}" basedir="lib"
+			includes="grimoires.properties" update="yes"/>
+
+		<copy todir="${gt4.dist}/schema/grimoires">
+			<fileset dir="wsdl" includes="*.wsdl *.xsd"/>
+		</copy>
+		<copy todir="${gt4.dist}/etc">
+			<fileset dir="config/gt4" includes="server-config.wsdd"/>
+		</copy>
+	</target>
+
+	<property name="garjars.id" value="garjars"/>
+	<fileset dir="${gt4.dist}/lib" id="garjars"/>
+
+	<property name="garetc.id" value="garetc"/>
+	<fileset dir="${gt4.dist}/etc" id="garetc"/>
+
+	<property name="garschema.id" value="garschema"/>
+	<fileset dir="${gt4.dist}/schema" id="garschema"/>
+
+	<property name="build.packages" location=
+	      "${gt4.home}/share/globus_wsrf_common/build-packages.xml"/>
+
+	<target name="gt4.makeGar" depends="gt4.init">
+		<ant antfile="${build.packages}" target="makeGar">
+			<property name="gar.name" value="${gt4.dist}/grimoires.gar"/>
+			<reference refid="${garjars.id}"/>
+			<reference refid="${garetc.id}"/>
+			<reference refid="${garschema.id}"/>
+		</ant>
+	</target>
+
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!--	 			General Public Targets					-->
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+	<!--
+	<target name="release">
+		<echo>
+			${grimoires.name} v${grimoires.version} ${grimories.date}${line.separator}${grimoires.homepage}
+		</echo>
+	</target>
+	-->
+
+	<target name="verify-install-env">
+		<switch value="${container}">
+			<case value="omii">
+				<antcall target="omii.testTomcat"/>
+			</case>
+			<case value="omii-sec">
+				<antcall target="omii.testTomcat"/>
+			</case>
+			<case value="axis">
+				<antcall target="axis.testTomcat"/>
+			</case>
+			<case value="gt4">
+				<echo message="verify-install-env"/>
+			</case>
+		</switch>
+	</target>
+
+	<target name="verify-uninstall-env">
+		<antcall target="verify-install-env"/>
+	</target>
+
+	<!-- Not used -->
+	<target name="install">
+		<echo message="install"/>
+	</target>
+
+	<!-- Not used -->
+	<target name="uninstall">
+		<echo message="uninstall"/>
+	</target>
+
+	<!-- Not used -->
+	<target name="clean-install">
+		<echo message="clean-install"/>
+	</target>
+
+	<target name="build-server">
+		<switch value="${container}">
+			<case value="omii">
+				<antcall target="omii.makeWar"/>
+			</case>
+			<case value="omii-sec">
+				<antcall target="omii-sec.makeWar"/>
+			</case>
+			<case value="axis">
+				<antcall target="axis.makeWar"/>
+			</case>
+			<case value="gt4">
+				<antcall target="gt4.makeGar"/>
+			</case>
+		</switch>
+
+		<copy todir="dist/server">
+			<fileset dir="." includes="docs/**"/>
+		</copy>
+
+		<mkdir dir="dist/server/classes"/>
+		<copy todir="dist/server/classes">
+			<fileset dir="build/classes" includes="*.properties"/>
+			<fileset dir="config/omii/wsdl" includes="*.wsdl"/>
+		</copy>
+	</target>
+
+	<target name="build-client" depends="jar-gshell">
+		<mkdir dir="dist/client"/>
+		<mkdir dir="dist/client/lib"/>
+		<copy todir="dist/client/lib">
+			<fileset dir="${gshell.lib}">
+				<include name="*.jar"/>
+			</fileset>
+			<fileset dir="${ext.lib}">
+				<include name="commons-*.jar" />
+			</fileset>
+			<fileset dir="${ext.lib}">
+				<include name="jug.jar" />
+			</fileset>
+			<fileset dir="${jena.lib}">
+				<include name="jena.jar"/>
+			</fileset>
+		</copy>
+		<mkdir dir="dist/client/bin"/>
+		<copy todir="dist/client/bin">
+			<fileset dir="config/omii/GShell">
+				<include name="*"/>
+			</fileset>
+		</copy>
+		<copy todir="dist/client">
+			<fileset dir="." includes="docs/**"/>
+		</copy>
+		<copy todir="dist/client">
+			<fileset dir="." includes="wsdl/**"/>
+		</copy>
+		<copy file="config/omii/manifest.properties" todir="dist/client"/>
+		<copy file="config/omii/build-client.xml" tofile="dist/client/build.xml"/>
+		<copy file="LICENCE" todir="dist/client"/>
+		<copy file="GShell/input.txt" todir="dist/client"/>
+		<copy file="GShell/gshell.properties" todir="dist/client/bin"/>
+		<copy file="lib/gtest.properties" todir="dist/client/bin"/>
+		<copy file="lib/log4j.properties" todir="dist/client/bin"/>
+		<copy file="lib/misc/commons-collections-3.1.jar" todir="dist/client/lib"/>
+		<copy file="lib/misc/commons-beanutils.jar" todir="dist/client/lib"/>
+	</target>
+
+	<target name="build-doc">
+		<javadoc destdir="docs/api"
+			doctitle="Grimoires API"
+			windowtitle="Grimoires">
+			<packageset dir="src" defaultexcludes="yes">
+				<include name="uk/ac/soton/ecs/grimoires/**"/>
+			</packageset>
+			<classpath>
+				<path refid="grimoires.classpath"/>
+			</classpath>
+			<link href="http://java.sun.com/j2se/1.4.1/docs/api/"/>
+		</javadoc>
+	</target>
+
+	<target name="build-all">
+		<antcall target="build-doc"/>
+		<antcall target="build-server"/>
+		<antcall target="build-client"/>
+	</target>
+
+	<target name="deploy" depends="build-all">
+		<switch value="${container}">
+			<case value="omii">
+				<antcall target="omii.deployWar"/>
+			</case>
+			<case value="omii-sec">
+				<antcall target="omii-sec.deployWar"/>
+			</case>
+			<case value="axis">
+				<antcall target="axis.deployWar"/>
+			</case>
+			<case value="gt4">
+				<antcall target="gt4.deployGar" />
+			</case>
+		</switch>
+	</target>
+
+	<!-- For purposes of developing, making a quick compilation without documentation and deploying -->
+
+	<target name="fastdeploy">
+		<switch value="${container}">
+			<case value="omii">
+				<antcall target="omii.makeWar"/>
+				<antcall target="omii.deployWar"/>
+			</case>
+			<case value="omii-sec">
+				<antcall target="omii-sec.makeWar"/>
+				<antcall target="omii-sec.deployWar"/>
+			</case>
+			<case value="axis">
+				<antcall target="axis.makeWar"/>
+				<antcall target="axis.deployWar"/>
+			</case>
+			<case value="gt4">
+				<antcall target="gt4.makeGar"/>
+				<antcall target="gt4.deployGar" />
+			</case>
+		</switch>
+	</target>
+
+	<!-- End of fast deploy section -->
+
+	<target name="undeploy">
+		<switch value="${container}">
+			<case value="omii">
+				<antcall target="omii.undeployWar" />
+			</case>
+			<case value="omii-sec">
+				<antcall target="omii.undeployWar" />
+			</case>
+			<case value="axis">
+				<antcall target="axis.undeployWar"/>
+			</case>
+			<case value="gt4">
+				<antcall target="gt4.undeployGar"/>
+			</case>
+		</switch>
+	</target>
+
+	<!--
+	<target name="test">
+		<junit printsummary="yes" fork="yes" haltonfailure="no">
+			<test name="uk.ac.soton.ecs.grimoires.test.BusinessLogicTestSuite"/>
+			<classpath>
+				<path refid="grimoires.classpath"/>
+			</classpath>
+		</junit>
+	</target>
+	-->
+
+	<target name="test-service">
+		<echo message="Test service ${service.name}..."/>
+		<switch value="${container}">
+			<case value="omii">
+				<property name="service.url"
+					value="${omii.tomcat.url}/${omii.context.path}/services/${service.name}"/>
+			</case>
+			<case value="omii-sec">
+				<property name="service.url"
+					value="${omii.tomcat.url}/${omii.context.path}/services/${service.name}"/>
+			</case>
+			<case value="axis">
+				<property name="service.url"
+					value="${axis.tomcat.url}/${axis.context.path}/services/${service.name}"/>
+			</case>
+			<case value="gt4">
+				<property name="service.url"
+					value="${gt4.url}/wsrf/services/${service.name}"/>
+			</case>
+		</switch>
+		<get src="${service.url}" dest="test-service-output-temp.htm"/>
+		<loadfile property="test-service.output" srcFile="test-service-output-temp.htm"/>
+		<echo message="${test-service.output}"/>
+		<delete file="test-service-output-temp.htm"/>
+	</target>
+
+	<target name="test-install">
+		<antcall target="test-service">
+			<param name="service.name" value="publish"/>
+		</antcall>
+		<antcall target="test-service">
+			<param name="service.name" value="inquire"/>
+		</antcall>
+		<antcall target="test-service">
+			<param name="service.name" value="inquire_metadata"/>
+		</antcall>
+		<antcall target="test-service">
+			<param name="service.name" value="inquire_uddiMetadata"/>
+		</antcall>
+		<antcall target="test-service">
+			<param name="service.name" value="inquire_wsdlMetadata "/>
+		</antcall>
+		<antcall target="test-service">
+			<param name="service.name" value="publish_metadata"/>
+		</antcall>
+		<antcall target="test-service">
+			<param name="service.name" value="wsdl"/>
+		</antcall>
+	</target>
+
+	<target name="test-junit">
+		<ant inheritAll="false" antfile="wstester/build.xml"/>
+	</target>
+
+	<!--
+	<target name="getDoc">
+		<get src="${grimoires.homepage}" dest="doc/index.html"/>
+	</target>
+	-->
+
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- 			Others: all the others go here				-->
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!--				Token Substitution						-->
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- release version -->
+	<property name="version.current" value="1.6.2"/>
+	<property name="version.new" value="1.7.0"/>
+
+	<!-- release date -->
+	<property name="date.current" value="September 2007"/>
+	<property name="date.new" value="October 2007"/>
+
+	<target name="substitute">
+		<replace dir="." includes="config/omii/manifest.properties 
+				      			   docs/index.html 
+					  			   README.txt">
+			<replacefilter token="${version.current}" value="${version.new}"/>
+		</replace>
+		<replace dir="." includes="config/omii/manifest.properties">
+			<replacefilter token="${date.current}" value="${date.new}"/>
+		</replace>
+	</target>
+
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Convert a Sesame memory store to a Sesame native store	-->
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<target name="sesameMemory2Native">
+		<java classname="uk.ac.soton.ecs.grimoires.test.misc.SesameMemory2Native" fork="true">
+			<jvmarg value="-Xmx256m"/>
+			<!-- Memory store filename -->
+			<arg value="C:/Grimoires Triple Store Samples/sesame10.rdf"/>
+			<!-- Memory store data format -->
+			<arg value="ntriples"/>
+			<!-- Native store dirname -->
+			<arg value="C:/Grimoires Triple Store Samples/sesame10"/>
+			<classpath>
+				<path refid="grimoires.classpath"/>
+			</classpath>
+		</java>
+	</target>
+
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- 						Echo							-->
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+	<target name="echo.wsdl2java">
+		<axis-wsdl2java 
+			output="src" 
+			testcase="false" 
+			all="true" 
+			verbose="false" 
+			serverside="true" 
+			skeletondeploy="true" 
+			helpergen="true" 
+			url="wsdl/echo.wsdl">
+
+			<mapping 
+				namespace="http://www.grimoires.org/echo/" 
+				package="uk.ac.soton.ecs.grimoires.test.echo" />
+
+		</axis-wsdl2java>
+	</target>
+</project>

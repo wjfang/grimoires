@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=giHECie,mds-vo-name=giHECie">
+    <Name>giHECie</Name>
+    <Description>EGEE/LCG Site</Description>
+    <UserSupportContact>mailto: grid-ireland-mgr@cs.tcd.ie</UserSupportContact>
+    <SysAdminContact>mailto: grid-ireland-mgr@cs.tcd.ie</SysAdminContact>
+    <SecurityContact>mailto: grid-ireland-mgr@cs.tcd.ie</SecurityContact>
+    <Location>Dublin, Ireland</Location>
+    <Latitude>53.3856</Latitude>
+    <Longitude>-6.2562</Longitude>
+    <Web>http://www.grid.ie/</Web>
+    <OtherInfo>csTCDie</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=gridgate.ichec.ie,mds-vo-name=giHECie">
+        <Name>gridgate.ichec.ie</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=gridgate.ichec.ie,GlueClusterUniqueID=gridgate.ichec.ie,mds-vo-name=giHECie">
+            <Name>gridgate.ichec.ie</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.7" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel" Model="P4" ClockSpeed="2600"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="3072" RAMSize="2048"/>
+            <Architecture SMPSize="1"/>
+            <Benchmark SI00="1000" SF00="800"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=gridstore.ichec.ie,mds-vo-name=giHECie">
+        <InformationServiceURL>ldap://gridstore.ichec.ie:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>20</SizeTotal>
+        <SizeFree>16</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="cosmo">
+            <Path>/dpm/ichec.ie/home/cosmo</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4160000</UsedSpace>
+            <AvailableSpace>15530000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/ichec.ie/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4160000</UsedSpace>
+            <AvailableSpace>15530000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gitest">
+            <Path>/dpm/ichec.ie/home/gitest</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4160000</UsedSpace>
+            <AvailableSpace>15530000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/ichec.ie/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4160000</UsedSpace>
+            <AvailableSpace>15530000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://gridstore.ichec.ie:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://gridstore.ichec.ie:25000/srm/managerv1</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://gridstore.ichec.ie:25000/srm/managerv1</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=httpg://gridstore.ichec.ie:25000/srm/managerv1,mds-vo-name=giHECie">
+        <Name>giHECie-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://gridstore.ichec.ie:25000/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=gridstore.ichec.ie:2136,mds-vo-name=giHECie">
+        <Name>giHECie-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://gridstore.ichec.ie:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>dteam</Owner>
+        <Owner>gitest</Owner>
+        <Owner>cosmo</Owner>
+        <Owner>ops</Owner>
+    </Service>
+</Site>

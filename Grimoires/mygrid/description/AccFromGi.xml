@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+	<serviceDescription>
+		<serviceName>SHoundAccFromGi</serviceName>
+		<organisation>
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundAccFromGi</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundAccFromGi?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Converts a GI identifier to an NCBI accession number. Sequences from the PIR or PDB databases will return &quot;n/a&quot; for this function since they do not have an NCBI accession. Instead, use SHoundGetDefline to retrieve the accession for these sequences.</serviceDescriptionText>
+		<operations>
+			<serviceOperation>
+				<operationName>SHoundAccFromGi</operationName>
+				<operationDescriptionText>Converts a GI identifier to an NCBI accession number. This function name has been deprecated and should be replaced with SHoundGBAccFromGi.
+</operationDescriptionText>
+				<operationInputs>
+					<parameter>
+						<parameterName>gi</parameterName>
+						<parameterDescription>Genbank Gene Identifier</parameterDescription>
+						<semanticType>http://www.mygrid.org.uk/ontology#GenBank_gene_id_%28GI%29</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs>
+					<parameter>
+						<parameterName>result</parameterName>
+						<parameterDescription>NCBI Accession number</parameterDescription>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#retrieving</operationTask>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=LIP-Lisbon,Mds-Vo-name=LIP-Lisbon">
+    <Name>LIP-Lisbon</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:grid.admin@lip.pt</UserSupportContact>
+    <SysAdminContact>mailto:grid.admin@lip.pt</SysAdminContact>
+    <SecurityContact>mailto:grid.admin@lip.pt</SecurityContact>
+    <Location>Lisboa, Portugal</Location>
+    <Latitude>38.739925290125484</Latitude>
+    <Longitude>-9.143403768539429</Longitude>
+    <Web>http://www.lip.pt</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>lip.pt</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ce02.lip.pt,Mds-Vo-name=LIP-Lisbon">
+        <Name>ce02.lip.pt</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce02.lip.pt,GlueClusterUniqueID=ce02.lip.pt,Mds-Vo-name=LIP-Lisbon">
+            <Name>ce02.lip.pt</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="4.3" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="ATHLON" ClockSpeed="2200"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1024"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1100" SF00="0"/>
+            <Location LocalID="VO-atlas-production-12.0.31">
+                <Name>VO-atlas-production-12.0.31</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6">
+                <Name>VO-atlas-production-12.0.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.7">
+                <Name>VO-atlas-production-12.0.7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.95">
+                <Name>VO-atlas-production-12.0.95</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.20">
+                <Name>VO-atlas-production-13.0.20</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.30">
+                <Name>VO-atlas-production-13.0.30</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-GATE-3.0.0-remy">
+                <Name>VO-biomed-GATE-3.0.0-remy</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-Gate3.0.0-JR">
+                <Name>VO-biomed-Gate3.0.0-JR</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-TestU01-DistRNG">
+                <Name>VO-biomed-TestU01-DistRNG</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_0">
+                <Name>VO-cms-CMSSW_1_2_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_3">
+                <Name>VO-cms-CMSSW_1_2_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1">
+                <Name>VO-cms-CMSSW_1_3_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_2">
+                <Name>VO-cms-CMSSW_1_4_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_3">
+                <Name>VO-cms-CMSSW_1_4_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_4">
+                <Name>VO-cms-CMSSW_1_4_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_6">
+                <Name>VO-cms-CMSSW_1_4_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_4">
+                <Name>VO-cms-CMSSW_1_5_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0">
+                <Name>VO-cms-CMSSW_1_6_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_1">
+                <Name>VO-cms-CMSSW_1_6_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_3">
+                <Name>VO-cms-CMSSW_1_6_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_4">
+                <Name>VO-cms-CMSSW_1_6_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_5">
+                <Name>VO-cms-CMSSW_1_6_5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc4_ia32_gcc345">
+                <Name>VO-cms-slc4_ia32_gcc345</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=dcache01.lip.pt,Mds-Vo-name=LIP-Lisbon">
+        <InformationServiceURL>ldap://dcache01.lip.pt:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>19594</SizeTotal>
+        <SizeFree>14044</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/pnfs/lip.pt/data/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>840696362</UsedSpace>
+            <AvailableSpace>3357634170</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/pnfs/lip.pt/data/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1177961826</UsedSpace>
+            <AvailableSpace>748331006</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/pnfs/lip.pt/data/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>201721726</UsedSpace>
+            <AvailableSpace>1370236304</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="swetest">
+            <Path>/pnfs/lip.pt/data/swetest</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>201721726</UsedSpace>
+            <AvailableSpace>1370236304</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="eela">
+            <Path>/pnfs/lip.pt/data/eela1</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="edteam">
+            <Path>/pnfs/lip.pt/data/edteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>201721726</UsedSpace>
+            <AvailableSpace>1370236304</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/pnfs/lip.pt/data/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>201721726</UsedSpace>
+            <AvailableSpace>1370236304</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomed">
+            <Path>/pnfs/lip.pt/data/biomed</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>201721726</UsedSpace>
+            <AvailableSpace>1370236304</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="imain">
+            <Path>/pnfs/lip.pt/data/imain</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>201721726</UsedSpace>
+            <AvailableSpace>1370236304</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="itut">
+            <Path>/pnfs/lip.pt/data/itut</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>201721726</UsedSpace>
+            <AvailableSpace>1370236304</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="iplanck">
+            <Path>/pnfs/lip.pt/data/iplanck</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>201721726</UsedSpace>
+            <AvailableSpace>1370236304</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="itest">
+            <Path>/pnfs/lip.pt/data/itest</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>201721726</UsedSpace>
+            <AvailableSpace>1370236304</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="iusct">
+            <Path>/pnfs/lip.pt/data/iusct</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>201721726</UsedSpace>
+            <AvailableSpace>1370236304</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="imon">
+            <Path>/pnfs/lip.pt/data/imon</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>201721726</UsedSpace>
+            <AvailableSpace>1370236304</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ibrain">
+            <Path>/pnfs/lip.pt/data/ibrain</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>201721726</UsedSpace>
+            <AvailableSpace>1370236304</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="auger">
+            <Path>/pnfs/lip.pt/data/auger</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>201721726</UsedSpace>
+            <AvailableSpace>1370236304</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="compass">
+            <Path>/pnfs/lip.pt/data/compass</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>510922069</UsedSpace>
+            <AvailableSpace>3687408463</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://dcache01.lip.pt</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsidcap">
+            <Endpoint>httpg://dcache01.lip.pt</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://dcache01.lip.pt</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=http://lfc01.lip.pt:8085/,Mds-Vo-name=LIP-Lisbon">
+        <Name>LIP-Lisbon-lfc-dli</Name>
+        <Type>data-location-interface</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>http://lfc01.lip.pt:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-09-10T07:21:45.000+01:00</StartTime>
+        <Owner>swetest</Owner>
+        <Owner>eela</Owner>
+        <Owner>edteam</Owner>
+        <Owner>imain</Owner>
+        <Owner>itut</Owner>
+        <Owner>iplanck</Owner>
+        <Owner>itest</Owner>
+        <Owner>iusct</Owner>
+        <Owner>imon</Owner>
+        <Owner>ibrain</Owner>
+        <Owner>ifusion</Owner>
+        <Owner>ienvmod</Owner>
+        <Owner>ihep</Owner>
+        <Owner>icesga</Owner>
+        <Owner>compass</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lfc01.lip.pt,Mds-Vo-name=LIP-Lisbon">
+        <Name>LIP-Lisbon-lfc</Name>
+        <Type>lcg-file-catalog</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>lfc01.lip.pt</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-09-10T07:21:45.000+01:00</StartTime>
+        <Owner>swetest</Owner>
+        <Owner>eela</Owner>
+        <Owner>edteam</Owner>
+        <Owner>imain</Owner>
+        <Owner>itut</Owner>
+        <Owner>iplanck</Owner>
+        <Owner>itest</Owner>
+        <Owner>iusct</Owner>
+        <Owner>imon</Owner>
+        <Owner>ibrain</Owner>
+        <Owner>ifusion</Owner>
+        <Owner>ienvmod</Owner>
+        <Owner>ihep</Owner>
+        <Owner>icesga</Owner>
+        <Owner>compass</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=mon01.lip.pt:2136,Mds-Vo-name=LIP-Lisbon">
+        <Name>LIP-Lisbon-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://mon01.lip.pt:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>swetest</Owner>
+        <Owner>eela</Owner>
+        <Owner>edteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>biomed</Owner>
+        <Owner>auger</Owner>
+        <Owner>compass</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=px01.lip.pt:7512,Mds-Vo-name=LIP-Lisbon">
+        <Name>LIP-Lisbon-myproxy</Name>
+        <Type>MyProxy</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>px01.lip.pt:7512</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb02.lip.pt:7772,Mds-Vo-name=LIP-Lisbon">
+        <Name>LIP-Lisbon-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb02.lip.pt:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>swetest</Owner>
+        <Owner>eela</Owner>
+        <Owner>edteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>biomed</Owner>
+        <Owner>auger</Owner>
+        <Owner>compass</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://dcache01.lip.pt:8443/srm/managerv1,Mds-Vo-name=LIP-Lisbon">
+        <Name>LIP-Lisbon-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://dcache01.lip.pt:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=gsissh://phedex.lip.pt:1975,Mds-Vo-name=LIP-Lisbon">
+        <Name>LIP-Lisbon-vobox</Name>
+        <Type>VOBOX</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>gsissh://phedex.lip.pt:1975</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=wms01.lip.pt:7772,Mds-Vo-name=LIP-Lisbon">
+        <Name>LIP-Lisbon-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>wms01.lip.pt:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>swetest</Owner>
+        <Owner>eela</Owner>
+        <Owner>edteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>biomed</Owner>
+        <Owner>auger</Owner>
+        <Owner>compass</Owner>
+    </Service>
+</Site>

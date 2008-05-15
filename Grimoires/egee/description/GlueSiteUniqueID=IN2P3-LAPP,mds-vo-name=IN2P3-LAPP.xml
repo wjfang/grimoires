@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=IN2P3-LAPP,mds-vo-name=IN2P3-LAPP">
+    <Name>IN2P3-LAPP</Name>
+    <Description>EGEE/LCG Site</Description>
+    <UserSupportContact>mailto: support-grid@lapp.in2p3.fr</UserSupportContact>
+    <SysAdminContact>mailto: support-grid@lapp.in2p3.fr</SysAdminContact>
+    <SecurityContact>mailto: support-grid@lapp.in2p3.fr</SecurityContact>
+    <Location>Annecy le vieux, France</Location>
+    <Latitude>45.921667</Latitude>
+    <Longitude>6.156242</Longitude>
+    <Web>http://lapp.in2p3.fr/</Web>
+    <OtherInfo>TIER 3</OtherInfo>
+    <OtherInfo>LAPP</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=lapp-ce01.in2p3.fr,mds-vo-name=IN2P3-LAPP">
+        <Name>lapp-ce01.in2p3.fr</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=lapp-ce01.in2p3.fr,GlueClusterUniqueID=lapp-ce01.in2p3.fr,mds-vo-name=IN2P3-LAPP">
+            <Name>lapp-ce01.in2p3.fr</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.8" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Woodcrest" Model="Intel" ClockSpeed="2660"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1024" RAMSize="2048"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="2696" SF00="2834"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=lapp-se01.in2p3.fr,mds-vo-name=IN2P3-LAPP">
+        <InformationServiceURL>ldap://lapp-se01.in2p3.fr:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>3039</SizeTotal>
+        <SizeFree>682</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/dpm/in2p3.fr/home/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2010105534</UsedSpace>
+            <AvailableSpace>244850000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/in2p3.fr/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>52130789</UsedSpace>
+            <AvailableSpace>407110000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="esr">
+            <Path>/dpm/in2p3.fr/home/esr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>36793250</UsedSpace>
+            <AvailableSpace>272170000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/dpm/in2p3.fr/home/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>261791995</UsedSpace>
+            <AvailableSpace>411860000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/in2p3.fr/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4660</UsedSpace>
+            <AvailableSpace>298320000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vo.lapp.in2p3.fr">
+            <Path>/dpm/in2p3.fr/home/vo.lapp.in2p3.fr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>25</UsedSpace>
+            <AvailableSpace>244850000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://lapp-se01.in2p3.fr:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://lapp-se01.in2p3.fr:8443/srm/managerv1</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://lapp-se01.in2p3.fr:8443/srm/managerv1</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=lapp-mon01.in2p3.fr:2136,mds-vo-name=IN2P3-LAPP">
+        <Name>IN2P3-LAPP-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://lapp-mon01.in2p3.fr:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+        <Owner>esr</Owner>
+        <Owner>geant4</Owner>
+        <Owner>vo.lapp.in2p3.fr</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lapp-bdii01.in2p3.fr:7512,mds-vo-name=IN2P3-LAPP">
+        <Name>IN2P3-LAPP-myproxy</Name>
+        <Type>myproxy</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>lapp-bdii01.in2p3.fr:7512</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lapp-rb01.in2p3.fr:7772,mds-vo-name=IN2P3-LAPP">
+        <Name>IN2P3-LAPP-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>lapp-rb01.in2p3.fr:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+        <Owner>esr</Owner>
+        <Owner>egeode</Owner>
+        <Owner>biomed</Owner>
+        <Owner>vo.ipnl.in2p3.fr</Owner>
+        <Owner>auvergrid</Owner>
+        <Owner>vo.lapp.in2p3.fr</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://lapp-se01.in2p3.fr:8443/srm/managerv1,mds-vo-name=IN2P3-LAPP">
+        <Name>IN2P3-LAPP-srm</Name>
+        <Type>srm</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://lapp-se01.in2p3.fr:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://lapp-se01.in2p3.fr:8446/srm/managerv2,mds-vo-name=IN2P3-LAPP">
+        <Name>IN2P3-LAPP-srm</Name>
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://lapp-se01.in2p3.fr:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

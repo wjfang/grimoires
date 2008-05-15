@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=AMD64.PSNC.PL,mds-vo-name=AMD64.PSNC.PL">
+    <Name>AMD64.PSNC.PL</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto: egee@man.poznan.pl</UserSupportContact>
+    <SysAdminContact>mailto: egee@man.poznan.pl</SysAdminContact>
+    <SecurityContact>mailto: egee@man.poznan.pl</SecurityContact>
+    <Location>Poznan, Poland</Location>
+    <Latitude>52.25</Latitude>
+    <Longitude>16.5</Longitude>
+    <Web>http://www.egee.man.poznan.pl</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER 2</OtherInfo>
+    <OtherInfo>lcg-gridka-ce.fzk.de</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=fangorn.man.poznan.pl,mds-vo-name=AMD64.PSNC.PL">
+        <Name>fangorn.man.poznan.pl</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=fangorn.man.poznan.pl,GlueClusterUniqueID=fangorn.man.poznan.pl,mds-vo-name=AMD64.PSNC.PL">
+            <Name>fangorn.man.poznan.pl</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="n/a" Release="9.3" Name="SUSE LINUX"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="x86_64" ClockSpeed="2000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="8000000" RAMSize="8000000"/>
+            <Architecture SMPSize="4"/>
+            <Benchmark SI00="930" SF00="1090"/>
+        </SubCluster>
+    </Cluster>
+    <Service UniqueID="GlueServiceUniqueID=fangorn.man.poznan.pl:2119,mds-vo-name=AMD64.PSNC.PL">
+        <Name>AMD64.PSNC.PL-org.glite.ce</Name>
+        <Type>org.glite.ce</Type>
+        <Version>2.4.20</Version>
+        <Endpoint>fangorn.man.poznan.pl:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>atlas</Owner>
+        <Owner>magic</Owner>
+        <Owner>compchem</Owner>
+        <Owner>voce</Owner>
+        <Owner>balticgrid</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+</Site>

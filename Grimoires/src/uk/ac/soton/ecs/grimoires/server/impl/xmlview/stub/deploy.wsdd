@@ -1,0 +1,105 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from XMLViewService WSDL service -->
+
+  <service name="XMLViewSOAPBinding" provider="java:RPC" style="document" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://www.grimoires.org/xmlview/"/>
+      <parameter name="wsdlServiceElement" value="XMLViewService"/>
+      <parameter name="wsdlServicePort" value="XMLViewSOAPBinding"/>
+      <parameter name="className" value="uk.ac.soton.ecs.grimoires.server.impl.xmlview.stub.XMLViewSOAPBindingSkeleton"/>
+      <parameter name="wsdlPortType" value="XMLViewPortType"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/xmlview/"
+        qname="ns:>PublishResponse"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.xmlview.stub.PublishResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/xmlview/"
+        qname="ns:>QueryResponse"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.xmlview.stub.QueryResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/xmlview/"
+        qname="ns:XMLViewFaultType"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.xmlview.stub.XMLViewFaultType"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/xmlview/"
+        qname="ns:>QueryAndTranslateRequest"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.xmlview.stub.QueryAndTranslateRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/xmlview/"
+        qname="ns:>DeleteRequest"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.xmlview.stub.DeleteRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/xmlview/"
+        qname="ns:>PublishRequest"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.xmlview.stub.PublishRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/xmlview/"
+        qname="ns:>QueryAndTranslateResponse"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.xmlview.stub.QueryAndTranslateResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/xmlview/"
+        qname="ns:>DeleteResponse"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.xmlview.stub.DeleteResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/xmlview/"
+        qname="ns:>QueryRequest"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.xmlview.stub.QueryRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/xmlview/"
+        qname="ns:QueryExpressionType"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.xmlview.stub.QueryExpressionType"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.grimoires.org/metadata.xsd" 
+     xmlns="http://www.w3.org/2001/XMLSchema" 
+     xmlns:meta="http://www.grimoires.org/metadata.xsd"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+<!-- Remove the unnecessary dependency on uddi schema
+  <xsd:import namespace="urn:uddi-org:api_v2"
+    schemaLocation="./uddi_v2.xsd"/>
+ -->
+ 
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">
+      Schema for the generic metadata interface for Grimoires
+    </xsd:documentation>
+  </xsd:annotation>
+
+  <xsd:element name="metadataType"         type="meta:MetadataType"/>
+  <xsd:simpleType name="MetadataType">
+    <xsd:restriction base="anyURI"/>
+  </xsd:simpleType>
+
+  <xsd:element name="metadataKey"          type="meta:MetadataKey"/>
+  <xsd:simpleType name="MetadataKey">
+    <xsd:restriction base="string"/>
+  </xsd:simpleType>
+
+  <xsd:element name="metadata"             type="meta:Metadata"/>
+  <xsd:complexType name="Metadata">
+    <xsd:sequence>
+      <xsd:element ref="meta:metadataType"/>
+      <xsd:element ref="meta:metadataValue"/>
+    </xsd:sequence>
+    <xsd:attribute ref="meta:metadataKey" use="required"/>
+  </xsd:complexType>
+
+  <xsd:element name="stringValue"           type="xsd:string"/>
+  <xsd:element name="uriValue"              type="xsd:anyURI"/>
+
+	<!-- Allow metadata value to be XML -->
+	<xsd:element name="xmlValue">
+		<xsd:complexType mixed="true">
+			<xsd:sequence>
+    			<xsd:any minOccurs="1" maxOccurs="1" processContents="lax" />
+    		</xsd:sequence>
+    	</xsd:complexType>  	
+	</xsd:element>
+	
+  <xsd:element name="metadataValue"         type="meta:MetadataValue"/>
+  <xsd:complexType name="MetadataValue">
+    <xsd:choice>
+      <xsd:element ref="meta:triplesAssertion"/>
+      <xsd:element ref="meta:stringValue"/>
+      <xsd:element ref="meta:uriValue"/>
+      <!-- Allow metadata value to be XML -->
+      <xsd:element ref="meta:xmlValue"/>
+    </xsd:choice>
+  </xsd:complexType>
+
+
+<!--  <xsd:element name="entityReference" type="meta:EntityReference"  abstract="true"/>
+  <xsd:complexType name="EntityReference">
+    <xsd:sequence>
+      <xsd:element name="dummyToGetClass" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+    <xsd:attribute name="entityType" type="xsd:anyURI" use="required"/>
+  </xsd:complexType>  
+  
+  <xsd:element name="metadataReference" type="meta:MetadataReference" 
+    substitutionGroup="entityReference"/>
+  <xsd:complexType name="MetadataReference">
+    <xsd:complexContent>
+      <xsd:extension base="meta:EntityReference">
+        <xsd:sequence>
+          <xsd:element ref="meta:metadataKey"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType> -->
+
+  <xsd:element name="entityReference" type="meta:EntityReference"/>
+  <xsd:complexType name="EntityReference">
+    <xsd:choice>
+      <xsd:element name="stringKey"  type="xsd:string"/>
+      <xsd:element ref="meta:metadataKey"/>
+      <xsd:element ref="meta:messagePartReference"/>
+      <xsd:element ref="meta:operationReference"/>
+    </xsd:choice>
+    <xsd:attribute name="entityType" type="anyURI" use="required"/>
+  </xsd:complexType>
+
+  <xsd:element name="messageNamespace" type="xsd:string"/>
+  <xsd:element name="messageName" type="xsd:string"/>
+  <xsd:element name="messagePartName" type="xsd:string"/>
+  <xsd:element name="messagePartReference"  type="meta:MessagePartReference"/>
+  <xsd:complexType name="MessagePartReference">
+    <xsd:sequence>
+      <xsd:element ref="meta:messageNamespace"/>
+      <xsd:element ref="meta:messageName"/>
+      <xsd:element ref="meta:messagePartName"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="operationReference"  type="meta:OperationReference"/>
+  <xsd:complexType name="OperationReference">
+    <xsd:sequence>
+      <xsd:element name="portTypeNamespace" type="xsd:string"/>
+      <xsd:element name="portTypeName"      type="xsd:string"/>
+      <xsd:element name="operationName"     type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+  <xsd:element name="entityReferenceList"          type="meta:EntityReferenceList"/> 
+  <xsd:complexType name="EntityReferenceList">
+    <xsd:sequence>
+      <xsd:element ref="meta:entityReference" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>        
+
+  <xsd:element name="triplesAssertion"     type="meta:TriplesAssertion"/>
+  <xsd:complexType name="TriplesAssertion">
+    <xsd:sequence>
+      <xsd:element name="triples"            type="xsd:string"/>
+      <xsd:element name="resourceIdentifier" type="xsd:string"/>
+      <xsd:element name="language"           type="xsd:string"/>
+      <xsd:element name="base"               type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:element name="author"                type="xsd:string"/>
+  <xsd:element name="date"                  type="xsd:string"/>
+  <xsd:element name="metadataInfo"             type="meta:MetadataInfo"/>
+  <xsd:complexType name="MetadataInfo">
+    <xsd:sequence>
+      <xsd:element ref="meta:metadataType"/>
+      <xsd:element ref="meta:metadataValue"/>
+      <xsd:element ref="meta:author" minOccurs="0"/>
+      <xsd:element ref="meta:date"/>
+    </xsd:sequence>
+    <xsd:attribute ref="meta:metadataKey" use="required"/>
+  </xsd:complexType>
+
+  <xsd:element name="metadataInfos"          type="meta:MetadataInfos"/> 
+  <xsd:complexType name="MetadataInfos">
+    <xsd:sequence>
+      <xsd:element ref="meta:metadataInfo" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>          
+  
+  <xsd:element name="metadataQuery" type="meta:MetadataQuery"/> 
+  <xsd:complexType name="MetadataQuery">
+    <xsd:sequence>
+      <xsd:element ref="meta:findQualifiers" minOccurs="0"/>
+      <xsd:element ref="meta:metadataType"/>
+      <xsd:element ref="meta:metadataValue"/>
+      <xsd:element ref="meta:author" minOccurs="0"/>
+      <xsd:element ref="meta:date" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="metadataQueryBag" type="meta:MetadataQueryBag"/> 
+  <xsd:complexType name="MetadataQueryBag">
+    <xsd:sequence>
+      <xsd:element ref="meta:metadataQuery" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:element name="uriBag"          type="meta:uriBag"/>
+  <xsd:element name="uri" type="xsd:anyURI"/>
+  <xsd:complexType name="uriBag">
+    <xsd:sequence>
+      <xsd:element ref="meta:uri" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="findQualifier" type="xsd:string"/>
+  <xsd:element name="findQualifiers" type="meta:findQualifiers"/>
+  <xsd:complexType name="findQualifiers">
+    <xsd:sequence>
+      <xsd:element ref="meta:findQualifier" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="faultDetailList" type="meta:FaultDetailList"/>
+  <xsd:complexType name="FaultDetailList">
+    <xsd:sequence>
+      <xsd:element ref="meta:faultDetail" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="faultDetail" type="meta:FaultDetail"/>
+  <xsd:complexType name="FaultDetail">
+    <xsd:sequence>
+      <xsd:element name="errorMessage" type="xsd:string"/>
+    </xsd:sequence>
+    <xsd:attribute name="errorNumber" type="int" use="required"/>
+    <xsd:attribute name="errorCode" type="xsd:string" use="required"/>
+  </xsd:complexType>  
+
+  <xsd:element name="success" type="xsd:boolean"/>
+
+  <!-- messages -->
+  
+  <xsd:element name="addMetadataToEntity" type="meta:AddMetadataToEntity"/>
+  <xsd:complexType name="AddMetadataToEntity">
+    <xsd:sequence>
+      <xsd:element ref="meta:entityReference"/>
+      <xsd:element ref="meta:metadata"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:element name="deleteMetadata" type="meta:DeleteMetadata"/>
+  <xsd:complexType name="DeleteMetadata">
+    <xsd:sequence>
+      <xsd:element ref="meta:metadataKey"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:element name="get_metadataDetail" type="meta:Get_metadataDetail"/>
+  <xsd:complexType name="Get_metadataDetail">
+    <xsd:sequence>
+      <xsd:element ref="meta:metadataKey"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="find_entityByMetadata" type="meta:Find_entityByMetadata"/>
+  <xsd:complexType name="Find_entityByMetadata">
+    <xsd:sequence>
+      <xsd:element ref="meta:metadataQueryBag"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:element name="get_entityMetadata" type="meta:Get_entityMetadata"/>
+  <xsd:complexType name="Get_entityMetadata">
+    <xsd:sequence>
+      <xsd:element ref="meta:entityReference"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="get_supportedEntityType" type="meta:Get_supportedEntityType"/>
+  <xsd:complexType name="Get_supportedEntityType">
+    <xsd:sequence>
+      <xsd:element name="dummyToGetClass" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

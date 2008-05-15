@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=RTUETF,mds-vo-name=RTUETF">
+    <Name>RTUETF</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:grid@etf.rtu.lv</UserSupportContact>
+    <SysAdminContact>mailto:grid@etf.rtu.lv</SysAdminContact>
+    <SecurityContact>mailto:grid@etf.rtu.lv</SecurityContact>
+    <Location>Riga, Latvia</Location>
+    <Latitude>56.9517</Latitude>
+    <Longitude>24.0798</Longitude>
+    <Web>http://grid.etf.rtu.lv</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>http://cmsdoc.cern.ch</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ce01.grid.etf.rtu.lv,mds-vo-name=RTUETF">
+        <Name>ce01.grid.etf.rtu.lv</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce01.grid.etf.rtu.lv,GlueClusterUniqueID=ce01.grid.etf.rtu.lv,mds-vo-name=RTUETF">
+            <Name>ce01.grid.etf.rtu.lv</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.8" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AuthenticAMD" Model="AMD Opteron(tm) Processor 146" ClockSpeed="2010"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2000" RAMSize="1024"/>
+            <Architecture SMPSize="1"/>
+            <Benchmark SI00="1370" SF00="1634"/>
+            <Location LocalID="VO-balticgrid-weka-3.4.8a">
+                <Name>VO-balticgrid-weka-3.4.8a</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-scilab-4.0">
+                <Name>VO-balticgrid-scilab-4.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ATLAS-3.6.0_LAPACK">
+                <Name>VO-balticgrid-ATLAS-3.6.0_LAPACK</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-APPS/NETW/NS2">
+                <Name>VO-balticgrid-APPS/NETW/NS2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-APPS/CHEM/DALTON-2.0">
+                <Name>VO-balticgrid-APPS/CHEM/DALTON-2.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu">
+                <Name>VO-balticgrid-ktu</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu/APPS/MATH/ATLAS_LAPACK/3.6.0">
+                <Name>VO-balticgrid-ktu/APPS/MATH/ATLAS_LAPACK/3.6.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu/APPS/MATH/ATLAS/3.6.0">
+                <Name>VO-balticgrid-ktu/APPS/MATH/ATLAS/3.6.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu/APPS/MATH/LAPACK/3.0">
+                <Name>VO-balticgrid-ktu/APPS/MATH/LAPACK/3.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu/ENV/MPI/openmpi/1.1.3">
+                <Name>VO-balticgrid-ktu/ENV/MPI/openmpi/1.1.3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu/ENV/MPI/MPICH2/1.0.5">
+                <Name>VO-balticgrid-ktu/ENV/MPI/MPICH2/1.0.5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-APPS/GRAPH/POVRAY-3.6">
+                <Name>VO-balticgrid-APPS/GRAPH/POVRAY-3.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu/ENV/DEVEL/GCC/4.2">
+                <Name>VO-balticgrid-ktu/ENV/DEVEL/GCC/4.2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu/ENV/DEVEL/G95/0.91">
+                <Name>VO-balticgrid-ktu/ENV/DEVEL/G95/0.91</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu/ENV/MPI/MPICH2-G95/1.0.5">
+                <Name>VO-balticgrid-ktu/ENV/MPI/MPICH2-G95/1.0.5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-DEVEL-SUBVERSION-1.4.3">
+                <Name>VO-balticgrid-E-DEVEL-SUBVERSION-1.4.3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-DEVEL-G95-0.91">
+                <Name>VO-balticgrid-E-DEVEL-G95-0.91</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-A-MATH-ATLAS-3.6.0">
+                <Name>VO-balticgrid-A-MATH-ATLAS-3.6.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-DEVEL-GCC-4.2.0">
+                <Name>VO-balticgrid-E-DEVEL-GCC-4.2.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-PARALLEL-MPICH2-1.0.5">
+                <Name>VO-balticgrid-E-PARALLEL-MPICH2-1.0.5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-PARALLEL-MPIEXEC-0.82">
+                <Name>VO-balticgrid-E-PARALLEL-MPIEXEC-0.82</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-A-MATH-R-2.5.1">
+                <Name>VO-balticgrid-A-MATH-R-2.5.1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-PARALLEL-MPICH2-1.0.5-G95-0.91-testme">
+                <Name>VO-balticgrid-E-PARALLEL-MPICH2-1.0.5-G95-0.91-testme</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-PARALLEL-OPENMPI-1.2.3">
+                <Name>VO-balticgrid-E-PARALLEL-OPENMPI-1.2.3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-gamess-GAMESS-sockets-Jun272005R5">
+                <Name>VO-gamess-GAMESS-sockets-Jun272005R5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_GAMESS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-gamess-GAMESS">
+                <Name>VO-gamess-GAMESS</Name>
+                <Version>Prod</Version>
+                <Path>$VO_GAMESS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-bgtut-test-tag">
+                <Name>VO-bgtut-test-tag</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BGTUT_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-bgtut-genome2">
+                <Name>VO-bgtut-genome2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BGTUT_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r9">
+                <Name>VO-lhcb-Gauss-v25r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r9-slc3_ia32_gcc323">
+                <Name>VO-lhcb-Gauss-v25r9-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r10">
+                <Name>VO-lhcb-Gauss-v25r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r10-slc3_ia32_gcc323">
+                <Name>VO-lhcb-Gauss-v25r10-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2">
+                <Name>VO-lhcb-XmlDDDB-v22r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2-slc3_ia32_gcc323">
+                <Name>VO-lhcb-XmlDDDB-v22r2-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r14">
+                <Name>VO-lhcb-XmlDDDB-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r14-slc3_ia32_gcc323">
+                <Name>VO-lhcb-XmlDDDB-v30r14-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v12r10">
+                <Name>VO-lhcb-Boole-v12r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v12r10-slc3_ia32_gcc323">
+                <Name>VO-lhcb-Boole-v12r10-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v12r18">
+                <Name>VO-lhcb-DaVinci-v12r18</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v12r18-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DaVinci-v12r18-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r6">
+                <Name>VO-lhcb-DaVinci-v17r6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r6-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DaVinci-v17r6-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r7">
+                <Name>VO-lhcb-DaVinci-v17r7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r7-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DaVinci-v17r7-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r8">
+                <Name>VO-lhcb-DaVinci-v17r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r8-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DaVinci-v17r8-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v18r0">
+                <Name>VO-lhcb-DaVinci-v18r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v18r0-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DaVinci-v18r0-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r0">
+                <Name>VO-lhcb-DaVinci-v19r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r0-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DaVinci-v19r0-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r1">
+                <Name>VO-lhcb-DaVinci-v19r1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r1-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DaVinci-v19r1-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r2">
+                <Name>VO-lhcb-DaVinci-v19r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r2-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DaVinci-v19r2-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r3">
+                <Name>VO-lhcb-DaVinci-v19r3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r3-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DaVinci-v19r3-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r17">
+                <Name>VO-lhcb-Brunel-v30r17</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r17-slc3_ia32_gcc323">
+                <Name>VO-lhcb-Brunel-v30r17-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r9">
+                <Name>VO-lhcb-DecFiles-v13r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r9-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DecFiles-v13r9-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r10">
+                <Name>VO-lhcb-DecFiles-v13r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r10-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DecFiles-v13r10-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v5r0">
+                <Name>VO-lhcb-ParamFiles-v5r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v5r0-slc3_ia32_gcc323">
+                <Name>VO-lhcb-ParamFiles-v5r0-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r4">
+                <Name>VO-lhcb-DaVinci-v19r4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r11">
+                <Name>VO-lhcb-Gauss-v25r11</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r11">
+                <Name>VO-lhcb-DecFiles-v13r11</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r12">
+                <Name>VO-lhcb-Gauss-v25r12</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r5">
+                <Name>VO-lhcb-DaVinci-v19r5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r12">
+                <Name>VO-lhcb-DecFiles-v13r12</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="GNUPLOT">
+                <Name>GNUPLOT</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIIT_SW_DIR</Path>
+            </Location>
+            <Location LocalID="GNUPLOT-3.7.3">
+                <Name>GNUPLOT-3.7.3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIIT_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=dpm01.grid.etf.rtu.lv,mds-vo-name=RTUETF">
+        <InformationServiceURL>ldap://dpm01.grid.etf.rtu.lv:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>1500</SizeTotal>
+        <SizeFree>1500</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="balticgrid">
+            <Path>/dpm/grid.etf.rtu.lv/home/balticgrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>5834645</UsedSpace>
+            <AvailableSpace>1500000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/grid.etf.rtu.lv/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>1500000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/grid.etf.rtu.lv/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4663</UsedSpace>
+            <AvailableSpace>1500000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gamess">
+            <Path>/dpm/grid.etf.rtu.lv/home/gamess</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>1500000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="bgtut">
+            <Path>/dpm/grid.etf.rtu.lv/home/bgtut</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>50314</UsedSpace>
+            <AvailableSpace>1500000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/dpm/grid.etf.rtu.lv/home/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>1500000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biit">
+            <Path>/dpm/grid.etf.rtu.lv/home/biit</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>486833</UsedSpace>
+            <AvailableSpace>1500000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://dpm01.grid.etf.rtu.lv</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://dpm01.grid.etf.rtu.lv</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://dpm01.grid.etf.rtu.lv</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=ce01.grid.etf.rtu.lv:2136,mds-vo-name=RTUETF">
+        <Name>RTUETF-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://ce01.grid.etf.rtu.lv:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>balticgrid</Owner>
+        <Owner>cms</Owner>
+        <Owner>ops</Owner>
+        <Owner>gamess</Owner>
+        <Owner>bgtut</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>biit</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://dpm01.grid.etf.rtu.lv:8443/srm/managerv1,mds-vo-name=RTUETF">
+        <Name>RTUETF-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://dpm01.grid.etf.rtu.lv:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://dpm01.grid.etf.rtu.lv:8446/srm/managerv2,mds-vo-name=RTUETF">
+        <Name>RTUETF-srm</Name>
+        <Type>srm</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://dpm01.grid.etf.rtu.lv:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-http://lfc.grid.etf.rtu.lv:8085/,mds-vo-name=RTUETF">
+        <Name>RTUETF-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.6.3</Version>
+        <Endpoint>http://lfc.grid.etf.rtu.lv:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-07-24T16:59:30.000+03:00</StartTime>
+        <Owner>balticgrid</Owner>
+        <Owner>ops</Owner>
+        <Owner>biit</Owner>
+        <Owner>bgtut</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-lfc.grid.etf.rtu.lv,mds-vo-name=RTUETF">
+        <Name>RTUETF-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.6.3</Version>
+        <Endpoint>lfc.grid.etf.rtu.lv</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-07-24T16:59:30.000+03:00</StartTime>
+        <Owner>balticgrid</Owner>
+        <Owner>ops</Owner>
+        <Owner>biit</Owner>
+        <Owner>bgtut</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=wms.grid.etf.rtu.lv:7772,mds-vo-name=RTUETF">
+        <Name>RTUETF-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>wms.grid.etf.rtu.lv:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>balticgrid</Owner>
+        <Owner>cms</Owner>
+        <Owner>ops</Owner>
+        <Owner>gamess</Owner>
+        <Owner>bgtut</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>biit</Owner>
+    </Service>
+</Site>

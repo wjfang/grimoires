@@ -1,0 +1,8 @@
+<save_business xmlns="urn:uddi-org:api_v2">
+	<authInfo>AUTHINFO</authInfo>
+	<businessEntity>
+		<name>DDBJ</name>
+		<description>DNA Data Bank of Japan</description>
+	</businessEntity>
+</save_business>
+

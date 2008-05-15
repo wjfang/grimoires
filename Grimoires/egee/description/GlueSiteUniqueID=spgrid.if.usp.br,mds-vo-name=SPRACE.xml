@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=spgrid.if.usp.br,mds-vo-name=SPRACE">
+    <Name>SPRACE</Name>
+    <Description>OSG Site</Description>
+    <UserSupportContact>mailto: gregores@fnal.gov</UserSupportContact>
+    <SysAdminContact>mailto: gregores@fnal.gov</SysAdminContact>
+    <SecurityContact>mailto: gregores@fnal.gov</SecurityContact>
+    <Location>Sao Paulo ,Brazil</Location>
+    <Latitude>-23.5592</Latitude>
+    <Longitude>-46.7358</Longitude>
+    <Web>http://spgrid.if.usp.br</Web>
+    <Sponsor>UNAVAILABLE</Sponsor>
+    <OtherInfo>UNAVAILABLE</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=spgrid.if.usp.br,mds-vo-name=SPRACE">
+        <Name>spgrid.if.usp.br</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=spgrid.if.usp.br,GlueClusterUniqueID=spgrid.if.usp.br,mds-vo-name=SPRACE">
+            <Name>spgrid.if.usp.br</Name>
+            <PhysicalCPUs>1</PhysicalCPUs>
+            <LogicalCPUs>2</LogicalCPUs>
+            <TmpDir>/usr/local/share/OSG/data</TmpDir>
+            <WNTmpDir>/scratch/OSG</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.4" Name="ScientificSL"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="GenuineIntel" Model="Intel(R) Xeon(TM) CPU 3.00GHz" ClockSpeed="1000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1024" RAMSize="512"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="400" SF00="380"/>
+            <Location LocalID="re">
+                <Name>re</Name>
+                <Version>words,GlueLocationPath: the</Version>
+            </Location>
+            <Location LocalID="SAMPLE_LOCATION">
+                <Name>SAMPLE_LOCATION</Name>
+                <Version>default</Version>
+                <Path>/SAMPLE-path</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_6_1">
+                <Name>VO-cms-CMSSW_0_6_1</Name>
+                <Version>CMSSW_0_6_1</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_8_4">
+                <Name>VO-cms-CMSSW_0_8_4</Name>
+                <Version>CMSSW_0_8_4</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_1_0">
+                <Name>VO-cms-CMSSW_1_1_0</Name>
+                <Version>CMSSW_1_1_0</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_1">
+                <Name>VO-cms-CMSSW_1_2_1</Name>
+                <Version>CMSSW_1_2_1</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_2">
+                <Name>VO-cms-CMSSW_1_2_2</Name>
+                <Version>CMSSW_1_2_2</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_3">
+                <Name>VO-cms-CMSSW_1_2_3</Name>
+                <Version>CMSSW_1_2_3</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_4">
+                <Name>VO-cms-CMSSW_1_2_4</Name>
+                <Version>CMSSW_1_2_4</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_6">
+                <Name>VO-cms-CMSSW_1_2_6</Name>
+                <Version>CMSSW_1_2_6</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_0">
+                <Name>VO-cms-CMSSW_1_3_0</Name>
+                <Version>CMSSW_1_3_0</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1">
+                <Name>VO-cms-CMSSW_1_3_1</Name>
+                <Version>CMSSW_1_3_1</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_2">
+                <Name>VO-cms-CMSSW_1_3_2</Name>
+                <Version>CMSSW_1_3_2</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_3">
+                <Name>VO-cms-CMSSW_1_3_3</Name>
+                <Version>CMSSW_1_3_3</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_4">
+                <Name>VO-cms-CMSSW_1_3_4</Name>
+                <Version>CMSSW_1_3_4</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_5">
+                <Name>VO-cms-CMSSW_1_3_5</Name>
+                <Version>CMSSW_1_3_5</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_6">
+                <Name>VO-cms-CMSSW_1_3_6</Name>
+                <Version>CMSSW_1_3_6</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_1">
+                <Name>VO-cms-CMSSW_1_4_1</Name>
+                <Version>CMSSW_1_4_1</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_2">
+                <Name>VO-cms-CMSSW_1_4_2</Name>
+                <Version>CMSSW_1_4_2</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_3">
+                <Name>VO-cms-CMSSW_1_4_3</Name>
+                <Version>CMSSW_1_4_3</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_4">
+                <Name>VO-cms-CMSSW_1_4_4</Name>
+                <Version>CMSSW_1_4_4</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_5">
+                <Name>VO-cms-CMSSW_1_4_5</Name>
+                <Version>CMSSW_1_4_5</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_6">
+                <Name>VO-cms-CMSSW_1_4_6</Name>
+                <Version>CMSSW_1_4_6</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_7">
+                <Name>VO-cms-CMSSW_1_4_7</Name>
+                <Version>CMSSW_1_4_7</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_0">
+                <Name>VO-cms-CMSSW_1_5_0</Name>
+                <Version>CMSSW_1_5_0</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_1">
+                <Name>VO-cms-CMSSW_1_5_1</Name>
+                <Version>CMSSW_1_5_1</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_2">
+                <Name>VO-cms-CMSSW_1_5_2</Name>
+                <Version>CMSSW_1_5_2</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_3">
+                <Name>VO-cms-CMSSW_1_5_3</Name>
+                <Version>CMSSW_1_5_3</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_4">
+                <Name>VO-cms-CMSSW_1_5_4</Name>
+                <Version>CMSSW_1_5_4</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0">
+                <Name>VO-cms-CMSSW_1_6_0</Name>
+                <Version>CMSSW_1_6_0</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_1">
+                <Name>VO-cms-CMSSW_1_6_1</Name>
+                <Version>CMSSW_1_6_1</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_3">
+                <Name>VO-cms-CMSSW_1_6_3</Name>
+                <Version>CMSSW_1_6_3</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_4">
+                <Name>VO-cms-CMSSW_1_6_4</Name>
+                <Version>CMSSW_1_6_4</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_5">
+                <Name>VO-cms-CMSSW_1_6_5</Name>
+                <Version>CMSSW_1_6_5</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1_HLT5">
+                <Name>VO-cms-CMSSW_1_3_1_HLT5</Name>
+                <Version>CMSSW_1_3_1_HLT5</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1_HLT6">
+                <Name>VO-cms-CMSSW_1_3_1_HLT6</Name>
+                <Version>CMSSW_1_3_1_HLT6</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0_DAQ1">
+                <Name>VO-cms-CMSSW_1_6_0_DAQ1</Name>
+                <Version>CMSSW_1_6_0_DAQ1</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0_DAQ2">
+                <Name>VO-cms-CMSSW_1_6_0_DAQ2</Name>
+                <Version>CMSSW_1_6_0_DAQ2</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0_DAQ3">
+                <Name>VO-cms-CMSSW_1_6_0_DAQ3</Name>
+                <Version>CMSSW_1_6_0_DAQ3</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>slc3_ia32_gcc323</Version>
+                <Path>/</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc4_ia32_gcc345">
+                <Name>VO-cms-slc4_ia32_gcc345</Name>
+                <Version>slc4_ia32_gcc345</Version>
+                <Path>/</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_0_0_g4_81">
+                <Name>VO-cms-CMSSW_1_0_0_g4_81</Name>
+                <Version>CMSSW_1_0_0_g4_81</Version>
+                <Path>/usr/local/share/OSG/app/cmssoft/cms</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=spdc00.if.usp.br,mds-vo-name=SPRACE">
+        <InformationServiceURL>ldap://is.grid.iu.edu:2170/mds-vo-name=SPRACE,mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <StorageArea LocalID="cdf">
+            <Path>/pnfs/if.usp.br/data/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/pnfs/if.usp.br/data/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="mis">
+            <Path>/pnfs/if.usp.br/data/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/pnfs/if.usp.br/data/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="osg">
+            <Path>/pnfs/if.usp.br/data/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="GLOW">
+            <Path>/pnfs/if.usp.br/data/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="fmri">
+            <Path>/pnfs/if.usp.br/data/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gadu">
+            <Path>/pnfs/if.usp.br/data/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ligo">
+            <Path>/pnfs/if.usp.br/data/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="sdss">
+            <Path>/pnfs/if.usp.br/data/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/pnfs/if.usp.br/data/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dzero">
+            <Path>/pnfs/if.usp.br/data/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="grase">
+            <Path>/pnfs/if.usp.br/data/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ivdgl">
+            <Path>/pnfs/if.usp.br/data/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gridex">
+            <Path>/pnfs/if.usp.br/data/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="nanohub">
+            <Path>/pnfs/if.usp.br/data/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://spdc00.if.usp.br</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=spgrid.if.usp.br,mds-vo-name=SPRACE">
+        <InformationServiceURL>ldap://is.grid.iu.edu:2170/mds-vo-name=SPRACE,mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>1739980768</SizeTotal>
+        <SizeFree>738942048</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="cdf">
+            <Path>/usr/local/share/OSG/data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1001038720</UsedSpace>
+            <AvailableSpace>738942048</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/usr/local/share/OSG/data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1001038720</UsedSpace>
+            <AvailableSpace>738942048</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="mis">
+            <Path>/usr/local/share/OSG/data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1001038720</UsedSpace>
+            <AvailableSpace>738942048</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/usr/local/share/OSG/data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1001038720</UsedSpace>
+            <AvailableSpace>738942048</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="osg">
+            <Path>/usr/local/share/OSG/data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1001038720</UsedSpace>
+            <AvailableSpace>738942048</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="GLOW">
+            <Path>/usr/local/share/OSG/data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1001038720</UsedSpace>
+            <AvailableSpace>738942048</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="fmri">
+            <Path>/usr/local/share/OSG/data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1001038720</UsedSpace>
+            <AvailableSpace>738942048</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gadu">
+            <Path>/usr/local/share/OSG/data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1001038720</UsedSpace>
+            <AvailableSpace>738942048</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ligo">
+            <Path>/usr/local/share/OSG/data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1001038720</UsedSpace>
+            <AvailableSpace>738942048</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="sdss">
+            <Path>/usr/local/share/OSG/data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1001038720</UsedSpace>
+            <AvailableSpace>738942048</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/usr/local/share/OSG/data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1001038720</UsedSpace>
+            <AvailableSpace>738942048</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dzero">
+            <Path>/usr/local/share/OSG/data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1001038720</UsedSpace>
+            <AvailableSpace>738942048</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="grase">
+            <Path>/usr/local/share/OSG/data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1001038720</UsedSpace>
+            <AvailableSpace>738942048</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ivdgl">
+            <Path>/usr/local/share/OSG/data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1001038720</UsedSpace>
+            <AvailableSpace>738942048</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gridex">
+            <Path>/usr/local/share/OSG/data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1001038720</UsedSpace>
+            <AvailableSpace>738942048</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="nanohub">
+            <Path>/usr/local/share/OSG/data</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1001038720</UsedSpace>
+            <AvailableSpace>738942048</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+    </StorageElement>
+</Site>

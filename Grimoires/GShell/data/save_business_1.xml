@@ -1,0 +1,6 @@
+<save_business generic="2.0" xmlns="urn:uddi-org:api_v2">
+   <authInfo>abc</authInfo>
+   <businessEntity businessKey="">
+       <name>abc business</name>
+   </businessEntity>
+</save_business>

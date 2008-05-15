@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=cmsgrid02.hep.wisc.edu,mds-vo-name=GLOW-CMS">
+    <Name>GLOW-CMS</Name>
+    <Description>OSG Site</Description>
+    <UserSupportContact>mailto: wcmaier@hep.wisc.edu</UserSupportContact>
+    <SysAdminContact>mailto: wcmaier@hep.wisc.edu</SysAdminContact>
+    <SecurityContact>mailto: wcmaier@hep.wisc.edu</SecurityContact>
+    <Location>Madison ,USA</Location>
+    <Latitude>43.0731</Latitude>
+    <Longitude>-89.4011</Longitude>
+    <Web>http://www.hep.wisc.edu/cms/comp/osg/site_policy.html</Web>
+    <Sponsor>UNAVAILABLE</Sponsor>
+    <OtherInfo>UNAVAILABLE</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=cmsgrid02.hep.wisc.edu,mds-vo-name=GLOW-CMS">
+        <Name>cmsgrid02.hep.wisc.edu</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=cmsgrid02.hep.wisc.edu,GlueClusterUniqueID=cmsgrid02.hep.wisc.edu,mds-vo-name=GLOW-CMS">
+            <Name>cmsgrid02.hep.wisc.edu</Name>
+            <PhysicalCPUs>1</PhysicalCPUs>
+            <LogicalCPUs>2</LogicalCPUs>
+            <TmpDir>/afs/hep.wisc.edu/osg/data</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.4" Name="ScientificSL"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="GenuineIntel" Model="Intel(R) Xeon(R) CPU           E5310  @ 1.60GHz" ClockSpeed="1000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1024" RAMSize="512"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="400" SF00="380"/>
+            <Location LocalID="SAMPLE_LOCATION">
+                <Name>SAMPLE_LOCATION</Name>
+                <Version>default</Version>
+                <Path>/SAMPLE-path</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_1">
+                <Name>VO-cms-CMSSW_1_2_1</Name>
+                <Version>CMSSW_1_2_1</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_2">
+                <Name>VO-cms-CMSSW_1_2_2</Name>
+                <Version>CMSSW_1_2_2</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_3">
+                <Name>VO-cms-CMSSW_1_2_3</Name>
+                <Version>CMSSW_1_2_3</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_4">
+                <Name>VO-cms-CMSSW_1_2_4</Name>
+                <Version>CMSSW_1_2_4</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_6">
+                <Name>VO-cms-CMSSW_1_2_6</Name>
+                <Version>CMSSW_1_2_6</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_0">
+                <Name>VO-cms-CMSSW_1_3_0</Name>
+                <Version>CMSSW_1_3_0</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1">
+                <Name>VO-cms-CMSSW_1_3_1</Name>
+                <Version>CMSSW_1_3_1</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_2">
+                <Name>VO-cms-CMSSW_1_3_2</Name>
+                <Version>CMSSW_1_3_2</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_3">
+                <Name>VO-cms-CMSSW_1_3_3</Name>
+                <Version>CMSSW_1_3_3</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_4">
+                <Name>VO-cms-CMSSW_1_3_4</Name>
+                <Version>CMSSW_1_3_4</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_5">
+                <Name>VO-cms-CMSSW_1_3_5</Name>
+                <Version>CMSSW_1_3_5</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_6">
+                <Name>VO-cms-CMSSW_1_3_6</Name>
+                <Version>CMSSW_1_3_6</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_2">
+                <Name>VO-cms-CMSSW_1_4_2</Name>
+                <Version>CMSSW_1_4_2</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_3">
+                <Name>VO-cms-CMSSW_1_4_3</Name>
+                <Version>CMSSW_1_4_3</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_4">
+                <Name>VO-cms-CMSSW_1_4_4</Name>
+                <Version>CMSSW_1_4_4</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_5">
+                <Name>VO-cms-CMSSW_1_4_5</Name>
+                <Version>CMSSW_1_4_5</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_6">
+                <Name>VO-cms-CMSSW_1_4_6</Name>
+                <Version>CMSSW_1_4_6</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_7">
+                <Name>VO-cms-CMSSW_1_4_7</Name>
+                <Version>CMSSW_1_4_7</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_0">
+                <Name>VO-cms-CMSSW_1_5_0</Name>
+                <Version>CMSSW_1_5_0</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_1">
+                <Name>VO-cms-CMSSW_1_5_1</Name>
+                <Version>CMSSW_1_5_1</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_2">
+                <Name>VO-cms-CMSSW_1_5_2</Name>
+                <Version>CMSSW_1_5_2</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_3">
+                <Name>VO-cms-CMSSW_1_5_3</Name>
+                <Version>CMSSW_1_5_3</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_4">
+                <Name>VO-cms-CMSSW_1_5_4</Name>
+                <Version>CMSSW_1_5_4</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0">
+                <Name>VO-cms-CMSSW_1_6_0</Name>
+                <Version>CMSSW_1_6_0</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_1">
+                <Name>VO-cms-CMSSW_1_6_1</Name>
+                <Version>CMSSW_1_6_1</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_3">
+                <Name>VO-cms-CMSSW_1_6_3</Name>
+                <Version>CMSSW_1_6_3</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_4">
+                <Name>VO-cms-CMSSW_1_6_4</Name>
+                <Version>CMSSW_1_6_4</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_5">
+                <Name>VO-cms-CMSSW_1_6_5</Name>
+                <Version>CMSSW_1_6_5</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_0_pre5">
+                <Name>VO-cms-CMSSW_1_3_0_pre5</Name>
+                <Version>CMSSW_1_3_0_pre5</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1_HLT5">
+                <Name>VO-cms-CMSSW_1_3_1_HLT5</Name>
+                <Version>CMSSW_1_3_1_HLT5</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1_HLT6">
+                <Name>VO-cms-CMSSW_1_3_1_HLT6</Name>
+                <Version>CMSSW_1_3_1_HLT6</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_0_pre6">
+                <Name>VO-cms-CMSSW_1_5_0_pre6</Name>
+                <Version>CMSSW_1_5_0_pre6</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0_DAQ1">
+                <Name>VO-cms-CMSSW_1_6_0_DAQ1</Name>
+                <Version>CMSSW_1_6_0_DAQ1</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0_DAQ2">
+                <Name>VO-cms-CMSSW_1_6_0_DAQ2</Name>
+                <Version>CMSSW_1_6_0_DAQ2</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0_DAQ3">
+                <Name>VO-cms-CMSSW_1_6_0_DAQ3</Name>
+                <Version>CMSSW_1_6_0_DAQ3</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0_pre6">
+                <Name>VO-cms-CMSSW_1_6_0_pre6</Name>
+                <Version>CMSSW_1_6_0_pre6</Version>
+                <Path>/afs/hep.wisc.edu/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>slc3_ia32_gcc323</Version>
+                <Path>/</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc4_ia32_gcc345">
+                <Name>VO-cms-slc4_ia32_gcc345</Name>
+                <Version>slc4_ia32_gcc345</Version>
+                <Path>/</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=cmssrm.hep.wisc.edu,mds-vo-name=GLOW-CMS">
+        <InformationServiceURL>ldap://is.grid.iu.edu:2170/mds-vo-name=GLOW-CMS,mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <StorageArea LocalID="cdf">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="des">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gpn">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="osg">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="LIGO">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="fmri">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gadu">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="glow">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="grow">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="i2u2">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="sdss">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="zeus">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dzero">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ivdgl">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="engage">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gridex">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="osgedu">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="nanohub">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="fermilab">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="mariachi">
+            <Path>/pnfs/hep.wisc.edu/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://cmssrm.hep.wisc.edu</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=httpg://cmssrm.hep.wisc.edu:8443/srm/managerv1,mds-vo-name=GLOW-CMS">
+        <Name>httpg://cmssrm.hep.wisc.edu:8443/srm/managerv1</Name>
+        <Type>SRM</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://cmssrm.hep.wisc.edu:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+    </Service>
+</Site>

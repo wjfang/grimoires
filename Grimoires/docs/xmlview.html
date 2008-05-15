@@ -1,0 +1,522 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Grimoires Documentation - User Guide - XMLView</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url('i_arrow_down.gif');
+	}
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script>
+</head>
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1><a name="xmlview"> </a>XMLView</h1>
+<p />
+<div class="twikiToc">
+<ul>
+<li> <a href="#xmlview">XMLView</a>
+<ul>
+<li> <a href="#intro">Introduction</a>
+</li>
+<li> <a href="#interface">Interface</a>
+<ul>
+<li> <a href="#publish">publish</a>
+</li>
+<li> <a href="#query">query</a>
+</li>
+<li> <a href="#findService">queryAndTranslate</a>
+</li>
+</ul>
+</li>
+<li> <a href="#interface">Configuration</a>
+<ul>
+<li> <a href="#translator.xml">translator.xml</a>
+</li>
+<li> <a href="#xslt">XSL Transformation</a></li>
+</ul>
+</li>
+<li><a href="#client">Client Support</a>
+<ul>
+<li> <a href="#gshell">GShell</a>
+</li>
+<li> <a href="#program">Programmatic Access</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p />
+<h2><a name="intro"></a>Introduction</h2>
+<p>The XMLView interface of Grimoires, as its name suggests, presents an XML 
+view of Grimoires registry's content. As we know, data models in Grimoires, such 
+as UDDI/WSDL/Metadata, have their own XML schemas, called <i>Grimoires schema</i> 
+below. Through the XMLView interface, users are able to issue XPath query based 
+on Grimoires schema. Furthermore, having been provided user-defined XSL 
+transformation between Grimoires schema and users' schema for service 
+description, called <i>application schema </i>or <i>native schema </i>below, Grimoires is able to 
+support publishing XML documents as application domain service descriptions 
+based on application schema. In addition, Grimoires supports transforming 
+matched service descriptions as a result of XPath query back to application 
+domain service descriptions.</p>
+<p>The transformation mechanism is generic enough to support any application 
+schema for service description, as long as one-to-one mapping can be defined 
+between instances of application schema data models and instances of 
+corresponding Grimoires schema data models. One of the design goals is to allow 
+this interface to be used in various application domains without re-coding. 
+Instead, only some configurations, in the form of XML and XSLT, are needed, to 
+support a new application domain or upgrading application schema in the same 
+application domain.</p>
+<h2><a name="interface"></a>Interface </h2>
+The XMLView interface is defined by xmlview.wsdl, which can be found in Grimoires/wsdl/.
+<pre>
+&lt;wsdl:definitions xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot;
+xmlns:tns=&quot;http://www.grimoires.org/xmlview/&quot;
+xmlns:wsdl=&quot;http://schemas.xmlsoap.org/wsdl/&quot;
+xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; 
+name=&quot;xmlview&quot;
+targetNamespace=&quot;http://www.grimoires.org/xmlview/&quot;&gt;
+
+&lt;wsdl:types&gt;
+&lt;xsd:schema targetNamespace=&quot;http://www.grimoires.org/xmlview/&quot;
+xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; 
+elementFormDefault=&quot;qualified&quot; 
+attributeFormDefault=&quot;unqualified&quot;&gt;
+
+&lt;xsd:complexType name=&quot;QueryExpressionType&quot; mixed=&quot;true&quot;&gt;
+&lt;xsd:sequence&gt;
+&lt;xsd:any minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; processContents=&quot;lax&quot; /&gt;
+&lt;/xsd:sequence&gt;
+&lt;xsd:attribute name=&quot;Dialect&quot; type=&quot;xsd:anyURI&quot; /&gt;
+&lt;/xsd:complexType&gt;
+
+&lt;xsd:element name=&quot;QueryExpression&quot; type=&quot;tns:QueryExpressionType&quot; /&gt;
+
+&lt;xsd:element name=&quot;QueryRequest&quot;&gt;
+&lt;xsd:complexType&gt;
+&lt;xsd:sequence&gt;
+&lt;xsd:element ref=&quot;tns:QueryExpression&quot; /&gt;
+&lt;/xsd:sequence&gt;
+&lt;/xsd:complexType&gt;
+&lt;/xsd:element&gt;
+
+&lt;xsd:element name=&quot;QueryResponse&quot;&gt;
+&lt;xsd:complexType mixed=&quot;true&quot;&gt;
+&lt;xsd:sequence&gt;
+&lt;xsd:any minOccurs=&quot;1&quot; maxOccurs=&quot;unbounded&quot; processContents=&quot;lax&quot; /&gt;
+&lt;/xsd:sequence&gt;
+&lt;/xsd:complexType&gt;
+&lt;/xsd:element&gt;
+
+&lt;xsd:complexType name=&quot;XMLViewFaultType&quot; mixed=&quot;true&quot;&gt;
+&lt;xsd:sequence&gt;
+&lt;xsd:any minOccurs=&quot;1&quot; maxOccurs=&quot;unbounded&quot; processContents=&quot;lax&quot; /&gt;
+&lt;/xsd:sequence&gt;
+&lt;/xsd:complexType&gt;
+
+&lt;xsd:element name=&quot;XMLViewFault&quot; type=&quot;tns:XMLViewFaultType&quot; /&gt;
+
+&lt;xsd:element name=&quot;PublishRequest&quot;&gt;
+&lt;xsd:complexType mixed=&quot;true&quot;&gt;
+&lt;xsd:sequence&gt;
+&lt;xsd:any minOccurs=&quot;1&quot; maxOccurs=&quot;unbounded&quot; processContents=&quot;lax&quot; /&gt;
+&lt;/xsd:sequence&gt;
+&lt;/xsd:complexType&gt;
+&lt;/xsd:element&gt;
+
+&lt;xsd:element name=&quot;PublishResponse&quot;&gt;
+&lt;xsd:complexType mixed=&quot;true&quot;&gt;
+&lt;xsd:sequence&gt;
+&lt;xsd:any minOccurs=&quot;1&quot; maxOccurs=&quot;unbounded&quot; processContents=&quot;lax&quot; /&gt;
+&lt;/xsd:sequence&gt;
+&lt;/xsd:complexType&gt;
+&lt;/xsd:element&gt;
+
+&lt;xsd:element name=&quot;DeleteRequest&quot;&gt;
+&lt;xsd:complexType&gt;
+&lt;xsd:sequence&gt;
+&lt;xsd:element name=&quot;id&quot; type=&quot;xsd:string&quot; /&gt;
+&lt;/xsd:sequence&gt;
+&lt;/xsd:complexType&gt;
+&lt;/xsd:element&gt;
+
+&lt;xsd:element name=&quot;DeleteResponse&quot;&gt;
+&lt;xsd:complexType mixed=&quot;true&quot;&gt;
+&lt;xsd:sequence&gt;
+&lt;xsd:any minOccurs=&quot;1&quot; maxOccurs=&quot;unbounded&quot; processContents=&quot;lax&quot; /&gt;
+&lt;/xsd:sequence&gt;
+&lt;/xsd:complexType&gt;
+&lt;/xsd:element&gt;
+
+&lt;xsd:element name=&quot;QueryAndTranslateRequest&quot;&gt;
+&lt;xsd:complexType&gt;
+&lt;xsd:sequence&gt;
+&lt;xsd:element ref=&quot;tns:QueryExpression&quot; /&gt;
+&lt;/xsd:sequence&gt;
+&lt;xsd:attribute name=&quot;nativeSchemaID&quot; type=&quot;xsd:string&quot; /&gt;
+&lt;/xsd:complexType&gt;
+&lt;/xsd:element&gt;
+
+&lt;xsd:element name=&quot;QueryAndTranslateResponse&quot;&gt;
+&lt;xsd:complexType mixed=&quot;true&quot;&gt;
+&lt;xsd:sequence&gt;
+&lt;xsd:any minOccurs=&quot;1&quot; maxOccurs=&quot;unbounded&quot; processContents=&quot;lax&quot; /&gt;
+&lt;/xsd:sequence&gt;
+&lt;/xsd:complexType&gt;
+&lt;/xsd:element&gt;
+&lt;/xsd:schema&gt;
+&lt;/wsdl:types&gt;
+
+&lt;wsdl:message name=&quot;QueryRequest&quot;&gt;
+&lt;wsdl:part name=&quot;body&quot; element=&quot;tns:QueryRequest&quot; /&gt;
+&lt;/wsdl:message&gt;
+
+&lt;wsdl:message name=&quot;QueryResponse&quot;&gt;
+&lt;wsdl:part name=&quot;body&quot; element=&quot;tns:QueryResponse&quot; /&gt;
+&lt;/wsdl:message&gt;
+
+&lt;wsdl:message name=&quot;XMLViewFault&quot;&gt;
+&lt;wsdl:part name=&quot;body&quot; element=&quot;tns:XMLViewFault&quot; /&gt;
+&lt;/wsdl:message&gt;
+
+&lt;wsdl:message name=&quot;PublishRequest&quot;&gt;
+&lt;wsdl:part name=&quot;body&quot; element=&quot;tns:PublishRequest&quot; /&gt;
+&lt;/wsdl:message&gt;
+
+&lt;wsdl:message name=&quot;PublishResponse&quot;&gt;
+&lt;wsdl:part name=&quot;body&quot; element=&quot;tns:PublishResponse&quot; /&gt;
+&lt;/wsdl:message&gt;
+
+&lt;wsdl:message name=&quot;DeleteRequest&quot;&gt;
+&lt;wsdl:part name=&quot;body&quot; element=&quot;tns:DeleteRequest&quot; /&gt;
+&lt;/wsdl:message&gt;
+
+&lt;wsdl:message name=&quot;DeleteResponse&quot;&gt;
+&lt;wsdl:part name=&quot;body&quot; element=&quot;tns:DeleteResponse&quot; /&gt;
+&lt;/wsdl:message&gt;
+
+&lt;wsdl:message name=&quot;QueryAndTranslateRequest&quot;&gt;
+&lt;wsdl:part name=&quot;body&quot; element=&quot;tns:QueryAndTranslateRequest&quot; /&gt; 
+&lt;/wsdl:message&gt;
+
+&lt;wsdl:message name=&quot;QueryAndTranslateResponse&quot;&gt;
+&lt;wsdl:part name=&quot;body&quot; element=&quot;tns:QueryAndTranslateResponse&quot; /&gt;
+&lt;/wsdl:message&gt;
+
+&lt;wsdl:portType name=&quot;XMLViewPortType&quot;&gt;
+&lt;wsdl:operation name=&quot;query&quot;&gt;
+&lt;wsdl:documentation&gt;
+XPath query over Grimoires based on Grimoires XML schema.
+&lt;/wsdl:documentation&gt;
+&lt;wsdl:input message=&quot;tns:QueryRequest&quot; /&gt;
+&lt;wsdl:output message=&quot;tns:QueryResponse&quot; /&gt;
+&lt;wsdl:fault name=&quot;fault&quot; message=&quot;tns:XMLViewFault&quot; /&gt;
+&lt;/wsdl:operation&gt;
+
+&lt;wsdl:operation name=&quot;publish&quot;&gt;
+&lt;wsdl:input message=&quot;tns:PublishRequest&quot; /&gt;
+&lt;wsdl:output message=&quot;tns:PublishResponse&quot; /&gt;
+&lt;wsdl:fault name=&quot;fault&quot; message=&quot;tns:XMLViewFault&quot; /&gt;
+&lt;/wsdl:operation&gt;
+
+&lt;wsdl:operation name=&quot;delete&quot;&gt;
+&lt;wsdl:input message=&quot;tns:DeleteRequest&quot; /&gt;
+&lt;wsdl:output message=&quot;tns:DeleteResponse&quot; /&gt;
+&lt;wsdl:fault name=&quot;fault&quot; message=&quot;tns:XMLViewFault&quot; /&gt;
+&lt;/wsdl:operation&gt;
+
+&lt;wsdl:operation name=&quot;queryAndTranslate&quot;&gt;
+&lt;wsdl:documentation&gt;
+XPath query over Grimoires based on Grimoires XML schema.
+The result is transformed back to application schema.
+&lt;/wsdl:documentation&gt;
+&lt;wsdl:input message=&quot;tns:QueryAndTranslateRequest&quot; /&gt;
+&lt;wsdl:output message=&quot;tns:QueryAndTranslateResponse&quot; /&gt;
+&lt;wsdl:fault name=&quot;fault&quot; message=&quot;tns:XMLViewFault&quot; /&gt;
+&lt;/wsdl:operation&gt;
+&lt;/wsdl:portType&gt;
+&lt;/wsdl:definition&gt;
+</pre>
+<h3><a name="publish"></a>publish</h3>
+<p>The publish operation supports to publish any XML document as a service 
+description. When an XML document is submitted, Grimoires will use user-provided 
+XSL transformations to transform it into Grimoires data models, and then publish 
+into Grimoires registry. The XSL transformation will be discussed below.</p>
+<h3><a name="query"></a>query </h3>
+<p>The XMLView interface presents Grimoires registry content in an XML 
+document defined by xmlview.xsd, which can be found in Grimoires/wsdl/.</p>
+<pre>
+&lt;xsd:schema targetNamespace=&quot;http://www.grimoires.org/query_document/&quot;
+xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; 
+xmlns:uddi=&quot;urn:uddi-org:api_v2&quot;
+xmlns:wsdl=&quot;http://schemas.xmlsoap.org/wsdl/&quot; 
+xmlns:metadata=&quot;http://www.grimoires.org/metadata.xsd&quot;
+xmlns:tns=&quot;http://www.grimoires.org/query_document/&quot;
+attributeFormDefault=&quot;unqualified&quot; 
+elementFormDefault=&quot;qualified&quot;&gt;
+
+&lt;!-- The schema of the XML view for Grimoires. --&gt;
+
+&lt;xsd:import namespace=&quot;urn:uddi-org:api_v2&quot; schemaLocation=&quot;./uddi_v2.xsd&quot;/&gt;
+&lt;xsd:import namespace=&quot;http://www.grimoires.org/metadata.xsd&quot; schemaLocation=&quot;./metadata.xsd&quot;/&gt;
+&lt;xsd:import namespace=&quot;http://schemas.xmlsoap.org/wsdl/&quot; schemaLocation=&quot;http://schemas.xmlsoap.org/wsdl/&quot;/&gt;
+
+&lt;xsd:element name=&quot;root&quot;&gt;
+&lt;xsd:complexType&gt;
+&lt;xsd:sequence&gt;
+&lt;xsd:element ref=&quot;uddi:businessEntity&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; /&gt;
+&lt;xsd:element ref=&quot;uddi:tModel&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; /&gt;
+&lt;xsd:element ref=&quot;wsdl:definitions&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; /&gt;
+&lt;xsd:element ref=&quot;tns:annotation&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; /&gt;
+&lt;/xsd:sequence&gt;
+&lt;/xsd:complexType&gt;
+&lt;/xsd:element&gt;
+
+&lt;xsd:element name=&quot;annotation&quot;&gt;
+&lt;xsd:complexType&gt;
+&lt;xsd:sequence&gt;
+&lt;xsd:element ref=&quot;metadata:entityReference&quot;/&gt;
+&lt;xsd:element ref=&quot;metadata:metadataInfos&quot; /&gt;
+&lt;/xsd:sequence&gt;
+&lt;/xsd:complexType&gt;
+&lt;/xsd:element&gt;
+
+&lt;/xsd:schema&gt;
+</pre>
+<p>Through the query operation, users can issue XPath query based on the above 
+schema.</p>
+
+<h3><a name="findService"></a>queryAndTranslate</h3>
+<p>The queryAndTranslate operation also supports XPath query based on the above 
+schema. The difference between the queryAndTranslate operation and the query 
+operation is that, if there is a defined XSL transformation and the data in 
+Grimoires schema is originally from the specified native schema. The XSL transformation will 
+be discussed below.</p>
+
+<h2><a name="configuration"></a>Configuration</h2>
+<p />
+The XMLView interface supports transformation between service description in 
+application schema and service description in Grimoires schema. The 
+transformation is entirely configured in XML and XSL files.
+<h3><a name="translator.xml"></a>translator.xml </h3>
+<p />
+
+grimoires.properties defines the runtime behavior of Grimoires. In 
+grimoires.properties, a single line is added:<p />
+<pre>translatorConfig = @TOMCAT_HOME@/webapps/grimoires/WEB-INF/classes/translator/translator.xml</pre>
+
+It tells where to load translator.xml. translator.xml defines how to conduct 
+transformation between Grimoires schema and application schema. The translator.xml 
+inside the &quot;Grimoires/translator/&quot; directory 
+looks like:<pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+
+&lt;!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--&gt;
+&lt;!-- Configure how to translate an XML element representing a native --&gt;
+&lt;!-- description, which may or may not be a service description, to an --&gt;
+&lt;!-- XML element according to Grimoires' schema. --&gt;
+&lt;!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--&gt;
+
+&lt;translatorConfiguration&gt;
+&lt;!-- A set of translators for the GLUE schema --&gt;
+&lt;!-- nativeSchemaID is uniqueID defined by users. Each corresponds to 
+one application's native schema. --&gt;
+&lt;translators nativeSchemaID=&quot;glue&quot;&gt;
+&lt;!-- From native description to Grimoires description --&gt;
+&lt;!-- elementNamespace and elementlocalname specify which XML element
+will be applied with this translation. --&gt;
+&lt;!-- Set validate=&quot;true&quot; to enable schema validation on transformed
+Grimoires element. --&gt;
+&lt;n2gTranslator
+elementNamespaceURI=&quot;&quot;
+elementLocalname=&quot;siteType&quot; 
+validate=&quot;true&quot;&gt;
+&lt;action type=&quot;saveBusiness&quot; xsl=&quot;glue/toUDDIBusiness.xsl&quot; /&gt;
+&lt;action type=&quot;saveMetadata&quot; xsl=&quot;glue/toBusinessMetadata.xsl&quot; /&gt;
+&lt;/n2gTranslator&gt;
+
+&lt;!-- From Grimoires description to native description --&gt;
+&lt;g2nTranslator grimoiresElementID=&quot;service&quot;&gt;
+&lt;action type=&quot;loadService&quot; xsl=&quot;glue/fromUDDIService.xsl&quot; /&gt;
+&lt;/g2nTranslator&gt;
+
+&lt;g2nTranslator grimoiresElementID=&quot;business&quot;&gt;
+&lt;action type=&quot;loadBusinessB&quot; xsl=&quot;glue/fromUDDIBusiness.xsl&quot; /&gt;
+&lt;action type=&quot;loadBusinessMetadataB&quot; 
+xsl=&quot;glue/fromBusinessMetadata.xsl&quot; mergePoint=&quot;/&quot; /&gt;
+&lt;/g2nTranslator&gt;
+&lt;/translators&gt;
+
+&lt;!-- A set of translators for the Feta schema --&gt;
+&lt;translators nativeSchemaID=&quot;feta&quot;&gt;
+&lt;n2gTranslator
+elementNamespaceURI=&quot;pd&quot;
+elementLocalname=&quot;serviceDescription&quot; 
+validate=&quot;true&quot;&gt;
+&lt;action type=&quot;saveBusiness&quot; xsl=&quot;feta/toUDDIBusiness.xsl&quot; /&gt;
+&lt;action type=&quot;saveService&quot; xsl=&quot;feta/toUDDIService.xsl&quot; /&gt;
+&lt;action type=&quot;saveTModel&quot; xsl=&quot;feta/toUDDITModel.xsl&quot; /&gt;
+&lt;action type=&quot;saveWSDL&quot; xsl=&quot;feta/toWSDL.xsl&quot; /&gt;
+&lt;action type=&quot;saveMetadata&quot; xsl=&quot;feta/toServiceMetadata.xsl&quot; /&gt;
+&lt;action type=&quot;saveMetadata&quot; xsl=&quot;feta/toOperationMetadata.xsl&quot; /&gt;
+&lt;action type=&quot;saveMetadata&quot; xsl=&quot;feta/toMessagePartMetadata.xsl&quot; /&gt;
+&lt;/n2gTranslator&gt;
+
+&lt;!-- From uddi:businessService --&gt;
+&lt;!-- grimoiresElementID is currently either business (uddi:businessEntity) 
+or service (uddi:businessService). It corresponds 
+to one Grimoires data model element that could be transformed to
+application schema element. --&gt;
+&lt;g2nTranslator grimoiresElementID=&quot;service&quot;&gt;
+&lt;!-- Process: generate corresponding native data models and combine them together
+according to mountPoint, mergePoint and filter. 
+&lt;action type=&quot;type&quot; xsl=&quot;xslt.xsl&quot; mountPoint=&quot;mountPoint&quot; /&gt; 
+&lt;action type=&quot;type&quot; xslt=&quot;xsl.xsl&quot; mergePoint=&quot;mergePoint&quot; /&gt; 
+&lt;action type=&quot;type&quot; xslt=&quot;xsl.xsl&quot; mergePoint=&quot;mergePoint&quot; filter=&quot;filter&quot; /&gt; 
+--&gt;
+&lt;!-- All the following actions are working on uddi service element. --&gt;
+&lt;action type=&quot;loadService&quot; xsl=&quot;feta/fromUDDIService.xsl&quot; /&gt;
+&lt;action type=&quot;loadBusiness&quot; xsl=&quot;feta/fromUDDIBusiness.xsl&quot; 
+mountPoint=&quot;/&quot; /&gt;
+&lt;action type=&quot;loadWSDL&quot; xsl=&quot;feta/fromWSDL.xsl&quot; mountPoint=&quot;/&quot; /&gt;
+&lt;action type=&quot;loadServiceMetadata&quot; 
+xsl=&quot;feta/fromServiceMetadata.xsl&quot;
+mergePoint=&quot;/&quot; /&gt;
+&lt;action type=&quot;loadOperationMetadata&quot; 
+xsl=&quot;feta/fromOperationMetadata.xsl&quot;
+mergePoint=&quot;//*[local-name()='serviceOperation']&quot; /&gt;
+&lt;action type=&quot;loadMessagePartMetadata&quot;
+xsl=&quot;feta/fromMessagePartMetadata.xsl&quot;
+mergePoint=&quot;//*[local-name()='parameter']&quot;
+filter=&quot;/*[local-name()='parameterName']&quot; /&gt;
+&lt;/g2nTranslator&gt;
+&lt;/translators&gt;
+
+&lt;translators nativeSchemaID=&quot;uddi&quot;&gt;
+&lt;n2gTranslator
+elementNamespaceURI=&quot;urn:uddi-org:api_v2&quot;
+elementLocalname=&quot;businessEntity&quot; 
+validate=&quot;true&quot;&gt;
+&lt;action type=&quot;saveBusiness&quot; xsl=&quot;uddi/toUDDIBusiness.xsl&quot; /&gt;
+&lt;/n2gTranslator&gt;
+
+&lt;n2gTranslator
+elementNamespaceURI=&quot;urn:uddi-org:api_v2&quot;
+elementLocalname=&quot;businessService&quot; 
+validate=&quot;true&quot;&gt;
+&lt;action type=&quot;saveService&quot; xsl=&quot;uddi/toUDDIService.xsl&quot; /&gt;
+&lt;/n2gTranslator&gt;
+&lt;/translators&gt;
+&lt;/translatorConfiguration&gt;
+
+</pre>
+The root element of
+translator.xml is &lt;translatorConfiguration&gt;, which can have a set of 
+&lt;translators&gt;. Each &lt;translators&gt; has an attribute &quot;nativeSchemaID&quot;, which 
+specifies the corresponding native schema. For instance, &quot;feta&quot; is for myGrid's 
+Feta schema, and &quot;glue&quot; is for the EGEE GLUE schema.<p>Inside &lt;translators&gt;, 
+each &lt;n2gTranslator&gt; defines a set of actions in order to translate a certain 
+native element to Grimoires element, and each &lt;g2nTranslator&gt; defines a set of 
+actions in order to translate a certain Grimoires element to a native element.</p>
+<h3><a name="xslt"></a>XSL Transformation </h3>
+&nbsp;<p>An example XSL file transforming application domain service description to 
+Grimoires service metadata looks like: </p>
+<pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+
+&lt;xsl:stylesheet 
+xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; 
+version=&quot;1.0&quot;&gt;
+
+&lt;xsl:template match=&quot;//*[local-name()='serviceDescription']&quot;&gt;
+&lt;annotations xmlns:meta=&quot;http://www.grimoires.org/metadata.xsd&quot; xmlns:uddi=&quot;urn:uddi-org:api_v2&quot;&gt;
+&lt;annotation&gt;
+&lt;meta:entityReference entityType=&quot;http://www.uddi.org/schema/uddi_v2.xsd#serviceKey&quot;&gt;
+&lt;meta:stringKey&gt;
+&lt;xsl:value-of select=&quot;//*[local-name()='serviceName']&quot;/&gt;
+&lt;/meta:stringKey&gt;
+&lt;/meta:entityReference&gt;
+&lt;meta:metadata meta:metadataKey=&quot;&quot;&gt;
+&lt;meta:metadataType&gt;http://www.mygrid.org.uk/feta/ServiceType&lt;/meta:metadataType&gt;
+&lt;meta:metadataValue&gt;
+&lt;meta:stringValue&gt;
+&lt;xsl:value-of select=&quot;//*[local-name()='serviceType']&quot;/&gt;
+&lt;/meta:stringValue&gt;
+&lt;/meta:metadataValue&gt;
+&lt;/meta:metadata&gt;
+&lt;/annotation&gt;
+&lt;/annotations&gt;
+&lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;
+</pre>
+
+The corresponding XSL file transforming Grimoires service metadata to 
+application domain service description is:
+<pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+
+&lt;xsl:stylesheet 
+xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; 
+version=&quot;1.0&quot;&gt;
+
+&lt;xsl:template match=&quot;/*[local-name()='annotation']&quot;&gt;
+&lt;serviceDescription xmlns=&quot;http://www.mygrid.org.uk/feta/&quot;&gt;
+&lt;serviceName&gt;
+&lt;xsl:value-of select=&quot;*[local-name()='entityReference']/*[local-name()='stringKey']&quot;/&gt;
+&lt;/serviceName&gt;
+
+&lt;xsl:if test=&quot;//*[local-name()='metadataInfo'][./*[local-name()='metadataType'][contains(., 'ServiceType')]]&quot;&gt;
+&lt;serviceType&gt;
+&lt;xsl:value-of select=&quot;//*[local-name()='stringValue']&quot;/&gt;
+&lt;/serviceType&gt;
+&lt;/xsl:if&gt;
+
+&lt;/serviceDescription&gt;
+&lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;
+</pre>
+
+<h2><a name="client"></a>Client Support</h2>
+<h3><a name="gshell"></a>GShell</h3>
+<p>In GShell, three commands are added: </p>
+<ul>
+	<li>publishXML, </li>
+	<li>queryXML, and </li>
+	<li>queryAndTranslateXML. </li>
+</ul>
+<p>They correspond to the publish, query, and queryAndTranslate operation, 
+respectively.</p>
+<h3><a name="program"></a>Programmatic Access</h3>
+<p>Example code can be found at</p>
+<ul>
+	<li>uk.ac.soton.ecs.grimoires.server.impl.xmlview.client</li>
+	<li>uk.ac.soton.ecs.grimoires.server.impl.xmlview.test</li>
+</ul>
+&nbsp;<p />
+
+&nbsp;</div>
+
+</body></html>

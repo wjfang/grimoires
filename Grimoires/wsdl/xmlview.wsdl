@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://www.grimoires.org/xmlview/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	name="xmlview"
+	targetNamespace="http://www.grimoires.org/xmlview/">
+	
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://www.grimoires.org/xmlview/"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+			elementFormDefault="qualified" 
+        	attributeFormDefault="unqualified">
+			
+			<xsd:complexType name="QueryExpressionType" mixed="true">
+    			<xsd:sequence>
+    				<xsd:any minOccurs="1" maxOccurs="1" processContents="lax" />
+    			</xsd:sequence>
+    			<xsd:attribute name="Dialect" type="xsd:anyURI" />
+  			</xsd:complexType>
+
+  			<xsd:element name="QueryExpression" type="tns:QueryExpressionType" />
+			
+			<xsd:element name="QueryRequest">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="tns:QueryExpression" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="QueryResponse">
+				<xsd:complexType mixed="true">
+					<xsd:sequence>
+	    				<xsd:any minOccurs="1" maxOccurs="unbounded" processContents="lax" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			
+			<xsd:complexType name="XMLViewFaultType" mixed="true">
+				<xsd:sequence>
+					<xsd:any minOccurs="1" maxOccurs="unbounded" processContents="lax" />
+				</xsd:sequence>
+			</xsd:complexType>
+			
+			<xsd:element name="XMLViewFault" type="tns:XMLViewFaultType" />
+			
+			<xsd:element name="PublishRequest">
+				<xsd:complexType mixed="true">
+					<xsd:sequence>
+	    				<xsd:any minOccurs="1" maxOccurs="unbounded" processContents="lax" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="PublishResponse">
+				<xsd:complexType mixed="true">
+					<xsd:sequence>
+	    				<xsd:any minOccurs="1" maxOccurs="unbounded" processContents="lax" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="DeleteRequest">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="id" type="xsd:string" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="DeleteResponse">
+				<xsd:complexType mixed="true">
+					<xsd:sequence>
+	    				<xsd:any minOccurs="1" maxOccurs="unbounded" processContents="lax" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="QueryAndTranslateRequest">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="tns:QueryExpression" />
+					</xsd:sequence>
+					<xsd:attribute name="nativeSchemaID" type="xsd:string" />
+				</xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="QueryAndTranslateResponse">
+				<xsd:complexType mixed="true">
+					<xsd:sequence>
+	    				<xsd:any minOccurs="1" maxOccurs="unbounded" processContents="lax" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+	
+	<wsdl:message name="QueryRequest">
+		<wsdl:part name="body" element="tns:QueryRequest" />
+	</wsdl:message>
+	
+	<wsdl:message name="QueryResponse">
+		<wsdl:part name="body" element="tns:QueryResponse" />
+	</wsdl:message>
+
+	<wsdl:message name="XMLViewFault">
+		<wsdl:part name="body" element="tns:XMLViewFault" />
+	</wsdl:message>
+
+	<wsdl:message name="PublishRequest">
+		<wsdl:part name="body" element="tns:PublishRequest" />
+	</wsdl:message>
+	
+	<wsdl:message name="PublishResponse">
+		<wsdl:part name="body" element="tns:PublishResponse" />
+	</wsdl:message>
+	
+	<wsdl:message name="DeleteRequest">
+		<wsdl:part name="body" element="tns:DeleteRequest" />
+	</wsdl:message>
+	
+	<wsdl:message name="DeleteResponse">
+		<wsdl:part name="body" element="tns:DeleteResponse" />
+	</wsdl:message>
+
+	<wsdl:message name="QueryAndTranslateRequest">
+		<wsdl:part name="body" element="tns:QueryAndTranslateRequest" /> 
+	</wsdl:message>
+	
+	<wsdl:message name="QueryAndTranslateResponse">
+		<wsdl:part name="body" element="tns:QueryAndTranslateResponse" />
+	</wsdl:message>
+	
+	<wsdl:portType name="XMLViewPortType">
+		<wsdl:operation name="query">
+			<wsdl:documentation>
+				XPath query over Grimoires based on Grimoires XML schema.
+			</wsdl:documentation>
+			<wsdl:input message="tns:QueryRequest" />
+			<wsdl:output message="tns:QueryResponse" />
+            <wsdl:fault name="fault" message="tns:XMLViewFault" />
+        </wsdl:operation>
+        
+		<wsdl:operation name="publish">
+			<wsdl:input message="tns:PublishRequest" />
+			<wsdl:output message="tns:PublishResponse" />
+            <wsdl:fault name="fault" message="tns:XMLViewFault" />
+        </wsdl:operation>
+        
+		<wsdl:operation name="delete">
+			<wsdl:input message="tns:DeleteRequest" />
+			<wsdl:output message="tns:DeleteResponse" />
+            <wsdl:fault name="fault" message="tns:XMLViewFault" />
+        </wsdl:operation>
+        
+		<wsdl:operation name="queryAndTranslate">
+			<wsdl:documentation>
+				XPath query over Grimoires based on Grimoires XML schema.
+				The result is transformed back to application schema.
+			</wsdl:documentation>
+			<wsdl:input message="tns:QueryAndTranslateRequest" />
+			<wsdl:output message="tns:QueryAndTranslateResponse" />
+			<wsdl:fault name="fault" message="tns:XMLViewFault" />
+		</wsdl:operation>
+	</wsdl:portType>
+	
+	<wsdl:binding name="XMLViewSOAPBinding" type="tns:XMLViewPortType">		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="query">			<soap:operation
+				soapAction="http://www.grimoires.org/xmlview/query" />			<wsdl:input>				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="fault">
+				<soap:fault use="literal" name="fault" />
+			</wsdl:fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="publish">
+			<soap:operation
+				soapAction="http://www.grimoires.org/xmlview/publish" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="fault">				<soap:fault use="literal" name="fault" />
+			</wsdl:fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="delete">
+			<soap:operation
+				soapAction="http://www.grimoires.org/xmlview/delete" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="fault">				<soap:fault use="literal" name="fault" />
+			</wsdl:fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="queryAndTranslate">
+			<soap:operation
+				soapAction="http://www.grimoires.org/xmlview/queryAndTranslate" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="fault">
+				<soap:fault use="literal" name="fault" />
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="XMLViewService">
+		<wsdl:port binding="tns:XMLViewSOAPBinding" name="XMLViewSOAPBinding">
+			<soap:address location="http://localhost:8080/grimoires/services/xmlview" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

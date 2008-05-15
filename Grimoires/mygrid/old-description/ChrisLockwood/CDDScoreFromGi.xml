@@ -1,0 +1,45 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<serviceDescriptions  xmlns="pd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="pd /C:/Program Files/taverna-workbench-1.2/./plugins/pedro/services/model/common.xsd">
+	<serviceDescription >
+		<serviceName>SHoundCDDScoreFromGi</serviceName>
+		<organisation >
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundCDDScoreFromGi</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundCDDScoreFromGi?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Get the score for a Conserved domain database domain. Information returned by this function was originally retrieved for proteins found in NCBI&apos;s LocusLink database. If the query protein gi identifier is not used by the LocusLink record then no information will be returned. The query protein gi identifier could be used to first retrieve a list of redundant (identical) sequence gi identifiers using {@link #SHoundRedundantGroup(int)} and then using these returned protein gi identifiers to query the LocusLink data.</serviceDescriptionText>
+		<operations >
+			<serviceOperation >
+				<operationName>SHoundCDDScoreFromGi</operationName>
+				<operationInputs >
+					<parameter >
+						<parameterName>gi</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_record_id</semanticType>
+					</parameter>
+
+					<parameter >
+						<parameterName>cddid</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_record_id</semanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs >
+					<parameter >
+						<parameterName>result</parameterName>
+						<parameterDescription>score for Conserved Domain Database (CDD) domain assignment (currently, does not return meaningful results)</parameterDescription>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#retrieving</operationTask>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

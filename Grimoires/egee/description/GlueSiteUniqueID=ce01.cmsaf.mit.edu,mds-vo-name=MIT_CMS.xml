@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=ce01.cmsaf.mit.edu,mds-vo-name=MIT_CMS">
+    <Name>MIT_CMS</Name>
+    <Description>OSG Site</Description>
+    <UserSupportContact>mailto: ikrav@mit.edu</UserSupportContact>
+    <SysAdminContact>mailto: ikrav@mit.edu</SysAdminContact>
+    <SecurityContact>mailto: ikrav@mit.edu</SecurityContact>
+    <Location>Cambridge,MA ,USA</Location>
+    <Latitude>42.22</Latitude>
+    <Longitude>-71.06</Longitude>
+    <Web>http://www.cmsaf.mit.edu/grid-policy.html</Web>
+    <Sponsor>UNAVAILABLE</Sponsor>
+    <OtherInfo>UNAVAILABLE</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ce01.cmsaf.mit.edu,mds-vo-name=MIT_CMS">
+        <Name>ce01.cmsaf.mit.edu</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce01.cmsaf.mit.edu,GlueClusterUniqueID=ce01.cmsaf.mit.edu,mds-vo-name=MIT_CMS">
+            <Name>ce01.cmsaf.mit.edu</Name>
+            <PhysicalCPUs>1</PhysicalCPUs>
+            <LogicalCPUs>2</LogicalCPUs>
+            <TmpDir>/osg/data</TmpDir>
+            <WNTmpDir>/osg/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.4" Name="ScientificSL"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AuthenticAMD" Model="AMD Opteron(tm) Processor 246" ClockSpeed="1000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1024" RAMSize="512"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="400" SF00="380"/>
+            <Location LocalID="SAMPLE_LOCATION">
+                <Name>SAMPLE_LOCATION</Name>
+                <Version>default</Version>
+                <Path>/SAMPLE-path</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_5_0">
+                <Name>VO-cms-CMSSW_0_5_0</Name>
+                <Version>CMSSW_0_5_0</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_5_1">
+                <Name>VO-cms-CMSSW_0_5_1</Name>
+                <Version>CMSSW_0_5_1</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_6_0">
+                <Name>VO-cms-CMSSW_0_6_0</Name>
+                <Version>CMSSW_0_6_0</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_6_1">
+                <Name>VO-cms-CMSSW_0_6_1</Name>
+                <Version>CMSSW_0_6_1</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_7_0">
+                <Name>VO-cms-CMSSW_0_7_0</Name>
+                <Version>CMSSW_0_7_0</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_7_2">
+                <Name>VO-cms-CMSSW_0_7_2</Name>
+                <Version>CMSSW_0_7_2</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_8_4">
+                <Name>VO-cms-CMSSW_0_8_4</Name>
+                <Version>CMSSW_0_8_4</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_9_2">
+                <Name>VO-cms-CMSSW_0_9_2</Name>
+                <Version>CMSSW_0_9_2</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_1_0">
+                <Name>VO-cms-CMSSW_1_1_0</Name>
+                <Version>CMSSW_1_1_0</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_1">
+                <Name>VO-cms-CMSSW_1_2_1</Name>
+                <Version>CMSSW_1_2_1</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_2">
+                <Name>VO-cms-CMSSW_1_2_2</Name>
+                <Version>CMSSW_1_2_2</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_3">
+                <Name>VO-cms-CMSSW_1_2_3</Name>
+                <Version>CMSSW_1_2_3</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_4">
+                <Name>VO-cms-CMSSW_1_2_4</Name>
+                <Version>CMSSW_1_2_4</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_6">
+                <Name>VO-cms-CMSSW_1_2_6</Name>
+                <Version>CMSSW_1_2_6</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_0">
+                <Name>VO-cms-CMSSW_1_3_0</Name>
+                <Version>CMSSW_1_3_0</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1">
+                <Name>VO-cms-CMSSW_1_3_1</Name>
+                <Version>CMSSW_1_3_1</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_2">
+                <Name>VO-cms-CMSSW_1_3_2</Name>
+                <Version>CMSSW_1_3_2</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_3">
+                <Name>VO-cms-CMSSW_1_3_3</Name>
+                <Version>CMSSW_1_3_3</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_4">
+                <Name>VO-cms-CMSSW_1_3_4</Name>
+                <Version>CMSSW_1_3_4</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_5">
+                <Name>VO-cms-CMSSW_1_3_5</Name>
+                <Version>CMSSW_1_3_5</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_6">
+                <Name>VO-cms-CMSSW_1_3_6</Name>
+                <Version>CMSSW_1_3_6</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_1">
+                <Name>VO-cms-CMSSW_1_4_1</Name>
+                <Version>CMSSW_1_4_1</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_2">
+                <Name>VO-cms-CMSSW_1_4_2</Name>
+                <Version>CMSSW_1_4_2</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_3">
+                <Name>VO-cms-CMSSW_1_4_3</Name>
+                <Version>CMSSW_1_4_3</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_4">
+                <Name>VO-cms-CMSSW_1_4_4</Name>
+                <Version>CMSSW_1_4_4</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_5">
+                <Name>VO-cms-CMSSW_1_4_5</Name>
+                <Version>CMSSW_1_4_5</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_6">
+                <Name>VO-cms-CMSSW_1_4_6</Name>
+                <Version>CMSSW_1_4_6</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_7">
+                <Name>VO-cms-CMSSW_1_4_7</Name>
+                <Version>CMSSW_1_4_7</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_0">
+                <Name>VO-cms-CMSSW_1_5_0</Name>
+                <Version>CMSSW_1_5_0</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_1">
+                <Name>VO-cms-CMSSW_1_5_1</Name>
+                <Version>CMSSW_1_5_1</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_2">
+                <Name>VO-cms-CMSSW_1_5_2</Name>
+                <Version>CMSSW_1_5_2</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_3">
+                <Name>VO-cms-CMSSW_1_5_3</Name>
+                <Version>CMSSW_1_5_3</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_4">
+                <Name>VO-cms-CMSSW_1_5_4</Name>
+                <Version>CMSSW_1_5_4</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0">
+                <Name>VO-cms-CMSSW_1_6_0</Name>
+                <Version>CMSSW_1_6_0</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_1">
+                <Name>VO-cms-CMSSW_1_6_1</Name>
+                <Version>CMSSW_1_6_1</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_3">
+                <Name>VO-cms-CMSSW_1_6_3</Name>
+                <Version>CMSSW_1_6_3</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_4">
+                <Name>VO-cms-CMSSW_1_6_4</Name>
+                <Version>CMSSW_1_6_4</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_5">
+                <Name>VO-cms-CMSSW_1_6_5</Name>
+                <Version>CMSSW_1_6_5</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-FAMOS_1_4_0">
+                <Name>VO-cms-FAMOS_1_4_0</Name>
+                <Version>FAMOS_1_4_0</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_5_0_pre2">
+                <Name>VO-cms-CMSSW_0_5_0_pre2</Name>
+                <Version>CMSSW_0_5_0_pre2</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_9_0_pre3">
+                <Name>VO-cms-CMSSW_0_9_0_pre3</Name>
+                <Version>CMSSW_0_9_0_pre3</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1_HLT5">
+                <Name>VO-cms-CMSSW_1_3_1_HLT5</Name>
+                <Version>CMSSW_1_3_1_HLT5</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1_HLT6">
+                <Name>VO-cms-CMSSW_1_3_1_HLT6</Name>
+                <Version>CMSSW_1_3_1_HLT6</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0_DAQ1">
+                <Name>VO-cms-CMSSW_1_6_0_DAQ1</Name>
+                <Version>CMSSW_1_6_0_DAQ1</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0_DAQ2">
+                <Name>VO-cms-CMSSW_1_6_0_DAQ2</Name>
+                <Version>CMSSW_1_6_0_DAQ2</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0_DAQ3">
+                <Name>VO-cms-CMSSW_1_6_0_DAQ3</Name>
+                <Version>CMSSW_1_6_0_DAQ3</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>slc3_ia32_gcc323</Version>
+                <Path>/</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc4_ia32_gcc345">
+                <Name>VO-cms-slc4_ia32_gcc345</Name>
+                <Version>slc4_ia32_gcc345</Version>
+                <Path>/</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_0_0_g4_81">
+                <Name>VO-cms-CMSSW_1_0_0_g4_81</Name>
+                <Version>CMSSW_1_0_0_g4_81</Version>
+                <Path>/osg/app/cmssoft/cms</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=se01.cmsaf.mit.edu,mds-vo-name=MIT_CMS">
+        <InformationServiceURL>ldap://is.grid.iu.edu:2170/mds-vo-name=MIT_CMS,mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <StorageArea LocalID="cdf">
+            <Path>/pnfs/cmsaf.mit.edu/t2bat/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/pnfs/cmsaf.mit.edu/t2bat/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="mis">
+            <Path>/pnfs/cmsaf.mit.edu/t2bat/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://se01.cmsaf.mit.edu</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+</Site>

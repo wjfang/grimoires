@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=IN2P3-IRES,mds-vo-name=IN2P3-IRES">
+    <Name>IN2P3-IRES</Name>
+    <Description>EGEE/LCG Site</Description>
+    <UserSupportContact>mailto: grid.admin@ires.in2p3.fr</UserSupportContact>
+    <SysAdminContact>mailto: grid.admin@ires.in2p3.fr</SysAdminContact>
+    <SecurityContact>mailto: grid.admin@ires.in2p3.fr</SecurityContact>
+    <Location>IRES, Strasbourg, France</Location>
+    <Latitude>48.6056</Latitude>
+    <Longitude>7.7095</Longitude>
+    <Web>http://ireswww.in2p3.fr/</Web>
+    <OtherInfo>TIER 3</OtherInfo>
+    <OtherInfo>IN2P3-CC</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=sbgce1.in2p3.fr,mds-vo-name=IN2P3-IRES">
+        <Name>sbgce1.in2p3.fr</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=sbgce1.in2p3.fr,GlueClusterUniqueID=sbgce1.in2p3.fr,mds-vo-name=IN2P3-IRES">
+            <Name>sbgce1.in2p3.fr</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="4.4" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel" Model="Xeon" ClockSpeed="2330"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="8192" RAMSize="8192"/>
+            <Architecture SMPSize="4"/>
+            <Benchmark SI00="2430" SF00="2263"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=sbgse1.in2p3.fr,mds-vo-name=IN2P3-IRES">
+        <InformationServiceURL>ldap://sbgse1.in2p3.fr:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>6820</SizeTotal>
+        <SizeFree>3840</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="alice">
+            <Path>/dpm/in2p3.fr/home/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>914923385</UsedSpace>
+            <AvailableSpace>3840000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/in2p3.fr/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2365835417</UsedSpace>
+            <AvailableSpace>3840000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/in2p3.fr/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1008</UsedSpace>
+            <AvailableSpace>3840000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/in2p3.fr/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>924</UsedSpace>
+            <AvailableSpace>3840000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vo.sbg.in2p3.fr">
+            <Path>/dpm/in2p3.fr/home/vo.sbg.in2p3.fr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://sbgse1.in2p3.fr:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://sbgse1.in2p3.fr:8443/srm/managerv1</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://sbgse1.in2p3.fr:8443/srm/managerv1</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=http://sbglfc1.in2p3.fr:8085/,mds-vo-name=IN2P3-IRES">
+        <Name>IN2P3-IRES-lfc-dli</Name>
+        <Type>data-location-interface</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>http://sbglfc1.in2p3.fr:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>vo.sbg.in2p3.fr</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://sbglfc1.in2p3.fr:8085/,o=local,mds-vo-name=IN2P3-IRES">
+        <Name>IN2P3-IRES-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>http://sbglfc1.in2p3.fr:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=sbglfc1.in2p3.fr,mds-vo-name=IN2P3-IRES">
+        <Name>IN2P3-IRES-lfc</Name>
+        <Type>lcg-file-catalog</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>sbglfc1.in2p3.fr</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>vo.sbg.in2p3.fr</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=sbglfc1.in2p3.fr,o=local,mds-vo-name=IN2P3-IRES">
+        <Name>IN2P3-IRES-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>sbglfc1.in2p3.fr</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=sbgrb1.in2p3.fr:7772,mds-vo-name=IN2P3-IRES">
+        <Name>IN2P3-IRES-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>sbgrb1.in2p3.fr:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>vo.sbg.in2p3.fr</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://sbgse1.in2p3.fr:8443/srm/managerv1,mds-vo-name=IN2P3-IRES">
+        <Name>IN2P3-IRES-srm</Name>
+        <Type>srm</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://sbgse1.in2p3.fr:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://sbgse1.in2p3.fr:8446/srm/managerv2,mds-vo-name=IN2P3-IRES">
+        <Name>IN2P3-IRES-srm</Name>
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://sbgse1.in2p3.fr:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

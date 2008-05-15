@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" 
+  targetNamespace="http://www.grimoires.org/inquire_uddiMetadata.wsdl" 
+  xmlns:tns="http://www.grimoires.org/inquire_uddiMetadata.wsdl" 
+  xmlns:meta="http://www.grimoires.org/metadata.xsd" 
+  xmlns:uddi="urn:uddi-org:api_v2" 
+  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"   
+  name="Grimoires_inquire_uddi_metadata_API">
+  
+  <types>
+    <xsd:schema
+      targetNamespace="http://www.grimoires.org/metadata.xsd"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import
+	schemaLocation="@TOMCAT_PROTOCOL@://@TOMCAT_HOST@:@TOMCAT_PORT@/grimoires/xsd/metadata.xsd"/>
+    </xsd:schema>
+
+    <xsd:schema
+      targetNamespace="http://www.grimoires.org/metadata.xsd"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="@TOMCAT_PROTOCOL@://@TOMCAT_HOST@:@TOMCAT_PORT@/grimoires/xsd/metadata_uddi.xsd"/>
+    </xsd:schema>
+
+    <xsd:schema 
+      targetNamespace="http://www.grimoires.org/metadata.xsd" 
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      
+      <!-- 
+      <xsd:import 
+        namespace="urn:uddi-org:api_v2" 
+        schemaLocation="http://www.uddi.org/schema/uddi_v2.xsd"/>
+      -->
+
+      <xsd:import namespace="urn:uddi-org:api_v2" schemaLocation="@TOMCAT_PROTOCOL@://@TOMCAT_HOST@:@TOMCAT_PORT@/grimoires/xsd/uddi_v2.xsd"/>   
+    </xsd:schema>
+
+  </types>
+  
+  <message name="faultDetailList">
+    <part name="body" element="meta:faultDetailList"/>
+  </message>
+  
+  <message name="find_service">
+    <part name="body" element="meta:find_service" />
+  </message>
+  
+  <message name="serviceList">
+    <part name="body" element="uddi:serviceList" />
+  </message> 
+
+  <portType name="InquireUddiMetadataPort">
+    <operation name="find_service">
+      <input message="tns:find_service" />
+      <output message="tns:serviceList" />
+      <fault name="error" message="tns:faultDetailList"/>
+    </operation>            
+  </portType>
+  
+  <binding name="InquireUddiMetadataSoap" type="tns:InquireUddiMetadataPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    
+    <operation name="find_service">
+      <soap:operation soapAction="find_service" style="document" />
+      <input>
+	<soap:body use="literal" parts="body"/>
+      </input>
+      <output>
+	<soap:body use="literal" parts="body" />
+      </output>
+      <fault name="error">
+	<soap:fault name="error" use="literal"/>
+      </fault>
+    </operation>            
+  </binding>
+  
+  <service name="Grimoires">
+    <port binding="tns:InquireUddiMetadataSoap" name="inquire_uddiMetadata">
+      <soap:address location="http://localhost:8080/grimoires/services/inquire_uddiMetadata"/>
+    </port>
+  </service>
+
+</definitions>

@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=gridgk01.racf.bnl.gov,mds-vo-name=BNL_ATLAS_1">
+    <Name>BNL_ATLAS_1</Name>
+    <Description>OSG Site</Description>
+    <UserSupportContact>mailto: xzhao@bnl.gov</UserSupportContact>
+    <SysAdminContact>mailto: xzhao@bnl.gov</SysAdminContact>
+    <SecurityContact>mailto: xzhao@bnl.gov</SecurityContact>
+    <Location>Long Island,NY ,USA</Location>
+    <Latitude>40.366</Latitude>
+    <Longitude>-72.388</Longitude>
+    <Web>https://www.racf.bnl.gov/Facility/LinuxFarm/CondorPolicy_BNL_USATLAS.html</Web>
+    <Sponsor>UNAVAILABLE</Sponsor>
+    <OtherInfo>UNAVAILABLE</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=gridgk01.racf.bnl.gov,mds-vo-name=BNL_ATLAS_1">
+        <Name>gridgk01.racf.bnl.gov</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=gridgk01.racf.bnl.gov,GlueClusterUniqueID=gridgk01.racf.bnl.gov,mds-vo-name=BNL_ATLAS_1">
+            <Name>gridgk01.racf.bnl.gov</Name>
+            <PhysicalCPUs>92</PhysicalCPUs>
+            <LogicalCPUs>92</LogicalCPUs>
+            <TmpDir>/usatlas/prodjob/share/</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium4" Release="4" Name="ScientificLinuxSL"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="GenuineIntel" Model="Intel(R) Xeon(TM) CPU 3.06GHz" ClockSpeed="3100"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="4096" RAMSize="2048"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1890" SF00="380"/>
+            <Location LocalID="ATLAS_APP">
+                <Name>ATLAS_APP</Name>
+                <Version>prod</Version>
+                <Path>/usatlas/projects/OSG/atlas_app</Path>
+            </Location>
+            <Location LocalID="ATLAS_DATA">
+                <Name>ATLAS_DATA</Name>
+                <Version>prod</Version>
+                <Path>/usatlas/prodjob/share/atlas_data</Path>
+            </Location>
+            <Location LocalID="ATLAS_STAGE">
+                <Name>ATLAS_STAGE</Name>
+                <Version>prod</Version>
+                <Path>/usatlas/prodjob/share/atlas_data</Path>
+            </Location>
+            <Location LocalID="ATLAS_DQ2Cli">
+                <Name>ATLAS_DQ2Cli</Name>
+                <Version>prod</Version>
+                <Path>/usatlas/prodjob/share/atlas_app/dq2_cli/DQ2Cli</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_904">
+                <Name>ATLAS_LOC_904</Name>
+                <Version>9.0.4</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/9.0.4</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_GCC">
+                <Name>ATLAS_LOC_GCC</Name>
+                <Version>3.2</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/gcc32</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_GCE">
+                <Name>ATLAS_LOC_GCE</Name>
+                <Version>prod</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/GCE-Server/gce-server</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_1001">
+                <Name>ATLAS_LOC_1001</Name>
+                <Version>10.0.1</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/10.0.1</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_1004">
+                <Name>ATLAS_LOC_1004</Name>
+                <Version>10.0.4</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/10.0.4</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_1100">
+                <Name>ATLAS_LOC_1100</Name>
+                <Version>11.0.0</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/11.0.0</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_1101">
+                <Name>ATLAS_LOC_1101</Name>
+                <Version>11.0.1</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/11.0.1</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_1102">
+                <Name>ATLAS_LOC_1102</Name>
+                <Version>11.0.2</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/11.0.2</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_1103">
+                <Name>ATLAS_LOC_1103</Name>
+                <Version>11.0.3</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/11.0.3</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_1104">
+                <Name>ATLAS_LOC_1104</Name>
+                <Version>11.0.4</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/11.0.4</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_1130">
+                <Name>ATLAS_LOC_1130</Name>
+                <Version>11.3.0</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/11.3.0</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_1150">
+                <Name>ATLAS_LOC_1150</Name>
+                <Version>11.5.0</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/11.5.0</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_1200">
+                <Name>ATLAS_LOC_1200</Name>
+                <Version>12.0.0</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/12.0.0</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_1201">
+                <Name>ATLAS_LOC_1201</Name>
+                <Version>12.0.1</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/12.0.1</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_1202">
+                <Name>ATLAS_LOC_1202</Name>
+                <Version>12.0.2</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/12.0.2</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_1203">
+                <Name>ATLAS_LOC_1203</Name>
+                <Version>12.0.3</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/12.0.3</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_1204">
+                <Name>ATLAS_LOC_1204</Name>
+                <Version>12.0.4</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/12.0.4</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_1205">
+                <Name>ATLAS_LOC_1205</Name>
+                <Version>12.0.5</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/12.0.5</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_1206">
+                <Name>ATLAS_LOC_1206</Name>
+                <Version>12.0.6</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/12.0.6</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_1207">
+                <Name>ATLAS_LOC_1207</Name>
+                <Version>12.0.7</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/12.0.7</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_1230">
+                <Name>ATLAS_LOC_1230</Name>
+                <Version>12.3.0</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/12.3.0</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_Trfs">
+                <Name>ATLAS_LOC_Trfs</Name>
+                <Version>prod</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/Atlas-Trfs/atlas-trfs</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_11042">
+                <Name>ATLAS_LOC_11042</Name>
+                <Version>11.0.42</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/11.0.42</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_12031">
+                <Name>ATLAS_LOC_12031</Name>
+                <Version>12.0.31</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/12.0.31</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_12095">
+                <Name>ATLAS_LOC_12095</Name>
+                <Version>12.0.95</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/12.0.95</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_13010">
+                <Name>ATLAS_LOC_13010</Name>
+                <Version>13.0.10</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/13.0.10</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_13025">
+                <Name>ATLAS_LOC_13025</Name>
+                <Version>13.0.25</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/13.0.25</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_13026">
+                <Name>ATLAS_LOC_13026</Name>
+                <Version>13.0.26</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/13.0.26</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_13030">
+                <Name>ATLAS_LOC_13030</Name>
+                <Version>13.0.30</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/13.0.30</Path>
+            </Location>
+            <Location LocalID="SAMPLE_LOCATION">
+                <Name>SAMPLE_LOCATION</Name>
+                <Version>default</Version>
+                <Path>/SAMPLE-path</Path>
+            </Location>
+            <Location LocalID="ATLAS_LOC_KitVal">
+                <Name>ATLAS_LOC_KitVal</Name>
+                <Version>prod</Version>
+                <Path>/usatlas/projects/OSG/atlas_app/atlas_rel/kitval/KitValidation</Path>
+            </Location>
+            <Location LocalID="ATLAS_PYTHONHOME">
+                <Name>ATLAS_PYTHONHOME</Name>
+                <Version>prod</Version>
+                <Path>/usatlas/prodjob/share/atlas_app/python</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_1_1">
+                <Name>VO-cms-CMSSW_1_1_1</Name>
+                <Version>CMSSW_1_1_1</Version>
+                <Path>/usatlas/projects/OSG//cmssoft/cms</Path>
+            </Location>
+        </SubCluster>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=gridgk01-2.racf.bnl.gov,GlueClusterUniqueID=gridgk01.racf.bnl.gov,mds-vo-name=BNL_ATLAS_1">
+            <Name>gridgk01-2.racf.bnl.gov</Name>
+            <PhysicalCPUs>452</PhysicalCPUs>
+            <LogicalCPUs>452</LogicalCPUs>
+            <TmpDir>/usatlas/prodjob/share/</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium4" Release="4" Name="ScientificLinuxSL"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="GenuineIntel" Model="Intel(R) Xeon(TM) CPU 3.40GHz" ClockSpeed="3400"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="4096" RAMSize="2048"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="2798" SF00="300"/>
+        </SubCluster>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=gridgk01-3.racf.bnl.gov,GlueClusterUniqueID=gridgk01.racf.bnl.gov,mds-vo-name=BNL_ATLAS_1">
+            <Name>gridgk01-3.racf.bnl.gov</Name>
+            <PhysicalCPUs>320</PhysicalCPUs>
+            <LogicalCPUs>640</LogicalCPUs>
+            <TmpDir>/usatlas/prodjob/share/</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium4" Release="4" Name="ScientificLinuxSL"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AuthenticAMD" Model="Dual Core AMD Opteron(tm) Processor 265" ClockSpeed="1800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="16000" RAMSize="8192"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="4676" SF00="300"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=dcsrm.usatlas.bnl.gov,mds-vo-name=BNL_ATLAS_1">
+        <InformationServiceURL>ldap://is.grid.iu.edu:2170/mds-vo-name=BNL_ATLAS_1,mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <StorageArea LocalID="dteam">
+            <Path>/pnfs/usatlas.bnl.gov/grid/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/pnfs/usatlas.bnl.gov/grid/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/pnfs/usatlas.bnl.gov/grid/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="des">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="mis">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="osg">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="fmri">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gadu">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="glow">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="grow">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ligo">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="sdss">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="DOSAR">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dzero">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="grase">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ivdgl">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gridex">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="osgedu">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="nanohub">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="fermilab">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://dcsrm.usatlas.bnl.gov</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsidcap">
+            <Endpoint>httpg://dcsrm.usatlas.bnl.gov</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor02-15subnet@gridftp-dcdoor02Domain">
+            <Endpoint>gsiftp://192.12.15.3:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor08-15subnet@gridftp-dcdoor08Domain">
+            <Endpoint>gsiftp://192.12.15.14:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor02-185subnet@gridftp-dcdoor02Domain">
+            <Endpoint>gsiftp://dcdoor02.usatlas.bnl.gov:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap1-dcdcap01@dcap1-dcdcap01Domain">
+            <Endpoint>dcap://dcdcap01.usatlas.bnl.gov:22125</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor07-15subnet@gridftp-dcdoor07Domain">
+            <Endpoint>gsiftp://192.12.15.10:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor03-15subnet@gridftp-dcdoor03Domain">
+            <Endpoint>gsiftp://192.12.15.4:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor06-185subnet@gridftp-dcdoor06Domain">
+            <Endpoint>gsiftp://dcdoor06.usatlas.bnl.gov:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor05-185subnet@gridftp-dcdoor05Domain">
+            <Endpoint>gsiftp://dcdoor05.usatlas.bnl.gov:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor04-15subnet@gridftp-dcdoor04Domain">
+            <Endpoint>gsiftp://192.12.15.5:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap3-dcdcap01@dcap3-dcdcap01Domain">
+            <Endpoint>dcap://dcdcap01.usatlas.bnl.gov:22130</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor03-185subnet@gridftp-dcdoor03Domain">
+            <Endpoint>gsiftp://dcdoor03.usatlas.bnl.gov:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor05-15subnet@gridftp-dcdoor05Domain">
+            <Endpoint>gsiftp://192.12.15.6:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor04-185subnet@gridftp-dcdoor04Domain">
+            <Endpoint>gsiftp://dcdoor04.usatlas.bnl.gov:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor01-15subnet@gridftp-dcdoor01Domain">
+            <Endpoint>gsiftp://192.12.15.2:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor07-185subnet@gridftp-dcdoor07Domain">
+            <Endpoint>gsiftp://dcdoor07.usatlas.bnl.gov:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor08-185subnet@gridftp-dcdoor08Domain">
+            <Endpoint>gsiftp://dcdoor08.usatlas.bnl.gov:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor06-15subnet@gridftp-dcdoor06Domain">
+            <Endpoint>gsiftp://192.12.15.9:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor01-185subnet@gridftp-dcdoor01Domain">
+            <Endpoint>gsiftp://dcdoor01.usatlas.bnl.gov:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap4-dcdcap01@dcap4-dcdcap01Domain">
+            <Endpoint>dcap://dcdcap01.usatlas.bnl.gov:22131</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap2-dcdcap01@dcap2-dcdcap01Domain">
+            <Endpoint>dcap://dcdcap01.usatlas.bnl.gov:22129</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://dcsrm.usatlas.bnl.gov</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+        <ControlProtocol LocalID="SRM-dcsrm@srm-dcsrm01Domain">
+            <Endpoint>httpg://dcsrm.usatlas.bnl.gov:8443/srm/managerv1</Endpoint>
+            <Type>SRM</Type>
+            <Version>1.1.1</Version>
+        </ControlProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://dcsrm.usatlas.bnl.gov</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+</Site>

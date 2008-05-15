@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=RU-SPbSU,mds-vo-name=RU-SPbSU">
+    <Name>RU-SPbSU</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:andrey.zar@pobox.spbu.ru</UserSupportContact>
+    <SysAdminContact>mailto:andrey.zar@pobox.spbu.ru</SysAdminContact>
+    <SecurityContact>mailto:andrey.zar@pobox.spbu.ru</SecurityContact>
+    <Location>St.Petersburg, Russia</Location>
+    <Latitude>59.88</Latitude>
+    <Longitude>30.25</Longitude>
+    <Web>http://www.spbu.ru</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>http://w3.ihep.su/egee/</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=alice01.spbu.ru,mds-vo-name=RU-SPbSU">
+        <Name>alice01.spbu.ru</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=alice01.spbu.ru,GlueClusterUniqueID=alice01.spbu.ru,mds-vo-name=RU-SPbSU">
+            <Name>alice01.spbu.ru</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.8" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="PIII" ClockSpeed="600"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1025" RAMSize="513"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="381" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=alice09.spbu.ru,mds-vo-name=RU-SPbSU">
+        <InformationServiceURL>ldap://alice09.spbu.ru:2170/mds-vo-name=resource,o=grid</InformationServiceURL>
+        <SizeTotal>985</SizeTotal>
+        <SizeFree>366</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="alice">
+            <Path>/dpm/spbu.ru/home/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4</UsedSpace>
+            <AvailableSpace>366170000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/spbu.ru/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>42</UsedSpace>
+            <AvailableSpace>366170000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/spbu.ru/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>166</UsedSpace>
+            <AvailableSpace>366170000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://alice09.spbu.ru</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://alice09.spbu.ru</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://alice09.spbu.ru</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=local-http://alice07.spbu.ru:8085/,mds-vo-name=RU-SPbSU">
+        <Name>RU-SPbSU-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>http://alice07.spbu.ru:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-09-28T16:32:18.000+04:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-alice07.spbu.ru,mds-vo-name=RU-SPbSU">
+        <Name>RU-SPbSU-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>alice07.spbu.ru</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-09-28T16:32:18.000+04:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://alice09.spbu.ru:8443/srm/managerv1,mds-vo-name=RU-SPbSU">
+        <Name>RU-SPbSU-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://alice09.spbu.ru:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://alice09.spbu.ru:8446/srm/managerv2,mds-vo-name=RU-SPbSU">
+        <Name>RU-SPbSU-srm</Name>
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://alice09.spbu.ru:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=gsissh://alice11.spbu.ru:1975,mds-vo-name=RU-SPbSU">
+        <Name>RU-SPbSU-vobox</Name>
+        <Type>VOBOX</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>gsissh://alice11.spbu.ru:1975</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=CY-01-KIMON,mds-vo-name=CY-01-KIMON">
+    <Name>CY-01-KIMON</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:grid@cs.ucy.ac.cy</UserSupportContact>
+    <SysAdminContact>mailto:grid@cs.ucy.ac.cy</SysAdminContact>
+    <SecurityContact>mailto:grid@cs.ucy.ac.cy</SecurityContact>
+    <Location>Nicosia, Cyprus</Location>
+    <Latitude>35.144295</Latitude>
+    <Longitude>33.411279</Longitude>
+    <Web>http://grid.ucy.ac.cy/egee/</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>HG-01-GRNET</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ce101.grid.ucy.ac.cy,mds-vo-name=CY-01-KIMON">
+        <Name>ce101.grid.ucy.ac.cy</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce101.grid.ucy.ac.cy,GlueClusterUniqueID=ce101.grid.ucy.ac.cy,mds-vo-name=CY-01-KIMON">
+            <Name>ce101.grid.ucy.ac.cy</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.5" Name="ScientificSL"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="Opteron" ClockSpeed="2600"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1024"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1471" SF00="1374"/>
+            <Location LocalID="VO-atlas-production-12.0.31">
+                <Name>VO-atlas-production-12.0.31</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.4">
+                <Name>VO-atlas-production-12.0.4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.5">
+                <Name>VO-atlas-production-12.0.5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6">
+                <Name>VO-atlas-production-12.0.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-autodock_IAN-3-0">
+                <Name>VO-biomed-autodock_IAN-3-0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-see-octave-2.1.73">
+                <Name>VO-see-octave-2.1.73</Name>
+                <Version>Prod</Version>
+                <Path>$VO_SEE_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-see-gsl-1.9">
+                <Name>VO-see-gsl-1.9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_SEE_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-testingthesite1">
+                <Name>VO-dteam-testingthesite1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-geant42ndProd">
+                <Name>VO-dteam-geant42ndProd</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-geant42ndProd_p01">
+                <Name>VO-dteam-geant42ndProd_p01</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-LCG-2_6_0">
+                <Name>VO-dteam-LCG-2_6_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-geant42ndProd_p02">
+                <Name>VO-dteam-geant42ndProd_p02</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-ITUtest1">
+                <Name>VO-dteam-ITUtest1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final">
+                <Name>VO-dteam-december05prod-final</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final-cand2">
+                <Name>VO-dteam-december05prod-final-cand2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=plethon.grid.ucy.ac.cy,mds-vo-name=CY-01-KIMON">
+        <InformationServiceURL>ldap://plethon.grid.ucy.ac.cy:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>3600</SizeTotal>
+        <SizeFree>2310</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/dpm/grid.ucy.ac.cy/home/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4798246</UsedSpace>
+            <AvailableSpace>2310000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/dpm/grid.ucy.ac.cy/home/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>2310000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomed">
+            <Path>/dpm/grid.ucy.ac.cy/home/biomed</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1791372</UsedSpace>
+            <AvailableSpace>2310000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/grid.ucy.ac.cy/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>41</UsedSpace>
+            <AvailableSpace>2310000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="see">
+            <Path>/dpm/grid.ucy.ac.cy/home/see</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>19894032</UsedSpace>
+            <AvailableSpace>2310000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geclipse">
+            <Path>/dpm/grid.ucy.ac.cy/home/geclipse</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3527</UsedSpace>
+            <AvailableSpace>2310000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/grid.ucy.ac.cy/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>866</UsedSpace>
+            <AvailableSpace>2310000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/grid.ucy.ac.cy/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2428</UsedSpace>
+            <AvailableSpace>2310000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://plethon.grid.ucy.ac.cy</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://plethon.grid.ucy.ac.cy</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://plethon.grid.ucy.ac.cy</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=mon101.grid.ucy.ac.cy:2136,mds-vo-name=CY-01-KIMON">
+        <Name>CY-01-KIMON-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://mon101.grid.ucy.ac.cy:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>biomed</Owner>
+        <Owner>cms</Owner>
+        <Owner>see</Owner>
+        <Owner>geclipse</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb101.grid.ucy.ac.cy:7772,mds-vo-name=CY-01-KIMON">
+        <Name>CY-01-KIMON-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb101.grid.ucy.ac.cy:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>biomed</Owner>
+        <Owner>cms</Owner>
+        <Owner>see</Owner>
+        <Owner>geclipse</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://plethon.grid.ucy.ac.cy:8443/srm/managerv1,mds-vo-name=CY-01-KIMON">
+        <Name>CY-01-KIMON-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://plethon.grid.ucy.ac.cy:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://plethon.grid.ucy.ac.cy:8446/srm/managerv2,mds-vo-name=CY-01-KIMON">
+        <Name>CY-01-KIMON-srm</Name>
+        <Type>srm</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://plethon.grid.ucy.ac.cy:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=wmslb101.grid.ucy.ac.cy:7772,mds-vo-name=CY-01-KIMON">
+        <Name>CY-01-KIMON-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>wmslb101.grid.ucy.ac.cy:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>biomed</Owner>
+        <Owner>cms</Owner>
+        <Owner>see</Owner>
+        <Owner>geclipse</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+</Site>

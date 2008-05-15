@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Grimoires Documentation - Functional Specification - GShell</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url('i_arrow_down.gif');
+	}	        
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script>
+</head>
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1><a name="Grimoires_Shell_Manual"> </a> Functional Specification - GShell</h1>
+<p />
+<div class="twikiToc">
+<ul>
+<li> <a href="#Grimoires_Shell_Manual">Functional Specification - GShell</a>
+<ul>
+<li> <a href="#Introduction">Product description</a></li>
+<li> <a href="#User_guide">Use case </a>
+</li>
+<li> <a href="#A_use_scenario">List of commands</a>
+<ul>
+<li> <a href="#Publish_a_business">PublishBusiness </a>
+</li>
+<li> <a href="#Inquire_a_business">InquireBusiness</a>
+</li>
+<li> <a href="#Publish_a_service">PublishService </a>
+</li>
+<li> <a href="#Inquire_a_service">InquireService</a>
+</li>
+<li> <a href="#Publish_WSDL">PublishWSDL</a>
+</li>
+<li> <a href="#Inquire_WSDL">InquireWSDL </a>
+</li>
+<li> <a href="#Publish_metadata">PublishMetadata</a>
+</li>
+<li> <a href="#Inquire_metadata">InquireMetadata</a></li>
+<li> <a href="#ListAllServices">ListAllServices</a></li>
+<li> <a href="#DeleteEntity">DeleteEntity</a></li>
+<li> <a href="#GetEntityMetadata">GetEntityMetadata</a></li>
+<li> <a href="#send_soap">SendSoapMessage</a></li>
+<li> <a href="#findServiceByWSDL">FindServiceByWSDL</a></li>
+<li> <a href="#findWSDLByMessagePart">FindWSDLByMessagePart</a></li>
+<li> <a href="#setTerminationTime">SetTerminationTime</a></li>
+<li> <a href="#publishXML">PublishXML</a></li>
+<li> <a href="#queryXML">QueryXML</a></li>
+<li> <a href="#queryAndTranslateXML">QueryAndTranslateXML</a></li>
+<li> <a href="#listAllWSDLs">ListAllWSDLs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p />
+<h2><a name="Introduction"> </a>Product description  </h2>
+<p />
+The Grimoires Shell (GShell) is a simple client that supports some of the 
+functionality of the Grimoires service in interactive mode or batch mode. Full 
+Grimoires functionality may be accessed either by the Java Programming Client 
+Side API or by the SOAP message submission facility. GShell provides a shell 
+environment to interact with Grimoires service, within which a group of 
+commands can be invoked for users to
+publish/inquire business/service/wsdl/metadata.
+<p />
+There are two ways to use GShell:<p />
+<ul>
+	<li>Through the shell environment. In the shell, the following built-in 
+	utilities are available:<ul>
+		<li>help: display a help message.</li>
+		<li>ls: list all available commands. A command performs a single task 
+		on the registry, e.g., publishing a service.</li>
+		<li>run command_name: invoke a command. Each command has an 
+		interactive wizard to direct user to finish the task.</li>
+		<li>exit: exit GShell.</li>
+		</ul>
+		<p />GShell also provides the facility of &quot;environment variables&quot;. When 
+		you see [$n]=VALUE (where n is an integer) in the output, it means the a 
+		variable, with name n, is recorded in GShell and you may reuse them by 
+		typing &quot;$n&quot; to denote VALUE.</p>
+	<p />&nbsp;</p></li>
+		<li>&nbsp;Invoke the commands directly. Each command is implemented as 
+		a Java class with a public main method. It can be invoked directly 
+		without using GShell. So all commands can be used in a batch mode.</li>
+		</ul>
+<h2><a name="User_guide"> </a> Use case</h2>
+		<p>In this use case, a user publish a &quot;gcode&quot; service owned by Univ. of 
+		Southampton, and annotate its input message that is a string 
+		syntactically, with a semantic type &quot;nucleotide_sequence&quot;. &quot;gcode&quot; is 
+		used in bioinformatics to &quot;group encoding&quot; sequences, e.g., a nucleotide 
+		sequence. </p>
+		<p>Firstly, the user publish a business (the UDDI terminology of an 
+		organization) called &quot;Univ. of Southamtpon&quot;, then publish a service 
+		belonging to the previous published business. The user will also publish 
+		a WSDL which defines the technical fingerprint of the service, and 
+		publish a metadata annotating the semantic type of an input message in 
+		the WSDL. </p>
+		<p>Now the user can inquire all the published business/service/WSDL/metadata.
+		</p>
+<p />
+<h2><a name="A_use_scenario"> </a>List of commands</h2>
+<p />
+There are two modes to invoke a command: an interactive mode and a batch mode. 
+An interactive mode is used when invoking commands in the GShell environment. A 
+batch mode is used when invoking commands directly.<p />
+<h3><a name="Publish_a_business"> </a> PublishBusiness  </h3>
+<p />
+Publish a business. A business is the
+UDDI's terminology for an organization.<h5>Arguments</h5>
+		<p>The business name.</p>
+		<p>The business description.</p>
+		<h5>Returns</h5>
+		<p>The business key, which is the unique identifier of the published 
+		business.</p>
+		<h5>Batch mode usage</h5>
+		<p/>
+<pre>
+java PubishBusinessCommand Grimoires_URL business_name business_description
+</pre>
+<p/>Grimoires_URL is where Grimoires is deployed. For instance, if the Grimoires 
+UDDIv2 publish service is deployed at 
+http://hostname:18080/grimoires/services/publish, then Grimoires_URL is 
+http://hostname:18080/grimoires/services.<h3><a name="Inquire_a_business"> </a> InquireBusiness</h3>
+<p />
+Inquire business by name.
+<h5>Arguments</h5>
+		<p>The business name.</p>
+		<h5>Returns</h5>
+		<p>The name, description, and keys of all businesses whose names match. </p>
+		<h5>Batch mode usage</h5>
+		<p/>
+<pre>
+java InquireBusinessCommand Grimoires_URL business_name</pre>
+<h3><a name="Publish_a_service"> </a> PublishService  </h3>
+<p />
+Publish a service.<h5>Arguments</h5>
+		<p>The service name.</p>
+<p>The service description.</p>
+<p>The business key: specify which business this service belongs to.</p>
+<p>The service access point: where the service is located.</p>
+<p>The service WSDL URL.</p>
+		<h5>Returns</h5>
+		<p>The service key, which is the unique identifier of the published 
+		service.</p>
+		<h5>Batch mode usage</h5>
+		<p/>
+<pre>
+java PublishServiceCommand Grimoires_URL name description business_key access_point WSDL_URL</pre>
+<p />
+<h3><a name="Inquire_a_service"> </a> InquireService </h3>
+<p />
+Inquire a service by name.<h5>Arguments</h5>
+		<p>The service name.</p>
+		<h5>Returns</h5>
+		<p>The service name.</p>
+<p>The service key.</p>
+<p>The business key of the business that this service belongs to.</p>
+<p>The service access point.</p>
+<p>The WSDL URL.</p>
+		<h5>Batch mode usage</h5>
+		<p/>
+<pre>
+java InquireServiceCommand Grimoires_URL service_name</pre>
+<h3><a name="Publish_WSDL"> </a> PublishWSDL </h3>
+<p />
+Publish a WSDL file.<h5>Arguments</h5>
+		<p>The WSDL URL.</p>
+<h5>Returns</h5>
+		<p>The WSDL key, which is the unique identifier of the published 
+		WSDL.</p>
+		<h5>Batch mode usage</h5>
+		<p/>
+<pre>
+java PublishWSDLCommand Grimoires_URL WSDL_URL</pre>
+<p />
+<h3><a name="Inquire_WSDL"> </a> InquireWSDL  </h3>
+<p />
+Inquire a WSDL by its registered key.
+<h5>Arguments</h5>
+		<p>The WSDL key.</p>
+<h5>Returns</h5>
+		<p>The WSDL content.</p>
+		<h5>Batch mode usage</h5>
+		<p/>
+<pre>
+java InquireWSDLCommand Grimoires_URL wsdlKey</pre>
+<h3><a name="Publish_metadata"> </a> PublishMetadata </h3>
+<p />
+Publish a piece of metadata to a message part, an operation, or a UDDI entity.<h5>
+Arguments</h5>
+<p>To annotate a message part, the message namespace, the message name, and the 
+message name part, are required.</p>
+<p>To annotate an operation, the porttype namespace, the porttype name, and the 
+operation name, are required.</p>
+<p>To annotate a UDDI entity, the entity key, and the key type, e.g., a business 
+key or a service key, are required.</p>
+<p>The metadata type that must be a URI and metadata value that can be either a 
+URI or a string, are required in all cases.</p>
+<h5>Returns</h5>
+		<p>The metadata key.</p>
+		<h5>Batch mode usage</h5>
+		<p/>
+<pre>
+java PublishMetadataCommand Grimoires_URL -m message_namespace message_name message_part_name metadata_type metadata_value</pre>
+<pre>
+or</pre>
+<pre>
+java PublishMetadataCommand Grimoires_URL -o porttype_namespace porttype_name operation_name metadata_type metadata_value</pre>
+<pre>
+or</pre>
+<pre>
+java PublishMetadataCommand Grimoires_URL -k [business|service] key metadata_type metadata_value
+</pre>
+<p />
+<h3><a name="Inquire_metadata"> </a> InquireMetadata </h3>
+<p />
+Inquire an entity that has the specified annotation.
+<h5>Arguments</h5>
+		<p>The metadata type and the metadata value.</p>
+<h5>Returns</h5>
+		<p>The detailed information of the entities that have been attached with 
+		this metadata.</p>
+		<h5>Batch mode usage</h5>
+		<p/>
+<pre>
+java InquireMetadataCommand Grimoires_URL metadataType metadataValue</pre>
+<h3><a name="ListAllServices"></a>ListAllServices </h3>
+<p />
+List all services published in the registry.<h5>Arguments</h5>
+		<p>Null.</p>
+<h5>Returns</h5>
+		<p>The detailed information of all services, including the service name, 
+		the service key, the business key of the business that this service 
+		belongs to, the service access point, and the WSDL URL.</p>
+		<h5>Batch mode usage</h5>
+		<p/>
+<pre>
+java ListAllServicesCommand Grimoires_URL</pre>
+<h3><a name="DeleteEntity"></a>DeleteEntity</h3>
+<p />
+Delete an entity, which can be a UDDI service, a UDDI business, a metadata, or a 
+WSDL description.<h5>Arguments</h5>
+		<p>The entity key.</p>
+<p>The entity type: one of business, service, metadata or wsdl.</p>
+<h5>Returns</h5>
+		<p>Null.</p>
+		<h5>Batch mode usage</h5>
+		<p/>
+<pre>
+java DeleteEntityCommand Grimoires_URL key type</pre>
+
+<h3><a name="GetEntityMetadata"></a>GetEntityMetadata</h3>
+<p>Get the metadata attached to an entity.</p>
+<h5>Arguments</h5>
+		<p>The entity key.</p>
+<p>The entity type: either business or service.</p>
+<h5>Returns</h5>
+		<p>The detailed information of the metadata that have been attached with 
+		this entity, including the metadata key, the metadata type, and the 
+		metadata value.</p>
+		<h5>Batch mode usage</h5>
+		<p/>
+<pre>
+java GetEntityMetadataCommand Grimoires_URL key type</pre>
+
+<h3><a name="send_soap"> </a> SendSoapMessage </h3>
+<p />
+Send a soap message to a Web Service endpoint.<h5>Arguments</h5>
+		<p>The target Web Service endpoint. E.g., a Grimoires UDDIv2 publish WS 
+		endpoint could be
+		<a href="http://fantasio.ecs.soton.ac.uk:8080/grimoires/services/publish">
+		http://fantasio.ecs.soton.ac.uk:8080/grimoires/services/publish</a>.</p>
+<p>The XML filename whose content constructs the SOAP message body.</p>
+<h5>Returns</h5>
+		<p>The response SOAP message.</p>
+		<h5>Batch mode usage</h5>
+		<p/>
+<pre>
+java SendSoapMessageCommand endpoint filename</pre>
+
+<h3><a name="findServiceByWSDL"></a>FindServiceByWSDL</h3>
+<p />
+Find a service which has the specified WSDL as its interface.<h5>Arguments</h5>
+		<p>The WSDL URL.</p>
+<h5>Returns</h5>
+		<p>The service name.</p>
+<p>The service key.</p>
+<p>The business key of the business that this service belongs to.</p>
+<p>The service access point.</p>
+<p>The WSDL URL.</p>
+		<h5>Batch mode usage</h5>
+
+<h3><a name="findWSDLByMessagePart"></a>FindWSDLByMessagePart</h3>
+<p />
+Find the WSDL which defines the specified message part.<h5>Arguments</h5>
+		<p>The message namespace.</p>
+<p>The message name.</p>
+<p>The message part name.</p>
+<h5>Returns</h5>
+		<p>The WSDL URL.</p>
+		<h5>Batch mode usage</h5>
+
+<h3><a name="setTerminationTime"></a>SetTerminationTime</h3>
+<p />
+Set the termination time of an entity.<h5>Arguments</h5>
+		<p>The entity key.</p>
+<p>The key type (business, service, or metadata).</p>
+<p>The lifetime in seconds since now, or the desired termination time in the<br>
+format &quot;dd/mm/yy hh:mm:ss&quot;.</p>
+<h5>Returns</h5>
+		<p>A confirmation message if succeeds.</p>
+		<h5>Batch mode usage</h5>
+
+<h3><a name="publishXML"></a>PublishXML</h3>
+<p />
+Publish a description in XML through the XMLView interface.<h5>Arguments</h5>
+		<p>The XML filename or URL.</p>
+<p>The to-be-published XML element's localname.</p>
+<h5>Returns</h5>
+		<p>Null.</p>
+		<h5>Batch mode usage</h5>
+
+<h3><a name="queryXML"></a>QueryXML</h3>
+<p />
+Issue an XPath query over Grimoires' XML schema through the XMLView interface.<h5>Arguments</h5>
+		<p>The XPath expression.</p>
+<h5>Returns</h5>
+		<p>XPath query result.</p>
+		<h5>Batch mode usage</h5>
+
+<h3><a name="queryAndTranslateXML"></a>QueryAndTranslateXML</h3>
+<p />
+Issue an XPath query over Grimoires' XML schema through the XMLView interface. 
+The query result will be translated to the native schema if there is a defined 
+XSL translation and the data in Grimoires schema is originally from the 
+specified native schema.<h5>Arguments</h5>
+		<p>The XPath expression.</p>
+<h5>Returns</h5>
+		<p>XPath query result.</p>
+		<h5>Batch mode usage</h5>
+
+<h3><a name="listAllWSDLs"></a>ListAllWSDLs</h3>
+<p />
+List all published WSDL documents.<h5>Arguments</h5>
+		<p>Null.</p>
+<h5>Returns</h5>
+		<p>All published WSDL documents.</p>
+		<h5>Batch mode usage</h5>
+		<p/>
+<pre>
+java ListAllWSDLsCommand endpoint</pre>
+
+	</div>
+
+</body></html>

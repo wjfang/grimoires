@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=IL-BGU,mds-vo-name=IL-BGU">
+    <Name>IL-BGU</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:grid-manager@cs.bgu.ac.il</UserSupportContact>
+    <SysAdminContact>mailto:grid-manager@cs.bgu.ac.il</SysAdminContact>
+    <SecurityContact>mailto:grid-manager@cs.bgu.ac.il</SecurityContact>
+    <Location>Beer-Sheva, Israel</Location>
+    <Latitude>31.25</Latitude>
+    <Longitude>34.79</Longitude>
+    <Web>http://egee-grid.bgu.ac.il</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>http://www.bgu.ac.il</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=cs-grid0.bgu.ac.il,mds-vo-name=IL-BGU">
+        <Name>cs-grid0.bgu.ac.il</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=cs-grid0.bgu.ac.il,GlueClusterUniqueID=cs-grid0.bgu.ac.il,mds-vo-name=IL-BGU">
+            <Name>cs-grid0.bgu.ac.il</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SLC" Release="4.5" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="GenuineIntel" Model="Intel(R) Xeon(R) 5130  @ 2.00GHz" ClockSpeed="1995"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="true"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="12288" RAMSize="4096"/>
+            <Architecture SMPSize="4"/>
+            <Benchmark SI00="2100" SF00="2150"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=cs-grid1.bgu.ac.il,mds-vo-name=IL-BGU">
+        <Name>cs-grid1.bgu.ac.il</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=cs-grid1.bgu.ac.il,GlueClusterUniqueID=cs-grid1.bgu.ac.il,mds-vo-name=IL-BGU">
+            <Name>cs-grid1.bgu.ac.il</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SLC" Release="4.5" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="GenuineIntel" Model="Intel(R) Xeon(R) 5130  @ 2.00GHz" ClockSpeed="1995"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="true"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="12288" RAMSize="4096"/>
+            <Architecture SMPSize="4"/>
+            <Benchmark SI00="2100" SF00="2150"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=cs-grid2.bgu.ac.il,mds-vo-name=IL-BGU">
+        <InformationServiceURL>ldap://cs-grid2.bgu.ac.il:2170/mds-vo-name=resource,o=grid</InformationServiceURL>
+        <SizeTotal>174</SizeTotal>
+        <SizeFree>172</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/bgu.ac.il/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1150</UsedSpace>
+            <AvailableSpace>172410000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/bgu.ac.il/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4797</UsedSpace>
+            <AvailableSpace>172410000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/dpm/bgu.ac.il/home/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>172410000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/dpm/bgu.ac.il/home/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1833</UsedSpace>
+            <AvailableSpace>172410000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomed">
+            <Path>/dpm/bgu.ac.il/home/biomed</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>156993</UsedSpace>
+            <AvailableSpace>172410000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/bgu.ac.il/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>172410000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/dpm/bgu.ac.il/home/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>172410000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="see">
+            <Path>/dpm/bgu.ac.il/home/see</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>172410000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://cs-grid2.bgu.ac.il</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://cs-grid2.bgu.ac.il</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://cs-grid2.bgu.ac.il</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=cs-grid1.bgu.ac.il:2119,mds-vo-name=IL-BGU">
+        <Name>IL-BGU-org.glite.ce</Name>
+        <Type>org.glite.ce</Type>
+        <Version>2.4.20</Version>
+        <Endpoint>cs-grid1.bgu.ac.il:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>biomed</Owner>
+        <Owner>cms</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>see</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=cs-grid3.bgu.ac.il:2136,mds-vo-name=IL-BGU">
+        <Name>IL-BGU-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://cs-grid3.bgu.ac.il:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>biomed</Owner>
+        <Owner>cms</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>see</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://cs-grid2.bgu.ac.il:8443/srm/managerv1,mds-vo-name=IL-BGU">
+        <Name>IL-BGU-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://cs-grid2.bgu.ac.il:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://cs-grid2.bgu.ac.il:8446/srm/managerv2,mds-vo-name=IL-BGU">
+        <Name>IL-BGU-srm</Name>
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://cs-grid2.bgu.ac.il:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

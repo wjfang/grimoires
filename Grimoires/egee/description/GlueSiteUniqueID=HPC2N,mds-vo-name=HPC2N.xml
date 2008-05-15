@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=HPC2N,mds-vo-name=HPC2N">
+    <Name>HPC2N</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto: lcg2@hpc2n.umu.se</UserSupportContact>
+    <SysAdminContact>mailto: lcg2@hpc2n.umu.se</SysAdminContact>
+    <SecurityContact>mailto: lcg2@hpc2n.umu.se</SecurityContact>
+    <Location>Umea, Sweden</Location>
+    <Latitude>63.820337</Latitude>
+    <Longitude>20.30665</Longitude>
+    <Web>http://www.hpc2n.umu.se</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER 2</OtherInfo>
+    <OtherInfo>ndgf.org</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=i101.hpc2n.umu.se,mds-vo-name=HPC2N">
+        <Name>i101.hpc2n.umu.se</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=i101.hpc2n.umu.se,GlueClusterUniqueID=i101.hpc2n.umu.se,mds-vo-name=HPC2N">
+            <Name>i101.hpc2n.umu.se</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="breezy" Release="5.10" Name="Ubuntu"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="P4" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="true"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="512" RAMSize="1800"/>
+            <Architecture SMPSize="1"/>
+            <Benchmark SI00="836" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=ibelieve-i.hpc2n.umu.se,mds-vo-name=HPC2N">
+        <InformationServiceURL>ldap://ibelieve-i.hpc2n.umu.se:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="dteam">
+            <Path>/import/lcg2-se1/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>0</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/import/lcg2-se1/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>0</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/import/lcg2-se1/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>0</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/import/lcg2-se1/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>0</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/import/lcg2-se1/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>0</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomed">
+            <Path>/import/lcg2-se1/biomed</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>0</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="embrace">
+            <Path>/import/lcg2-se1/embrace</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>0</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://ibelieve-i.hpc2n.umu.se</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=ibelieve-i.hpc2n.umu.se:2136,mds-vo-name=HPC2N">
+        <Name>HPC2N-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://ibelieve-i.hpc2n.umu.se:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>dteam</Owner>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>cms</Owner>
+        <Owner>ops</Owner>
+        <Owner>biomed</Owner>
+        <Owner>embrace</Owner>
+    </Service>
+</Site>

@@ -1,0 +1,45 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<serviceDescriptions  xmlns="pd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="pd /C:/Program Files/taverna-workbench-1.2/./plugins/pedro/services/model/common.xsd">
+	<serviceDescription >
+		<serviceName>SHoundFindAcc</serviceName>
+		<organisation >
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundFindAcc</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundFindAcc?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Converts an accession number for a sequence into a GenInfo identifier - GI. This function will not accept a version number (e.g. NP_116609.1). The&apos;.1&apos;must be removed from the example version number to form a valid accession. SeqHound only stores and returns the latest version of</serviceDescriptionText>
+		<operations >
+			<serviceOperation >
+				<operationName>SHoundFindAcc</operationName>
+				<operationDescriptionText>Converts an accession number for a sequence into a GenInfo identifier - GI. This function name is deprecated and should be replaced by SHoundGiFromGBAcc.</operationDescriptionText>
+				<operationInputs >
+					<parameter >
+						<parameterName>acc</parameterName>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs >
+					<parameter >
+						<parameterName>result</parameterName>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#translating</operationTask>
+				<operationResource>http://www.mygrid.org.uk/ontology#sequence_database</operationResource>
+				<operationResourceContent>http://www.mygrid.org.uk/ontology#model_organism</operationResourceContent>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

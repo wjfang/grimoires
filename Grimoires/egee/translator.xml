@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<serviceTranslator>
+	<saveIntoGrimoires>
+		<saveBusiness xslt="toUDDIBusiness.xsl" />
+		<saveMetadata xslt="toBusinessMetadata.xsl" />
+	</saveIntoGrimoires>
+	
+	<loadFromGrimoires>
+	
+	</loadFromGrimoires>
+	
+</serviceTranslator>

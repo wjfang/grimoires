@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" 
+  targetNamespace="http://www.grimoires.org/inquire_metadata.wsdl" 
+  xmlns:tns="http://www.grimoires.org/inquire_metadata.wsdl" 
+  xmlns:meta="http://www.grimoires.org/metadata.xsd"
+  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+  name="Grimoires_inquire_metadata_API">
+
+  <types>
+    <xsd:schema
+      targetNamespace="http://www.grimoires.org/metadata.xsd"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import
+	schemaLocation="/grimoires/xsd/metadata.xsd"/>
+    </xsd:schema>
+  </types>
+  
+  <message name="faultDetailList">
+    <part name="body" element="meta:faultDetailList"/>
+  </message>
+
+  <message name="get_metadataDetail">
+    <part name="body" element="meta:get_metadataDetail"/>
+  </message>
+
+  <message name="find_entityByMetadata">
+    <part name="body" element="meta:find_entityByMetadata"/>
+  </message>
+
+  <message name="entityReferenceList">
+    <part name="body" element="meta:entityReferenceList" />
+  </message> 
+
+  <message name="get_entityMetadata">
+    <part name="body" element="meta:get_entityMetadata" />
+  </message>
+
+  <message name="metadataInfos">
+    <part name="body" element="meta:metadataInfos" />
+  </message>
+
+  <message name="metadataInfo">
+    <part name="body" element="meta:metadataInfo" />
+  </message>
+
+  <message name="uriBag">
+    <part name="body" element="meta:uriBag" />
+  </message>
+
+  <message name="get_supportedEntityType">
+    <part name="body" element="meta:get_supportedEntityType" />
+  </message>
+
+  <portType name="InquireMetadataPort">
+    <operation name="get_metadataDetail">
+      <input message="tns:get_metadataDetail" />
+      <output message="tns:metadataInfo" />
+      <fault name="error" message="tns:faultDetailList"/>
+    </operation>     
+    <operation name="find_entityByMetadata">
+      <input message="tns:find_entityByMetadata" />
+      <output message="tns:entityReferenceList" />
+      <fault name="error" message="tns:faultDetailList"/>
+    </operation>            
+    <operation name="get_entityMetadata">
+      <input message="tns:get_entityMetadata" />
+      <output message="tns:metadataInfos" />
+      <fault name="error" message="tns:faultDetailList"/>
+    </operation>
+    <operation name="get_supportedEntityType">
+      <input message="tns:get_supportedEntityType" />
+      <output message="tns:uriBag" />
+      <fault name="error" message="tns:faultDetailList"/>
+    </operation>
+  </portType>
+  
+  <binding name="InquireMetadataSoap" type="tns:InquireMetadataPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+      <operation name="get_metadataDetail">
+      <soap:operation soapAction="get_metadataDetail" style="document" />
+      <input>
+	<soap:body use="literal" parts="body"/>
+      </input>
+      <output>
+	<soap:body use="literal" parts="body" />
+      </output>
+      <fault name="error">
+	<soap:fault name="error" use="literal"/>
+      </fault>
+    </operation>            
+
+    <operation name="find_entityByMetadata">
+      <soap:operation soapAction="find_entityByMetadata" style="document" />
+      <input>
+	<soap:body use="literal" parts="body"/>
+      </input>
+      <output>
+	<soap:body use="literal" parts="body" />
+      </output>
+      <fault name="error">
+	<soap:fault name="error" use="literal"/>
+      </fault>
+    </operation>            
+    
+    <operation name="get_entityMetadata">
+      <soap:operation soapAction="get_entityMetadata" style="document" />
+      <input>
+	<soap:body use="literal" parts="body"/>
+      </input>
+      <output>
+	<soap:body use="literal" parts="body" />
+      </output>
+      <fault name="error">
+	<soap:fault name="error" use="literal"/>
+      </fault>
+    </operation>
+
+    <operation name="get_supportedEntityType">
+      <soap:operation soapAction="get_supportedEntityType" style="document" />
+      <input>
+	<soap:body use="literal" parts="body"/>
+      </input>
+      <output>
+	<soap:body use="literal" parts="body" />
+      </output>
+      <fault name="error">
+	<soap:fault name="error" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+
+  <service name="Grimoires">
+    <port binding="tns:InquireMetadataSoap" name="inquire_metadata">
+      <soap:address location="http://localhost:8080/grimoires/services/inquire_metadata"/>
+    </port>
+  </service>
+  
+</definitions>

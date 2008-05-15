@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=INFN-GENOVA,mds-vo-name=INFN-GENOVA">
+    <Name>INFN-GENOVA</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:mirko.corosu@ge.infn.it</UserSupportContact>
+    <SysAdminContact>mailto:mirko.corosu@ge.infn.it</SysAdminContact>
+    <SecurityContact>mailto:mirko.corosu@ge.infn.it</SecurityContact>
+    <Location>Genoa, Italy</Location>
+    <Latitude>44.4181</Latitude>
+    <Longitude>8.9307</Longitude>
+    <Web>http://www.ge.infn.it</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-3</OtherInfo>
+    <OtherInfo>CNAF-T1</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=grid01.ge.infn.it,mds-vo-name=INFN-GENOVA">
+        <Name>grid01.ge.infn.it</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=grid01.ge.infn.it,GlueClusterUniqueID=grid01.ge.infn.it,mds-vo-name=INFN-GENOVA">
+            <Name>grid01.ge.infn.it</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SLC" Release="3.0.5" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="PIII" ClockSpeed="1001"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1025" RAMSize="513"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="381" SF00="309"/>
+            <Location LocalID="VO-gridit-GEANT4CATANIA-aborted-install">
+                <Name>VO-gridit-GEANT4CATANIA-aborted-install</Name>
+                <Version>Prod</Version>
+                <Path>$VO_GRIDIT_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-gridit-GEANT4CT">
+                <Name>VO-gridit-GEANT4CT</Name>
+                <Version>Prod</Version>
+                <Path>$VO_GRIDIT_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=grid03.ge.infn.it,mds-vo-name=INFN-GENOVA">
+        <InformationServiceURL>ldap://grid03.ge.infn.it:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/flatfiles/SE00/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4081476</UsedSpace>
+            <AvailableSpace>354250368</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/flatfiles/SE00/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4081476</UsedSpace>
+            <AvailableSpace>354250368</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="infngrid">
+            <Path>/flatfiles/SE00/infngrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4081476</UsedSpace>
+            <AvailableSpace>354250368</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gridit">
+            <Path>/flatfiles/SE00/gridit</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4081476</UsedSpace>
+            <AvailableSpace>354250368</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>/flatfiles/SE00/geant4</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4081476</UsedSpace>
+            <AvailableSpace>354250368</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/flatfiles/SE00/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4081476</UsedSpace>
+            <AvailableSpace>354250368</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://grid03.ge.infn.it</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=grid03.ge.infn.it:2136,mds-vo-name=INFN-GENOVA">
+        <Name>INFN-GENOVA-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://grid03.ge.infn.it:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>infngrid</Owner>
+        <Owner>gridit</Owner>
+        <Owner>geant4</Owner>
+        <Owner>ops</Owner>
+    </Service>
+</Site>

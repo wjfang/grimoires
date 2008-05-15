@@ -1,0 +1,52 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<serviceDescriptions  xmlns="pd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="pd /C:/Program Files/taverna-workbench-1.2/./plugins/pedro/services/model/common.xsd">
+	<serviceDescription >
+		<serviceName>SHoundGetDomainsFromGiWithEvalue</serviceName>
+		<organisation >
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundGetDomainsFromGiWithEvalue</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundGetDomainsFromGiWithEvalue?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Fetches information about domains from the Conserved Domain Database (CDD) as assigned by Reverse Position Specific BLAST to a given protein sequence. Uses redundancy information for the query protein. This means that if the query fails for the input gi identifier, then the query will be retried for all other gi identifiers that belong to the same redundant group. The function uses an E-value cutoff for reporting results.</serviceDescriptionText>
+		<operations >
+			<serviceOperation >
+				<operationName>SHoundGetDomainsFromGiWithEvalue</operationName>
+				<operationInputs >
+					<parameter >
+						<parameterName>gi</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#biological_sequence_id</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+					<parameter >
+						<parameterName>eValue</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_data</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs >
+					<parameter >
+						<parameterName>result</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_data</semanticType>
+						<transportDataType>XMLString</transportDataType>
+						<collectionSemanticType>Collection</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#retrieving</operationTask>
+				<operationResourceContent>http://www.mygrid.org.uk/ontology#model_organism</operationResourceContent>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

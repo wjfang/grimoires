@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Grimoires Documentation - Implementation Design - Grimoires</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url('i_arrow_down.gif');
+	}
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script>
+</head>
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1><a name="Implementaion_Design"> </a> Implementation Design - Grimoires </h1>
+<p />
+<div class="twikiToc">
+<ul>
+<li> <a href="#Implementaion_Design">Implementation Design - Grimoires</a>
+<ul>
+<li> <a href="#Overview">Overview</a>
+</li>
+<li> <a href="#The_structure_explained">The structure explained</a>
+</li>
+<li> <a href="#Saver_Loader_and_RDQLGenerator_v">Saver, Loader and RDQLGenerator visitors</a></li>
+<li> <a href="#client">Client side</a><ul>
+<li><a href="#concern">Separate concern</a></li>
+<li><a href="#factory">Abstract factory pattern</a></li>
+<li><a href="#gshellconf">GShell runtime configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p />
+<h2><a name="Overview"> </a> Overview </h2>
+<ul>
+<li> Internally, the registry adopts a message-passing metaphore and a component based approach. Soap messages are transformed by Axis into Java objects.  Messages are handled by components we refer to as <em>handlers</em>.
+Handlers are typically designed to process messages of a same category, such as
+the messages of the UDDI publish interface, of the UDDI inquiry interface, or
+messages related to metadata. Such handlers in fact would correspond to the
+business logic implementing the registry.  This has a number of benefits:
+<ul>
+<li> Ease of maintenance: code for a handler for a given interface will be well scoped.
+</li>
+<li> Separate compilation and flexible deployment: we aim at being able to compile separately components, and possibly deploy only a subset of them in some specific configuration. For instance: we should be able to deploy just the
+UDDI interfaces, or just the UDDI and metadata interfaces. <em>This obviously requires component code not to make reference to other component code!</em>
+</li>
+</ul>
+</li>
+</ul>
+<p />
+<p />
+<ul>
+<li> Some OO patterns have been adopted: specifically, the visitor pattern is used to structure all messages and their associated handlers.  Each message of a given category will implement a given interface, e.g. <code>PublishMessage</code> and <code>PublishProcessable</code> for messages of the UDDI publish interface. In particular, such messages will implement a method <code>accept</code> for the handler handling messages of such category.  Handlers will be visitors offering a method <code>process</code> for each of messages in the interface.
+<ul>
+<li> Some default handlers are provided for each interface. In particular, a handler "not implemented" which will return an error for each message it is passed.  When developing a new handler, it is therefore natural to subclass such a "not implemented" handler, which will ensure consistent error messages for all non implemented methods. This is far better that returning a null value since it becomes very hard to know where this value was generated.
+</li>
+</ul>
+</li>
+</ul>
+<p />
+<p />
+<ul>
+<li> We have adopted a message passing approach so that messages can be delegated to other components simply by passing them. <em>Currently</em>, our handling of messages is <em>asymmetric</em>.  A message is passed to a handler using the visitor pattern approach, i.e. by calling <code>process</code> on the handler, with the message as argument.  However, the returned result (if any) is not passed as a message in the same way. Instead, results are stored using the <code>setResult</code> method (in <code>AbstractMessage</code>), and the input message is returned with its result field set.
+</li>
+</ul>
+<p />
+<ul>
+<li> Given this approach, when an error situation is reached in the business
+logic, say because an input is incorrect, we do not raise an exception in the
+handler, instead we set the error field, using the <code>setError</code> method (in <code>AbstractMessage</code>).
+</li>
+</ul>
+<p />
+<ul>
+<li> A source of inefficiency is copying objects (and in particular deep copies). We aim to avoid these by making sure that once an object is created by the axis container, we do not copy it again. When methods have to be added to these objects' classes, we subclass the classes generated by axis, and we need to let axis know that the class to be used when deserialising an object is the new one. (This is done by defining the entry for the data type in the config/deploy.wsdd file).
+</li>
+</ul>
+<p />
+<ul>
+<li> <a href="./arch.eps" target="_top">Architecture diagram</a>
+</li>
+</ul>
+<p />
+<h2><a name="The_structure_explained"> </a> The structure explained </h2>
+<p />
+<table border="1" cellspacing="1" cellpadding="0">
+<tr><th class="twikiFirstCol" bgcolor="#99CCCC"> package </th><th bgcolor="#99CCCC"> comment </th></tr>
+<tr><td class="twikiFirstCol" bgcolor="#FFFFFF"> <code>uk.ac.soton.ecs.grimoires</code> </td><td bgcolor="#FFFFFF"> the grimoires distribution </td></tr>
+<tr><td class="twikiFirstCol" bgcolor="#FFFFCC"> <code>uk.ac.soton.ecs.grimoires.server</code> </td><td bgcolor="#FFFFCC"> the server side </td></tr>
+<tr><td class="twikiFirstCol" bgcolor="#FFFFFF"> <code>uk.ac.soton.ecs.grimoires.server.impl</code> </td><td bgcolor="#FFFFFF"> implementation of all interfaces </td></tr>
+<tr><td class="twikiFirstCol" bgcolor="#FFFFCC"> <code>uk.ac.soton.ecs.grimoires.server.impl.uddiv2</code> </td><td bgcolor="#FFFFCC"> implementation of uddiv2 interfaces </td></tr>
+<tr><td class="twikiFirstCol" bgcolor="#FFFFFF"> <code>uk.ac.soton.ecs.grimoires.server.impl.metadata</code> </td><td bgcolor="#FFFFFF"> implementation of metadata interfaces </td></tr>
+<tr><td class="twikiFirstCol" bgcolor="#FFFFCC"> <code>uk.ac.soton.ecs.grimoires.server.impl.wsdl</code> </td><td bgcolor="#FFFFCC"> implementation of wsdl-related interface </td></tr>
+<tr><td class="twikiFirstCol" bgcolor="#FFFFFF"> <code>uk.ac.soton.ecs.grimoires.server.impl.damls</code> </td><td bgcolor="#FFFFFF"> implementation of damls interfaces </td></tr>
+<tr><td class="twikiFirstCol" bgcolor="#FFFFCC"> <code>uk.ac.soton.ecs.grimoires.server.impl.topic</code> </td><td bgcolor="#FFFFCC"> implementation of topics interfaces </td></tr>
+<tr><td class="twikiFirstCol" bgcolor="#FFFFFF"> <code>uk.ac.soton.ecs.grimoires.server.store</code> </td><td bgcolor="#FFFFFF"> backend related matters </td></tr>
+<tr><td class="twikiFirstCol" bgcolor="#FFFFCC"> <code>uk.ac.soton.ecs.grimoires.server.configuration</code> </td><td bgcolor="#FFFFCC"> configuration classes </td></tr>
+<tr><td class="twikiFirstCol" bgcolor="#FFFFFF"> <code>uk.ac.soton.ecs.grimoires.server.test</code></td><td bgcolor="#FFFFFF">
+	functionality and performance tests</td></tr>
+<tr><td class="twikiFirstCol" bgcolor="#FFFFCC"> <code>uk.ac.soton.ecs.grimoires.server.axis</code></td><td bgcolor="#FFFFCC">
+	WSDL generator factory code</td></tr>
+<tr><td class="twikiFirstCol" bgcolor="#FFFFFF"> <code>uk.ac.soton.ecs.grimoires.server.jena.sesame</code></td><td bgcolor="#FFFFFF">
+	Jena-Sesame-Model, through which Sesame is used as the triple store</td></tr>
+<tr><td class="twikiFirstCol" bgcolor="#FFFFCC"> <code>uk.ac.soton.ecs.grimoires.wstester</code> </td><td bgcolor="#FFFFCC"> an XML client tester </td></tr>
+</table>
+<p />
+<p />
+Each implementation <strong>XXX</strong> of an interface attempts to follow a same structure:
+<p />
+<table border="1" cellspacing="1" cellpadding="0">
+<tr><td class="twikiFirstCol" bgcolor="#FFFFCC"> In <code>uk.ac.soton.ecs.grimoires.server.impl.</code> <strong>XXX</strong> </td><th bgcolor="#99CCCC"> <strong>comment</strong> </th></tr>
+<tr><td class="twikiFirstCol" bgcolor="#FFFFFF"> <code>messages</code> </td><td bgcolor="#FFFFFF"> message definitions and associated visitors </td></tr>
+<tr><td class="twikiFirstCol" bgcolor="#FFFFCC"> <code>datamodel</code> </td><td bgcolor="#FFFFCC"> data type definitions </td></tr>
+<tr><td class="twikiFirstCol" bgcolor="#FFFFFF"> <code>handlers</code> </td><td bgcolor="#FFFFFF"> implementation of handlers </td></tr>
+<tr><td class="twikiFirstCol" bgcolor="#FFFFCC"> <code>api</code> </td><td bgcolor="#FFFFCC"> implementation of APIs (currently server ties) </td></tr>
+</table>
+<p />
+<p />
+<h2><a name="Saver_Loader_and_RDQLGenerator_v"> </a> Saver, Loader and RDQLGenerator visitors </h2>
+<p />
+Grimoires uses the visitor pattern to save data objects to the RDF store, load data objects back from the store and generating RDQL queries from query data objects. Using this pattern means that we do not have to alter the data objects themselves, which are generated by Axis. Additionally, savers, loaders and query generators can be chosen to match the backend store. Currently this pattern is implemented for the metadata API implementations but the UDDIv2 APIs still use the old views design (where the data objects contain the load, save and generate RDQL methods).
+<p />
+The interfaces for the savers, loaders and RDQL generators are Saver, Loader and RDQLGenerator respectively. Each has an base implementation in the same package called AbstractSaver, AbstractLoader and AbstractRDQLGenerator. These throw a StoreException (for save and load) or RDFException (for RDQL generation) reporting that the object given as parameter cannot be saved/loaded/used to generate RDQL.
+<p />
+The Abstract classes should be overridden in the handlers of each API. For example, there is a MetadataSaver, MetadataLoader and MetadataRDQLGenerator. These override the save, load and generate methods for each type object to be saved, loaded or used in generation.
+<p />
+Using the save and load methods is fairly straightforward. To save, call saveToStore on a saver passing the Model to store to and the object to store. To load, call loadFromStore with an empty (default constructed) object to be initialised, the Model to load from and the Resource identifying the stored object details.
+<p />
+Generating RDQL is only slightly more complex. Each method for generating RDQL queries, named generateRdqlQuery, takes as arguments the object to generate the query from and a QueryDetails object. QueryDetails stores the list of statements, constraints, namespaces etc. that make up the query and is manipulated by the generate method. The client would usually create a new QueryDetails using the default constructor when generating a query. The generate method returns a GenerationResults object that contains the QueryDetails and the name of the variable that is used to identify the object to be returned by the query. The GenerationResults object can be processed using uk.ac..grimoires.server.impl.Jena.processQuery passing the Model to query, the GenerationResults and the variable name that the client is interested in.
+<p />
+
+<h2><a name="Security"> </a> Security </h2>
+<p />
+Grimoires uses its deployment container to obtain necessary tokens for authentication, for example an X509 Distinguished Name. An authorization component then checks this against an internal access control list (specified prior to the deployment of Grimoires), to see whether the incoming request is valid for the authentication token supplied. If so, it is executed, otherwise an Axis fault is returned to the originating client. A potential client must be capable of creating and sending the authentication token type expected by Grimoires' deployment container.
+
+<!--
+<h2><a name="JavaDoc"></a>JavaDoc</h2>
+>>>>>>> 1.8
+<p />
+For Grimoires Java API reference, please look at <a href="api/index.html">Grimoires JavaDoc</a>.
+<p />
+-->
+<h2 />
+<a name="client"></a>Client side</h2>
+<h4 />
+<a name="concern"></a>Separate concern</h4>
+<p />
+The idea behind the design and implementation of GRIMOIRES client side support 
+is to <i>separate concern</i>.
+<ul>
+	<li>Firstly, we need to separate the presentation layer and the business 
+	layer at the client side.The presentation layer is the user interface, which 
+	could be a command line utility (<a href="gshell.html">GShell</a>), a GUI, 
+	or an Eclipse plug-in. The business layer is in charge of calling GRIMOIRES 
+	API with the given user input, which is performed by
+	<a href="HowToGrimoiresProxy.htm">GrimoiresProxy</a>.</li>
+	<li>Secondly, in GrimoiresProxy we further separate the protocol processing 
+	and the message delivering. The protocol processing is in charge of 
+	preparing request data, invoking the proper operation and processing the 
+	response data. While the message delivering is usually an Axis-generated 
+	stub that serializes Java objects to SOAP message, sends the SOAP message to 
+	the service, and deserialzes the response SOAP message.</li>
+	</ul>
+	<h4 /><a name="factory"></a>Abstract factory pattern</h4>
+	<p />We use <a href="http://en.wikipedia.org/wiki/Abstract_factory_pattern">
+	abstract factory pattern</a> to instantiate multiple GrimoiresProxy that are 
+	used in different situations (i.e., with different message delivering 
+	capability) but share the same protocol processing code. We have</p>
+	<ul>
+		<li>GrimoiresWebServiceProxyFactory: a GrimoiresProxyFactory to 
+		instantiate GrimoiresProxy able to talk with Grimoires service deployed 
+		in OMII/Axis.</li>
+		<li>GrimoiresjUDDIWebServiceProxyFactory: a GrimoiresProxyFactory to 
+		instantiate GrimoiresProxy able to talk with jUDDI service deployed in 
+		OMII/Axis.</li>
+		<li>GrimoiresGT4WebServiceProxyFactory: a GrimoiresProxyFactory to 
+		instantiate GrimoiresProxy able to talk with Grimoires service deployed 
+		in GT4.</li>
+		<li>GrimoiresBusinessLogicProxyFactory: a GrimoiresProxyFactory to 
+		instantiate GrimoiresProxy able to talk with Grimoires business logic.</li>
+		</ul>
+		<h4 /><a name="gshellconf"></a>GShell runtime configuration</h4>
+		<p />To demonstrate the flexibility of Grimoires client side support, 
+		here we show how to configure GShell to talk with Grimoires deployed in 
+		different containers without modifying GShell's source code or doing 
+		recompilation.</p>
+		<p />Prepare a gshell.properties in the GShell directory, which has the 
+		following content:</p>
+		<pre>GrimoiresProxyFactory = uk.ac.soton.ecs.grimoires.proxy.ws.GrimoiresWebServiceProxyFactory</pre>
+		<p>This will tell GShell to instantiate a GrimoiresProxy able to talk 
+		with Grimoires service deployed in OMII or Axis.</p>
+		<pre>GrimoiresProxyFactory = uk.ac.soton.ecs.grimoires.proxy.gt4.GrimoiresGT4WebServiceProxyFactory</pre>
+		<p>This will tell GShell to instantiate a GrimoiresProxy able to talk 
+		with Grimoires service deployed in GT4.</p>
+		<p>Of course the corresponding stub should be on the classpath.</div>
+
+</body></html>

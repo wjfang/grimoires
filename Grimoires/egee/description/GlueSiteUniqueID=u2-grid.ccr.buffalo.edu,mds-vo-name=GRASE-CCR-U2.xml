@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=u2-grid.ccr.buffalo.edu,mds-vo-name=GRASE-CCR-U2">
+    <Name>GRASE-CCR-U2</Name>
+    <Description>OSG Site</Description>
+    <UserSupportContact>mailto: jbednasz@ccr.buffalo.edu</UserSupportContact>
+    <SysAdminContact>mailto: jbednasz@ccr.buffalo.edu</SysAdminContact>
+    <SecurityContact>mailto: jbednasz@ccr.buffalo.edu</SecurityContact>
+    <Location>Buffalo ,USA</Location>
+    <Latitude>-78.87</Latitude>
+    <Longitude>42.89</Longitude>
+    <Web>http://osg.ccr.buffalo.edu</Web>
+    <Cluster UniqueID="GlueClusterUniqueID=u2-grid.ccr.buffalo.edu,mds-vo-name=GRASE-CCR-U2">
+        <Name>u2-grid.ccr.buffalo.edu</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=u2-grid.ccr.buffalo.edu,GlueClusterUniqueID=u2-grid.ccr.buffalo.edu,mds-vo-name=GRASE-CCR-U2">
+            <Name>u2-grid.ccr.buffalo.edu</Name>
+            <PhysicalCPUs>1</PhysicalCPUs>
+            <LogicalCPUs>2</LogicalCPUs>
+            <TmpDir>/san/scratch/grid/grid-tmp/grid-data</TmpDir>
+            <WNTmpDir>/san/scratch/grid/grid-tmp/grid-data</WNTmpDir>
+            <OperatingSystem Version="TaroonUpdate9" Release="3" Name="RedHatEnterpriseAS"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="GenuineIntel" Model="Intel(R) Xeon(TM) CPU 3.20GHz" ClockSpeed="1000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1024" RAMSize="512"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="400" SF00="380"/>
+            <Location LocalID="SAMPLE_LOCATION">
+                <Name>SAMPLE_LOCATION</Name>
+                <Version>default</Version>
+                <Path>/SAMPLE-path</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_0">
+                <Name>VO-cms-CMSSW_1_2_0</Name>
+                <Version>CMSSW_1_2_0</Version>
+                <Path>/san/scratch/grid/grid-tmp/grid-apps/cmssoft/cms</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=u2-grid.ccr.buffalo.edu,mds-vo-name=GRASE-CCR-U2">
+        <InformationServiceURL>ldap://is.grid.iu.edu:2170/mds-vo-name=GRASE-CCR-U2,mds-vo-name=OSG,o=grid</InformationServiceURL>
+        <SizeTotal>63144944</SizeTotal>
+        <SizeFree>45656616</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="cms">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17488328</UsedSpace>
+            <AvailableSpace>45656616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="des">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17488328</UsedSpace>
+            <AvailableSpace>45656616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="mis">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17488328</UsedSpace>
+            <AvailableSpace>45656616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="osg">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17488328</UsedSpace>
+            <AvailableSpace>45656616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="fmri">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17488328</UsedSpace>
+            <AvailableSpace>45656616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gadu">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17488328</UsedSpace>
+            <AvailableSpace>45656616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="grow">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17488328</UsedSpace>
+            <AvailableSpace>45656616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="i2u2">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17488328</UsedSpace>
+            <AvailableSpace>45656616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ligo">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17488328</UsedSpace>
+            <AvailableSpace>45656616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="sdss">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17488328</UsedSpace>
+            <AvailableSpace>45656616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17488328</UsedSpace>
+            <AvailableSpace>45656616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dosar">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17488328</UsedSpace>
+            <AvailableSpace>45656616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dzero">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17488328</UsedSpace>
+            <AvailableSpace>45656616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="grase">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17488328</UsedSpace>
+            <AvailableSpace>45656616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ivdgl">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17488328</UsedSpace>
+            <AvailableSpace>45656616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17488328</UsedSpace>
+            <AvailableSpace>45656616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gridex">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17488328</UsedSpace>
+            <AvailableSpace>45656616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="osgedu">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17488328</UsedSpace>
+            <AvailableSpace>45656616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="nanohub">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17488328</UsedSpace>
+            <AvailableSpace>45656616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="fermilab">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17488328</UsedSpace>
+            <AvailableSpace>45656616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="mariachi">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17488328</UsedSpace>
+            <AvailableSpace>45656616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="engagement">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17488328</UsedSpace>
+            <AvailableSpace>45656616</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+    </StorageElement>
+</Site>

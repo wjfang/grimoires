@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tModel tModelKey="http://industry.ebi.ac.uk/soap/soaplab/alignment_global::needle?wsdl" xmlns="urn:uddi-org:api_v2">
+ <name>
+http://industry.ebi.ac.uk/soap/soaplab/alignment_global::needle?wsdl </name>
+ <overviewDoc>
+  <overviewURL>
+http://industry.ebi.ac.uk/soap/soaplab/alignment_global::needle?wsdl  </overviewURL>
+ </overviewDoc>
+ <categoryBag>
+  <keyedReference keyName="uddi-org:types" keyValue="wsdlSpec" tModelKey="uuid:C1ACF26D-9672-4404-9D70-39B756E62AB4"/>
+ </categoryBag>
+</tModel>

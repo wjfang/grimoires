@@ -1,0 +1,154 @@
+<project basedir="." default="release" name="Grimoires server-side binary">
+
+	<property file="manifest.properties"/>
+	
+	<target name="release">
+		<echo>${name} v${version} ${date}${line.separator}${url}</echo>
+	</target>
+
+	<!-- Not used -->
+	<target name="verify-install-env">
+		<echo message="verify-install-env"/>
+	</target>
+
+	<!-- Not used -->
+	<target name="verify-uninstall-env">
+		<echo message="verify-uninstall-env"/>
+	</target>
+
+	<!-- Not used -->
+	<target name="install">
+		<echo message="install"/>
+	</target>
+
+	<!-- Not used -->
+	<target name="uninstall">
+		<echo message="uninstall"/>
+	</target>
+
+	<!-- Not used -->
+	<target name="clean-install">
+		<delete dir="${tomcat.home}/webapps/grimoires"/>
+	</target>
+
+	<!-- Not used -->
+	<target name="pre-install">
+		<echo message="pre-install"/>
+	</target>
+
+	<target name="post-install" depends="unpack,tomcat.ownership,tomcat.set.permissions" />
+
+	<target name="unpack">
+		<echo message="post-install" />
+
+		<echo message="  Unpacking Grimoires war..." />
+		<unwar src="grimoires.war" dest="${tomcat.home}/webapps/grimoires" />
+		<mkdir dir="${tomcat.home}/webapps/grimoires/data" />
+		<!-- <mkdir dir="${omii.server.home}/grimoires_data" />  -->
+		
+		<echo message="  Updating configuration files..." />
+
+		<copy todir="${tomcat.home}/webapps/grimoires/WEB-INF" overwrite="true">
+			<fileset dir="${basedir}">
+				<include name="classes/**" />
+			</fileset>
+			<filterset>
+				<filter token="TOMCAT_HOME" value="${tomcat.home}" />
+				<filter token="OMII_HOME" value="${omii.server.home}" />
+				<filter token="TOMCAT_PROTOCOL" value="${tomcat.protocol}" />
+				<filter token="TOMCAT_HOST" value="${tomcat.host}" />
+				<filter token="TOMCAT_PORT" value="${tomcat.port}" />
+			</filterset>
+		</copy>
+		<!--
+		<copy file="${omii.home}/grid/crypto.properties" todir="${tomcat.home}/webapps/grimoires/WEB-INF/classes" />
+		-->
+	</target>
+
+	<target name="tomcat.ownership" if="setup.users" depends="check.setup.users">
+		<echo>changing webapp ownership</echo>
+		<chown owner="${tomcat.ownership.owner}" file="${tomcat.home}/webapps/grimoires/" type="dir" />
+		<chown owner="${tomcat.ownership.owner}" type="both" maxparallel="100">
+			<fileset dir="${tomcat.home}/webapps/grimoires/">
+				<include name="**/*" />
+			</fileset>
+		</chown>
+		<echo>changing webapp group ownership</echo>
+		<chgrp group="${tomcat.ownership.group}" file="${tomcat.home}/webapps/grimoires/" type="dir" />
+		<chgrp group="${tomcat.ownership.group}" type="both" maxparallel="100">
+			<fileset dir="${tomcat.home}/webapps/grimoires/">
+				<include name="**/*" />
+			</fileset>
+		</chgrp>
+	</target>
+
+	<target name="check.setup.users">
+		<condition property="setup.users">
+			<equals arg1="${omii.setup.users}" arg2="on" />
+		</condition>
+	</target>
+
+	<target name="tomcat.set.permissions" if="tomcat.permissions">
+		<echo>changing general webapp permission</echo>
+		<chmod perm="774" type="dir" maxparallel="100">
+			<fileset dir="${tomcat.home}/webapps/grimoires">
+				<include name="**/*" />
+			</fileset>
+		</chmod>
+		<chmod perm="${tomcat.permissions}" type="file" maxparallel="100">
+			<fileset dir="${tomcat.home}/webapps/grimoires">
+				<include name="**/*" />
+			</fileset>
+		</chmod>
+	</target>
+
+	<target name="deploy">
+		<echo message="deploy"/>
+	</target>
+
+	<target name="undeploy">
+		<echo message="undeploy"/>
+	</target>
+
+	<target name="test-service">
+		<echo message="Test service ${service.name}..."/>
+		<property name="service.url" 
+			value="${omii.tomcat.protocol}://${tomcat.host}:${tomcat.port}/grimoires/services/${service.name}"/>
+		<get src="${service.url}" dest="test-service-output-temp.htm"/>
+		<loadfile property="test-service.output" srcFile="test-service-output-temp.htm"/>
+		<echo message="${test-service.output}"/>
+		<delete file="test-service-output-temp.htm"/>
+	</target>
+
+	<target name="test-install">
+		<antcall target="test-service">
+			<param name="service.name" value="publish"/>
+		</antcall>
+		<antcall target="test-service">
+			<param name="service.name" value="inquire"/>
+		</antcall>
+		<antcall target="test-service">
+			<param name="service.name" value="inquire_metadata"/>
+		</antcall>
+		<antcall target="test-service">
+			<param name="service.name" value="inquire_uddiMetadata"/>
+		</antcall>
+		<antcall target="test-service">
+			<param name="service.name" value="inquire_wsdlMetadata "/>
+		</antcall>
+		<antcall target="test-service">
+			<param name="service.name" value="publish_metadata"/>
+		</antcall>
+		<antcall target="test-service">
+			<param name="service.name" value="wsdl"/>
+		</antcall>
+	</target>
+
+	<target name="configure-db">
+		<echo message="configure-db"/>
+	</target>
+
+	<target name="clean-db">
+		<echo message="clean-db"/>
+	</target>
+</project>

@@ -1,0 +1,45 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<serviceDescriptions  xmlns="pd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="pd /C:/Program Files/taverna-workbench-1.2/./plugins/pedro/services/model/common.xsd">
+	<serviceDescription >
+		<serviceName>SHoundGetGenBankffList</serviceName>
+		<organisation >
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundGetGenBankffList</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundGetGenBankffList?wsdl</interfaceWSDL>
+		<serviceDescriptionText>retrieves an array of strings formated in genbank ff.</serviceDescriptionText>
+		<operations >
+			<serviceOperation >
+				<operationName>SHoundGetGenBankffList</operationName>
+				<operationInputs >
+					<parameter >
+						<parameterName>giList</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_identifier</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Set</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs >
+					<parameter >
+						<parameterName>result</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#sequence</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Set</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#retrieving</operationTask>
+				<operationResource>http://www.mygrid.org.uk/ontology#Genbank_nucleotide_sequence_database</operationResource>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

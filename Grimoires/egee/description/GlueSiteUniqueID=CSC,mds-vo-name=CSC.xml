@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=CSC,mds-vo-name=CSC">
+    <Name>CSC</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:egee-support@listat.csc.fi</UserSupportContact>
+    <SysAdminContact>mailto:egee-support@listat.csc.fi</SysAdminContact>
+    <SecurityContact>mailto:egee-support@listat.csc.fi</SecurityContact>
+    <Location>Espoo, Finland</Location>
+    <Latitude>60.1</Latitude>
+    <Longitude>24.5</Longitude>
+    <Web>http://www.csc.fi</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>www.csc.fi</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=csc-ce.csc.fi,mds-vo-name=CSC">
+        <Name>csc-ce.csc.fi</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=csc-ce.csc.fi,GlueClusterUniqueID=csc-ce.csc.fi,mds-vo-name=CSC">
+            <Name>csc-ce.csc.fi</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.7" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="Opteron" ClockSpeed="2200"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="4096" RAMSize="4096"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1392" SF00="1663"/>
+            <Location LocalID="VO-esr-elmer-5.3.2">
+                <Name>VO-esr-elmer-5.3.2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ESR_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=egee-se.csc.fi,mds-vo-name=CSC">
+        <InformationServiceURL>ldap://egee-se.csc.fi:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="dteam">
+            <Path>/storage/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2836284</UsedSpace>
+            <AvailableSpace>68271380</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/storage/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2836284</UsedSpace>
+            <AvailableSpace>68271380</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="esr">
+            <Path>/storage</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2836284</UsedSpace>
+            <AvailableSpace>68271380</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="embrace">
+            <Path>/storage/embrace</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2836280</UsedSpace>
+            <AvailableSpace>68271384</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="tutor">
+            <Path>/storage/tutor</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2836284</UsedSpace>
+            <AvailableSpace>68271380</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://egee-se.csc.fi</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=egee-se.csc.fi:2136,mds-vo-name=CSC">
+        <Name>CSC-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://egee-se.csc.fi:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>esr</Owner>
+        <Owner>embrace</Owner>
+        <Owner>tutor</Owner>
+    </Service>
+</Site>

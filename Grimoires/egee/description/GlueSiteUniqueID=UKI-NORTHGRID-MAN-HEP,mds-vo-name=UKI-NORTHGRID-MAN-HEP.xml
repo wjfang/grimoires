@@ -1,0 +1,1075 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=UKI-NORTHGRID-MAN-HEP,mds-vo-name=UKI-NORTHGRID-MAN-HEP">
+    <Name>UKI-NORTHGRID-MAN-HEP</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto: hepman-lcg@lists.man.ac.uk</UserSupportContact>
+    <SysAdminContact>mailto: hepman-lcg@lists.man.ac.uk</SysAdminContact>
+    <SecurityContact>mailto: hepman-lcg@lists.man.ac.uk</SecurityContact>
+    <Location>Manchester, UK</Location>
+    <Latitude>53.4669</Latitude>
+    <Longitude>-2.2302</Longitude>
+    <Web>http://www.northgrid.ac.uk/manchester</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER 2</OtherInfo>
+    <OtherInfo>RAL-LCG2</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ce01.tier2.hep.manchester.ac.uk,mds-vo-name=UKI-NORTHGRID-MAN-HEP">
+        <Name>ce01.tier2.hep.manchester.ac.uk</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce01.tier2.hep.manchester.ac.uk,GlueClusterUniqueID=ce01.tier2.hep.manchester.ac.uk,mds-vo-name=UKI-NORTHGRID-MAN-HEP">
+            <Name>ce01.tier2.hep.manchester.ac.uk</Name>
+            <PhysicalCPUs>880</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="3.0.7" Release="3.0.7" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel" Model="EM64T" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="true"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2000" RAMSize="2000"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1200" SF00="0"/>
+            <Location LocalID="VO-atlas-cloud-UK">
+                <Name>VO-atlas-cloud-UK</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.31">
+                <Name>VO-atlas-production-12.0.31</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6">
+                <Name>VO-atlas-production-12.0.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6.4">
+                <Name>VO-atlas-production-12.0.6.4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.7">
+                <Name>VO-atlas-production-12.0.7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.95">
+                <Name>VO-atlas-production-12.0.95</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.20">
+                <Name>VO-atlas-production-13.0.20</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.30">
+                <Name>VO-atlas-production-13.0.30</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-tier-T2">
+                <Name>VO-atlas-tier-T2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r8">
+                <Name>VO-lhcb-Gauss-v25r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2">
+                <Name>VO-lhcb-XmlDDDB-v22r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r14">
+                <Name>VO-lhcb-XmlDDDB-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v12r10">
+                <Name>VO-lhcb-Boole-v12r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v12r18">
+                <Name>VO-lhcb-DaVinci-v12r18</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r6">
+                <Name>VO-lhcb-DaVinci-v17r6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r7">
+                <Name>VO-lhcb-DaVinci-v17r7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r8">
+                <Name>VO-lhcb-DaVinci-v17r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r14">
+                <Name>VO-lhcb-Brunel-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r8">
+                <Name>VO-lhcb-DecFiles-v13r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v5r0">
+                <Name>VO-lhcb-ParamFiles-v5r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r9">
+                <Name>VO-lhcb-Gauss-v25r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v18r0">
+                <Name>VO-lhcb-DaVinci-v18r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r15">
+                <Name>VO-lhcb-Brunel-v30r15</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r9">
+                <Name>VO-lhcb-DecFiles-v13r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r0">
+                <Name>VO-lhcb-DaVinci-v19r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r9-slc3_ia32_gcc323">
+                <Name>VO-lhcb-Gauss-v25r9-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r10">
+                <Name>VO-lhcb-Gauss-v25r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r10-slc3_ia32_gcc323">
+                <Name>VO-lhcb-Gauss-v25r10-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2-slc3_ia32_gcc323">
+                <Name>VO-lhcb-XmlDDDB-v22r2-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r14-slc3_ia32_gcc323">
+                <Name>VO-lhcb-XmlDDDB-v30r14-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v12r10-slc3_ia32_gcc323">
+                <Name>VO-lhcb-Boole-v12r10-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v12r18-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DaVinci-v12r18-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r6-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DaVinci-v17r6-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r7-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DaVinci-v17r7-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r8-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DaVinci-v17r8-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r17">
+                <Name>VO-lhcb-Brunel-v30r17</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r1">
+                <Name>VO-lhcb-DaVinci-v19r1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r2">
+                <Name>VO-lhcb-DaVinci-v19r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r3">
+                <Name>VO-lhcb-DaVinci-v19r3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r10">
+                <Name>VO-lhcb-DecFiles-v13r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r4">
+                <Name>VO-lhcb-DaVinci-v19r4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r11">
+                <Name>VO-lhcb-Gauss-v25r11</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r11">
+                <Name>VO-lhcb-DecFiles-v13r11</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r12">
+                <Name>VO-lhcb-DecFiles-v13r12</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r5">
+                <Name>VO-lhcb-DaVinci-v19r5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r12">
+                <Name>VO-lhcb-Gauss-v25r12</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_2">
+                <Name>VO-cms-CMSSW_1_2_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-Gate3.0.0-LCG">
+                <Name>VO-biomed-Gate3.0.0-LCG</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-Gate3.0.0-MT">
+                <Name>VO-biomed-Gate3.0.0-MT</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-TestU01-DistRNG">
+                <Name>VO-biomed-TestU01-DistRNG</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce02.tier2.hep.manchester.ac.uk,mds-vo-name=UKI-NORTHGRID-MAN-HEP">
+        <Name>ce02.tier2.hep.manchester.ac.uk</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce02.tier2.hep.manchester.ac.uk,GlueClusterUniqueID=ce02.tier2.hep.manchester.ac.uk,mds-vo-name=UKI-NORTHGRID-MAN-HEP">
+            <Name>ce02.tier2.hep.manchester.ac.uk</Name>
+            <PhysicalCPUs>860</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="3.0.7" Release="3.0.7" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel" Model="EM64T" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="true"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2000" RAMSize="2000"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1200" SF00="0"/>
+            <Location LocalID="VO-lhcb-DaVinci-v19r4">
+                <Name>VO-lhcb-DaVinci-v19r4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r5">
+                <Name>VO-lhcb-DaVinci-v19r5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r0-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DaVinci-v19r0-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r10">
+                <Name>VO-lhcb-Gauss-v25r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6.4">
+                <Name>VO-atlas-production-12.0.6.4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r17-slc3_ia32_gcc323">
+                <Name>VO-lhcb-Brunel-v30r17-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r10">
+                <Name>VO-lhcb-DecFiles-v13r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v18r0">
+                <Name>VO-lhcb-DaVinci-v18r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.95">
+                <Name>VO-atlas-production-12.0.95</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r14">
+                <Name>VO-lhcb-XmlDDDB-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v12r10-slc3_ia32_gcc323">
+                <Name>VO-lhcb-Boole-v12r10-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-Gate3.0.0-LCG">
+                <Name>VO-biomed-Gate3.0.0-LCG</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r12">
+                <Name>VO-lhcb-Gauss-v25r12</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r10-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DecFiles-v13r10-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.7">
+                <Name>VO-atlas-production-12.0.7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r9">
+                <Name>VO-lhcb-Gauss-v25r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v12r18">
+                <Name>VO-lhcb-DaVinci-v12r18</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r8">
+                <Name>VO-lhcb-DaVinci-v17r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r9-slc3_ia32_gcc323">
+                <Name>VO-lhcb-Gauss-v25r9-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r17">
+                <Name>VO-lhcb-Brunel-v30r17</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r0">
+                <Name>VO-lhcb-DaVinci-v19r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-Gate3.0.0-JR">
+                <Name>VO-biomed-Gate3.0.0-JR</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r8">
+                <Name>VO-lhcb-Gauss-v25r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r2">
+                <Name>VO-lhcb-DaVinci-v19r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-tier-T2">
+                <Name>VO-atlas-tier-T2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-Gate3.0.0-MT">
+                <Name>VO-biomed-Gate3.0.0-MT</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r8-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DaVinci-v17r8-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r6-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DaVinci-v17r6-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r14-slc3_ia32_gcc323">
+                <Name>VO-lhcb-XmlDDDB-v30r14-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2-slc3_ia32_gcc323">
+                <Name>VO-lhcb-XmlDDDB-v22r2-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-cloud-UK">
+                <Name>VO-atlas-cloud-UK</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r1">
+                <Name>VO-lhcb-DaVinci-v19r1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2">
+                <Name>VO-lhcb-XmlDDDB-v22r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r10-slc3_ia32_gcc323">
+                <Name>VO-lhcb-Gauss-v25r10-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r15">
+                <Name>VO-lhcb-Brunel-v30r15</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.31">
+                <Name>VO-atlas-production-12.0.31</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r11">
+                <Name>VO-lhcb-Gauss-v25r11</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r9">
+                <Name>VO-lhcb-DecFiles-v13r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r11">
+                <Name>VO-lhcb-DecFiles-v13r11</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r6">
+                <Name>VO-lhcb-DaVinci-v17r6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v18r0-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DaVinci-v18r0-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-TestU01-DistRNG">
+                <Name>VO-biomed-TestU01-DistRNG</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r9-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DecFiles-v13r9-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v12r18-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DaVinci-v12r18-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r7-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DaVinci-v17r7-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.20">
+                <Name>VO-atlas-production-13.0.20</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r14">
+                <Name>VO-lhcb-Brunel-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r7">
+                <Name>VO-lhcb-DaVinci-v17r7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r3-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DaVinci-v19r3-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r3">
+                <Name>VO-lhcb-DaVinci-v19r3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r8">
+                <Name>VO-lhcb-DecFiles-v13r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r1-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DaVinci-v19r1-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v5r0">
+                <Name>VO-lhcb-ParamFiles-v5r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-pheno-herwig-2-0-0">
+                <Name>VO-pheno-herwig-2-0-0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_PHENO_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6">
+                <Name>VO-atlas-production-12.0.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r12">
+                <Name>VO-lhcb-DecFiles-v13r12</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.30">
+                <Name>VO-atlas-production-13.0.30</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v12r10">
+                <Name>VO-lhcb-Boole-v12r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r2-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DaVinci-v19r2-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v5r0-slc3_ia32_gcc323">
+                <Name>VO-lhcb-ParamFiles-v5r0-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=dcache01.tier2.hep.manchester.ac.uk,mds-vo-name=UKI-NORTHGRID-MAN-HEP">
+        <InformationServiceURL>ldap://dcache01.tier2.hep.manchester.ac.uk:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>1000000</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/atlas</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2712802389</UsedSpace>
+            <AvailableSpace>82929149000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/alice</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3</UsedSpace>
+            <AvailableSpace>82929149000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/lhcb</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2</UsedSpace>
+            <AvailableSpace>82929149000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/cms</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>50</UsedSpace>
+            <AvailableSpace>82929149000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/dteam</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>111560</UsedSpace>
+            <AvailableSpace>82929149000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="babar">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/babar</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>63030252</UsedSpace>
+            <AvailableSpace>82929149000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dzero">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/dzero</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>82929149000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomed">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/biomed</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>322386</UsedSpace>
+            <AvailableSpace>82929149000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="t2k">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/t2k</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>82929149000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gridpp">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/gridpp</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>167</UsedSpace>
+            <AvailableSpace>82929149000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="pheno">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/pheno</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>82929149000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/ops</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1110</UsedSpace>
+            <AvailableSpace>82929149000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="manmace">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/manmace</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>82929149000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="calice">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/calice</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>13019</UsedSpace>
+            <AvailableSpace>82929149000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="hone">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/hone</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>41120</UsedSpace>
+            <AvailableSpace>82929149000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ilc">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/ilc</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>82929149000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp@dcache01.tier2.hep.manchester.ac.uk">
+            <Endpoint>gsiftp://dcache01.tier2.hep.manchester.ac.uk:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gridftp@dcache01.tier2.hep.manchester.ac.uk">
+            <Endpoint>gridftp://dcache01.tier2.hep.manchester.ac.uk:2811</Endpoint>
+            <Type>gridftp</Type>
+            <Version>1.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsidcap@dcache01.tier2.hep.manchester.ac.uk">
+            <Endpoint>gsidcap://dcache01.tier2.hep.manchester.ac.uk:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1@dcache01.tier2.hep.manchester.ac.uk">
+            <Endpoint>httpg://dcache01.tier2.hep.manchester.ac.uk:8443/srm/managerv1</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.1.0</Version>
+            <Capability>space allocation</Capability>
+            <Capability>space management</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=dcache02.tier2.hep.manchester.ac.uk,mds-vo-name=UKI-NORTHGRID-MAN-HEP">
+        <InformationServiceURL>ldap://dcache02.tier2.hep.manchester.ac.uk:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>1000000</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/atlas</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3743433373</UsedSpace>
+            <AvailableSpace>73954605000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/alice</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3</UsedSpace>
+            <AvailableSpace>73954605000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/lhcb</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3</UsedSpace>
+            <AvailableSpace>73954605000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/cms</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>132</UsedSpace>
+            <AvailableSpace>73954605000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/dteam</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>226636831</UsedSpace>
+            <AvailableSpace>73954605000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="babar">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/babar</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>982585918</UsedSpace>
+            <AvailableSpace>73954605000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dzero">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/dzero</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>73954605000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomed">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/biomed</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>451532</UsedSpace>
+            <AvailableSpace>73954605000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="t2k">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/t2k</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>73954605000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gridpp">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/gridpp</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>18</UsedSpace>
+            <AvailableSpace>73954605000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="pheno">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/pheno</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>987</UsedSpace>
+            <AvailableSpace>73954605000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/ops</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3423</UsedSpace>
+            <AvailableSpace>73954605000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="manmace">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/manmace</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>73954605000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="calice">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/calice</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4</UsedSpace>
+            <AvailableSpace>73954605000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="hone">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/hone</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>16110308</UsedSpace>
+            <AvailableSpace>73954605000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ilc">
+            <Path>/pnfs/tier2.hep.manchester.ac.uk/data/ilc</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2</UsedSpace>
+            <AvailableSpace>73954605000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp@dcache02.tier2.hep.manchester.ac.uk">
+            <Endpoint>gsiftp://dcache02.tier2.hep.manchester.ac.uk:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gridftp@dcache02.tier2.hep.manchester.ac.uk">
+            <Endpoint>gridftp://dcache02.tier2.hep.manchester.ac.uk:2811</Endpoint>
+            <Type>gridftp</Type>
+            <Version>1.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsidcap@dcache02.tier2.hep.manchester.ac.uk">
+            <Endpoint>gsidcap://dcache02.tier2.hep.manchester.ac.uk:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1@dcache02.tier2.hep.manchester.ac.uk">
+            <Endpoint>httpg://dcache02.tier2.hep.manchester.ac.uk:8443/srm/managerv1</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.1.0</Version>
+            <Capability>space allocation</Capability>
+            <Capability>space management</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=httpg://dcache01.tier2.hep.manchester.ac.uk:8443/srm/managerv1,mds-vo-name=UKI-NORTHGRID-MAN-HEP">
+        <Name>UKI-NORTHGRID-MAN-HEP-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://dcache01.tier2.hep.manchester.ac.uk:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://dcache02.tier2.hep.manchester.ac.uk:8443/srm/managerv1,mds-vo-name=UKI-NORTHGRID-MAN-HEP">
+        <Name>UKI-NORTHGRID-MAN-HEP-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://dcache02.tier2.hep.manchester.ac.uk:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

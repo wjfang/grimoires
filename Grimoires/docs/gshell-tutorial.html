@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Grimoires Documentation - Tutorial - GShell Client</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url('i_arrow_down.gif');
+	}	        
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script>
+</head>
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1><a name="GShell_Tutorial"></a>Tutorial - GShell Client</h1>
+<p />
+<div class="twikiToc">
+<ul>
+<li> <a href="#GShell_Tutorial">Tutorial - GShell Client</a>
+<ul>
+<li> <a href="#Introduction">Introduction</a> 
+</li>
+<li> <a href="#interactive">Interactive mode</a>
+<ul>
+	<li><a href="#inter_publish_business">Publish a new business entity</a> 
+	</li>
+	<li><a href="#inter_publish_service">Publish a new business service</a> 
+	</li>
+	<li><a href="#inter_discover_service">Discover the service by name</a></li>
+	<li><a href="#inter_publish_wsdl">Publish the WSDL file</a> 
+	</li>
+	<li><a href="#inter_publish_metadata">Publish metadata</a> 
+	</li>
+	<li><a href="#inter_inquire_metadata">Inquire by metadata</a> </li>
+</ul>
+</li>
+<li><a href="#batch">Batch mode</a>
+<ul>
+	<li><a href="#batch_publish_business">Publish a new business entity</a> 
+	</li>
+	<li><a href="#batch_publish_service">Publish a new business service</a> 
+	</li>
+	<li><a href="#batch_discover_service">Discover the service by name</a></li>
+	<li><a href="#batch_publish_wsdl">Publish the WSDL file</a> 
+	</li>
+	<li><a href="#batch_publish_metadata">Publish metadata</a> 
+	</li>
+	<li><a href="#batch_inquire_metadata">Inquire by metadata</a> </li>
+
+</ul></li>
+<li><a href="#soap">Sending soap message</a>
+<ul>
+	<li><a href="#soap_publish_business">Publish a new business entity</a> </li>
+	<li><a href="#soap_publish_service">Publish a new business service</a> </li>
+	<li><a href="#soap_discover_service">Discover the service by name</a> </li>
+	<li><a href="#soap_publish_wsdl">Publish the WSDL file</a> 
+	</li>
+	<li><a href="#soap_publish_metadata">Publish metadata</a> 
+	</li>
+	<li><a href="#soap_inquire_metadata">Inquire by metadata</a> </li>
+
+</ul></li>
+</ul>
+</li>
+</ul>
+</div>
+<p />
+<h2><a name="Introduction"></a>Introduction </h2>
+<p>GShell is a simple client that supports some of the functionality of the 
+Grimoires service in interactive mode or batch mode. Full Grimoires 
+functionality may be accessed either by the Java Programming Client Side API or 
+by the SOAP message submission facility.</p>
+<p>This tutorial demonstrates three ways to use GShell to publish and discover a 
+service to a Grimoires registry:</p>
+<ul>
+	<li>Use GShell in an interactive mode,</li>
+	<li>Use GShell commands in a batch mode,</li>
+	<li>Use GShell to send soap message directly.</li>
+</ul>
+<p>Please refer to the <a href="install-gs.html">GShell installation guide</a> 
+on how to compile and run GShell. And please refer to the <a href="gshell.html">
+GShell user guide</a> on its general usage.</p>
+<p>Following the same scenario as in the
+<a href="gtutorial.html#SOAP_web_services">Grimoires service tutorial</a>, we 
+show how to publish 
+the BLAST service from the DNA Data Bank of Japan (DDBJ). The service is 
+described using WSDL as the description language. The WSDL file is located at
+<a target="_top" href="http://xml.nig.ac.jp/wsdl/Blast.wsdl">
+http://xml.nig.ac.jp/wsdl/Blast.wsdl</a>. We assume the BLAST service is deploy 
+at <a href="http://xml.nig.ac.jp/xddbj/Blast">http://xml.nig.ac.jp/xddbj/Blast</a>.</p>
+<p>In this tutorial, we will also publish the service's WSDL file, and attach a 
+piece of metadata to a message part inside the WSDL description. The metadata 
+describes the semantic type, i.e., a DNA sequence, of the message part, which is 
+syntactically a string. Finally, we discover the message part based on the 
+metadata. Given the message part, we can further discover which operation this 
+message part belongs to, which WSDL description the operation belongs to, and 
+which service has implemented the WSDL description. Following these steps, a 
+service can be discovered by its metadata.</p>
+<h2><a name="interactive"></a>Interactive mode</h2>
+<p />
+In the interactive mode, we run commands in GShell environment. Each command 
+provides a wizard to prompt us to input proper information. Please refer to the
+<a href="install-gs.html">GShell installation guide</a> on how to compile and 
+run GShell.<h3><a name="inter_publish_business"></a>Publish a new business entity 
+</h3>
+<p>In GShell, run the PublishBusiness command to publish a business called &quot;DDBJ&quot;, 
+which stands for &quot;DNA Data Bank of Japan&quot;. A business is the UDDI's terminology 
+for an organization. You will get a business key. On the screen, you will see 
+(The lines in bold font are what you type): </p>
+<pre>&gt;<b>run PublishBusiness
+<span style="font-weight: 400">==== Publish a business ====
+Input the business name:
+</span>DDBJ<span style="font-weight: 400">
+Input the business description:
+</span>DNA Data Bank of Japan<span style="font-weight: 400">
+Business key[$0]: </span></b>7cb387a9-88fd-4c7a-820f-ce63c2145133</pre>
+<p />
+<p />
+<h3><a name="inter_publish_service"></a>Publish a new business service </h3>
+<p />
+In GShell, run the PublishService command to publish a service called &quot;Blast&quot;, 
+which belongs to &quot;DDBJ&quot;. The WDSL file of this service is located at
+<a target="_top" href="http://xml.nig.ac.jp/wsdl/Blast.wsdl">
+http://xml.nig.ac.jp/wsdl/Blast.wsdl</a>. The service itself is deployed at
+http://xml.nig.ac.jp/xddbj/Blast. 
+You will get a service key.<pre>&gt;<b>run PublishService</b>
+==== Publish a service ====
+Input the service name:
+<b>Blast</b>
+Input the service description:
+<b>A DDBJ Web Service</b>
+Input the business key:
+<b>$0</b>
+Input the service access point:
+<b>http://xml.nig.ac.jp/xddbj/Blast</b>
+Input the service WSDL URL:
+<b>http://xml.nig.ac.jp/wsdl/Blast.wsdl</b>
+Service key[$1]: 12aef140-1227-4762-8bd1-85a9c3af1051</pre>
+<p />
+<h3><a name="inter_discover_service"></a>Discover the service by name </h3>
+<p>
+In GShell, run the InquireService command to inquire a service called &quot;Blast&quot;. 
+You will get the service information.</p>
+<pre>&gt;<b>run InquireService</b>
+==== List all services ====
+Input the service name:
+<b>Blast</b>
+Service name: Blast
+Service key: 12aef140-1227-4762-8bd1-85a9c3af1051
+Business key: 7cb387a9-88fd-4c7a-820f-ce63c2145133
+Service description: A DDBJ Web Service
+Access point in binding template: http://xml.nig.ac.jp/xddbj/Blast
+tModel: <a href="http://xml.nig.ac.jp/wsdl/Blast.wsdl">http://xml.nig.ac.jp/wsdl/Blast.wsdl</a></pre>
+<h3><a name="inter_publish_wsdl"></a>Publish the WSDL file</h3>
+<p>In GShell, run the PublishWSDL command to publish
+<b><span style="font-weight: 400">the WSDL file of the Blast service, which is 
+located at <a href="http://xml.nig.ac.jp/wsdl/Blast.wsdl">http://xml.nig.ac.jp/wsdl/Blast.wsdl</a>. 
+You will get the WSDL key.</span></b></p>
+<pre>&gt;<b>run PublishWSDL</b>
+==== Publish a WSDL file ====
+Input the WSDL URL:
+<b>http://xml.nig.ac.jp/wsdl/Blast.wsdl</b>
+WSDL key[$0]: 50999bee-a167-4380-9420-8ee12e7b178e</pre>
+<h3><a name="inter_publish_metadata"></a>Publish metadata</h3>
+<p>In GShell, run the PublishMetadata command to publish a piece of metadata, 
+which describes the semantic type of a message part in the previously published 
+WSDL file. The message part is syntactically a string, and is semantically a DNA 
+sequence. You will get the metadata key.</p>
+<pre>&gt;<b>run PublishMetadata</b>
+What type of entity to annotate (keyedEntity, operation, or messagePart):
+<b>messagePart</b>
+==== Publish a metadata to a message part ====
+Input the message namespace:
+<b>http://www.themindelectric.com/wsdl/Blast/</b>
+Input the message name:
+<b>searchParam0In</b>
+Input the message part name:
+<b>param</b>
+Input the type (URI) of the metadata to describe the message part:
+<b>http://www.grimoires.org/SemanticType
+</b>Input the metadata to describe the semantic type of the message part:
+<b>DNA_Sequence</b>
+Metadata key[$1]: 9e060eca-7642-4317-af6c-c203d292d86c</pre>
+<h3><a name="inter_inquire_metadata"></a>Inquire by metadata</h3>
+<p>In GShell, run the InquireMetadata command to discover a message part 
+annotated with the specified metadata. You will get the message part detail.</p>
+<pre>&gt;<b>run InquireMetadata</b>
+==== Inquire a metadata ====
+Input the metadata:
+<b>DNA_Sequence</b>
+Found a message part with this metedata:
+	(http://www.grimoires.org/SemanticType, DNA_Sequence)
+Message namespace: http://www.themindelectric.com/wsdl/Blast/
+Message name: searchParam0In
+Message part name: param
+</pre>
+<p></p>
+<h2><a name="batch"></a>Batch Mode</h2>
+<p />
+All the GShell commands can be run as standalone Java applications, i.e., in a 
+batch mode. To run them, make sure that all Java libraries under the &quot;GShell/lib&quot; 
+directory and GShell classes under the &quot;GShell/build/classes&quot; directory are put 
+into your CLASSPATH. It is assumed your Grimoires registry is deployed at 
+http://fantasio.ecs.soton.ac.uk:8080/grimoires.<h3>
+<a name="batch_publish_business"></a>Publish a new business entity</h3>
+<p>Run uk.ac.soton.ecs.grimoires.shell.PublishBusinessCommand to publish a 
+business entity called &quot;DDBJ&quot;.</p>
+<pre>java uk.ac.soton.ecs.grimoires.shell.PublishBusinessCommand http://fantasio.ecs.soton.ac.uk:8080/grimoires DDBJ &quot;DNA Data Bank of Japan&quot;</pre>
+<p>Its usage is:</p>
+<pre>java uk.ac.soton.ecs.grimoires.shell.PubishBusinessCommand Grimoires_URL business_name business_description</pre>
+<p>It returns a business key.</p>
+<pre>Business key[$0]: 8409b2d1-cc13-457e-89cf-340ee4b9ce7d</pre>
+<h3><a name="batch_publish_service"></a>Publish a new business service</h3>
+<p>Run uk.ac.soton.ecs.grimoires.shell.PublishServiceCommand to publish a 
+business service called &quot;Blast&quot;.</p>
+<pre>java uk.ac.soton.ecs.grimoires.shell.PublishServiceCommand http://fantasio.ecs.soton.ac.uk:8080/grimoires 
+Blast &quot;A DDBJWeb Service&quot; 8409b2d1-cc13-457e-89cf-340ee4b9ce7d http://xml.nig.ac.jp/xddbj/Blast http://xml.nig.ac.jp/wsdl/Blast.wsdl</pre>
+<p>Its usage is:</p>
+<pre>java uk.ac.soton.ecs.grimoires.shell.PublishServiceCommand Grimoires_URL name description business_key access_point WSDL_URL</pre>
+<p>It returns a service key.</p>
+<pre>Service key[$0]: c33601a4-ed9f-4ed3-b335-a767c188b76c</pre>
+<h3><a name="batch_discover_service"></a>Discover the service by name</h3>
+<p>Run uk.ac.soton.ecs.grimoires.shell.InquireServiceCommand to discover a 
+business service called &quot;Blast&quot;.</p>
+<pre>java uk.ac.soton.ecs.grimoires.shell.InquireServiceCommand http://fantasio.ecs.soton.ac.uk:8080/grimoires Blast </pre>
+<p>Its usage is:</p>
+<pre>java uk.ac.soton.ecs.grimoires.shell.InquireServiceCommand Grimoires_URL service_name</pre>
+<p>It returns the service information.</p>
+<pre>Service name: Blast
+Service key: c33601a4-ed9f-4ed3-b335-a767c188b76c
+Business key: 8409b2d1-cc13-457e-89cf-340ee4b9ce7d
+Service description: A DDBJWeb Service
+Access point in binding template: http://xml.nig.ac.jp/xddbj/Blast
+tModel: http://xml.nig.ac.jp/wsdl/Blast.wsdl</pre>
+<h3><a name="batch_publish_wsdl"></a>Publish the WSDL file</h3>
+<p>Run uk.ac.soton.ecs.grimoires.shell.PublishWSDLCommand to publish
+<b><span style="font-weight: 400">the WSDL file of the Blast service, which is 
+located at <a href="http://xml.nig.ac.jp/wsdl/Blast.wsdl">http://xml.nig.ac.jp/wsdl/Blast.wsdl</a>. 
+</span></b></p>
+<pre>java uk.ac.soton.ecs.grimoires.shell.PublishWSDLCommand http://fantasio.ecs.soton.ac.uk:8080/grimoires http://xml.nig.ac.jp/wsdl/Blast.wsdl</pre>
+<p>Its usage is:</p>
+<pre>java uk.ac.soton.ecs.grimoires.shell.PublishWSDLCommand Grimoires_URL WSDL_URL</pre>
+<p>It returns the WSDL key.</p>
+<pre>WSDL key[$0]: 50999bee-a167-4380-9420-8ee12e7b178e</pre>
+<h3><a name="batch_publish_metadata"></a>Publish metadata</h3>
+<p>Run uk.ac.soton.ecs.grimoires.shell.PublishMetadataCommand to publish a piece of metadata, 
+which describes the semantic type of a message part in the previously published WSDL file. The message part is syntactically a string, and is semantically a DNA 
+sequence. </p>
+<pre>java uk.ac.soton.ecs.grimoires.shell.PublishMetadataCommand http://fantasio.ecs.soton.ac.uk:8080/grimoires -m
+http://www.themindelectric.com/wsdl/Blast/ searchParam0In param http://www.grimoires.org/SemanticType DNA_Sequence</pre>
+<p>Its usage is:</p>
+<pre>java uk.ac.soton.ecs.grimoires.shell.PublishMetadataCommand Grimoires_URL -m message_namespace message_name message_part_name metadataType metadataValue</pre>
+<p>You will get the metadata key.</p>
+<pre>Metadata key[$0]: 9e060eca-7642-4317-af6c-c203d292d86c</pre>
+<h3><a name="batch_inquire_metadata"></a>Inquire by metadata</h3>
+<p>Run uk.ac.soton.ecs.grimoires.shell.InquireMetadataCommand to discover a message part 
+annotated with the specified metadata. </p>
+<pre>java uk.ac.soton.ecs.grimoires.shell.InquireMetadataCommand http://fantasio.ecs.soton.ac.uk:8080/grimoires http://www.grimoires.org/SemanticType <b><span style="font-weight: 400">DNA_Sequence</span></b></pre>
+<p>Its usage is:</p>
+<pre>java uk.ac.soton.ecs.grimoires.shell.InquireMetadataCommand Grimoires_URL metadataType metadataValue</pre>
+<p>You will get the message part detail.</p>
+<pre>Found a message part with this metedata:
+	(http://www.grimoires.org/SemanticType, DNA_Sequence)
+Message namespace: http://www.themindelectric.com/wsdl/Blast/
+Message name: searchParam0In
+Message part name: param</pre>
+<h2><a name="soap"></a>Sending soap message </h2>
+<p>GShell provides a SendSoapMessage command, which is able to send a request 
+soap message to the Grimoires registry, and to get the corresponding response 
+soap message. By sending and receiving soap messages, we can invoke Grimoires 
+service. </p>
+<p>As same as the other commands, the SendSoapMessage command can also be run 
+either in an interactive mode or in a batch mode. </p>
+<p>It is assumed that Grimoires is deployed at 
+http://fantasio.ecs.soton.ac.uk:8080/grimoires.</p>
+<h3><a name="soap_publish_business"></a>Publish a new business entity</h3>
+<p>Prepare a &quot;tutorial_save_business.xml&quot; file under the &quot;GShell/data&quot; 
+directory, which has the following content:</p>
+<pre>&lt;save_business xmlns=&quot;urn:uddi-org:api_v2&quot;&gt;
+	&lt;authInfo&gt;AUTHINFO&lt;/authInfo&gt;
+	&lt;businessEntity&gt;
+		&lt;name&gt;DDBJ&lt;/name&gt;
+		&lt;description&gt;DNA Data Bank of Japan&lt;/description&gt;
+	&lt;/businessEntity&gt;
+&lt;/save_business&gt;</pre>
+<p>In GShell, run the SendSoapMessage command:</p>
+<pre>&gt;<b>run SendSoapMessage</b>
+==== Send a SOAP message to a Web Service endpoint ====
+Input the Web Service endpoint:
+<b>http://fantasio.ecs.soton.ac.uk:8080/grimoires/services/publish</b>
+Input the XML filename whose content constructs the SOAP message body:
+<b>data/tutorial_save_business.xml</b>
+
+&lt;soapenv:Body xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;busines
+sDetail xmlns=&quot;urn:uddi-org:api_v2&quot;&gt;&lt;businessEntity businessKey=&quot;e9aa95e8-adbd-4
+631-8f5a-f91540b2b57d&quot;&gt;&lt;name&gt;DDBJ&lt;/name&gt;&lt;description&gt;DNA Data Bank of Japan&lt;/des
+cription&gt;&lt;/businessEntity&gt;&lt;/businessDetail&gt;&lt;/soapenv:Body&gt;</pre>
+<p>In the replied soap message, we can see that the published business is 
+assigned a business key &quot;e9aa95e8-adbd-4631-8f5a-f91540b2b57d&quot;.</p>
+<p>To run the SendSoapMessage command in a batch mode:</p>
+<pre>java uk.ac.soton.ecs.grimoires.shell.SendSoapMessageCommand <b><span style="font-weight: 400">http://fantasio.ecs.soton.ac.uk:8080/grimoires/services/publish</span></b>
+data/tutorial_save_business.xml</pre>
+<p>Its usage is:</p>
+<pre>java uk.ac.soton.ecs.grimoires.shell.SendSoapMessageCommand endpoint xmlfile</pre>
+<h3><a name="soap_publish_service"></a>Publish a new business service</h3>
+<p>Prepare a &quot;tutorial_save_service.xml&quot; file under the &quot;GShell/data&quot; 
+directory, which has the following content:</p>
+<pre>&lt;save_service generic=&quot;2.0&quot; xmlns=&quot;urn:uddi-org:api_v2&quot;&gt;
+	&lt;authInfo&gt;AUTHINFO&lt;/authInfo&gt;
+	&lt;businessService businessKey=&quot;e9aa95e8-adbd-4631-8f5a-f91540b2b57d&quot;&gt;
+		&lt;name&gt;Blast&lt;/name&gt;
+		&lt;description&gt;A DDBJ Web Service&lt;/description&gt;
+		&lt;bindingTemplates&gt;
+			&lt;bindingTemplate&gt;
+				&lt;accessPoint&gt;http://xml.nig.ac.jp/xddbj/Blast&lt;/accessPoint&gt;
+				&lt;tModelInstanceDetails&gt;
+					&lt;tModelInstanceInfo&gt;
+						&lt;instanceDetails&gt;
+							&lt;overviewDoc&gt;
+								&lt;overviewURL&gt;http://xml.nig.ac.jp/wsdl/Blast.wsdl&lt;/overviewURL&gt;
+							&lt;/overviewDoc&gt;
+						&lt;/instanceDetails&gt;
+					&lt;/tModelInstanceInfo&gt;
+				&lt;/tModelInstanceDetails&gt;
+			&lt;/bindingTemplate&gt;
+		&lt;/bindingTemplates&gt;
+	&lt;/businessService&gt; 
+&lt;/save_service&gt;</pre>
+<p>Make sure the business key is the value returned in the response soap message 
+when publishing the business previously.</p>
+<p>In GShell, run the SendSoapMessage command:</p>
+<pre>&gt;<b>run SendSoapMessage</b>
+==== Send a SOAP message to a Web Service endpoint ====
+Input the Web Service endpoint:
+<b>http://fantasio.ecs.soton.ac.uk:8080/grimoires/services/publish</b>
+Input the XML filename whose content constructs the SOAP message body:
+<b>data/tutorial_save_service.xml</b>
+
+&lt;soapenv:Body xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;servic
+Detail xmlns=&quot;urn:uddi-org:api_v2&quot;&gt;&lt;businessService businessKey=&quot;e9aa95e8-adbd-
+631-8f5a-f91540b2b57d&quot; serviceKey=&quot;ad64d00a-e4aa-4f56-bad0-d9ae52709620&quot;&gt;&lt;name&gt;
+last&lt;/name&gt;&lt;description&gt;A DDBJ Web Service&lt;/description&gt;&lt;bindingTemplates&gt;&lt;bind
+ngTemplate bindingKey=&quot;b6f62ea6-66ce-4fc7-9523-597a0473157b&quot; serviceKey=&quot;ad64d0
+a-e4aa-4f56-bad0-d9ae52709620&quot;&gt;&lt;accessPoint&gt;http://xml.nig.ac.jp/xddbj/Blast&lt;/a
+cessPoint&gt;&lt;hostingRedirector xsi:nil=&quot;true&quot; xmlns:xsi=&quot;http://www.w3.org/2001/X
+LSchema-instance&quot;/&gt;&lt;tModelInstanceDetails&gt;&lt;tModelInstanceInfo&gt;&lt;instanceDetails&gt;
+overviewDoc&gt;&lt;overviewURL&gt;http://xml.nig.ac.jp/wsdl/Blast.wsdl&lt;/overviewURL&gt;&lt;/ov
+rviewDoc&gt;&lt;/instanceDetails&gt;&lt;/tModelInstanceInfo&gt;&lt;/tModelInstanceDetails&gt;&lt;/bindi
+gTemplate&gt;&lt;/bindingTemplates&gt;&lt;/businessService&gt;&lt;/serviceDetail&gt;&lt;/soapenv:Body&gt;</pre>
+<p>The replied soap message contains the detail of the saved service.</p>
+<p>To run the SendSoapMessage command in a batch mode:</p>
+<pre>java uk.ac.soton.ecs.grimoires.shell.SendSoapMessageCommand <b><span style="font-weight: 400">http://fantasio.ecs.soton.ac.uk:8080/grimoires/services/publish</span></b>
+data/tutorial_save_service.xml</pre>
+<h3><a name="soap_discover_service"></a>Discover the service by name</h3>
+<p>Prepare a &quot;tutorial_find_service.xml&quot; file under the &quot;GShell/data&quot; 
+directory, which has the following content:</p>
+<pre>&lt;find_service generic=&quot;2.0&quot; maxRows=&quot;100&quot; xmlns=&quot;urn:uddi-org:api_v2&quot;&gt;
+	&lt;name&gt;Blast&lt;/name&gt;
+&lt;/find_service&gt;</pre>
+<p>In GShell, run the SendSoapMessage command:</p>
+<pre>&gt;<b>run SendSoapMessage</b>
+==== Send a SOAP message to a Web Service endpoint ====
+Input the Web Service endpoint:
+<b>http://fantasio.ecs.soton.ac.uk:8080/grimoires/services/inquire</b>
+Input the XML filename whose content constructs the SOAP message body:
+<b>data/tutorial_find_service.xml</b>
+
+&lt;soapenv:Body xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;service
+List xmlns=&quot;urn:uddi-org:api_v2&quot;&gt;&lt;serviceInfos&gt;&lt;serviceInfo businessKey=&quot;e9aa95e
+8-adbd-4631-8f5a-f91540b2b57d&quot; serviceKey=&quot;ad64d00a-e4aa-4f56-bad0-d9ae52709620&quot;
+&gt;&lt;name&gt;Blast&lt;/name&gt;&lt;/serviceInfo&gt;&lt;/serviceInfos&gt;&lt;/serviceList&gt;&lt;/soapenv:Body&gt;</pre>
+<p>The replied soap message contains the key of the service whose name is 
+&quot;Blast&quot;.</p>
+<p>Prepare a &quot;tutorial_get_servicedetail.xml&quot; file under the &quot;GShell/data&quot; 
+directory, which has the following content:</p>
+<pre>&lt;get_serviceDetail generic=&quot;2.0&quot; xmlns=&quot;urn:uddi-org:api_v2&quot;&gt;
+	&lt;serviceKey&gt;ad64d00a-e4aa-4f56-bad0-d9ae52709620&lt;/serviceKey&gt;
+&lt;/get_serviceDetail&gt;</pre>
+<p>Make sure the service key is the key returned in the replied soap message 
+when finding service.</p>
+<p>In GShell, run the SendSoapMessage command:</p>
+<pre>&gt;<b>run SendSoapMessage</b>
+==== Send a SOAP message to a Web Service endpoint ====
+Input the Web Service endpoint:
+<b>http://fantasio.ecs.soton.ac.uk:8080/grimoires/services/inquire</b>
+Input the XML filename whose content constructs the SOAP message body:
+<b>data/tutorial_get_servicedetail.xml</b>
+
+&lt;soapenv:Body xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;service
+Detail xmlns=&quot;urn:uddi-org:api_v2&quot;&gt;&lt;businessService businessKey=&quot;e9aa95e8-adbd-4
+631-8f5a-f91540b2b57d&quot; serviceKey=&quot;ad64d00a-e4aa-4f56-bad0-d9ae52709620&quot;&gt;&lt;name&gt;B
+last&lt;/name&gt;&lt;description&gt;A DDBJ Web Service&lt;/description&gt;&lt;bindingTemplates&gt;&lt;bindi
+ngTemplate bindingKey=&quot;b6f62ea6-66ce-4fc7-9523-597a0473157b&quot; serviceKey=&quot;ad64d00
+a-e4aa-4f56-bad0-d9ae52709620&quot;&gt;&lt;accessPoint&gt;http://xml.nig.ac.jp/xddbj/Blast&lt;/ac
+cessPoint&gt;&lt;hostingRedirector xsi:nil=&quot;true&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XM
+LSchema-instance&quot;/&gt;&lt;tModelInstanceDetails&gt;&lt;tModelInstanceInfo&gt;&lt;instanceDetails&gt;&lt;
+overviewDoc&gt;&lt;overviewURL&gt;http://xml.nig.ac.jp/wsdl/Blast.wsdl&lt;/overviewURL&gt;&lt;/ove
+rviewDoc&gt;&lt;/instanceDetails&gt;&lt;/tModelInstanceInfo&gt;&lt;/tModelInstanceDetails&gt;&lt;/bindin
+gTemplate&gt;&lt;/bindingTemplates&gt;&lt;/businessService&gt;&lt;/serviceDetail&gt;&lt;/soapenv:Body&gt;</pre>
+<p>The replied soap message contains the service detail.</p>
+<p>To run the SendSoapMessage command in a batch mode:</p>
+<pre>java uk.ac.soton.ecs.grimoires.shell.SendSoapMessageCommand <b><span style="font-weight: 400">http://fantasio.ecs.soton.ac.uk:8080/grimoires/services/inquire</span></b>
+data/tutorial_find_service.xml
+java uk.ac.soton.ecs.grimoires.shell.SendSoapMessageCommand <b><span style="font-weight: 400">http://fantasio.ecs.soton.ac.uk:8080/grimoires/services/inquire</span></b>
+data/tutorial_get_servicedetail.xml</pre>
+<h3><a name="soap_publish_wsdl"></a>Publish the WSDL file</h3>
+<p>Prepare a &quot;tutorial_publish_wsdl.xml&quot; file under the &quot;GShell/data&quot; 
+directory, which has the following content:</p>
+<pre>&lt;addWSDLFileRequest xmlns=&quot;http:/www.grimoires.org/wsdl/type&quot;&gt;
+	http://xml.nig.ac.jp/wsdl/Blast.wsdl
+&lt;/addWSDLFileRequest&gt;</pre>
+<p>In GShell, run the SendSoapMessage command:</p>
+<pre>&gt;<b>run SendSoapMessage</b>
+==== Send a SOAP message to a Web Service endpoint ====
+Input the Web Service endpoint:
+<b>http://fantasio.ecs.soton.ac.uk:8080/grimoires/services/wsdl</b>
+Input the XML filename whose content constructs the SOAP message body:
+<b>data/tutorial_publish_wsdl.xml</b>
+
+&lt;soapenv:Body xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;addWSDL
+FileResponse xmlns=&quot;http:/www.grimoires.org/wsdl/type&quot;&gt;4abf8f73-2da1-4a05-ae50-b
+1701ab16eac&lt;/addWSDLFileResponse&gt;&lt;/soapenv:Body&gt;</pre>
+<p>In the replied soap message, we can see that the published WSDL is 
+assigned a WSDL key &quot;4abf8f73-2da1-4a05-ae50-b1701ab16eac&quot;.</p>
+<p>To run the SendSoapMessage command in a batch mode:</p>
+<pre>java uk.ac.soton.ecs.grimoires.shell.SendSoapMessageCommand <b><span style="font-weight: 400">http://fantasio.ecs.soton.ac.uk:8080/grimoires/services/</span></b>wsdl
+data/tutorial_publish_wsdl.xml</pre>
+<h3><a name="soap_publish_metadata"></a>Publish metadada</h3>
+<p>Prepare a &quot;tutorial_attach_metadata.xml&quot; file under the &quot;GShell/data&quot; 
+directory, which has the following content:</p>
+<pre>&lt;addMetadataToEntity xmlns=&quot;http://www.grimoires.org/metadata.xsd&quot;&gt;
+	&lt;entityReference entityType=&quot;http://www.grimoires.org/metadata.xsd#messagePartReference&quot;&gt;
+		&lt;messagePartReference&gt;
+			&lt;messageNamespace&gt;http://www.themindelectric.com/wsdl/Blast/&lt;/messageNamespace&gt;
+			&lt;messageName&gt;searchParam0In&lt;/messageName&gt;
+			&lt;messagePartName&gt;param&lt;/messagePartName&gt;
+		&lt;/messagePartReference&gt;
+	&lt;/entityReference&gt;
+	&lt;metadata&gt;
+		&lt;metadataType&gt;http://www.grimoires.org/SemanticType&lt;/metadataType&gt;
+		&lt;metadataValue&gt;
+			&lt;stringValue&gt;DNA_Sequence&lt;/stringValue&gt;
+		&lt;/metadataValue&gt;
+	&lt;/metadata&gt;
+&lt;/addMetadataToEntity&gt;</pre>
+<p>Make sure the business key is the value returned in the response soap message 
+when publishing the business previously.</p>
+<p>In GShell, run the SendSoapMessage command:</p>
+<pre>&gt;<b>run SendSoapMessage</b>
+==== Send a SOAP message to a Web Service endpoint ====
+Input the Web Service endpoint:
+<b>http://fantasio:8080/grimoires/services/publish_metadata</b>
+Input the XML filename whose content constructs the SOAP message body:
+<b>data/tutorial_attach_metadata.xml</b>
+
+&lt;soapenv:Body xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;metadat
+aInfo ns1:metadataKey=&quot;dbbbcc88-e14d-45b0-8740-79bec8a3a73e&quot; xmlns=&quot;http://www.g
+rimoires.org/metadata.xsd&quot; xmlns:ns1=&quot;http://www.grimoires.org/metadata.xsd&quot;&gt;&lt;me
+tadataType&gt;http://www.grimoires.org/SemanticType&lt;/metadataType&gt;&lt;metadataValue&gt;&lt;s
+tringValue&gt;DNA_Sequence&lt;/stringValue&gt;&lt;/metadataValue&gt;&lt;date&gt;Wed Sep 07 11:49:16 B
+ST 2005&lt;/date&gt;&lt;/metadataInfo&gt;&lt;/soapenv:Body&gt;</pre>
+<p>The replied soap message contains the detail of the metadata.</p>
+<p>To run the SendSoapMessage command in a batch mode:</p>
+<pre>java uk.ac.soton.ecs.grimoires.shell.SendSoapMessageCommand <b><span style="font-weight: 400">http://fantasio.ecs.soton.ac.uk:8080/grimoires/services/publish_metadata</span></b>
+data/tutorial_attach_metadata.xml</pre>
+<h3><a name="soap_inquire_metadata"></a>Inquire by metadata</h3>
+<p>Prepare a &quot;tutorial_inquire_metadata.xml&quot; file under the &quot;GShell/data&quot; 
+directory, which has the following content:</p>
+<pre>&lt;find_entityByMetadata xmlns=&quot;http://www.grimoires.org/metadata.xsd&quot;&gt;
+	&lt;metadataQueryBag&gt;
+		&lt;metadataQuery&gt;
+			&lt;metadataType&gt;http://www.grimoires.org/SemanticType&lt;/metadataType&gt;
+			&lt;metadataValue&gt;
+				&lt;stringValue&gt;DNA_Sequence&lt;/stringValue&gt;
+			&lt;/metadataValue&gt;
+		&lt;/metadataQuery&gt;
+	&lt;/metadataQueryBag&gt;
+&lt;/find_entityByMetadata&gt;</pre>
+<p>In GShell, run the SendSoapMessage command:</p>
+<pre>&gt;<b>run SendSoapMessage</b>
+==== Send a SOAP message to a Web Service endpoint ====
+Input the Web Service endpoint:
+<b>http://fantasio:8080/grimoires/services/inquire_metadata</b>
+Input the XML filename whose content constructs the SOAP message body:
+<b>data/tutorial_inquire_metadata.xml</b>
+
+&lt;soapenv:Body xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;entityR
+eferenceList xmlns=&quot;http://www.grimoires.org/metadata.xsd&quot;&gt;&lt;entityReference enti
+tyType=&quot;http://www.grimoires.org/metadata.xsd#messagePartReference&quot;&gt;&lt;messagePart
+Reference&gt;&lt;messageNamespace&gt;http://www.themindelectric.com/wsdl/Blast/&lt;/messageN
+amespace&gt;&lt;messageName&gt;searchParam0In&lt;/messageName&gt;&lt;messagePartName&gt;param&lt;/messag
+ePartName&gt;&lt;/messagePartReference&gt;&lt;/entityReference&gt;&lt;entityReference entityType=&quot;
+http://www.grimoires.org/metadata.xsd#messagePartReference&quot;&gt;&lt;messagePartReferenc
+e&gt;&lt;messageNamespace&gt;http://www.themindelectric.com/wsdl/Blast/&lt;/messageNamespace
+&gt;&lt;messageName&gt;searchParam0In&lt;/messageName&gt;&lt;messagePartName&gt;param&lt;/messagePartNam
+e&gt;&lt;/messagePartReference&gt;&lt;/entityReference&gt;&lt;/entityReferenceList&gt;&lt;/soapenv:Body&gt;</pre>
+<p>The replied soap message contains the detailed information of the message 
+part attached with the metadata.</p>
+<p>To run the SendSoapMessage command in a batch mode:</p>
+<pre>java uk.ac.soton.ecs.grimoires.shell.SendSoapMessageCommand <b><span style="font-weight: 400">http://fantasio.ecs.soton.ac.uk:8080/grimoires/services/inquire_metadata</span></b>
+data/tutorial_inquire_metadata.xml</pre>
+</div>
+
+</body></html>

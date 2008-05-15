@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Grimoires Documentation - HOWTO - Lifetime Management</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url('i_arrow_down.gif');
+	}
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script>
+</head>
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1>  HOWTO - Lifetime Management </h1>
+<p />
+<div class="twikiToc">
+<ul>
+<li> <a href="#Lifetime">HOWTO - Lifetime Management</a>
+<ul>
+<li> <a href="#Configuration">Configuration</a></li>
+<li> <a href="#TermTime">Termination time</a></li>
+<li> <a href="#TermAction">Termination action</a>
+</li>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p />
+This
+document describes the lifetime management functionality provided by the 
+Grimoires registry. The idea of lifetime management is that each published 
+entity, such as a UDDI business, or a UDDI service, can be given a lifetime. 
+When the lifetime expires, some action can be taken. For instance, the expired 
+entity can be deleted from the registry. In order to keep a published entity 
+alive, the provider needs to renew its lifetime from time to time. The advantage 
+of the lifetime management is to avoid the accumulation of obsolete entities in 
+the registry. It is particularly useful in the environment where many published 
+services are transient.<p />
+The lifetime management does not introduce any new WS API. It is implemented by 
+using Grimoires' metadata annotation capability, and it is operated through the 
+current Grimoires WS APIs.<p />
+<h2><a name="Configuration"></a>Configuration </h2>
+There are some lifetime management related configurable properties in the file &quot;grimoires.properties&quot;. 
+For more information about &quot;grimoires.properties&quot;, please read
+<a href="installation.html#grimoires_properties">the installation guide of 
+Grimoires</a>.
+<p/>
+<pre>
+#
+# Lifetime management
+#
+
+# The default lifetime that an entiy will have. In millisecond. 
+# If not set, the default is 1 hour.
+# If set to zero or negative, the lifetime will be infinite.
+defaultLifetime = 30000
+
+# Lifetime watch interval. In millisecond.
+# The LifetimeWatchTask thread will be scheduled to take termination action on entities 
+# whose lifetime expires every the interval.
+# The minimum is 1000. 
+defaultLifetimeWatchInterval = 1000
+ 
+# The default termination action that is taken when an entity's lifetime expires.
+defaultTerminationAction = http://www.grimoires.org/metadata/DeleteTerminationAction
+# defaultTerminationAction = http://www.grimoires.org/metadata/DeprecateTerminationAction
+</pre>
+<h3>defaultLifetime</h3>
+<p>defines the default lifetime (in millisecond) an entity can automatically 
+have. If it is set to a zero or negative value, the entity will have an infinite 
+lifetime.</p>
+<h3>defaultLifetimeWatchInterval</h3>
+<p>defines the default time period (in millisecond) by which a thread will check 
+whether there is any expired entity. If it is set to a value less than 1000, 
+Grimoires will take the value 1000.</p>
+<h3>defaultTerminationAction</h3>
+<p>defines the default termination action that will be taken when an entity's lifetime expires. 
+Each entity can override this default action by using its own. This will be 
+discussed in the later section.</p>
+<h3>The ThisGrimoiresInstance service</h3>
+<p>The ThisGrimoiresInstance service represents the Grimoires registry itself, 
+and is automatically published when Grimoires is started. Both the service name 
+and service key of ThisGrimoiresIntance are &quot;ThisGrimoiresInstance&quot;. </p>
+<p>The lifetime management policies are attached to ThisGrimoiresInstance as 
+metadata. By using the GetEntityMetadata operation, the Grimoires users can view 
+the policies at run time. For instance, a sample output of the GetEntityMetadata 
+operation on ThisGrimoiresInstance looks like:</p>
+<pre>
+>run GetEntityMetadata
+==== Get metadata of an entity ====
+Input the entity key:
+ThisGrimoiresInstance
+Input the entity type (business or service):
+service
+==== Metadata 0 ====
+Metadata key[$0]: c35bb2d4-6113-42aa-93e0-17ade1487ec9
+Author: null
+Publication date: Tue Oct 11 12:29:24 BST 2005
+Metadata type: http://www.grimoires.org/metadata/DefaultLifetime
+Metadata value: 30000
+==== Metadata 1 ====
+Metadata key[$1]: 155ff87b-59f3-431d-9314-64fc73db53d8
+Author: null
+Publication date: Tue Oct 11 12:29:24 BST 2005
+Metadata type: http://www.grimoires.org/metadata/DefaultLifetimeWatchInterval
+Metadata value: 1000
+==== Metadata 2 ====
+Metadata key[$2]: f2165c23-3f8e-487a-85d2-342d0d2d0e37
+Author: null
+Publication date: Tue Oct 11 12:29:24 BST 2005
+Metadata type: http://www.grimoires.org/metadata/DefaultTerminationAction
+Metadata value: http://www.grimoires.org/metadata/DeleteTerminationAction
+==== Metadata 3 ====
+Metadata key[$3]: Auto-Anonymous
+Author: Grimoires
+Publication date: Tuesday, October 11, 2005 12:29:24 PM BST
+Metadata type: http://www.grimoires.org/metadata/CurrentTime
+Metadata value: Tuesday, October 11, 2005 12:29:24 PM BST
+</pre>
+<h2><a name="TermTime"></a>Termination time</h2>
+<h3>The TerminationTime metadata</h3>
+<p>The Grimoires user can set up a termination time or renew a termination time 
+of an entity by using the AddMetadataToEntity operation to attach a 
+TerminationTime metadata. The AddMetadataToEntity operation is defined in 
+Grimiores' metadata interface.</p>
+<p>The type of the TerminationTime metadata is 
+&quot;http://www.grimoires.org/metadata/TerminationTime&quot;.</p>
+<p>The value of the TerminationTime metadata is a full format representation of 
+the date and time, for instance, &quot;Tuesday, October 11, 2005 12:29:24 PM BST&quot;. 
+This value represents a future time point by then the lifetime of the entity 
+expires.</p>
+<h3>The CurrentTime metadata</h3>
+<p>It is not required that the client's computer time is synchronized with 
+Grimoires' computer time. Therefore, the users may need to inquiry for the 
+current time in Grimoires. This is achieved by looking at the CurrentTime 
+metadata returned by the GetEntityMetadata. The CurrentTime metadata is 
+automatically attached to any entity.</p>
+<p />
+<h2><a name="TermAction"></a>Termination action</h2>
+<p />
+When the lifetime expires, some termination action can be taken. There are two 
+ways to set up a termination action. One is to set up a default termination 
+action. The other is discussed below.<h3 />
+The TerminationAction metadata</h3>
+<p />
+The Grimoires user can attach a TerminationAction metadata to an entity, which 
+will override the default termination action.<p />
+The type of the TerminationAction metadata is 
+&quot;http://www.grimoires.org/metadata/TerminationAction&quot;.<p />
+Currently, there are two supported values for the TerminationAction metadata.<p />
+<h4><a name="Deletion"></a>DeletionTerminationAction</h4>
+<p>To permanently delete an entity, set the value of the TerminationAction 
+metadata to be &quot;http://www.grimoires.org/metadata/DeleteTerminationAction&quot;.</p>
+<p />
+<h4><a name="Deprecation"></a>DeprecationTerminationAction</h4>
+<p />
+To deprecate an entity, set the value of the TerminationAction metadata to be 
+&quot;http://www.grimoires.org/metadata/DeprecateTerminationAction&quot;.<p />
+A deprecated entity will not be returned in the discovery. But it is not 
+permanently deleted. It can be recovered later. Have been recovered, the entity 
+can be viewed by users again.<h3 />
+The RecoverEntityAction metadata</h3>
+<p />
+To recover a deprecated entity, attach a RecoverEntityAction metadata to the 
+ThisGrimoiresInstance service.</p>
+<p />
+The type of the RecoverEntityAction metadata is 
+&quot;http://www.grimoires.org/metadata/RecoverEntityAction&quot;.</p>
+<p />
+The value of the RecoverEntityAction metadata is the key of the deprecated 
+entity.</div>
+
+</body></html>

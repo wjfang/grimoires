@@ -1,0 +1,97 @@
+<project basedir="." default="install" name="Grimoires client-side binary">
+
+	<property file="Manifest.properties"/>
+	
+	<target name="release">
+		<echo>${name} v${version} - client binary distribution ${date}${line.separator}${url}</echo>
+	</target>
+
+	<target name="verify-install-env">
+		<echo message="verify-install-env" />
+
+        <fail unless="omii.client.home">omii.client.home property is not set</fail>
+        <available file="${omii.client.home}" type="dir" property="omii.client.available"/>
+        <fail unless="omii.client.available">${omii.client.home} is not found</fail>
+        <available file="${omii.client.home}/grimoires" type="dir" property="grimoires.client.available"/>
+        <fail if="grimoires.client.available">Grimoires client is already installed in ${omii.client.home}/grimoires. Please un-install the previous copy before re-installing.</fail>
+	</target>
+
+	<target name="verify-uninstall-env">
+		<echo message="verify-uninstall-env" />
+
+        <fail unless="omii.client.home">omii.client.home property is not set</fail>
+        <available file="${omii.client.home}" type="dir" property="omii.client.available"/>
+        <fail unless="omii.client.available">${omii.client.home} is not found</fail>
+        <available file="${omii.client.home}/grimoires" type="dir" property="grimoires.client.available"/>
+        <fail unless="grimoires.client.available">Grimoires client has not been installed</fail>
+	</target>
+
+    <target name="install" depends="verify-install-env, pre-install, deploy, post-install"/>
+
+	<target name="pre-install">
+		<echo message="pre-install" />
+	</target>
+
+	<target name="post-install">
+		<echo message="post-install" />
+	</target>
+
+	<target name="uninstall">
+		<echo message="uninstall" />
+
+        <delete dir="${install.home}/grimoires"/>
+	</target>
+
+	<target name="deploy">
+		<echo message="deploy" />
+
+        <property name="install.home" value="${omii.client.home}/grimoires"/>
+        <mkdir dir="${install.home}"/>
+        <copy todir="${install.home}">
+            <fileset dir="${basedir}"/>
+        </copy>
+        <copy todir="${install.home}/bin" overwrite="true">
+            <fileset dir="${basedir}/bin">
+                <include name="*"/>
+            </fileset>
+            <filterset>
+                <filter token="OMIICLIENT_HOME" value="${omii.client.home}"/>
+            </filterset>
+        </copy>
+		<!-- Make sure run.sh has the right end of line character, 
+			otherwise shell refuses to interpret it. And this must be before chmod. 
+			<fixcrlf srcdir="${install.home}/bin" includes="*.sh"/>
+			
+			The client installation of Grimoires does not create a valid run.sh for 
+			Mac OS X (i.e. it cannot be run).  The end-of-line character format in 
+			the run.sh needs to be changed.
+
+			A suggested fix is the following:
+			<fixcrlf srcdir="${install.home}/bin" includes="*.sh" eol="lf"/>
+			Which would basically ensure that all end-of-line characters are lf only (and
+			not crlf or cr) which are invalid.  This is the Linux/Unix format which is
+			compatible with Mac OS X.
+			-->		
+		<fixcrlf srcdir="${install.home}/bin" includes="*.sh" eol="lf"/>
+        <chmod perm="a+x">
+            <fileset dir="${install.home}/bin">
+                <include name="*.sh"/>
+            </fileset>
+        </chmod>		
+		<delete file="${install.home}/build.xml" />
+	</target>
+
+	<target name="undeploy">
+		<echo message="undeploy" />
+	</target>
+
+	<target name="test-install">
+		<echo message="test-install" />
+	</target>
+
+	<target name="client-install">
+		<echo message="client-install" />
+	</target>
+
+</project>
+

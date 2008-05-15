@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=ENEA-INFO,mds-vo-name=ENEA-INFO">
+    <Name>ENEA-INFO</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:bracco@frascati.enea.it</UserSupportContact>
+    <SysAdminContact>mailto:bracco@frascati.enea.it</SysAdminContact>
+    <SecurityContact>mailto:bracco@frascati.enea.it</SecurityContact>
+    <Location>Frascati, Italy</Location>
+    <Latitude>41.8062</Latitude>
+    <Longitude>12.6804</Longitude>
+    <Web>http://www.frascati.enea.it</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-3</OtherInfo>
+    <OtherInfo>CNAF-T1</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=egce.frascati.enea.it,mds-vo-name=ENEA-INFO">
+        <Name>egce.frascati.enea.it</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=egce.frascati.enea.it,GlueClusterUniqueID=egce.frascati.enea.it,mds-vo-name=ENEA-INFO">
+            <Name>egce.frascati.enea.it</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.4" Name="ScientificSL"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="PIV" ClockSpeed="2400"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1024" RAMSize="512"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="381" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=egceaix.frascati.enea.it,mds-vo-name=ENEA-INFO">
+        <Name>egceaix.frascati.enea.it</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=egceaix.frascati.enea.it,GlueClusterUniqueID=egceaix.frascati.enea.it,mds-vo-name=ENEA-INFO">
+            <Name>egceaix.frascati.enea.it</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="AIX" Release="5.2" Name="AIX"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="IBM" Model="G4" ClockSpeed="1100"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="32768" RAMSize="32768"/>
+            <Architecture SMPSize="32"/>
+            <Benchmark SI00="381" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=fusse.frascati.enea.it,mds-vo-name=ENEA-INFO">
+        <InformationServiceURL>ldap://fusse.frascati.enea.it:2170/mds-vo-name=resource,o=grid</InformationServiceURL>
+        <SizeTotal>10</SizeTotal>
+        <SizeFree>6</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/frascati.enea.it/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>42</UsedSpace>
+            <AvailableSpace>5900000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="enea">
+            <Path>/dpm/frascati.enea.it/home/enea</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>5900000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="infngrid">
+            <Path>/dpm/frascati.enea.it/home/infngrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>5900000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/frascati.enea.it/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>42</UsedSpace>
+            <AvailableSpace>5900000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="fusion">
+            <Path>/dpm/frascati.enea.it/home/fusion</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>5900000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="compchem">
+            <Path>/dpm/frascati.enea.it/home/compchem</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>5900000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="egrid">
+            <Path>/dpm/frascati.enea.it/home/egrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>5900000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://fusse.frascati.enea.it</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://fusse.frascati.enea.it</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://fusse.frascati.enea.it</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=egse.frascati.enea.it,mds-vo-name=ENEA-INFO">
+        <InformationServiceURL>ldap://egse.frascati.enea.it:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="dteam">
+            <Path>/flatfiles/SE00/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4392416</UsedSpace>
+            <AvailableSpace>14744616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="enea">
+            <Path>/flatfiles/SE00/enea</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4392416</UsedSpace>
+            <AvailableSpace>14744616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="infngrid">
+            <Path>/flatfiles/SE00/infngrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4392416</UsedSpace>
+            <AvailableSpace>14744616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/flatfiles/SE00/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4392416</UsedSpace>
+            <AvailableSpace>14744616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="fusion">
+            <Path>/flatfiles/SE00/fusion</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4392416</UsedSpace>
+            <AvailableSpace>14744616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="compchem">
+            <Path>/flatfiles/SE00/compchem</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4392416</UsedSpace>
+            <AvailableSpace>14744616</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="egrid">
+            <Path>/flatfiles/SE00/egrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4392412</UsedSpace>
+            <AvailableSpace>14744620</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://egse.frascati.enea.it</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=httpg://fusse.frascati.enea.it:8443/srm/managerv1,mds-vo-name=ENEA-INFO">
+        <Name>ENEA-INFO-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://fusse.frascati.enea.it:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://fusse.frascati.enea.it:8446/srm/managerv2,mds-vo-name=ENEA-INFO">
+        <Name>ENEA-INFO-srm</Name>
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://fusse.frascati.enea.it:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=egse.frascati.enea.it:2136,mds-vo-name=ENEA-INFO">
+        <Name>ENEA-INFO-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://egse.frascati.enea.it:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>dteam</Owner>
+        <Owner>enea</Owner>
+        <Owner>infngrid</Owner>
+        <Owner>ops</Owner>
+        <Owner>fusion</Owner>
+        <Owner>compchem</Owner>
+        <Owner>egrid</Owner>
+    </Service>
+</Site>

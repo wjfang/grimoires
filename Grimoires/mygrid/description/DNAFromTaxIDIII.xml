@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+  <serviceDescription>
+  <serviceName>SHoundDNAFromTaxIDIII</serviceName>
+    		<organisation>
+    			<organisationName>Blueprint</organisationName>
+    			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+    		</organisation>
+    		<locationURL>http://seqhound.blueprint.org/SHoundDNAFromTaxIDIII</locationURL>
+  		<interfaceWSDL>http://seqhound.blueprint.org/SHoundDNAFromTaxIDIII?wsdl</interfaceWSDL>
+  <serviceDescriptionText>Get the dna gi's for a given taxid. Uses precomputed searches to speed up search where appropriate.</serviceDescriptionText> 
+  <operations>
+  <serviceOperation>
+  <operationName>SHoundDNAFromTaxIDIII</operationName> 
+  <operationInputs>
+  <parameter>
+  <parameterName>taxid</parameterName> 
+  </parameter>
+  </operationInputs>
+  <operationOutputs>
+  <parameter>
+  <parameterName>result</parameterName> 
+  </parameter>
+  </operationOutputs>
+  </serviceOperation>
+  </operations>
+<serviceType>SeqHound service</serviceType> 
+  </serviceDescription>
+  </serviceDescriptions>

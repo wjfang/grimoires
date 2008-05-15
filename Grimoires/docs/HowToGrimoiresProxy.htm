@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>HowToGrimoiresProxy &lt; Grimoires &lt; TWiki</title>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="http://twiki.grimoires.org/bin/view/Grimoires/WebRss?skin=rss&amp;contenttype=text/xml">
+<!-- base href="http://twiki.grimoires.org/bin/view/Grimoires/HowToGrimoiresProxy" -->
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("http://twiki.gridprovenance.org/pub/Provenance/ProvenanceSiteAdministration/layout.css");
+	/* Default TWiki style */
+	@import url("http://twiki.gridprovenance.org/pub/Provenance/ProvenanceSiteAdministration/style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url(http://twiki.grimoires.org/pub/TWiki/PatternSkin/i_arrow_down.gif);
+	}	        
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script></head><body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1><a name="HOWTO_GrimoiresProxy"> </a> HOWTO - GrimoiresProxy </h1>
+<p>
+</p><h2><a name="Introduction"> </a> Introduction </h2>
+<p>
+According to Grimoires users' feedback, it is not easy to program
+against Grimoires. Hence, a new client-side Class GrimoiresProxy is
+implemented, which addressses Grimoires' programmatic usabiity in the
+following ways:
+</p><p>
+</p><ul>
+<li> Hide from users the existence of multiple porttypes/interfaces in
+Grimoires. Users now have a "proxy" representing the Grimoires server.
+The proxy has methods belonging to different interfaces, such as UDDI,
+metadadata, and WSDL.
+</li>
+</ul>
+<p>
+</p><ul>
+<li> GrimoiresProxy can be used to do both web service call and business logic call.
+</li>
+</ul>
+<p>
+</p><ul>
+<li> Hide from users the data model detail in many circumstances. For instance, 
+</li>
+</ul>
+<pre>public final String attachMetadataToOperation(String metadataType, String metadataValue, 
+                                                   String portTypeNamespace, String portTypeName, string operationName)</pre>attached
+a piece of metadata to a WSDL operation. Users do not need to
+understand the data model detail of metadata and WSDL operation. They
+do not need to know how to create them, either.
+<p>
+</p><ul>
+<li> Provide users compound functionalities in many circumstances. For instance,
+</li>
+</ul>
+<pre>public final String saveService(String businessKey, String name, String description, String accessPoint, String wsdlURL)</pre>saves
+a service belonging to the business with the specified business key.
+The services has the specified name and description. It is installed at
+the specified access point. And its interface is described by a WSDL,
+which itself is published as a tModel.
+<p>
+</p><ul>
+<li> Expected to provide a good code quality.
+</li>
+<li> Separate the protocol processing and the message delivering by applying the 
+abstract factory design pattern. There are a GrimoiresWebServiceProxyFactory 
+that is able to create a GrimoiresProxy acting on a Grimoires Web Service 
+deployment, a GrimoiresBusinessLogicProxyFactory that is able to create a 
+GrimoiresProxy acting on the Grimoires business logic code, and a 
+GrimoiresjUDDIWebServiceProxyFactory that is able to create a GrimoiresProxy 
+acting on a jUDDI server.
+</li>
+</ul>
+<p>
+</p><h2><a name="Documentation"> </a> Documentation </h2>
+<p><a href="./api/uk/ac/soton/ecs/grimoires/proxy/GrimoiresProxy.html">GrimoiresProxy JavaDoc</a>
+</p><p>
+</p><p>
+</p><h2><a name="Code_Example"> </a> Code Example </h2>
+<pre>
+GrimoiresProxy grimoiresProxy = null;
+
+// Create a proxy for Grimoires at the default location.
+grimoiresProxy = new GrimoiresWebServiceProxyFactory().createProxy(null);
+
+// Or, create a business logic proxy.
+// grimoiresProxy = new GrimoiresBusinessLogicProxyFactory().createProxy(null);
+
+// save business
+String businessKey = grimoiresProxy.saveBusiness(businessName, businessDescription);
+      
+// save service
+String serviceKey = grimoiresProxy.saveService(
+            businessKey, serviceName, serviceDescription, accessPoint, wsdlURL);
+</pre>
+<p>
+-- <a class="twikiLink" href="http://twiki.grimoires.org/bin/view/Main/WeijianFang">WeijianFang</a> - 17 Jul 2006</p></div>
+<!---->
+<!---->
+<p>
+</p><div class="twikiTopicInfo"><span class="twikiRevInfo twikiGrayText">Revision: r1.1 - 17 Jul 2006 - 10:55 - <a class="twikiLink" href="http://twiki.grimoires.org/bin/view/Main/WeijianFang">WeijianFang</a></span></div>
+<div class="twikiTopicFooter"><span class="twikiLeft"><span class="twikiHomePath"><a class="twikiLink" href="http://twiki.grimoires.org/bin/view/Grimoires/WebHome">Grimoires</a>  <span class="sep">&gt;</span> <a class="twikiLink" href="http://twiki.grimoires.org/bin/view/Grimoires/OnlineDocumentation">OnlineDocumentation</a> <span class="sep">&gt;</span> HowToGrimoiresProxy </span></span></div></div></div><div class="twikiBottomBar"><div class="twikiBottomBarContents"><span class="twikiGrayText">Copyright © 2004 by the University of Southampton
+</span></div></div>
+</body></html>

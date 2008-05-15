@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=RU-Protvino-IHEP,mds-vo-name=RU-Protvino-IHEP">
+    <Name>RU-Protvino-IHEP</Name>
+    <Description>EGEE/LCG Site</Description>
+    <UserSupportContact>mailto: lcg@ihep.ru</UserSupportContact>
+    <SysAdminContact>mailto: lcg@ihep.ru</SysAdminContact>
+    <SecurityContact>mailto: lcg@ihep.ru</SecurityContact>
+    <Location>Protvino, moscow dst., Russia</Location>
+    <Latitude>54.8695</Latitude>
+    <Longitude>37.1953</Longitude>
+    <Web>http://www.ihep.su/</Web>
+    <OtherInfo>TIER 2</OtherInfo>
+    <OtherInfo>IHEP-CC</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ce0001.m45.ihep.su,mds-vo-name=RU-Protvino-IHEP">
+        <Name>ce0001.m45.ihep.su</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce0001.m45.ihep.su,GlueClusterUniqueID=ce0001.m45.ihep.su,mds-vo-name=RU-Protvino-IHEP">
+            <Name>ce0001.m45.ihep.su</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SLC" Release="3.0.5" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="GenuineIntel" Model="Pentium III (Coppermine)" ClockSpeed="1000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2560" RAMSize="1024"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="410" SF00="420"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=dpm0001.m45.ihep.su,mds-vo-name=RU-Protvino-IHEP">
+        <InformationServiceURL>ldap://dpm0001.m45.ihep.su:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>4844</SizeTotal>
+        <SizeFree>432</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/m45.ihep.su/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4412370000</UsedSpace>
+            <AvailableSpace>431560000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/m45.ihep.su/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4412370000</UsedSpace>
+            <AvailableSpace>431560000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/dpm/m45.ihep.su/home/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4412370000</UsedSpace>
+            <AvailableSpace>431560000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/dpm/m45.ihep.su/home/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4412370000</UsedSpace>
+            <AvailableSpace>431560000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/dpm/m45.ihep.su/home/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4412370000</UsedSpace>
+            <AvailableSpace>431560000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/m45.ihep.su/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4412370000</UsedSpace>
+            <AvailableSpace>431560000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="rgstest">
+            <Path>/dpm/m45.ihep.su/home/rgstest</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4412370000</UsedSpace>
+            <AvailableSpace>431560000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://dpm0001.m45.ihep.su</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://dpm0001.m45.ihep.su</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://dpm0001.m45.ihep.su</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=mon0001.m45.ihep.su:2136,mds-vo-name=RU-Protvino-IHEP">
+        <Name>RU-Protvino-IHEP-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://mon0001.m45.ihep.su:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>cms</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>rgstest</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lfc0001.m45.ihep.su,o=local,mds-vo-name=RU-Protvino-IHEP">
+        <Name>RU-Protvino-IHEP-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>lfc0001.m45.ihep.su</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>cms</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>rgstest</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=gsissh://ui0001.m45.ihep.su:1975,mds-vo-name=RU-Protvino-IHEP">
+        <Name>RU-Protvino-IHEP-vobox</Name>
+        <Type>VOBOX</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>gsissh://ui0001.m45.ihep.su:1975</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://lfc0001.m45.ihep.su:8085/,o=local,mds-vo-name=RU-Protvino-IHEP">
+        <Name>RU-Protvino-IHEP-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>http://lfc0001.m45.ihep.su:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>cms</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>rgstest</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://dpm0001.m45.ihep.su:8443/srm/managerv1,mds-vo-name=RU-Protvino-IHEP">
+        <Name>RU-Protvino-IHEP-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://dpm0001.m45.ihep.su:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

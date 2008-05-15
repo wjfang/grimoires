@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+  <serviceDescription>
+  <serviceName>SHoundProteinReportSetDescription</serviceName>
+    		<organisation>
+    			<organisationName>Blueprint</organisationName>
+    			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+    		</organisation>
+    		<locationURL>http://seqhound.blueprint.org/SHoundProteinReportSetDescription</locationURL>
+  		<interfaceWSDL>http://seqhound.blueprint.org/SHoundProteinReportSetDescription?wsdl</interfaceWSDL>
+  <serviceDescriptionText>Get a protein report set description for a given gi. The set description is a comprehensive description for a gi.</serviceDescriptionText> 
+  <operations>
+  <serviceOperation>
+  <operationName>SHoundProteinReportSetDescription</operationName> 
+  <operationInputs>
+  <parameter>
+  <parameterName>gi</parameterName> 
+  </parameter>
+  <parameter>
+  <parameterName>format</parameterName> 
+  </parameter>
+  </operationInputs>
+  <operationOutputs>
+  <parameter>
+  <parameterName>result</parameterName> 
+  </parameter>
+  </operationOutputs>
+  </serviceOperation>
+  </operations>
+  <serviceType>SeqHound service</serviceType> 
+  </serviceDescription>
+  </serviceDescriptions>

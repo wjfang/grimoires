@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Grimoires Documentation - Tutorial - Grimoires - II</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url(./i_arrow_down.gif);
+	}	        
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script>
+</head>
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1><a name="Grimoires_client_Java_API_Tutori"> </a> Grimoires client Java API Tutorial </h1>
+<p />
+<div class="twikiToc">
+<ul>
+<li> <a href="#Grimoires_client_Java_API_Tutori">Tutorial - Grimoires - II</a>
+<ul>
+<li> <a href="#WSDL2Java_Building_client_Java_A">WSDL2Java: Building client Java API from WSDL files</a>
+</li>
+<li> <a href="#WSDL_Interface">WSDL Interface</a>
+<ul>
+<li> <a href="#Java_API_Reference">Java API Reference</a>
+<ul>
+<li> <a href="#addWSDLFile">addWSDLFile</a>
+</li>
+<li> <a href="#addWSDLFileAdvert">addWSDLFileAdvert</a>
+</li>
+<li> <a href="#getWSDLAdvertContent">getWSDLAdvertContent</a>
+</li>
+<li> <a href="#getWSDLAdvertContentByURL">getWSDLAdvertContentByURL</a>
+</li>
+<li> <a href="#removeWSDLFile">removeWSDLFile</a>
+</li>
+<li> <a href="#findServicesByInterface">findServicesByInterface</a>
+</li>
+<li> <a href="#getAllWSDLFiles">getAllWSDLFiles</a>
+</li>
+<li> <a href="#getOperationsByURL">getOperationsByURL</a>
+</li>
+<li> <a href="#getInputMessageOfOperation">getInputMessageOfOperation</a>
+</li>
+<li> <a href="#getOutputMessageOfOperation">getOutputMessageOfOperation</a>
+</li>
+<li> <a href="#getFaultMessageOfOperation">getFaultMessageOfOperation</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p />
+<h2><a name="WSDL2Java_Building_client_Java_A"> </a> WSDL2Java: Building client Java API from WSDL files </h2>
+<p />
+A WSDL (Web Service Description Language) file explicitly defines the technical interface of a Web Service. Axis provides a "WSDL2Java" tool to generate stubs, skeletons, and data types from WSDL files. Stubs are client-side bindings, skeleton are server-side bindings, and data types are Java objects corresponding to XML types defined in XML schemas. Please refer to the WSDL2Java documentation for how to use WSDL2Java.
+<p />
+Grimoires provides the WSDL files and associated XML schemas for all its interfaces. Developers can use WSDL2Java to generate Java stubs from them, and use the stubs to interact with Grimoires. Below we use Grimoires' WSDL interface as an example to demonstrate the usage of Grimoires client Java API generated from the WSDL file using WSDL2Java.
+<p />
+<h2><a name="WSDL_Interface"> </a> WSDL Interface </h2>
+<p />
+The simplest way to invoke the WSDL interface is to use Axis' WSDL2Java to generate the stub from wsdl.wsdl, which is in "wsdl/" directory of Grimoires release.Then use the stub to communicate with Grimoires. 
+<p />
+<h3><a name="Java_API_Reference"> </a> Java API Reference </h3>
+<p />
+<h4><a name="addWSDLFile"> </a> addWSDLFile </h4>
+<p />
+<pre>
+public String addWSDLFile(String filename) throws RemoteException; 
+</pre>
+<p />
+Add a WSDL file to the repository.
+<p />
+Parameters:
+<p />
+filename - a string representing the url of the wsdl file.
+<p />
+Returns:
+<p />
+a string representing the WSDL key, which is the UUID for this WSDL file.
+<p />
+<h4><a name="addWSDLFileAdvert"> </a> addWSDLFileAdvert </h4>
+<p />
+<pre>
+public String addWSDLFileAdvert(AddWSDLFileAdvertRequest body) throws RemoteException;
+
+public class AddWSDLFileAdvertRequest  implements java.io.Serializable {
+    private java.lang.String url;
+    private java.lang.String content;
+    ......
+}
+</pre>
+<p />
+Add a WSDL file with content to the repository.
+<p />
+Parameters:
+<p />
+body - contain a string representing the url of the wsdl file, and a string representing the content of wsdl file.
+<p />
+Returns
+<p />
+a string representing the WSDL key, which is the UUID for this WSDL file.
+<p />
+<h4><a name="getWSDLAdvertContent"> </a> getWSDLAdvertContent </h4>
+<p />
+<pre>
+public String getWSDLAdvertContent(String key) throws RemoteException;
+</pre>
+<p />
+Return the WSDL content of the advert identified by the given key.
+<p />
+parameters:
+<p />
+key - WSDL key.
+<p />
+Returns: 
+<p />
+the content of WSDL file.
+<p />
+<h4><a name="getWSDLAdvertContentByURL"> </a> getWSDLAdvertContentByURL </h4>
+<p />
+<pre>
+public String getWSDLAdvertContentByURL(String wsdlURL);
+</pre>
+<p />
+Return the WSDL content of the advert identified by the url of WSDL.
+<p />
+Parameters:
+<p />
+wsdlURL - the url of WSDL file.
+<p />
+Returns:
+<p />
+the content of WSDL file.
+<p />
+<h4><a name="removeWSDLFile"> </a> removeWSDLFile </h4>
+<p />
+<pre>
+public boolean removeWSDLFile(String filename) throws RemoteException;
+</pre>
+<p />
+Remove a WSDL file from the repository.
+<p />
+Parameters:
+<p />
+filename - the url of WSDL file.
+<p />
+Returns:   
+<p />
+true or false indicating whether the deletion operation is successful.
+<p />
+<h4><a name="findServicesByInterface"> </a> findServicesByInterface </h4>
+<p />
+<pre>
+public FindServicesByInterfaceResponse findServicesByInterface(String filename) throws RemoteException;
+
+public class FindServicesByInterfaceResponse  implements java.io.Serializable {
+    private java.lang.String[] wsdlKey;
+    ......
+}
+
+</pre>
+<p />
+Return all UDDI services that are registered as implementing the WSDL interface at the given url.
+<p />
+Parameters:
+<p />
+filename - the url of wsdl file.
+<p />
+Returns:
+<p />
+the UDDI service keys.
+<p />
+<h4><a name="getAllWSDLFiles"> </a> getAllWSDLFiles </h4>
+<p />
+<pre>
+public GetAllWSDLFilesResponse getAllWSDLFiles() throws RemoteException;
+
+public class GetAllWSDLFilesResponse  implements java.io.Serializable {
+    private java.lang.String[] url;
+    ......
+}
+</pre>
+<p />
+Return the URLs of all WSDL adverts registered in Grimoires.
+<p />
+Parameters:
+<p />
+Returns:
+<p />
+the urls of all registered WSDLs.
+<p />
+<h4><a name="getOperationsByURL"> </a> getOperationsByURL </h4>
+<p />
+<pre>
+public GetOperationsByURLResponse getOperationsByURL(String url) throws RemoteException;
+
+public class GetOperationsByURLResponse  implements java.io.Serializable {
+    private OperationDetail[] operationDetail;
+    ......
+}
+
+
+class OperationDetail {
+    java.lang.String portTypeNamespace; // PortType namespace
+    java.lang.String portTypeName;      // PortType name
+    java.lang.String operationName;     // Operation name
+}
+</pre>
+<p />
+Get the names of all operations in a WSDL file.
+<p />
+Parameters:
+<p />
+url - the url of the WSDL.
+<p />
+Returns:
+<p />
+an array of OperationDetail that describes the names of all operations defined in this WSDL. Each OperationDetail unambiguously describes the name of an operation.
+<p />
+<h4><a name="getInputMessageOfOperation"> </a> getInputMessageOfOperation </h4>
+<h4><a name="getOutputMessageOfOperation"> </a> getOutputMessageOfOperation </h4>
+<h4><a name="getFaultMessageOfOperation"> </a> getFaultMessageOfOperation </h4>
+<p />
+<pre>
+public MessageDetail getInputMessageOfOperation(OperationDetail opDetail) throws RemoteException;
+public MessageDetail getOutputMessageOfOperation(OperationDetail opDetail) throws RemoteException;
+public MessageDetail getFaultMessageOfOperation(OperationDetail opDetail) throws RemoteException;
+
+class MessageDetail {
+    java.lang.String messageNamespace; // Message namespace
+    java.lang.String messageName;      // Message name
+    java.lang.String[] partName;       // Names of message parts
+}
+</pre>
+<p />
+Get the input, output, or fault message information for a certain operation.
+<p />
+Parameters:
+<p />
+opDetail - an OperationDetail object describing a certain operation.
+<p />
+Returns:
+<p />
+an MessageDetail object that gives the information for an input, output, or fault message: the namespace of the message, the name of the message, and the names of all parts of the message.
+<p />
+</div>
+
+</body></html>

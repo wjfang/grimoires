@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Grimoires Documentation - Installation Guide - Grimoires</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url('i_arrow_down.gif');
+	}
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script>
+</head>
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1><a name="Grimoires_Installation_Man"> </a>Installation Guide - Grimoires</h1>
+<p />
+<div class="twikiToc">
+<ul>
+<li> <a href="#Grimoires_Installation_Man">Installation Guide - Grimoires</a>
+<ul>
+<li> <a href="#Grimoires_directory_structure">Grimoires directory structure</a>
+</li>
+<li> <a href="#Configuration">Configuration</a>
+<ul>
+<li> <a href="#init_properties">Compilation and deployment: init.properties</a>
+</li>
+<li> <a href="#grimoires_properties">Run time options: grimoires.properties</a>
+</li>
+<li> <a href="#security_options">Security options</a>
+</li>
+</ul>
+</li>
+<li> <a href="#Deployment">Deployment</a>
+<ul>
+<li> <a href="#build_xml">build.xml</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p />
+<h2><a name="Grimoires_directory_structure"> </a> Grimoires directory structure </h2>
+After you download and unzip Grimoires, you will see the following directory structure inside.
+<p />
+<ul>
+<li> src/: source code
+<ul>
+<li> grimoires.properties: set up runtime options, e.g., which RDF triple store to use.
+</li>
+</ul>
+</li>
+<li> lib/: where Grimoires server jar is generated, and all third party jars required by Grimoires
+</li>
+<li> docs/: documentation
+<ul>
+<li> api/: javadoc
+</li>
+</ul>
+</li>
+<li> wsdl/: wsdl files and xsd schemas for all Grimoires services
+</li>
+<li> config/: configuration files for various containers
+<ul>
+<li> axis/: configuration files for standard Apache Tomcat
+</li>
+<li> gt4/: configuration files for GT4 container
+</li>
+<li> omii/: configuration files for OMII without signed SOAP message support
+</li>
+<li> omii-sec/: configuration files for OMII with signed SOAP message support
+</li>
+</ul>
+</li>
+<li> dist/: where binary release files (war file or gar file) for various containers are generated
+<ul>
+<li> client/: Grimoires client
+</li>
+<li> server/: Grimoires server
+</li>
+</ul>
+</li>
+<li> wstester/: junit test suite
+</li>
+<li> GShell/: Grimoires shell, Grimoires' command line client tool
+</li>
+<li> licenses/: third party licenses
+</li>
+<li> init.properties: set up the compilation and deployment options for Grimoires. Users need to edit this before compilation and deployment.
+</li>
+<li> build.xml: Ant build file containing all ant targets to compile and deploy Grimoires. Users do not need to edit this file to compile and deploy Grimoires.
+</li>
+<li>LICENCE: the licence statement.</li>
+<li>README: a read me file.</li>
+</ul>
+<p />
+<h2><a name="Configuration"> </a> Configuration </h2>
+<p />
+There are two main configuration files in Grimories: init.properties contains the compilation and deployment options, and grimoires.properties contains Grimoires' runtime options. There are also several options that may need to be set for a secure deployment of Grimoires.
+
+<h3><a name="init_properties"> </a>Compilation and deployment: init.properties </h3>
+<p />
+All the configurable parameters required to compile and deploy Grimoires can be located in init.properties.
+<p />
+<ul>
+<li> [Required] Target container: omii-sec, omii, axis, or gt4. For instance,
+</li>
+</ul>
+<pre>
+container = omii
+</pre>
+<p />
+As mentioned in the <b><u><a class="twikiLink" href="./started.html">getting started guide</a>&nbsp;</b></u>, Grimoires has three target containers, OMII, Tomcat and GT4. The corresponding options for this parameter are i) omii - the supported version of the OMII container;
+ii) omii-sec - the supported version of the secure OMII container. This requires that request messages to Grimoires must be signed in accordance with X509 standards, and the Distinguished Name  (DN) of the accompanying certificate be extracted; (refer to  the <b><u><a class="twikiLink" href="./security.html">security</a>&nbsp;</b></u> guide for further information)
+iii) axis - the supported versions of Tomcat and Axis;
+iv) gt4 - the supported version of the Globus Toolkit 4 container.
+<p />
+<ul>
+<li> OMII specific options, which are REQUIRED if either the option "container = omii" or "container = omii-sec" is chosen. For instance,
+</li>
+</ul>
+
+<pre>
+securitytype = basic
+</pre>
+<p />
+This parameter is only relevant if a secure OMII container deployment is chosen (i.e. option "container = omii-sec"). It determines the type of access control to be enforced on incoming requests to Grimoires. There are currently two options: i) basic - this is very basic access control. As long as the incoming request message has an accompanying signature that is verifiable to the OMII server (i.e. whose public key certificate was signed by the OMII CA), it is permitted through. ii) acl - the DN from the certificate is used in an XML based access control list to ascertain whether the request is permitted or denied. Refer to  the <b><u><a class="twikiLink" href="./security.html#Grimoires_deploy">security</a></b></u> guide for further information.
+<p />
+
+
+</ul>
+<pre>
+tomcat.host = http://gallagher
+tomcat:port = 18080
+omii.context.path = grimoires
+omii.tomcat.username = tomcat
+omii.tomcat.password = tomcat
+</pre>
+<p />
+In the above case, Grimoires will be deployed in http://gallagher:18080/grimoires. The username of a valid tomcat account of a manager role is "tomcat", and the corresponding password is "tomcat".
+<p />
+<ul>
+<li> Axis specific options, which are REQUIRED if the option "container = axis" is chosen. For instance,
+</li>
+</ul>
+<pre>
+axis.tomcat.url = http://localhost:8080/
+axis.context.path = grimoires
+axis.tomcat.username = tomcat
+axis.tomcat.password = tomcat
+</pre>
+<p />
+In the above case, Grimoires will be deployed in http://localhost:8080/grimoires. The username of a valid tomcat account of a manager role is "tomcat", and the corresponding password is "tomcat".
+<p />
+<ul>
+<li> GT4 specific options, which are REQUIRED if the option "container = gt4" is chosen. For instance,
+</li>
+</ul>
+<pre>
+gt4.url = http://localhost:8080
+gt4.home = /home/gt395/gt4
+</pre>
+<p />
+<h3><a name="grimoires_properties"> </a> Run time options: grimoires.properties </h3>
+<p />
+Currently, grimoires.properties controls the RDF triple store configuration in Grimoires as well as some relevant security parameters. The grimoires.properties file can be found in the distribution in src/. After Grimoires is deployed, grimoires.properties appears in webapps/grimoires/WEB-INF/classes, assuming axis.context.path = grimoires. All the options controlling Grimoires' runtime behavior appear here. If the "securitytype = acl" option is chosen for a deployment of a secure OMII container, the location of the <b><u><a class="twikiLink" href="./security.html#Grimoires_ACL">access control list</a></b></u> to be used by Grimoires is specified here. The default value is correct with respect to the default deployment of Grimoires into the secure OMII container.
+<p />
+
+<pre>
+# Location of authorization file for a secure deployment of Grimoires in OMII using an XML ACL
+# This sets the location of the file containing the list of X509DNs and the operations permitted to them
+# by default, this is set to the authlist.xml file located at the WEB-INF directory of the WAR (or Axis) deployment of Grimoires.
+
+authfile = /usr/local/OMII/jakarta-tomcat-5.0.25/webapps/grimoires/WEB-INF/authlist.xml
+</pre>
+
+
+<p />
+There are various triple stores supported by Grimoires. We use the "store" property to denote different triple store configurations. E.g.,
+"sesame" represents a Sesame repository, which includes (file-backed) in-memory, native, rdbms-based Sesame repository. "memory" represents a Jena in-memory store. "file" represents a Jena file-backed in-memory store. "bdb" represents a Jena Berkeley DB based store. "mysql" represents a Jena MySQL-based store. "postgresql" represents a Jena PostgreSQL-based
+store.
+<p />
+To configure, choose any of these store types, as well as its associated
+properties, and comment out all other properties. To configure the Sesame store,
+choose any of the Sesame repositories, as well as its associated properties, and
+comment out all other properties.<p />
+Below are grimoires.properties samples for each available triple store
+configuration.
+<h5>Sesame in-memory triple store</h5>
+<pre>
+# Various Sesame repositories
+store = sesame
+# Sesame in-memory repository
+sesame.repository = memory
+# Is reasoning required?
+sesame.inferencing = false
+# If multiple users access the triple store simultaneously, should they be synchronized? This is set to false because Grimoires has its own synchronization layer.
+sesame.sync = false
+# The backup file. Make sure Grimoires has the permission to access this file.
+# sesame.file = sesame.rdf
+# The representation format of RDF statements. "ntriples" is most efficient.
+# sesame.format = ntriples
+# The time delay from a publication to its corresponding dump to the file. If there is another publication before the timer expires, the timer is reset.
+# sesame.syncDelay = 60000
+</pre>
+<h5>Sesame rdbms-based triple store</h5>
+<pre>
+# Various Sesame repositories
+store = sesame
+# Sesame rdbms-based repository
+sesame.repository = rdbms
+sesame.sync = false
+# Database drive
+sesame.jdbcDriver = org.postgresql.Driver
+# JDBC URL
+sesame.jdbcUrl = jdbc:postgresql://localhost/sesame
+# Database username
+sesame.user = sesame
+# Database password
+sesame.password = sesame
+</pre>
+<h5>Sesame native triple store</h5>
+<pre>
+# Various Sesame repositories
+store = sesame
+# Sesame native repository
+sesame.repository = native
+sesame.sync = false
+# A directory where RDF triples are dumped. Make sure Grimoires has the proper permission to access it.
+Sesame.dir =  c:\\sesame
+</pre>
+<h5>Jena in-memory triple store</h5>
+<pre>
+# An Jena in-memory backend
+store = memory
+</pre>
+<h5>Jena file-backed in-memory triple store</h5>
+<pre>
+# Memory model backed by files
+###################
+store = file
+# A directory where RDF triples are dumped. Make sure Grimoires has the proper permission to access it.
+root = L:\\Documents and Settings\\wf\\My Documents\\workspace\\Grimoires\\store\\
+</pre>
+<h5>Jena Berkeley DB based triple store</h5>
+<pre>
+# Berkeley DB store
+###################
+store = bdb
+# A directory where RDF triples are dumped. Make sure Grimoires has the proper permission to access it.
+dbfile = c:\\BDBStore
+# DB name
+dbname = Grimoires
+</pre>
+<h5>Jena MySQL-based triple store</h5>
+<pre>
+# MySQL
+###################
+store = mysql
+# JDBC URL
+url = jdbc:mysql://localhost:3306/grimoires
+# DB username
+user = grimoires
+# DB password
+password = grimoires
+</pre>
+<h5>Jena PostgreSQL-based triple store</h5>
+<pre>
+
+# PostgreSQL
+###################
+store = postgresql
+# JDBC URL
+url = jdbc:postgresql://localhost/Grimoires_Benchmark
+# DB username
+user = grimoires
+# DB password
+password = grimoires
+</pre>
+
+
+<h3><a name="security_options"> </a>Security options</h3>
+
+If Grimoires is to be deployed in a secure mode (i.e. with "container = omii-sec"), some <b><u><a class="twikiLink" href="./security.html#Configuration_parameters">configuration parameters</a></b></u> need to be set in order to ensure that the appropriate keystore is being accessed. The file crypto.properties in /config/omii-sec/classes/conf is as follows:
+
+<pre>
+org.apache.ws.security.crypto.merlin.file=/usr/local/OMII/omii.ks
+org.apache.ws.security.crypto.merlin.keystore.password=tmpstore
+org.apache.ws.security.crypto.merlin.keystore.alias=omii_server
+org.apache.ws.security.crypto.merlin.alias.password=tmpstore
+org.apache.ws.security.crypto.provider=org.apache.ws.security.components.crypto.Merlin
+org.apache.ws.security.crypto.merlin.keystore.type=JKS
+org.apache.ws.security.crypto.merlin.crldir=/usr/local/OMII/grid/CRLs
+</pre>
+
+The org.apache.ws.security.crypto.merlin.file parameter should be reflect the correct location of the OMII container root directory. By default, this is /usr/local/OMII; if an installation is made to a different directory, then this parameter must be changed accordingly. In addition, the <b><u><a class="twikiLink" href="./security.html#Grimoires_ACL">access control list</a></b></u> file should be set accordingly prior to deployment, if access control is desired.
+
+<p />
+<h2><a name="Deployment"> </a> Deployment </h2>
+<p />
+<h3><a name="build_xml"> </a> build.xml </h3>
+<p />
+Having set up the options in init.properties to the proper values in your environment, you can call the ant targets in build.xml to compile and deploy Grimoires to your selected container. Here we list all the ant targets for public use:
+<p />
+<ul>
+<li> clean: clean up all the compiled classes and generated jars. This should be called if you choose another container in init.properties. For instance, if you set "container = omii" then modify it to "container = axis", you need to call "clean" before you compile Grimoires.
+</li>
+<li> release: print the version information of Grimoires.
+</li>
+<li> build-all: build java doc, generate the war file or gar file (for GT4) which is deployable, based on the options set up in init.properties, and build the client.
+</li>
+<li> deploy: deploy Grimories (war file or gar file) to the container, based on the options set up in init.properties. "deploy" will call "make-dist". The Grimoires services should be located at:
+<ul>
+<li> UDDI Publish URL: http://hostname:18080/grimoires/services/publish
+</li>
+<li> UDDI Inquire URL: http://hostname:18080/grimoires/services/inquire
+</li>
+<li> WSDL interface URL: http://hostname:18080/grimoires/services/wsdl
+</li>
+<li> Metadata Publish URL: http://hostname:18080/grimoires/services/publish_metadata
+</li>
+<li> Metadata Inquire URL: http://hostname:18080/grimoires/services/inquire_metadata
+</li>
+<li> WSDL Metadata Inquire URL: http://hostname:18080/grimoires/services/inquire_wsdlMetadata
+</li>
+<li> UDDI Metadata Inquire URL: http://hostname:18080/grimoires/services/inquire_uddiMetadata
+</li>
+</ul>
+</li>
+</ul>
+<p />
+<ul>
+<li> undeploy: undeploy Grimoires from the container, based on the options set up in init.properties.
+</li>
+<li> test-install: Test whether Grimoires is deployed in a container properly. It will access each deployed Grimoires service using http protocol, and print the information it get. For instance, it will get http://localhost:18080/grimoires/services/publish. If the publish servie is successfully deployed, you will see
+</li>
+</ul>
+<pre>
+&lt;h1&gt;publish&lt;/h1&gt;
+&lt;p&gt;Hi there, this is an AXIS service!&lt;/p&gt;
+&lt;i&gt;Perhaps there will be a form for invoking the service here...&lt;/i&gt;
+</pre>
+<ul>
+<li> test-junit: Use the junit test suite to test against deployed Grimoires. Before run this target, you need to set up wstester/bos.properties. For instance, if Grimoires is deployed on the http://localhost:18080/grimoires/, registryBaseURL = http://localhost:18080/grimoires/services.
+</li>
+</ul>
+<p />
+
+IMPORTANT - the test-install and test-unit targets are only designed to run successfully against Grimoires in a standard (i.e. non-secure) OMII container.
+
+
+</div>
+
+</body></html>

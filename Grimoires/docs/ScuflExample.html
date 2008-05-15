@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>Scufl Example</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url(./i_arrow_down.gif);
+	}	        
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script></head>
+
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1><a name="Scful_Workflow_Example"> </a> Scful Workflow Example </h1>
+<p>
+</p><pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+  &lt;s:scufl xmlns:s="http://org.embl.ebi.escience/xscufl/0.1alpha" version="0.1"&gt;
+  &lt;!-- Get EMBL accession number for Affymetrix probe set Id --&gt; 
+  &lt;s:source&gt;probeSetId&lt;/s:source&gt;
+  &lt;s:link&gt;
+    &lt;s:output&gt;probeSetId&lt;/s:output&gt;
+    &lt;s:input&gt;AffyMapper_emblAccNumber:probeSetId&lt;/s:input&gt;
+  &lt;/s:link&gt;
+  &lt;s:processor name="AffyMapper_emblAccNumber"&gt;  
+    &lt;s:arbitrarywsdl&gt;  
+      &lt;s:wsdl&gt;http://mygrid.ncl.ac.uk/axis/services/affymapper?wsdl&lt;/s:wsdl&gt;
+      &lt;s:porttype&gt;AffymetrixMapper&lt;/s:porttype&gt;
+      &lt;s:operation&gt;getAccessionNumber&lt;/s:operation&gt;
+    &lt;/s:arbitrarywsdl&gt;   
+  &lt;/s:processor&gt;
+  &lt;s:link&gt;
+    &lt;s:input&gt;SrsEbiQuery_HgvbaseId:emblAccNumber&lt;/s:input&gt;
+    &lt;s:output&gt;AffyMapper_emblAccNumber:getAccessionNumberReturn&lt;/s:output&gt;
+  &lt;/s:link&gt;
+  &lt;!-- Get HGVBASE Id for EMBL Accession Number --&gt;
+  &lt;s:processor name="SrsEbiQuery_HgvbaseId"&gt;  
+    &lt;s:arbitrarywsdl&gt;  
+      &lt;s:wsdl&gt;http://mygrid.ncl.ac.uk/axis/services/SrsEbiQuery?wsdl&lt;/s:wsdl&gt;  
+      &lt;s:porttype&gt;SrsEbiQuery&lt;/s:porttype&gt;  
+      &lt;s:operation&gt;queryHgvbaseByEmblAccNumber&lt;/s:operation&gt;  
+    &lt;/s:arbitrarywsdl&gt;  
+  &lt;/s:processor&gt;  
+  &lt;s:link&gt;
+    &lt;s:input&gt;SrsEbiQuery_HgvbaseEntries:usas&lt;/s:input&gt;
+    &lt;s:output&gt;SrsEbiQuery_HgvbaseId:queryHgvbaseByEmblAccNumberReturn&lt;/s:output&gt;
+  &lt;/s:link&gt;
+  &lt;!-- Retrieve HGVBASE entries associated with Hgvbase Ids--&gt;
+  &lt;s:processor name="SrsEbiQuery_HgvbaseEntries"&gt; 
+    &lt;s:arbitrarywsdl&gt;  
+      &lt;s:wsdl&gt;http://mygrid.ncl.ac.uk/axis/services/SrsEbiQuery?wsdl&lt;/s:wsdl&gt; 
+      &lt;s:porttype&gt;SrsEbiQuery&lt;/s:porttype&gt;  
+      &lt;s:operation&gt;queryByArrayIds&lt;/s:operation&gt;  
+    &lt;/s:arbitrarywsdl&gt; 
+  &lt;/s:processor&gt;
+  &lt;!-- Get Embl entry for Embl accession number --&gt;
+  &lt;s:link&gt;
+    &lt;s:input&gt;SrsEbiQuery_emblEntry:usa&lt;/s:input&gt;
+    &lt;s:output&gt;AffyMapper_emblAccNumber:getAccessionNumberReturn&lt;/s:output&gt;
+  &lt;/s:link&gt;
+  &lt;s:processor name="SrsEbiQuery_emblEntry"&gt;  
+    &lt;s:arbitrarywsdl&gt;  
+      &lt;s:wsdl&gt;http://mygrid.ncl.ac.uk/axis/services/SrsEbiQuery?wsdl&lt;/s:wsdl&gt;  
+      &lt;s:porttype&gt;SrsEbiQuery&lt;/s:porttype&gt;  
+      &lt;s:operation&gt;queryById&lt;/s:operation&gt;  
+    &lt;/s:arbitrarywsdl&gt;  
+  &lt;/s:processor&gt;
+  &lt;!-- Merge SNP data with EMBL entry --&gt;
+  &lt;s:link&gt;
+    &lt;s:input&gt;EmblSnpEdit_emblEntryWithSNPs:emblEntry&lt;/s:input&gt;
+    &lt;s:output&gt;SrsEbiQuery_emblEntry:queryByIdReturn&lt;/s:output&gt;
+  &lt;/s:link&gt;
+  &lt;s:link&gt;
+    &lt;s:input&gt;EmblSnpEdit_emblEntryWithSNPs:hgvbaseEntries&lt;/s:input&gt;
+    &lt;s:output&gt;SrsEbiQuery_HgvbaseEntries:queryByArrayIdsReturn&lt;/s:output&gt;
+  &lt;/s:link&gt;
+  &lt;s:processor name="EmblSnpEdit_emblEntryWithSNPs"&gt;  
+    &lt;s:arbitrarywsdl&gt;  
+      &lt;s:wsdl&gt;http://mygrid.ncl.ac.uk/axis/services/EmblSnpEdit?wsdl&lt;/s:wsdl&gt;  
+      &lt;s:porttype&gt;SnpFeatureEmblEditor&lt;/s:porttype&gt;  
+      &lt;s:operation&gt;mergeSnpData&lt;/s:operation&gt;  
+   &lt;/s:arbitrarywsdl&gt;  
+  &lt;/s:processor&gt;  
+  &lt;s:sink&gt;outfile_emblEntryWithSNPs&lt;/s:sink&gt;
+  &lt;s:link&gt;
+    &lt;s:input&gt;outfile_emblEntryWithSNPs&lt;/s:input&gt;
+    &lt;s:output&gt;EmblSnpEdit_emblEntryWithSNPs:mergeSnpDataReturn&lt;/s:output&gt;
+  &lt;/s:link&gt;
+&lt;/s:scufl&gt;
+</pre>
+<p>
+</p><p>
+</div>
+
+</body></html>

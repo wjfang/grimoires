@@ -1,0 +1,1175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=INFN-PADOVA,mds-vo-name=INFN-PADOVA">
+    <Name>INFN-PADOVA</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:grid-prod@pd.infn.it</UserSupportContact>
+    <SysAdminContact>mailto:grid-prod@pd.infn.it</SysAdminContact>
+    <SecurityContact>mailto:grid-prod@pd.infn.it</SecurityContact>
+    <Location>Padova, Italy</Location>
+    <Latitude>45.4095</Latitude>
+    <Longitude>11.886</Longitude>
+    <Web>http://www.pd.infn.it</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-3</OtherInfo>
+    <OtherInfo>CNAF-T1</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=prod-ce-01.pd.infn.it,mds-vo-name=INFN-PADOVA">
+        <Name>prod-ce-01.pd.infn.it</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=prod-ce-01.pd.infn.it,GlueClusterUniqueID=prod-ce-01.pd.infn.it,mds-vo-name=INFN-PADOVA">
+            <Name>prod-ce-01.pd.infn.it</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SLC" Release="3.0.4" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel" Model="XEON" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="4096" RAMSize="2048"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1286" SF00="1496"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=prod-se-01.pd.infn.it,mds-vo-name=INFN-PADOVA">
+        <InformationServiceURL>ldap://prod-se-01.pd.infn.it:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="alice">
+            <Path>/flatfiles/SE00/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/flatfiles/SE00/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="babar">
+            <Path>/flatfiles/SE00/babar</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="bio">
+            <Path>/flatfiles/SE00/bio</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomed">
+            <Path>/flatfiles/SE00/biomed</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cdf">
+            <Path>/flatfiles/SE00/cdf</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/flatfiles/SE00/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="compchem">
+            <Path>/flatfiles/SE00/compchem</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cyclops">
+            <Path>/flatfiles/SE00/cyclops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/flatfiles/SE00/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="egrid">
+            <Path>/flatfiles/SE00/egrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="enea">
+            <Path>/flatfiles/SE00/enea</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="esr">
+            <Path>/flatfiles/SE00/esr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="euindia">
+            <Path>/flatfiles/SE00/euindia</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gridit">
+            <Path>/flatfiles/SE00/gridit</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="inaf">
+            <Path>/flatfiles/SE00/inaf</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="infngrid">
+            <Path>/flatfiles/SE00/infngrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ingv">
+            <Path>/flatfiles/SE00/ingv</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/flatfiles/SE00/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="magic">
+            <Path>/flatfiles/SE00/magic</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/flatfiles/SE00/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="planck">
+            <Path>/flatfiles/SE00/planck</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="theophys">
+            <Path>/flatfiles/SE00/theophys</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="virgo">
+            <Path>/flatfiles/SE00/virgo</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="zeus">
+            <Path>/flatfiles/SE00/zeus</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>494005996</UsedSpace>
+            <AvailableSpace>3900172564</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://prod-se-01.pd.infn.it</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=gridit002.pd.infn.it,mds-vo-name=INFN-PADOVA">
+        <InformationServiceURL>ldap://gridit002.pd.infn.it:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="alice">
+            <Path>/flatfiles/SE00/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>656394520</UsedSpace>
+            <AvailableSpace>52657104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/flatfiles/SE00/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>564020128</UsedSpace>
+            <AvailableSpace>145031496</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="babar">
+            <Path>/flatfiles/SE00/babar</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>656394520</UsedSpace>
+            <AvailableSpace>52657104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="bio">
+            <Path>/flatfiles/SE00/bio</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>656394520</UsedSpace>
+            <AvailableSpace>52657104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomed">
+            <Path>/flatfiles/SE00/biomed</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>564020128</UsedSpace>
+            <AvailableSpace>145031496</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cdf">
+            <Path>/flatfiles/SE00/cdf</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>656394520</UsedSpace>
+            <AvailableSpace>52657104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/flatfiles/SE01/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>564020128</UsedSpace>
+            <AvailableSpace>145031496</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="compchem">
+            <Path>/flatfiles/SE00/compchem</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>656394520</UsedSpace>
+            <AvailableSpace>52657104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cyclops">
+            <Path>/flatfiles/SE00/cyclops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>656394520</UsedSpace>
+            <AvailableSpace>52657104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/flatfiles/SE00/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>656394520</UsedSpace>
+            <AvailableSpace>52657104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="egrid">
+            <Path>/flatfiles/SE00/egrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>656394520</UsedSpace>
+            <AvailableSpace>52657104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="enea">
+            <Path>/flatfiles/SE00/enea</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>656394520</UsedSpace>
+            <AvailableSpace>52657104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="esr">
+            <Path>/flatfiles/SE00/esr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>656394520</UsedSpace>
+            <AvailableSpace>52657104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="euindia">
+            <Path>/flatfiles/SE00/euindia</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>656394520</UsedSpace>
+            <AvailableSpace>52657104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gridit">
+            <Path>/flatfiles/SE00/gridit</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>656394520</UsedSpace>
+            <AvailableSpace>52657104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="inaf">
+            <Path>/flatfiles/SE00/inaf</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>656394520</UsedSpace>
+            <AvailableSpace>52657104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="infngrid">
+            <Path>/flatfiles/SE00/infngrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>656394520</UsedSpace>
+            <AvailableSpace>52657104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ingv">
+            <Path>/flatfiles/SE00/ingv</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>656394520</UsedSpace>
+            <AvailableSpace>52657104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/flatfiles/SE00/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>656394520</UsedSpace>
+            <AvailableSpace>52657104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="magic">
+            <Path>/flatfiles/SE00/magic</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>656394520</UsedSpace>
+            <AvailableSpace>52657104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/flatfiles/SE00/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>656394520</UsedSpace>
+            <AvailableSpace>52657104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="planck">
+            <Path>/flatfiles/SE00/planck</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>656394520</UsedSpace>
+            <AvailableSpace>52657104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="theophys">
+            <Path>/flatfiles/SE00/theophys</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>656394520</UsedSpace>
+            <AvailableSpace>52657104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="virgo">
+            <Path>/flatfiles/SE00/virgo</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>656394520</UsedSpace>
+            <AvailableSpace>52657104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="zeus">
+            <Path>/flatfiles/SE00/zeus</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>656394520</UsedSpace>
+            <AvailableSpace>52657104</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://gridit002.pd.infn.it</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=prod-se-02.pd.infn.it,mds-vo-name=INFN-PADOVA">
+        <InformationServiceURL>ldap://prod-se-02.pd.infn.it:2170/mds-vo-name=resource,o=grid</InformationServiceURL>
+        <SizeTotal>4500</SizeTotal>
+        <SizeFree>4210</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="alice">
+            <Path>/dpm/pd.infn.it/home/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/dpm/pd.infn.it/home/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1588042</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="babar">
+            <Path>/dpm/pd.infn.it/home/babar</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="bio">
+            <Path>/dpm/pd.infn.it/home/bio</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17848017</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomed">
+            <Path>/dpm/pd.infn.it/home/biomed</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>43520543</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cdf">
+            <Path>/dpm/pd.infn.it/home/cdf</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2298</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/pd.infn.it/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>12591184</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="compchem">
+            <Path>/dpm/pd.infn.it/home/compchem</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cyclops">
+            <Path>/dpm/pd.infn.it/home/cyclops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>253573</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/pd.infn.it/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1399590</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="egrid">
+            <Path>/dpm/pd.infn.it/home/egrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="enea">
+            <Path>/dpm/pd.infn.it/home/enea</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="esr">
+            <Path>/dpm/pd.infn.it/home/esr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>32519149</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="euindia">
+            <Path>/dpm/pd.infn.it/home/euindia</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>15816</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gridit">
+            <Path>/dpm/pd.infn.it/home/gridit</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4280574</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="inaf">
+            <Path>/dpm/pd.infn.it/home/inaf</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>125</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="infngrid">
+            <Path>/dpm/pd.infn.it/home/infngrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>182</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ingv">
+            <Path>/dpm/pd.infn.it/home/ingv</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>474722</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/dpm/pd.infn.it/home/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="magic">
+            <Path>/dpm/pd.infn.it/home/magic</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/pd.infn.it/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2199</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="planck">
+            <Path>/dpm/pd.infn.it/home/planck</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>88162</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="theophys">
+            <Path>/dpm/pd.infn.it/home/theophys</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="virgo">
+            <Path>/dpm/pd.infn.it/home/virgo</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="zeus">
+            <Path>/dpm/pd.infn.it/home/zeus</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>252046</UsedSpace>
+            <AvailableSpace>4210000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://prod-se-02.pd.infn.it</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://prod-se-02.pd.infn.it</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://prod-se-02.pd.infn.it</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=http://egrid-lfc-01.pd.infn.it:8085/,mds-vo-name=INFN-PADOVA">
+        <Name>INFN-PADOVA-lfc-dli</Name>
+        <Type>data-location-interface</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>http://egrid-lfc-01.pd.infn.it:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>egrid</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=egrid-lfc-01.pd.infn.it,mds-vo-name=INFN-PADOVA">
+        <Name>INFN-PADOVA-lfc</Name>
+        <Type>lcg-file-catalog</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>egrid-lfc-01.pd.infn.it</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>egrid</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=prod-rb-01.pd.infn.it:7772,mds-vo-name=INFN-PADOVA">
+        <Name>INFN-PADOVA-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>prod-rb-01.pd.infn.it:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>argo</Owner>
+        <Owner>atlas</Owner>
+        <Owner>babar</Owner>
+        <Owner>bio</Owner>
+        <Owner>biomed</Owner>
+        <Owner>cdf</Owner>
+        <Owner>cms</Owner>
+        <Owner>compassit</Owner>
+        <Owner>compchem</Owner>
+        <Owner>cyclops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>egrid</Owner>
+        <Owner>enea</Owner>
+        <Owner>esr</Owner>
+        <Owner>euchina</Owner>
+        <Owner>euindia</Owner>
+        <Owner>eumed</Owner>
+        <Owner>geant4</Owner>
+        <Owner>gear</Owner>
+        <Owner>gilda</Owner>
+        <Owner>gridit</Owner>
+        <Owner>inaf</Owner>
+        <Owner>infngrid</Owner>
+        <Owner>ingv</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>libi</Owner>
+        <Owner>magic</Owner>
+        <Owner>ops</Owner>
+        <Owner>pamela</Owner>
+        <Owner>planck</Owner>
+        <Owner>theophys</Owner>
+        <Owner>virgo</Owner>
+        <Owner>zeus</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=gridit002.pd.infn.it:2136,mds-vo-name=INFN-PADOVA">
+        <Name>INFN-PADOVA-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://gridit002.pd.infn.it:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>babar</Owner>
+        <Owner>bio</Owner>
+        <Owner>biomed</Owner>
+        <Owner>cdf</Owner>
+        <Owner>cms</Owner>
+        <Owner>compchem</Owner>
+        <Owner>cyclops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>egrid</Owner>
+        <Owner>enea</Owner>
+        <Owner>esr</Owner>
+        <Owner>euindia</Owner>
+        <Owner>gridit</Owner>
+        <Owner>inaf</Owner>
+        <Owner>infngrid</Owner>
+        <Owner>ingv</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>magic</Owner>
+        <Owner>ops</Owner>
+        <Owner>planck</Owner>
+        <Owner>theophys</Owner>
+        <Owner>virgo</Owner>
+        <Owner>zeus</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://prod-se-02.pd.infn.it:8443/srm/managerv1,mds-vo-name=INFN-PADOVA">
+        <Name>INFN-PADOVA-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://prod-se-02.pd.infn.it:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://prod-se-02.pd.infn.it:8446/srm/managerv2,mds-vo-name=INFN-PADOVA">
+        <Name>INFN-PADOVA-srm</Name>
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://prod-se-02.pd.infn.it:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=prod-wms-01.pd.infn.it:7772,mds-vo-name=INFN-PADOVA">
+        <Name>INFN-PADOVA-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>prod-wms-01.pd.infn.it:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>babar</Owner>
+        <Owner>bio</Owner>
+        <Owner>biomed</Owner>
+        <Owner>cdf</Owner>
+        <Owner>cms</Owner>
+        <Owner>compchem</Owner>
+        <Owner>cyclops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>egrid</Owner>
+        <Owner>enea</Owner>
+        <Owner>esr</Owner>
+        <Owner>euindia</Owner>
+        <Owner>gridit</Owner>
+        <Owner>inaf</Owner>
+        <Owner>infngrid</Owner>
+        <Owner>ingv</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>magic</Owner>
+        <Owner>ops</Owner>
+        <Owner>planck</Owner>
+        <Owner>theophys</Owner>
+        <Owner>virgo</Owner>
+        <Owner>zeus</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=eu-india-02.pd.infn.it:7772,mds-vo-name=INFN-PADOVA">
+        <Name>INFN-PADOVA-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>eu-india-02.pd.infn.it:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>infngrid</Owner>
+        <Owner>euindia</Owner>
+    </Service>
+</Site>

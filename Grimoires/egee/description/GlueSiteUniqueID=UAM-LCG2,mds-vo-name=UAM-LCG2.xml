@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=UAM-LCG2,mds-vo-name=UAM-LCG2">
+    <Name>UAM-LCG2</Name>
+    <Description>EGEE/LCG Site</Description>
+    <UserSupportContact>mailto: lcg.support@uam.es</UserSupportContact>
+    <SysAdminContact>mailto: lcg.support@uam.es</SysAdminContact>
+    <SecurityContact>mailto: lcg.support@uam.es</SecurityContact>
+    <Location>Madrid,Spain</Location>
+    <Latitude>40.4167</Latitude>
+    <Longitude>-3.7167</Longitude>
+    <Web>http://www.hepexp.ft.uam.es/</Web>
+    <OtherInfo>TIER 2</OtherInfo>
+    <OtherInfo>PIC</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=grid003.ft.uam.es,mds-vo-name=UAM-LCG2">
+        <Name>grid003.ft.uam.es</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=grid003.ft.uam.es,GlueClusterUniqueID=grid003.ft.uam.es,mds-vo-name=UAM-LCG2">
+            <Name>grid003.ft.uam.es</Name>
+            <PhysicalCPUs>134</PhysicalCPUs>
+            <LogicalCPUs>134</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="3" Release="3.0.5" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="Dual Core Opteron" ClockSpeed="2194"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="3072" RAMSize="2048"/>
+            <Architecture SMPSize="16"/>
+            <Benchmark SI00="1494" SF00="1729"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=grid002.ft.uam.es,mds-vo-name=UAM-LCG2">
+        <InformationServiceURL>ldap://grid002.ft.uam.es:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>40222</SizeTotal>
+        <SizeFree>26443</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/pnfs/ft.uam.es/data/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>13778931000</UsedSpace>
+            <AvailableSpace>26443437727</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/pnfs/ft.uam.es/data/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>2820759163</UsedSpace>
+            <AvailableSpace>5876549612</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/pnfs/ft.uam.es/data/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>2820759163</UsedSpace>
+            <AvailableSpace>5876549612</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsidcap">
+            <Type>gsidcap</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-gsi-grid002@gsidcap-grid002Domain">
+            <Endpoint>gsidcap://grid002.ft.uam.es:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-grid002@gridftp-grid002Domain">
+            <Endpoint>gsiftp://grid002.ft.uam.es:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-grid002@dcap-grid002Domain">
+            <Endpoint>dcap://grid002.ft.uam.es:22125</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <ControlProtocol LocalID="SRM-grid002@srm-grid002Domain">
+            <Endpoint>httpg://grid002.ft.uam.es:8443/srm/managerv1</Endpoint>
+            <Type>SRM</Type>
+            <Version>1.1.1</Version>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=grid013.ft.uam.es:2136,mds-vo-name=UAM-LCG2">
+        <Name>UAM-LCG2-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://grid013.ft.uam.es:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://grid002.ft.uam.es:8443/srm/managerv1,mds-vo-name=UAM-LCG2">
+        <Name>UAM-LCG2-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://grid002.ft.uam.es:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

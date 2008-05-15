@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+  <serviceDescription>
+  <serviceName>SHoundGetXMLBioseq</serviceName>
+    		<organisation>
+    			<organisationName>Blueprint</organisationName>
+    			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+    		</organisation>
+    		<locationURL>http://seqhound.blueprint.org/SHoundGetXMLBioseq</locationURL>
+  		<interfaceWSDL>http://seqhound.blueprint.org/SHoundGetXMLBioseq?wsdl</interfaceWSDL>
+  <serviceDescriptionText>Get an XML Formated Bioseq structure which contains sequence information and all available annotations.</serviceDescriptionText> 
+  <operations>
+  <serviceOperation>
+  <operationName>SHoundGetXMLBioseq</operationName> 
+  <operationInputs>
+  <parameter>
+  <parameterName>gi</parameterName> 
+  </parameter>
+  </operationInputs>
+  <operationOutputs>
+  <parameter>
+  <parameterName>result</parameterName> 
+  </parameter>
+  </operationOutputs>
+  </serviceOperation>
+  </operations>
+  <serviceType>SeqHound service</serviceType> 
+  </serviceDescription>
+  </serviceDescriptions>

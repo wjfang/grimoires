@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Grimoires Documentation - Tutorial - Grimoires Client Side Java API</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url('i_arrow_down.gif');
+	}	        
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script>
+</head>
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1><a name="api_tutorial"></a>Tutorial - Grimoires Client Side Java API</h1>
+<p />
+<div class="twikiToc">
+<ul>
+<li> <a href="#api_tutorial">Tutorial - Grimoires Client Side Java API </a>
+<ul>
+<li> <a href="#Introduction">Introduction</a></li>
+<li> <a href="#setup_stubs">Setup stubs</a> 
+</li>
+<li><a href="#inter_publish_business">Publish a new business entity</a> </li>
+<li><a href="#inter_publish_service">Publish a new business service</a> </li>
+<li><a href="#inter_discover_service">Discover the service by name</a> </li>
+<li><a href="#publish_wsdl">Publish the WSDL file</a> </li>
+<li><a href="#publish_metadata">Publish metadata</a> </li>
+<li><a href="#inquire_metadata">Inquire by metadata</a> </li>
+</ul>
+</li>
+</ul>
+</div>
+<p />
+<h2><a name="Introduction"></a>Introduction </h2>
+<p>This tutorial demonstrates how to use Grimoires Java API to write
+<a href="APITutorialExample.java">a simple program</a> to publish and discover a 
+service to a Grimoires registry. </p>
+<p>In this tutorial, we use the example in
+<a href="gtutorial.html#SOAP_web_services">Grimoires tutorial</a>. It publishes 
+the BLAST service from the DNA Data Bank of Japan (DDBJ). The service is 
+described using WSDL as the description language. The WSDL file is located at
+<a target="_top" href="http://xml.nig.ac.jp/wsdl/Blast.wsdl">
+http://xml.nig.ac.jp/wsdl/Blast.wsdl</a>. We assume the BLAST service is deploy 
+at <a href="http://xml.nig.ac.jp/xddbj/Blast">http://xml.nig.ac.jp/xddbj/Blast</a>.</p>
+<p>In this tutorial, we will also publish the service's WSDL file, and attach a 
+piece of metadata to a message part inside the WSDL description. The metadata 
+describes the semantic type, i.e., a DNA sequence, of the message part, which is 
+syntactically a string. Finally, we discover the message part based on the 
+metadata. Given the message part, we can further discover which operation this 
+message part belongs to, which WSDL description the operation belongs to, and 
+which service has implemented the WSDL description. Following these steps, a 
+service can be discovered by its metadata. </p>
+<p>This example program is also available in the &quot;GShell/src&quot; directory. To run 
+them, make sure that all Java libraries under the &quot;GShell/lib&quot; directory and 
+GShell classes under the &quot;GShell/build/classes&quot; directory are put into your 
+CLASSPATH. It is assumed your Grimoires registry is deployed at 
+http://fantasio.ecs.soton.ac.uk:8080/grimoires.</p>
+<pre>java uk.ac.soton.ecs.grimoires.shell.APITutorialExample http://fantasio.ecs.soton.ac.uk:8080/grimoires</pre>
+<p>On the screen, you will see:</p>
+<pre>====Publish a business====
+Business key: c758196c-0f03-4d74-bbc1-19e1c3343483
+====Publish a service====
+Service key: 5b3529c3-6635-4fc5-9ba2-7f37963d7176
+====Find a service====
+Service name: Blast
+Service key: 5b3529c3-6635-4fc5-9ba2-7f37963d7176
+Business key: c758196c-0f03-4d74-bbc1-19e1c3343483
+Service description: A DDBJWeb Service
+Access point in binding template: http://xml.nig.ac.jp/xddbj/Blast
+tModel: http://xml.nig.ac.jp/wsdl/Blast.wsdl
+====Publish WSDL====
+WSDL key: bdeb81e1-ba19-4b32-b757-c0c3e717387b
+====Publish metadata====
+Metadata key: 0da51ebb-f7fc-4d68-bc8b-edf54cc5cc63
+====Inquire metadata====
+Found a message part with this metedata
+(http://www.grimoires.org/SemanticType, DNA_Sequence)
+Message namespacehttp://www.themindelectric.com/wsdl/Blast/
+Message namesearchParam0In
+Message part nameparam</pre>
+<h2><a name="setup_stubs"></a>Setup stubs</h2>
+<p>Before we publish or discover a service, we need to set up stubs, which are 
+in charge of serializing/deserializing Java objects to/from SOAP messages, and 
+sending receiving SOAP messages to/from Grimoires.</p>
+<pre>private static void setUpStubs(String grimoiresURL) throws Exception {
+	if (!grimoiresURL.endsWith(&quot;/&quot;)) {
+		grimoiresURL = grimoiresURL + &quot;/&quot;;
+	}
+
+	String publishEndpoint = grimoiresURL + &quot;services/publish&quot;;
+	String inquireEndpoint = grimoiresURL + &quot;services/inquire&quot;;
+
+	// Set up UDDI publish stub
+	uk.ac.soton.ecs.grimoires.server.impl.uddiv2.publication.GrimoiresLocator publishLocator = 
+	new uk.ac.soton.ecs.grimoires.server.impl.uddiv2.publication.GrimoiresLocator();
+	publishLocator.setpublishEndpointAddress(publishEndpoint);
+	publish = publishLocator.getpublish();
+
+	// Set up UDDI inquire stub
+	uk.ac.soton.ecs.grimoires.server.impl.uddiv2.inquiry.GrimoiresLocator inquireLocator = 
+	new uk.ac.soton.ecs.grimoires.server.impl.uddiv2.inquiry.GrimoiresLocator();
+	inquireLocator.setinquireEndpointAddress(inquireEndpoint);
+	inquire = inquireLocator.getinquire();</pre>
+<pre>	// Set up other stubs ......
+}</pre>
+<p>To set up a stub, we firstly create an instance of GrimoiresLocator, which 
+represents a locator for the Grimoires service. We then set the correct 
+Grimoires service endpoint address in the locator. Finally, we get the service 
+interface from the locator.</p>
+<h2>&nbsp;<a name="inter_publish_business"></a>Publish a new business entity 
+</h2>
+<p>We will publish a business called &quot;DDBJ&quot;, which has a description of &quot;DNA 
+Data Bank of Japan&quot;. A business is the UDDI's terminology for an organization. </p>
+<pre>private static void publishBusienss() throws Exception {
+	System.out.println(&quot;====Publish a business====&quot;);
+	// Prepare the save_business request
+	Save_business request = new Save_business();
+	request.setAuthInfo(&quot;AUTHINFO&quot;);
+	BusinessEntity[] businessEntities = new BusinessEntity[1];
+	businessEntities[0] = new BusinessEntity();
+	businessEntities[0].setName(new Name[] {
+		new Name(&quot;DDBJ&quot;)
+		}); 
+	businessEntities[0].setDescription(new Description[] {
+		new Description(&quot;DNA Data Bank of Japan&quot;)
+		});
+	request.setBusinessEntity(businessEntities);
+
+	// Send the request and get a response
+	BusinessDetail response = publish.save_business(request);
+
+	// Process the response
+	businessKey = response.getBusinessEntity(0).getBusinessKey();
+	System.out.println(&quot;Business key: &quot; + businessKey);
+}</pre>
+<p />
+<p />
+In the above code, we create an instance of the Save_business class, which is 
+the corresponding Java class for the save_business SOAP message. We set up the 
+Save_business instance properly. Then it is passed as an argument to the 
+save_business method of the Publish interface. The save_business method returns 
+a BusinessDetail object, which is deserialized from the response SOAP message.<h2><a name="inter_publish_service"></a>Publish a new business service 
+</h2>
+<p />
+We will publish a service called &quot;Blast&quot;, 
+which belongs to &quot;DDBJ&quot;. The WDSL file of this service is located at
+<a target="_top" href="http://xml.nig.ac.jp/wsdl/Blast.wsdl">
+http://xml.nig.ac.jp/wsdl/Blast.wsdl</a>. The service itself is deployed at
+http://xml.nig.ac.jp/xddbj/Blast. <pre>private static void publishService() throws Exception {
+	System.out.println(&quot;====Publish a service====&quot;);
+	// Prepare the save_service request
+	Save_service request = new Save_service(
+		&quot;AUTHINFO&quot;,
+		new BusinessService[] {new BusinessService(
+			new Name[] {new Name(&quot;Blast&quot;)},
+			new Description[] {new Description(&quot;A DDBJ Web Service&quot;)},
+			new BindingTemplates(
+				new BindingTemplate[] {
+					new BindingTemplate(
+						null,
+						new AccessPoint(&quot;http://xml.nig.ac.jp/xddbj/Blast&quot;),
+						null, //HostingRedirector hostingRedirector,
+						new TModelInstanceDetails(
+							new TModelInstanceInfo[] {
+								new TModelInstanceInfo(
+									null, //Description[] description,
+									new InstanceDetails(
+										null,
+										new OverviewDoc(null, &quot;http://xml.nig.ac.jp/wsdl/Blast.wsdl&quot;),
+										null),
+									null
+								)
+							}
+						),
+						null, //java.lang.String serviceKey,
+						null //java.lang.String bindingKey
+					)
+				}
+			),
+			null, //CategoryBag categoryBag,
+			null, //java.lang.String serviceKey,
+			businessKey
+		)},
+		&quot;2.0&quot;
+	);
+
+	// Send the request and get a response
+	ServiceDetail response = publish.save_service(request);
+
+	// Process the response
+	serviceKey = response.getBusinessService(0).getServiceKey();
+	System.out.println(&quot;Service key: &quot; + serviceKey);
+}</pre>
+<p />
+<p />
+In the above code, we firstly construct a Save_service instance, then pass it to 
+the save_service method of the Publish interface.<h2><a name="inter_discover_service"></a>Discover the service 
+by name</h2>
+<p>We will inquire a service called &quot;Blast&quot;, and get its detailed information.
+</p>
+<pre>private static void discoveryService() throws Exception {
+	System.out.println(&quot;====Find a service====&quot;);
+	// Prepare the find_service request
+	Find_service request = new Find_service(null, //FindQualifiers findQualifiers,
+		new Name[] { new Name(&quot;Blast&quot;) }, null, //CategoryBag categoryBag,
+		null, //TModelBag tModelBag,
+		&quot;2.0&quot;, 100, //int maxRows,
+		null //java.lang.String businessKey 
+	);
+
+	// Send the request and get a reponse
+	ServiceList response = inquire.find_service(request);
+
+	// Process the find_service response and prepare the get_servicedetail request
+	ServiceInfo[] info = response.getServiceInfos().getServiceInfo();
+
+	if (info == null)
+		return;
+
+	String[] keys = new String[info.length];
+	for (int i = 0; i &lt; info.length; i++) {
+		keys[i] = info[i].getServiceKey();
+	}
+
+	Get_serviceDetail request2 = new Get_serviceDetail(keys, &quot;2.0&quot;);
+
+	// Send the get_servicedetail request
+	ServiceDetail response2 = inquire.get_serviceDetail(request2);
+
+	// Process the response
+	BusinessService services[] = response2.getBusinessService();
+	System.out.println(&quot;Service name: &quot; + services[0].getName(0).get_value());
+	System.out.println(&quot;Service key: &quot; + services[0].getServiceKey());
+	System.out.println(&quot;Business key: &quot; + services[0].getBusinessKey());
+	System.out.println(&quot;Service description: &quot; + services[0].getDescription(0).get_value());
+
+	BindingTemplate bt = services[0].getBindingTemplates().getBindingTemplate(0);
+	System.out.println(&quot;Access point in binding template: &quot; + bt.getAccessPoint().get_value());
+	System.out.println(&quot;tModel: &quot; + bt.getTModelInstanceDetails()
+		.getTModelInstanceInfo(0).getInstanceDetails()
+		.getOverviewDoc().getOverviewURL());
+}</pre>
+<p>In the above code, we firstly construct a Find_service instance, and pass it 
+to the find_service method of the Inquire interface. The returned ServiceList 
+instance contains the key of the service whose name matches &quot;Blast&quot;. We then 
+construct a Get_serviceDetail object which contains the service key we have got, 
+and pass it to the get_serviceDetail method of the Inquire interface. The 
+get_serviceDetail method returns the detail service information corresponding to 
+the given service key.<h2><a name="publish_wsdl"></a>Publish the WSDL file</h2>
+<p>We will publish the service's WSDL file, which is at
+<a href="http://xml.nig.ac.jp/wsdl/Blast.wsdl">http://xml.nig.ac.jp/wsdl/Blast.wsdl</a>.<pre>private static void publishWSDL() throws Exception {
+	System.out.println(&quot;====Publish WSDL====&quot;);
+	String wsdlKey = wsdl.addWSDLFile(&quot;http://xml.nig.ac.jp/wsdl/Blast.wsdl&quot;);
+	System.out.println(&quot;WSDL key: &quot; + wsdlKey);
+}</pre>
+<h2><a name="publish_metadata"></a>Publish metadata</h2>
+<p>We will publish a piece of metadata, which describes the semantic type of a 
+message part in the previously published WSDL file. The message part is 
+syntactically a string, and is semantically a DNA sequence.</p>
+<pre>private static void publishMetadata() throws Exception {
+	System.out.println(&quot;====Publish metadata====&quot;);
+
+	// set up entity to be annotated
+	MessagePartReference msgRef = new MessagePartReference(
+		&quot;http://www.themindelectric.com/wsdl/Blast/&quot;, &quot;searchParam0In&quot;, &quot;param&quot;);
+	EntityReference enRef = new EntityReference();
+	enRef.setMessagePartReference(msgRef);
+	enRef.setEntityType(new URI(&quot;http://www.grimoires.org/metadata.xsd#messagePartReference&quot;));
+
+	// set up metadata
+	MetadataValue mv = new MetadataValue();
+	mv.setStringValue(&quot;DNA_Sequence&quot;);
+	Metadata md = new Metadata();
+	md.setMetadataType(new URI(&quot;http://www.grimoires.org/SemanticType&quot;));
+	md.setMetadataValue(mv);
+
+	// attonation
+	MetadataInfo info = publishMetadata.addMetadataToEntity(new AddMetadataToEntity(enRef, md));
+
+	System.out.println(&quot;Metadata key: &quot; + info.getMetadataKey());
+}</pre>
+<p>In the above code, we attach a metadata to a message part. The metadata is of 
+the type &quot;http://www.grimoires.org/SemanticType&quot;, and has the value &quot;DNA_Sequence&quot;. 
+The message part has the name &quot;param&quot;, and it belongs to the message 
+&quot;http://www.themindelectric.com/wsdl/Blast#searchParam0In&quot;.</p>
+<h2><a name="inquire_metadata"></a>Inquire by metadata</h2>
+<p>We will find the message part with the specified metadata.</p>
+<pre>private static void inquireMetadata() throws Exception {
+	System.out.println(&quot;====Inquire metadata====&quot;);
+
+	// Prepare request message
+	MetadataQuery mq = new MetadataQuery();
+	mq.setMetadataType(new URI(&quot;http://www.grimoires.org/SemanticType&quot;));
+	MetadataValue mv = new MetadataValue();
+	mv.setStringValue(&quot;DNA_Sequence&quot;);
+	mq.setMetadataValue(mv);
+	Find_entityByMetadata find = new Find_entityByMetadata(
+		new MetadataQueryBag(
+			new MetadataQuery[] {
+				mq
+		}));
+
+	// Send request and get response
+	EntityReferenceList enRefList = inquireMetadata.find_entityByMetadata(find);
+
+	// Process the response
+	EntityReference enRef = enRefList.getEntityReference(0);
+	if (enRef.getEntityType().toString()
+		.equals(&quot;http://www.grimoires.org/metadata.xsd#messagePartReference&quot;)) {
+		System.out.println(&quot;Found a message part with this metedata&quot; + 
+			&quot;\n(http://www.grimoires.org/SemanticType, DNA_Sequence)&quot;);
+		MessagePartReference msgRef = enRef.getMessagePartReference();
+		System.out.println(&quot;Message namespace&quot; + msgRef.getMessageNamespace());
+		System.out.println(&quot;Message name&quot; + msgRef.getMessageName());
+		System.out.println(&quot;Message part name&quot; + msgRef.getMessagePartName());
+	}
+}</pre>
+<p>In the above code, we inquire for a message part attached with a metadata 
+that is of the type &quot;http://www.grimoires.org/SemanticType&quot;, and has the value &quot;DNA_Sequence&quot;.</div>
+
+</body></html>

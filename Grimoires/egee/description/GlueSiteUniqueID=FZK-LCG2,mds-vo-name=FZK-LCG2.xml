@@ -1,0 +1,1801 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=FZK-LCG2,mds-vo-name=FZK-LCG2">
+    <Name>FZK-LCG2</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto: lcg-admin@listserv.fzk.de</UserSupportContact>
+    <SysAdminContact>mailto: lcg-admin@listserv.fzk.de</SysAdminContact>
+    <SecurityContact>mailto: lcg-admin@listserv.fzk.de</SecurityContact>
+    <Location>Karlsruhe, Germany</Location>
+    <Latitude>49.0963</Latitude>
+    <Longitude>8.4321</Longitude>
+    <Web>http://grid.fzk.de</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER 1</OtherInfo>
+    <OtherInfo>CERN-CIC</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ce-fzk.gridka.de,mds-vo-name=FZK-LCG2">
+        <Name>ce-fzk.gridka.de</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce-fzk.gridka.de,GlueClusterUniqueID=ce-fzk.gridka.de,mds-vo-name=FZK-LCG2">
+            <Name>ce-fzk.gridka.de</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="4.4" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel" Model="PIV" ClockSpeed="1001"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1024"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1286" SF00="0"/>
+            <Location LocalID="VO-lhcb-Brunel-v30r14">
+                <Name>VO-lhcb-Brunel-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="dgtest-sam-test-vo-tag-warning-ok-now">
+                <Name>dgtest-sam-test-vo-tag-warning-ok-now</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DGTEST_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc4_ia32_gcc345">
+                <Name>VO-cms-slc4_ia32_gcc345</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r6">
+                <Name>VO-lhcb-DecFiles-v13r6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r3">
+                <Name>VO-lhcb-DaVinci-v19r3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_1">
+                <Name>VO-cms-CMSSW_1_6_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_3">
+                <Name>VO-cms-CMSSW_1_3_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v4r4">
+                <Name>VO-lhcb-ParamFiles-v4r4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_3">
+                <Name>VO-cms-CMSSW_1_2_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r7">
+                <Name>VO-lhcb-DaVinci-v17r7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_6">
+                <Name>VO-cms-CMSSW_1_2_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-cloud-DE">
+                <Name>VO-atlas-cloud-DE</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.42">
+                <Name>VO-atlas-release-11.0.42</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r5">
+                <Name>VO-lhcb-DaVinci-v19r5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_3">
+                <Name>VO-cms-CMSSW_1_6_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r4">
+                <Name>VO-lhcb-DaVinci-v19r4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_2">
+                <Name>VO-cms-CMSSW_1_5_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r8">
+                <Name>VO-lhcb-Gauss-v25r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="ops-sam-test-vo-tag-warning-ok-now">
+                <Name>ops-sam-test-vo-tag-warning-ok-now</Name>
+                <Version>Prod</Version>
+                <Path>$VO_OPS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r17">
+                <Name>VO-lhcb-Brunel-v30r17</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r9">
+                <Name>VO-lhcb-XmlDDDB-v30r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_4">
+                <Name>VO-cms-CMSSW_1_2_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r3">
+                <Name>VO-lhcb-DecFiles-v13r3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r4">
+                <Name>VO-lhcb-DecFiles-v13r4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v4r5">
+                <Name>VO-lhcb-ParamFiles-v4r5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v4r3">
+                <Name>VO-lhcb-ParamFiles-v4r3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_0">
+                <Name>VO-cms-CMSSW_1_3_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_2">
+                <Name>VO-cms-CMSSW_1_2_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r14">
+                <Name>VO-lhcb-XmlDDDB-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r9">
+                <Name>VO-lhcb-Gauss-v25r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.95">
+                <Name>VO-atlas-production-12.0.95</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r9">
+                <Name>VO-lhcb-DecFiles-v13r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_3">
+                <Name>VO-cms-CMSSW_1_4_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1_HLT6">
+                <Name>VO-cms-CMSSW_1_3_1_HLT6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_4">
+                <Name>VO-cms-CMSSW_1_6_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r10">
+                <Name>VO-lhcb-DecFiles-v13r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_0_6">
+                <Name>VO-cms-CMSSW_1_0_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6">
+                <Name>VO-atlas-production-12.0.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v12r16">
+                <Name>VO-lhcb-DaVinci-v12r16</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.30">
+                <Name>VO-atlas-production-13.0.30</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final">
+                <Name>VO-dteam-december05prod-final</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v12r18">
+                <Name>VO-lhcb-DaVinci-v12r18</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r6">
+                <Name>VO-lhcb-DaVinci-v17r6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-ITUtest1">
+                <Name>VO-dteam-ITUtest1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v5r0">
+                <Name>VO-lhcb-ParamFiles-v5r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-v22Nov">
+                <Name>VO-dteam-december05prod-v22Nov</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r5">
+                <Name>VO-lhcb-DecFiles-v13r5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_4">
+                <Name>VO-cms-CMSSW_1_3_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v12r5">
+                <Name>VO-lhcb-DecFiles-v12r5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r10">
+                <Name>VO-lhcb-XmlDDDB-v30r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r1">
+                <Name>VO-lhcb-DaVinci-v19r1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v18r0">
+                <Name>VO-lhcb-DaVinci-v18r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r7">
+                <Name>VO-lhcb-Gauss-v25r7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_1_1">
+                <Name>VO-cms-CMSSW_1_1_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.7">
+                <Name>VO-atlas-production-12.0.7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r15">
+                <Name>VO-lhcb-Brunel-v30r15</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v12r10">
+                <Name>VO-lhcb-Boole-v12r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_8_4">
+                <Name>VO-cms-CMSSW_0_8_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_1_2">
+                <Name>VO-cms-CMSSW_1_1_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r12">
+                <Name>VO-lhcb-DecFiles-v13r12</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.20">
+                <Name>VO-atlas-production-13.0.20</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_2">
+                <Name>VO-cms-CMSSW_1_3_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r2">
+                <Name>VO-lhcb-DaVinci-v19r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r0">
+                <Name>VO-lhcb-DaVinci-v19r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1">
+                <Name>VO-cms-CMSSW_1_3_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r11">
+                <Name>VO-lhcb-DecFiles-v13r11</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v12r3">
+                <Name>VO-lhcb-Boole-v12r3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2">
+                <Name>VO-lhcb-XmlDDDB-v22r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_5">
+                <Name>VO-cms-CMSSW_1_6_5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r11">
+                <Name>VO-lhcb-Gauss-v25r11</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_5">
+                <Name>VO-cms-CMSSW_1_3_5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1_HLT3">
+                <Name>VO-cms-CMSSW_1_3_1_HLT3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0">
+                <Name>VO-cms-CMSSW_1_6_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_6">
+                <Name>VO-cms-CMSSW_1_4_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r8">
+                <Name>VO-lhcb-DaVinci-v17r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r8">
+                <Name>VO-lhcb-DecFiles-v13r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.31">
+                <Name>VO-atlas-production-12.0.31</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-tier-T1">
+                <Name>VO-atlas-tier-T1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final-cand2">
+                <Name>VO-dteam-december05prod-final-cand2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r10">
+                <Name>VO-lhcb-Gauss-v25r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_4">
+                <Name>VO-cms-CMSSW_1_4_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r8">
+                <Name>VO-lhcb-XmlDDDB-v30r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r7">
+                <Name>VO-lhcb-DecFiles-v13r7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r12">
+                <Name>VO-lhcb-Gauss-v25r12</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=a01-004-128.gridka.de,mds-vo-name=FZK-LCG2">
+        <Name>a01-004-128.gridka.de</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=a01-004-128.gridka.de,GlueClusterUniqueID=a01-004-128.gridka.de,mds-vo-name=FZK-LCG2">
+            <Name>a01-004-128.gridka.de</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="4.4" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel" Model="PIV" ClockSpeed="1001"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1024"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1286" SF00="0"/>
+            <Location LocalID="VO-cms-CMSSW_1_3_1">
+                <Name>VO-cms-CMSSW_1_3_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_1_1">
+                <Name>VO-cms-CMSSW_1_1_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r1">
+                <Name>VO-lhcb-DaVinci-v19r1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r11">
+                <Name>VO-lhcb-DecFiles-v13r11</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_0">
+                <Name>VO-cms-CMSSW_1_3_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r6">
+                <Name>VO-lhcb-DaVinci-v17r6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r9">
+                <Name>VO-lhcb-DecFiles-v13r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_2">
+                <Name>VO-cms-CMSSW_1_5_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_4">
+                <Name>VO-cms-CMSSW_1_4_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v14r5">
+                <Name>VO-lhcb-Boole-v14r5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-v22Nov">
+                <Name>VO-dteam-december05prod-v22Nov</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_5">
+                <Name>VO-cms-CMSSW_1_6_5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final">
+                <Name>VO-dteam-december05prod-final</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2-slc3_ia32_gcc323">
+                <Name>VO-lhcb-XmlDDDB-v22r2-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final-cand2">
+                <Name>VO-dteam-december05prod-final-cand2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r10">
+                <Name>VO-lhcb-DecFiles-v13r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r14">
+                <Name>VO-lhcb-XmlDDDB-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0">
+                <Name>VO-cms-CMSSW_1_6_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r10">
+                <Name>VO-lhcb-Gauss-v25r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.20">
+                <Name>VO-atlas-production-13.0.20</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r17">
+                <Name>VO-lhcb-Brunel-v30r17</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_4">
+                <Name>VO-cms-CMSSW_1_2_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r4">
+                <Name>VO-lhcb-DaVinci-v19r4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.95">
+                <Name>VO-atlas-production-12.0.95</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r14-slc3_ia32_gcc323">
+                <Name>VO-lhcb-XmlDDDB-v30r14-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_1">
+                <Name>VO-cms-CMSSW_1_6_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r11">
+                <Name>VO-lhcb-Gauss-v25r11</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-cloud-DE">
+                <Name>VO-atlas-cloud-DE</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_6">
+                <Name>VO-cms-CMSSW_1_4_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_3">
+                <Name>VO-cms-CMSSW_1_2_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.7">
+                <Name>VO-atlas-production-12.0.7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r10-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DecFiles-v13r10-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_0_6">
+                <Name>VO-cms-CMSSW_1_0_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r2">
+                <Name>VO-lhcb-DaVinci-v19r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2">
+                <Name>VO-lhcb-XmlDDDB-v22r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r8">
+                <Name>VO-lhcb-DaVinci-v17r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="ops-sam-test-vo-tag-warning-ok-now">
+                <Name>ops-sam-test-vo-tag-warning-ok-now</Name>
+                <Version>Prod</Version>
+                <Path>$VO_OPS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v5r0">
+                <Name>VO-lhcb-ParamFiles-v5r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_8_4">
+                <Name>VO-cms-CMSSW_0_8_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_3">
+                <Name>VO-cms-CMSSW_1_4_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc4_ia32_gcc345">
+                <Name>VO-cms-slc4_ia32_gcc345</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r0">
+                <Name>VO-lhcb-DaVinci-v19r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v18r0">
+                <Name>VO-lhcb-DaVinci-v18r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r5">
+                <Name>VO-lhcb-DaVinci-v19r5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-ITUtest1">
+                <Name>VO-dteam-ITUtest1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.31">
+                <Name>VO-atlas-production-12.0.31</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_2">
+                <Name>VO-cms-CMSSW_1_2_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r9">
+                <Name>VO-lhcb-Gauss-v25r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_4">
+                <Name>VO-cms-CMSSW_1_6_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r12">
+                <Name>VO-lhcb-Gauss-v25r12</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v12r10">
+                <Name>VO-lhcb-Boole-v12r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v5r0-slc3_ia32_gcc323">
+                <Name>VO-lhcb-ParamFiles-v5r0-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_1_2">
+                <Name>VO-cms-CMSSW_1_1_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r3">
+                <Name>VO-lhcb-DaVinci-v19r3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r9-slc3_ia32_gcc323">
+                <Name>VO-lhcb-DecFiles-v13r9-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-tier-T1">
+                <Name>VO-atlas-tier-T1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v12r18">
+                <Name>VO-lhcb-DaVinci-v12r18</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_3">
+                <Name>VO-cms-CMSSW_1_6_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r12">
+                <Name>VO-lhcb-DecFiles-v13r12</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_6">
+                <Name>VO-cms-CMSSW_1_2_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6">
+                <Name>VO-atlas-production-12.0.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r7">
+                <Name>VO-lhcb-DaVinci-v17r7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.42">
+                <Name>VO-atlas-release-11.0.42</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=lcg-gridka-se.fzk.de,mds-vo-name=FZK-LCG2">
+        <InformationServiceURL>ldap://lcg-gridka-se.fzk.de:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="dteam">
+            <Path>/grid/fzk.de/mounts/nfs/data/lcg1/SE00/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>397380864</UsedSpace>
+            <AvailableSpace>749282048</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/grid/fzk.de/mounts/nfs/data/lcg1/SE00/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>7727244288</UsedSpace>
+            <AvailableSpace>1483447296</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/grid/fzk.de/mounts/nfs/data/lcg1/SE00/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>397380864</UsedSpace>
+            <AvailableSpace>749282048</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/grid/fzk.de/mounts/nfs/data/lcg1/SE00/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>397380864</UsedSpace>
+            <AvailableSpace>749282048</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/grid/fzk.de/mounts/nfs/data/lcg1/SE00/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>397380864</UsedSpace>
+            <AvailableSpace>749282048</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/grid/fzk.de/mounts/nfs/data/lcg1/SE00/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>397380864</UsedSpace>
+            <AvailableSpace>749282048</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://lcg-gridka-se.fzk.de</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=gridka-dCache.fzk.de,mds-vo-name=FZK-LCG2">
+        <InformationServiceURL>ldap://gridka-dcache.fzk.de:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>963022</SizeTotal>
+        <SizeFree>663117</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/pnfs/gridka.de/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>92390266398</UsedSpace>
+            <AvailableSpace>39518916681</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/pnfs/gridka.de/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>368109335</UsedSpace>
+            <AvailableSpace>45212231094</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/pnfs/gridka.de/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>44591980865</UsedSpace>
+            <AvailableSpace>6410755775</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/pnfs/gridka.de/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>9593906801</UsedSpace>
+            <AvailableSpace>6673281833</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/pnfs/gridka.de/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>46572037</UsedSpace>
+            <AvailableSpace>4248395259</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dech">
+            <Path>/pnfs/gridka.de/dech</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="compass">
+            <Path>/pnfs/gridka.de/compass</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>7140306173</UsedSpace>
+            <AvailableSpace>2093873514</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="babar">
+            <Path>/pnfs/gridka.de/babar</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dzero">
+            <Path>/pnfs/gridka.de/dzero</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/pnfs/gridka.de/ops/disk-only</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4959</UsedSpace>
+            <AvailableSpace>4294962337</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cdf">
+            <Path>/pnfs/gridka.de/cdf</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>0</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geclipse">
+            <Path>/pnfs/gridka.de/geclipse</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dgtest">
+            <Path>/pnfs/gridka.de/dgtest</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://gridka-dCache.fzk.de</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsidcap">
+            <Endpoint>httpg://gridka-dCache.fzk.de</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-f01-015-108-e@gridftp-f01-015-108-eDomain">
+            <Endpoint>gsiftp://f01-015-108-e.gridka.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-f01-015-109-e@gridftp-f01-015-109-eDomain">
+            <Endpoint>gsiftp://f01-015-109-e.gridka.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-f01-015-102-e@gridftp-f01-015-102-eDomain">
+            <Endpoint>gsiftp://f01-015-102-e.gridka.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="Xrootd-f01-015-122@xrootdDoorDomain">
+            <Endpoint>Xrootd://dcacheh1.gridka.de:1094</Endpoint>
+            <Type>Xrootd</Type>
+            <Version>2.4</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-f01-015-110-e@gridftp-f01-015-110-eDomain">
+            <Endpoint>gsiftp://f01-015-110-e.gridka.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-f01-015-113-e@gridftp-f01-015-113-eDomain">
+            <Endpoint>gsiftp://f01-015-113-e.gridka.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-f01-101-122@dcap-f01-101-122Domain">
+            <Endpoint>dcap://f01-101-122.gridka.de:22125</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-f01-015-114-e@gridftp-f01-015-114-eDomain">
+            <Endpoint>gsiftp://f01-015-114-e.gridka.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-f01-101-110-e@gridftp-f01-101-110-eDomain">
+            <Endpoint>gsiftp://f01-101-110-e.gridka.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-f01-101-111-e@gridftp-f01-101-111-eDomain">
+            <Endpoint>gsiftp://f01-101-111-e.gridka.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-f01-015-101-e@gridftp-f01-015-101-eDomain">
+            <Endpoint>gsiftp://f01-015-101-e.gridka.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-f01-015-115-e@gridftp-f01-015-115-eDomain">
+            <Endpoint>gsiftp://f01-015-115-e.gridka.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://gridka-dCache.fzk.de</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+        <ControlProtocol LocalID="SRM-gridka-dcache@srm-gridka-dcacheDomain">
+            <Endpoint>httpg://gridka-dcache.fzk.de:8443/srm/managerv1</Endpoint>
+            <Type>SRM</Type>
+            <Version>1.1.1</Version>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=SARA-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>SARA-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FZK-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>FZK-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=NDGFT1-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>NDGFT1-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>FNAL-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-CYFRONET_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>STAR-CYFRONET_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-POZNAN_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>STAR-POZNAN_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-DESY_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>STAR-DESY_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-LRZ_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>STAR-LRZ_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-SPBSU_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>STAR-SPBSU_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=INFNT1-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>INFNT1-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=IN2P3-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>IN2P3-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=PIC-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>PIC-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=RAL-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>RAL-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TRIUMF-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>TRIUMF-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>STAR-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-GSI_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>STAR-GSI_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>dech</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-PRAGUE_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>STAR-PRAGUE_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-ITEP_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>STAR-ITEP_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-JINR_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>STAR-JINR_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-CSCS_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>STAR-CSCS_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-DESYZN_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>STAR-DESYZN_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-UNIFREIBURG_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>STAR-UNIFREIBURG_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNL-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>BNL-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TAIWAN-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>TAIWAN-FZK_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-RRCKI_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>STAR-RRCKI_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-SINP_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>STAR-SINP_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-PNPI_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>STAR-PNPI_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-UNIWUPPERTAL_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>STAR-UNIWUPPERTAL_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-IHEP_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>STAR-IHEP_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-TROITSKINR_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>STAR-TROITSKINR_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-RWTHAACHEN_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>STAR-RWTHAACHEN_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-WARSAW_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>STAR-WARSAW_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FZK-STAR_fts-fzk.gridka.de_org.glite.ChannelAgent,mds-vo-name=FZK-LCG2">
+        <Name>FZK-STAR_fts-fzk.gridka.de_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_fts-fzk.gridka.de_org.glite.FileTransfer,mds-vo-name=FZK-LCG2">
+        <Name>glite-data-transfer-fts_fts-fzk.gridka.de</Name>
+        <Type>org.glite.FileTransfer</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>https://fts-fzk.gridka.de:8443/glite-data-transfer-fts/services/FileTransfer</Endpoint>
+        <WSDL>https://fts-fzk.gridka.de:8443/glite-data-transfer-fts/services/FileTransfer?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>babar</Owner>
+        <Owner>cdf</Owner>
+        <Owner>cms</Owner>
+        <Owner>compass</Owner>
+        <Owner>dech</Owner>
+        <Owner>dteam</Owner>
+        <Owner>dzero</Owner>
+        <Owner>geclipse</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>magic</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_fts-fzk.gridka.de_org.glite.ChannelManagement,mds-vo-name=FZK-LCG2">
+        <Name>glite-data-transfer-fts_fts-fzk.gridka.de-channel</Name>
+        <Type>org.glite.ChannelManagement</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>https://fts-fzk.gridka.de:8443/glite-data-transfer-fts/services/ChannelManagement</Endpoint>
+        <WSDL>https://fts-fzk.gridka.de:8443/glite-data-transfer-fts/services/ChannelManagement?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>babar</Owner>
+        <Owner>cdf</Owner>
+        <Owner>cms</Owner>
+        <Owner>compass</Owner>
+        <Owner>dech</Owner>
+        <Owner>dteam</Owner>
+        <Owner>dzero</Owner>
+        <Owner>geclipse</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>magic</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_fts-fzk.gridka.de_org.glite.FileTransferStats,mds-vo-name=FZK-LCG2">
+        <Name>glite-data-transfer-fts_fts-fzk.gridka.de-stats</Name>
+        <Type>org.glite.FileTransferStats</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>https://fts-fzk.gridka.de:8443/glite-data-transfer-fts/services/FileTransferStats</Endpoint>
+        <WSDL>https://fts-fzk.gridka.de:8443/glite-data-transfer-fts/services/FileTransferStats?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>babar</Owner>
+        <Owner>cdf</Owner>
+        <Owner>cms</Owner>
+        <Owner>compass</Owner>
+        <Owner>dech</Owner>
+        <Owner>dteam</Owner>
+        <Owner>dzero</Owner>
+        <Owner>geclipse</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>magic</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_fts-fzk.gridka.de_org.glite.Delegation,mds-vo-name=FZK-LCG2">
+        <Name>glite-data-transfer-fts_fts-fzk.gridka.de-stats</Name>
+        <Type>org.glite.Delegation</Type>
+        <Version>3.2.0</Version>
+        <Endpoint>https://fts-fzk.gridka.de:8443/glite-data-transfer-fts/services/Delegation</Endpoint>
+        <WSDL>https://fts-fzk.gridka.de:8443/glite-data-transfer-fts/services/Delegation?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T16:18:35.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>babar</Owner>
+        <Owner>cdf</Owner>
+        <Owner>cms</Owner>
+        <Owner>compass</Owner>
+        <Owner>dech</Owner>
+        <Owner>dteam</Owner>
+        <Owner>dzero</Owner>
+        <Owner>geclipse</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>magic</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://lfc-fzk.gridka.de:8085/,o=local,mds-vo-name=FZK-LCG2">
+        <Name>FZK-LCG2-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>http://lfc-fzk.gridka.de:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>dech</Owner>
+        <Owner>compass</Owner>
+        <Owner>babar</Owner>
+        <Owner>magic</Owner>
+        <Owner>dzero</Owner>
+        <Owner>ops</Owner>
+        <Owner>cdf</Owner>
+        <Owner>geclipse</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lfc-fzk.gridka.de,o=local,mds-vo-name=FZK-LCG2">
+        <Name>FZK-LCG2-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>lfc-fzk.gridka.de</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>dech</Owner>
+        <Owner>compass</Owner>
+        <Owner>babar</Owner>
+        <Owner>magic</Owner>
+        <Owner>dzero</Owner>
+        <Owner>ops</Owner>
+        <Owner>cdf</Owner>
+        <Owner>geclipse</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://lfc-fzk.gridka.de:8085/,mds-vo-name=FZK-LCG2">
+        <Name>FZK-LCG2-lfc-dli</Name>
+        <Type>data-location-interface</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>http://lfc-fzk.gridka.de:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-07-28T20:57:18.000+02:00</StartTime>
+        <Owner>geclipse</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lfc-fzk.gridka.de,mds-vo-name=FZK-LCG2">
+        <Name>FZK-LCG2-lfc</Name>
+        <Type>lcg-file-catalog</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>lfc-fzk.gridka.de</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-07-28T20:57:18.000+02:00</StartTime>
+        <Owner>geclipse</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=px-fzk.gridka.de:7512,mds-vo-name=FZK-LCG2">
+        <Name>FZK-LCG2-myproxy</Name>
+        <Type>MyProxy</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>px-fzk.gridka.de:7512</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb-fzk.gridka.de:7772,mds-vo-name=FZK-LCG2">
+        <Name>FZK-LCG2-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb-fzk.gridka.de:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>dech</Owner>
+        <Owner>compass</Owner>
+        <Owner>babar</Owner>
+        <Owner>dzero</Owner>
+        <Owner>ops</Owner>
+        <Owner>cdf</Owner>
+        <Owner>geclipse</Owner>
+        <Owner>dgtest</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=a01-004-127.gridka.de:7772,mds-vo-name=FZK-LCG2">
+        <Name>FZK-LCG2-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>a01-004-127.gridka.de:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>dech</Owner>
+        <Owner>compass</Owner>
+        <Owner>babar</Owner>
+        <Owner>dzero</Owner>
+        <Owner>ops</Owner>
+        <Owner>cdf</Owner>
+        <Owner>geclipse</Owner>
+        <Owner>dgtest</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://gridka-dCache.fzk.de:8443/srm/managerv1,mds-vo-name=FZK-LCG2">
+        <Name>FZK-LCG2-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://gridka-dCache.fzk.de:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://gridka-dCache.fzk.de:8443/srm/managerv2,mds-vo-name=FZK-LCG2">
+        <Name>FZK-LCG2-srm</Name>
+        <Type>srm</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://gridka-dCache.fzk.de:8443/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

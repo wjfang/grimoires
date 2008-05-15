@@ -1,0 +1,251 @@
+<ns2:root xmlns:ns1="http://www.grimoires.org/metadata.xsd"
+	xmlns:feta="http://www.mygrid.org.uk/feta/"
+	xmlns:sawsdl="http://www.w3.org/2002/ws/sawsdl/spec/sawsdl#"
+	xmlns:tns="http://seqhound.blueprint.org/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:ns2="http://www.grimoires.org/query_document/document/">
+	<ns1:businessEntity businessKey="Blueprint"
+		xmlns:ns1="urn:uddi-org:api_v2">
+		<ns1:name>Blueprint</ns1:name>
+		<ns1:description>The Blueprint Initiative</ns1:description>
+		<ns1:businessServices>
+			<ns1:businessService businessKey="Blueprint"
+				serviceKey="SHound3DbWhat">
+				<ns1:name>SHound3DbWhat</ns1:name>
+				<ns1:description>
+					Finds out what kind of molecules are contained in a
+					3-D structure.
+				</ns1:description>
+				<ns1:bindingTemplates>
+					<ns1:bindingTemplate
+						bindingKey="http://seqhound.blueprint.org/"
+						serviceKey="SHound3DbWhat">
+						<ns1:accessPoint>
+							http://seqhound.blueprint.org/
+						</ns1:accessPoint>
+						<ns1:tModelInstanceDetails>
+							<ns1:tModelInstanceInfo
+								tModelKey="http://seqhound.blueprint.org/" />
+						</ns1:tModelInstanceDetails>
+					</ns1:bindingTemplate>
+				</ns1:bindingTemplates>
+				<ns1:categoryBag>
+					<ns1:keyedReference keyName="serviceType"
+						keyValue="SeqHound service"
+						tModelKey="grimoires:service:metadata" />
+				</ns1:categoryBag>
+			</ns1:businessService>
+		</ns1:businessServices>
+		<ns1:categoryBag>
+			<ns1:keyedReference keyName="authorizedName" keyValue=""
+				tModelKey="grimoires:business:metadata" />
+		</ns1:categoryBag>
+	</ns1:businessEntity>
+	<wsdl:definitions targetNamespace="http://seqhound.blueprint.org/"
+		tns:dummy="" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<wsdl:documentation>
+			Finds out what kind of molecules are contained in a 3-D
+			structure.
+		</wsdl:documentation>
+		<wsdl:message name="request">
+			<wsdl:part feta:collectionSemanticType="Single"
+				feta:semanticType="http://www.mygrid.org.uk/ontology#bioinformatics_record_id"
+				feta:transportDataType="String" name="mmdbid" type="xsd:string" />
+		</wsdl:message>
+		<wsdl:message name="response">
+			<wsdl:part feta:collectionSemanticType="Single"
+				feta:semanticType="http://www.mygrid.org.uk/ontology#bioinformatics_record_id"
+				feta:transportDataType="String" name="result" type="xsd:string" />
+		</wsdl:message>
+		<wsdl:portType name="SHound3DbWhat">
+			<wsdl:operation name="SHound3DbWhat">
+				<wsdl:input message="tns:request" />
+				<wsdl:output message="tns:response" />
+				<sawsdl:category name="Feta Category"
+					taxonomyURI="http://www.mygrid.org.uk/ontology">
+					<feta:operationTask>
+						http://www.mygrid.org.uk/ontology#searching
+					</feta:operationTask>
+					<feta:operationResource>
+						http://www.mygrid.org.uk/ontology#PDB
+					</feta:operationResource>
+					<feta:operationResourceContent>
+						http://www.mygrid.org.uk/ontology#model_organism
+					</feta:operationResourceContent>
+					<feta:operationMethod />
+					<feta:operationApplication />
+				</sawsdl:category>
+			</wsdl:operation>
+		</wsdl:portType>
+	</wsdl:definitions>
+	<ns2:annotation>
+		<ns1:entityReference
+			entityType="http://www.uddi.org/schema/uddi_v2.xsd#serviceKey">
+			<ns1:stringKey>SHound3DbWhat</ns1:stringKey>
+		</ns1:entityReference>
+		<ns1:metadataInfos>
+			<ns1:metadataInfo
+				ns1:metadataKey="56c457db-2402-4148-b9c8-7de6b5cc4220">
+				<ns1:metadataType>
+					http://www.mygrid.org.uk/feta/ServiceType
+				</ns1:metadataType>
+				<ns1:metadataValue>
+					<ns1:stringValue>SeqHound service</ns1:stringValue>
+				</ns1:metadataValue>
+				<ns1:author>Anonymous Publisher</ns1:author>
+				<ns1:date>Wed Apr 11 10:07:12 BST 2007</ns1:date>
+			</ns1:metadataInfo>
+		</ns1:metadataInfos>
+	</ns2:annotation>
+	<ns2:annotation>
+		<ns1:entityReference
+			entityType="http://www.grimoires.org/metadata.xsd#operationReference">
+			<ns1:operationReference>
+				<ns1:portTypeNamespace>
+					http://seqhound.blueprint.org/
+				</ns1:portTypeNamespace>
+				<ns1:portTypeName>SHound3DbWhat</ns1:portTypeName>
+				<ns1:operationName>SHound3DbWhat</ns1:operationName>
+			</ns1:operationReference>
+		</ns1:entityReference>
+		<ns1:metadataInfos>
+			<ns1:metadataInfo
+				ns1:metadataKey="d59c49ee-98ec-4374-a480-d452eb7fa10c">
+				<ns1:metadataType>
+					http://www.mygrid.org.uk/feta/OperationTask
+				</ns1:metadataType>
+				<ns1:metadataValue>
+					<ns1:uriValue>
+						http://www.mygrid.org.uk/ontology#searching
+					</ns1:uriValue>
+				</ns1:metadataValue>
+				<ns1:author>Anonymous Publisher</ns1:author>
+				<ns1:date>Wed Apr 11 10:07:12 BST 2007</ns1:date>
+			</ns1:metadataInfo>
+			<ns1:metadataInfo
+				ns1:metadataKey="29f379a4-17c4-4a37-9db1-54db651436ff">
+				<ns1:metadataType>
+					http://www.mygrid.org.uk/feta/OperationResource
+				</ns1:metadataType>
+				<ns1:metadataValue>
+					<ns1:uriValue>
+						http://www.mygrid.org.uk/ontology#PDB
+					</ns1:uriValue>
+				</ns1:metadataValue>
+				<ns1:author>Anonymous Publisher</ns1:author>
+				<ns1:date>Wed Apr 11 10:07:12 BST 2007</ns1:date>
+			</ns1:metadataInfo>
+			<ns1:metadataInfo
+				ns1:metadataKey="132016d6-5805-4dde-a347-7831db59cf59">
+				<ns1:metadataType>
+					http://www.mygrid.org.uk/feta/OperationResourceContent
+				</ns1:metadataType>
+				<ns1:metadataValue>
+					<ns1:uriValue>
+						http://www.mygrid.org.uk/ontology#model_organism
+					</ns1:uriValue>
+				</ns1:metadataValue>
+				<ns1:author>Anonymous Publisher</ns1:author>
+				<ns1:date>Wed Apr 11 10:07:12 BST 2007</ns1:date>
+			</ns1:metadataInfo>
+		</ns1:metadataInfos>
+	</ns2:annotation>
+	<ns2:annotation>
+		<ns1:entityReference
+			entityType="http://www.grimoires.org/metadata.xsd#messagePartReference">
+			<ns1:messagePartReference>
+				<ns1:messageNamespace>
+					http://seqhound.blueprint.org/
+				</ns1:messageNamespace>
+				<ns1:messageName>request</ns1:messageName>
+				<ns1:messagePartName>mmdbid</ns1:messagePartName>
+			</ns1:messagePartReference>
+		</ns1:entityReference>
+		<ns1:metadataInfos>
+			<ns1:metadataInfo
+				ns1:metadataKey="df7fe636-db9c-4e8b-bf78-0f475ec6727e">
+				<ns1:metadataType>
+					http://www.mygrid.org.uk/feta/SemanticType
+				</ns1:metadataType>
+				<ns1:metadataValue>
+					<ns1:uriValue>
+						http://www.mygrid.org.uk/ontology#bioinformatics_record_id
+					</ns1:uriValue>
+				</ns1:metadataValue>
+				<ns1:author>Anonymous Publisher</ns1:author>
+				<ns1:date>Wed Apr 11 10:07:12 BST 2007</ns1:date>
+			</ns1:metadataInfo>
+			<ns1:metadataInfo
+				ns1:metadataKey="d96f792c-e344-43b6-8635-f1fe6c085a55">
+				<ns1:metadataType>
+					http://www.mygrid.org.uk/feta/TransportDataType
+				</ns1:metadataType>
+				<ns1:metadataValue>
+					<ns1:stringValue>String</ns1:stringValue>
+				</ns1:metadataValue>
+				<ns1:author>Anonymous Publisher</ns1:author>
+				<ns1:date>Wed Apr 11 10:07:12 BST 2007</ns1:date>
+			</ns1:metadataInfo>
+			<ns1:metadataInfo
+				ns1:metadataKey="bba50f92-928f-4c31-b93d-13181150f789">
+				<ns1:metadataType>
+					http://www.mygrid.org.uk/feta/CollectionSemanticType
+				</ns1:metadataType>
+				<ns1:metadataValue>
+					<ns1:stringValue>Single</ns1:stringValue>
+				</ns1:metadataValue>
+				<ns1:author>Anonymous Publisher</ns1:author>
+				<ns1:date>Wed Apr 11 10:07:12 BST 2007</ns1:date>
+			</ns1:metadataInfo>
+		</ns1:metadataInfos>
+	</ns2:annotation>
+	<ns2:annotation>
+		<ns1:entityReference
+			entityType="http://www.grimoires.org/metadata.xsd#messagePartReference">
+			<ns1:messagePartReference>
+				<ns1:messageNamespace>
+					http://seqhound.blueprint.org/
+				</ns1:messageNamespace>
+				<ns1:messageName>response</ns1:messageName>
+				<ns1:messagePartName>result</ns1:messagePartName>
+			</ns1:messagePartReference>
+		</ns1:entityReference>
+		<ns1:metadataInfos>
+			<ns1:metadataInfo
+				ns1:metadataKey="0c1b3f88-8397-444e-bca2-6fff57ab7826">
+				<ns1:metadataType>
+					http://www.mygrid.org.uk/feta/SemanticType
+				</ns1:metadataType>
+				<ns1:metadataValue>
+					<ns1:uriValue>
+						http://www.mygrid.org.uk/ontology#bioinformatics_record_id
+					</ns1:uriValue>
+				</ns1:metadataValue>
+				<ns1:author>Anonymous Publisher</ns1:author>
+				<ns1:date>Wed Apr 11 10:07:12 BST 2007</ns1:date>
+			</ns1:metadataInfo>
+			<ns1:metadataInfo
+				ns1:metadataKey="0ea510b6-7407-4085-a313-55d87cb25d8e">
+				<ns1:metadataType>
+					http://www.mygrid.org.uk/feta/TransportDataType
+				</ns1:metadataType>
+				<ns1:metadataValue>
+					<ns1:stringValue>String</ns1:stringValue>
+				</ns1:metadataValue>
+				<ns1:author>Anonymous Publisher</ns1:author>
+				<ns1:date>Wed Apr 11 10:07:12 BST 2007</ns1:date>
+			</ns1:metadataInfo>
+			<ns1:metadataInfo
+				ns1:metadataKey="c2e3910e-763c-4b07-8b69-66674a18a843">
+				<ns1:metadataType>
+					http://www.mygrid.org.uk/feta/CollectionSemanticType
+				</ns1:metadataType>
+				<ns1:metadataValue>
+					<ns1:stringValue>Single</ns1:stringValue>
+				</ns1:metadataValue>
+				<ns1:author>Anonymous Publisher</ns1:author>
+				<ns1:date>Wed Apr 11 10:07:12 BST 2007</ns1:date>
+			</ns1:metadataInfo>
+		</ns1:metadataInfos>
+	</ns2:annotation>
+</ns2:root>

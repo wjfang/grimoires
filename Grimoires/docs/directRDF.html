@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Grimoires Documentation - HOWTO - Direct RDF Query against Grimoires</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url('i_arrow_down.gif');
+	}
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script>
+</head>
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1>  HOWTO - Direct RDF Query against Grimoires</h1>
+<p />
+<div class="twikiToc">
+<ul>
+<li> <a href="#Lifetime">HOWTO - Direct RDF Query against Grimoires</a>
+<ul>
+<li> <a href="#UseCase">Use Cases</a></li>
+<li> <a href="#RDF">The RDF Interface</a></li>
+<li> <a href="#Client">The Client Side Utilities</a>
+</li>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p />
+This
+document describes how to directly query for RDF triples saved in Grimoires' 
+triple store by using a RDF query language. Currently only RDQL is supported.<p />
+<h2><a name="UseCase"></a>Use Cases</h2>
+There are some inquiries against Grimoires that can not be answered by all the 
+current query operations. And there could be some inquiry circumstances that we 
+may not be able to envisage now, but are difficult to answer by using current 
+fixed query templates.<h3>Use Case 1 - VDS' query-by-definition</h3>
+<p><a href="http://vds.uchicago.edu/twiki/bin/view/VDSWeb/WebMain">VDS</a> has a query type called query-by-definition. Basically, it is a search by 
+string matching. For instance, VDS supports to find a transformation that 
+contains a certain string. The VDS transformation will be transformed to a WSDL 
+description, and then be published into Grimoires. Therefore, the above query is 
+equivalent to a Grimoires query operation of finding a WSDL description that 
+contains a certain string. This operation is not supported in Grimoires 
+currently.</p>
+<h3>Use Case 2 - Finding an entity by its description</h3>
+<p>UDDI does not support to find an entity by its description, or to find an 
+entity that contains some keywords inside its description. </p>
+<p/>
+<h2><a name="RDF"></a>The RDF Interface</h2>
+<p>We introduce an RDF API in Grimoires, which allows users to query for triples 
+directly by using a RDF query langauge. Currently only RDQL is supported. Since 
+all the published information in Grimoires is represented in the form of RDF 
+triples, the RDF API provides a flexible inquiry mechanism that fully exposes 
+the expressiveness of RDF.</p>
+<p>The WSDL description of the RDF API is as follows:</p>
+<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;wsdl:definitions name=&quot;rdf&quot; targetNamespace=&quot;http://www.grimoires.org/rdf&quot;
+	xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot;
+	xmlns:tns=&quot;http://www.grimoires.org/rdf&quot;
+	xmlns:wsdl=&quot;http://schemas.xmlsoap.org/wsdl/&quot;
+	xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
+	&lt;wsdl:types&gt;
+		&lt;xsd:schema targetNamespace=&quot;http://www.grimoires.org/rdf&quot;
+			xmlns:tns=&quot;http://www.grimoires.org/rdf&quot;&gt;
+			&lt;xsd:element name=&quot;inquireRequest&quot; type=&quot;tns:inquireRequest&quot; /&gt;
+			&lt;xsd:complexType name=&quot;inquireRequest&quot;&gt;
+				&lt;xsd:sequence&gt;
+					&lt;xsd:element name=&quot;language&quot; type=&quot;xsd:string&quot; /&gt;
+					&lt;xsd:element name=&quot;clause&quot; type=&quot;xsd:string&quot; /&gt;
+				&lt;/xsd:sequence&gt;
+			&lt;/xsd:complexType&gt;
+			&lt;xsd:element name=&quot;inquireResponse&quot; type=&quot;tns:inquireResponse&quot; /&gt;
+			&lt;xsd:complexType name=&quot;inquireResponse&quot;&gt;
+				&lt;xsd:sequence&gt;
+					&lt;xsd:element name=&quot;header&quot; type=&quot;tns:record&quot;/&gt;
+					&lt;xsd:element name=&quot;record&quot; type=&quot;tns:record&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;
+				&lt;/xsd:sequence&gt;
+			&lt;/xsd:complexType&gt;
+			&lt;xsd:complexType name=&quot;record&quot;&gt;
+				&lt;xsd:sequence&gt;
+					&lt;xsd:element name=&quot;field&quot; type=&quot;xsd:string&quot; minOccurs=&quot;1&quot; maxOccurs=&quot;unbounded&quot;/&gt;
+				&lt;/xsd:sequence&gt;
+			&lt;/xsd:complexType&gt;
+		&lt;/xsd:schema&gt;
+	&lt;/wsdl:types&gt;
+	&lt;wsdl:message name=&quot;inquireResponse&quot;&gt;
+		&lt;wsdl:part element=&quot;tns:inquireResponse&quot; name=&quot;inquireResponse&quot; /&gt;
+	&lt;/wsdl:message&gt;
+	&lt;wsdl:message name=&quot;inquireRequest&quot;&gt;
+		&lt;wsdl:part element=&quot;tns:inquireRequest&quot; name=&quot;inquireRequest&quot; /&gt;
+	&lt;/wsdl:message&gt;
+	&lt;wsdl:portType name=&quot;RDF&quot;&gt;
+		&lt;wsdl:operation name=&quot;inquire&quot;&gt;
+			&lt;wsdl:input message=&quot;tns:inquireRequest&quot; /&gt;
+			&lt;wsdl:output message=&quot;tns:inquireResponse&quot; /&gt;
+		&lt;/wsdl:operation&gt;
+	&lt;/wsdl:portType&gt;
+&lt;/wsdl:definition&gt;</pre>
+<p>In the input message of the inquire operation, the &quot;language&quot; has a pre-defined 
+value &quot;RDQL&quot;, and the &quot;clause&quot; is the RDF query clause in RDQL. In the output 
+message of the inquire operation, the &quot;header&quot; is a string array that contains all 
+the selected variables in the RDQL clause, and the &quot;record&quot; is a sequence of all 
+matched bindings.</p>
+<p>For instance, the following example inquires for the name and key of all 
+published businesses. The request message is:</p>
+<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+	&lt;soapenv:Body&gt;
+		&lt;inquireRequest xmlns=&quot;http://www.grimoires.org/rdf&quot;&gt;
+			&lt;language&gt;RDQL&lt;/language&gt;
+			&lt;clause&gt;SELECT ?businessName ?businessKey WHERE
+				(?business &amp;lt;rdf:type&amp;gt; &amp;lt;uddi:BusinessEntity&amp;gt;)
+				(?business &amp;lt;uddi:hasBusinessKey&amp;gt; ?businessKey)
+				(?business &amp;lt;uddi:hasName&amp;gt; ?nameBag)
+				(?nameBag &amp;lt;rdf:_1&amp;gt; ?businessName)
+				USING
+				rdf FOR &amp;lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&amp;gt;,
+				uddi FOR &amp;lt;http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#&amp;gt;,
+				metadata FOR &amp;lt;http://www.mygrid.ecs.soton.ac.uk/metadata.rdfs#&amp;gt;,
+				wsdl FOR &amp;lt;http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#&amp;gt;</pre>
+<pre>			&lt;/clause&gt;
+		&lt;/inquireRequest&gt;
+	&lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+<p/>The response message is:<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+	&lt;soapenv:Body&gt;
+		&lt;inquireResponse xmlns=&quot;http://www.grimoires.org/rdf&quot;&gt;
+			&lt;header&gt;
+				&lt;field&gt;businessName&lt;/field&gt;
+				&lt;field&gt;businessKey&lt;/field&gt;
+			&lt;/header&gt;
+			&lt;record&gt;
+				&lt;field&gt;Quality Quidditch Supplies&lt;/field&gt;
+				&lt;field&gt;d6ff1e8a-0eee-4e68-913a-74fa14951090&lt;/field&gt;
+			&lt;/record&gt;
+			&lt;record&gt;
+				&lt;field&gt;Quality Quidditch Supplies&lt;/field&gt;
+				&lt;field&gt;e67d836f-d8fc-41a5-ac9d-96ca5ef9bbb5&lt;/field&gt;
+			&lt;/record&gt;
+		&lt;/inquireResponse&gt;
+	&lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+</pre>
+<h2><a name="Client"></a>The Client Side Utilities</h2>
+<p>The RDF API is intended to be used by Grimoires developer instead of 
+Grimoires users. To compose the RDF query clause, the knowledge on the RDF 
+schema used in Grimoires is required. Users are not required to have such 
+knowledge. However, by exposing the RDF API, the Grimoires developer has the 
+flexibility to implement free form queries that can not be addressed by current 
+query templates through writing client side utilities of the RDF API. For 
+instance, the two use cases mentioned above can be addressed by writing some 
+client side utilities of the RDF API.</p>
+<p>&nbsp;</div>
+
+</body></html>

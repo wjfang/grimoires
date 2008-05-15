@@ -1,0 +1,46 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<serviceDescriptions  xmlns="pd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="pd /C:/Program Files/taverna-workbench-1.2/./plugins/pedro/services/model/common.xsd">
+	<serviceDescription >
+		<serviceName>SHoundGetAllTaxAncestors</serviceName>
+		<organisation >
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundGetAllTaxAncestors</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundGetAllTaxAncestors?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Retrieves all taxid (the whole subtree) above a given taxid</serviceDescriptionText>
+		<operations >
+			<serviceOperation >
+				<operationName>SHoundGetAllTaxAncestors</operationName>
+				<operationInputs >
+					<parameter >
+						<parameterName>taxid</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_identifier</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs >
+					<parameter >
+						<parameterName>result</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_identifier</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Ordered Collection</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#retrieving</operationTask>
+				<operationResource>http://www.mygrid.org.uk/ontology#bioinformatics_database</operationResource>
+				<operationResourceContent>http://www.mygrid.org.uk/ontology#model_organism</operationResourceContent>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

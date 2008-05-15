@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=MK-01-UKIM_II,mds-vo-name=MK-01-UKIM_II">
+    <Name>MK-01-UKIM_II</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:</UserSupportContact>
+    <SysAdminContact>mailto:seegrid-admin@ukim.edu.mk</SysAdminContact>
+    <SecurityContact>mailto:</SecurityContact>
+    <Location>Skopje, Macedonia</Location>
+    <Latitude>42.002965</Latitude>
+    <Longitude>21.44962</Longitude>
+    <Web>http://www.see-grid.org</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>AEGIS01-PHY-SCL</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=grid-ce.ii.edu.mk,mds-vo-name=MK-01-UKIM_II">
+        <Name>grid-ce.ii.edu.mk</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=grid-ce.ii.edu.mk,GlueClusterUniqueID=grid-ce.ii.edu.mk,mds-vo-name=MK-01-UKIM_II">
+            <Name>grid-ce.ii.edu.mk</Name>
+            <PhysicalCPUs>22</PhysicalCPUs>
+            <LogicalCPUs>26</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="3" Release="3.0.7" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="PIV" ClockSpeed="3000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2049" RAMSize="513"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1226" SF00="1213"/>
+            <Location LocalID="VO-dteam-geant42ndProd">
+                <Name>VO-dteam-geant42ndProd</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-geant42ndProd_p01">
+                <Name>VO-dteam-geant42ndProd_p01</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-ITUtest1">
+                <Name>VO-dteam-ITUtest1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-v22Nov">
+                <Name>VO-dteam-december05prod-v22Nov</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final">
+                <Name>VO-dteam-december05prod-final</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final-cand2">
+                <Name>VO-dteam-december05prod-final-cand2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-seegrid-vive-0.4.2">
+                <Name>VO-seegrid-vive-0.4.2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_SEEGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-seegrid-vive-0.4.3">
+                <Name>VO-seegrid-vive-0.4.3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_SEEGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-seegrid-grow-0.2">
+                <Name>VO-seegrid-grow-0.2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_SEEGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-autodock_IAN-3-0">
+                <Name>VO-biomed-autodock_IAN-3-0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=grid-se.ii.edu.mk,mds-vo-name=MK-01-UKIM_II">
+        <InformationServiceURL>ldap://grid-se.ii.edu.mk:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>127</SizeTotal>
+        <SizeFree>115</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/ii.edu.mk/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2</UsedSpace>
+            <AvailableSpace>114540000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/ii.edu.mk/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>43</UsedSpace>
+            <AvailableSpace>114540000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="seegrid">
+            <Path>/dpm/ii.edu.mk/home/seegrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>431</UsedSpace>
+            <AvailableSpace>114540000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="see">
+            <Path>/dpm/ii.edu.mk/home/see</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>114540000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomed">
+            <Path>/dpm/ii.edu.mk/home/biomed</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>344491</UsedSpace>
+            <AvailableSpace>114540000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://grid-se.ii.edu.mk</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://grid-se.ii.edu.mk</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://grid-se.ii.edu.mk</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=httpg://grid-se.ii.edu.mk:8443/srm/managerv1,mds-vo-name=MK-01-UKIM_II">
+        <Name>MK-01-UKIM_II-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://grid-se.ii.edu.mk:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://grid-se.ii.edu.mk:8446/srm/managerv2,mds-vo-name=MK-01-UKIM_II">
+        <Name>MK-01-UKIM_II-srm</Name>
+        <Type>srm</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://grid-se.ii.edu.mk:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=grid-se.ii.edu.mk:2136,mds-vo-name=MK-01-UKIM_II">
+        <Name>MK-01-UKIM_II-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://grid-se.ii.edu.mk:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>seegrid</Owner>
+        <Owner>see</Owner>
+        <Owner>biomed</Owner>
+    </Service>
+</Site>

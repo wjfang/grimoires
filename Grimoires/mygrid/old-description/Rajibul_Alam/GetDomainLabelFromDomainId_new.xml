@@ -1,0 +1,45 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<serviceDescriptions  xmlns="pd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="pd /C:/Program Files/taverna-workbench-1.2/./plugins/pedro/services/model/common.xsd">
+	<serviceDescription >
+		<serviceName>SHoundGetDomainLabelFromDomainId</serviceName>
+		<organisation >
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundGetDomainLabelFromDomainId</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundGetDomainLabelFromDomainId?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Returns a short non-unique label given a domain for a Conserved Domain Database (CDD). The above labels are preferred amongst scientific community.</serviceDescriptionText>
+		<operations >
+			<serviceOperation >
+				<operationName>SHoundGetDomainLabelFromDomainId</operationName>
+				<operationInputs >
+					<parameter >
+						<parameterName>accession</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_identifier</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs >
+					<parameter >
+						<parameterName>result</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_data</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#retrieving</operationTask>
+				<operationResource>http://www.mygrid.org.uk/ontology#bioinformatics_database</operationResource>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

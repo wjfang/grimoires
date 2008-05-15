@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=TU-Kosice,mds-vo-name=TU-Kosice">
+    <Name>TU-Kosice</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:grid-adm@lists.tuke.sk</UserSupportContact>
+    <SysAdminContact>mailto:grid-adm@lists.tuke.sk</SysAdminContact>
+    <SecurityContact>mailto:grid-adm@lists.tuke.sk</SecurityContact>
+    <Location>Kosice, Slovakia</Location>
+    <Latitude>48.733</Latitude>
+    <Longitude>21.242</Longitude>
+    <Web>http://www.tuke.sk</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-3</OtherInfo>
+    <OtherInfo>www.ui.sav.sk</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ce.grid.tuke.sk,mds-vo-name=TU-Kosice">
+        <Name>ce.grid.tuke.sk</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce.grid.tuke.sk,GlueClusterUniqueID=ce.grid.tuke.sk,mds-vo-name=TU-Kosice">
+            <Name>ce.grid.tuke.sk</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.8" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="P4" ClockSpeed="2600"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="true"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="513" RAMSize="513"/>
+            <Architecture SMPSize="1"/>
+            <Benchmark SI00="1004" SF00="1012"/>
+            <Location LocalID="VO-dteam-geant42ndProd">
+                <Name>VO-dteam-geant42ndProd</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-geant42ndProd_p01">
+                <Name>VO-dteam-geant42ndProd_p01</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-geant42ndProd_p02">
+                <Name>VO-dteam-geant42ndProd_p02</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-ITUtest1">
+                <Name>VO-dteam-ITUtest1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-v22Nov">
+                <Name>VO-dteam-december05prod-v22Nov</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final">
+                <Name>VO-dteam-december05prod-final</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final-cand2">
+                <Name>VO-dteam-december05prod-final-cand2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-esr-metadata-1.2">
+                <Name>VO-esr-metadata-1.2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ESR_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-esr-geoscope-1.0">
+                <Name>VO-esr-geoscope-1.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ESR_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-esr-octave-2.1.50">
+                <Name>VO-esr-octave-2.1.50</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ESR_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=ce.grid.tuke.sk,mds-vo-name=TU-Kosice">
+        <InformationServiceURL>ldap://ce.grid.tuke.sk:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="dteam">
+            <Path>/flatfiles/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>107537160</UsedSpace>
+            <AvailableSpace>46297692</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/flatfiles/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>107537160</UsedSpace>
+            <AvailableSpace>46297692</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="esr">
+            <Path>/flatfiles/esr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>107537160</UsedSpace>
+            <AvailableSpace>46297692</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="voce">
+            <Path>/flatfiles/voce</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>107537160</UsedSpace>
+            <AvailableSpace>46297692</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="skgrid">
+            <Path>/flatfiles/skgrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>107537160</UsedSpace>
+            <AvailableSpace>46297692</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://ce.grid.tuke.sk</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=ce.grid.tuke.sk:2136,mds-vo-name=TU-Kosice">
+        <Name>TU-Kosice-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://ce.grid.tuke.sk:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>esr</Owner>
+        <Owner>voce</Owner>
+        <Owner>skgrid</Owner>
+    </Service>
+</Site>

@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=IFIC-LCG2,mds-vo-name=IFIC-LCG2">
+    <Name>IFIC-LCG2</Name>
+    <Description>EGEE/LCG Site</Description>
+    <UserSupportContact>mailto: lcg.support@ific.uv.es</UserSupportContact>
+    <SysAdminContact>mailto: lcg.support@ific.uv.es</SysAdminContact>
+    <SecurityContact>mailto: lcg.support@ific.uv.es</SecurityContact>
+    <Location>Valencia, Spain</Location>
+    <Latitude>39.5149</Latitude>
+    <Longitude>-0.4255</Longitude>
+    <Web>http://ific.uv.es</Web>
+    <OtherInfo>TIER 2</OtherInfo>
+    <OtherInfo>SWE-ROC</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=lcg2ce.ific.uv.es,mds-vo-name=IFIC-LCG2">
+        <Name>lcg2ce.ific.uv.es</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=lcg2ce.ific.uv.es,GlueClusterUniqueID=lcg2ce.ific.uv.es,mds-vo-name=IFIC-LCG2">
+            <Name>lcg2ce.ific.uv.es</Name>
+            <PhysicalCPUs>126</PhysicalCPUs>
+            <LogicalCPUs>126</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="3" Release="3.0.6" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="Athlon" ClockSpeed="1200"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="true"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1534" RAMSize="1024"/>
+            <Architecture SMPSize="1"/>
+            <Benchmark SI00="506" SF00="405"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce01.ific.uv.es,mds-vo-name=IFIC-LCG2">
+        <Name>ce01.ific.uv.es</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce01.ific.uv.es,GlueClusterUniqueID=ce01.ific.uv.es,mds-vo-name=IFIC-LCG2">
+            <Name>ce01.ific.uv.es</Name>
+            <PhysicalCPUs>60</PhysicalCPUs>
+            <LogicalCPUs>60</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="3" Release="3.0.6" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel" Model="Intel Pentium D 840" ClockSpeed="3200"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="true"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="3072" RAMSize="2048"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1492" SF00="1758"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=lsrm.ific.uv.es,mds-vo-name=IFIC-LCG2">
+        <InformationServiceURL>ldap://lsrm.ific.uv.es:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="ops">
+            <Path>/lustre/ific.uv.es/grid/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1115066528</UsedSpace>
+            <AvailableSpace>35389224128</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/lustre/ific.uv.es/grid/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1115066528</UsedSpace>
+            <AvailableSpace>35389224128</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/lustre/ific.uv.es/grid/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1115066528</UsedSpace>
+            <AvailableSpace>35389224128</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="swetest">
+            <Path>/lustre/ific.uv.es/grid/swetest</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1115066528</UsedSpace>
+            <AvailableSpace>35389224128</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ific">
+            <Path>/lustre/ific.uv.es/grid/ific</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1115066528</UsedSpace>
+            <AvailableSpace>35389224128</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://lsrm.ific.uv.es</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=castorgrid.ific.uv.es,mds-vo-name=IFIC-LCG2">
+        <InformationServiceURL>ldap://castorgrid.ific.uv.es:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>1000000000000</SizeTotal>
+        <SizeFree>500000000000</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/castor/ific.uv.es/grid/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/castor/ific.uv.es/grid/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ific">
+            <Path>/castor/ific.uv.es/grid/ific</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/castor/ific.uv.es/grid/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="swetest">
+            <Path>/castor/ific.uv.es/grid/swetest</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://castorgrid.ific.uv.es:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://castorsrm.ific.uv.es:8443/srm/managerv1</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=castorsrm.ific.uv.es,mds-vo-name=IFIC-LCG2">
+        <InformationServiceURL>ldap://castorsrm.ific.uv.es:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>1000000000000</SizeTotal>
+        <SizeFree>500000000000</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ific">
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="swetest">
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://castorsrm.ific.uv.es:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://castorsrm.ific.uv.es:8443/srm/managerv1</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=httpg://lsrm.ific.uv.es:8443/srm/managerv1,mds-vo-name=IFIC-LCG2">
+        <Name>IFIC-LCG2-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://lsrm.ific.uv.es:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lcg2mon.ific.uv.es:2136,mds-vo-name=IFIC-LCG2">
+        <Name>IFIC-LCG2-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://lcg2mon.ific.uv.es:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>ific</Owner>
+        <Owner>swetest</Owner>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lcg2proxy.ific.uv.es:7512,mds-vo-name=IFIC-LCG2">
+        <Name>IFIC-LCG2-myproxy</Name>
+        <Type>myproxy</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>lcg2proxy.ific.uv.es:7512</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lcg2rb.ific.uv.es:7772,mds-vo-name=IFIC-LCG2">
+        <Name>IFIC-LCG2-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>lcg2rb.ific.uv.es:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>ific</Owner>
+        <Owner>swetest</Owner>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lcg2rb2.ific.uv.es:7772,mds-vo-name=IFIC-LCG2">
+        <Name>IFIC-LCG2-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>lcg2rb2.ific.uv.es:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>ific</Owner>
+        <Owner>swetest</Owner>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://castorsrm.ific.uv.es:8443/srm/managerv1,mds-vo-name=IFIC-LCG2">
+        <Name>IFIC-LCG2-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://castorsrm.ific.uv.es:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

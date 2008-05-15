@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+	<serviceDescription>
+		<serviceName>SHoundTitleFromGi</serviceName>
+		<organisation>
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundTitleFromGi</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundTitleFromGi?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Gets title given a gi value.</serviceDescriptionText>
+		<operations>
+			<serviceOperation>
+				<operationName>SHoundTitleFromGi</operationName>
+				<operationInputs>
+					<parameter>
+						<parameterName>gi</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#biological_sequence_id</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs>
+					<parameter>
+						<parameterName>result</parameterName>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#retrieving</operationTask>
+				<operationResource>http://www.mygrid.org.uk/ontology#bioinformatics_database</operationResource>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

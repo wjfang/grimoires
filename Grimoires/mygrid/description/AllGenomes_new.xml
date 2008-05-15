@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+	<serviceDescription>
+		<serviceName>SHoundAllGenomes</serviceName>
+		<organisation>
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundAllGenomes</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundAllGenomes?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Get an array of taxonomy identifiers for all complete genomes present in the SeqHound system.</serviceDescriptionText>
+	</serviceDescription>
+
+	<serviceDescription>
+		<serviceName>SHoundChromosomeFromGenome</serviceName>
+		<organisation>
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundChromosomeFromGenome</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundChromosomeFromGenome?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Get all the chromosomes for a given taxonomy identifier and the molecule</serviceDescriptionText>
+		<operations>
+			<serviceOperation>
+				<operationName>SHoundChromosomeFromGenome</operationName>
+				<operationInputs>
+					<parameter>
+						<parameterName>taxid</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_record_id</semanticType>
+						<transportDataType>Integer</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+					<parameter>
+						<parameterName>chromflags</parameterName>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs>
+					<parameter>
+						<parameterName>result</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#genome_nucleotide_sequence</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Collection,list of integer chromosomal identifiers</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#retrieving</operationTask>
+				<operationResource>http://www.mygrid.org.uk/ontology#bioinformatics_database</operationResource>
+				<operationResourceContent>http://www.mygrid.org.uk/ontology#model_organism</operationResourceContent>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

@@ -1,0 +1,31 @@
+  <serviceDescriptions  xmlns="pd">
+  <serviceDescription>
+  <serviceName>SHoundGetTaxLineageFromTaxID</serviceName>
+    		<organisation>
+    			<organisationName>Blueprint</organisationName>
+    			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+    		</organisation>
+    		<locationURL>http://seqhound.blueprint.org/SHoundGetTaxLineageFromTaxID</locationURL>
+  		<interfaceWSDL>http://seqhound.blueprint.org/SHoundGetTaxLineageFromTaxID?wsdl</interfaceWSDL>
+  <serviceDescriptionText>fetches a taxonomy lineage in a specified form.</serviceDescriptionText> 
+  <operations>
+  <serviceOperation>
+  <operationName>SHoundGetTaxLineageFromTaxID</operationName> 
+  <operationInputs>
+  <parameter>
+  <parameterName>taxid</parameterName> 
+  </parameter>
+  <parameter>
+  <parameterName>type</parameterName> 
+  </parameter>
+  </operationInputs>
+  <operationOutputs>
+  <parameter>
+  <parameterName>result</parameterName> 
+  </parameter>
+  </operationOutputs>
+  </serviceOperation>
+  </operations>
+  <serviceType>SeqHound service</serviceType> 
+  </serviceDescription>
+  </serviceDescriptions>

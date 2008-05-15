@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>JavaAddressBookWsdl</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url(./i_arrow_down.gif);
+	}	        
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script></head>
+
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1><a name="WSDL_for_Java_classes_using_WSIF"> </a> WSDL for Java classes using WSIF </h1>
+<p>
+This is an example WSDL created for a java class AddressBook using the Java Extension in the <a href="http://ws.apache.org/wsif" target="_top">Web services invocation framework</a>
+</p><p>
+The java class is addressbook.wsiftypes.AddressBook. The class has a
+function called addEntry. The function takes an input message
+consisting of a full name and an address.
+</p><p>
+</p><pre>&lt;?xml version="1.0" ?&gt;
+
+&lt;definitions targetNamespace="http://wsifservice.addressbook/"
+             xmlns:tns="http://wsifservice.addressbook/"
+             xmlns:typens="http://wsiftypes.addressbook/"
+             xmlns:xsd="http://www.w3.org/2000/10/XMLSchema"
+             xmlns:format="http://schemas.xmlsoap.org/wsdl/formatbinding/"
+             xmlns:java="http://schemas.xmlsoap.org/wsdl/java/"
+             xmlns="http://schemas.xmlsoap.org/wsdl/"&gt;
+
+  &lt;!-- type defs --&gt;
+  &lt;types&gt;
+    &lt;xsd:schema
+      targetNamespace="http://wsiftypes.addressbook/"
+                xmlns:xsd="http://www.w3.org/1999/XMLSchema"&gt;
+
+      &lt;xsd:complexType name="phone"&gt;
+        &lt;xsd:element name="areaCode" type="xsd:int"/&gt;
+
+        &lt;xsd:element name="exchange" type="xsd:string"/&gt;
+        &lt;xsd:element name="number" type="xsd:string"/&gt;
+      &lt;/xsd:complexType&gt;
+
+      &lt;xsd:complexType name="address"&gt;
+        &lt;xsd:element name="streetNum" type="xsd:int"/&gt;
+        &lt;xsd:element name="streetName" type="xsd:string"/&gt;
+
+        &lt;xsd:element name="city" type="xsd:string"/&gt;
+        &lt;xsd:element name="state" type="xsd:string"/&gt;
+        &lt;xsd:element name="zip" type="xsd:int"/&gt;
+        &lt;xsd:element name="phoneNumber" type="typens:phone"/&gt;
+      &lt;/xsd:complexType&gt;
+    &lt;/xsd:schema&gt;
+
+  &lt;/types&gt;
+
+  &lt;!-- message declns --&gt;
+  &lt;message name="AddEntryWholeNameRequestMessage"&gt;
+    &lt;part name="name" type="xsd:string"/&gt;
+    &lt;part name="address" type="typens:address"/&gt;
+  &lt;/message&gt;
+
+  &lt;!-- port type declns --&gt;
+  &lt;portType name="AddressBook"&gt;
+    &lt;operation name="addEntry"&gt;
+      &lt;input name="AddEntryWholeNameRequest" message="tns:AddEntryWholeNameRequestMessage"/&gt;
+    &lt;/operation&gt;
+  &lt;/portType&gt;
+
+  &lt;!-- binding declns --&gt;
+  &lt;binding name="JavaBinding" type="tns:AddressBook"&gt;
+    &lt;java:binding/&gt;
+    &lt;format:typeMapping encoding="Java" style="Java"&gt;
+      &lt;format:typeMap typeName="typens:address" formatType="addressbook.wsiftypes.Address" /&gt;
+
+      &lt;format:typeMap typeName="xsd:string" formatType="java.lang.String" /&gt;
+    &lt;/format:typeMapping&gt;
+    &lt;operation name="addEntry"&gt;
+      &lt;java:operation
+         methodName="addEntry"
+         parameterOrder="name address"
+         methodType="instance" /&gt;
+      &lt;input name="AddEntryWholeNameRequest"/&gt;
+    &lt;/operation&gt;
+  &lt;/binding&gt;
+  
+  &lt;!-- service decln --&gt;
+  &lt;service name="AddressBookService"&gt;
+
+    &lt;port name="JavaPort" binding="tns:JavaBinding"&gt;
+      &lt;java:address className="addressbook.wsiftypes.AddressBook"/&gt;
+    &lt;/port&gt;
+  &lt;/service&gt;
+
+&lt;/definitions&gt;
+</pre>
+<p>
+</div>
+
+</span></div></div>
+</body></html>

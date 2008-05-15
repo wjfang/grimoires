@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescription>
+ <serviceName>
+
+SHound3DbWhat  </serviceName>
+ <locationURL>
+
+http://seqhound.blueprint.org/    </locationURL>
+ <interfaceWSDL>
+http://seqhound.blueprint.org/ </interfaceWSDL>
+ <serviceDescriptionText>
+
+Finds out what kind of molecules are contained in a 3-D structure.  </serviceDescriptionText>
+ <serviceType>
+SeqHound service </serviceType>
+</serviceDescription>

@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Grimoires Documentation - User Guide - GShell</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url('i_arrow_down.gif');
+	}	        
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script>
+</head>
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1><a name="Grimoires_Shell_Manual"> </a> User Guide - GShell</h1>
+<p><b><font color="#FF0000">Please refer to GShell's </font>
+<a href="funcspec-gs.html">functional specification</a><font color="#FF0000"> 
+for the references of all commands.</font></b></p>
+<p />
+<div class="twikiToc">
+<ul>
+<li> <a href="#Grimoires_Shell_Manual">User Guide - GShell</a>
+<ul>
+<li> <a href="#Introduction">Introduction </a>
+</li>
+<li> <a href="#User_guide">The shell environment </a>
+</li>
+<li> <a href="#A_use_scenario">A use scenario</a>
+<ul>
+<li> <a href="#Publish_a_business">Publish a business </a>
+</li>
+<li> <a href="#Inquire_a_business">Inquire a business</a>
+</li>
+<li> <a href="#Publish_a_service">Publish a service </a>
+</li>
+<li> <a href="#Inquire_a_service">Inquire a service</a>
+</li>
+<li> <a href="#Publish_WSDL">Publish WSDL</a>
+</li>
+<li> <a href="#Inquire_WSDL">Inquire WSDL </a>
+</li>
+<li> <a href="#Publish_metadata">Publish metadata</a>
+</li>
+<li> <a href="#Inquire_metadata">Inquire metadata</a>
+</li>
+<li> <a href="#termtime">Set termination time</a>
+</li>
+<li> <a href="#send_soap">Send a soap message</a>
+</li>
+</ul>
+</li>
+<li> <a href="#Run_commands_in_a_batch_mode">Run commands in a batch mode</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p />
+<h2><a name="Introduction"> </a> Introduction  </h2>
+<p />
+GShell is a simple client that supports some of the functionality of the 
+Grimoires service in interactive mode or batch mode. Full Grimoires 
+functionality may be accessed either by the Java Programming Client Side API or 
+by the SOAP message submission facility. GShell provides a group of utilities for users to
+publish/inquire business/service/wsdl/metadata.
+<p />
+<p />
+<h2><a name="User_guide"> </a>The shell environment</h2>
+<p />
+After the GShell is started, you will see a prompt sign "&gt;".<p />
+Type "help", you will see a help message.
+<p />
+Type "ls", you will see all available commands. A command is a 
+utility that performs a single task on the registry.
+<p />
+Type "run command_name" to run a command.
+<p />
+Type "exit" to exit the GShell.
+<p />
+When you see [$n]=VALUE (where n is an integer) in the output, it means the a 
+variable, with name n, is recorded in GShell and you may reuse them by typing 
+&quot;$n&quot; to denote VALUE.<p />
+<h2><a name="A_use_scenario"> </a> A use scenario </h2>
+<p />
+In this scenario, we demonstrate how to publish/inquire a gcode service owned by 
+Univ. of Southampton, and how to annotate its input message with some semantic 
+type. The service is called &quot;gcode&quot; and is used to recode bioinformatic 
+sequences using different groupings of the alphabet. We will publish a business (the UDDI terminology of an organization), publish a service belonging to the previous published business, publish a WSDL which defines the technical fingerprint of the service, and publish a metadata annotating the semantic type of an input message in the WSDL. We will also inquire all the published business/service/WSDL/metadata.<br>
+&nbsp;<p />
+<h3><a name="Publish_a_business"> </a> Publish a business  </h3>
+<p />
+Publish a business called "Univ. of Southampton". A business is the
+UDDI's terminology for an organization. You will get a business
+key. On the screen, you will see:
+<p />
+<pre>
+><b>run PublishBusiness</b>
+==== Publish a business ====
+Input the business name:
+<b>Univ. of Southampton</b>
+Input the business description:
+<b>University</b>
+Business key[$1]: ca5bdb5b-cf1c-4054-8626-65862727b9ff
+</pre>
+<p />
+NOTE:
+<p />
+A. the lines in bold font, e.g., 
+<p />
+<pre>
+<b>run PublishBusiness</b>
+</pre>
+<p />
+are typed by users.
+<p />
+B. $1 in "Business key[$1]" refers to a recorded variable. Later, $1
+can be used to refer to the key "ca5bdb5b-cf1c-4054-8626-65862727b9ff".
+<p />
+<h3><a name="Inquire_a_business"> </a> Inquire a business </h3>
+<p />
+Inquire a business by name. On the screen, you will see:
+<p />
+<pre>
+><b>run InquireBusiness</b>
+==== Inquire a business ====
+Input the business name:
+<b>Univ. of Southampton</b>
+==== Business No. 0 ====
+Business name: Univ. of Southampton
+Business description: University
+Business key: ca5bdb5b-cf1c-4054-8626-65862727b9ff
+</pre>
+<p />
+<h3><a name="Publish_a_service"> </a> Publish a service  </h3>
+<p />
+Publish a service called "gcode". On the screen, you will see:
+<p />
+<pre>
+><b>run PublishService</b>
+==== Publish a service ====
+Input the service name:
+<b>gcode</b>
+Input the service description:
+<b>group encoding</b>
+Input the business key:
+<b>$1</b>
+Input the service access point:
+<b>http://www.ecs.soton.ac.uk/gcode</b>
+Input the service WSDL URL:
+<b>http://www.ecs.soton.ac.uk/~wf/grimoires/wsdl/gcode.wsdl</b>
+Service key[$3]: 09017faa-0d2e-4bdd-aea3-6e76084504cf
+</pre>
+<p />
+NOTE:
+<p />
+A. The service access point is where the service is located.
+<p />
+B. The WSDL URL will be recorded in UDDI tModel, but a standard UDDI
+registry will not register this WSDL file.
+<p />
+<h3><a name="Inquire_a_service"> </a> Inquire a service </h3>
+<p />
+Inquire a service by name. On the screen, you will see:
+<p />
+<pre>
+><b>run InquireService</b>
+==== List all services ====
+Input the service name:
+<b>gcode</b>
+==== Service No. 0 ====
+Service name: gcode
+Service key: dc64b224-02cf-44cd-92aa-0037a44d4da1
+Business key: 9f6d4816-dfa4-46df-b330-c4108b361d94
+Access point in binding template: http://www.ecs.soton.ac.uk/gcode
+tModel: http://www.ecs.soton.ac.uk/~wf/grimoires/wsdl/gcode.wsdl
+</pre>
+<p />
+<h3><a name="Publish_WSDL"> </a> Publish WSDL </h3>
+<p />
+Publish a WSDL file, whose URL is
+http://www.ecs.soton.ac.uk/~wf/grimoires/wsdl/gcode.wsdl
+On the screen, you will see:
+<p />
+<pre>
+><b>run PublishWSDL</b>
+==== Publish a WSDL file ====
+Input the WSDL URL:
+<b>http://www.ecs.soton.ac.uk/~wf/grimoires/wsdl/gcode.wsdl</b>
+WSDL key[$4]: 35708376-4092-464c-b364-80459d81400f
+</pre>
+<p />
+NOTE: this is a Grimoires' extension to the UDDI specification.
+<p />
+<h3><a name="Inquire_WSDL"> </a> Inquire WSDL  </h3>
+<p />
+Inquire a WSDL by its registered key. On the screen, you will see:
+<p />
+<pre>
+><b>run InquireWSDL</b>
+==== Inquire a WSDL file ====
+Input the WSDL Key:
+<b>$4</b>
+</pre>
+<pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;definitions targetNamespace="http://test/gcode" xmlns:tns="http://test/gcode" x
+mlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/ws
+dl/"&gt;
+  &lt;message name="response"&gt;
+    &lt;part name="recoded" type="xsd:string"/&gt;
+  &lt;/message&gt;
+  &lt;message name="request"&gt;
+    &lt;part name="sample" type="xsd:string"/&gt;
+    &lt;part name="groups" type="xsd:string"/&gt;
+  &lt;/message&gt;
+  &lt;portType name="DefaultPort"&gt;
+    &lt;operation name="DefaultOperation"&gt;
+      &lt;input message="tns:request"/&gt;
+      &lt;output message="tns:response"/&gt;
+    &lt;/operation&gt;
+  &lt;/portType&gt;
+&lt;/definitions&gt;
+</pre>
+<p />
+<h3><a name="Publish_metadata"> </a> Publish metadata </h3>
+<p />
+Publish a piece of metadata to a message part of the gcode service to
+describe its semantic type. On the screen, you will see:
+<p />
+<pre>
+><b>run PublishMetadata</b>
+What type of entity to annotate (keyedEntity, operation, or messagePart):
+<b>messagePart</b>
+==== Publish a metadata to a message part ====
+Input the message namespace:
+<b>http://test/gcode</b>
+Input the message name:
+<b>request</b>
+Input the message part name:
+<b>sample</b>
+Input the type (URI) of the metadata to describe the message part:
+<b>http://www.grimoires.org/SemanticType</b>
+Input the value of the metadata to describe the message part:
+<b>nucleotide_sequence</b>
+Metadata key[$5]: 32529811-d841-45c5-bf5b-892e2815966c</pre>
+<p>
+In a WSDL file, a message is identified as a QName, i.e., the message namespace 
+plus the message name. A message can consist of multiple message parts. 
+Therefore, the triple (message namespace, message name, message part name) 
+unambiguously identifies a message part in a WSDL file.<br>
+</p>
+<p />
+<h3><a name="Inquire_metadata"> </a> Inquire metadata </h3>
+<p />
+Inquire an entity that has the specified annotation. On the screen,
+you will see:
+<p />
+<pre>
+><b>run InquireMetadata</b>
+==== Inquire a metadata ====
+Input the metadata type (URI):
+<b>http://www.grimoires.org/SemanticType</b>
+Input the metadata value:
+<b>nucleotide_sequence</b>
+==== Entity No. 0 ====
+Found a message part with this metedata:
+	(http://www.grimoires.org/SemanticType, nucleotide_sequence)
+Message namespace: http://test/gcode
+Message name: request
+Message part name: sample
+</pre>
+<p />
+<h3><a name="termtime"> </a> Set termination time </h3>
+<p />
+Set the termination time to an entity. On the screen,
+you will see:
+<p />
+<pre>
+><b>run SetTerminationTime</b>
+==== Set the termination time to a keyed entity ====
+Input the entity key:
+<b>$0</b>
+Input the key type (business, service, or metadata):
+<b>business</b>
+Input the lifetime in seconds since now or the desired termination time in the format dd/mm/yy hh:mm:ss:
+<b>30</b>
+The entity will expire on Thursday, January 11, 2007 2:45:08 PM GMT</pre>
+<p />
+<h3><a name="send_soap"> </a>Send a soap message </h3>
+<p />
+Send a soap message to a Web Service endpoint. On the screen, you will see:
+<p />
+<pre>
+><b>run SendSoapMessage
+<span style="font-weight: 400">==== Send a SOAP message to a Web Service endpoint ====
+Input the Web Service endpoint:
+</span>http://fantasio:8080/grimoires/services/publish<span style="font-weight: 400">
+Input the XML filename whose content consructs the SOAP message body:
+</span>data/save_business_1.xml<span style="font-weight: 400">
+</span>
+<span style="font-weight: 400">&lt;soapenv:Body xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;busines
+sDetail xmlns=&quot;urn:uddi-org:api_v2&quot;&gt;&lt;businessEntity businessKey=&quot;4ba1b168-5766-4
+0fd-bc6d-3be1b6047121&quot;&gt;&lt;name&gt;abc business&lt;/name&gt;&lt;/businessEntity&gt;&lt;/businessDetai
+l&gt;&lt;/soapenv:Body&gt;run InquireMetadata</span></b>
+</pre>
+<p />
+<h2><a name="Run_commands_in_a_batch_mode"> </a> Run commands in a batch mode </h2>
+<p />
+All commands can be run in a batch mode. 
+<p />
+E.g., after setting up the proper classpath,
+"java InquireBusinessCommand Grimoires_URL business_name"
+will inquire a business.
+<p />
+And "java InquireBusinessCommand" will show the usage of the command.
+<p />
+</div>
+
+</body></html>

@@ -1,0 +1,1658 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=BNL-LCG2,mds-vo-name=BNL-LCG2">
+    <Name>BNL-LCG2</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto: racf-grid-admin-l@lists.bnl.gov</UserSupportContact>
+    <SysAdminContact>mailto: racf-grid-admin-l@lists.bnl.gov</SysAdminContact>
+    <SecurityContact>mailto: racf-grid-admin-l@lists.bnl.gov</SecurityContact>
+    <Location>Upton New York, USA</Location>
+    <Latitude>40.8684</Latitude>
+    <Longitude>-72.8783</Longitude>
+    <Web>http://www.usatlas.bnl.gov</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-1</OtherInfo>
+    <OtherInfo>atlas.web.cern.ch</OtherInfo>
+    <StorageElement UniqueID="GlueSEUniqueID=dcsrm.usatlas.bnl.gov,mds-vo-name=BNL-LCG2">
+        <InformationServiceURL>ldap://dcsrm.usatlas.bnl.gov:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>1091047</SizeTotal>
+        <SizeFree>468668</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="dteam">
+            <Path>/pnfs/usatlas.bnl.gov/grid/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/pnfs/usatlas.bnl.gov/grid/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/pnfs/usatlas.bnl.gov/grid/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="des">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="mis">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="osg">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="fmri">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gadu">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="glow">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="grow">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ligo">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="sdss">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="DOSAR">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dzero">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="grase">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ivdgl">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gridex">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="osgedu">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="nanohub">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="fermilab">
+            <Path>/pnfs/usatlas.bnl.gov/grid/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://dcsrm.usatlas.bnl.gov</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsidcap">
+            <Endpoint>httpg://dcsrm.usatlas.bnl.gov</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor02-15subnet@gridftp-dcdoor02Domain">
+            <Endpoint>gsiftp://192.12.15.3:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor08-15subnet@gridftp-dcdoor08Domain">
+            <Endpoint>gsiftp://192.12.15.14:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor02-185subnet@gridftp-dcdoor02Domain">
+            <Endpoint>gsiftp://dcdoor02.usatlas.bnl.gov:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap1-dcdcap01@dcap1-dcdcap01Domain">
+            <Endpoint>dcap://dcdcap01.usatlas.bnl.gov:22125</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor07-15subnet@gridftp-dcdoor07Domain">
+            <Endpoint>gsiftp://192.12.15.10:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor03-15subnet@gridftp-dcdoor03Domain">
+            <Endpoint>gsiftp://192.12.15.4:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor06-185subnet@gridftp-dcdoor06Domain">
+            <Endpoint>gsiftp://dcdoor06.usatlas.bnl.gov:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor05-185subnet@gridftp-dcdoor05Domain">
+            <Endpoint>gsiftp://dcdoor05.usatlas.bnl.gov:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor04-15subnet@gridftp-dcdoor04Domain">
+            <Endpoint>gsiftp://192.12.15.5:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap3-dcdcap01@dcap3-dcdcap01Domain">
+            <Endpoint>dcap://dcdcap01.usatlas.bnl.gov:22130</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor03-185subnet@gridftp-dcdoor03Domain">
+            <Endpoint>gsiftp://dcdoor03.usatlas.bnl.gov:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor05-15subnet@gridftp-dcdoor05Domain">
+            <Endpoint>gsiftp://192.12.15.6:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor04-185subnet@gridftp-dcdoor04Domain">
+            <Endpoint>gsiftp://dcdoor04.usatlas.bnl.gov:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor01-15subnet@gridftp-dcdoor01Domain">
+            <Endpoint>gsiftp://192.12.15.2:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor07-185subnet@gridftp-dcdoor07Domain">
+            <Endpoint>gsiftp://dcdoor07.usatlas.bnl.gov:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor08-185subnet@gridftp-dcdoor08Domain">
+            <Endpoint>gsiftp://dcdoor08.usatlas.bnl.gov:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor06-15subnet@gridftp-dcdoor06Domain">
+            <Endpoint>gsiftp://192.12.15.9:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-dcdoor01-185subnet@gridftp-dcdoor01Domain">
+            <Endpoint>gsiftp://dcdoor01.usatlas.bnl.gov:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap4-dcdcap01@dcap4-dcdcap01Domain">
+            <Endpoint>dcap://dcdcap01.usatlas.bnl.gov:22131</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap2-dcdcap01@dcap2-dcdcap01Domain">
+            <Endpoint>dcap://dcdcap01.usatlas.bnl.gov:22129</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://dcsrm.usatlas.bnl.gov</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+        <ControlProtocol LocalID="SRM-dcsrm@srm-dcsrm01Domain">
+            <Endpoint>httpg://dcsrm.usatlas.bnl.gov:8443/srm/managerv1</Endpoint>
+            <Type>SRM</Type>
+            <Version>1.1.1</Version>
+        </ControlProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://dcsrm.usatlas.bnl.gov</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=dcsrmv2.usatlas.bnl.gov,mds-vo-name=BNL-LCG2">
+        <StorageArea LocalID="atlas">
+            <Path>/pnfs/usatlas.bnl.gov/data/atlas</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsidcap">
+            <Type>gsidcap</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=lcg03.usatlas.bnl.gov:2136,mds-vo-name=BNL-LCG2">
+        <Name>BNL-LCG2-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://lcg03.usatlas.bnl.gov:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>dteam</Owner>
+        <Owner>atlas</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=UTASW2-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>UTASW2-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-OUGFTP2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-OUGFTP2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=OUGFTP2-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>OUGFTP2-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-UCDCACHEGFTPD1_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-UCDCACHEGFTPD1_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=UCDCACHEGFTPD1-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>UCDCACHEGFTPD1-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-UCDCACHEGFTPD2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-UCDCACHEGFTPD2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=UCDCACHEGFTPD2-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>UCDCACHEGFTPD2-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TAIWANSRM-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>TAIWANSRM-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TRIUMFSRM-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>TRIUMFSRM-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=PICSRM-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>PICSRM-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-UMICHGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-UMICHGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=HEAD01AGLT2-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>HEAD01AGLT2-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=NDGFT1DISK-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>NDGFT1DISK-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=HARRYHAGRID-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>HARRYHAGRID-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=DC3UIO-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>DC3UIO-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-BUATLASTIER2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-BUATLASTIER2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-IUATLASTIER2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-IUATLASTIER2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-UCDCACHEGFTPD1_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-UCDCACHEGFTPD1_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-AGLT2GFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-AGLT2GFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=UBCGFTP-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>UBCGFTP-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=UCDCACHEGFTPD1-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>UCDCACHEGFTPD1-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=UCDCACHEGFTPD2-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>UCDCACHEGFTPD2-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=UCGFTP5-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>UCGFTP5-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=UCSRMD1-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>UCSRMD1-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=UCTPGFTP-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>UCTPGFTP-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=INUGFTP-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>INUGFTP-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-INU2GFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-INU2GFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=INU2GFTP-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>INU2GFTP-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-INU2SRM_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-INU2SRM_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=INU2GFTP-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>INU2GFTP-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=INU2SRM-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>INU2SRM-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-UMICHGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-UMICHGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-IUT2DC_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-IUT2DC_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=IUT2DC-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>IUT2DC-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-BUATLAS004_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-BUATLAS004_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-UTATEST_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-UTATEST_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=UTATEST-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>UTATEST-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-UTATEST_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-UTATEST_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=UCT2DC1-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>UCT2DC1-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-UTADPCC2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-UTADPCC2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=IUATLASTIER2-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>IUATLASTIER2-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=IUT2DC-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>IUT2DC-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=UMICHGFTP-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>UMICHGFTP-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=SERV04SLAC-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>SERV04SLAC-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-SERV04SLAC_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-SERV04SLAC_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-UCT2DC1_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-UCT2DC1_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-IUT2DC_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-IUT2DC_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BUATLASTIER2-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BUATLASTIER2-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-WIS_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-WIS_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=WIS-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>WIS-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=GRIDKASRM-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>GRIDKASRM-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=RALSRM-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>RALSRM-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=SARADISK-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>SARADISK-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-HEAD01AGLT2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-HEAD01AGLT2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=LANCS-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>LANCS-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-UTADPCC2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-UTADPCC2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-OUGFTP2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-OUGFTP2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-CALDBDPCCUTA_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-CALDBDPCCUTA_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CALDBDPCCUTA-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>CALDBDPCCUTA-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-UCSRMD1_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-UCSRMD1_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=UCSRMD1-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>UCSRMD1-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-UCTPGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-UCTPGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=UCTPGFTP-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>UCTPGFTP-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-UCTPGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-UCTPGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-STUGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-STUGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STUGFTP-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STUGFTP-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-STUGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-STUGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=OUGFTP-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>OUGFTP-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-OUGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-OUGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-OUGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-OUGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-INUGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-INUGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=INUGFTP-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>INUGFTP-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-INUGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-INUGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-UBCGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-UBCGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-UBCGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-UBCGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=IUATLASTIER2-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>IUATLASTIER2-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=INU2SRM-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>INU2SRM-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CNAFSRM-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>CNAFSRM-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=LYONDISK-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>LYONDISK-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-INU2GFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-INU2GFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-INU2SRM_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-INU2SRM_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-UCT2DC1_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-UCT2DC1_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=UCT2DC1-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>UCT2DC1-STAR_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=SMUGFTP-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>SMUGFTP-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-SMUGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-SMUGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-SMUGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-SMUGFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-AGLT2GFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-AGLT2GFTP_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-SERV04SLAC_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-SERV04SLAC_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-BNLTEST_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-BNLTEST_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=SFU-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>SFU-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-BUATLAS004_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-BUATLAS004_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BUATLAS004-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BUATLAS004-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-HEAD01AGLT2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-HEAD01AGLT2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BIGMACTORONTO-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BIGMACTORONTO-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-BIGMACTORONTO_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-BIGMACTORONTO_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-BIGMACTORONTO_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-BIGMACTORONTO_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=RALLCG2-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>RALLCG2-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-IUATLASTIER2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-IUATLASTIER2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=NDGFT1DISK2-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>NDGFT1DISK2-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=AGLT2GFTP-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>AGLT2GFTP-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=PIKOLITIJS-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>PIKOLITIJS-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-UTASW2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-UTASW2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-UCGFTP5_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-UCGFTP5_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=UCGFTP5-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>UCGFTP5-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-UCDCACHEGFTPD2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-UCDCACHEGFTPD2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-UCGFTP5_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>STAR-UCGFTP5_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCAHE-BUATLASTIER2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCAHE-BUATLASTIER2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=UTADPCC2-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>UTADPCC2-BNLDCACHE_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNLDCACHE-UTASW2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent,mds-vo-name=BNL-LCG2">
+        <Name>BNLDCACHE-UTASW2_lcg03.usatlas.bnl.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_lcg03.usatlas.bnl.gov_org.glite.FileTransfer,mds-vo-name=BNL-LCG2">
+        <Name>glite-data-transfer-fts_lcg03.usatlas.bnl.gov</Name>
+        <Type>org.glite.FileTransfer</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://lcg03.usatlas.bnl.gov:8443/glite-data-transfer-fts/services/FileTransfer</Endpoint>
+        <WSDL>https://lcg03.usatlas.bnl.gov:8443/glite-data-transfer-fts/services/FileTransfer?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_lcg03.usatlas.bnl.gov_org.glite.ChannelManagement,mds-vo-name=BNL-LCG2">
+        <Name>glite-data-transfer-fts_lcg03.usatlas.bnl.gov-channel</Name>
+        <Type>org.glite.ChannelManagement</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://lcg03.usatlas.bnl.gov:8443/glite-data-transfer-fts/services/ChannelManagement</Endpoint>
+        <WSDL>https://lcg03.usatlas.bnl.gov:8443/glite-data-transfer-fts/services/ChannelManagement?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_lcg03.usatlas.bnl.gov_org.glite.Delegation,mds-vo-name=BNL-LCG2">
+        <Name>glite-data-transfer-fts_lcg03.usatlas.bnl.gov-delegation</Name>
+        <Type>org.glite.Delegation</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://lcg03.usatlas.bnl.gov:8443/glite-data-transfer-fts/services/gridsite-delegation</Endpoint>
+        <WSDL>https://lcg03.usatlas.bnl.gov:8443/glite-data-transfer-fts/services/gridsite-delegation?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T05:54:11.000-04:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lcg01.usatlas.bnl.gov:7512,mds-vo-name=BNL-LCG2">
+        <Name>BNL-LCG2-myproxy</Name>
+        <Type>MyProxy</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>lcg01.usatlas.bnl.gov:7512</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://dcsrm.usatlas.bnl.gov:8443/srm/managerv1,mds-vo-name=BNL-LCG2">
+        <Name>BNL-LCG2-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://dcsrm.usatlas.bnl.gov:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://dcsrmv2.usatlas.bnl.gov:8443/srm/managerv1,mds-vo-name=BNL-LCG2">
+        <Name>BNL-LCG2</Name>
+        <Type>SRM</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://dcsrmv2.usatlas.bnl.gov:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://dcsrmv2.usatlas.bnl.gov:8443/srm/managerv2,mds-vo-name=BNL-LCG2">
+        <Name>BNL-LCG2</Name>
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://dcsrmv2.usatlas.bnl.gov:8443/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

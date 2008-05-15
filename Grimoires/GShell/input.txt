@@ -1,0 +1,125 @@
+################################ test ls
+ls
+################################ return business key $0
+run PublishBusiness
+DDBJ
+DNA Data Bank of Japan
+################################
+run InquireBusiness
+DDBJ
+################################ return service key $1
+run PublishService
+Blast
+A DDBJ Web Service
+$0
+http://xml.nig.ac.jp/xddbj/Blast
+http://xml.nig.ac.jp/wsdl/Blast.wsdl
+################################
+run InquireService
+Blast
+################################ return wsdl key $2
+run PublishWSDL
+http://xml.nig.ac.jp/wsdl/Blast.wsdl
+################################
+run InquireWSDL
+$2
+################################ attach metadata to message part
+run PublishMetadata
+messagePart
+http://www.themindelectric.com/wsdl/Blast/
+searchParam0In
+param
+http://www.grimoires.org/ontology/SemanticType
+DNA_Sequence
+################################ attach metadata to a non-existent message part
+run PublishMetadata
+messagePart
+http://www.themindelectric.com/wsdl/Blast/
+non-existent
+non-existent
+http://www.grimoires.org/ontology/SemanticType
+DNA_Sequence
+################################ inquire message part by metadata
+run InquireMetadata
+http://www.grimoires.org/ontology/SemanticType
+DNA_Sequence
+################################ attach metadata to operation
+run PublishMetadata
+operation
+http://www.themindelectric.com/wsdl/Blast/
+Blast
+searchParam
+http://www.grimoires.org/ontology/Algorithm
+FastSearch
+################################ inquire operation by metadata
+run InquireMetadata
+http://www.grimoires.org/ontology/Algorithm
+FastSearch
+################################ attach metadata to business
+run PublishMetadata
+keyedEntity
+$0
+business
+http://www.grimoires.org/ontology/Location
+Japan
+################################ inquire business by metadata
+run InquireMetadata
+http://www.grimoires.org/ontology/Location
+Japan
+################################ attach metadata to service
+run PublishMetadata
+keyedEntity
+$1
+service
+http://www.grimoires.org/ontology/Cost
+Free
+################################ inquire business by metadata
+run InquireMetadata
+http://www.grimoires.org/ontology/Cost
+Free
+################################
+run ListAllServices
+################################ inquire a non-existent business
+run InquireBusiness
+non-existent-business
+################################ inquire a non-existent service
+run InquireService
+non-existent-service
+################################ inquire a non-existent wsdl
+run InquireWSDL
+non-existent-wsdl
+################################ inquire a non-existent metadata
+run InquireMetadata
+malformedURI
+non-existent-metadata
+################################ Get metadata of ThisGrimioresInstance
+run GetEntityMetadata
+ThisGrimoiresInstance
+service
+################################ Get metadata of a service
+run GetEntityMetadata
+$1
+service
+################################ Publish XML
+run PublishXML
+http://users.ecs.soton.ac.uk/wf/grimoires/wsdl/AEGIS01-PHY-SCL.xml
+ns2:Site
+################################ Do XPath query
+run QueryXML
+count(//uddi:businessEntity)
+################################ Do XPath query and translate
+run QueryAndTranslateXML
+//uddi:businessEntity
+glue
+################################ Clean up
+run DeleteEntity
+business
+GlueSiteUniqueID=AEGIS01-PHY-SCL,mds-vo-name=AEGIS01-PHY-SCL
+run DeleteEntity
+business
+$0
+run DeleteEntity
+wsdl
+http://xml.nig.ac.jp/wsdl/Blast.wsdl
+################################ exit
+exit

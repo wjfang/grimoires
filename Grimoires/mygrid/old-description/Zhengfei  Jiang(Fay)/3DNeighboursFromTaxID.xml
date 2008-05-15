@@ -1,0 +1,50 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<serviceDescriptions  xmlns="pd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="pd /C:/Program Files/taverna-workbench-1.2/./plugins/pedro/services/model/common.xsd">
+	<serviceDescription >
+		<serviceName>SHound3DNeighboursFromTaxID</serviceName>
+		<organisation >
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHound3DNeighboursFromTaxID</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHound3DNeighboursFromTaxID?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Retrieves a list of protein BLAST neighbours possessing 3-D structure using a list of proteins belonging to a complete genome as a query. Uses redundancy information for the query protein. The BLAST protein neighbours were calculated using 0.01 maximum E-value cutoff.</serviceDescriptionText>
+		<operations >
+			<serviceOperation >
+				<operationName>SHound3DNeighboursFromTaxID</operationName>
+				<operationInputs >
+					<parameter >
+						<parameterName>taxid</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_record_id</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+					<parameter >
+						<parameterName>eValue</parameterName>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs >
+					<parameter >
+						<parameterName>result</parameterName>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#retrieving</operationTask>
+				<operationResource>http://www.mygrid.org.uk/ontology#bioinformatics_database</operationResource>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

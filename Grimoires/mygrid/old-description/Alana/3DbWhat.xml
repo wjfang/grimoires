@@ -1,0 +1,46 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<serviceDescriptions  xmlns="pd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="pd /C:/Program Files/taverna-workbench-1.2/./plugins/pedro/services/model/common.xsd">
+	<serviceDescription >
+		<serviceName>SHound3DbWhat</serviceName>
+		<organisation >
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHound3DbWhat</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHound3DbWhat?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Finds out what kind of molecules are contained in a 3-D structure.</serviceDescriptionText>
+		<operations >
+			<serviceOperation >
+				<operationName>SHound3DbWhat</operationName>
+				<operationInputs >
+					<parameter >
+						<parameterName>mmdbid</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_record_id</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs >
+					<parameter >
+						<parameterName>result</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_record_id</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#searching</operationTask>
+				<operationResource>http://www.mygrid.org.uk/ontology#PDB</operationResource>
+				<operationResourceContent>http://www.mygrid.org.uk/ontology#model_organism</operationResourceContent>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

@@ -1,0 +1,44 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<serviceDescriptions  xmlns="pd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="pd /C:/Program Files/taverna-workbench-1.2/./plugins/pedro/services/model/common.xsd">
+	<serviceDescription >
+		<serviceName>SHoundMuidFrom3DList</serviceName>
+		<organisation >
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundMuidFrom3DList</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundMuidFrom3DList?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Get the MUID list for a given gi array</serviceDescriptionText>
+		<operations >
+			<serviceOperation >
+				<operationName>SHoundMuidFrom3DList</operationName>
+				<operationInputs >
+					<parameter >
+						<parameterName>giList</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_record_id</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Collection</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs >
+					<parameter >
+						<parameterName>result</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#MEDLINE_reference_id</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Collection</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#retrieving</operationTask>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

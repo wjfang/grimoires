@@ -1,0 +1,1563 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=GRIF,mds-vo-name=GRIF-LPNHE,mds-vo-name=GRIF">
+    <Name>GRIF</Name>
+    <Description>EGEE/LCG Site</Description>
+    <UserSupportContact>mailto: grid.support@grif.fr</UserSupportContact>
+    <SysAdminContact>mailto: grid.support@grif.fr</SysAdminContact>
+    <SecurityContact>mailto: grid.support@grif.fr</SecurityContact>
+    <Location>Paris, France</Location>
+    <Latitude>48.84736</Latitude>
+    <Longitude>2.357056</Longitude>
+    <Web>http://grif.fr/</Web>
+    <OtherInfo>TIER 2</OtherInfo>
+    <OtherInfo>IN2P3-CC</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=apcpc79.in2p3.fr,mds-vo-name=GRIF-APC,mds-vo-name=GRIF">
+        <Name>apcpc79.in2p3.fr</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=apcpc79.in2p3.fr,GlueClusterUniqueID=apcpc79.in2p3.fr,mds-vo-name=GRIF-APC,mds-vo-name=GRIF">
+            <Name>apcpc79.in2p3.fr</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.8" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Pentium4" Model="Intel" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1024" RAMSize="512"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1550" SF00="1900"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=node07.datagrid.cea.fr,mds-vo-name=GRIF-DAPNIA,mds-vo-name=GRIF">
+        <Name>node07.datagrid.cea.fr</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=node07.datagrid.cea.fr,GlueClusterUniqueID=node07.datagrid.cea.fr,mds-vo-name=GRIF-DAPNIA,mds-vo-name=GRIF">
+            <Name>node07.datagrid.cea.fr</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.7" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="PIV" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="3072" RAMSize="2048"/>
+            <Architecture SMPSize="1"/>
+            <Benchmark SI00="1647" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=node16.datagrid.cea.fr,mds-vo-name=GRIF-DAPNIA,mds-vo-name=GRIF">
+        <Name>node16.datagrid.cea.fr</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=node16.datagrid.cea.fr,GlueClusterUniqueID=node16.datagrid.cea.fr,mds-vo-name=GRIF-DAPNIA,mds-vo-name=GRIF">
+            <Name>node16.datagrid.cea.fr</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.5" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="IBMxserver" ClockSpeed="2218"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="8192" RAMSize="8192"/>
+            <Architecture SMPSize="4"/>
+            <Benchmark SI00="1647" SF00="2248"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ipnls2001.in2p3.fr,mds-vo-name=GRIF-IPNO,mds-vo-name=GRIF">
+        <Name>ipnls2001.in2p3.fr</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ipnls2001.in2p3.fr,GlueClusterUniqueID=ipnls2001.in2p3.fr,mds-vo-name=GRIF-IPNO,mds-vo-name=GRIF">
+            <Name>ipnls2001.in2p3.fr</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.5" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="Opteron" ClockSpeed="2000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="3072" RAMSize="2048"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="2000" SF00="1900"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=grid10.lal.in2p3.fr,mds-vo-name=GRIF-LAL,mds-vo-name=GRIF">
+        <Name>grid10.lal.in2p3.fr</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=grid10.lal.in2p3.fr,GlueClusterUniqueID=grid10.lal.in2p3.fr,mds-vo-name=GRIF-LAL,mds-vo-name=GRIF">
+            <Name>grid10.lal.in2p3.fr</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.5" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="Opteron" ClockSpeed="2200"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="3072" RAMSize="2048"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1500" SF00="1900"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=polgrid1.in2p3.fr,mds-vo-name=GRIF-LLR,mds-vo-name=GRIF">
+        <Name>polgrid1.in2p3.fr</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=polgrid1.in2p3.fr,GlueClusterUniqueID=polgrid1.in2p3.fr,mds-vo-name=GRIF-LLR,mds-vo-name=GRIF">
+            <Name>polgrid1.in2p3.fr</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.4" Name="ScientificSL"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel" Model="Xeon" ClockSpeed="3200"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="8192" RAMSize="3072"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1510" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=lpnce.in2p3.fr,mds-vo-name=GRIF-LPNHE,mds-vo-name=GRIF">
+        <Name>lpnce.in2p3.fr</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=lpnce.in2p3.fr,GlueClusterUniqueID=lpnce.in2p3.fr,mds-vo-name=GRIF-LPNHE,mds-vo-name=GRIF">
+            <Name>lpnce.in2p3.fr</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.8" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="Opteron" ClockSpeed="2400"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="8192" RAMSize="3072"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1400" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=apcpc145.in2p3.fr,mds-vo-name=GRIF-APC,mds-vo-name=GRIF">
+        <InformationServiceURL>ldap://apcpc145.in2p3.fr:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/in2p3.fr/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/in2p3.fr/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vo.apc.univ-paris7.fr">
+            <Path>/dpm/in2p3.fr/home/vo.apc.univ-paris7.fr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://apcpc145.in2p3.fr:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://apcpc145.in2p3.fr:8443/srm/managerv1</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://apcpc145.in2p3.fr:8443/srm/managerv1</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=node12.datagrid.cea.fr,mds-vo-name=GRIF-DAPNIA,mds-vo-name=GRIF">
+        <InformationServiceURL>ldap://node12.datagrid.cea.fr:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>16400</SizeTotal>
+        <SizeFree>6421</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="alice">
+            <Path>/dpm/datagrid.cea.fr/home/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>478840000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/dpm/datagrid.cea.fr/home/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>9948962452</UsedSpace>
+            <AvailableSpace>480300000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomed">
+            <Path>/dpm/datagrid.cea.fr/home/biomed</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1620860</UsedSpace>
+            <AvailableSpace>1748840000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/datagrid.cea.fr/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2489925724</UsedSpace>
+            <AvailableSpace>3908840000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/datagrid.cea.fr/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>82939977</UsedSpace>
+            <AvailableSpace>1478840000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="fusion">
+            <Path>/dpm/datagrid.cea.fr/home/fusion</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>283602</UsedSpace>
+            <AvailableSpace>478840000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ilc">
+            <Path>/dpm/datagrid.cea.fr/home/ilc</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>478840000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/datagrid.cea.fr/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>5338</UsedSpace>
+            <AvailableSpace>478840000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vo.dapnia.cea.fr">
+            <Path>/dpm/datagrid.cea.fr/home/vo.dapnia.cea.fr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vo.grif.fr">
+            <Path>/dpm/datagrid.cea.fr/home/vo.grif.fr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vo.ipno.in2p3.fr">
+            <Path>/dpm/datagrid.cea.fr/home/vo.ipno.in2p3.fr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vo.lal.in2p3.fr">
+            <Path>/dpm/datagrid.cea.fr/home/vo.lal.in2p3.fr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://node12.datagrid.cea.fr:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://node12.datagrid.cea.fr:8443/srm/managerv1</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://node12.datagrid.cea.fr:8443/srm/managerv1</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=node24.datagrid.cea.fr,mds-vo-name=GRIF-DAPNIA,mds-vo-name=GRIF">
+        <InformationServiceURL>ldap://node24.datagrid.cea.fr:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>2020</SizeTotal>
+        <SizeFree>1910</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/datagrid.cea.fr/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>1910000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/datagrid.cea.fr/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>157441321</UsedSpace>
+            <AvailableSpace>1910000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/datagrid.cea.fr/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>83</UsedSpace>
+            <AvailableSpace>1910000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://node24.datagrid.cea.fr:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://node24.datagrid.cea.fr:8443/srm/managerv1</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://node24.datagrid.cea.fr:8443/srm/managerv1</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=ipnsedpm.in2p3.fr,mds-vo-name=GRIF-IPNO,mds-vo-name=GRIF">
+        <InformationServiceURL>ldap://ipnsedpm.in2p3.fr:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>3520</SizeTotal>
+        <SizeFree>3490</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="alice">
+            <Path>/dpm/in2p3.fr/home/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>3490000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/in2p3.fr/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>741701</UsedSpace>
+            <AvailableSpace>1310000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/in2p3.fr/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4576</UsedSpace>
+            <AvailableSpace>1310000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vo.grif.fr">
+            <Path>/dpm/in2p3.fr/home/vo.grif.fr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vo.ipno.in2p3.fr">
+            <Path>/dpm/in2p3.fr/home/vo.ipno.in2p3.fr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vo.lal.in2p3.fr">
+            <Path>/dpm/in2p3.fr/home/vo.lal.in2p3.fr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vo.u-psud.fr">
+            <Path>/dpm/in2p3.fr/home/vo.u-psud.fr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://ipnsedpm.in2p3.fr:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://ipnsedpm.in2p3.fr:8443/srm/managerv1</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://ipnsedpm.in2p3.fr:8443/srm/managerv1</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=grid03.lal.in2p3.fr,mds-vo-name=GRIF-LAL,mds-vo-name=GRIF">
+        <InformationServiceURL>ldap://grid03.lal.in2p3.fr:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="vo.lal.in2p3.fr">
+            <Path>/dpm/lal.in2p3.fr/home/vo.lal.in2p3.fr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://grid03.lal.in2p3.fr:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://grid03.lal.in2p3.fr:8443/srm/managerv1</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://grid03.lal.in2p3.fr:8443/srm/managerv1</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=grid05.lal.in2p3.fr,mds-vo-name=GRIF-LAL,mds-vo-name=GRIF">
+        <InformationServiceURL>ldap://grid05.lal.in2p3.fr:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>24650</SizeTotal>
+        <SizeFree>17230</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="alice">
+            <Path>/dpm/lal.in2p3.fr/home/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="astro.vo.eu-egee.org">
+            <Path>/dpm/lal.in2p3.fr/home/astro.vo.eu-egee.org</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/dpm/lal.in2p3.fr/home/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3269335566</UsedSpace>
+            <AvailableSpace>2030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="auger">
+            <Path>/dpm/lal.in2p3.fr/home/auger</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomed">
+            <Path>/dpm/lal.in2p3.fr/home/biomed</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>71700886</UsedSpace>
+            <AvailableSpace>2030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="calice">
+            <Path>/dpm/lal.in2p3.fr/home/calice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>443383219</UsedSpace>
+            <AvailableSpace>3770000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/lal.in2p3.fr/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1869662735</UsedSpace>
+            <AvailableSpace>7970000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cppm">
+            <Path>/dpm/lal.in2p3.fr/home/cppm</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/lal.in2p3.fr/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>81558107</UsedSpace>
+            <AvailableSpace>2030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dzero">
+            <Path>/dpm/lal.in2p3.fr/home/dzero</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>825356</UsedSpace>
+            <AvailableSpace>2030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="egeode">
+            <Path>/dpm/lal.in2p3.fr/home/egeode</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>28814</UsedSpace>
+            <AvailableSpace>2030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="esr">
+            <Path>/dpm/lal.in2p3.fr/home/esr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>7074219</UsedSpace>
+            <AvailableSpace>2030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="hone">
+            <Path>/dpm/lal.in2p3.fr/home/hone</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3871747</UsedSpace>
+            <AvailableSpace>2030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ilc">
+            <Path>/dpm/lal.in2p3.fr/home/ilc</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>37320451</UsedSpace>
+            <AvailableSpace>2030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/dpm/lal.in2p3.fr/home/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/lal.in2p3.fr/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>5393</UsedSpace>
+            <AvailableSpace>2030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="planck">
+            <Path>/dpm/lal.in2p3.fr/home/planck</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>86822</UsedSpace>
+            <AvailableSpace>2030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="proactive">
+            <Path>/dpm/lal.in2p3.fr/home/proactive</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vo.dapnia.cea.fr">
+            <Path>/dpm/lal.in2p3.fr/home/vo.dapnia.cea.fr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>127</UsedSpace>
+            <AvailableSpace>2030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vo.grif.fr">
+            <Path>/dpm/lal.in2p3.fr/home/vo.grif.fr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vo.ipno.in2p3.fr">
+            <Path>/dpm/lal.in2p3.fr/home/vo.ipno.in2p3.fr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vo.lal.in2p3.fr">
+            <Path>/dpm/lal.in2p3.fr/home/vo.lal.in2p3.fr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>7355946</UsedSpace>
+            <AvailableSpace>2030000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vo.u-psud.fr">
+            <Path>/dpm/lal.in2p3.fr/home/vo.u-psud.fr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4371311</UsedSpace>
+            <AvailableSpace>2030000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://grid05.lal.in2p3.fr:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://grid05.lal.in2p3.fr:8443/srm/managerv1</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://grid05.lal.in2p3.fr:8443/srm/managerv1</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=polgrid2.in2p3.fr,mds-vo-name=GRIF-LLR,mds-vo-name=GRIF">
+        <InformationServiceURL>ldap://polgrid2.in2p3.fr:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="alice">
+            <Path>/flatfiles/SE01/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>0</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/flatfiles/SE01/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1063529244</UsedSpace>
+            <AvailableSpace>2396653116</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomed">
+            <Path>/flatfiles/SE01/biomed</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1063529244</UsedSpace>
+            <AvailableSpace>2396653116</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="calice">
+            <Path>/flatfiles/SE01/calice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1063529244</UsedSpace>
+            <AvailableSpace>2396653116</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/flatfiles/SE01/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1063529244</UsedSpace>
+            <AvailableSpace>2396653116</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/flatfiles/SE01/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1063529244</UsedSpace>
+            <AvailableSpace>2396653116</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dzero">
+            <Path>/flatfiles/SE01/dzero</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>0</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="egeode">
+            <Path>/flatfiles/SE01/egeode</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>0</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="esr">
+            <Path>/flatfiles/SE01/esr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1063529244</UsedSpace>
+            <AvailableSpace>2396653116</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="hone">
+            <Path>/flatfiles/SE01/hone</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>0</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ilc">
+            <Path>/flatfiles/SE01/ilc</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1063529244</UsedSpace>
+            <AvailableSpace>2396653116</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/flatfiles/SE01/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1063529244</UsedSpace>
+            <AvailableSpace>2396653116</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/flatfiles/SE01/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1063529244</UsedSpace>
+            <AvailableSpace>2396653116</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="planck">
+            <Path>/flatfiles/SE01/planck</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>0</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="proactive">
+            <Path>/flatfiles/SE01/proactive</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>0</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vo.grif.fr">
+            <Path>/flatfiles/SE01/vo.grif.fr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>0</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vo.llr.in2p3.fr">
+            <Path>/flatfiles/SE01/vo.llr.in2p3.fr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>0</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://polgrid2.in2p3.fr:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=lpnse1.in2p3.fr,mds-vo-name=GRIF-LPNHE,mds-vo-name=GRIF">
+        <InformationServiceURL>ldap://lpnse1.in2p3.fr:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>18861</SizeTotal>
+        <SizeFree>12886</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/dpm/in2p3.fr/home/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3962853314</UsedSpace>
+            <AvailableSpace>6101780000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/in2p3.fr/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1067109129</UsedSpace>
+            <AvailableSpace>1721780000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/in2p3.fr/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>254215469</UsedSpace>
+            <AvailableSpace>205720000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="esr">
+            <Path>/dpm/in2p3.fr/home/esr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>614749</UsedSpace>
+            <AvailableSpace>61780000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/dpm/in2p3.fr/home/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>3241780000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/in2p3.fr/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4584</UsedSpace>
+            <AvailableSpace>61780000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vo.grif.fr">
+            <Path>/dpm/in2p3.fr/home/vo.grif.fr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vo.lpnhe.in2p3.fr">
+            <Path>/dpm/in2p3.fr/home/vo.lpnhe.in2p3.fr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://lpnse1.in2p3.fr:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://lpnse1.in2p3.fr:8443/srm/managerv1</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://lpnse1.in2p3.fr:8443/srm/managerv1</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=httpg://apcpc145.in2p3.fr:8443/srm/managerv1,mds-vo-name=GRIF-APC,mds-vo-name=GRIF">
+        <Name>GRIF-srm</Name>
+        <Type>srm</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://apcpc145.in2p3.fr:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://apcpc145.in2p3.fr:8446/srm/managerv2,mds-vo-name=GRIF-APC,mds-vo-name=GRIF">
+        <Name>GRIF-srm</Name>
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://apcpc145.in2p3.fr:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://node14.datagrid.cea.fr:8085/,mds-vo-name=GRIF-DAPNIA,mds-vo-name=GRIF">
+        <Name>GRIF-lfc-dli</Name>
+        <Type>data-location-interface</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>http://node14.datagrid.cea.fr:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>vo.dapnia.cea.fr</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://node14.datagrid.cea.fr:8085/,o=local,mds-vo-name=GRIF-DAPNIA,mds-vo-name=GRIF">
+        <Name>GRIF-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>http://node14.datagrid.cea.fr:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=node14.datagrid.cea.fr,mds-vo-name=GRIF-DAPNIA,mds-vo-name=GRIF">
+        <Name>GRIF-lfc</Name>
+        <Type>lcg-file-catalog</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>node14.datagrid.cea.fr</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>vo.dapnia.cea.fr</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=node14.datagrid.cea.fr,o=local,mds-vo-name=GRIF-DAPNIA,mds-vo-name=GRIF">
+        <Name>GRIF-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>node14.datagrid.cea.fr</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=node06.datagrid.cea.fr:2136,mds-vo-name=GRIF-DAPNIA,mds-vo-name=GRIF">
+        <Name>GRIF-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://node06.datagrid.cea.fr:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>biomed</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>vo.dapnia.cea.fr</Owner>
+        <Owner>fusion</Owner>
+        <Owner>vo.grif.fr</Owner>
+        <Owner>ops</Owner>
+        <Owner>ilc</Owner>
+        <Owner>geant4</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=node04.datagrid.cea.fr:7772,mds-vo-name=GRIF-DAPNIA,mds-vo-name=GRIF">
+        <Name>GRIF-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>node04.datagrid.cea.fr:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>astro.vo.eu-egee.org</Owner>
+        <Owner>atlas</Owner>
+        <Owner>auger</Owner>
+        <Owner>biomed</Owner>
+        <Owner>cms</Owner>
+        <Owner>vo.dapnia.cea.fr</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>vo.lal.in2p3.fr</Owner>
+        <Owner>vo.grif.fr</Owner>
+        <Owner>fusion</Owner>
+        <Owner>compchem</Owner>
+        <Owner>esr</Owner>
+        <Owner>egeode</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>planck</Owner>
+        <Owner>ilc</Owner>
+        <Owner>vo.ipno.in2p3.fr</Owner>
+        <Owner>hone</Owner>
+        <Owner>dzero</Owner>
+        <Owner>auvergrid</Owner>
+        <Owner>calice</Owner>
+        <Owner>proactive</Owner>
+        <Owner>cppm</Owner>
+        <Owner>embrace</Owner>
+        <Owner>vo.u-psud.fr</Owner>
+        <Owner>supernemo.vo.eu-egee.org</Owner>
+        <Owner>vo.apc.univ-paris7.fr</Owner>
+        <Owner>vo.lpnhe.in2p3.fr</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://node12.datagrid.cea.fr:8443/srm/managerv1,mds-vo-name=GRIF-DAPNIA,mds-vo-name=GRIF">
+        <Name>GRIF-srm</Name>
+        <Type>srm</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://node12.datagrid.cea.fr:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://node12.datagrid.cea.fr:8446/srm/managerv2,mds-vo-name=GRIF-DAPNIA,mds-vo-name=GRIF">
+        <Name>GRIF-srm</Name>
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://node12.datagrid.cea.fr:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://node24.datagrid.cea.fr:8443/srm/managerv1,mds-vo-name=GRIF-DAPNIA,mds-vo-name=GRIF">
+        <Name>GRIF-srm</Name>
+        <Type>srm</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://node24.datagrid.cea.fr:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://node24.datagrid.cea.fr:8446/srm/managerv2,mds-vo-name=GRIF-DAPNIA,mds-vo-name=GRIF">
+        <Name>GRIF-srm</Name>
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://node24.datagrid.cea.fr:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://ipnsedpm.in2p3.fr:8443/srm/managerv1,mds-vo-name=GRIF-IPNO,mds-vo-name=GRIF">
+        <Name>GRIF-srm</Name>
+        <Type>srm</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://ipnsedpm.in2p3.fr:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://ipnsedpm.in2p3.fr:8446/srm/managerv2,mds-vo-name=GRIF-IPNO,mds-vo-name=GRIF">
+        <Name>GRIF-srm</Name>
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://ipnsedpm.in2p3.fr:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=grid14.lal.in2p3.fr,mds-vo-name=GRIF-LAL,mds-vo-name=GRIF">
+        <Name>GRIF-lfc</Name>
+        <Type>lcg-file-catalog</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>grid14.lal.in2p3.fr</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>vo.ipno.in2p3.fr</Owner>
+        <Owner>vo.lal.in2p3.fr</Owner>
+        <Owner>proactive</Owner>
+        <Owner>vo.u-psud.fr</Owner>
+        <Owner>astro.vo.eu-egee.org</Owner>
+        <Owner>cppm</Owner>
+        <Owner>vo.apc.univ-paris7.fr</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=grid14.lal.in2p3.fr,o=local,mds-vo-name=GRIF-LAL,mds-vo-name=GRIF">
+        <Name>GRIF-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>grid14.lal.in2p3.fr</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>auger</Owner>
+        <Owner>biomed</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>supernemo.vo.eu-egee.org</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://grid14.lal.in2p3.fr:8085/,mds-vo-name=GRIF-LAL,mds-vo-name=GRIF">
+        <Name>GRIF-lfc-dli</Name>
+        <Type>data-location-interface</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>http://grid14.lal.in2p3.fr:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>vo.ipno.in2p3.fr</Owner>
+        <Owner>vo.lal.in2p3.fr</Owner>
+        <Owner>proactive</Owner>
+        <Owner>vo.u-psud.fr</Owner>
+        <Owner>astro.vo.eu-egee.org</Owner>
+        <Owner>cppm</Owner>
+        <Owner>vo.apc.univ-paris7.fr</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://grid14.lal.in2p3.fr:8085/,o=local,mds-vo-name=GRIF-LAL,mds-vo-name=GRIF">
+        <Name>GRIF-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>http://grid14.lal.in2p3.fr:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>auger</Owner>
+        <Owner>biomed</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>supernemo.vo.eu-egee.org</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=node06.datagrid.cea.fr:2136,mds-vo-name=GRIF-LAL,mds-vo-name=GRIF">
+        <Name>GRIF-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://node06.datagrid.cea.fr:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>biomed</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>vo.dapnia.cea.fr</Owner>
+        <Owner>fusion</Owner>
+        <Owner>vo.grif.fr</Owner>
+        <Owner>ops</Owner>
+        <Owner>ilc</Owner>
+        <Owner>geant4</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=grid02.lal.in2p3.fr:7512,mds-vo-name=GRIF-LAL,mds-vo-name=GRIF">
+        <Name>GRIF-myproxy</Name>
+        <Type>myproxy</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>grid02.lal.in2p3.fr:7512</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://grid03.lal.in2p3.fr:8443/srm/managerv1,mds-vo-name=GRIF-LAL,mds-vo-name=GRIF">
+        <Name>GRIF-srm</Name>
+        <Type>srm</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://grid03.lal.in2p3.fr:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://grid03.lal.in2p3.fr:8446/srm/managerv2,mds-vo-name=GRIF-LAL,mds-vo-name=GRIF">
+        <Name>GRIF-srm</Name>
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://grid03.lal.in2p3.fr:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://grid05.lal.in2p3.fr:8443/srm/managerv1,mds-vo-name=GRIF-LAL,mds-vo-name=GRIF">
+        <Name>GRIF-srm</Name>
+        <Type>srm</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://grid05.lal.in2p3.fr:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://grid05.lal.in2p3.fr:8446/srm/managerv2,mds-vo-name=GRIF-LAL,mds-vo-name=GRIF">
+        <Name>GRIF-srm</Name>
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://grid05.lal.in2p3.fr:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://lpnse1.in2p3.fr:8443/srm/managerv1,mds-vo-name=GRIF-LPNHE,mds-vo-name=GRIF">
+        <Name>GRIF-srm</Name>
+        <Type>srm</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://lpnse1.in2p3.fr:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://lpnse1.in2p3.fr:8446/srm/managerv2,mds-vo-name=GRIF-LPNHE,mds-vo-name=GRIF">
+        <Name>GRIF-srm</Name>
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://lpnse1.in2p3.fr:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Grimoires Documentation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url('i_arrow_down.gif');
+	}
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script>
+</head>
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h3><a name="Grimoires_Documentation"> </a> Grimoires 1.7.0 Documentation </h3>
+<p />
+<ul>
+<li> <h4>Summary</h4>
+<ul>
+<li> <h5><a class="twikiLink" href="./intro.html">Introduction</a></h5> What Grimoires is? What Grimoires does?
+</li>
+<li> <h5><a class="twikiLink" href="./release.html">Release Notes</a></h5> Gives a short overview of this Grimoires release: the summary of supported functionalities, deployment environments, prerequisite software,  etc.
+</li>
+</ul>
+</li>
+</ul>
+<p />
+<ul>
+<li> <h4>Getting Started</h4>
+<ul>
+<li> <h5><a class="twikiLink" href="./started.html">Getting Started Guide</a></h5> Gives a very simple guide to install and use Grimoires.
+</li>
+</ul>
+</li>
+</ul>
+<p />
+<ul>
+<li> <h4>Installation &amp; Use</h4>
+<ul>
+<li> <h5><a class="twikiLink" href="./installation.html">Installation Guide -
+Grimoires</a>&nbsp; </h5> Provides a detailed guide on how to configure Grimoires, how to compile and make Grimoires binaries from source code, and how to deploy Grimoires binaries to the target container.
+</li>
+<li> <h5><a class="twikiLink" href="install-gs.html">Installation Guide -
+GShell</a>&nbsp; </h5> Describes how to compile and run GShell.</li>
+<li>
+<h5><a class="twikiLink" href="./gshell.html">User Guide - GShell</a></h5>GShell is a command line client tool for Grimoires. It provides a shell and simple interactive commands to publish/inquire business/service/wsdl/metadata. These commands can also be called in a batch mode outside the shell.
+</li>
+<li>
+<h5><a class="twikiLink" href="ubinstall.html">Installation Guide - UDDI Browser</a></h5>
+Describes how to install UDDI Browser, and how to configure UDDI Browser so that 
+it supports signing SOAP messages using X509 certificate managed by the OMII 
+client.</li>
+<li>
+<h5><a class="twikiLink" href="./ubguide.html">User Guide - UDDI Browser</a></h5>UDDI Browser is a UDDI client GUI that can be used to interact with Grimoires' UDDIv2 interface.
+</li>
+<li>
+<h5><a class="twikiLink" href="lifetime.html">HOWTO - Lifetime Management</a></h5>
+Describes how to make use of the lifetime management provided by the Grimoires 
+registry.
+</li>
+<li>
+<h5><a class="twikiLink" href="triplesRDF.html">HOWTO - 
+Query for TriplesAssertion Metadata </a></h5>Describes how to query for 
+TriplesAssertion metadata by using a RDF query language, RDQL. </li>
+<li>
+<h5><a class="twikiLink" href="directRDF.html">HOWTO - Direct RDF Query against Grimoires </a></h5>Describes how to 
+execute a RDF query against Grimoires through its newly introduced RDF 
+interface. </li>
+<li>
+<h5><a class="twikiLink" href="HowToGrimoiresProxy.htm">HOWTO - GrimoiresProxy</a></h5>Describes GrimoiresProxy: 
+a convenient client side library.</li>
+<li>
+<h5><a href="feta.html">Publication and Discovery of Feta Description</a></h5>Describes 
+the way to publish and discover Feta description using the Grimoires registry. </li>
+<li>
+<h5><a href="xmlview.html">XMLView</a></h5>Describes 
+the XMLView interface that supports XPath query and XSL transformation between 
+application service description schema and Grimoires schema. </li>
+</ul>
+</li>
+</ul>
+<p />
+<ul>
+<li> <h4>Architecture</h4>
+<ul>
+<li> <h5><a class="twikiLink" href="./funcspec.html">Functional Specification - Grimoires</a></h5> Describes the functionality and the use of Grimoires from the user's perspective.
+</li>
+<li> <h5><a class="twikiLink" href="./impldesign.html">Implementation Design -
+Grimoires</a></h5> Presents the design of Grimoires.
+</li>
+<li> <h5><a class="twikiLink" href="./security.html">Security -
+Grimoires</a></h5> Describes the implementation of security in Grimoires.
+</li>
+<li>
+<h5><a class="twikiLink" href="./funcspec-gs.html">Functional Specification -
+GShell</a></h5> Describes the functionality and the use of GShell from the user's perspective.
+</li>
+<li>
+<h5><a class="twikiLink" href="impldesign-gs.html">Implementation Design -
+GShell</a></h5> Presents the design of GShell. </li>
+</ul>
+</li>
+</ul>
+<p />
+<ul>
+<li> <h4>Support</h4>
+<ul>
+<li> <h5><a class="twikiLink" href="./gtutorial.html">Tutorial - Grimoires
+Service</a></h5>
+Describes how to interact with Grimoires web services by sending and receiving SOAP messages.
+</li>
+<!--
+<li> <h5><a class="twikiLink" href="./apitutorial.html">Tutorial - Grimoires II</a></h5> Uses Grimoires' WSDL interface as an example to demonstrate how to generate Java stub from WSDL files and interact with Grimoires web services using the generated Java APIs.
+</li>
+-->
+<li> <h5><a class="twikiLink" href="api-tutorial.html">Tutorial - Grimoires
+Client Side Java API</a></h5>Demonstrates how to write a Grimoires client program using Grimoires Java API.
+</li>
+<li> <h5><a class="twikiLink" href="gshell-tutorial.html">Tutorial - GShell
+Client</a></h5>
+Describes three ways to use GShell: an interactive mode, a batch mode, and
+sending soap message directly.</li>
+<li> <h5><a class="twikiLink" href="security-tutorial.html">Tutorial - GShell Secure
+Client</a></h5>
+Demonstrates how GShell would interact with a secure Grimoires deployment
+</li>
+<li>
+<h5><a href="./UDDI4JTutorial.html">Tutorial - Client Side UDDI4J Java API</a></h5>UDDI4J is an open source UDDI client API that can be used to interact with Grimoires' UDDIv2 interface. UDDI4J's library and documentation are released with Grimoires. UDDI Browser relies on UDDI4J.
+</li>
+<!--
+<li>
+<h5><a href="api/index.html">JavaDoc - Grimoires</a></h5>Grimoires Java
+API reference.</li>
+<li>
+<h5><a href="uddi4j/apiDocs/index.html">JavaDoc - UDDI4J</a></h5>UDDI4J
+Java API reference.</li>
+-->
+<li> <h5><a href="api/index.html">JavaDoc</a></h5>Grimoires API JavaDoc.
+</li>
+</ul>
+</li>
+</ul>
+<p />
+<ul>
+<li> <h4>Testing and Quality Assurance</h4>
+<ul>
+<li> <h5><a class="twikiLink" href="./testreport.html">Test Report</a></h5> Lists the current test reports for Grimoires' functionality and performance.
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</body></html>

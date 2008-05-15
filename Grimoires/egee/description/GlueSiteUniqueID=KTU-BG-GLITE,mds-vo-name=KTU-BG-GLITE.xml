@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=KTU-BG-GLITE,mds-vo-name=KTU-BG-GLITE">
+    <Name>KTU-BG-GLITE</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:saulius@bg.ktu.lt</UserSupportContact>
+    <SysAdminContact>mailto:saulius@tornado.ktu.lt</SysAdminContact>
+    <SecurityContact>mailto:saulius@tornado.ktu.lt</SecurityContact>
+    <Location>Kaunas, Lithuania</Location>
+    <Latitude>54.9</Latitude>
+    <Longitude>23.92</Longitude>
+    <Web>http://bg.ktu.lt</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>http://www.ktu.lt</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ce.bg.ktu.lt,mds-vo-name=KTU-BG-GLITE">
+        <Name>ce.bg.ktu.lt</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce.bg.ktu.lt,GlueClusterUniqueID=ce.bg.ktu.lt,mds-vo-name=KTU-BG-GLITE">
+            <Name>ce.bg.ktu.lt</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.8" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="P3" ClockSpeed="700"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="256" RAMSize="128"/>
+            <Architecture SMPSize="1"/>
+            <Benchmark SI00="368" SF00="0"/>
+            <Location LocalID="VO-balticgrid-E-DEVEL-SUBVERSION-1.4.3">
+                <Name>VO-balticgrid-E-DEVEL-SUBVERSION-1.4.3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-DEVEL-G95-0.91">
+                <Name>VO-balticgrid-E-DEVEL-G95-0.91</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-PARALLEL-MPICH2-1.0.5">
+                <Name>VO-balticgrid-E-PARALLEL-MPICH2-1.0.5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-PARALLEL-MPICH2-1.0.5-G95-0.91">
+                <Name>VO-balticgrid-E-PARALLEL-MPICH2-1.0.5-G95-0.91</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-PARALLEL-MPIEXEC-0.82">
+                <Name>VO-balticgrid-E-PARALLEL-MPIEXEC-0.82</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-A-MATH-ATLAS-3.6.0">
+                <Name>VO-balticgrid-A-MATH-ATLAS-3.6.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-A-MATH-R-2.5.1">
+                <Name>VO-balticgrid-A-MATH-R-2.5.1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=se.bg.ktu.lt,mds-vo-name=KTU-BG-GLITE">
+        <InformationServiceURL>ldap://se.bg.ktu.lt:2170/mds-vo-name=resource,o=grid</InformationServiceURL>
+        <SizeTotal>200</SizeTotal>
+        <SizeFree>200</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="balticgrid">
+            <Path>/dpm/bg.ktu.lt/home/balticgrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>111606</UsedSpace>
+            <AvailableSpace>199830000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/bg.ktu.lt/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>199830000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gamess">
+            <Path>/dpm/bg.ktu.lt/home/gamess</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>84</UsedSpace>
+            <AvailableSpace>199830000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/bg.ktu.lt/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>627</UsedSpace>
+            <AvailableSpace>199830000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://se.bg.ktu.lt</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://se.bg.ktu.lt</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://se.bg.ktu.lt</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=httpg://se.bg.ktu.lt:8443/srm/managerv1,mds-vo-name=KTU-BG-GLITE">
+        <Name>KTU-BG-GLITE-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://se.bg.ktu.lt:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://se.bg.ktu.lt:8446/srm/managerv2,mds-vo-name=KTU-BG-GLITE">
+        <Name>KTU-BG-GLITE-srm</Name>
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://se.bg.ktu.lt:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

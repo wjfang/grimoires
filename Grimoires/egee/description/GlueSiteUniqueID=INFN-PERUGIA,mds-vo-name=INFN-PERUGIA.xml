@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=INFN-PERUGIA,mds-vo-name=INFN-PERUGIA">
+    <Name>INFN-PERUGIA</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:grid-prod@pg.infn.it</UserSupportContact>
+    <SysAdminContact>mailto:grid-prod@pg.infn.it</SysAdminContact>
+    <SecurityContact>mailto:grid-prod@pg.infn.it</SecurityContact>
+    <Location>Perugia, Italy</Location>
+    <Latitude>43.07</Latitude>
+    <Longitude>12.23</Longitude>
+    <Web>http://grid.pg.infn.it</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-3</OtherInfo>
+    <OtherInfo>CNAF-T1</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=gridce.pg.infn.it,mds-vo-name=INFN-PERUGIA">
+        <Name>gridce.pg.infn.it</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=gridce.pg.infn.it,GlueClusterUniqueID=gridce.pg.infn.it,mds-vo-name=INFN-PERUGIA">
+            <Name>gridce.pg.infn.it</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.5" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="PIII" ClockSpeed="1001"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1024"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="381" SF00="0"/>
+            <Location LocalID="VO-gridit-GEANT4CATANIA-aborted-install">
+                <Name>VO-gridit-GEANT4CATANIA-aborted-install</Name>
+                <Version>Prod</Version>
+                <Path>$VO_GRIDIT_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-gridit-GEANT4CT-aborted-validate">
+                <Name>VO-gridit-GEANT4CT-aborted-validate</Name>
+                <Version>Prod</Version>
+                <Path>$VO_GRIDIT_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-geant42ndProd">
+                <Name>VO-dteam-geant42ndProd</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-geant42ndProd_p01">
+                <Name>VO-dteam-geant42ndProd_p01</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-LCG-2_6_0">
+                <Name>VO-dteam-LCG-2_6_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-geant42ndProd_p02">
+                <Name>VO-dteam-geant42ndProd_p02</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-ITUtest1">
+                <Name>VO-dteam-ITUtest1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-v22Nov">
+                <Name>VO-dteam-december05prod-v22Nov</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final">
+                <Name>VO-dteam-december05prod-final</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final-cand2">
+                <Name>VO-dteam-december05prod-final-cand2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-babar-Moose-18.6.3e">
+                <Name>VO-babar-Moose-18.6.3e</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BABAR_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-babar-Moose-18.6.3g">
+                <Name>VO-babar-Moose-18.6.3g</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BABAR_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-babar-Moose-18.6.3h">
+                <Name>VO-babar-Moose-18.6.3h</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BABAR_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-babar-Moose-18.6.3i">
+                <Name>VO-babar-Moose-18.6.3i</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BABAR_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-babar-Moose-18.7.0b">
+                <Name>VO-babar-Moose-18.7.0b</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BABAR_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-babar-Moose-18.7.0h">
+                <Name>VO-babar-Moose-18.7.0h</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BABAR_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-babar-Moose-22.1.1d">
+                <Name>VO-babar-Moose-22.1.1d</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BABAR_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-IGUANACMS_1_15_1">
+                <Name>VO-cms-IGUANACMS_1_15_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-OSCAR_3_6_5_SLC3_dar">
+                <Name>VO-cms-OSCAR_3_6_5_SLC3_dar</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-ORCA_8_7_1_SLC3_dar">
+                <Name>VO-cms-ORCA_8_7_1_SLC3_dar</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-ORCA_8_7_3">
+                <Name>VO-cms-ORCA_8_7_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMKIN_4_2_0_dar">
+                <Name>VO-cms-CMKIN_4_2_0_dar</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-OSCAR_3_6_5">
+                <Name>VO-cms-OSCAR_3_6_5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMKIN_4_4_0_dar">
+                <Name>VO-cms-CMKIN_4_4_0_dar</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-ORCA_8_7_4">
+                <Name>VO-cms-ORCA_8_7_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-ORCA_8_10_1">
+                <Name>VO-cms-ORCA_8_10_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMKIN_4_2_0_tar">
+                <Name>VO-cms-CMKIN_4_2_0_tar</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=gridse.pg.infn.it,mds-vo-name=INFN-PERUGIA">
+        <InformationServiceURL>ldap://gridse.pg.infn.it:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="cms">
+            <Path>/flatfiles/SE00/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17540160</UsedSpace>
+            <AvailableSpace>209503888</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/flatfiles/SE00/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17540160</UsedSpace>
+            <AvailableSpace>209503888</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="infngrid">
+            <Path>/flatfiles/SE00/infngrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17540160</UsedSpace>
+            <AvailableSpace>209503888</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="theophys">
+            <Path>/flatfiles/SE00/theophys</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17540160</UsedSpace>
+            <AvailableSpace>209503888</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="babar">
+            <Path>/flatfiles/SE00/babar</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17540160</UsedSpace>
+            <AvailableSpace>209503888</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gridit">
+            <Path>/flatfiles/SE00/gridit</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17540160</UsedSpace>
+            <AvailableSpace>209503888</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="na48">
+            <Path>/flatfiles/SE00/na48</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17540160</UsedSpace>
+            <AvailableSpace>209503888</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/flatfiles/SE00/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17540160</UsedSpace>
+            <AvailableSpace>209503888</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="virgo">
+            <Path>/flatfiles/SE00/virgo</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>17540156</UsedSpace>
+            <AvailableSpace>209503892</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://gridse.pg.infn.it</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=gridse.pg.infn.it:2136,mds-vo-name=INFN-PERUGIA">
+        <Name>INFN-PERUGIA-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://gridse.pg.infn.it:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>infngrid</Owner>
+        <Owner>theophys</Owner>
+        <Owner>babar</Owner>
+        <Owner>gridit</Owner>
+        <Owner>na48</Owner>
+        <Owner>ops</Owner>
+        <Owner>virgo</Owner>
+    </Service>
+</Site>

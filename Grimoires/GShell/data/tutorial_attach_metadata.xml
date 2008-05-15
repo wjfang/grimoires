@@ -1,0 +1,16 @@
+<addMetadataToEntity xmlns="http://www.grimoires.org/metadata.xsd">
+<entityReference entityType="http://www.grimoires.org/metadata.xsd#messagePartReference">
+<messagePartReference>
+<messageNamespace>http://www.themindelectric.com/wsdl/Blast/</messageNamespace>
+<messageName>searchParam0In</messageName>
+<messagePartName>param</messagePartName>
+</messagePartReference>
+</entityReference>
+<metadata>
+<metadataType>http://www.grimoires.org/SemanticType</metadataType>
+<metadataValue>
+<stringValue>DNA_Sequence</stringValue>
+</metadataValue>
+</metadata>
+</addMetadataToEntity>
+

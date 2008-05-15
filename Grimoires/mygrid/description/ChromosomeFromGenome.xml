@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+	<serviceDescription>
+		<serviceName>SHoundChromosomeFromGenome</serviceName>
+		<organisation>
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundChromosomeFromGenome</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundChromosomeFromGenome?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Get all the chromosomes for a given taxonomy identifier and the molecule</serviceDescriptionText>
+		<operations>
+			<serviceOperation>
+				<operationName>SHoundChromosomeFromGenome</operationName>
+				<operationDescriptionText>Gets a list of DNA molecules from a complete genome. The desired return types of DNA molecules can be filtered.</operationDescriptionText>
+				<operationInputs>
+					<parameter>
+						<parameterName>taxid</parameterName>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Collection</collectionSemanticType>
+					</parameter>
+
+					<parameter>
+						<parameterName>chromflags</parameterName>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Collection</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs>
+					<parameter>
+						<parameterName>result</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#DNA_sequence</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Collection</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#merging</operationTask>
+				<operationResource>http://www.mygrid.org.uk/ontology#sequence_database</operationResource>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

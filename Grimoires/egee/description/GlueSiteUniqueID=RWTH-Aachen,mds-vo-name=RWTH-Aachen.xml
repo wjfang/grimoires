@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=RWTH-Aachen,mds-vo-name=RWTH-Aachen">
+    <Name>RWTH-Aachen</Name>
+    <Description>EGEE/LCG Site</Description>
+    <UserSupportContact>mailto: lcg-contact@physik.rwth-aachen.de</UserSupportContact>
+    <SysAdminContact>mailto: lcg-contact@physik.rwth-aachen.de</SysAdminContact>
+    <SecurityContact>mailto: lcg-contact@physik.rwth-aachen.de</SecurityContact>
+    <Location>Aachen, Germany</Location>
+    <Latitude>50.78141153321893</Latitude>
+    <Longitude>6.049175262451172</Longitude>
+    <Web>http://www.physik.rwth-aachen.de/</Web>
+    <OtherInfo>TIER 2</OtherInfo>
+    <OtherInfo>FZK-LCG2</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=grid-ce.physik.rwth-aachen.de,mds-vo-name=RWTH-Aachen">
+        <Name>grid-ce.physik.rwth-aachen.de</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=grid-ce.physik.rwth-aachen.de,GlueClusterUniqueID=grid-ce.physik.rwth-aachen.de,mds-vo-name=RWTH-Aachen">
+            <Name>grid-ce.physik.rwth-aachen.de</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SLC" Release="4.5" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="Opteron" ClockSpeed="2000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="2048"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1248" SF00="1209"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=grid-srm.physik.rwth-aachen.de,mds-vo-name=RWTH-Aachen">
+        <InformationServiceURL>ldap://grid-se002.physik.rwth-aachen.de:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>37743</SizeTotal>
+        <SizeFree>10874</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="cms">
+            <Path>/pnfs/physik.rwth-aachen.de/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dech">
+            <Path>/pnfs/physik.rwth-aachen.de/dech</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dgtest">
+            <Path>/pnfs/physik.rwth-aachen.de/dgtest</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/pnfs/physik.rwth-aachen.de/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/pnfs/physik.rwth-aachen.de/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsidcap">
+            <Endpoint>httpg://grid-srm.physik.rwth-aachen.de:8443/srm/managerv1</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://grid-srm.physik.rwth-aachen.de:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-gsi-grid-se001@gsidcap-grid-se001Domain">
+            <Endpoint>gsidcap://grid-se001.physik.RWTH-Aachen.DE:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-gsi-grid-se004@gsidcap-grid-se004Domain">
+            <Endpoint>gsidcap://grid-se004.physik.RWTH-Aachen.DE:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-grid-se007@gridftp-grid-se007Domain">
+            <Endpoint>gsiftp://grid-se007.physik.RWTH-Aachen.DE:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-gsi-grid-se002@gsidcap-grid-se002Domain">
+            <Endpoint>gsidcap://grid-se002.physik.RWTH-Aachen.DE:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-grid-se002@gridftp-grid-se002Domain">
+            <Endpoint>gsiftp://grid-se002.physik.RWTH-Aachen.DE:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-gsi-grid-se003@gsidcap-grid-se003Domain">
+            <Endpoint>gsidcap://grid-se003.physik.RWTH-Aachen.DE:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-grid-ctrl02@dcap-grid-ctrl02Domain">
+            <Endpoint>dcap://grid-ctrl02.physik.rwth-aachen.de:22125</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-grid-se006@gridftp-grid-se006Domain">
+            <Endpoint>gsiftp://grid-se006.physik.RWTH-Aachen.DE:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-gsi-grid-se006@gsidcap-grid-se006Domain">
+            <Endpoint>gsidcap://grid-se006.physik.RWTH-Aachen.DE:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-grid-se003@gridftp-grid-se003Domain">
+            <Endpoint>gsiftp://grid-se003.physik.RWTH-Aachen.DE:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-gsi-grid-se005@gsidcap-grid-se005Domain">
+            <Endpoint>gsidcap://grid-se005.physik.RWTH-Aachen.DE:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-gsi-grid-se007@gsidcap-grid-se007Domain">
+            <Endpoint>gsidcap://grid-se007.physik.RWTH-Aachen.DE:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-grid-se001@gridftp-grid-se001Domain">
+            <Endpoint>gsiftp://grid-se001.physik.RWTH-Aachen.DE:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-grid-se005@gridftp-grid-se005Domain">
+            <Endpoint>gsiftp://grid-se005.physik.RWTH-Aachen.DE:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-grid-se004@gridftp-grid-se004Domain">
+            <Endpoint>gsiftp://grid-se004.physik.RWTH-Aachen.DE:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://grid-srm.physik.rwth-aachen.de:8443/srm/managerv1</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+        <ControlProtocol LocalID="SRM-grid-se007@srm-grid-se007Domain">
+            <Endpoint>httpg://grid-srm.physik.rwth-aachen.de:8443/srm/managerv1</Endpoint>
+            <Type>SRM</Type>
+            <Version>1.1.1</Version>
+        </ControlProtocol>
+        <ControlProtocol LocalID="SRM-grid-se003@srm-grid-se003Domain">
+            <Endpoint>httpg://grid-srm.physik.rwth-aachen.de:8443/srm/managerv1</Endpoint>
+            <Type>SRM</Type>
+            <Version>1.1.1</Version>
+        </ControlProtocol>
+        <ControlProtocol LocalID="SRM-grid-se006@srm-grid-se006Domain">
+            <Endpoint>httpg://grid-srm.physik.rwth-aachen.de:8443/srm/managerv1</Endpoint>
+            <Type>SRM</Type>
+            <Version>1.1.1</Version>
+        </ControlProtocol>
+        <ControlProtocol LocalID="SRM-grid-se004@srm-grid-se004Domain">
+            <Endpoint>httpg://grid-srm.physik.rwth-aachen.de:8443/srm/managerv1</Endpoint>
+            <Type>SRM</Type>
+            <Version>1.1.1</Version>
+        </ControlProtocol>
+        <ControlProtocol LocalID="SRM-grid-se005@srm-grid-se005Domain">
+            <Endpoint>httpg://grid-srm.physik.rwth-aachen.de:8443/srm/managerv1</Endpoint>
+            <Type>SRM</Type>
+            <Version>1.1.1</Version>
+        </ControlProtocol>
+        <ControlProtocol LocalID="SRM-grid-se002@srm-grid-se002Domain">
+            <Endpoint>httpg://grid-srm.physik.rwth-aachen.de:8443/srm/managerv1</Endpoint>
+            <Type>SRM</Type>
+            <Version>1.1.1</Version>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=grid-se001.physik.rwth-aachen.de:2136,mds-vo-name=RWTH-Aachen">
+        <Name>RWTH-Aachen-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://grid-se001.physik.rwth-aachen.de:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>dteam</Owner>
+        <Owner>cms</Owner>
+        <Owner>dech</Owner>
+        <Owner>ops</Owner>
+        <Owner>dgtest</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://grid-srm.physik.rwth-aachen.de:8443/srm/managerv1,mds-vo-name=RWTH-Aachen">
+        <Name>httpg://grid-srm.physik.rwth-aachen.de:8443/srm/managerv1</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.1</Version>
+        <Endpoint>httpg://grid-srm.physik.rwth-aachen.de:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+    </Service>
+</Site>

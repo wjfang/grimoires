@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+	<serviceDescription>
+		<serviceName>SHoundDNAFromProteinList</serviceName>
+		<organisation>
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundDNAFromProteinList</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundDNAFromProteinList?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Get an array of dna gi for a given array of gi</serviceDescriptionText>
+		<operations>
+			<serviceOperation>
+				<operationName>SHoundDNAFromProteinList</operationName>
+				<operationDescriptionText>Converts a list of protein (gene product) identifiers to a list of nucleic acids (genes) identifiers</operationDescriptionText>
+				<operationInputs>
+					<parameter>
+						<parameterName>giList</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#biological_sequence_id</semanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs>
+					<parameter>
+						<parameterName>result</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#nucleotide_sequence_unique_identifier</semanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#translating</operationTask>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

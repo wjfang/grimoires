@@ -1,0 +1,28 @@
+  <serviceDescriptions  xmlns="pd">
+  <serviceDescription>
+  <serviceName>SHoundLLIDFromGi</serviceName>
+    		<organisation>
+    			<organisationName>Blueprint</organisationName>
+    			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+    		</organisation>
+    		<locationURL>http://seqhound.blueprint.org/SHoundLLIDFromGi</locationURL>
+  		<interfaceWSDL>http://seqhound.blueprint.org/SHoundLLIDFromGi?wsdl</interfaceWSDL>
+  <serviceDescriptionText>retrieves locuslink id for a given protein gi</serviceDescriptionText> 
+  <operations>
+  <serviceOperation>
+  <operationName>SHoundLLIDFromGi</operationName> 
+  <operationInputs>
+  <parameter>
+  <parameterName>gi</parameterName> 
+  </parameter>
+  </operationInputs>
+  <operationOutputs>
+  <parameter>
+  <parameterName>result</parameterName> 
+  </parameter>
+  </operationOutputs>
+  </serviceOperation>
+  </operations>
+  <serviceType>SeqHound service</serviceType> 
+  </serviceDescription>
+  </serviceDescriptions>

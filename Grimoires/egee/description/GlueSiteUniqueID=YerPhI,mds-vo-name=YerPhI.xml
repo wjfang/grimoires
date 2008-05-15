@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=YerPhI,mds-vo-name=YerPhI">
+    <Name>YerPhI</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:yerphi-resource-admin@henphyt.yerphi.am</UserSupportContact>
+    <SysAdminContact>mailto:yerphi-resource-admin@henphyt.yerphi.am</SysAdminContact>
+    <SecurityContact>mailto:yerphi-resource-admin@henphyt.yerphi.am</SecurityContact>
+    <Location>Yerevan, Armenia</Location>
+    <Latitude>40.205489</Latitude>
+    <Longitude>44.483706</Longitude>
+    <Web>http://www.yerphi.am</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>cern.ch</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=armgrid1.yerphi.am,mds-vo-name=YerPhI">
+        <Name>armgrid1.yerphi.am</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=armgrid1.yerphi.am,GlueClusterUniqueID=armgrid1.yerphi.am,mds-vo-name=YerPhI">
+            <Name>armgrid1.yerphi.am</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.8" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="PIV" ClockSpeed="2400"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="true"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2049" RAMSize="1025"/>
+            <Architecture SMPSize="1"/>
+            <Benchmark SI00="864" SF00="864"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=armgrid3.yerphi.am,mds-vo-name=YerPhI">
+        <InformationServiceURL>ldap://armgrid3.yerphi.am:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>14</SizeTotal>
+        <SizeFree>13</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="alice">
+            <Path>/dpm/yerphi.am/home/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1340000</UsedSpace>
+            <AvailableSpace>13080000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/yerphi.am/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1340000</UsedSpace>
+            <AvailableSpace>13080000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/yerphi.am/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1340000</UsedSpace>
+            <AvailableSpace>13080000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://armgrid3.yerphi.am</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://armgrid3.yerphi.am</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://armgrid3.yerphi.am</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=armgrid1.yerphi.am:2136,mds-vo-name=YerPhI">
+        <Name>YerPhI-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://armgrid1.yerphi.am:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://armgrid3.yerphi.am:8443/srm/managerv1,mds-vo-name=YerPhI">
+        <Name>YerPhI-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://armgrid3.yerphi.am:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

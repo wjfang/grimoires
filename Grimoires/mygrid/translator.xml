@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Configure how to translate a native (myGrid in this case) service description
+	 to and from a Grimoires service description. -->
+	
+<serviceTranslator>
+	<saveIntoGrimoires>
+		<!-- Input: a native service description in DOM representation.
+			 Process: generate corresponding Grimoires data models in DOM representation,
+			 which then are converted to Java beans and saved to Grimoires through 
+			 Grimoires interface. -->
+		<saveBusiness xslt="toUDDIBusiness.xsl" />
+		<saveService xslt="toUDDIService.xsl" />
+		<saveTModel xslt="toUDDITModel.xsl" />
+		<saveWSDL xslt="toWSDL.xsl" />
+		<saveMetadata xslt="toServiceMetadata.xsl, toOperationMetadata.xsl, toMessagePartMetadata.xsl" />
+	</saveIntoGrimoires>
+	
+	<loadFromGrimoires>
+		<!-- Input: a UDDI BusinessService DOM element.
+			 Process: generate corresponding native data models and combine them together
+			 according to mountPoint, mergePoint and filter. 
+			 <action xslt="xslt.xsl" mountPoint="mountPoint" /> 
+			 <action xslt="xslt.xsl" mergePoint="mergePoint" /> 
+			 <action xslt="xslt.xsl" mergePoint="mergePoint" filter="filter" /> 			 
+			 -->
+		<loadService xslt="fromUDDIService.xsl" />
+		<loadBusiness xslt="fromUDDIBusiness.xsl" mountPoint="/" />
+		<loadWSDL xslt="fromWSDL.xsl" mountPoint="/" />
+		<loadServiceMetadata xslt="fromServiceMetadata.xsl" mergePoint="/" />
+		<loadOperationMetadata xslt="fromOperationMetadata.xsl" mergePoint="//*[local-name()='serviceOperation']" />
+		<loadMessagePartMetadata xslt="fromMessagePartMetadata.xsl" 
+			mergePoint="//*[local-name()='parameter']" 
+			filter="/*[local-name()='parameterName']"/>
+	</loadFromGrimoires>
+	
+	<!-- Specify how to uniquely identify a native service description using information 
+		 embedded. This is used in the "delete" operation, where a description ID is 
+		 required. Below "??" will be replaced by the information presented in the "delete"
+		 operation. This identification is always mapped to UDDI service key. -->
+	<identificationMatch xpath="//*[local-name()='serviceDescription'][*[local-name()='serviceName']='??']" />
+</serviceTranslator>

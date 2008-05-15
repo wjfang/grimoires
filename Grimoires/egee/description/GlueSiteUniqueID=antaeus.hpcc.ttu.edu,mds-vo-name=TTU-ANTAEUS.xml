@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=antaeus.hpcc.ttu.edu,mds-vo-name=TTU-ANTAEUS">
+    <Name>TTU-ANTAEUS</Name>
+    <Description>OSG Site</Description>
+    <UserSupportContact>mailto: Alan.Sill@ttu.edu</UserSupportContact>
+    <SysAdminContact>mailto: Alan.Sill@ttu.edu</SysAdminContact>
+    <SecurityContact>mailto: Alan.Sill@ttu.edu</SecurityContact>
+    <Location>Lubbock TX ,USA</Location>
+    <Latitude>33.6</Latitude>
+    <Longitude>-101.8</Longitude>
+    <Web>http://tigreportal.hipcat.net</Web>
+    <Sponsor>UNAVAILABLE</Sponsor>
+    <OtherInfo>UNAVAILABLE</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=antaeus.hpcc.ttu.edu,mds-vo-name=TTU-ANTAEUS">
+        <Name>antaeus.hpcc.ttu.edu</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=antaeus.hpcc.ttu.edu,GlueClusterUniqueID=antaeus.hpcc.ttu.edu,mds-vo-name=TTU-ANTAEUS">
+            <Name>antaeus.hpcc.ttu.edu</Name>
+            <PhysicalCPUs>1</PhysicalCPUs>
+            <LogicalCPUs>2</LogicalCPUs>
+            <TmpDir>/mnt/hep/osg</TmpDir>
+            <WNTmpDir>/state/partition1</WNTmpDir>
+            <OperatingSystem Version="Final" Release="4.4" Name="CentOS"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="GenuineIntel" Model="Intel(R) Xeon(R) CPU            5130  @ 2.00GHz" ClockSpeed="1000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1024" RAMSize="512"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="400" SF00="380"/>
+            <Location LocalID="SAMPLE_LOCATION">
+                <Name>SAMPLE_LOCATION</Name>
+                <Version>default</Version>
+                <Path>/SAMPLE-path</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_0">
+                <Name>VO-cms-CMSSW_1_2_0</Name>
+                <Version>CMSSW_1_2_0</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_3">
+                <Name>VO-cms-CMSSW_1_2_3</Name>
+                <Version>CMSSW_1_2_3</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_4">
+                <Name>VO-cms-CMSSW_1_2_4</Name>
+                <Version>CMSSW_1_2_4</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_5">
+                <Name>VO-cms-CMSSW_1_2_5</Name>
+                <Version>CMSSW_1_2_5</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_6">
+                <Name>VO-cms-CMSSW_1_2_6</Name>
+                <Version>CMSSW_1_2_6</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_0">
+                <Name>VO-cms-CMSSW_1_3_0</Name>
+                <Version>CMSSW_1_3_0</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1">
+                <Name>VO-cms-CMSSW_1_3_1</Name>
+                <Version>CMSSW_1_3_1</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_2">
+                <Name>VO-cms-CMSSW_1_3_2</Name>
+                <Version>CMSSW_1_3_2</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_3">
+                <Name>VO-cms-CMSSW_1_3_3</Name>
+                <Version>CMSSW_1_3_3</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_4">
+                <Name>VO-cms-CMSSW_1_3_4</Name>
+                <Version>CMSSW_1_3_4</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_6">
+                <Name>VO-cms-CMSSW_1_3_6</Name>
+                <Version>CMSSW_1_3_6</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_0">
+                <Name>VO-cms-CMSSW_1_4_0</Name>
+                <Version>CMSSW_1_4_0</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_1">
+                <Name>VO-cms-CMSSW_1_4_1</Name>
+                <Version>CMSSW_1_4_1</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_2">
+                <Name>VO-cms-CMSSW_1_4_2</Name>
+                <Version>CMSSW_1_4_2</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_3">
+                <Name>VO-cms-CMSSW_1_4_3</Name>
+                <Version>CMSSW_1_4_3</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_4">
+                <Name>VO-cms-CMSSW_1_4_4</Name>
+                <Version>CMSSW_1_4_4</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_6">
+                <Name>VO-cms-CMSSW_1_4_6</Name>
+                <Version>CMSSW_1_4_6</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_7">
+                <Name>VO-cms-CMSSW_1_4_7</Name>
+                <Version>CMSSW_1_4_7</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_0">
+                <Name>VO-cms-CMSSW_1_5_0</Name>
+                <Version>CMSSW_1_5_0</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_1">
+                <Name>VO-cms-CMSSW_1_5_1</Name>
+                <Version>CMSSW_1_5_1</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_2">
+                <Name>VO-cms-CMSSW_1_5_2</Name>
+                <Version>CMSSW_1_5_2</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_3">
+                <Name>VO-cms-CMSSW_1_5_3</Name>
+                <Version>CMSSW_1_5_3</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_4">
+                <Name>VO-cms-CMSSW_1_5_4</Name>
+                <Version>CMSSW_1_5_4</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0">
+                <Name>VO-cms-CMSSW_1_6_0</Name>
+                <Version>CMSSW_1_6_0</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_1">
+                <Name>VO-cms-CMSSW_1_6_1</Name>
+                <Version>CMSSW_1_6_1</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_3">
+                <Name>VO-cms-CMSSW_1_6_3</Name>
+                <Version>CMSSW_1_6_3</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_4">
+                <Name>VO-cms-CMSSW_1_6_4</Name>
+                <Version>CMSSW_1_6_4</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_5">
+                <Name>VO-cms-CMSSW_1_6_5</Name>
+                <Version>CMSSW_1_6_5</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1_HLT5">
+                <Name>VO-cms-CMSSW_1_3_1_HLT5</Name>
+                <Version>CMSSW_1_3_1_HLT5</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1_HLT6">
+                <Name>VO-cms-CMSSW_1_3_1_HLT6</Name>
+                <Version>CMSSW_1_3_1_HLT6</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0_DAQ1">
+                <Name>VO-cms-CMSSW_1_6_0_DAQ1</Name>
+                <Version>CMSSW_1_6_0_DAQ1</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0_DAQ2">
+                <Name>VO-cms-CMSSW_1_6_0_DAQ2</Name>
+                <Version>CMSSW_1_6_0_DAQ2</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0_DAQ3">
+                <Name>VO-cms-CMSSW_1_6_0_DAQ3</Name>
+                <Version>CMSSW_1_6_0_DAQ3</Version>
+                <Path>/mnt/lustre/antaeus/apps/cmssoft/cms</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=sigmorgh.hpcc.ttu.edu,mds-vo-name=TTU-ANTAEUS">
+        <InformationServiceURL>ldap://is.grid.iu.edu:2170/mds-vo-name=TTU-ANTAEUS,mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>10003215388</SizeTotal>
+        <SizeFree>7447322256</SizeFree>
+        <StorageArea LocalID="cdf">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="des">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gpn">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="mis">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="osg">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="LIGO">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="fmri">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gadu">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="glow">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="grow">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="i2u2">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="sdss">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="star">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="DOSAR">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="TIGRE">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dzero">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="grase">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ivdgl">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="minos">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="nwicg">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="engage">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gridex">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="osgedu">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="nanohub">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="fermilab">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="mariachi">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="miniboone">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="compbiogrid">
+            <Path>/mnt/hep</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2555893132</UsedSpace>
+            <AvailableSpace>7447322256</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://sigmorgh.hpcc.ttu.edu</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+</Site>

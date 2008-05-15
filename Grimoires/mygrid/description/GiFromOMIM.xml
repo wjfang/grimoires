@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+  <serviceDescription>
+  <serviceName>SHoundGiFromOMIM</serviceName>
+    		<organisation>
+    			<organisationName>Blueprint</organisationName>
+    			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+    		</organisation>
+    		<locationURL>http://seqhound.blueprint.org/SHoundGiFromOMIM</locationURL>
+  		<interfaceWSDL>http://seqhound.blueprint.org/SHoundGiFromOMIM?wsdl</interfaceWSDL>
+  <serviceDescriptionText>retrieves protein gi's from an omim</serviceDescriptionText> 
+  <operations>
+  <serviceOperation>
+  <operationName>SHoundGiFromOMIM</operationName> 
+  <operationInputs>
+  <parameter>
+  <parameterName>omimid</parameterName> 
+  </parameter>
+  </operationInputs>
+  <operationOutputs>
+  <parameter>
+  <parameterName>result</parameterName> 
+  </parameter>
+  </operationOutputs>
+  </serviceOperation>
+  </operations>
+  <serviceType>SeqHound service</serviceType> 
+  </serviceDescription>
+  </serviceDescriptions>
