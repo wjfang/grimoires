@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+	<serviceDescription>
+		<serviceName>SHoundGODBGetChildrenOf</serviceName>
+		<organisation>
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundGODBGetChildrenOf</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundGODBGetChildrenOf?wsdl</interfaceWSDL>
+		<serviceDescriptionText>retrieves all the children of a given gene ontology id</serviceDescriptionText>
+		<operations>
+			<serviceOperation>
+				<operationName>SHoundGODBGetChildrenOf</operationName>
+				<operationInputs>
+					<parameter>
+						<parameterName>goid</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#Gene_Ontology_term_id</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs>
+					<parameter>
+						<parameterName>result</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#Gene_Ontology_term_id</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Collection</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#retrieving</operationTask>
+				<operationResource>http://www.mygrid.org.uk/ontology#bioinformatics_database</operationResource>
+				<operationResourceContent>http://www.mygrid.org.uk/ontology#model_organism</operationResourceContent>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

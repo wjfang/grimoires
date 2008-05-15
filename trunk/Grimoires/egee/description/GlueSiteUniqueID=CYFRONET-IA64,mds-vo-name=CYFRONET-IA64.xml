@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=CYFRONET-IA64,mds-vo-name=CYFRONET-IA64">
+    <Name>CYFRONET-IA64</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto: lcg-admin@cyf-kr.edu.pl</UserSupportContact>
+    <SysAdminContact>mailto: lcg-admin@cyf-kr.edu.pl</SysAdminContact>
+    <SecurityContact>mailto: lcg-admin@cyf-kr.edu.pl</SecurityContact>
+    <Location>Cracow, Poland</Location>
+    <Latitude>50.07</Latitude>
+    <Longitude>19.8</Longitude>
+    <Web>http://www.cyfronet.pl</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER 2</OtherInfo>
+    <OtherInfo>www.gridka.de</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ares02.cyf-kr.edu.pl,mds-vo-name=CYFRONET-IA64">
+        <Name>ares02.cyf-kr.edu.pl</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ares02.cyf-kr.edu.pl,GlueClusterUniqueID=ares02.cyf-kr.edu.pl,mds-vo-name=CYFRONET-IA64">
+            <Name>ares02.cyf-kr.edu.pl</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="3" Release="3.0.5" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Itanium2" ClockSpeed="1300"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="2048"/>
+            <Architecture SMPSize="2" PlatformType="ia64"/>
+            <Benchmark SI00="1059" SF00="1808"/>
+            <Location LocalID="RASTER3D">
+                <Name>RASTER3D</Name>
+                <Version>Prod</Version>
+                <Path>$VO_EUCHINA_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-voce-GAMESS">
+                <Name>VO-voce-GAMESS</Name>
+                <Version>Prod</Version>
+                <Path>$VO_VOCE_SW_DIR</Path>
+            </Location>
+            <Location LocalID="MOLSCRIPT-1.0.2">
+                <Name>MOLSCRIPT-1.0.2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_EUCHINA_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu">
+                <Name>VO-balticgrid-ktu</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-voce-OCMG-v1.9.3-1">
+                <Name>VO-voce-OCMG-v1.9.3-1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_VOCE_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-Gate3.0.0-JR">
+                <Name>VO-biomed-Gate3.0.0-JR</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-Gate3.0.0-LCG">
+                <Name>VO-biomed-Gate3.0.0-LCG</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-TEST-IGNORE">
+                <Name>VO-balticgrid-TEST-IGNORE</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-biomed-TestU01-DistRNG">
+                <Name>VO-biomed-TestU01-DistRNG</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIOMED_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-BLAST-2.2.14">
+                <Name>VO-balticgrid-BLAST-2.2.14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-A-MATH-R-2.5.1">
+                <Name>VO-balticgrid-A-MATH-R-2.5.1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final">
+                <Name>VO-dteam-december05prod-final</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-DEVEL-G95-0.91">
+                <Name>VO-balticgrid-E-DEVEL-G95-0.91</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-v22Nov">
+                <Name>VO-dteam-december05prod-v22Nov</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ATLAS-3.6.0_LAPACK">
+                <Name>VO-balticgrid-ATLAS-3.6.0_LAPACK</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-APPS/GRAPH/POVRAY-3.6">
+                <Name>VO-balticgrid-APPS/GRAPH/POVRAY-3.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final-cand2">
+                <Name>VO-dteam-december05prod-final-cand2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu/ENV/DEVEL/G95/0.91">
+                <Name>VO-balticgrid-ktu/ENV/DEVEL/G95/0.91</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-DEVEL-GCC-4.2.0-testme">
+                <Name>VO-balticgrid-E-DEVEL-GCC-4.2.0-testme</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-DEVEL-SUBVERSION-1.4.3">
+                <Name>VO-balticgrid-E-DEVEL-SUBVERSION-1.4.3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu/APPS/MATH/LAPACK/3.0">
+                <Name>VO-balticgrid-ktu/APPS/MATH/LAPACK/3.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-A-MATH-ATLAS-3.6.0-testme">
+                <Name>VO-balticgrid-A-MATH-ATLAS-3.6.0-testme</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu/APPS/MATH/ATLAS/3.6.0">
+                <Name>VO-balticgrid-ktu/APPS/MATH/ATLAS/3.6.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-PARALLEL-MPICH2-1.0.5-testme">
+                <Name>VO-balticgrid-E-PARALLEL-MPICH2-1.0.5-testme</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-PARALLEL-MPIEXEC-0.82-testme">
+                <Name>VO-balticgrid-E-PARALLEL-MPIEXEC-0.82-testme</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-PARALLEL-OPENMPI-1.2.3-testme">
+                <Name>VO-balticgrid-E-PARALLEL-OPENMPI-1.2.3-testme</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu/APPS/MATH/ATLAS_LAPACK/3.6.0">
+                <Name>VO-balticgrid-ktu/APPS/MATH/ATLAS_LAPACK/3.6.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-PARALLEL-MPICH2-1.0.5-G95-0.91-testme">
+                <Name>VO-balticgrid-E-PARALLEL-MPICH2-1.0.5-G95-0.91-testme</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-PARALLEL-OPENMPI-1.2.3-GCC-4.2.0-testme">
+                <Name>VO-balticgrid-E-PARALLEL-OPENMPI-1.2.3-GCC-4.2.0-testme</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=ares03.cyf-kr.edu.pl,mds-vo-name=CYFRONET-IA64">
+        <InformationServiceURL>ldap://ares03.cyf-kr.edu.pl:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="cms">
+            <Path>/flatfiles/SE00/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1924703072</UsedSpace>
+            <AvailableSpace>222624416</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/flatfiles/SE00/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1924703072</UsedSpace>
+            <AvailableSpace>222624416</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/flatfiles/SE00/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1924703072</UsedSpace>
+            <AvailableSpace>222624416</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="voce">
+            <Path>/flatfiles/SE00/voce</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1924703072</UsedSpace>
+            <AvailableSpace>222624416</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/flatfiles/SE00/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1924703072</UsedSpace>
+            <AvailableSpace>222624416</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/flatfiles/SE00/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1924703072</UsedSpace>
+            <AvailableSpace>222624416</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="belle">
+            <Path>/flatfiles/SE00/belle</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1924703072</UsedSpace>
+            <AvailableSpace>222624416</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/flatfiles/SE00/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1924703072</UsedSpace>
+            <AvailableSpace>222624416</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomed">
+            <Path>/flatfiles/SE00/biomed</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1924703072</UsedSpace>
+            <AvailableSpace>222624416</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="euchina">
+            <Path>/flatfiles/SE00/euchina</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1924703072</UsedSpace>
+            <AvailableSpace>222624416</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="compchem">
+            <Path>/compchem</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>12004720</UsedSpace>
+            <AvailableSpace>20172404</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gaussian">
+            <Path>/flatfiles/SE00/gaussian</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1924703072</UsedSpace>
+            <AvailableSpace>222624416</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="balticgrid">
+            <Path>/balticgrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>12004720</UsedSpace>
+            <AvailableSpace>20172404</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://ares03.cyf-kr.edu.pl</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=ares03.cyf-kr.edu.pl:2136,mds-vo-name=CYFRONET-IA64">
+        <Name>CYFRONET-IA64-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://ares03.cyf-kr.edu.pl:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>balticgrid</Owner>
+        <Owner>belle</Owner>
+        <Owner>biomed</Owner>
+        <Owner>cms</Owner>
+        <Owner>compchem</Owner>
+        <Owner>dteam</Owner>
+        <Owner>euchina</Owner>
+        <Owner>gaussian</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+        <Owner>voce</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=gsissh://ares01.cyf-kr.edu.pl:1975,mds-vo-name=CYFRONET-IA64">
+        <Name>CYFRONET-IA64-vobox</Name>
+        <Type>VOBOX</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>gsissh://ares01.cyf-kr.edu.pl:1975</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

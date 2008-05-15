@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Grimoires Documentation - Installation Guide - GShell</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url('i_arrow_down.gif');
+	}
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script>
+</head>
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1><a name="Grimoires_Shell_Manual"> </a>Installation Guide - GShell</h1>
+<p />
+<div class="twikiToc">
+<ul>
+<li> <a href="#Grimoires_Shell_Manual">Installation Guide - GShell</a>
+<ul>
+<li> <a href="#Introduction">Introduction </a>
+</li>
+<li> <a href="#How_to_compile_and_run">How to compile and run </a>
+</li>
+<li> <a href="#gshell_secure">Running GShell as a secure client</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p />
+<h2><a name="Introduction"> </a> Introduction  </h2>
+<p />
+The Grimoires Shell (GShell) is a simple client that supports some of the 
+functionality of the Grimoires service in interactive mode or batch mode. Full 
+Grimoires functionality may be accessed either by the Java Programming Client 
+Side API or by the SOAP message submission facility. GShell provides a group of utilities for users to
+publish/inquire business/service/wsdl/metadata.
+<p />
+<h2><a name="How_to_compile_and_run"> </a> How to compile and run  </h2>
+<p />
+In the Grimoires release, GShell is under the &quot;GShell/&quot; directory. Having run
+Grimoires ant target &quot;build-client&quot;, GShell will be copied to the&nbsp;
+&quot;dist/client/&quot; directory.
+<p />
+Use "GShell/" or &quot;dist/client/&quot; as the current directory.
+<p />
+To compile, type on the command line:
+<p />
+<pre>ant</pre>
+<p />
+If you wish to use GShell to run against a secure Grimoires deployment, then type
+<p />
+<pre>ant secure</pre>
+<p />
+Also, read the next section on running GShell as secure client before proceeding.
+<p />
+To run on Windows, type on the command line:
+<pre>run GRIMOIRES_LOCATION</pre>
+<p />
+To run on Unix/Linux, type on the command line:
+<pre>
+chmod +x run.sh
+./run.sh GRIMOIRES_LOCATION</pre>
+<p />
+If you have deployed the registry on, e.g.,
+http://hostname:8080/grimoires, you need to start the GShell by
+<pre>
+run http://hostname:8080/grimoires/services
+</pre>
+<h2><a name="gshell_secure"> </a>Running GShell as a secure client</h2>
+<p />
+
+If Grimoires is deployed securely, then GShell must be run as a <b><u><a class="twikiLink" href="./security.html#Grimoires_client">secure client</a></b></u>, i.e. the outgoing SOAP messages from GShell to Grimoires must be signed appropriately. This requires the use of the keystore and certificate found in the OMII client, which needs to be downloaded and installed first. The parameters in the crypto.properties file in gshell/config then needs to be updated:
+<p />
+
+<pre>
+org.apache.ws.security.crypto.merlin.file=/home/bob/OMIICLIENT/omii.ks
+org.apache.ws.security.crypto.merlin.keystore.password=tmpstore
+org.apache.ws.security.crypto.merlin.keystore.alias=omii_server
+org.apache.ws.security.crypto.merlin.alias.password=tmpstore
+org.apache.ws.security.crypto.provider=org.apache.ws.security.components.crypto.Merlin
+org.apache.ws.security.crypto.merlin.keystore.type=JKS
+org.apache.ws.security.crypto.merlin.crldir=/home/bob/OMIICLIENT/grid/CRLs
+</pre>
+<p />
+
+If the OMII client is installed at /home/bob/OMIICLIENT, then the value for org.apache.ws.security.crypto.merlin.file is /home/bob/OMIICLIENT/omii.ks. Same comments apply to org.apache.ws.security.crypto.merlin.crldir.
+
+
+</div>
+
+</body></html>

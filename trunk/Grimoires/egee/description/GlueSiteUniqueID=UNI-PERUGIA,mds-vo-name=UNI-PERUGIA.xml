@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=UNI-PERUGIA,mds-vo-name=UNI-PERUGIA">
+    <Name>UNI-PERUGIA</Name>
+    <Description>UNI-PERUGIA</Description>
+    <UserSupportContact>mailto:grid-prod@grid.unipg.it</UserSupportContact>
+    <SysAdminContact>mailto:grid-prod@grid.unipg.it</SysAdminContact>
+    <SecurityContact>mailto:grid-prod@grid.unipg.it</SecurityContact>
+    <Location>Perugia, Italy</Location>
+    <Latitude>43.1107</Latitude>
+    <Longitude>12.3892</Longitude>
+    <Web>http://www.chm.unipg.it</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-3</OtherInfo>
+    <OtherInfo>CNAF-T1</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ce.grid.unipg.it,mds-vo-name=UNI-PERUGIA">
+        <Name>ce.grid.unipg.it</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce.grid.unipg.it,GlueClusterUniqueID=ce.grid.unipg.it,mds-vo-name=UNI-PERUGIA">
+            <Name>ce.grid.unipg.it</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SLC" Release="3.0.8" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="PIII" ClockSpeed="1001"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1024"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="452" SF00="327"/>
+            <Location LocalID="VO-compchem-Columbus-5.9.1_int32">
+                <Name>VO-compchem-Columbus-5.9.1_int32</Name>
+                <Version>Prod</Version>
+                <Path>$VO_COMPCHEM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-gridit-GEANT4CATANIA-aborted-install">
+                <Name>VO-gridit-GEANT4CATANIA-aborted-install</Name>
+                <Version>Prod</Version>
+                <Path>$VO_GRIDIT_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=cex.grid.unipg.it,mds-vo-name=UNI-PERUGIA">
+        <Name>cex.grid.unipg.it</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=cex.grid.unipg.it,GlueClusterUniqueID=cex.grid.unipg.it,mds-vo-name=UNI-PERUGIA">
+            <Name>cex.grid.unipg.it</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SLC" Release="3.0.8" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="XEON" ClockSpeed="3065"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1024"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1400" SF00="1881"/>
+            <Location LocalID="VO-compchem-Columbus-5.9.1_int32">
+                <Name>VO-compchem-Columbus-5.9.1_int32</Name>
+                <Version>Prod</Version>
+                <Path>$VO_COMPCHEM_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=se.grid.unipg.it,mds-vo-name=UNI-PERUGIA">
+        <InformationServiceURL>ldap://se.grid.unipg.it:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="infngrid">
+            <Path>/flatfiles/SE00/infngrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3514676</UsedSpace>
+            <AvailableSpace>6279036</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/flatfiles/SE00/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3514676</UsedSpace>
+            <AvailableSpace>6279036</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="compchem">
+            <Path>/flatfiles/SE00/compchem</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3514676</UsedSpace>
+            <AvailableSpace>6279036</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gridit">
+            <Path>/flatfiles/SE00/gridit</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3514676</UsedSpace>
+            <AvailableSpace>6279036</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/flatfiles/SE00/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3514672</UsedSpace>
+            <AvailableSpace>6279040</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://se.grid.unipg.it</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=cex.grid.unipg.it:2119,mds-vo-name=UNI-PERUGIA">
+        <Name>UNI-PERUGIA-org.glite.ce</Name>
+        <Type>org.glite.ce</Type>
+        <Version>2.4.20</Version>
+        <Endpoint>cex.grid.unipg.it:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>infngrid</Owner>
+        <Owner>dteam</Owner>
+        <Owner>compchem</Owner>
+        <Owner>gridit</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=se.grid.unipg.it:2136,mds-vo-name=UNI-PERUGIA">
+        <Name>UNI-PERUGIA-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://se.grid.unipg.it:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>infngrid</Owner>
+        <Owner>dteam</Owner>
+        <Owner>compchem</Owner>
+        <Owner>gridit</Owner>
+        <Owner>ops</Owner>
+    </Service>
+</Site>

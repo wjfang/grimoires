@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+	<serviceDescription>
+		<serviceName>SHoundGOIDFromGi</serviceName>
+		<organisation>
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundGOIDFromGi</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundGOIDFromGi?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Fetches all Gene Ontology (GO) terms assigned to a protein sequence. An individual sequence can be referred to by one or more process, function or component terms.
+</serviceDescriptionText>
+		<operations>
+			<serviceOperation>
+				<operationName>SHoundGOIDFromGi</operationName>
+				<operationInputs>
+					<parameter>
+						<parameterName>gi</parameterName>
+						<parameterDescription>GI identifier</parameterDescription>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_identifier</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs>
+					<parameter>
+						<parameterName>result</parameterName>
+						<parameterDescription>GO identifiers or zero</parameterDescription>
+						<semanticType>http://www.mygrid.org.uk/ontology#Gene_Ontology_term_id</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Collection</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#retrieving</operationTask>
+				<operationResource>http://www.mygrid.org.uk/ontology#sequence_database</operationResource>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

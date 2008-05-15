@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=prague_cesnet_lcg2,mds-vo-name=prague_cesnet_lcg2">
+    <Name>prague_cesnet_lcg2</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:lcg-admin@fzu.cz</UserSupportContact>
+    <SysAdminContact>mailto:lcg-admin@fzu.cz</SysAdminContact>
+    <SecurityContact>mailto:lcg-admin@fzu.cz</SecurityContact>
+    <Location>Prague, Czech Republic</Location>
+    <Latitude>50.102</Latitude>
+    <Longitude>14.3886</Longitude>
+    <Web>http://egee.cesnet.cz/</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>FZK-LCG2</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=skurut17.cesnet.cz,mds-vo-name=prague_cesnet_lcg2">
+        <Name>skurut17.cesnet.cz</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=skurut17.cesnet.cz,GlueClusterUniqueID=skurut17.cesnet.cz,mds-vo-name=prague_cesnet_lcg2">
+            <Name>skurut17.cesnet.cz</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.8" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="PIII" ClockSpeed="700"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1024"/>
+            <Architecture SMPSize="2" PlatformType="i686"/>
+            <Benchmark SI00="381" SF00="0"/>
+            <Location LocalID="VO-dteam-ITUtest1">
+                <Name>VO-dteam-ITUtest1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-v22Nov">
+                <Name>VO-dteam-december05prod-v22Nov</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-cloud-DE">
+                <Name>VO-atlas-cloud-DE</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6">
+                <Name>VO-atlas-production-12.0.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.7">
+                <Name>VO-atlas-production-12.0.7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.95">
+                <Name>VO-atlas-production-12.0.95</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.20">
+                <Name>VO-atlas-production-13.0.20</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.42">
+                <Name>VO-atlas-release-11.0.42</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.5">
+                <Name>VO-atlas-release-11.0.5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-tier-T2">
+                <Name>VO-atlas-tier-T2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=skurut18.cesnet.cz,mds-vo-name=prague_cesnet_lcg2">
+        <InformationServiceURL>ldap://skurut18.cesnet.cz:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/storage/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2759144448</UsedSpace>
+            <AvailableSpace>1048095744</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4866556</UsedSpace>
+            <AvailableSpace>1497444</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/storage/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4866556</UsedSpace>
+            <AvailableSpace>1497444</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/storage/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4866556</UsedSpace>
+            <AvailableSpace>1497444</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="voce">
+            <Path>/storage/voce</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3575684512</UsedSpace>
+            <AvailableSpace>231555680</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vocet">
+            <Path>/vocet</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4866552</UsedSpace>
+            <AvailableSpace>1497448</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="auger">
+            <Path>/auger</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4866556</UsedSpace>
+            <AvailableSpace>1497444</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://skurut18.cesnet.cz</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=skurut2.cesnet.cz:7772,mds-vo-name=prague_cesnet_lcg2">
+        <Name>prague_cesnet_lcg2-org.glite.wms</Name>
+        <Type>org.glite.wms</Type>
+        <Version>2.3.14</Version>
+        <Endpoint>skurut2.cesnet.cz:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>voce</Owner>
+        <Owner>vocet</Owner>
+        <Owner>auger</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://skurut2.cesnet.cz:8085/,mds-vo-name=prague_cesnet_lcg2">
+        <Name>prague_cesnet_lcg2-lfc-dli</Name>
+        <Type>data-location-interface</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>http://skurut2.cesnet.cz:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-04T17:27:43.000+02:00</StartTime>
+        <Owner>voce</Owner>
+        <Owner>vocet</Owner>
+        <Owner>auger</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=skurut2.cesnet.cz,mds-vo-name=prague_cesnet_lcg2">
+        <Name>prague_cesnet_lcg2-lfc</Name>
+        <Type>lcg-file-catalog</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>skurut2.cesnet.cz</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-04T17:27:43.000+02:00</StartTime>
+        <Owner>voce</Owner>
+        <Owner>vocet</Owner>
+        <Owner>auger</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-http://skurut2.cesnet.cz:8085/,mds-vo-name=prague_cesnet_lcg2">
+        <Name>prague_cesnet_lcg2-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>http://skurut2.cesnet.cz:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-04T17:27:43.000+02:00</StartTime>
+        <Owner>voce</Owner>
+        <Owner>vocet</Owner>
+        <Owner>auger</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-skurut2.cesnet.cz,mds-vo-name=prague_cesnet_lcg2">
+        <Name>prague_cesnet_lcg2-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>skurut2.cesnet.cz</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-04T17:27:43.000+02:00</StartTime>
+        <Owner>voce</Owner>
+        <Owner>vocet</Owner>
+        <Owner>auger</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=skurut3.cesnet.cz:7512,mds-vo-name=prague_cesnet_lcg2">
+        <Name>prague_cesnet_lcg2-myproxy</Name>
+        <Type>MyProxy</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>skurut3.cesnet.cz:7512</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=skurut3.cesnet.cz:7772,mds-vo-name=prague_cesnet_lcg2">
+        <Name>prague_cesnet_lcg2-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>skurut3.cesnet.cz:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>voce</Owner>
+        <Owner>vocet</Owner>
+        <Owner>auger</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=skurut18.cesnet.cz:2136,mds-vo-name=prague_cesnet_lcg2">
+        <Name>prague_cesnet_lcg2-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://skurut18.cesnet.cz:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>voce</Owner>
+        <Owner>vocet</Owner>
+        <Owner>auger</Owner>
+    </Service>
+</Site>

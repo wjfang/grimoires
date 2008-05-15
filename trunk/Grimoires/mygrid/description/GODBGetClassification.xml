@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+  <serviceDescription>
+  <serviceName>SHoundGODBGetClassification</serviceName>
+    		<organisation>
+    			<organisationName>Blueprint</organisationName>
+    			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+    		</organisation>
+    		<locationURL>http://seqhound.blueprint.org/SHoundGODBGetClassification</locationURL>
+  		<interfaceWSDL>http://seqhound.blueprint.org/SHoundGODBGetClassification?wsdl</interfaceWSDL>
+  <serviceDescriptionText>retrieve the ontology classification for a given goid</serviceDescriptionText> 
+  <operations>
+  <serviceOperation>
+  <operationName>SHoundGODBGetClassification</operationName> 
+  <operationInputs>
+  <parameter>
+  <parameterName>goid</parameterName> 
+  </parameter>
+  </operationInputs>
+  <operationOutputs>
+  <parameter>
+  <parameterName>result</parameterName> 
+  </parameter>
+  </operationOutputs>
+  </serviceOperation>
+  </operations>
+<serviceType>SeqHound service</serviceType> 
+  </serviceDescription>
+  </serviceDescriptions>

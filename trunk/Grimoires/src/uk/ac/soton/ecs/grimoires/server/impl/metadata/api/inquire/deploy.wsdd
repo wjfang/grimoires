@@ -1,0 +1,217 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from Grimoires WSDL service -->
+
+  <service name="inquire_metadata" provider="java:RPC" style="document" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://www.grimoires.org/inquire_metadata.wsdl"/>
+      <parameter name="wsdlServiceElement" value="Grimoires"/>
+      <parameter name="wsdlServicePort" value="inquire_metadata"/>
+      <parameter name="className" value="uk.ac.soton.ecs.grimoires.server.impl.metadata.handlers.GrimoiresInquireMetadataSoapSkeleton"/>
+      <parameter name="wsdlPortType" value="InquireMetadataPort"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:uriBag"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.UriBag"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:MetadataQuery"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MetadataQuery"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:AddMetadataToEntity"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.AddMetadataToEntity"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:>xmlValue"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.XmlValue"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:FaultDetail"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.FaultDetail"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:MetadataInfo"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MetadataInfo"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:EntityReference"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.EntityReference"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:Get_entityMetadata"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.Get_entityMetadata"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:MetadataKey"
+        type="java:java.lang.String"
+        serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:FaultDetailList"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.FaultDetailList"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:Get_supportedEntityType"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.Get_supportedEntityType"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:MetadataInfos"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MetadataInfos"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:MetadataValue"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MetadataValue"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:MetadataType"
+        type="java:org.apache.axis.types.URI"
+        serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:Get_metadataDetail"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.Get_metadataDetail"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:EntityReferenceList"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.EntityReferenceList"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:findQualifiers"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.FindQualifiers"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:TriplesAssertion"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.TriplesAssertion"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:Find_entityByMetadata"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.Find_entityByMetadata"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:MetadataQueryBag"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MetadataQueryBag"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:MessagePartReference"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MessagePartReference"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:OperationReference"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.OperationReference"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:Metadata"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.Metadata"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/metadata.xsd"
+        qname="ns:DeleteMetadata"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.DeleteMetadata"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

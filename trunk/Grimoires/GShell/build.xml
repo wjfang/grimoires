@@ -1,0 +1,58 @@
+
+<!-- Build file for GShell -->
+
+<project basedir="." default="compile" name="GShell">
+	<!-- init.properties contains property values specific to the operating environment -->
+	<property file="init.properties"/>
+
+	<property name="build.dir"  value="build/classes"/>
+	<property name="server" value="http://fantasio.ecs.soton.ac.uk:8080/grimoires"/>
+
+	<path id="classpath">
+		<fileset dir="lib">
+			<include name="*.jar"/>
+		</fileset>
+		<fileset dir="../lib/omii3">
+			<include name="*.jar"/>
+		</fileset>
+		<dirset dir="${build.dir}"/>
+	</path>
+
+	<target name="init">
+		<mkdir dir="${build.dir}"/>
+	</target>
+
+
+	<target name="compile" depends="clean, init">
+		<javac sourcepath=""
+			srcdir="src"
+           	destdir="${build.dir}"
+    		includes="**"
+			source="1.4"
+           	nowarn="on"
+	   		debug="on">
+			<classpath>
+				<path refid="classpath"/>
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="secure">
+		<copy todir="${build.dir}">
+			<fileset dir="config" includes="*.*"/>
+		</copy>
+	</target>
+
+	<target name="clean">
+		<delete dir="${build.dir}"/>
+	</target>
+
+	<target name="run" depends="compile">
+		<java classname="uk.ac.soton.ecs.grimoires.shell.Shell">
+			<classpath>
+				<path refid="classpath"/>
+			</classpath>
+			<arg value="${server}"/>
+		</java>
+	</target>
+</project>

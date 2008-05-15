@@ -1,0 +1,6 @@
+<!-- All users do not have write (save/delete) access control -->
+<authlist>
+	<permission identity = "#AllUsers#"
+		operationList = " save_business // save_service // set_assertionStatusReport // delete_service // discard_authToken // delete_binding // add_publisherAssertions // delete_business // delete_tModel // save_tModel // delete_publisherAssertions // save_binding // addMetadataToEntity // deleteMetadata // addWSDLFileAdvert // addWSDLFile // removeWSDLFile "
+        mode = "restrict"/>
+</authlist>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.grimoires.org/metadata.xsd" 
+  xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:meta="http://www.grimoires.org/metadata.xsd" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  elementFormDefault="qualified" attributeFormDefault="unqualified">
+  
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">
+      Schema for the WSDL metadata interface for Grimoires
+    </xsd:documentation>
+  </xsd:annotation>
+  
+  <include schemaLocation="metadata.xsd"/>
+  
+<!--  <xsd:element name="messageNamespace" type="xsd:string"/>
+  <xsd:element name="messageName" type="xsd:string"/>
+  <xsd:element name="messagePartName" type="xsd:string"/>
+  <xsd:element name="messagePartReference"  type="meta:MessagePartReference"
+    substitutionGroup="entityReference"/>
+  <xsd:complexType name="MessagePartReference">
+    <xsd:complexContent>
+      <xsd:extension base="meta:EntityReference">
+	<xsd:sequence>
+	  <xsd:element ref="meta:messageNamespace"/>
+	  <xsd:element ref="meta:messageName"/>
+	  <xsd:element ref="meta:messagePartName"/>
+	</xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType> -->
+
+  <xsd:element name="name" type="xsd:string"/>
+
+
+<!--  <xsd:element name="operationReference"  type="meta:OperationReference"
+    substitutionGroup="entityReference"/>
+  <xsd:complexType name="OperationReference">
+    <xsd:complexContent>
+      <xsd:extension base="meta:EntityReference">
+	<xsd:sequence>
+	  <xsd:element name="portTypeNamespace" type="xsd:string"/>
+	  <xsd:element name="portTypeName"      type="xsd:string"/>
+	  <xsd:element name="operationName"     type="xsd:string"/>
+	</xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType> -->
+
+  <xsd:element name="messagePartMetadataQueryBag" type="meta:MessagePartMetadataQueryBag"/>
+  <xsd:complexType name="MessagePartMetadataQueryBag">
+    <xsd:sequence>
+      <xsd:element ref="meta:metadataQuery" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="operationMetadataQueryBag" type="meta:OperationMetadataQueryBag"/>
+  <xsd:complexType name="OperationMetadataQueryBag">
+    <xsd:sequence>
+      <xsd:element ref="meta:metadataQuery" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="operationReferenceList" type="meta:OperationReferenceList"/>
+  <xsd:complexType name="OperationReferenceList">
+    <xsd:sequence>
+      <xsd:element ref="meta:operationReference" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+   <!-- messages -->
+
+  <xsd:element name="find_interfaceByMessagePartMetadata" type="meta:Find_interfaceByMessagePartMetadata"/>
+  <xsd:complexType name="Find_interfaceByMessagePartMetadata">
+    <xsd:sequence>
+      <xsd:element ref="meta:metadataQueryBag"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:element name="find_interfaceByOperationMetadata" type="meta:Find_interfaceByOperationMetadata"/>
+  <xsd:complexType name="Find_interfaceByOperationMetadata">
+    <xsd:sequence>
+      <xsd:element ref="meta:metadataQueryBag"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="find_operation" type="meta:Find_operation"/>
+  <xsd:complexType name="Find_operation">
+    <xsd:sequence>
+      <xsd:element ref="meta:findQualifiers" minOccurs="0"/>
+      <xsd:element ref="meta:name" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="meta:operationMetadataQueryBag" minOccurs="0"/>
+      <xsd:element ref="meta:messageName" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="meta:messageNamespace" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="meta:messagePartName" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="meta:messagePartMetadataQueryBag" minOccurs="0"/>
+      <xsd:element ref="meta:entityReference" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

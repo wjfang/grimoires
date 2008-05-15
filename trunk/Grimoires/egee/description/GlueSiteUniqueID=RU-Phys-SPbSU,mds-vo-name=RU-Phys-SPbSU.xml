@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=RU-Phys-SPbSU,mds-vo-name=RU-Phys-SPbSU">
+    <Name>RU-Phys-SPbSU</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:mstep@mms.nw.ru</UserSupportContact>
+    <SysAdminContact>mailto:mstep@mms.nw.ru</SysAdminContact>
+    <SecurityContact>mailto:mstep@mms.nw.ru</SecurityContact>
+    <Location>St.Petersburg, Russia</Location>
+    <Latitude>59.0</Latitude>
+    <Longitude>30.0</Longitude>
+    <Web>http://www.phys.spbu.ru</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>http://w3.ihep.su/egee/</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ce.phys.spbu.ru,mds-vo-name=RU-Phys-SPbSU">
+        <Name>ce.phys.spbu.ru</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce.phys.spbu.ru,GlueClusterUniqueID=ce.phys.spbu.ru,mds-vo-name=RU-Phys-SPbSU">
+            <Name>ce.phys.spbu.ru</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.8" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="GenuineIntel" Model="PIV" ClockSpeed="3200"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="2048"/>
+            <Architecture SMPSize="4"/>
+            <Benchmark SI00="381" SF00="0"/>
+            <Location LocalID="VO-dteam-GLITE-3_0_2">
+                <Name>VO-dteam-GLITE-3_0_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-ops-GLITE-3_0_2">
+                <Name>VO-ops-GLITE-3_0_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_OPS_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=se.phys.spbu.ru,mds-vo-name=RU-Phys-SPbSU">
+        <InformationServiceURL>ldap://se.phys.spbu.ru:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>59</SizeTotal>
+        <SizeFree>56</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/phys.spbu.ru/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1504</UsedSpace>
+            <AvailableSpace>56030000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/phys.spbu.ru/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>4203</UsedSpace>
+            <AvailableSpace>56030000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://se.phys.spbu.ru</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://se.phys.spbu.ru</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://se.phys.spbu.ru</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=ce.phys.spbu.ru,mds-vo-name=RU-Phys-SPbSU">
+        <Name>RU-Phys-SPbSU-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>ce.phys.spbu.ru</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-http://ce.phys.spbu.ru:8085/,mds-vo-name=RU-Phys-SPbSU">
+        <Name>RU-Phys-SPbSU-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>http://ce.phys.spbu.ru:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-08-30T13:03:11.000+04:00</StartTime>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-ce.phys.spbu.ru,mds-vo-name=RU-Phys-SPbSU">
+        <Name>RU-Phys-SPbSU-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>ce.phys.spbu.ru</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-08-30T13:03:11.000+04:00</StartTime>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb.phys.spbu.ru:7772,mds-vo-name=RU-Phys-SPbSU">
+        <Name>RU-Phys-SPbSU-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb.phys.spbu.ru:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://se.phys.spbu.ru:8443/srm/managerv1,mds-vo-name=RU-Phys-SPbSU">
+        <Name>RU-Phys-SPbSU-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://se.phys.spbu.ru:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://se.phys.spbu.ru:8446/srm/managerv2,mds-vo-name=RU-Phys-SPbSU">
+        <Name>RU-Phys-SPbSU-srm</Name>
+        <Type>srm</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://se.phys.spbu.ru:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=JP-KEK-CRC-01,mds-vo-name=JP-KEK-CRC-01">
+    <Name>JP-KEK-CRC-01</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:dgteam@ml.post.kek.jp</UserSupportContact>
+    <SysAdminContact>mailto:dgteam@ml.post.kek.jp</SysAdminContact>
+    <SecurityContact>mailto:dgteam@ml.post.kek.jp</SecurityContact>
+    <Location>Tsukuba, Japan</Location>
+    <Latitude>36.1485</Latitude>
+    <Longitude>140.0761</Longitude>
+    <Web>http://grid.kek.jp/</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>http://www.twgrid.org/aproc/</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=dg10.cc.kek.jp,mds-vo-name=JP-KEK-CRC-01">
+        <Name>dg10.cc.kek.jp</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=dg10.cc.kek.jp,GlueClusterUniqueID=dg10.cc.kek.jp,mds-vo-name=JP-KEK-CRC-01">
+            <Name>dg10.cc.kek.jp</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.5" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="PIV" ClockSpeed="2993"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1024"/>
+            <Architecture SMPSize="1"/>
+            <Benchmark SI00="1100" SF00="1000"/>
+            <Location LocalID="VO-belle-MPICH">
+                <Name>VO-belle-MPICH</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BELLE_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-belle-hoge-0.0.1">
+                <Name>VO-belle-hoge-0.0.1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BELLE_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-belle-hoge-0.0.3">
+                <Name>VO-belle-hoge-0.0.3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BELLE_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=dg11.cc.kek.jp,mds-vo-name=JP-KEK-CRC-01">
+        <InformationServiceURL>ldap://dg11.cc.kek.jp:2170/mds-vo-name=resource,o=grid</InformationServiceURL>
+        <SizeTotal>1540</SizeTotal>
+        <SizeFree>1260</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="belle">
+            <Path>/dpm/cc.kek.jp/home/belle</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>5229830</UsedSpace>
+            <AvailableSpace>1260000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="apdg">
+            <Path>/dpm/cc.kek.jp/home/apdg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>1260000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ail">
+            <Path>/dpm/cc.kek.jp/home/ail</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>1260000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="g4med">
+            <Path>/dpm/cc.kek.jp/home/g4med</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>19365</UsedSpace>
+            <AvailableSpace>1260000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/cc.kek.jp/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>14038</UsedSpace>
+            <AvailableSpace>1260000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/cc.kek.jp/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2547</UsedSpace>
+            <AvailableSpace>1260000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ppj">
+            <Path>/dpm/cc.kek.jp/home/ppj</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>115343</UsedSpace>
+            <AvailableSpace>1260000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ilc">
+            <Path>/dpm/cc.kek.jp/home/ilc</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>35192737</UsedSpace>
+            <AvailableSpace>1260000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="calice">
+            <Path>/dpm/cc.kek.jp/home/calice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>58528048</UsedSpace>
+            <AvailableSpace>1260000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://dg11.cc.kek.jp</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://dg11.cc.kek.jp</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://dg11.cc.kek.jp</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=KEK1-KEK2_dg08.cc.kek.jp_org.glite.ChannelAgent,mds-vo-name=JP-KEK-CRC-01">
+        <Name>KEK1-KEK2_dg08.cc.kek.jp_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T11:43:01.000Z</StartTime>
+        <Owner>belle</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=KEK-KEK_dg08.cc.kek.jp_org.glite.ChannelAgent,mds-vo-name=JP-KEK-CRC-01">
+        <Name>KEK-KEK_dg08.cc.kek.jp_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T11:43:01.000Z</StartTime>
+        <Owner>belle</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=KEK2-KEK2_dg08.cc.kek.jp_org.glite.ChannelAgent,mds-vo-name=JP-KEK-CRC-01">
+        <Name>KEK2-KEK2_dg08.cc.kek.jp_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T11:43:01.000Z</StartTime>
+        <Owner>belle</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_dg08.cc.kek.jp_org.glite.FileTransfer,mds-vo-name=JP-KEK-CRC-01">
+        <Name>glite-data-transfer-fts_dg08.cc.kek.jp</Name>
+        <Type>org.glite.FileTransfer</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://dg08.cc.kek.jp:8443/glite-data-transfer-fts/services/FileTransfer</Endpoint>
+        <WSDL>https://dg08.cc.kek.jp:8443/glite-data-transfer-fts/services/FileTransfer?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T11:43:01.000Z</StartTime>
+        <Owner>ail</Owner>
+        <Owner>apdg</Owner>
+        <Owner>belle</Owner>
+        <Owner>calice</Owner>
+        <Owner>dteam</Owner>
+        <Owner>g4med</Owner>
+        <Owner>ilc</Owner>
+        <Owner>ops</Owner>
+        <Owner>ppj</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_dg08.cc.kek.jp_org.glite.ChannelManagement,mds-vo-name=JP-KEK-CRC-01">
+        <Name>glite-data-transfer-fts_dg08.cc.kek.jp-channel</Name>
+        <Type>org.glite.ChannelManagement</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://dg08.cc.kek.jp:8443/glite-data-transfer-fts/services/ChannelManagement</Endpoint>
+        <WSDL>https://dg08.cc.kek.jp:8443/glite-data-transfer-fts/services/ChannelManagement?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T11:43:01.000Z</StartTime>
+        <Owner>ail</Owner>
+        <Owner>apdg</Owner>
+        <Owner>belle</Owner>
+        <Owner>calice</Owner>
+        <Owner>dteam</Owner>
+        <Owner>g4med</Owner>
+        <Owner>ilc</Owner>
+        <Owner>ops</Owner>
+        <Owner>ppj</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_dg08.cc.kek.jp_org.glite.Delegation,mds-vo-name=JP-KEK-CRC-01">
+        <Name>glite-data-transfer-fts_dg08.cc.kek.jp-delegation</Name>
+        <Type>org.glite.Delegation</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://dg08.cc.kek.jp:8443/glite-data-transfer-fts/services/gridsite-delegation</Endpoint>
+        <WSDL>https://dg08.cc.kek.jp:8443/glite-data-transfer-fts/services/gridsite-delegation?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T11:43:01.000Z</StartTime>
+        <Owner>ail</Owner>
+        <Owner>apdg</Owner>
+        <Owner>belle</Owner>
+        <Owner>calice</Owner>
+        <Owner>dteam</Owner>
+        <Owner>g4med</Owner>
+        <Owner>ilc</Owner>
+        <Owner>ops</Owner>
+        <Owner>ppj</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://dg16.cc.kek.jp:8085/,mds-vo-name=JP-KEK-CRC-01">
+        <Name>JP-KEK-CRC-01-lfc-dli</Name>
+        <Type>data-location-interface</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>http://dg16.cc.kek.jp:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-10T06:36:51.000Z</StartTime>
+        <Owner>g4med</Owner>
+        <Owner>apdg</Owner>
+        <Owner>ppj</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=dg16.cc.kek.jp,mds-vo-name=JP-KEK-CRC-01">
+        <Name>JP-KEK-CRC-01-lfc</Name>
+        <Type>lcg-file-catalog</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>dg16.cc.kek.jp</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-10T06:36:51.000Z</StartTime>
+        <Owner>g4med</Owner>
+        <Owner>apdg</Owner>
+        <Owner>ppj</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-http://dg16.cc.kek.jp:8085/,mds-vo-name=JP-KEK-CRC-01">
+        <Name>JP-KEK-CRC-01-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>http://dg16.cc.kek.jp:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-10T06:36:51.000Z</StartTime>
+        <Owner>belle</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-dg16.cc.kek.jp,mds-vo-name=JP-KEK-CRC-01">
+        <Name>JP-KEK-CRC-01-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>dg16.cc.kek.jp</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-10T06:36:51.000Z</StartTime>
+        <Owner>belle</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=dg12.cc.kek.jp:2136,mds-vo-name=JP-KEK-CRC-01">
+        <Name>JP-KEK-CRC-01-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://dg12.cc.kek.jp:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>belle</Owner>
+        <Owner>apdg</Owner>
+        <Owner>ail</Owner>
+        <Owner>g4med</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>ppj</Owner>
+        <Owner>ilc</Owner>
+        <Owner>calice</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=dg15.cc.kek.jp:7512,mds-vo-name=JP-KEK-CRC-01">
+        <Name>JP-KEK-CRC-01-myproxy</Name>
+        <Type>MyProxy</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>dg15.cc.kek.jp:7512</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=dg09.cc.kek.jp:7772,mds-vo-name=JP-KEK-CRC-01">
+        <Name>JP-KEK-CRC-01-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>dg09.cc.kek.jp:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>belle</Owner>
+        <Owner>apdg</Owner>
+        <Owner>ail</Owner>
+        <Owner>g4med</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>ppj</Owner>
+        <Owner>ilc</Owner>
+        <Owner>calice</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://dg11.cc.kek.jp:8443/srm/managerv1,mds-vo-name=JP-KEK-CRC-01">
+        <Name>JP-KEK-CRC-01-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://dg11.cc.kek.jp:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://dg11.cc.kek.jp:8446/srm/managerv2,mds-vo-name=JP-KEK-CRC-01">
+        <Name>JP-KEK-CRC-01-srm</Name>
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://dg11.cc.kek.jp:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=gsissh://dg17.cc.kek.jp:1975,mds-vo-name=JP-KEK-CRC-01">
+        <Name>JP-KEK-CRC-01-vobox</Name>
+        <Type>VOBOX</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>gsissh://dg17.cc.kek.jp:1975</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

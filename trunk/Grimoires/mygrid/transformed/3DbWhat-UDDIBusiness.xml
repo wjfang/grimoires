@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<businessEntity businessKey="Blueprint" xmlns="urn:uddi-org:api_v2">
+ <name>
+Blueprint </name>
+ <description>
+The Blueprint Initiative </description>
+ <categoryBag>
+  <keyedReference keyName="authorizedName" keyValue="" tModelKey="grimoires:business:metadata"/>
+ </categoryBag>
+</businessEntity>

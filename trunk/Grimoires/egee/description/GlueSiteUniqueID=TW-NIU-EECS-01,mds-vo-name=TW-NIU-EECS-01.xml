@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=TW-NIU-EECS-01,mds-vo-name=TW-NIU-EECS-01">
+    <Name>TW-NIU-EECS-01</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto: cclin@niu.edu.tw</UserSupportContact>
+    <SysAdminContact>mailto: cclin@niu.edu.tw</SysAdminContact>
+    <SecurityContact>mailto: cclin@niu.edu.tw</SecurityContact>
+    <Location>Taipei, Taiwan</Location>
+    <Latitude>24.745</Latitude>
+    <Longitude>121.747</Longitude>
+    <Web>http://eecs.niu.edu.tw</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER 2</OtherInfo>
+    <OtherInfo>my-bigger-site.their_domain</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=niugce.grid.niu.edu.tw,mds-vo-name=TW-NIU-EECS-01">
+        <Name>niugce.grid.niu.edu.tw</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=niugce.grid.niu.edu.tw,GlueClusterUniqueID=niugce.grid.niu.edu.tw,mds-vo-name=TW-NIU-EECS-01">
+            <Name>niugce.grid.niu.edu.tw</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.6" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="Athlon" ClockSpeed="1600"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="true"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1025" RAMSize="512"/>
+            <Architecture SMPSize="1"/>
+            <Benchmark SI00="381" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=niugdpm.grid.niu.edu.tw,mds-vo-name=TW-NIU-EECS-01">
+        <InformationServiceURL>ldap://niugdpm.grid.niu.edu.tw:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>394</SizeTotal>
+        <SizeFree>374</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/grid.niu.edu.tw/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>5872</UsedSpace>
+            <AvailableSpace>373830000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="twgrid">
+            <Path>/dpm/grid.niu.edu.tw/home/twgrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>373830000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/grid.niu.edu.tw/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>588</UsedSpace>
+            <AvailableSpace>373830000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://niugdpm.grid.niu.edu.tw</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://niugdpm.grid.niu.edu.tw</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://niugdpm.grid.niu.edu.tw</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=httpg://niugdpm.grid.niu.edu.tw:8443/srm/managerv1,mds-vo-name=TW-NIU-EECS-01">
+        <Name>TW-NIU-EECS-01-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://niugdpm.grid.niu.edu.tw:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://niugdpm.grid.niu.edu.tw:8446/srm/managerv2,mds-vo-name=TW-NIU-EECS-01">
+        <Name>TW-NIU-EECS-01-srm</Name>
+        <Type>srm</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://niugdpm.grid.niu.edu.tw:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

@@ -1,0 +1,7 @@
+SELECT ?businessService0 WHERE
+(?businessService0, <rdf:type>, <uddi:BusinessService>)
+(?businessService0, <uddi:hasName>, ?nameBag3)
+(?nameBag3, ?v_7, ?name2)
+AND ?name2 =~ /^Weijian's Business' Service55566677x/i
+USING
+rdf FOR <http://www.w3.org/1999/02/22-rdf-syntax-ns#>, uddi FOR <http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#>, topics FOR <http://www.mygrid.ecs.soton.ac.uk/topics.rdfs#>, damls FOR <http://www.mygrid.ecs.soton.ac.uk/damls.rdfs#>, metadata FOR <http://www.mygrid.ecs.soton.ac.uk/metadata.rdfs#>, wsdl FOR <http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#>

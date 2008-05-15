@@ -1,0 +1,28 @@
+  <serviceDescriptions   xmlns="pd">
+  <serviceDescription>
+  <serviceName>SHoundGetPDB3D</serviceName>
+    		<organisation>
+    			<organisationName>Blueprint</organisationName>
+    			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+    		</organisation>
+    		<locationURL>http://seqhound.blueprint.org/SHoundGetPDB3D</locationURL>
+  		<interfaceWSDL>http://seqhound.blueprint.org/SHoundGetPDB3D?wsdl</interfaceWSDL>
+  <serviceDescriptionText>Retrieves an PDB representation of a 3-D structure</serviceDescriptionText> 
+  <operations>
+  <serviceOperation>
+  <operationName>SHoundGetPDB3D</operationName> 
+  <operationInputs>
+  <parameter>
+  <parameterName>mmdbid</parameterName> 
+  </parameter>
+  </operationInputs>
+  <operationOutputs>
+  <parameter>
+  <parameterName>result</parameterName> 
+  </parameter>
+  </operationOutputs>
+  </serviceOperation>
+  </operations>
+  <serviceType>SeqHound service</serviceType> 
+  </serviceDescription>
+  </serviceDescriptions>

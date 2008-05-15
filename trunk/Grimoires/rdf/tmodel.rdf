@@ -1,0 +1,42 @@
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:j.0="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#" >
+<rdf:Description rdf:nodeID="A0">
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#OverviewDoc"/>
+<j.0:hasDescription rdf:nodeID="A1"/>
+<j.0:hasOverviewURL>http://www.ecs.soton.ac.uk/~wf/anonymous.wsdl</j.0:hasOverviewURL>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A2">
+<rdf:_1 rdf:nodeID="A3"/>
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#CategoryBag"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A4">
+<j.0:isDeleted>false</j.0:isDeleted>
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#TModel"/>
+<j.0:hasCategoryBag rdf:nodeID="A2"/>
+<j.0:hasOverviewDoc rdf:nodeID="A0"/>
+<j.0:hasDescription rdf:nodeID="A5"/>
+<j.0:hasName>Weijian's TModel55566677</j.0:hasName>
+<j.0:hasTModelKey>XXXYYYZZZAAABBBCCC</j.0:hasTModelKey>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A6">
+<j.0:hasDescription>Weijian's TModel is perfect</j.0:hasDescription>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A3">
+<j.0:hasKeyName>uddi-org:types</j.0:hasKeyName>
+<j.0:hasTModel>uuid:C1ACF26D-9672-4404-9D70-39B756E62AB4</j.0:hasTModel>
+<j.0:hasKeyValue>wsdlSpec</j.0:hasKeyValue>
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#KeyedReference"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A1">
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#DescriptionBag"/>
+<rdf:_1 rdf:nodeID="A7"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A7">
+<j.0:hasDescription>TModel overview document55566677</j.0:hasDescription>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A5">
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#DescriptionBag"/>
+<rdf:_1 rdf:nodeID="A6"/>
+</rdf:Description>
+</rdf:RDF>

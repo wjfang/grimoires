@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+	<serviceDescription>
+		<serviceName>SHoundChromosomeFromGenomeList</serviceName>
+		<organisation>
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundChromosomeFromGenomeList</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundChromosomeFromGenomeList?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Gets a list of DNA molecules from a complete genome list. The desired return types of DNA molecules can be filtered. (Please note, the order of the list is not maintained).</serviceDescriptionText>
+		<operations>
+			<serviceOperation>
+				<operationName>SHoundChromosomeFromGenomeList</operationName>
+				<operationInputs>
+					<parameter>
+						<parameterName>taxList</parameterName>
+						<parameterDescription>NCBI Taxon identifier - this points to a place in the taxonomy tree</parameterDescription>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Collection</collectionSemanticType>
+					</parameter>
+
+					<parameter>
+						<parameterName>chromflags</parameterName>
+						<parameterDescription>filtered integer list (&quot;byte flags&quot;) representing different kinds of the DNA molecules, for example:
+1 is chromosome 
+2 is mitochondrion 
+4 is chloroplast 
+8 is plasmid 
+16 is extra-chromosomal element 
+32 is undefined 
+64 is phage 
+128 is undefined 
+</parameterDescription>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Collection</collectionSemanticType>
+						<collectionFormat>String</collectionFormat>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs>
+					<parameter>
+						<parameterName>result</parameterName>
+						<parameterDescription>list of chromosome identifiers </parameterDescription>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_record_id</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Collection</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#retrieving</operationTask>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

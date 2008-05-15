@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<businessService businessKey="European Bioinformatics Institute" serviceKey="alignment_global::needle" xmlns="urn:uddi-org:api_v2">
+ <name>
+alignment_global::needle </name>
+ <description>
+Performs a global alignment using Needleman-Wunsch </description>
+ <bindingTemplates>
+  <bindingTemplate bindingKey="http://industry.ebi.ac.uk/soap/soaplab/alignment_global::needle" serviceKey="alignment_global::needle">
+   <accessPoint>
+http://industry.ebi.ac.uk/soap/soaplab/alignment_global::needle   </accessPoint>
+   <tModelInstanceDetails>
+    <tModelInstanceInfo tModelKey="http://industry.ebi.ac.uk/soap/soaplab/alignment_global::needle?wsdl"/>
+   </tModelInstanceDetails>
+  </bindingTemplate>
+ </bindingTemplates>
+ <categoryBag>
+  <keyedReference keyName="serviceType" keyValue="Soaplab service" tModelKey="grimoires:service:metadata"/>
+ </categoryBag>
+</businessService>

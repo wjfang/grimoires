@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=UFRJ-IF,mds-vo-name=UFRJ-IF">
+    <Name>UFRJ-IF</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:grid-prod@if.ufrj.br</UserSupportContact>
+    <SysAdminContact>mailto:grid-prod@if.ufrj.br</SysAdminContact>
+    <SecurityContact>mailto:grid-prod@if.ufrj.br</SecurityContact>
+    <Location>Rio de Janeiro, Brazil</Location>
+    <Latitude>-22.86</Latitude>
+    <Longitude>-43.23</Longitude>
+    <Web>http://www.if.ufrj.br/</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-3</OtherInfo>
+    <OtherInfo>CERN-ROC</OtherInfo>
+</Site>

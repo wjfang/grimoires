@@ -1,0 +1,5 @@
+<!-- All users have full access control. -->
+<authlist>
+	<permission identity="#AllUsers#" operationList=" " mode="restrict" />
+</authlist>
+

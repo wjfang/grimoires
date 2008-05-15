@@ -1,0 +1,15 @@
+<undeployment
+    xmlns="http://xml.apache.org/axis/wsdd/">
+
+  <!-- Services from Grimoires WSDL service -->
+
+  <service name="inquire_uddiMetadata"/>
+  <service name="inquire_metadata"/>
+  <service name="publish_metadata"/>
+  <service name="publish"/>
+  <service name="inquire"/>
+  <service name="wsdl"/>
+  <service name="inquire_wsdlMetadata"/>
+  <service name="rdf"/>
+  
+</undeployment>

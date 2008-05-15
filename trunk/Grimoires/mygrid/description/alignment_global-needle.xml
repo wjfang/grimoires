@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+	<serviceDescription>
+		<serviceName>alignment_global_needle</serviceName>
+		<organisation>
+			<organisationName>European Bioinformatics Institute</organisationName>
+			<organisationDescriptionText> </organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://industry.ebi.ac.uk/soap/soaplab/alignment_global_needle</locationURL>
+		<interfaceWSDL>http://industry.ebi.ac.uk/soap/soaplab/alignment_global_needle?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Performs a global alignment using Needleman-Wunsch</serviceDescriptionText>
+		<operations>
+			<serviceOperation>
+				<operationName>alignment_global_needle</operationName>
+				<operationInputs>
+					<parameter>
+						<parameterName>asequence_usa</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>asequence_direct_data</parameterName>
+						<semanticType>biological_sequence</semanticType>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>sformat1</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>sbegin1</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>send1</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>sprotein1</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>snucleotide1</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>sreverse1</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>slower1</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>supper1</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>bsequence_usa</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>bsequence_direct_data</parameterName>
+						<semanticType>biological_sequence</semanticType>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>sformat2</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>sbegin2</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>send2</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>sprotein2</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>snucleotide2</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>sreverse2</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>slower2</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>supper2</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>gapopen</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>gapextend</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>datafile_d</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>datafile_url</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>brief</parameterName>
+						<defaultValue>false</defaultValue>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs>
+					<parameter>
+						<parameterName>report</parameterName>
+						<semanticType>sequence_alignment_report</semanticType>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>detailed_status</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+					<parameter>
+						<parameterName>outfile</parameterName>
+						<transportDataType>String</transportDataType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>pairwise_global_aligning</operationTask>
+				<operationMethod>Needleman_and_Wunsch_global_sequence_alignment_algorithm</operationMethod>
+				<operationApplication>EMBOSS</operationApplication>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>Soaplab service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

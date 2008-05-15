@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+	<serviceDescription>
+		<serviceName>SHoundDNAFromChromosome</serviceName>
+		<organisation>
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundDNAFromChromosome</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundDNAFromChromosome?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Get an array of dna gi's for a given chromosome identifier</serviceDescriptionText>
+		<operations/>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

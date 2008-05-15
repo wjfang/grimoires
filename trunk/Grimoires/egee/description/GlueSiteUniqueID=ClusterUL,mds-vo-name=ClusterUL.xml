@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=ClusterUL,mds-vo-name=ClusterUL">
+    <Name>ClusterUL</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:grid-admin@fam.ulusiada.pt</UserSupportContact>
+    <SysAdminContact>mailto:grid-admin@fam.ulusiada.pt</SysAdminContact>
+    <SecurityContact>mailto:grid-admin@fam.ulusiada.pt</SecurityContact>
+    <Location>V.N. Famalicao, Portugal</Location>
+    <Latitude>41.410142</Latitude>
+    <Longitude>-8.522784</Longitude>
+    <Web>http://grid.fam.ulusiada.pt</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-3</OtherInfo>
+    <OtherInfo>www.lip.pt</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ce01.fam.ulusiada.pt,mds-vo-name=ClusterUL">
+        <Name>ce01.fam.ulusiada.pt</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce01.fam.ulusiada.pt,GlueClusterUniqueID=ce01.fam.ulusiada.pt,mds-vo-name=ClusterUL">
+            <Name>ce01.fam.ulusiada.pt</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.5" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel" Model="PIV" ClockSpeed="2000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1024" RAMSize="512"/>
+            <Architecture SMPSize="1"/>
+            <Benchmark SI00="381" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=se01-dmp.fam.ulusiada.pt,mds-vo-name=ClusterUL">
+        <InformationServiceURL>ldap://se01-dmp.fam.ulusiada.pt:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>460</SizeTotal>
+        <SizeFree>437</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/fam.ulusiada.pt/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>85</UsedSpace>
+            <AvailableSpace>436640000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="swetest">
+            <Path>/dpm/fam.ulusiada.pt/home/swetest</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>436640000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/fam.ulusiada.pt/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>86</UsedSpace>
+            <AvailableSpace>436640000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomed">
+            <Path>/dpm/fam.ulusiada.pt/home/biomed</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>153891</UsedSpace>
+            <AvailableSpace>436640000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://se01-dmp.fam.ulusiada.pt</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://se01-dmp.fam.ulusiada.pt</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://se01-dmp.fam.ulusiada.pt</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=mon01.fam.ulusiada.pt:2136,mds-vo-name=ClusterUL">
+        <Name>ClusterUL-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://mon01.fam.ulusiada.pt:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>dteam</Owner>
+        <Owner>swetest</Owner>
+        <Owner>ops</Owner>
+        <Owner>biomed</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://se01-dmp.fam.ulusiada.pt:8443/srm/managerv1,mds-vo-name=ClusterUL">
+        <Name>ClusterUL-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://se01-dmp.fam.ulusiada.pt:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://se01-dmp.fam.ulusiada.pt:8446/srm/managerv2,mds-vo-name=ClusterUL">
+        <Name>ClusterUL-srm</Name>
+        <Type>srm</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://se01-dmp.fam.ulusiada.pt:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

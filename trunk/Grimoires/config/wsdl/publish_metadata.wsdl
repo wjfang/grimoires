@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" 
+    targetNamespace="http://www.grimoires.org/publish_metadata.wsdl"
+    xmlns:tns="http://www.grimoires.org/publish_metadata.wsdl"
+    xmlns:meta="http://www.grimoires.org/metadata.xsd" 
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"   
+    name="Grimoires_publish_metadata_API">
+
+  <types>
+    <xsd:schema
+      targetNamespace="http://www.grimoires.org/metadata.xsd"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import
+	schemaLocation="/grimoires/xsd/metadata.xsd" />
+      
+    </xsd:schema>
+  </types>
+
+  <message name="faultDetailList">
+    <part name="body" element="meta:faultDetailList"/>
+  </message>
+
+  <message name="addMetadataToEntity">
+    <part name="body" element="meta:addMetadataToEntity" />
+  </message>
+
+  <message name="deleteMetadata">
+    <part name="body" element="meta:deleteMetadata" />
+  </message>
+
+  <message name="metadataInfo">
+    <part name="body" element="meta:metadataInfo" />
+  </message> 
+
+  <message name="success">
+    <part name="body" element="meta:success" />
+  </message>
+
+  <portType name="PublishMetadataPort">
+    <operation name="addMetadataToEntity">
+      <input message="tns:addMetadataToEntity" />
+      <output message="tns:metadataInfo" />
+      <fault name="error" message="tns:faultDetailList"/>
+    </operation>		
+    <operation name="deleteMetadata">
+      <input message="tns:deleteMetadata" />
+      <output message="tns:success"/>
+      <fault name="error" message="tns:faultDetailList"/>
+    </operation>		
+  </portType>
+
+  <binding name="PublishMetadataSoap" type="tns:PublishMetadataPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+
+    <!-- note i had to call this 'Op' otherwise
+    axis wsdl2java used wrapped instead of document mode -->
+    <operation name="addMetadataToEntity">
+      <soap:operation soapAction="addMetadataToEntity" style="document" />
+      <input>
+	<soap:body use="literal" parts="body"/>
+      </input>
+      <output>
+	<soap:body use="literal" parts="body" />
+      </output>
+      <fault name="error">
+	<soap:fault name="error" use="literal"/>
+      </fault>
+    </operation>		
+
+    <operation name="deleteMetadata">
+      <soap:operation soapAction="deleteMetadata" style="document" />
+      <input>
+	<soap:body use="literal" parts="body"/>
+      </input>
+      <output>
+	<soap:body use="literal" parts="body" />
+      </output>
+      <fault name="error">
+	<soap:fault name="error" use="literal"/>
+      </fault>
+    </operation>		
+    
+  </binding>
+  <service name="Grimoires">
+    <port binding="tns:PublishMetadataSoap" name="publish_metadata">
+      <soap:address location="http://localhost:8080/grimoires/services/publish_metadata"/>
+    </port>
+  </service>
+
+</definitions>

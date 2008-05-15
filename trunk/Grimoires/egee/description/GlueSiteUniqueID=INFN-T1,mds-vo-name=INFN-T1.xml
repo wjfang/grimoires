@@ -1,0 +1,2249 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=INFN-T1,mds-vo-name=INFN-T1">
+    <Name>INFN-T1</Name>
+    <Description>INFN-T1</Description>
+    <UserSupportContact>mailto:t1-admin@cnaf.infn.it</UserSupportContact>
+    <SysAdminContact>mailto:t1-admin@cnaf.infn.it</SysAdminContact>
+    <SecurityContact>mailto:t1-admin@cnaf.infn.it</SecurityContact>
+    <Location>Bologna, Italy</Location>
+    <Latitude>44.4948</Latitude>
+    <Longitude>11.3417</Longitude>
+    <Web>http://www.cnaf.infn.it</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-1</OtherInfo>
+    <OtherInfo>CNAF-T1</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ce03-lcg.cr.cnaf.infn.it,mds-vo-name=INFN-T1">
+        <Name>ce03-lcg.cr.cnaf.infn.it</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce03-lcg.cr.cnaf.infn.it,GlueClusterUniqueID=ce03-lcg.cr.cnaf.infn.it,mds-vo-name=INFN-T1">
+            <Name>ce03-lcg.cr.cnaf.infn.it</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.6" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="Opteron" ClockSpeed="2200"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="8000" RAMSize="4096"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="747" SF00="672"/>
+            <Location LocalID="VO-atlas-production-12.0.6">
+                <Name>VO-atlas-production-12.0.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.95">
+                <Name>VO-atlas-production-12.0.95</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.20">
+                <Name>VO-atlas-production-13.0.20</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-babar-Moose-22.1.1d">
+                <Name>VO-babar-Moose-22.1.1d</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BABAR_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce04-lcg.cr.cnaf.infn.it,mds-vo-name=INFN-T1">
+        <Name>ce04-lcg.cr.cnaf.infn.it</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce04-lcg.cr.cnaf.infn.it,GlueClusterUniqueID=ce04-lcg.cr.cnaf.infn.it,mds-vo-name=INFN-T1">
+            <Name>ce04-lcg.cr.cnaf.infn.it</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.6" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="Opteron" ClockSpeed="2200"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="8000" RAMSize="4096"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="747" SF00="672"/>
+            <Location LocalID="VO-cms-ORCA_8_13_1_dar">
+                <Name>VO-cms-ORCA_8_13_1_dar</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-ORCA_8_13_3">
+                <Name>VO-cms-ORCA_8_13_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMKIN_3_1_0">
+                <Name>VO-cms-CMKIN_3_1_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMKIN_3_1_0_dar">
+                <Name>VO-cms-CMKIN_3_1_0_dar</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMKIN_4_1_0_dar">
+                <Name>VO-cms-CMKIN_4_1_0_dar</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMKIN_4_2_0_dar">
+                <Name>VO-cms-CMKIN_4_2_0_dar</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMKIN_4_4_0_dar">
+                <Name>VO-cms-CMKIN_4_4_0_dar</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-OSCAR_2_4_5_dar">
+                <Name>VO-cms-OSCAR_2_4_5_dar</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-OSCAR_3_6_5_SLC3_dar">
+                <Name>VO-cms-OSCAR_3_6_5_SLC3_dar</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-OSCAR_3_6_5_dar">
+                <Name>VO-cms-OSCAR_3_6_5_dar</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-ORCA_8_13_3_dar">
+                <Name>VO-cms-ORCA_8_13_3_dar</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMKIN_6_0_0">
+                <Name>VO-cms-CMKIN_6_0_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-ORCA_8_7_1_SLC3_dar">
+                <Name>VO-cms-ORCA_8_7_1_SLC3_dar</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce05-lcg.cr.cnaf.infn.it,mds-vo-name=INFN-T1">
+        <Name>ce05-lcg.cr.cnaf.infn.it</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce05-lcg.cr.cnaf.infn.it,GlueClusterUniqueID=ce05-lcg.cr.cnaf.infn.it,mds-vo-name=INFN-T1">
+            <Name>ce05-lcg.cr.cnaf.infn.it</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.5" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="Opteron" ClockSpeed="2200"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="8000" RAMSize="4096"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="747" SF00="672"/>
+            <Location LocalID="VO-atlas-JP-production">
+                <Name>VO-atlas-JP-production</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-cloud-IT">
+                <Name>VO-atlas-cloud-IT</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.31">
+                <Name>VO-atlas-production-12.0.31</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6">
+                <Name>VO-atlas-production-12.0.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.7">
+                <Name>VO-atlas-production-12.0.7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.95">
+                <Name>VO-atlas-production-12.0.95</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.20">
+                <Name>VO-atlas-production-13.0.20</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.30">
+                <Name>VO-atlas-production-13.0.30</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.42">
+                <Name>VO-atlas-release-11.0.42</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.5">
+                <Name>VO-atlas-release-11.0.5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-tier-T1">
+                <Name>VO-atlas-tier-T1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_8_4">
+                <Name>VO-cms-CMSSW_0_8_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_0_6">
+                <Name>VO-cms-CMSSW_1_0_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_1_1">
+                <Name>VO-cms-CMSSW_1_1_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_0">
+                <Name>VO-cms-CMSSW_1_2_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_3">
+                <Name>VO-cms-CMSSW_1_2_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_4">
+                <Name>VO-cms-CMSSW_1_2_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_6">
+                <Name>VO-cms-CMSSW_1_2_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_0">
+                <Name>VO-cms-CMSSW_1_3_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1">
+                <Name>VO-cms-CMSSW_1_3_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_2">
+                <Name>VO-cms-CMSSW_1_3_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_3">
+                <Name>VO-cms-CMSSW_1_3_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_4">
+                <Name>VO-cms-CMSSW_1_3_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_2">
+                <Name>VO-cms-CMSSW_1_4_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_3">
+                <Name>VO-cms-CMSSW_1_4_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_4">
+                <Name>VO-cms-CMSSW_1_4_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_5">
+                <Name>VO-cms-CMSSW_1_4_5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_6">
+                <Name>VO-cms-CMSSW_1_4_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_0">
+                <Name>VO-cms-CMSSW_1_5_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_1">
+                <Name>VO-cms-CMSSW_1_5_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_2">
+                <Name>VO-cms-CMSSW_1_5_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0">
+                <Name>VO-cms-CMSSW_1_6_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_1">
+                <Name>VO-cms-CMSSW_1_6_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_3">
+                <Name>VO-cms-CMSSW_1_6_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_4">
+                <Name>VO-cms-CMSSW_1_6_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc4_ia32_gcc345">
+                <Name>VO-cms-slc4_ia32_gcc345</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r9">
+                <Name>VO-lhcb-Gauss-v25r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r10">
+                <Name>VO-lhcb-Gauss-v25r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2">
+                <Name>VO-lhcb-XmlDDDB-v22r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r14">
+                <Name>VO-lhcb-XmlDDDB-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v12r10">
+                <Name>VO-lhcb-Boole-v12r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v12r18">
+                <Name>VO-lhcb-DaVinci-v12r18</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r6">
+                <Name>VO-lhcb-DaVinci-v17r6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r7">
+                <Name>VO-lhcb-DaVinci-v17r7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r8">
+                <Name>VO-lhcb-DaVinci-v17r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v18r0">
+                <Name>VO-lhcb-DaVinci-v18r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r0">
+                <Name>VO-lhcb-DaVinci-v19r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r1">
+                <Name>VO-lhcb-DaVinci-v19r1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r2">
+                <Name>VO-lhcb-DaVinci-v19r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r15">
+                <Name>VO-lhcb-Brunel-v30r15</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r17">
+                <Name>VO-lhcb-Brunel-v30r17</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r9">
+                <Name>VO-lhcb-DecFiles-v13r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r10">
+                <Name>VO-lhcb-DecFiles-v13r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v5r0">
+                <Name>VO-lhcb-ParamFiles-v5r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-CondDB">
+                <Name>VO-lhcb-CondDB</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r12">
+                <Name>VO-lhcb-DecFiles-v13r12</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-babar-Moose-18.7.0b">
+                <Name>VO-babar-Moose-18.7.0b</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BABAR_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-babar-Moose-18.7.0h">
+                <Name>VO-babar-Moose-18.7.0h</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BABAR_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-babar-Moose-22.1.1c">
+                <Name>VO-babar-Moose-22.1.1c</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BABAR_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-babar-Moose-22.1.1d">
+                <Name>VO-babar-Moose-22.1.1d</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BABAR_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce06-lcg.cr.cnaf.infn.it,mds-vo-name=INFN-T1">
+        <Name>ce06-lcg.cr.cnaf.infn.it</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce06-lcg.cr.cnaf.infn.it,GlueClusterUniqueID=ce06-lcg.cr.cnaf.infn.it,mds-vo-name=INFN-T1">
+            <Name>ce06-lcg.cr.cnaf.infn.it</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.5" Name="ScientificCERNSLC"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="Opteron" ClockSpeed="2200"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="8000" RAMSize="4096"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="747" SF00="672"/>
+            <Location LocalID="VO-atlas-JP-production">
+                <Name>VO-atlas-JP-production</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-cloud-IT">
+                <Name>VO-atlas-cloud-IT</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.31">
+                <Name>VO-atlas-production-12.0.31</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.7">
+                <Name>VO-atlas-production-12.0.7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.95">
+                <Name>VO-atlas-production-12.0.95</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.5.0">
+                <Name>VO-atlas-production-12.5.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.20">
+                <Name>VO-atlas-production-13.0.20</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.30">
+                <Name>VO-atlas-production-13.0.30</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.42">
+                <Name>VO-atlas-release-11.0.42</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.5">
+                <Name>VO-atlas-release-11.0.5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-tier-T1">
+                <Name>VO-atlas-tier-T1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-babar-Moose-18.7.0b">
+                <Name>VO-babar-Moose-18.7.0b</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BABAR_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-babar-Moose-18.7.0h">
+                <Name>VO-babar-Moose-18.7.0h</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BABAR_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-babar-Moose-22.1.1d">
+                <Name>VO-babar-Moose-22.1.1d</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BABAR_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-babar-Moose-22.3.0a">
+                <Name>VO-babar-Moose-22.3.0a</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BABAR_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_8_4">
+                <Name>VO-cms-CMSSW_0_8_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_0_6">
+                <Name>VO-cms-CMSSW_1_0_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_1_1">
+                <Name>VO-cms-CMSSW_1_1_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_0">
+                <Name>VO-cms-CMSSW_1_2_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_3">
+                <Name>VO-cms-CMSSW_1_2_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_4">
+                <Name>VO-cms-CMSSW_1_2_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_6">
+                <Name>VO-cms-CMSSW_1_2_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_0">
+                <Name>VO-cms-CMSSW_1_3_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1">
+                <Name>VO-cms-CMSSW_1_3_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_2">
+                <Name>VO-cms-CMSSW_1_3_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_3">
+                <Name>VO-cms-CMSSW_1_3_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_4">
+                <Name>VO-cms-CMSSW_1_3_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_2">
+                <Name>VO-cms-CMSSW_1_4_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_3">
+                <Name>VO-cms-CMSSW_1_4_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_4">
+                <Name>VO-cms-CMSSW_1_4_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_5">
+                <Name>VO-cms-CMSSW_1_4_5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_6">
+                <Name>VO-cms-CMSSW_1_4_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_0">
+                <Name>VO-cms-CMSSW_1_5_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_1">
+                <Name>VO-cms-CMSSW_1_5_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_2">
+                <Name>VO-cms-CMSSW_1_5_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0">
+                <Name>VO-cms-CMSSW_1_6_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_1">
+                <Name>VO-cms-CMSSW_1_6_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_3">
+                <Name>VO-cms-CMSSW_1_6_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_4">
+                <Name>VO-cms-CMSSW_1_6_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc4_ia32_gcc345">
+                <Name>VO-cms-slc4_ia32_gcc345</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r9">
+                <Name>VO-lhcb-Gauss-v25r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r10">
+                <Name>VO-lhcb-Gauss-v25r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2">
+                <Name>VO-lhcb-XmlDDDB-v22r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r14">
+                <Name>VO-lhcb-XmlDDDB-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v12r10">
+                <Name>VO-lhcb-Boole-v12r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v12r18">
+                <Name>VO-lhcb-DaVinci-v12r18</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r6">
+                <Name>VO-lhcb-DaVinci-v17r6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r7">
+                <Name>VO-lhcb-DaVinci-v17r7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r8">
+                <Name>VO-lhcb-DaVinci-v17r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v18r0">
+                <Name>VO-lhcb-DaVinci-v18r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r0">
+                <Name>VO-lhcb-DaVinci-v19r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r1">
+                <Name>VO-lhcb-DaVinci-v19r1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r2">
+                <Name>VO-lhcb-DaVinci-v19r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r15">
+                <Name>VO-lhcb-Brunel-v30r15</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r17">
+                <Name>VO-lhcb-Brunel-v30r17</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r9">
+                <Name>VO-lhcb-DecFiles-v13r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r10">
+                <Name>VO-lhcb-DecFiles-v13r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v5r0">
+                <Name>VO-lhcb-ParamFiles-v5r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-CondDB">
+                <Name>VO-lhcb-CondDB</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r3">
+                <Name>VO-lhcb-DaVinci-v19r3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r4">
+                <Name>VO-lhcb-DaVinci-v19r4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r11">
+                <Name>VO-lhcb-Gauss-v25r11</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r11">
+                <Name>VO-lhcb-DecFiles-v13r11</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r12">
+                <Name>VO-lhcb-DecFiles-v13r12</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r5">
+                <Name>VO-lhcb-DaVinci-v19r5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r12">
+                <Name>VO-lhcb-Gauss-v25r12</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=castorgrid.cr.cnaf.infn.it,mds-vo-name=INFN-T1">
+        <InformationServiceURL>ldap://sg01-lcg.cr.cnaf.infn.it:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>10000</SizeTotal>
+        <SizeFree>5000</SizeFree>
+        <StorageArea LocalID="atlas">
+            <Path>/castor/cnaf.infn.it/grid/lcg/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>5000</UsedSpace>
+            <AvailableSpace>10000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/castor/cnaf.infn.it/grid/lcg/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>5000</UsedSpace>
+            <AvailableSpace>10000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/castor</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>5000</UsedSpace>
+            <AvailableSpace>10000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/castor/cnaf.infn.it/grid/lcg/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>5000</UsedSpace>
+            <AvailableSpace>10000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/castor/cnaf.infn.it/grid/lcg/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>5000</UsedSpace>
+            <AvailableSpace>10000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/castor/cnaf.infn.it/grid/lcg/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>5000</UsedSpace>
+            <AvailableSpace>10000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=castorsrm.cr.cnaf.infn.it,mds-vo-name=INFN-T1">
+        <InformationServiceURL>ldap://sg01-lcg.cr.cnaf.infn.it:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>100000000000</SizeTotal>
+        <SizeFree>50000000000</SizeFree>
+        <StorageArea LocalID="atlas">
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>50000000000</UsedSpace>
+            <AvailableSpace>100000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>50000000000</UsedSpace>
+            <AvailableSpace>100000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>50000000000</UsedSpace>
+            <AvailableSpace>100000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>50000000000</UsedSpace>
+            <AvailableSpace>100000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>50000000000</UsedSpace>
+            <AvailableSpace>100000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>50000000000</UsedSpace>
+            <AvailableSpace>100000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="argo">
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>50000000000</UsedSpace>
+            <AvailableSpace>100000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="virgo">
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>50000000000</UsedSpace>
+            <AvailableSpace>100000000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=sc.cr.cnaf.infn.it,mds-vo-name=INFN-T1">
+        <InformationServiceURL>ldap://sg01-lcg.cr.cnaf.infn.it:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>100000000000</SizeTotal>
+        <SizeFree>50000000000</SizeFree>
+        <StorageArea LocalID="atlas">
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>50000000000</UsedSpace>
+            <AvailableSpace>100000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>50000000000</UsedSpace>
+            <AvailableSpace>100000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>50000000000</UsedSpace>
+            <AvailableSpace>100000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>50000000000</UsedSpace>
+            <AvailableSpace>100000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>50000000000</UsedSpace>
+            <AvailableSpace>100000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>50000000000</UsedSpace>
+            <AvailableSpace>100000000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=srm-durable-lhcb.cr.cnaf.infn.it,mds-vo-name=INFN-T1">
+        <InformationServiceURL>ldap://sg01-lcg.cr.cnaf.infn.it:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>100000000000</SizeTotal>
+        <SizeFree>50000000000</SizeFree>
+        <StorageArea LocalID="lhcb">
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>50000000000</UsedSpace>
+            <AvailableSpace>100000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>50000000000</UsedSpace>
+            <AvailableSpace>100000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>50000000000</UsedSpace>
+            <AvailableSpace>100000000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=se01-lcg.cr.cnaf.infn.it,mds-vo-name=INFN-T1">
+        <InformationServiceURL>ldap://se01-lcg.cr.cnaf.infn.it:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="ALICE">
+            <Path>/storage/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>98765244</UsedSpace>
+            <AvailableSpace>2819320</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ATLAS">
+            <Path>/flatfiles/SE00/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>72703244</UsedSpace>
+            <AvailableSpace>36836376</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="BABAR">
+            <Path>/flatfiles/SE00/babar</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>5215056896</UsedSpace>
+            <AvailableSpace>2478349312</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="CMS">
+            <Path>/storage/CMS</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>98765244</UsedSpace>
+            <AvailableSpace>2819320</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="DTEAM">
+            <Path>/storage/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>98765244</UsedSpace>
+            <AvailableSpace>2819320</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="GEAR">
+            <Path>/flatfiles/SE00/gear</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>72703244</UsedSpace>
+            <AvailableSpace>36836376</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="INFNGRID">
+            <Path>/flatfiles/SE00/infngrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>72703244</UsedSpace>
+            <AvailableSpace>36836376</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="INGV">
+            <Path>/flatfiles/SE00/ingv</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>72703244</UsedSpace>
+            <AvailableSpace>36836376</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="LHCB">
+            <Path>/storage/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>98765244</UsedSpace>
+            <AvailableSpace>2819320</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="OPS">
+            <Path>/flatfiles/SE00/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>72703244</UsedSpace>
+            <AvailableSpace>36836376</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="THEOPHYS">
+            <Path>/flatfiles/SE00/theophys</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>72703244</UsedSpace>
+            <AvailableSpace>36836376</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="VIRGO">
+            <Path>/flatfiles/SE00/virgo</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>72703244</UsedSpace>
+            <AvailableSpace>36836376</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://se01-lcg.cr.cnaf.infn.it</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=storm-fe.cr.cnaf.infn.it,mds-vo-name=INFN-T1">
+        <StorageArea LocalID="atlas">
+            <Path>/atlas</Path>
+            <UsedSpace>1048576000</UsedSpace>
+            <AvailableSpace>10485760000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dteam</Path>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gin">
+            <Path>/gin</Path>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/ops</Path>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/lhcb</Path>
+            <UsedSpace>150000000000</UsedSpace>
+            <AvailableSpace>300000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/cms</Path>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm-2.2.0">
+            <Endpoint>srm://storm-fe.cr.cnaf.infn.it:8444</Endpoint>
+            <Type>srm</Type>
+            <Version>2.2.0</Version>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=ce04-lcg.cr.cnaf.infn.it:2119,mds-vo-name=INFN-T1">
+        <Name>INFN-T1-org.glite.ce</Name>
+        <Type>org.glite.ce</Type>
+        <Version>2.4.20</Version>
+        <Endpoint>ce04-lcg.cr.cnaf.infn.it:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ALICE</Owner>
+        <Owner>ATLAS</Owner>
+        <Owner>CMS</Owner>
+        <Owner>DTEAM</Owner>
+        <Owner>INFNGRID</Owner>
+        <Owner>LHCB</Owner>
+        <Owner>OPS</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-HEPHY_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>STAR-HEPHY_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>argo</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-BARI_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>STAR-BARI_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-CATANIA_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>STAR-CATANIA_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-LNF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>STAR-LNF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-LEGNARO_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>STAR-LEGNARO_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-MILANO_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>STAR-MILANO_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-NAPOLIATLAS_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>STAR-NAPOLIATLAS_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-PISA_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>STAR-PISA_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-ROMA1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>STAR-ROMA1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-ROMA1CMS_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>STAR-ROMA1CMS_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>STAR-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-TORINO_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>STAR-TORINO_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-JINR_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>STAR-JINR_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BEIJING-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>BEIJING-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>argo</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNL-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>BNL-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FZK-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>FZK-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=HEPHY-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>HEPHY-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>argo</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=IN2P3-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>IN2P3-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>virgo</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BARI-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>BARI-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CASCINA-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>CASCINA-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>dteam</Owner>
+        <Owner>virgo</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CASCINA-MILWAUKEE_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>CASCINA-MILWAUKEE_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>dteam</Owner>
+        <Owner>virgo</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CATANIA-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>CATANIA-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=LNF-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>LNF-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=LEGNARO-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>LEGNARO-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=MILANO-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>MILANO-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=NAPOLIATLAS-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>NAPOLIATLAS-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=PISA-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>PISA-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ROMA1-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>ROMA1-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ROMA1CMS-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>ROMA1CMS-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ROMA3-BEIJING_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>ROMA3-BEIJING_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>ARGO</Owner>
+        <Owner>DTEAM</Owner>
+        <Owner>OPS</Owner>
+        <Owner>argo</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ROMA3-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>ROMA3-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>argo</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=T1-STAR_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>T1-STAR_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=T1-BEIJING_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>T1-BEIJING_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>argo</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=T1-HEPHY_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>T1-HEPHY_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>argo</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=T1-BARI_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>T1-BARI_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=T1-CATANIA_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>T1-CATANIA_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=T1-LNF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>T1-LNF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=T1-LEGNARO_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>T1-LEGNARO_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=T1-MILANO_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>T1-MILANO_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=T1-NAPOLIATLAS_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>T1-NAPOLIATLAS_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=T1-PISA_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>T1-PISA_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=T1-ROMA1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>T1-ROMA1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=T1-ROMA1CMS_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>T1-ROMA1CMS_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CNAF-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>CNAF-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=T1-TORINO_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>T1-TORINO_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=T1-JINR_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>T1-JINR_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TORINO-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>TORINO-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=JINR-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>JINR-T1_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=NDGF-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>NDGF-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=PIC-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>PIC-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=RAL-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>RAL-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=SARA-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>SARA-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TAIWAN-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>TAIWAN-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TRIUMF-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>TRIUMF-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent,mds-vo-name=INFN-T1">
+        <Name>FNAL-CNAF_fts.cr.cnaf.infn.it_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_fts.cr.cnaf.infn.it_org.glite.FileTransfer,mds-vo-name=INFN-T1">
+        <Name>glite-data-transfer-fts_fts.cr.cnaf.infn.it</Name>
+        <Type>org.glite.FileTransfer</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://fts.cr.cnaf.infn.it:8443/glite-data-transfer-fts/services/FileTransfer</Endpoint>
+        <WSDL>https://fts.cr.cnaf.infn.it:8443/glite-data-transfer-fts/services/FileTransfer?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>ARGO</Owner>
+        <Owner>DTEAM</Owner>
+        <Owner>OPS</Owner>
+        <Owner>alice</Owner>
+        <Owner>argo</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+        <Owner>virgo</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_fts.cr.cnaf.infn.it_org.glite.ChannelManagement,mds-vo-name=INFN-T1">
+        <Name>glite-data-transfer-fts_fts.cr.cnaf.infn.it-channel</Name>
+        <Type>org.glite.ChannelManagement</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://fts.cr.cnaf.infn.it:8443/glite-data-transfer-fts/services/ChannelManagement</Endpoint>
+        <WSDL>https://fts.cr.cnaf.infn.it:8443/glite-data-transfer-fts/services/ChannelManagement?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>ARGO</Owner>
+        <Owner>DTEAM</Owner>
+        <Owner>OPS</Owner>
+        <Owner>alice</Owner>
+        <Owner>argo</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+        <Owner>virgo</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_fts.cr.cnaf.infn.it_org.glite.Delegation,mds-vo-name=INFN-T1">
+        <Name>glite-data-transfer-fts_fts.cr.cnaf.infn.it-delegation</Name>
+        <Type>org.glite.Delegation</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://fts.cr.cnaf.infn.it:8443/glite-data-transfer-fts/services/gridsite-delegation</Endpoint>
+        <WSDL>https://fts.cr.cnaf.infn.it:8443/glite-data-transfer-fts/services/gridsite-delegation?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-10T12:42:57.000+02:00</StartTime>
+        <Owner>ARGO</Owner>
+        <Owner>DTEAM</Owner>
+        <Owner>OPS</Owner>
+        <Owner>alice</Owner>
+        <Owner>argo</Owner>
+        <Owner>atlas</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+        <Owner>virgo</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://lfc.cr.cnaf.infn.it:8085/,o=local,mds-vo-name=INFN-T1">
+        <Name>INFN-T1-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>http://lfc.cr.cnaf.infn.it:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lfc.cr.cnaf.infn.it,o=local,mds-vo-name=INFN-T1">
+        <Name>INFN-T1-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>lfc.cr.cnaf.infn.it</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-http://lfc.cr.cnaf.infn.it:8085/,mds-vo-name=INFN-T1">
+        <Name>INFN-T1-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>http://lfc.cr.cnaf.infn.it:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-09-06T17:54:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-lfc.cr.cnaf.infn.it,mds-vo-name=INFN-T1">
+        <Name>INFN-T1-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>lfc.cr.cnaf.infn.it</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-09-06T17:54:57.000+02:00</StartTime>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-http://lfc-lhcb-ro.cr.cnaf.infn.it:8085/,mds-vo-name=INFN-T1">
+        <Name>INFN-T1-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>http://lfc-lhcb-ro.cr.cnaf.infn.it:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-09-05T17:57:57.000+02:00</StartTime>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-lfc-lhcb-ro.cr.cnaf.infn.it,mds-vo-name=INFN-T1">
+        <Name>INFN-T1-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>lfc-lhcb-ro.cr.cnaf.infn.it</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-09-05T17:57:57.000+02:00</StartTime>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=mon-lcg.cr.cnaf.infn.it:2136,mds-vo-name=INFN-T1">
+        <Name>INFN-T1-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://mon-lcg.cr.cnaf.infn.it:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>DTEAM</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://castorsrm.cr.cnaf.infn.it:8443/srm/managerv1,mds-vo-name=INFN-T1">
+        <Name>castorsrm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://castorsrm.cr.cnaf.infn.it:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://sc.cr.cnaf.infn.it:8443/srm/managerv1,mds-vo-name=INFN-T1">
+        <Name>castorsrm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://sc.cr.cnaf.infn.it:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://srm-durable-lhcb.cr.cnaf.infn.it:8443/srm/managerv1,mds-vo-name=INFN-T1">
+        <Name>castorsrm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://srm-durable-lhcb.cr.cnaf.infn.it:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://storm-fe.cr.cnaf.infn.it:8444/srm/managerv2,mds-vo-name=INFN-T1">
+        <Name>local</Name>
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://storm-fe.cr.cnaf.infn.it:8444/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

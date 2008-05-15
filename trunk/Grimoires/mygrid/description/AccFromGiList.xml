@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+	<serviceDescription>
+		<serviceName>SHoundAccFromGiList</serviceName>
+		<organisation>
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundAccFromGiList</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundAccFromGiList?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Converts a list of GI identifiers to NCBI accession numbers. Sequences from the PIR or PDB databases will return &quot;n/a&quot; for this function since they do not have an NCBI accession. Instead, use SHoundGetDeflineList to retrieve the accessions for these sequences.</serviceDescriptionText>
+		<operations>
+			<serviceOperation>
+				<operationName>SHoundAccFromGiList</operationName>
+				<operationDescriptionText>Converts a list of GI identifier to a list of NCBI accession numbers. This function has been deprecated. Use SHoundGBAccFromGiKeyedList instead.</operationDescriptionText>
+				<operationInputs>
+					<parameter>
+						<parameterName>giList</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#GenBank_gene_id_%28GI%29</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Collection</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs>
+					<parameter>
+						<parameterName>result</parameterName>
+						<parameterDescription>returns a list of NCBI accession numbers</parameterDescription>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Collection</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#translating</operationTask>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

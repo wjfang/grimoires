@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=BEIJING-LCG2,mds-vo-name=BEIJING-LCG2">
+    <Name>BEIJING-LCG2</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:yanxf@ihep.ac.cn</UserSupportContact>
+    <SysAdminContact>mailto:yanxf@ihep.ac.cn</SysAdminContact>
+    <SecurityContact>mailto:yanxf@ihep.ac.cn</SecurityContact>
+    <Location>Beijing, China</Location>
+    <Latitude>39.54</Latitude>
+    <Longitude>116.28</Longitude>
+    <Web>http://www.ihep.ac.cn</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>http://cern.ch</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=lcg002.ihep.ac.cn,mds-vo-name=BEIJING-LCG2">
+        <Name>lcg002.ihep.ac.cn</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=lcg002.ihep.ac.cn,GlueClusterUniqueID=lcg002.ihep.ac.cn,mds-vo-name=BEIJING-LCG2">
+            <Name>lcg002.ihep.ac.cn</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.8" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="3200"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1025" RAMSize="513"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1200" SF00="1200"/>
+            <Location LocalID="VO-atlas-cloud-FR">
+                <Name>VO-atlas-cloud-FR</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.31">
+                <Name>VO-atlas-production-12.0.31</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.4">
+                <Name>VO-atlas-production-12.0.4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6">
+                <Name>VO-atlas-production-12.0.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.30">
+                <Name>VO-atlas-production-13.0.30</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.42">
+                <Name>VO-atlas-release-11.0.42</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-tier-T2">
+                <Name>VO-atlas-tier-T2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_2">
+                <Name>VO-cms-CMSSW_1_2_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_3">
+                <Name>VO-cms-CMSSW_1_2_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_4">
+                <Name>VO-cms-CMSSW_1_2_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_6">
+                <Name>VO-cms-CMSSW_1_2_6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_0">
+                <Name>VO-cms-CMSSW_1_3_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1">
+                <Name>VO-cms-CMSSW_1_3_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_2">
+                <Name>VO-cms-CMSSW_1_3_2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_3">
+                <Name>VO-cms-CMSSW_1_3_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0">
+                <Name>VO-cms-CMSSW_1_6_0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_1">
+                <Name>VO-cms-CMSSW_1_6_1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_3">
+                <Name>VO-cms-CMSSW_1_6_3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_4">
+                <Name>VO-cms-CMSSW_1_6_4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc3_ia32_gcc323">
+                <Name>VO-cms-slc3_ia32_gcc323</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-cms-slc4_ia32_gcc345">
+                <Name>VO-cms-slc4_ia32_gcc345</Name>
+                <Version>Prod</Version>
+                <Path>$VO_CMS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-ITUtest1">
+                <Name>VO-dteam-ITUtest1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-v25Nov">
+                <Name>VO-dteam-december05prod-v25Nov</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-argo-cctools-2.2.3-i686-linux-2.4-to-be-validated">
+                <Name>VO-argo-cctools-2.2.3-i686-linux-2.4-to-be-validated</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ARGO_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-argo-clhep-1.8.2.1-slc3-gcc323-to-be-validated">
+                <Name>VO-argo-clhep-1.8.2.1-slc3-gcc323-to-be-validated</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ARGO_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-argo-prod-corsika-6611">
+                <Name>VO-argo-prod-corsika-6611</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ARGO_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-argo-prod-medea-v030804">
+                <Name>VO-argo-prod-medea-v030804</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ARGO_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-argo-root-v4.04.02-slc3-gcc323-to-be-validated">
+                <Name>VO-argo-root-v4.04.02-slc3-gcc323-to-be-validated</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ARGO_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-ops-soft_3_6_5_dar_SLC3">
+                <Name>VO-ops-soft_3_6_5_dar_SLC3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_OPS_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=lcg004.ihep.ac.cn,mds-vo-name=BEIJING-LCG2">
+        <InformationServiceURL>ldap://lcg004.ihep.ac.cn:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>747</SizeTotal>
+        <SizeFree>566</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="argo">
+            <Path>/pnfs/ihep.ac.cn/data/argo</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>90976142</UsedSpace>
+            <AvailableSpace>282686013</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="bes">
+            <Path>/pnfs/ihep.ac.cn/data/bes</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>90976142</UsedSpace>
+            <AvailableSpace>282686013</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomed">
+            <Path>/pnfs/ihep.ac.cn/data/biomed</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>90696793</UsedSpace>
+            <AvailableSpace>282965361</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/pnfs/ihep.ac.cn/data/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>90696793</UsedSpace>
+            <AvailableSpace>282965361</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="euchina">
+            <Path>/pnfs/ihep.ac.cn/data/euchina</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>90696793</UsedSpace>
+            <AvailableSpace>282965361</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/pnfs/ihep.ac.cn/data/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>90976142</UsedSpace>
+            <AvailableSpace>282686013</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://lcg004.ihep.ac.cn</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsidcap">
+            <Endpoint>httpg://lcg004.ihep.ac.cn</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://lcg004.ihep.ac.cn</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=cmsse01.ihep.ac.cn,mds-vo-name=BEIJING-LCG2">
+        <InformationServiceURL>ldap://cmsse01.ihep.ac.cn:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>1175</SizeTotal>
+        <SizeFree>799</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="cms">
+            <Path>/pnfs/ihep.ac.cn/data/cms</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>376128038</UsedSpace>
+            <AvailableSpace>798545518</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/pnfs/ihep.ac.cn/data/ops</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>376128038</UsedSpace>
+            <AvailableSpace>798545518</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/pnfs/ihep.ac.cn/data/dteam</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>376128038</UsedSpace>
+            <AvailableSpace>798545518</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp@cmsse01.ihep.ac.cn">
+            <Endpoint>gsiftp://cmsse01.ihep.ac.cn:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gridftp@cmsse01.ihep.ac.cn">
+            <Endpoint>gridftp://cmsse01.ihep.ac.cn:2811</Endpoint>
+            <Type>gridftp</Type>
+            <Version>1.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsidcap@cmsse01.ihep.ac.cn">
+            <Endpoint>gsidcap://cmsse01.ihep.ac.cn:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-cmsse01@dcap-cmsse01Domain">
+            <Endpoint>dcap://cmsse01.ihep.ac.cn:22125</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-cmsse01@gridftp-cmsse01Domain">
+            <Endpoint>gsiftp://cmsse01.ihep.ac.cn:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-gsi-cmsse01@gsidcap-cmsse01Domain">
+            <Endpoint>gsidcap://cmsse01.ihep.ac.cn:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1@cmsse01.ihep.ac.cn">
+            <Endpoint>httpg://cmsse01.ihep.ac.cn:8443/srm/managerv1</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.1.0</Version>
+            <Capability>space allocation</Capability>
+            <Capability>space management</Capability>
+        </ControlProtocol>
+        <ControlProtocol LocalID="SRM-cmsse01@srm-cmsse01Domain">
+            <Endpoint>httpg://cmsse01.ihep.ac.cn:8443/srm/managerv1</Endpoint>
+            <Type>SRM</Type>
+            <Version>1.1.1</Version>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=atlasse01.ihep.ac.cn,mds-vo-name=BEIJING-LCG2">
+        <InformationServiceURL>ldap://atlasse01.ihep.ac.cn:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/pnfs/ihep.ac.cn/data/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/pnfs/ihep.ac.cn/data/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/pnfs/ihep.ac.cn/data/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://atlasse01.ihep.ac.cn</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsidcap">
+            <Endpoint>httpg://atlasse01.ihep.ac.cn</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://atlasse01.ihep.ac.cn</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=lcg002.ihep.ac.cn:2119,mds-vo-name=BEIJING-LCG2">
+        <Name>BEIJING-LCG2-org.glite.ce</Name>
+        <Type>org.glite.ce</Type>
+        <Version>2.4.20</Version>
+        <Endpoint>lcg002.ihep.ac.cn:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>argo</Owner>
+        <Owner>atlas</Owner>
+        <Owner>bes</Owner>
+        <Owner>biomed</Owner>
+        <Owner>cms</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>euchina</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://lfc.ihep.ac.cn:8085/,mds-vo-name=BEIJING-LCG2">
+        <Name>BEIJING-LCG2-lfc-dli</Name>
+        <Type>data-location-interface</Type>
+        <Version>1.6.3</Version>
+        <Endpoint>http://lfc.ihep.ac.cn:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-06-11T16:39:12.000+08:00</StartTime>
+        <Owner>bes</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lfc.ihep.ac.cn,mds-vo-name=BEIJING-LCG2">
+        <Name>BEIJING-LCG2-lfc</Name>
+        <Type>lcg-file-catalog</Type>
+        <Version>1.6.3</Version>
+        <Endpoint>lfc.ihep.ac.cn</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-06-11T16:39:12.000+08:00</StartTime>
+        <Owner>bes</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-http://lfc.ihep.ac.cn:8085/,mds-vo-name=BEIJING-LCG2">
+        <Name>BEIJING-LCG2-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.6.3</Version>
+        <Endpoint>http://lfc.ihep.ac.cn:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-06-11T16:39:12.000+08:00</StartTime>
+        <Owner>argo</Owner>
+        <Owner>atlas</Owner>
+        <Owner>biomed</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>euchina</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-lfc.ihep.ac.cn,mds-vo-name=BEIJING-LCG2">
+        <Name>BEIJING-LCG2-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.6.3</Version>
+        <Endpoint>lfc.ihep.ac.cn</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-06-11T16:39:12.000+08:00</StartTime>
+        <Owner>argo</Owner>
+        <Owner>atlas</Owner>
+        <Owner>biomed</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>euchina</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lcg008.ihep.ac.cn:2136,mds-vo-name=BEIJING-LCG2">
+        <Name>BEIJING-LCG2-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://lcg008.ihep.ac.cn:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>argo</Owner>
+        <Owner>atlas</Owner>
+        <Owner>bes</Owner>
+        <Owner>biomed</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>euchina</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lcg006.ihep.ac.cn:7512,mds-vo-name=BEIJING-LCG2">
+        <Name>BEIJING-LCG2-myproxy</Name>
+        <Type>MyProxy</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>lcg006.ihep.ac.cn:7512</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lcg005.ihep.ac.cn:7772,mds-vo-name=BEIJING-LCG2">
+        <Name>BEIJING-LCG2-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>lcg005.ihep.ac.cn:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>argo</Owner>
+        <Owner>atlas</Owner>
+        <Owner>bes</Owner>
+        <Owner>biomed</Owner>
+        <Owner>cms</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>euchina</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://lcg004.ihep.ac.cn:8443/srm/managerv1,mds-vo-name=BEIJING-LCG2">
+        <Name>BEIJING-LCG2-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://lcg004.ihep.ac.cn:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://lcg004.ihep.ac.cn:8443/srm/managerv2,mds-vo-name=BEIJING-LCG2">
+        <Name>BEIJING-LCG2-srm</Name>
+        <Type>srm</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://lcg004.ihep.ac.cn:8443/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://cmsse01.ihep.ac.cn:8443/srm/managerv1,mds-vo-name=BEIJING-LCG2">
+        <Name>BEIJING-LCG2-srm</Name>
+        <Type>SRM</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://cmsse01.ihep.ac.cn:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://atlasse01.ihep.ac.cn:8443/srm/managerv1,mds-vo-name=BEIJING-LCG2">
+        <Name>BEIJING-LCG2-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://atlasse01.ihep.ac.cn:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://atlasse01.ihep.ac.cn:8443/srm/managerv2,mds-vo-name=BEIJING-LCG2">
+        <Name>BEIJING-LCG2-srm</Name>
+        <Type>srm</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://atlasse01.ihep.ac.cn:8443/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Grimoires Documentation - Security Guide - Grimoires</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url('i_arrow_down.gif');
+	}
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script>
+</head>
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1><a name="Grimoires_Security_Man"> </a>Security Guide - Grimoires</h1>
+<p />
+<div class="twikiToc">
+<ul>
+<li> <a href="#Grimoires_Security_Man">Security Guide - Grimoires</a>
+<ul>
+<li> <a href="#introduction">Introduction</a>
+</li>
+<li> <a href="#OMII_Security">OMII Security</a>
+</li>
+<li> <a href="#Grimoires_Security">Grimoires Security</a>
+<ul>
+<li> <a href="#Grimoires_ACL">Grimoires ACL</a>
+</li>
+<li> <a href="#wildcard">Wildcard references</a>
+</li>
+<li> <a href="#Grimoires_client">Grimoires client</a>
+</li>
+<li> <a href="#Grimoires_deploy">Deploying Grimoires securely</a>
+</li>
+</ul>
+<li> <a href="#Configuration_parameters">Configuration parameters</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p />
+<h2><a name="introduction"> </a> Introduction </h2>
+<p />
+
+Application level security generally encapsulates several important concepts; two of the more important ones being authentication and authorization (or access control). In an application that processes network requests from a large number of sources, authentication is concerned with correctly establishing the identity of the entity that originated a request. Authorization then seeks to determine whether or not (or to what extent) the application should perform the operations pertaining to the entity's request. As a simple example in the context of Grimoires, an incoming  publishBusiness request is first verified to have originated from X, and then the publishBusiness operation is executed within the registry if it is determined that X has the privilege (or rights) to do so. The determination of the actual privileges that potential registry users have within the domain of the registry (or any other application, for that matter) is something that has to be negotiated prior to the authorization decision itself.
+
+<p />
+Security for Grimoires is currently supported only within the OMII container. A secure Grimoires deployment relies on the security functionality of the OMII container, which provides the facility to process incoming SOAP messages that have digital signatures appended to them. The results of processing these signed SOAP messages can then be used in the authentication of the sender of the SOAP message. The identity of the sender can subsequently then be used in an appropriate access control decision, if so desired.
+
+<p />
+<h2><a name="OMII_Security"> </a>OMII Security</h2>
+<p />
+
+The OMII container is essentially a modified version of the Tomcat/Axis Web Services container environment (see <b><u><a class="twikiLink" href="http://jakarta.apache.org/tomcat">Tomcat</a></b></u> and <b><u><a class="twikiLink" href="http://ws.apache.org/axis/">Axis</a></b></u> related documentation). Services are deployed in the OMII container in a similar fashion to that adopted for a standard Tomcat/Axis installation (for example, through the use of <b><u><a class="twikiLink" href="http://ws.apache.org/axis/java/user-guide.html">deployment descriptors</a></b></u>). For the case when a service needs to be secured, the OMII container provides several additional server-side handlers that process SOAP messages in the Axis <b><u><a class="twikiLink" href="http://ws.apache.org/axis/java/architecture-guide.html">message chain</a></b></u> prior to reaching the designated services. These handlers verify that incoming SOAP messages are signed appropriately in accordance with <b><u><a class="twikiLink" href="http://www.ietf.cnri.reston.va.us/rfc/rfc2459.txt">X509</a></b></u> standards, and are based on the <b><u><a class="twikiLink" href="http://ws.apache.org/wss4j/">WSS4J</a></b></u> pacakge, which is an open source implementation of the <b><u><a class="twikiLink" href="http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=wss">OASIS WS-Security</a></b></u> standards. The handlers are specified accordingly in the request and response flow elements in the deployment descriptor for the service to be secured.
+
+<p />
+In addition, the OMII container provides an access control (or authorization) system known as PBAC. To authenticate the entity that originated the signed SOAP message, PBAC uses the X509 Distinguished Name (X509DN) extracted from the certificate corresponding to the signature. The X509DN is then used in an access control decision on whether to permit or deny the request. PBAC is based on the notion of process, context and accounts. The OMII package also provides an OMII client that allows the submission of requests that are job-centric in nature to applications running in the OMII container. The OMII client then ensures that outgoing requests from potential clients are signed appropriately in the targeted application is deployed in the secure manner just described. Refer to the <b><u><a class="twikiLink" href="http://www.omii.ac.uk/downloads/documentation/omii_2_0_0/index.htm">OMII documentation</a></b></u> for further information on OMII security, PBAC and the OMII client.
+<p />
+
+
+<p />
+<h2><a name="Grimoires_Security"> </a>Grimoires Security</h2>
+<p />
+
+A secure Grimoires deployment in the OMII container is achieved using the server side handlers discussed in the previous section, which can be used to produce an X509DN for purposes of authentication as previously described. The PBAC system for access control in OMII encapsulates notions of job execution, context within a process and the use of accounts. Such notions however are not representative of the Grimoires registry environment, which is characterized instead by a potentially large volume of stateless request-response interactions that need to be handled quickly and efficiently. As such, PBAC provides unnecessary complexity within the context of access control functionality for Grimoires.
+
+<p />
+In light of this, Grimoires provides a customized access control facility. This is implemented as an additional handler at the end of the handler chain  involving the standard server side handlers for a secure OMII service deployment. The authorization handler extracts the X509DN and uses this in conjunction with a customized XML-based Access Control List (ACL) to decide which operations an entity (as identified by its X509DN) is allowed to perform.
+
+<p />
+<h3><a name="Grimoires_ACL"> </a> Grimoires ACL </h3>
+<p />
+
+The Grimoires ACL is an XML file, and it is found at /config/omii-sec/acl/authlist.xml. After deployment, it is found at tomcat/webapps/grimoires/WEB-INF/authlist.xml, where tomcat is the installation directory for the OMII Tomcat. The location of the ACL needs to specified in <b><u><a class="twikiLink" href="./installation.html#grimoires_properties">grimoires.properties </a></b></u> prior to deployment. If another ACL file is to be utilized, the appropriate parameter
+will need to be changed.
+<p />
+The contents of the ACL can be set prior to deploying Grimoires, or after deployment BUT before Grimoires is invoked by an incoming client request. The contents of the ACL is read and stored in memory after the first invocation, after which no further reference is made to the file. An example of the contents of such an ACL is shown below:
+
+<pre>
+
+&lt;authlist&gt;
+
+   &lt;permission identity = "EMAILADDRESS=bob@hotmail.com, CN=gallagher.ecs.soton.ac.uk, OU=ECS, O=Soton, L=none,
+   ST=Hampshire, C=UK" operationList = "get_authToken // save_business // save_service" mode = "allow" /&gt;
+
+&lt;/authlist&gt;
+
+</pre>
+
+Here, the request originating from an entity with the X509DN of "EMAILADDRESS=bob@hotmail.com, CN=gallagher.ecs.soton.ac.uk, OU=ECS, O=Soton, L=none, ST=Hampshire, C=UK" will be executed if either one of the get_authToken,  save_business or  save_service operations are requested. The listed operations are from those specified in the UDDI, metadata and WSDL interfaces of Grimoires as described in the <b><u><a class="twikiLink" href="./funcspec.html">functional specification</a></b></u>, and are separated by the separator token //. The mode "allow" indicates that these are the only authorized actions. The other option for mode, "restrict", would indicate otherwise, i.e. that all operations are authorized except the ones listed in operationList.
+
+<p />
+
+The ACL provides suppport for grouping of operations and X509DNs in order to provide for a very simple implementation of role-based access control. An example is shown below:
+
+<p />
+
+<pre>
+&lt;authlist&gt;
+
+   &lt;groupIdentity groupName = "admin"
+	   identityList = "EMAILADDRESS=client1@hotmail.com, CN=client1, OU=UK, O=UK, L=none, ST=UK, C=UK //
+      EMAILADDRESS=client2@hotmail.com, CN=client2, OU=UK, O=UK, L=none, ST=UK, C=UK"/&gt;
+
+   &lt;groupIdentity groupName = "staff"
+	   identityList = "EMAILADDRESS=client3@hotmail.com, CN=client3, OU=UK, O=UK, L=none, ST=UK, C=UK //
+      EMAILADDRESS=client4@hotmail.com, CN=client4, OU=UK, O=UK, L=none, ST=UK, C=UK"/&gt;
+
+   &lt;groupOperation groupName = "save" operationList = " save_business // save_service // save_binding // save_service // save_tModel "/&gt;
+
+   &lt;groupOperation groupName = "find" operationList = " find_binding  //  find_business  //  find_service "/&gt;
+
+   &lt;groupOperation groupName = "get" operationList = " get_bindingDetail  //  get_serviceDetail  // get_bindingDetail  "/&gt;
+
+   &lt;permission identity= "admin" operationList = " addWSDLFile " mode = "restrict"/&gt;
+
+   &lt;permission identity = "staff" operationList = "find // get" mode = "allow"/&gt;
+
+&lt;/authlist&gt;
+</pre>
+
+Here, we have two additional elements, groupIdentity and groupOperation. groupIdentity is used to group X509 DNs into a specific group or role; for example, we could classify all valid entities in the registry into either administration ("admin") or normal staff ("staff"). Similiarly, we can group together operations that are logically related such as the  save, find or get operations for UDDI. These groups can then be used when specifying the actual authorizations in the permission element. Thus, it becomes easier to specify higher level authorizations, such as: "All administration is allowed to perform all operations except addWSDLFile" or "All staff are only permitted to perform inquiry-type operations, i.e. find and get". Groups can be nested and specified alongside atomic elements, thus the following elements are valid:
+<p />
+
+<pre>
+   &lt;groupIdentity groupName = "everyone" identityList = "staff // admin "/&gt;
+   &lt;groupOperation groupName = "allOperations" operationList = " save //  find //  get "/&gt;
+   &lt;groupOperation groupName = "selectedOperations" operationList = " find_binding // get_bindingDetail // save "/&gt;
+   &lt;permission identity = "everyone" operationList = "allOperations" mode = "allow"/&gt;
+</pre>
+
+<p />
+
+Any number of entries can be specified in the ACL for the three elements permission, groupOperation and groupIdentity. If there is more than one element with the  same name, their contents will be merged automatically. To ensure that the authorization file is parsed properly, observe the output on the Tomcat logs (catalina.out), for any possible error messages.
+
+<p />
+<h3><a name="wildcard"> </a>Wildcard references</h3>
+<p />
+The use of wildcard references is supported; "#AllUsers#" refers to all users, regardless of their X509DNs, and "#AllOperations#" refers to all operation requests. This can be useful in a number of situations, for ex:-
+<p />
+
+We wish to allow anyone making a request to the registry to be allowed to perform any operation, as long as the signature on their SOAP message can be processed by the OMII container. This is effectively equivalent to deploying Grimoires with the option "securitytype = basic". The equivalent statement would be:
+
+<pre>
+   &lt;permission identity = "#AllUsers#" operationList = "#AllOperations#" mode = "allow" /&gt;
+</pre>
+
+We may wish to allow all users to access a generic group of operations in the registry. This can be accomplished with:
+
+<pre>
+   &lt;permission identity = "#AllUsers#" operationList = "standardOperations" mode = "allow" /&gt;
+</pre>
+
+
+We may wish to allow a group of known users to access all operations in the registry. This can be accomplished with:
+
+<pre>
+   &lt;permission identity = "GoodUsers" operationList = "#AllOperations#" mode = "allow" /&gt;
+</pre>
+
+
+We may wish to bar a group of known users from accessing any operation in the registry. This can be accomplished with:
+
+<pre>
+   &lt;permission identity = "BadUsers" operationList = "#AllOperations#" mode = "restrict" /&gt;
+</pre>
+
+where standardOperations, GoodUsers and BadUsers are groups defined using the GroupIdentity or GroupOperation elements. If a wildcard reference is used in a permission element, that element must precede all other elements in the listing in the access control list for it to take effect.
+
+
+<p />
+<h3><a name="Grimoires_client"> </a>Grimoires client</h3>
+<p />
+
+
+On the client end, the Grimoires distribution provides both <b><u><a class="twikiLink" href="./gshell.html">GShell</a></b></u> and a <b><u><a class="twikiLink" href=".\ubguide.html">UDDI browser</a></b></u>. GShell can be used in a secure mode by ensuring that its outgoing SOAP messages are signed properly. To do this, a client side Axis handler is used to intercept outgoing SOAP messages and sign them using client certificate and key pairs that are found in a keystore that comes as part of the default <b><u><a class="twikiLink" href="http://www.omii.ac.uk/downloads/documentation/omii_2_0_0/index.htm">OMII client installation</a></b></u>. Therefore, in order to create a Grimoires client that can talk to a secure Grimoires deployment, the OMII client has to be installed first. The keystore in the OMII client will contain a public key certificate signed by the root CA that comes with the default installation of the OMII container.
+
+<p />
+<h3><a name="Grimoires_deploy"> </a>Deploying Grimoires securely</h3>
+<p />
+
+Grimoires can be deployed in <b><u><a class="twikiLink" href="./installation.html#init_properties">two possible secure modes</a></b></u>. The first does not involve any authorization; as long as an incoming SOAP message is signed and the signature can be verified, the message request is executed. The signature will be verified as long as the accompanying public key certificate was signed with the key of the root CA in the keystore of the OMII container. This will be the case if the default installations of the OMII container and the OMII client are being used. In a more extensive usage scenario, it is possible that a different root CA is used or client certificates signed by different root CAs are used. The second mode uses the ACL for authorization as described.
+<p />
+
+
+<p />
+<h2><a name="Configuration_parameters"> </a>Configuration parameters</h2>
+<p />
+
+In order to deploy Grimoires securely, as well as to use a secure Grimoires client, appropriate configuration properties need to be set in order to access the keystores and certificates required in the creation and verification of signatures. The most important of this is the crypto.properties file, whose parameters are shown below:
+
+<pre>
+org.apache.ws.security.crypto.merlin.file=/usr/local/OMII/omii.ks
+org.apache.ws.security.crypto.merlin.keystore.password=tmpstore
+org.apache.ws.security.crypto.merlin.keystore.alias=omii_server
+org.apache.ws.security.crypto.merlin.alias.password=tmpstore
+org.apache.ws.security.crypto.provider=org.apache.ws.security.components.crypto.Merlin
+org.apache.ws.security.crypto.merlin.keystore.type=JKS
+org.apache.ws.security.crypto.merlin.crldir=/usr/local/OMII/grid/CRLs
+</pre>
+
+There are two copies of this file; one used for a deployment of Grimoires (located at /config/omii-sec/classes/conf
+), and the other for a secure version of GShell (located at gshell/config).For the case of a Grimoires deployment, the parameter org.apache.ws.security.crypto.merlin.file points to the keystore in the OMII container that will be used by the server side handlers. This keystore holds the root certificate CA used to verify incoming signed messages. For the case of a Grimoires client, the parameter points to the keystore in the OMII client that will be used the client side Axis handler. The other parameters are used in the retrieval of specific certificates or keypairs, other than the one that comes with the default installation of the OMII container and client. This will need to be changed if you have installed and intend to use other keypairs/certificates on the client or server end. Refer to the <b><u><a class="twikiLink" href="http://www.omii.ac.uk/downloads/documentation/omii_2_0_0/index.htm">OMII documentation</a></b></u> for further details on using alternative key pairs and certificates.
+
+
+
+</div>
+
+</body></html>

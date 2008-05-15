@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+	<serviceDescription>
+		<serviceName>SHoundCDDIDFromLLID</serviceName>
+		<organisation>
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundCDDIDFromLLID</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundCDDIDFromLLID?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Retrieves all the conserved domain ids for a given locus link id.</serviceDescriptionText>
+		<operations>
+			<serviceOperation>
+				<operationName>SHoundCDDIDFromLLID</operationName>
+				<operationInputs/>
+
+				<operationOutputs>
+					<parameter>
+						<parameterName>result</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#protein_group_id</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Ordered Collection</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#retrieving</operationTask>
+				<operationResource>http://www.mygrid.org.uk/ontology#bioinformatics_database</operationResource>
+				<operationResourceContent>http://www.mygrid.org.uk/ontology#model_organism</operationResourceContent>
+				<operationMethod>http://www.mygrid.org.uk/ontology#bioinformatics_algorithm</operationMethod>
+				<operationApplication>http://www.mygrid.org.uk/ontology#bioinformatics_application</operationApplication>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

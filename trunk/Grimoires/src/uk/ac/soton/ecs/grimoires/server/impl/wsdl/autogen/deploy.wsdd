@@ -1,0 +1,97 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from Grimoires WSDL service -->
+
+  <service name="wsdl" provider="java:RPC" style="document" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://www.grimoires.org/wsdl"/>
+      <parameter name="wsdlServiceElement" value="Grimoires"/>
+      <parameter name="wsdlServicePort" value="wsdl"/>
+      <parameter name="className" value="uk.ac.soton.ecs.grimoires.server.impl.wsdl.handlers.GrimoiresWSDLSkeleton"/>
+      <parameter name="wsdlPortType" value="WSDL"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/wsdl/type"
+        qname="ns:addWSDLFileAdvertRequest"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.wsdl.autogen.AddWSDLFileAdvertRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/wsdl/type"
+        qname="ns:findServicesByInterfaceResponse"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.wsdl.autogen.FindServicesByInterfaceResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/wsdl/type"
+        qname="ns:messageDetail"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.wsdl.autogen.MessageDetail"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/wsdl/type"
+        qname="ns:operationDetail"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.wsdl.autogen.OperationDetail"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/wsdl/type"
+        qname="ns:messagePartDetail"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.wsdl.autogen.MessagePartDetail"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/wsdl/type"
+        qname="ns:getOperationsByURLResponse"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.wsdl.autogen.GetOperationsByURLResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/wsdl/type"
+        qname="ns:partsName"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.wsdl.autogen.PartsName"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/wsdl/type"
+        qname="ns:getAllWSDLFilesResponse"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.wsdl.autogen.GetAllWSDLFilesResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/wsdl/type"
+        qname="ns:getAllWSDLFilesRequest"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.wsdl.autogen.GetAllWSDLFilesRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

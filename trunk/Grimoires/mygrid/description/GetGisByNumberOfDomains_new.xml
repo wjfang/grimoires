@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+	<serviceDescription>
+		<serviceName>SHoundGetGisByNumberOfDomains</serviceName>
+		<organisation>
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundGetGisByNumberOfDomains</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundGetGisByNumberOfDomains?wsdl</interfaceWSDL>
+		<serviceDescriptionText>retrieves all the gi's with the specified number of domains</serviceDescriptionText>
+		<operations>
+			<serviceOperation>
+				<operationName>SHoundGetGisByNumberOfDomains</operationName>
+				<operationInputs>
+					<parameter>
+						<parameterName>numdoms</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_data</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+						<collectionFormat>Integer value</collectionFormat>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs>
+					<parameter>
+						<parameterName>result</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#Gene_Ontology_term_id</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Collection</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#retrieving</operationTask>
+				<operationResource>http://www.mygrid.org.uk/ontology#bioinformatics_database</operationResource>
+				<operationApplication>http://www.mygrid.org.uk/ontology#Basic_Local_Alignment_Search_Tool</operationApplication>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=SPACI-NAPOLI,mds-vo-name=SPACI-NAPOLI">
+    <Name>SPACI-NAPOLI</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:francesco.gregoretti@na.icar.cnr.it</UserSupportContact>
+    <SysAdminContact>mailto:francesco.gregoretti@na.icar.cnr.it</SysAdminContact>
+    <SecurityContact>mailto:francesco.gregoretti@na.icar.cnr.it</SecurityContact>
+    <Location>Napoli, Italy</Location>
+    <Latitude>40.852</Latitude>
+    <Longitude>14.2693</Longitude>
+    <Web>http://www.spaci.it/project/</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-3</OtherInfo>
+    <OtherInfo>CNAF-T1</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=spacin-ce1.dma.unina.it,mds-vo-name=SPACI-NAPOLI">
+        <Name>spacin-ce1.dma.unina.it</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=spacin-ce1.dma.unina.it,GlueClusterUniqueID=spacin-ce1.dma.unina.it,mds-vo-name=SPACI-NAPOLI">
+            <Name>spacin-ce1.dma.unina.it</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.6" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="PIV" ClockSpeed="1400"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="true"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2096472" RAMSize="639504"/>
+            <Architecture SMPSize="1"/>
+            <Benchmark SI00="502" SF00="0"/>
+            <Location LocalID="VO-lhcb-DaVinci-v19r0">
+                <Name>VO-lhcb-DaVinci-v19r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r9">
+                <Name>VO-lhcb-Gauss-v25r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2">
+                <Name>VO-lhcb-XmlDDDB-v22r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r14">
+                <Name>VO-lhcb-XmlDDDB-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v12r10">
+                <Name>VO-lhcb-Boole-v12r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v12r18">
+                <Name>VO-lhcb-DaVinci-v12r18</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r6">
+                <Name>VO-lhcb-DaVinci-v17r6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r7">
+                <Name>VO-lhcb-DaVinci-v17r7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r8">
+                <Name>VO-lhcb-DaVinci-v17r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v18r0">
+                <Name>VO-lhcb-DaVinci-v18r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r14">
+                <Name>VO-lhcb-Brunel-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r15">
+                <Name>VO-lhcb-Brunel-v30r15</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r9">
+                <Name>VO-lhcb-DecFiles-v13r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v5r0">
+                <Name>VO-lhcb-ParamFiles-v5r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r1">
+                <Name>VO-lhcb-DaVinci-v19r1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-bio-site_to_be_installed">
+                <Name>VO-bio-site_to_be_installed</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIO_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-bio-blast">
+                <Name>VO-bio-blast</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BIO_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <Service UniqueID="GlueServiceUniqueID=spacin-ce1.dma.unina.it:2136,mds-vo-name=SPACI-NAPOLI">
+        <Name>SPACI-NAPOLI-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://spacin-ce1.dma.unina.it:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>alice</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>bio</Owner>
+        <Owner>enea</Owner>
+        <Owner>inaf</Owner>
+        <Owner>planck</Owner>
+        <Owner>biomed</Owner>
+        <Owner>infngrid</Owner>
+        <Owner>theophys</Owner>
+        <Owner>esr</Owner>
+        <Owner>cdf</Owner>
+        <Owner>ingv</Owner>
+        <Owner>virgo</Owner>
+        <Owner>babar</Owner>
+        <Owner>compchem</Owner>
+        <Owner>gridit</Owner>
+        <Owner>magic</Owner>
+        <Owner>zeus</Owner>
+        <Owner>argo</Owner>
+        <Owner>pamela</Owner>
+        <Owner>libi</Owner>
+        <Owner>egrid</Owner>
+    </Service>
+</Site>

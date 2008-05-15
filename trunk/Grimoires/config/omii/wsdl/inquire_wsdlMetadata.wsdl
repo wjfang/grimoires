@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" 
+  targetNamespace="http://www.grimoires.org/inquire_wsdlMetadata.wsdl" 
+  xmlns:tns="http://www.grimoires.org/inquire_wsdlMetadata.wsdl"
+  xmlns:meta="http://www.grimoires.org/metadata.xsd" 
+  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"  
+  name="Grimoires_inquire_wsdl_metadata_API">
+	
+  <types>
+   <xsd:schema
+      targetNamespace="http://www.grimoires.org/metadata.xsd"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import
+	schemaLocation="@TOMCAT_PROTOCOL@://@TOMCAT_HOST@:@TOMCAT_PORT@/grimoires/xsd/metadata.xsd"/>
+    </xsd:schema>
+
+    <xsd:schema
+      targetNamespace="http://www.grimoires.org/metadata.xsd"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import
+	schemaLocation="@TOMCAT_PROTOCOL@://@TOMCAT_HOST@:@TOMCAT_PORT@/grimoires/xsd/metadata_wsdl.xsd"/>
+    </xsd:schema>
+  </types>
+  
+  <message name="faultDetailList">
+    <part name="body" element="meta:faultDetailList"/>
+  </message>
+  
+  <message name="find_interfaceByMessagePartMetadata">
+    <part name="body" element="meta:find_interfaceByMessagePartMetadata" />
+  </message>
+  
+  <message name="find_interfaceByOperationMetadata">
+    <part name="body" element="meta:find_interfaceByOperationMetadata" />
+  </message>
+
+  <message name="find_operation">
+    <part name="body" element="meta:find_operation"/>
+  </message>
+
+  <message name="operationReferenceList">
+    <part name="body" element="meta:operationReferenceList"/>
+  </message>
+  
+  <message name="uriBag">
+    <part name="body" element="meta:uriBag" />
+  </message>
+  
+  <portType name="InquireWsdlMetadataPort">
+    <operation name="find_interfaceByMessagePartMetadata">
+      <input message="tns:find_interfaceByMessagePartMetadata" />
+      <output message="tns:uriBag" />
+      <fault name="error" message="tns:faultDetailList"/>
+    </operation>            
+    <operation name="find_interfaceByOperationMetadata">
+      <input message="tns:find_interfaceByOperationMetadata"/>
+      <output message="tns:uriBag"/>
+      <fault name="error" message="tns:faultDetailList"/>
+    </operation>
+    <operation name="find_operation">
+      <input message="tns:find_operation" />
+      <output message="tns:operationReferenceList" />
+      <fault name="error" message="tns:faultDetailList"/>
+    </operation>
+  </portType>
+  
+  <binding name="InquireWsdlMetadataSoap" type="tns:InquireWsdlMetadataPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    
+    <operation name="find_interfaceByMessagePartMetadata">
+      <soap:operation soapAction="find_interfaceByMessagePartMetadata" style="document" />
+      <input>
+	<soap:body use="literal" parts="body"/>
+      </input>
+      <output>
+	<soap:body use="literal" parts="body" />
+      </output>
+      <fault name="error">
+	<soap:fault name="error" use="literal"/>
+      </fault>
+    </operation>            
+    
+    <operation name="find_interfaceByOperationMetadata">
+      <soap:operation soapAction="find_interfaceByOperationMetadata" style="document" />
+      <input>
+	<soap:body use="literal" parts="body"/>
+      </input>
+      <output>
+	<soap:body use="literal" parts="body" />
+      </output>
+      <fault name="error">
+	<soap:fault name="error" use="literal"/>
+      </fault>
+    </operation>            
+   
+    <operation name="find_operation">
+      <soap:operation soapAction="find_operation" style="document" />
+      <input>
+	<soap:body use="literal" parts="body"/>
+      </input>
+      <output>
+	<soap:body use="literal" parts="body" />
+      </output>
+      <fault name="error">
+	<soap:fault name="error" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+
+  <service name="Grimoires">
+    <port binding="tns:InquireWsdlMetadataSoap" name="inquire_wsdlMetadata">
+      <soap:address location="http://localhost:8080/grimoires/services/inquire_wsdlMetadata"/>
+    </port>
+  </service>
+  
+</definitions>

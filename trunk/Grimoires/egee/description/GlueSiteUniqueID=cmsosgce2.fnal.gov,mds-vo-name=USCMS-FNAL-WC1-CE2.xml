@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=cmsosgce2.fnal.gov,mds-vo-name=USCMS-FNAL-WC1-CE2">
+    <Name>USCMS-FNAL-WC1-CE2</Name>
+    <Description>OSG Site</Description>
+    <UserSupportContact>mailto: cms-t1@fnal.gov</UserSupportContact>
+    <SysAdminContact>mailto: cms-t1@fnal.gov</SysAdminContact>
+    <SecurityContact>mailto: cms-t1@fnal.gov</SecurityContact>
+    <Location>Batavia ,USA</Location>
+    <Latitude>41.8412</Latitude>
+    <Longitude>-88.2546</Longitude>
+    <Web>http://www.uscms.org/SoftwareComputing/Grid/Policy/OSG_VO.html</Web>
+    <Sponsor>UNAVAILABLE</Sponsor>
+    <OtherInfo>UNAVAILABLE</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=cmsosgce2.fnal.gov,mds-vo-name=USCMS-FNAL-WC1-CE2">
+        <Name>cmsosgce2.fnal.gov</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=cmsosgce2.fnal.gov,GlueClusterUniqueID=cmsosgce2.fnal.gov,mds-vo-name=USCMS-FNAL-WC1-CE2">
+            <Name>cmsosgce2.fnal.gov</Name>
+            <PhysicalCPUs>1</PhysicalCPUs>
+            <LogicalCPUs>2</LogicalCPUs>
+            <TmpDir>/uscms_data/d1/grid_tmp/osg</TmpDir>
+            <WNTmpDir>GlueInformationServiceURL: ldap://is.grid.iu.edu:2170/mds-vo-name=USCMS-FNAL-WC1-CE2,mds-vo-name=local,o=grid</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.4" Name="ScientificSL"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AuthenticAMD" Model="Dual Core AMD Opteron(tm) Processor 270" ClockSpeed="1000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1024" RAMSize="512"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="400" SF00="380"/>
+            <Location LocalID="LCG-2_6_0">
+                <Name>LCG-2_6_0</Name>
+                <Version>2.6.0</Version>
+                <Path>/uscms/osg/app/dteam</Path>
+            </Location>
+            <Location LocalID="LCG-2_7_0">
+                <Name>LCG-2_7_0</Name>
+                <Version>2.7.0</Version>
+                <Path>/uscms/osg/app/dteam</Path>
+            </Location>
+            <Location LocalID="TEST-BURT-1">
+                <Name>TEST-BURT-1</Name>
+                <Version>0.0.1</Version>
+                <Path>/uscms/osg/app</Path>
+            </Location>
+            <Location LocalID="SAMPLE_LOCATION">
+                <Name>SAMPLE_LOCATION</Name>
+                <Version>default</Version>
+                <Path>/SAMPLE-path</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_8_1">
+                <Name>VO-cms-CMSSW_0_8_1</Name>
+                <Version>CMSSW_0_8_1</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_8_4">
+                <Name>VO-cms-CMSSW_0_8_4</Name>
+                <Version>CMSSW_0_8_4</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_0_9_2">
+                <Name>VO-cms-CMSSW_0_9_2</Name>
+                <Version>CMSSW_0_9_2</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_0_6">
+                <Name>VO-cms-CMSSW_1_0_6</Name>
+                <Version>CMSSW_1_0_6</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_1_0">
+                <Name>VO-cms-CMSSW_1_1_0</Name>
+                <Version>CMSSW_1_1_0</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_1_1">
+                <Name>VO-cms-CMSSW_1_1_1</Name>
+                <Version>CMSSW_1_1_1</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_1_2">
+                <Name>VO-cms-CMSSW_1_1_2</Name>
+                <Version>CMSSW_1_1_2</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_0">
+                <Name>VO-cms-CMSSW_1_2_0</Name>
+                <Version>CMSSW_1_2_0</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_1">
+                <Name>VO-cms-CMSSW_1_2_1</Name>
+                <Version>CMSSW_1_2_1</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_2">
+                <Name>VO-cms-CMSSW_1_2_2</Name>
+                <Version>CMSSW_1_2_2</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_3">
+                <Name>VO-cms-CMSSW_1_2_3</Name>
+                <Version>CMSSW_1_2_3</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_4">
+                <Name>VO-cms-CMSSW_1_2_4</Name>
+                <Version>CMSSW_1_2_4</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_2_6">
+                <Name>VO-cms-CMSSW_1_2_6</Name>
+                <Version>CMSSW_1_2_6</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_0">
+                <Name>VO-cms-CMSSW_1_3_0</Name>
+                <Version>CMSSW_1_3_0</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1">
+                <Name>VO-cms-CMSSW_1_3_1</Name>
+                <Version>CMSSW_1_3_1</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_2">
+                <Name>VO-cms-CMSSW_1_3_2</Name>
+                <Version>CMSSW_1_3_2</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_3">
+                <Name>VO-cms-CMSSW_1_3_3</Name>
+                <Version>CMSSW_1_3_3</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_4">
+                <Name>VO-cms-CMSSW_1_3_4</Name>
+                <Version>CMSSW_1_3_4</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_5">
+                <Name>VO-cms-CMSSW_1_3_5</Name>
+                <Version>CMSSW_1_3_5</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_6">
+                <Name>VO-cms-CMSSW_1_3_6</Name>
+                <Version>CMSSW_1_3_6</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_0">
+                <Name>VO-cms-CMSSW_1_4_0</Name>
+                <Version>CMSSW_1_4_0</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_1">
+                <Name>VO-cms-CMSSW_1_4_1</Name>
+                <Version>CMSSW_1_4_1</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_2">
+                <Name>VO-cms-CMSSW_1_4_2</Name>
+                <Version>CMSSW_1_4_2</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_3">
+                <Name>VO-cms-CMSSW_1_4_3</Name>
+                <Version>CMSSW_1_4_3</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_4">
+                <Name>VO-cms-CMSSW_1_4_4</Name>
+                <Version>CMSSW_1_4_4</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_5">
+                <Name>VO-cms-CMSSW_1_4_5</Name>
+                <Version>CMSSW_1_4_5</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_6">
+                <Name>VO-cms-CMSSW_1_4_6</Name>
+                <Version>CMSSW_1_4_6</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_7">
+                <Name>VO-cms-CMSSW_1_4_7</Name>
+                <Version>CMSSW_1_4_7</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_0">
+                <Name>VO-cms-CMSSW_1_5_0</Name>
+                <Version>CMSSW_1_5_0</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_1">
+                <Name>VO-cms-CMSSW_1_5_1</Name>
+                <Version>CMSSW_1_5_1</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_2">
+                <Name>VO-cms-CMSSW_1_5_2</Name>
+                <Version>CMSSW_1_5_2</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_3">
+                <Name>VO-cms-CMSSW_1_5_3</Name>
+                <Version>CMSSW_1_5_3</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_5_4">
+                <Name>VO-cms-CMSSW_1_5_4</Name>
+                <Version>CMSSW_1_5_4</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_0">
+                <Name>VO-cms-CMSSW_1_6_0</Name>
+                <Version>CMSSW_1_6_0</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_1">
+                <Name>VO-cms-CMSSW_1_6_1</Name>
+                <Version>CMSSW_1_6_1</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_3">
+                <Name>VO-cms-CMSSW_1_6_3</Name>
+                <Version>CMSSW_1_6_3</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_4">
+                <Name>VO-cms-CMSSW_1_6_4</Name>
+                <Version>CMSSW_1_6_4</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_5">
+                <Name>VO-cms-CMSSW_1_6_5</Name>
+                <Version>CMSSW_1_6_5</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_1_0_pre3">
+                <Name>VO-cms-CMSSW_1_1_0_pre3</Name>
+                <Version>CMSSW_1_1_0_pre3</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_1_0_pre4">
+                <Name>VO-cms-CMSSW_1_1_0_pre4</Name>
+                <Version>CMSSW_1_1_0_pre4</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_0_pre5">
+                <Name>VO-cms-CMSSW_1_3_0_pre5</Name>
+                <Version>CMSSW_1_3_0_pre5</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_0_pre6">
+                <Name>VO-cms-CMSSW_1_3_0_pre6</Name>
+                <Version>CMSSW_1_3_0_pre6</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_3_1_HLT6">
+                <Name>VO-cms-CMSSW_1_3_1_HLT6</Name>
+                <Version>CMSSW_1_3_1_HLT6</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_4_0_DAQ1">
+                <Name>VO-cms-CMSSW_1_4_0_DAQ1</Name>
+                <Version>CMSSW_1_4_0_DAQ1</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_1_pre1">
+                <Name>VO-cms-CMSSW_1_6_1_pre1</Name>
+                <Version>CMSSW_1_6_1_pre1</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_2_pre1">
+                <Name>VO-cms-CMSSW_1_6_2_pre1</Name>
+                <Version>CMSSW_1_6_2_pre1</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_5_pre1">
+                <Name>VO-cms-CMSSW_1_6_5_pre1</Name>
+                <Version>CMSSW_1_6_5_pre1</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_5_pre2">
+                <Name>VO-cms-CMSSW_1_6_5_pre2</Name>
+                <Version>CMSSW_1_6_5_pre2</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_6_6_pre1">
+                <Name>VO-cms-CMSSW_1_6_6_pre1</Name>
+                <Version>CMSSW_1_6_6_pre1</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_7_0_pre1">
+                <Name>VO-cms-CMSSW_1_7_0_pre1</Name>
+                <Version>CMSSW_1_7_0_pre1</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_7_0_pre3">
+                <Name>VO-cms-CMSSW_1_7_0_pre3</Name>
+                <Version>CMSSW_1_7_0_pre3</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+            <Location LocalID="VO-cms-CMSSW_1_7_0_pre5">
+                <Name>VO-cms-CMSSW_1_7_0_pre5</Name>
+                <Version>CMSSW_1_7_0_pre5</Version>
+                <Path>/uscmst1/prod/sw/cms</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=cmsosgce2.fnal.gov,mds-vo-name=USCMS-FNAL-WC1-CE2">
+        <InformationServiceURL>ldap://is.grid.iu.edu:2170/mds-vo-name=USCMS-FNAL-WC1-CE2,mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>9754</SizeTotal>
+        <SizeFree>2971</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="cdf">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="des">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ilc">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="mis">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="osg">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cdms">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="fmri">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gadu">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="glow">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="grow">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="i2u2">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ktev">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="numi">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="sdss">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="star">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="astro">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="auger">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dosar">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dzero">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="grase">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ivdgl">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="minos">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="nwicg">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="engage">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="theory">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="hypercp">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="nanohub">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="nysgrid">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="patriot">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="fermilab">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="miniboone">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="accelerator">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="fermilab-test">
+            <Path>/uscms_data/d1/grid_tmp/osg</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6783</UsedSpace>
+            <AvailableSpace>2971</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+    </StorageElement>
+</Site>

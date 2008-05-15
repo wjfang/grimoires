@@ -1,0 +1,140 @@
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:j.0="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#" >
+<rdf:Description rdf:nodeID="A0">
+<j.0:hasText>http://www.ecs.soton.ac.uk/~wf/soap</j.0:hasText>
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#AccessPoint"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A1">
+<j.0:hasServiceKey>XXXYYYZZZAAABBBCCC</j.0:hasServiceKey>
+<j.0:hasDescription rdf:nodeID="A2"/>
+<j.0:hasBusinessEntity rdf:nodeID="A3"/>
+<j.0:hasBindingTemplate rdf:nodeID="A4"/>
+<j.0:hasName rdf:nodeID="A5"/>
+<j.0:hasBindingTemplate rdf:nodeID="A6"/>
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#BusinessService"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A7">
+<j.0:hasDescription>Weijian Binding Template55566677</j.0:hasDescription>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A8">
+<rdf:_1 rdf:nodeID="A9"/>
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#PhoneBag"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A10">
+<j.0:hasKeyValue>SOTON</j.0:hasKeyValue>
+<j.0:hasKeyName>SOTON</j.0:hasKeyName>
+<j.0:hasText>SOTON</j.0:hasText>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A11">
+<rdf:_1>Complex Business55566677</rdf:_1>
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#NameBag"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A12">
+<j.0:hasAddressLine rdf:nodeID="A13"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A14">
+<j.0:hasDescription>Weijian's business55566677</j.0:hasDescription>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A5">
+<rdf:_1>Weijian's Business' Service55566677x</rdf:_1>
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#NameBag"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A15">
+<j.0:hasText>UK</j.0:hasText>
+<j.0:hasKeyValue>UK</j.0:hasKeyValue>
+<j.0:hasKeyName>UK</j.0:hasKeyName>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A16">
+<j.0:hasText>wf@ecs.soton.ac.uk</j.0:hasText>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A6">
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#BindingTemplateBag"/>
+<rdf:_1 rdf:nodeID="A17"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A18">
+<j.0:hasTModel>cd3f6b16-af81-41a9-8d3e-d049ccccd2cf</j.0:hasTModel>
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#TModelInstanceInfo"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A19">
+<j.0:hasDescription>Weijian's business is great</j.0:hasDescription>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A20">
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#EmailBag"/>
+<rdf:_1 rdf:nodeID="A16"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A21">
+<rdf:_1 rdf:nodeID="A22"/>
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#ContactBag"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A23">
+<rdf:_1 rdf:nodeID="A18"/>
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#TModelInstanceDetailsBag"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A9">
+<j.0:hasText>12345678</j.0:hasText>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A3">
+<j.0:hasBusinessService rdf:nodeID="A24"/>
+<j.0:hasBusinessKey>8c7db454-b52e-4ba2-b60b-97c5f72c09a2</j.0:hasBusinessKey>
+<j.0:hasContact rdf:nodeID="A21"/>
+<j.0:hasName rdf:nodeID="A11"/>
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#BusinessEntity"/>
+<j.0:hasDescription rdf:nodeID="A25"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A25">
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#DescriptionBag"/>
+<rdf:_1 rdf:nodeID="A14"/>
+<rdf:_2 rdf:nodeID="A19"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A26">
+<rdf:_1 rdf:nodeID="A12"/>
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#AddressBag"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A2">
+<rdf:_1 rdf:nodeID="A27"/>
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#DescriptionBag"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A27">
+<j.0:hasDescription>Ganranteed Quality of Service55566677</j.0:hasDescription>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A22">
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#contact"/>
+<j.0:hasPhones rdf:nodeID="A8"/>
+<j.0:hasAddresses rdf:nodeID="A26"/>
+<j.0:hasName>Weijian Fang</j.0:hasName>
+<j.0:hasEmails rdf:nodeID="A20"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A28">
+<rdf:_1 rdf:nodeID="A7"/>
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#DescriptionBag"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A13">
+<rdf:_2 rdf:nodeID="A10"/>
+<rdf:_3 rdf:nodeID="A15"/>
+<rdf:_1 rdf:nodeID="A29"/>
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#AddressLineBag"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A24">
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#BusinessServiceBag"/>
+<rdf:_1 rdf:nodeID="A1"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A4">
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#BindingTemplateBag"/>
+<rdf:_1 rdf:nodeID="A17"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A29">
+<j.0:hasKeyValue>ECS</j.0:hasKeyValue>
+<j.0:hasText>ECS</j.0:hasText>
+<j.0:hasKeyName>ECS</j.0:hasKeyName>
+</rdf:Description>
+<rdf:Description rdf:nodeID="A17">
+<j.0:hastModelInstanceDetail rdf:nodeID="A23"/>
+<j.0:hasAccessPoint rdf:nodeID="A0"/>
+<j.0:hasBindingKey>43966f30-a86d-41a4-b777-c8f7a1283078</j.0:hasBindingKey>
+<rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/uddiv2.rdfs#BindingTemplate"/>
+<j.0:hasBusinessService rdf:nodeID="A1"/>
+<j.0:hasDescription rdf:nodeID="A28"/>
+</rdf:Description>
+</rdf:RDF>
+

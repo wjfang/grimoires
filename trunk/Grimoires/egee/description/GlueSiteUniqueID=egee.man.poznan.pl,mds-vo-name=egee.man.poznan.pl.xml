@@ -1,0 +1,1506 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=egee.man.poznan.pl,mds-vo-name=egee.man.poznan.pl">
+    <Name>egee.man.poznan.pl</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto: egee@man.poznan.pl</UserSupportContact>
+    <SysAdminContact>mailto: egee@man.poznan.pl</SysAdminContact>
+    <SecurityContact>mailto: egee@man.poznan.pl</SecurityContact>
+    <Location>Poznan, Poland</Location>
+    <Latitude>52.42</Latitude>
+    <Longitude>16.91</Longitude>
+    <Web>http://www.egee.man.poznan.pl</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER 2</OtherInfo>
+    <OtherInfo>lcg-gridka-ce.fzk.de</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ce.egee.man.poznan.pl,mds-vo-name=egee.man.poznan.pl">
+        <Name>ce.egee.man.poznan.pl</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce.egee.man.poznan.pl,GlueClusterUniqueID=ce.egee.man.poznan.pl,mds-vo-name=egee.man.poznan.pl">
+            <Name>ce.egee.man.poznan.pl</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="3" Release="3.0.5" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="IA64" ClockSpeed="1300"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2097088" RAMSize="2027952"/>
+            <Architecture SMPSize="2" PlatformType="ia64"/>
+            <Benchmark SI00="530" SF00="904"/>
+            <Location LocalID="VO-balticgrid-ktu">
+                <Name>VO-balticgrid-ktu</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-bgtut-test-tag">
+                <Name>VO-bgtut-test-tag</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BGTUT_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-bgtut-testapp-01">
+                <Name>VO-bgtut-testapp-01</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BGTUT_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-GAUSSIAN-g03-D.02">
+                <Name>VO-GAUSSIAN-g03-D.02</Name>
+                <Version>Prod</Version>
+                <Path>$VO_GAUSSIAN_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-test_ignore">
+                <Name>VO-dteam-test_ignore</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-TEST-IGNORE">
+                <Name>VO-balticgrid-TEST-IGNORE</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-BLAST-2.2.14">
+                <Name>VO-balticgrid-BLAST-2.2.14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-A-MATH-R-2.5.1">
+                <Name>VO-balticgrid-A-MATH-R-2.5.1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final">
+                <Name>VO-dteam-december05prod-final</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-DEVEL-G95-0.91">
+                <Name>VO-balticgrid-E-DEVEL-G95-0.91</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-A-MATH-ATLAS-3.6.0">
+                <Name>VO-balticgrid-A-MATH-ATLAS-3.6.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ATLAS-3.6.0_LAPACK">
+                <Name>VO-balticgrid-ATLAS-3.6.0_LAPACK</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-geant4-jun06prod-test1-cand01">
+                <Name>VO-geant4-jun06prod-test1-cand01</Name>
+                <Version>Prod</Version>
+                <Path>$VO_GEANT4_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-geant4-jun06prod-test2-cand01">
+                <Name>VO-geant4-jun06prod-test2-cand01</Name>
+                <Version>Prod</Version>
+                <Path>$VO_GEANT4_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-december05prod-final-cand2">
+                <Name>VO-dteam-december05prod-final-cand2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu/ENV/DEVEL/G95/0.91">
+                <Name>VO-balticgrid-ktu/ENV/DEVEL/G95/0.91</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-DEVEL-GCC-4.2.0-testme">
+                <Name>VO-balticgrid-E-DEVEL-GCC-4.2.0-testme</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-DEVEL-SUBVERSION-1.4.3">
+                <Name>VO-balticgrid-E-DEVEL-SUBVERSION-1.4.3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu/APPS/MATH/LAPACK/3.0">
+                <Name>VO-balticgrid-ktu/APPS/MATH/LAPACK/3.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu/APPS/MATH/ATLAS/3.6.0">
+                <Name>VO-balticgrid-ktu/APPS/MATH/ATLAS/3.6.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-APPS/BIO/MULTIZ-TBA-022806">
+                <Name>VO-balticgrid-APPS/BIO/MULTIZ-TBA-022806</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-PARALLEL-MPICH2-1.0.5-testme">
+                <Name>VO-balticgrid-E-PARALLEL-MPICH2-1.0.5-testme</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-PARALLEL-MPIEXEC-0.82-testme">
+                <Name>VO-balticgrid-E-PARALLEL-MPIEXEC-0.82-testme</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-PARALLEL-OPENMPI-1.2.3-testme">
+                <Name>VO-balticgrid-E-PARALLEL-OPENMPI-1.2.3-testme</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-ktu/APPS/MATH/ATLAS_LAPACK/3.6.0">
+                <Name>VO-balticgrid-ktu/APPS/MATH/ATLAS_LAPACK/3.6.0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-PARALLEL-MPICH2-1.0.5-G95-0.91-testme">
+                <Name>VO-balticgrid-E-PARALLEL-MPICH2-1.0.5-G95-0.91-testme</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-balticgrid-E-PARALLEL-OPENMPI-1.2.3-GCC-4.2.0-testme">
+                <Name>VO-balticgrid-E-PARALLEL-OPENMPI-1.2.3-GCC-4.2.0-testme</Name>
+                <Version>Prod</Version>
+                <Path>$VO_BALTICGRID_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=se1.egee.man.poznan.pl,mds-vo-name=AMD64.PSNC.PL">
+        <InformationServiceURL>ldap://se1.egee.man.poznan.pl:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>4680</SizeTotal>
+        <SizeFree>4389</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/egee.man.poznan.pl/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/dpm/egee.man.poznan.pl/home/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/egee.man.poznan.pl/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/dpm/egee.man.poznan.pl/home/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="magic">
+            <Path>/dpm/egee.man.poznan.pl/home/magic</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="compchem">
+            <Path>/dpm/egee.man.poznan.pl/home/compchem</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="voce">
+            <Path>/dpm/egee.man.poznan.pl/home/voce</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>/dpm/egee.man.poznan.pl/home/geant4</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="balticgrid">
+            <Path>/dpm/egee.man.poznan.pl/home/balticgrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/egee.man.poznan.pl/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geclipse">
+            <Path>/dpm/egee.man.poznan.pl/home/geclipse</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gamess">
+            <Path>/dpm/egee.man.poznan.pl/home/gamess</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="bgtut">
+            <Path>/dpm/egee.man.poznan.pl/home/bgtut</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="itest">
+            <Path>/dpm/egee.man.poznan.pl/home/itest</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="imain">
+            <Path>/dpm/egee.man.poznan.pl/home/imain</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="imon">
+            <Path>/dpm/egee.man.poznan.pl/home/imon</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="itut">
+            <Path>/dpm/egee.man.poznan.pl/home/itut</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ifusion">
+            <Path>/dpm/egee.man.poznan.pl/home/ifusion</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="iplanck">
+            <Path>/dpm/egee.man.poznan.pl/home/iplanck</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ibrain">
+            <Path>/dpm/egee.man.poznan.pl/home/ibrain</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ienvmod">
+            <Path>/dpm/egee.man.poznan.pl/home/ienvmod</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="iusct">
+            <Path>/dpm/egee.man.poznan.pl/home/iusct</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gaussian">
+            <Path>/dpm/egee.man.poznan.pl/home/gaussian</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/egee.man.poznan.pl/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/egee.man.poznan.pl/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="imon">
+            <Path>/dpm/egee.man.poznan.pl/home/imon</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="itut">
+            <Path>/dpm/egee.man.poznan.pl/home/itut</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="voce">
+            <Path>/dpm/egee.man.poznan.pl/home/voce</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/dpm/egee.man.poznan.pl/home/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/dpm/egee.man.poznan.pl/home/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="bgtut">
+            <Path>/dpm/egee.man.poznan.pl/home/bgtut</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/egee.man.poznan.pl/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="imain">
+            <Path>/dpm/egee.man.poznan.pl/home/imain</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="itest">
+            <Path>/dpm/egee.man.poznan.pl/home/itest</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="iusct">
+            <Path>/dpm/egee.man.poznan.pl/home/iusct</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="magic">
+            <Path>/dpm/egee.man.poznan.pl/home/magic</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gamess">
+            <Path>/dpm/egee.man.poznan.pl/home/gamess</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>/dpm/egee.man.poznan.pl/home/geant4</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ibrain">
+            <Path>/dpm/egee.man.poznan.pl/home/ibrain</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ienvmod">
+            <Path>/dpm/egee.man.poznan.pl/home/ienvmod</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ifusion">
+            <Path>/dpm/egee.man.poznan.pl/home/ifusion</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="iplanck">
+            <Path>/dpm/egee.man.poznan.pl/home/iplanck</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="compchem">
+            <Path>/dpm/egee.man.poznan.pl/home/compchem</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gaussian">
+            <Path>/dpm/egee.man.poznan.pl/home/gaussian</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geclipse">
+            <Path>/dpm/egee.man.poznan.pl/home/geclipse</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="balticgrid">
+            <Path>/dpm/egee.man.poznan.pl/home/balticgrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://se1.egee.man.poznan.pl</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://se1.egee.man.poznan.pl</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://se1.egee.man.poznan.pl</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://se1.egee.man.poznan.pl</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://se1.egee.man.poznan.pl</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://se1.egee.man.poznan.pl</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=se1.egee.man.poznan.pl,mds-vo-name=egee.man.poznan.pl">
+        <InformationServiceURL>ldap://se1.egee.man.poznan.pl:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>4680</SizeTotal>
+        <SizeFree>4389</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/egee.man.poznan.pl/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/dpm/egee.man.poznan.pl/home/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/egee.man.poznan.pl/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/dpm/egee.man.poznan.pl/home/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="magic">
+            <Path>/dpm/egee.man.poznan.pl/home/magic</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="compchem">
+            <Path>/dpm/egee.man.poznan.pl/home/compchem</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="voce">
+            <Path>/dpm/egee.man.poznan.pl/home/voce</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>/dpm/egee.man.poznan.pl/home/geant4</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="balticgrid">
+            <Path>/dpm/egee.man.poznan.pl/home/balticgrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/egee.man.poznan.pl/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geclipse">
+            <Path>/dpm/egee.man.poznan.pl/home/geclipse</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gamess">
+            <Path>/dpm/egee.man.poznan.pl/home/gamess</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="bgtut">
+            <Path>/dpm/egee.man.poznan.pl/home/bgtut</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="itest">
+            <Path>/dpm/egee.man.poznan.pl/home/itest</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="imain">
+            <Path>/dpm/egee.man.poznan.pl/home/imain</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="imon">
+            <Path>/dpm/egee.man.poznan.pl/home/imon</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="itut">
+            <Path>/dpm/egee.man.poznan.pl/home/itut</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ifusion">
+            <Path>/dpm/egee.man.poznan.pl/home/ifusion</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="iplanck">
+            <Path>/dpm/egee.man.poznan.pl/home/iplanck</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ibrain">
+            <Path>/dpm/egee.man.poznan.pl/home/ibrain</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ienvmod">
+            <Path>/dpm/egee.man.poznan.pl/home/ienvmod</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="iusct">
+            <Path>/dpm/egee.man.poznan.pl/home/iusct</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gaussian">
+            <Path>/dpm/egee.man.poznan.pl/home/gaussian</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/dpm/egee.man.poznan.pl/home/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/egee.man.poznan.pl/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="imon">
+            <Path>/dpm/egee.man.poznan.pl/home/imon</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="itut">
+            <Path>/dpm/egee.man.poznan.pl/home/itut</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="voce">
+            <Path>/dpm/egee.man.poznan.pl/home/voce</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/dpm/egee.man.poznan.pl/home/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/dpm/egee.man.poznan.pl/home/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="bgtut">
+            <Path>/dpm/egee.man.poznan.pl/home/bgtut</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/egee.man.poznan.pl/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="imain">
+            <Path>/dpm/egee.man.poznan.pl/home/imain</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="itest">
+            <Path>/dpm/egee.man.poznan.pl/home/itest</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="iusct">
+            <Path>/dpm/egee.man.poznan.pl/home/iusct</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="magic">
+            <Path>/dpm/egee.man.poznan.pl/home/magic</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gamess">
+            <Path>/dpm/egee.man.poznan.pl/home/gamess</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geant4">
+            <Path>/dpm/egee.man.poznan.pl/home/geant4</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ibrain">
+            <Path>/dpm/egee.man.poznan.pl/home/ibrain</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ienvmod">
+            <Path>/dpm/egee.man.poznan.pl/home/ienvmod</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ifusion">
+            <Path>/dpm/egee.man.poznan.pl/home/ifusion</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="iplanck">
+            <Path>/dpm/egee.man.poznan.pl/home/iplanck</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="compchem">
+            <Path>/dpm/egee.man.poznan.pl/home/compchem</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="gaussian">
+            <Path>/dpm/egee.man.poznan.pl/home/gaussian</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="geclipse">
+            <Path>/dpm/egee.man.poznan.pl/home/geclipse</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="balticgrid">
+            <Path>/dpm/egee.man.poznan.pl/home/balticgrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>291310000</UsedSpace>
+            <AvailableSpace>4388670000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://se1.egee.man.poznan.pl</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://se1.egee.man.poznan.pl</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://se1.egee.man.poznan.pl</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://se1.egee.man.poznan.pl</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://se1.egee.man.poznan.pl</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://se1.egee.man.poznan.pl</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=se2-t2.egee.man.poznan.pl,mds-vo-name=egee.man.poznan.pl">
+        <InformationServiceURL>ldap://se2-t2.egee.man.poznan.pl:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>939</SizeTotal>
+        <SizeFree>885</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/egee.man.poznan.pl/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>53290000</UsedSpace>
+            <AvailableSpace>885400000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/dpm/egee.man.poznan.pl/home/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>53290000</UsedSpace>
+            <AvailableSpace>885400000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/dpm/egee.man.poznan.pl/home/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>53290000</UsedSpace>
+            <AvailableSpace>885400000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/egee.man.poznan.pl/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>53290000</UsedSpace>
+            <AvailableSpace>885400000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://se2-t2.egee.man.poznan.pl</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://se2-t2.egee.man.poznan.pl</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://se2-t2.egee.man.poznan.pl</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=httpg://se1.egee.man.poznan.pl:8443/srm/managerv1,mds-vo-name=AMD64.PSNC.PL">
+        <Name>egee.man.poznan.pl-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://se1.egee.man.poznan.pl:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ce.egee.man.poznan.pl:2136,mds-vo-name=egee.man.poznan.pl">
+        <Name>egee.man.poznan.pl-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://ce.egee.man.poznan.pl:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>alice</Owner>
+        <Owner>magic</Owner>
+        <Owner>compchem</Owner>
+        <Owner>voce</Owner>
+        <Owner>geant4</Owner>
+        <Owner>balticgrid</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=se1.egee.man.poznan.pl:2136,mds-vo-name=egee.man.poznan.pl">
+        <Name>egee.man.poznan.pl-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://se1.egee.man.poznan.pl:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>alice</Owner>
+        <Owner>magic</Owner>
+        <Owner>compchem</Owner>
+        <Owner>voce</Owner>
+        <Owner>geant4</Owner>
+        <Owner>balticgrid</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=gsissh://gridserv01.egee.man.poznan.pl:1975,mds-vo-name=egee.man.poznan.pl">
+        <Name>egee.man.poznan.pl-vobox</Name>
+        <Type>VOBOX</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>gsissh://gridserv01.egee.man.poznan.pl:1975</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://se1.egee.man.poznan.pl:8443/srm/managerv1,mds-vo-name=egee.man.poznan.pl">
+        <Name>egee.man.poznan.pl-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://se1.egee.man.poznan.pl:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://se2-t2.egee.man.poznan.pl:8443/srm/managerv1,mds-vo-name=egee.man.poznan.pl">
+        <Name>egee.man.poznan.pl-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://se2-t2.egee.man.poznan.pl:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

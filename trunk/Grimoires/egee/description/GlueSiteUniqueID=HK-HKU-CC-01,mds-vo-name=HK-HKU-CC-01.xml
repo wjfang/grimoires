@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=HK-HKU-CC-01,mds-vo-name=HK-HKU-CC-01">
+    <Name>HK-HKU-CC-01</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto: cmwoo@hku.hk</UserSupportContact>
+    <SysAdminContact>mailto: cmwoo@hku.hk</SysAdminContact>
+    <SecurityContact>mailto: cmwoo@hku.hk</SecurityContact>
+    <Location>Hong Kong, China</Location>
+    <Latitude>22.3</Latitude>
+    <Longitude>114.2</Longitude>
+    <Web>http://www.hku.hk/cc/ccsystem/hpcpower/</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER 2</OtherInfo>
+    <OtherInfo>hku.hk</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ce.grid.hku.hk,mds-vo-name=HK-HKU-CC-01">
+        <Name>ce.grid.hku.hk</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce.grid.hku.hk,GlueClusterUniqueID=ce.grid.hku.hk,mds-vo-name=HK-HKU-CC-01">
+            <Name>ce.grid.hku.hk</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL " Release="3.0.5" Name="Scientific Linux CERN"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="PIII" ClockSpeed="1001"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1025" RAMSize="513"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="381" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+</Site>

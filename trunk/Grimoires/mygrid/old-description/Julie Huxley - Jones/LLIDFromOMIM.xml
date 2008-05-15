@@ -1,0 +1,49 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<serviceDescriptions  xmlns="pd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="pd /C:/Program Files/taverna-workbench-1.2/./plugins/pedro/services/model/common.xsd">
+	<serviceDescription >
+		<serviceName>SHoundLLIDFromOMIM</serviceName>
+		<organisation >
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundLLIDFromOMIM</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundLLIDFromOMIM?wsdl</interfaceWSDL>
+		<serviceDescriptionText>retrieves an array of locus link ids with the given OMIM identifier</serviceDescriptionText>
+		<operations >
+			<serviceOperation >
+				<operationName>SHoundLLIDFromOMIM</operationName>
+				<operationDescriptionText>Fetches LocusLink ID from OMIM identifiers. Locus Link does not work anymore. NCBI has closed it down and the data is now available from NCBI GENE instead.</operationDescriptionText>
+				<operationInputs >
+					<parameter >
+						<parameterName>omimid</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#OMIM_record_id</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Ordered Collection</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs >
+					<parameter >
+						<parameterName>result</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#LocusLink_record_id</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Ordered Collection</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#retrieving</operationTask>
+				<operationResource>http://www.mygrid.org.uk/ontology#bioinformatics_database</operationResource>
+				<operationResourceContent>http://www.mygrid.org.uk/ontology#model_organism</operationResourceContent>
+				<operationMethod>http://www.mygrid.org.uk/ontology#bioinformatics_algorithm</operationMethod>
+				<operationApplication>http://www.mygrid.org.uk/ontology#bioinformatics_application</operationApplication>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

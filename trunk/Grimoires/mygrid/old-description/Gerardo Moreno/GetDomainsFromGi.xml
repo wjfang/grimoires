@@ -1,0 +1,28 @@
+  <serviceDescriptions   xmlns="pd">
+  <serviceDescription>
+  <serviceName>SHoundGetDomainsFromGi</serviceName>
+    		<organisation>
+    			<organisationName>Blueprint</organisationName>
+    			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+    		</organisation>
+    		<locationURL>http://seqhound.blueprint.org/SHoundGetDomainsFromGi</locationURL>
+  		<interfaceWSDL>http://seqhound.blueprint.org/SHoundGetDomainsFromGi?wsdl</interfaceWSDL>
+  <serviceDescriptionText>Fetches information about domains from the Conserved Domain Database (CDD) as assigned by Reverse Position Specific BLAST to a given protein sequence. Uses redundancy information for the query protein. This means that if the query fails for the input gi identifier, then the query will be retried for all other gi identifiers that belong to the same redundant group.</serviceDescriptionText> 
+  <operations>
+  <serviceOperation>
+  <operationName>SHoundGetDomainsFromGi</operationName> 
+  <operationInputs>
+  <parameter>
+  <parameterName>gi</parameterName> 
+  </parameter>
+  </operationInputs>
+  <operationOutputs>
+  <parameter>
+  <parameterName>result</parameterName> 
+  </parameter>
+  </operationOutputs>
+  </serviceOperation>
+  </operations>
+<serviceType>SeqHound service</serviceType> 
+  </serviceDescription>
+  </serviceDescriptions>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+	<serviceDescription>
+		<serviceName>SHoundGetBioseqSetList</serviceName>
+		<organisation>
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundGetBioseqSetList</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundGetBioseqSetList?wsdl</interfaceWSDL>
+		<serviceDescriptionText>retrieves a string contain the bioseqset for a list of gi's</serviceDescriptionText>
+		<operations>
+			<serviceOperation>
+				<operationName>SHoundGetBioseqSetList</operationName>
+				<operationInputs>
+					<parameter>
+						<parameterName>giList</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#biological_sequence_id</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs>
+					<parameter>
+						<parameterName>result</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_identifier</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Set</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#retrieving</operationTask>
+				<operationResource>http://www.mygrid.org.uk/ontology#sequence_database</operationResource>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

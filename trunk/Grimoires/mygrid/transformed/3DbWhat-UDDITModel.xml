@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tModel tModelKey="http://seqhound.blueprint.org/" xmlns="urn:uddi-org:api_v2">
+ <name>
+http://seqhound.blueprint.org/ </name>
+ <overviewDoc>
+  <overviewURL>
+http://seqhound.blueprint.org/  </overviewURL>
+ </overviewDoc>
+ <categoryBag>
+  <keyedReference keyName="uddi-org:types" keyValue="wsdlSpec" tModelKey="uuid:C1ACF26D-9672-4404-9D70-39B756E62AB4"/>
+ </categoryBag>
+</tModel>

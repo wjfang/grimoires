@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=NDGF-T1,mds-vo-name=NDGF-T1">
+    <Name>NDGF-T1</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:sc-tech@ndgf.org</UserSupportContact>
+    <SysAdminContact>mailto:sc-tech@ndgf.org</SysAdminContact>
+    <SecurityContact>mailto:sc-tech@ndgf.org</SecurityContact>
+    <Location>Distributed in the Nordic countries</Location>
+    <Latitude>55.633056</Latitude>
+    <Longitude>12.639444</Longitude>
+    <Web>http://www.ndgf.org/</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-1</OtherInfo>
+    <OtherInfo>NDGF-T1</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ce01.titan.uio.no,mds-vo-name=NDGF-T1">
+        <Name>Titan (USIT/UiO)</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=norgrid,GlueClusterUniqueID=ce01.titan.uio.no,mds-vo-name=NDGF-T1">
+            <Name>norgrid</Name>
+            <PhysicalCPUs>128</PhysicalCPUs>
+            <OperatingSystem Version="-1" Release="-1" Name="Red Hat Enterprise Linux WS release 4 (Nahant Update 4)"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Dual-Core" Model="AMD" ClockSpeed="2613"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="false" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" RAMSize="8192"/>
+            <Architecture SMPSize="2" PlatformType="x86_64"/>
+            <Benchmark SI00="-1" SF00="-1"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=condor.titan.uio.no,mds-vo-name=NDGF-T1">
+        <Name>Hyperion (USIT/UiO)</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=q1800MB,GlueClusterUniqueID=condor.titan.uio.no,mds-vo-name=NDGF-T1">
+            <Name>q1800MB</Name>
+            <PhysicalCPUs>108</PhysicalCPUs>
+            <OperatingSystem Version="-1" Release="Linux-2.4.21" Name="RHEL "/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel(R)" Model="Pentium(R)" ClockSpeed="2400"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="false" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" RAMSize="1800"/>
+            <Architecture SMPSize="2" PlatformType="i686"/>
+            <Benchmark SI00="-1" SF00="-1"/>
+        </SubCluster>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=q800MB,GlueClusterUniqueID=condor.titan.uio.no,mds-vo-name=NDGF-T1">
+            <Name>q800MB</Name>
+            <PhysicalCPUs>28</PhysicalCPUs>
+            <OperatingSystem Version="-1" Release="Linux-2.4.21" Name="RHEL "/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel(R)" Model="Pentium(R)" ClockSpeed="2400"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="false" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" RAMSize="800"/>
+            <Architecture SMPSize="2" PlatformType="i686"/>
+            <Benchmark SI00="-1" SF00="-1"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=gateway01.dcsc.ku.dk,mds-vo-name=NDGF-T1">
+        <Name>Steno (DCSC/KU)</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=gateway01.dcsc.ku.dk,GlueClusterUniqueID=gateway01.dcsc.ku.dk,mds-vo-name=NDGF-T1">
+            <Name>Steno (DCSC/KU)</Name>
+            <PhysicalCPUs>524</PhysicalCPUs>
+            <OperatingSystem Version="-1" Release="Linux-2.6.9" Name="Redhat Enterprise 4"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Dual" Model="Core" ClockSpeed="1800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" RAMSize="-1"/>
+            <Architecture SMPSize="2" PlatformType="-1"/>
+            <Benchmark SI00="-1" SF00="-1"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=hagrid.it.uu.se,mds-vo-name=NDGF-T1">
+        <Name>Hagrid (SweGrid, Uppmax)</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=hagrid.it.uu.se,GlueClusterUniqueID=hagrid.it.uu.se,mds-vo-name=NDGF-T1">
+            <Name>Hagrid (SweGrid, Uppmax)</Name>
+            <PhysicalCPUs>92</PhysicalCPUs>
+            <OperatingSystem Version="glibc-2.3.4-2.19" Release="Linux-2.6.9-42.0.2.EL" Name="Scientific Linux 4"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel(R)" Model="Pentium(R)" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="false" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" RAMSize="2048"/>
+            <Architecture SMPSize="2" PlatformType="i686"/>
+            <Benchmark SI00="-1" SF00="-1"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=hive.unicc.chalmers.se,mds-vo-name=NDGF-T1">
+        <Name>Hive (Swegrid, C3SE)</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=hive.unicc.chalmers.se,GlueClusterUniqueID=hive.unicc.chalmers.se,mds-vo-name=NDGF-T1">
+            <Name>Hive (Swegrid, C3SE)</Name>
+            <PhysicalCPUs>101</PhysicalCPUs>
+            <OperatingSystem Version="-1" Release="-1" Name="Fedora Core 1"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel(R)" Model="Pentium(R)" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" RAMSize="2048"/>
+            <Architecture SMPSize="2" PlatformType="i686"/>
+            <Benchmark SI00="-1" SF00="-1"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ingrid.hpc2n.umu.se,mds-vo-name=NDGF-T1">
+        <Name>Ingrid (SweGrid,HPC2N)</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ingrid.hpc2n.umu.se,GlueClusterUniqueID=ingrid.hpc2n.umu.se,mds-vo-name=NDGF-T1">
+            <Name>Ingrid (SweGrid,HPC2N)</Name>
+            <PhysicalCPUs>95</PhysicalCPUs>
+            <OperatingSystem Version="-1" Release="-1" Name="Ubuntu 6.06"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel(R)" Model="Pentium(R)" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="false" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" RAMSize="1800"/>
+            <Architecture SMPSize="2" PlatformType="i686"/>
+            <Benchmark SI00="-1" SF00="-1"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=sigrid.lunarc.lu.se,mds-vo-name=NDGF-T1">
+        <Name>Sigrid (SweGrid, Lunarc)</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=sigrid.lunarc.lu.se,GlueClusterUniqueID=sigrid.lunarc.lu.se,mds-vo-name=NDGF-T1">
+            <Name>Sigrid (SweGrid, Lunarc)</Name>
+            <PhysicalCPUs>98</PhysicalCPUs>
+            <OperatingSystem Version="-1" Release="-1" Name="CentOS 4"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel" Model="P4" ClockSpeed="2800"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" RAMSize="2048"/>
+            <Architecture SMPSize="2" PlatformType="i686"/>
+            <Benchmark SI00="-1" SF00="-1"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=srm.ndgf.org,mds-vo-name=NDGF-T1">
+        <InformationServiceURL>ldap://bdii.ndgf.org:2170/mds-vo-name=NDGF-T1,o=grid</InformationServiceURL>
+        <SizeTotal>193778</SizeTotal>
+        <SizeFree>72438</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="atlas_disk">
+            <Path>/pnfs/ndgf.org/data/atlas/disk</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>105761184244</UsedSpace>
+            <AvailableSpace>20081357529</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas_tape">
+            <Path>/pnfs/ndgf.org/data/atlas/tape</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>14826038889</UsedSpace>
+            <AvailableSpace>4501313943</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice_disk">
+            <Path>/pnfs/ndgf.org/data/alice/disk</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1562413</UsedSpace>
+            <AvailableSpace>19937823258</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice_tape">
+            <Path>/pnfs/ndgf.org/data/alice/tape</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2147483648</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/pnfs/ndgf.org/data/ops</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2008660</UsedSpace>
+            <AvailableSpace>69924040</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="Xrootd-ftp1@xrootd-ftp1Domain">
+            <Endpoint>Xrootd://ftp1.ndgf.org:1094</Endpoint>
+            <Type>Xrootd</Type>
+            <Version>2.4</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-ftp1@gridftp-ftp1Domain">
+            <Endpoint>gsiftp://ftp1.ndgf.org:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <ControlProtocol LocalID="SRM-srm@srm-srmDomain">
+            <Endpoint>httpg://srm.ndgf.org:8443/srm/managerv1</Endpoint>
+            <Type>SRM</Type>
+            <Version>1.1.1</Version>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=orval.grid.aau.dk,mds-vo-name=NDGF-T1">
+        <InformationServiceURL>ldap://bdii.ndgf.org:2170/mds-vo-name=NDGF-T1,o=grid</InformationServiceURL>
+        <SizeTotal>3329</SizeTotal>
+        <SizeFree>3281</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/pnfs/grid.aau.dk/data/atlas</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>48096515</UsedSpace>
+            <AvailableSpace>810896944</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/pnfs/grid.aau.dk/data/alice</Path>
+            <Type>volatile</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>0</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="GFTP-orval@gridftp-orvalDomain">
+            <Endpoint>gsiftp://orval.grid.aau.dk:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="Xrootd-orval@xrootd-orvalDomain">
+            <Endpoint>Xrootd://192.168.1.8:1094</Endpoint>
+            <Type>Xrootd</Type>
+            <Version>2.4</Version>
+        </AccessProtocol>
+        <ControlProtocol LocalID="SRM-orval@srm-orvalDomain">
+            <Endpoint>httpg://orval.grid.aau.dk:8443/srm/managerv1</Endpoint>
+            <Type>SRM</Type>
+            <Version>1.1.0</Version>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=httpg://srm.ndgf.org:8443/srm/managerv1,mds-vo-name=NDGF-T1">
+        <Name>httpg://srm.ndgf.org:8443/srm/managerv1</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.1</Version>
+        <Endpoint>httpg://srm.ndgf.org:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://orval.grid.aau.dk:8443/srm/managerv1,mds-vo-name=NDGF-T1">
+        <Name>httpg://orval.grid.aau.dk:8443/srm/managerv1</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://orval.grid.aau.dk:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+    </Service>
+</Site>

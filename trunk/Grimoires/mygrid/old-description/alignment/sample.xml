@@ -1,0 +1,55 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<serviceDescriptions  xmlns="pd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="pd /C:/tools/taverna-workbench-1.1/./plugins/pedro/services/model/common.xsd">
+	<serviceDescription >
+	<organisation >
+			<organisationName>European Bioinformatics Institute</organisationName>
+		</organisation>
+		<serviceName>KEGG</serviceName>
+		<locationURL>http://soap.genome.jp/keggapi/request_v3.2.cgi</locationURL>
+		<interfaceWSDL>http://soap.genome.jp/KEGG.wsdl</interfaceWSDL>
+		<serviceDescriptionText>KEGG</serviceDescriptionText>
+		<operations >
+			<serviceOperation >
+				<operationName>get_linkdb_by_entry</operationName>
+				<operationInputs >
+					<parameter >
+						<parameterName>entry_id</parameterName>
+						<messageName>get_linkdb_by_entryRequest</messageName>
+					</parameter>
+
+					<parameter >
+						<parameterName>start</parameterName>
+						<messageName>get_linkdb_by_entryRequest</messageName>
+						<semanticType>Gene_Ontology_term_id</semanticType>
+					</parameter>
+
+					<parameter >
+						<parameterName>db</parameterName>
+						<messageName>get_linkdb_by_entryRequest</messageName>
+					</parameter>
+
+					<parameter >
+						<parameterName>max_results</parameterName>
+						<messageName>get_linkdb_by_entryRequest</messageName>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs >
+					<parameter >
+						<parameterName>return</parameterName>
+						<messageName>get_linkdb_by_entryResponse</messageName>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>translating</operationTask>
+				<operationMethod>word_match_sequence_alignment_algorithm</operationMethod>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>WSDL service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

@@ -1,0 +1,912 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Grimoires Documentation - Functional Specification - Grimoires</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url('i_arrow_down.gif');
+	}	        
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script>
+</head>
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1><a name="Functional_Specification"> </a> Functional Specification - Grimoires</h1>
+<p />
+<div class="twikiToc">
+<ul>
+<li> <a href="#Functional_Specification">Functional Specification - Grimoires</a>
+<ul>
+<li> <a href="#Introduction">Introduction</a>
+</li>
+<li> <a href="#UDDI_interface">UDDI interface</a>
+</li>
+<li> <a href="#Metadata_interface">Metadata interface</a>
+<ul>
+<li> <a href="#Intro_metadata">Introduction</a>
+</li>
+<li> <a href="#Data_structures">Data structures</a>
+</li>
+<li> <a href="#metadata">metadata</a>
+<ul>
+<li> <a href="#metadataInfo">metadataInfo</a>
+</li>
+<li> <a href="#entityReference">entityReference</a>
+</li>
+<li> <a href="#metadataQuery">metadataQuery</a>
+</li>
+<li> <a href="#faultDetail">faultDetail</a>
+</li>
+</ul>
+</li>
+<li> <a href="#Publish_metadata_interface">Publish_metadata interface</a>
+<ul>
+<li> <a href="#addMetadataToEntity">addMetadataToEntity</a></li>
+<li> <a href="#deleteMetadata">deleteMetadata</a>
+</li>
+</ul>
+</li>
+<li> <a href="#Inquire_metadata_interface">Inquire_metadata interface</a>
+<ul>
+<li> <a href="#get_entityMetadata">get_entityMetadata</a>
+</li>
+<li> <a href="#get_metadataDetail">get_metadataDetail</a>
+</li>
+<li> <a href="#find_entityByMetadata">find_entityByMetadata</a>
+</li>
+</ul>
+</li>
+<li> <a href="#UDDI_specific_operations">UDDI specific operations</a>
+<ul>
+<li> <a href="#find_service">find_service</a>
+</li>
+</ul>
+</li>
+<li> <a href="#WSDL_specific_operations">WSDL specific operations</a>
+<ul>
+<li> <a href="#find_interfaceByMessagePartMetad">find_interfaceByMessagePartMetadata</a>
+</li>
+<li> <a href="#find_interfaceByOperationMetadat">find_interfaceByOperationMetadata</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li> <a href="#WSDL_interface">WSDL interface</a>
+<ul>
+<li> <a href="#Intro_wsdl">Introduction</a>
+</li>
+<li> <a href="#Operations">Operations</a>
+<ul>
+<li> <a href="#addWSDLFile">addWSDLFile</a>
+</li>
+<li> <a href="#addWSDLFileAdvert">addWSDLFileAdvert</a>
+</li>
+<li> <a href="#getWSDLAdvertContent">getWSDLAdvertContent</a>
+</li>
+<li> <a href="#getWSDLAdvertContentByURL">getWSDLAdvertContentByURL</a>
+</li>
+<li> <a href="#removeWSDLFile">removeWSDLFile</a>
+</li>
+<li> <a href="#findServicesByInterface">findServicesByInterface</a>
+</li>
+<li> <a href="#getAllWSDLFiles">getAllWSDLFiles</a>
+</li>
+<li> <a href="#getOperationsByURL">getOperationsByURL</a>
+</li>
+<li> <a href="#getInputMessageOfOperation">getInputMessageOfOperation</a>
+</li>
+<li> <a href="#getOutputMessageOfOperation">getOutputMessageOfOperation</a>
+</li>
+<li> <a href="#getFaultMessageOfOperation">getFaultMessageOfOperation</a>
+</li>
+<li> <a href="#findInterfaceByOperation">findInterfaceByOperation</a>
+</li>
+<li> <a href="#findOperationByMessagePart">findOperationByMessagePart</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p />
+<h2><a name="Introduction"> </a> Introduction </h2>
+<p />
+Grimoires is a UDDIv2 compliant registry for Web Services. Grimoires itself is implemented as a Web Service. The clients interact with Grimoires through sending and receiving SOAP messages. In addition to the UDDIv2 interface, Grimoires also provides some other interfaces, such as metadata and WSDL, which allow clients to publish and inquire metadata and WSDL-related data, respectively. 
+An access control layer within Grimoires can enforce fine-grained access control 
+for published entities. All the data published through various interfaces are represented as RDF triples internally, which can be queried and reasoned over in a uniform way. The published data, i.e., the RDF triples, can reside in a database, a file, or simply in memory, to allow deployers to balance persistence with performance.
+<p />
+Grimoires has three web service interfaces, namely 
+<ul>
+<li> UDDIv2 API: follow UDDIv2 specification
+</li>
+<li> WSDL API: publication and inquiry of web service technical specification described by a WSDL file.
+</li>
+<li> Metadata API: publication and inquiry of metadata that can be attached to UDDI entities or WSDL elements. Inquiry by metadata is also supported.
+</li>
+</ul>
+<p />
+In the following sections, these interfaces will be described in turn.
+<p />
+<h2><a name="UDDI_interface"> </a> UDDI interface </h2>
+<p />
+The UDDI interface of Grimoires conforms to the UDDIv2 specification, as described in the following documentations:
+<p />
+<ul>
+<li> UDDI Version 2.04 API Specification, Dated 19 July 2002 <a href="http://uddi.org/pubs/ProgrammersAPI-V2.04-Published-20020719.htm" target="_top">http://uddi.org/pubs/ProgrammersAPI-V2.04-Published-20020719.htm</a>
+</li>
+<li> UDDI Version 2.03 Data Structure Reference, Dated 19 July 2002 <a href="http://uddi.org/pubs/DataStructure-V2.03-Published-20020719.htm" target="_top">http://uddi.org/pubs/DataStructure-V2.03-Published-20020719.htm</a>
+</li>
+<li> UDDI Schema: <a href="http://uddi.org/schema/uddi_v2.xsd" target="_top">http://uddi.org/schema/uddi_v2.xsd</a>
+</li>
+<li> UDDI publish wsdl: <a href="http://uddi.org/wsdl/publish_v2.wsdl" target="_top">http://uddi.org/wsdl/publish_v2.wsdl</a>
+</li>
+<li> UDDI inquire wsdl: <a href="http://uddi.org/wsdl/inquire_v2.wsdl" target="_top">http://uddi.org/wsdl/inquire_v2.wsdl</a> 
+</li>
+</ul>
+<p />
+<h2><a name="Metadata_interface"> </a> Metadata interface </h2>
+<p />
+<h3><a name="Intro_metadata"> </a> Introduction </h3>
+<br>
+The metadata interface was designed to be integrated with the UDDI interface, so 
+that UDDI function could be extended with minor modifications.
+The metadata interface allows users to annotate entities within the grimoires registry. 
+
+In Grimoires release, under "wsdl/" directory, you will find the following files related to the metadata interface:
+
+<ul>
+<li>metadata.xsd: describes the general data models of the metadata interface.</li>
+<li>metadata_wsdl.xsd: describes the WSDL specific data models.</li>
+<li>metadata_uddi.xsd: describes the UDDI specific data models.</li>
+<li>publish_metadata.wsdl: defines the metadata publication interface.</li>
+<li>inquire_metadata.wsdl: defines the general metadata inquiry interface.</li>
+<li>inquire_wsdlMetadata.wsdl: defines the WSDL specific metadata inquiry interface.</li>
+<li>inquire_uddiMetadata.wsdl: defines the UDDI specific metadata inquiry interface.</li>
+</ul>
+
+Below xsd represents the namespace <a href="http://www.w3.org/2001/XMLSchema" target="_top">http://www.w3.org/2001/XMLSchema</a>, 
+meta is the namespace http://www.grimoires.org/metadata.xsd, and the default 
+namespace is http://www.grimoires.org/metadata.xsd.
+<p />
+<h3><a name="Data_structures"> </a> Data structures </h3>
+<a name="MetaData"></a>
+<h3><a name="metadata"> </a> metadata </h3>
+Metadata represents the annotation that is attached to entities within Grimoires.  It is defined in XML schema as
+<pre>
+  &lt;xsd:element name="metadata" type="meta:Metadata"/&gt;
+  &lt;xsd:complexType name="Metadata"&gt;
+    &lt;xsd:sequence&gt;
+      &lt;xsd:element ref="meta:metadataType"/&gt;
+      &lt;xsd:element ref="meta:metadataValue"/&gt;
+    &lt;/xsd:sequence&gt;
+    &lt;xsd:attribute ref="meta:metadataKey" use="required"/&gt;
+  &lt;/xsd:complexType&gt;
+</pre>
+Any metadata in Grimoires consists of three items:
+<ol>
+<li> metadataKey: unique key assigned by Grimoires when a new piece of 
+annotation is published.</li>
+<li> metadataType: URI representing the type of annotation.</li>
+<li> metadataValue: the value of the annotation, which can be either a string, a URI or an RDF triple.
+</li>
+</ol>
+<p />
+MetadataValue is defined as
+<pre>
+  &lt;xsd:element name="metadataValue" type="meta:MetadataValue"/&gt;
+  &lt;xsd:complexType name="MetadataValue"&gt;
+    &lt;xsd:choice&gt;
+      &lt;xsd:element ref="meta:triplesAssertion"/&gt;
+      &lt;xsd:element ref="meta:stringValue"/&gt;
+      &lt;xsd:element ref="meta:uriValue"/&gt;
+    &lt;/xsd:choice&gt;
+  &lt;/xsd:complexType&gt;
+</pre>
+<p />
+A triples assertion is defined as:
+<pre>
+  &lt;xsd:element name="triplesAssertion" type="meta:TriplesAssertion"/&gt;
+  &lt;xsd:complexType name="TriplesAssertion"&gt;
+    &lt;xsd:sequence&gt;
+      &lt;xsd:element name="triples" type="xsd:string"/&gt;
+      &lt;xsd:element name="resourceIdentifier" type="xsd:string"/&gt;
+      &lt;xsd:element name="language" type="xsd:string"/&gt;
+      &lt;xsd:element name="base" type="xsd:string"/&gt;
+    &lt;/xsd:sequence&gt;
+  &lt;/xsd:complexType&gt;</pre>
+<p />
+<a name="MetadataInfo"></a>
+where<ul>
+	<li>triples: a string representation of RDF statements.</li>
+	<li>resourceIdentifer: a resource which the &quot;triples&quot; element is describing.</li>
+	<li>language: the representation language used in the the &quot;triples&quot; element, 
+	which could be either &quot;RDF/XML&quot;, &quot;N-TRIPLE&quot; or &quot;N3&quot;.</li>
+	<li>base: the base URI to be used with the relative URIs. </li>
+	</ul>
+<h4><a name="metadataInfo"> </a> metadataInfo </h4>
+This is a response message from Grimoires. In addition of all the elements and attributes of <a class="twikiAnchorLink" href="#MetaData">MetaData</a>, it contains information about the author and last edited date of the metadata.  It is defined as
+<pre>
+  &lt;xsd:element name="metadataInfo" type="meta:MetadataInfo"/&gt;
+  &lt;xsd:complexType name="MetadataInfo"&gt;
+    &lt;xsd:sequence&gt;
+      &lt;xsd:element ref="meta:metadataType"/&gt;
+      &lt;xsd:element ref="meta:metadataValue"/&gt;
+      &lt;xsd:element ref="meta:author"/&gt;
+      &lt;xsd:element ref="meta:date"/&gt;
+    &lt;/xsd:sequence&gt;
+    &lt;xsd:attribute ref="meta:metadataKey" use="required"/&gt;
+  &lt;/xsd:complexType&gt;
+</pre>
+<p />
+<a name="EntityReference"></a>
+<h4><a name="entityReference"> </a> entityReference </h4>
+An entity reference is a reference to entities stored within Grimoires. This can 
+be a unique key for an entity, a message part within a WSDL file, or an 
+operation within a WSDL file. 
+<p />
+<pre>
+&lt;xsd:complexType name="EntityReference"&gt;
+   &lt;xsd:choice&gt;
+      &lt;xsd:element name="stringKey" type="xsd:string"/&gt;
+      &lt;xsd:element ref="meta:metadataKey"/&gt;
+      &lt;xsd:element ref="meta:messagePartReference"/&gt;
+      &lt;xsd:element ref="meta:operationReference"/&gt;
+   &lt;/xsd:choice&gt;
+   &lt;xsd:attribute name="entityType" type="anyURI" use="required"/&gt;
+&lt;/xsd:complexType&gt;
+
+&lt;xsd:complexType name="MessagePartReference"&gt;
+   &lt;xsd:sequence&gt;
+     &lt;xsd:element ref="meta:messageNamespace"/&gt;
+     &lt;xsd:element ref="meta:messageName"/&gt;
+     &lt;xsd:element ref="meta:messagePartName"/&gt;
+   &lt;/xsd:sequence&gt;
+&lt;/xsd:complexType&gt;
+
+&lt;xsd:complexType name="OperationReference"&gt;
+  &lt;xsd:sequence&gt;
+    &lt;xsd:element name="portTypeNamespace" type="xsd:string"/&gt;
+    &lt;xsd:element name="portTypeName" type="xsd:string"/&gt;
+    &lt;xsd:element name="operationName" type="xsd:string"/&gt;
+  &lt;/xsd:sequence&gt;
+&lt;/xsd:complexType&gt;
+</pre>
+<p />
+<a name="MetadataQuery"></a>
+<p />
+We use MessagePartReference and OperationReference to uniquely identify a 
+message part or an operation within a WSDL file, respectively.<h4><a name="metadataQuery"> </a> metadataQuery </h4>
+The metadataQuery and metadataQueryBag structures are used in query operations in the metadata interface. The metadataQueryBag is a sequence of 1 or more metadataQuery structures:
+<pre>
+  &lt;xsd:element name="metadataQueryBag" type="meta:MetadataQueryBag"/&gt;
+  &lt;xsd:complexType name="MetadataQueryBag"&gt;
+    &lt;xsd:sequence&gt;
+      &lt;xsd:element ref="meta:metadataQuery" maxOccurs="unbounded"/&gt;
+    &lt;/xsd:sequence&gt;
+  &lt;/xsd:complexType&gt;
+</pre>
+<p />
+Each metadataQuery specifies a metadataType and a metadataValue to search on. An optional findQualifiers can be used. Currently, only two findQualifier (wildCardSearch and caseSensitiveSearch) are supported for string based metadataValues. By default string comparisons are done as exact string matches.
+<pre>
+  &lt;xsd:element name="metadataQuery" type="meta:MetadataQuery"/&gt; 
+  &lt;xsd:complexType name="MetadataQuery"&gt;
+    &lt;xsd:sequence&gt;
+      &lt;xsd:element ref="meta:findQualifiers" minOccurs="0"/&gt;
+      &lt;xsd:element ref="meta:metadataType"/&gt;
+      &lt;xsd:element ref="meta:metadataValue"/&gt;
+      &lt;xsd:element ref="meta:author" minOccurs="0"/&gt;
+      &lt;xsd:element ref="meta:date" minOccurs="0"/&gt;
+    &lt;/xsd:sequence&gt;
+  &lt;/xsd:complexType&gt;
+</pre>
+<p />
+<h4><a name="faultDetail"> </a> faultDetail </h4>
+Errors in the processing of metadata commands in Grimoires are communicated via faultDetail and faultDetailList elements within the SOAP Fault element. 
+<pre>
+&lt;xsd:complexType name="FaultDetailList"&gt;
+  &lt;xsd:sequence&gt;
+    &lt;xsd:element ref="meta:faultDetail" maxOccurs="unbounded"/&gt;
+  &lt;/xsd:sequence&gt;
+&lt;/xsd:complexType&gt;
+</pre>
+The detail of the error can be found within the errorMessage element.
+<p />
+<h3><a name="Publish_metadata_interface"> </a> Publish_metadata interface </h3>
+This section introduces the interface for publishing metadata to existing entities in Grimoires. Entities supported for annotation includes UDDI businessEntities, businessServices, tModel and bindingTemplates, and WSDL 
+message parts and operations. 
+<p />
+<a name="AddMetadataToEntity"></a>
+<h4><a name="addMetadataToEntity"> </a> addMetadataToEntity </h4>
+This operation attaches a piece of metadata to an Entity.
+<p />
+<h6><a name="Syntax"> </a><a name="_Syntax"> </a>  Syntax </h6>
+<p />
+<pre>
+  &lt;addMetadataToEntity&gt;
+    &lt;entityReference/&gt;
+    &lt;metadata/&gt;
+  &lt;/addMetadataToEntity&gt;
+</pre>
+The corresponding XML schema is:
+<pre>
+  &lt;xsd:complexType name="AddMetadataToEntity"&gt;
+    &lt;xsd:sequence&gt;
+      &lt;xsd:element ref="meta:entityReference"/&gt;
+      &lt;xsd:element ref="meta:metadata"/&gt;
+    &lt;/xsd:sequence&gt;
+  &lt;/xsd:complexType&gt;
+</pre>
+<p />
+<h6><a name="Auguments"> </a><a name="_Auguments"> </a>  Arguments </h6>
+The addMetadataToEntity message contains two elements --- <a class="twikiAnchorLink" href="#EntityReference">EntityReference</a> and <a class="twikiAnchorLink" href="#MetaData">MetaData</a>.
+<p />
+<h6><a name="Returns"> </a><a name="_Returns"> </a>  Returns </h6>
+If the operation is successful, grimoires return a <a class="twikiAnchorLink" href="#MetadataInfo">MetadataInfo</a> message.
+<p />
+<h4><a name="deleteMetadata"> </a> deleteMetadata </h4>
+This operation deletes a piece of  metadata.
+<p />
+<h6><a name="Syntax"> </a><a name="_Syntax"> </a>  Syntax </h6>
+<p />
+<pre>
+ &lt;deleteMetadata&gt;
+    &lt;metadataKey/&gt;
+    [&lt;metadataKey/&gt; ...]
+ &lt;/deleteMetadata&gt;
+</pre>
+The corresponding XML schema is:
+<pre>
+ &lt;xsd:complexType name="DeleteMetadata"&gt;
+    &lt;xsd:sequence&gt;
+      &lt;xsd:element ref="meta:metadataKey"/&gt;
+    &lt;/xsd:sequence&gt;
+  &lt;/xsd:complexType&gt;
+</pre>
+<p />
+<h6><a name="Auguments"> </a><a name="_Auguments"> </a>  Arguments </h6>
+<p />
+metadataKey: the key of the published metadata.
+<p />
+<h6><a name="Returns"> </a><a name="_Returns"> </a>  Returns </h6>
+<p />
+<pre>
+&lt;xsd:element name="success" type="xsd:boolean"/&gt;
+</pre>
+<p />
+TRUE represents for success, FALSE for failure.
+<p />
+<h3><a name="Inquire_metadata_interface"> </a> Inquire_metadata interface </h3>
+This section explains the operations of the inquire_metadata interface. There are three operations available at this interface: get_entityMetadata, get_metadataDetail and find_entityByMetadata.
+<p />
+<h4><a name="get_entityMetadata"> </a> get_entityMetadata </h4>
+This operation retrieves metadata attached to entities in Grimoires using the get_entityMetadata message. 
+<p />
+<h6><a name="Syntax"> </a><a name="_Syntax"> </a>  Syntax </h6>
+<pre>
+  &lt;get_entityMetadata&gt;
+    &lt;entityReference/&gt;
+    [&lt;entityReference/&gt; ...]
+  &lt;/get_entityMetadata&gt;
+</pre>
+The corresponding XML schema is:
+<pre>
+  &lt;xsd:complexType name="Get_entityMetadata"&gt;
+    &lt;xsd:sequence&gt;
+      &lt;xsd:element ref="meta:entityReference"/&gt;
+    &lt;/xsd:sequence&gt;
+  &lt;/xsd:complexType&gt;
+</pre>
+<p />
+<h6><a name="Auguments"> </a><a name="_Auguments"> </a>  Arguments </h6>
+entityReference is described in <a class="twikiAnchorLink" href="#EntityReference">EntityReference</a>.
+<p />
+<h6><a name="Returns"> </a><a name="_Returns"> </a>  Returns </h6>
+On success, a metadataInfos message is returned. It is a list of zero or more <a class="twikiAnchorLink" href="#MetadataInfo">MetadataInfo</a>.
+<p />
+<h4><a name="get_metadataDetail"> </a> get_metadataDetail </h4>
+This operation retrieves the details of a piece of metadata using its metadataKey. 
+<p />
+<h6><a name="Syntax"> </a><a name="_Syntax"> </a>  Syntax </h6>
+<pre>
+  &lt;get_metadataDetail&gt;
+    &lt;metadataKey/&gt;
+    [&lt;metadataKey/&gt; ...]
+  &lt;/get_metadataDetail&gt;
+</pre>
+The corresponding XML schema is:
+<pre>
+  &lt;xsd:complexType name="Get_metadataDetail"&gt;
+    &lt;xsd:sequence&gt;
+      &lt;xsd:element ref="meta:metadataKey"/&gt;
+    &lt;/xsd:sequence&gt;
+  &lt;/xsd:complexType&gt;
+</pre>
+<p />
+<h6><a name="Auguments"> </a><a name="_Auguments"> </a>  Arguments </h6>
+metadataKey: the key of the published metadata.
+<p />
+<h6><a name="Returns"> </a><a name="_Returns"> </a>  Returns </h6>
+If the operation is successful, a <a class="twikiAnchorLink" href="#MetadataInfo">MetadataInfo</a> message is returned.
+<p />
+<h4><a name="find_entityByMetadata"> </a> find_entityByMetadata </h4>
+This operation searches for entities containing specific pieces of metadata.
+<p />
+<h6><a name="Syntax"> </a><a name="_Syntax"> </a>  Syntax </h6>
+<pre>
+&lt;find_entityByMetadata&gt;
+  &lt;metadataQueryBag&gt;
+    &lt;metadataQuery/&gt;
+    [&lt;metadataQuery/&gt; ...]
+  &lt;/metadataQueryBag&gt;
+&lt;/find_entityByMetadata&gt;
+</pre>
+<p />
+<h6><a name="Auguments"> </a><a name="_Auguments"> </a>  Arguments </h6>
+metadataQuery is defined in <a class="twikiAnchorLink" href="#MetadataQuery">MetadataQuery</a>.
+<p />
+<h6><a name="Returns"> </a><a name="_Returns"> </a>  Returns </h6>
+On success, Grimoires returns an entityReferenceList containing <a class="twikiAnchorLink" href="#EntityReference">EntityReference</a>s that are annotated with the specified metadata. The format of the entityReferenceList is
+<pre>
+  &lt;xsd:element name="entityReferenceList" type="meta:EntityReferenceList"/&gt;
+  &lt;xsd:complexType name="EntityReferenceList"&gt;
+    &lt;xsd:sequence&gt;
+      &lt;xsd:element ref="meta:entityReference" maxOccurs="unbounded"/&gt;
+    &lt;/xsd:sequence&gt;
+  &lt;/xsd:complexType&gt;
+</pre>
+<p />
+<h3><a name="UDDI_specific_operations"> </a> UDDI specific operations </h3>
+<p>This section contains UDDI inquiry operations that have been extended to 
+support metadata based searching. </p>
+<p />
+<h4><a name="find_service"> </a> find_service </h4>
+This operation adds a <a class="twikiAnchorLink" href="#MetadataQuery">MetadataQueryBag</a> to the normal UDDIv2 find_service function.  
+<p />
+<h6><a name="Syntax"> </a><a name="_Syntax"> </a>  Syntax</h6>
+<pre>
+  &lt;meta:find_service [businessKey="uuid_key"] [maxRows="nn"] generic="2.0" xmlns:uddi="urn:uddi-org:api_v2"&gt;
+    [&lt;meta:findQualifiers/&gt;]
+    [&lt;uddi:name/&gt; [&lt;uddi:name/&gt;]¡­]
+    [&lt;uddi:categoryBag/&gt;]
+    [&lt;uddi:tModelBag/&gt;]
+    [&lt;meta:metadataQueryBag/&gt;]
+  &lt;/meta:find_service&gt;
+</pre>
+The corresponding XML schema is:
+<pre>
+  &lt;xsd:element name="find_service" type="meta:Find_service"/&gt;
+  &lt;xsd:complexType name="Find_service"&gt;
+    &lt;xsd:sequence&gt;
+      &lt;xsd:element ref="meta:findQualifiers" minOccurs="0"/&gt;
+      &lt;xsd:element ref="uddi:name" minOccurs="0" maxOccurs="unbounded"/&gt;
+      &lt;xsd:element ref="uddi:categoryBag" minOccurs="0"/&gt;
+      &lt;xsd:element ref="uddi:tModelBag" minOccurs="0"/&gt;
+      &lt;xsd:element ref="meta:metadataQueryBag" minOccurs="0"/&gt;
+    &lt;/xsd:sequence&gt;
+    &lt;xsd:attribute name="generic" type="string" use="required"/&gt;
+    &lt;xsd:attribute name="maxRows" type="int" use="optional"/&gt;
+    &lt;xsd:attribute name="businessKey" type="uddi:businessKey" use="optional"/&gt;
+  &lt;/xsd:complexType&gt;
+</pre>
+<p />
+<h6><a name="Auguments"> </a><a name="_Auguments"> </a>  Arguments </h6>
+Please refer to 
+<a href="http://uddi.org/pubs/ProgrammersAPI-V2.04-Published-20020719.htm#_Toc25137715">
+the UDDI specification</a> for the UDDI find_service operation. metadataQueryBag is defined in <a class="twikiAnchorLink" href="#MetadataQuery">MetadataQueryBag</a>.
+<p />
+<h6><a name="Returns"> </a><a name="_Returns"> </a>  Returns </h6>
+On success, a UDDIv2 ServiceList is returned.
+<p />
+<h3><a name="WSDL_specific_operations"> </a> WSDL specific operations </h3>
+A collection of WSDL specifc operation are available at the inquire_wsdlMetadata interface. 
+They are used to inquire over WSDL elements by metadata.<p />
+<h4><a name="find_interfaceByMessagePartMetad"> </a> find_interfaceByMessagePartMetadata </h4>
+This opertion searches all WSDL files published in Grimoires to find those that have certain metadata attached to their message parts. The search criteria is specified using a <a class="twikiAnchorLink" href="#MetadataQuery">MetadataQueryBag</a>. 
+<p />
+<h6><a name="Syntax"> </a><a name="_Syntax"> </a>  Syntax </h6>
+<pre>
+  &lt;find_interfaceByMessagePartMetadata&gt;
+    &lt;metadataQueryBag/&gt;
+    [&lt;metadataQueryBag/&gt; ...]
+  &lt;/find_interfaceByMessagePartMetadata&gt;
+</pre>
+The corresponding XML schema is:
+<pre>
+  &lt;xsd:complexType name="Find_interfaceByMessagePartMetadata"&gt;
+    &lt;xsd:sequence&gt;
+      &lt;xsd:element ref="meta:metadataQueryBag"/&gt;
+    &lt;/xsd:sequence&gt;
+  &lt;/xsd:complexType&gt;
+</pre>
+<p />
+<h6><a name="Auguments"> </a><a name="_Auguments"> </a>  Arguments </h6>
+metadataQueryBag is defined at <a class="twikiAnchorLink" href="#MetadataQuery">MetadataQueryBag</a>.
+<p />
+<h6><a name="Returns"> </a><a name="_Returns"> </a>  Returns </h6>
+<a name="UriBag"></a>
+On success, a UriBag is returned. It is defined as:
+<pre>
+  &lt;xsd:element name="uriBag" type="meta:uriBag"/&gt;
+  &lt;xsd:element name="uri" type="xsd:anyURI"/&gt;
+  &lt;xsd:complexType name="uriBag"&gt;
+    &lt;xsd:sequence&gt;
+      &lt;xsd:element ref="meta:uri" minOccurs="0" maxOccurs="unbounded"/&gt;
+    &lt;/xsd:sequence&gt;
+  &lt;/xsd:complexType&gt;
+</pre>
+<p />
+<h4><a name="find_interfaceByOperationMetadat"> </a> find_interfaceByOperationMetadata </h4>
+This opertion searches all WSDL files published in Grimoires to find those that have certain metadata attached to their operations. The search criteria is specified using a <a class="twikiAnchorLink" href="#MetadataQuery">MetadataQueryBag</a>. It has a similar syntax to find_interfaceByMessagePartMetadata.
+<p />
+<h6><a name="Syntax"> </a><a name="_Syntax"> </a>  Syntax </h6>
+<pre>
+  &lt;find_interfaceByOperationMetadata&gt;
+    &lt;metadataQueryBag/&gt;
+    [&lt;metadataQueryBag/&gt; ...]
+  &lt;/find_interfaceByOperationMetadata&gt;
+</pre>
+The corresponding XML schema is:
+<pre>
+  &lt;xsd:complexType name="Find_interfaceByOperationMetadata"&gt;
+    &lt;xsd:sequence&gt;
+      &lt;xsd:element ref="meta:metadataQueryBag"/&gt;
+    &lt;/xsd:sequence&gt;
+  &lt;/xsd:complexType&gt;
+</pre>
+<p />
+<h6><a name="Auguments"> </a><a name="_Auguments"> </a>  Arguments </h6>
+Please refer to <a class="twikiAnchorLink" href="#find_interfaceByMessagePartMetad">find_entityByMessagePartMetadata</a>.
+<p />
+<h6><a name="Returns"> </a><a name="_Returns"> </a>  Returns </h6>
+On success, a <a class="twikiAnchorLink" href="#UriBag">UriBag</a> is returned.
+<p />
+<h2><a name="WSDL_interface"> </a> WSDL interface </h2>
+<p />
+<h3><a name="Intro_wsdl"> </a> Introduction </h3>
+<p />
+This section describes the WSDL interface of Grimoires. Grimoires extends standard UDDI registry in that it not only provides UDDI publication and inquiry interface, but also provides other interfaces, for example, the WSDL interface. 
+<p />
+Through WSDL interface, users can publish, update, delete, and retrieve a WSDL file in Grimoires, as well as inquire a service implementing a specified WSDL file. 
+<p />
+In UDDI data model, the WSDL URL of a web service is represented by a TModel. A UDDI service entity contains one or more binding templates, which refer to some TModel. However, UDDI specification lacks the capability to register the content of WSDL file. 
+<p />
+The benefits of registering the content of WSDL file are, (1) we can attach metadata to entities inside WSDL files, (2) we can reason on the semantics of entities inside WSDL files based on some ontology information.
+<p />
+In Grimoires release, under "wsdl/" directory, you can find the following files related to the WSDL interface:
+<ul>
+<li>wsdl.wsdl: defines the WSDL interface and related data models.</li>
+</ul>
+<p/>Below the default name space is "http://www.grimoires.org/wsdl".
+<h3><a name="Operations"> </a> Operations </h3>
+<p />
+<h4><a name="addWSDLFile"> </a> addWSDLFile </h4>
+This operation publishes a WSDL file to the registry.
+<p />
+<h6><a name="Syntax"> </a><a name="_Syntax"> </a>  Syntax </h6>
+<pre>
+&lt;addWSDLFileRequest/&gt;
+</pre>
+The corresponding XML schema is:
+<pre>
+&lt;element name="addWSDLFileRequest" type="string" /&gt;
+</pre>
+<p />
+<h6><a name="Auguments"> </a><a name="_Auguments"> </a>  Arguments </h6>
+A string representing the url of the wsdl file.
+<p />
+<h6><a name="Returns"> </a><a name="_Returns"> </a>  Returns </h6>
+<pre>
+&lt;element name="addWSDLFileResponse" type="string" /&gt;
+</pre>
+A string representing the WSDL key, which is the UUID for this WSDL file.
+<p />
+<h4><a name="addWSDLFileAdvert"> </a> addWSDLFileAdvert </h4>
+This operation publishes a WSDL file with content to the registry.
+<p />
+<h6><a name="Syntax"> </a><a name="_Syntax"> </a>  Syntax </h6>
+<pre>
+&lt;addWSDLFileAdvertRequest&gt;
+  &lt;url/&gt;
+  &lt;content/&gt;
+&lt;/addWSDLFileAdvertRequest&gt;
+</pre>
+The corresponding XML schema is:
+<pre>
+&lt;complexType name="addWSDLFileAdvertRequest"&gt;
+  &lt;sequence&gt;
+    &lt;element name="url" type="string" /&gt;
+    &lt;element name="content" type="string" /&gt;
+  &lt;/sequence&gt;
+&lt;/complexType&gt;
+</pre>
+<p />
+<h6><a name="Auguments"> </a><a name="_Auguments"> </a>  Arguments </h6>
+<p />
+url: the url of the wsdl file.
+<p />
+content: the content of wsdl file.
+<p />
+<h6><a name="Returns"> </a><a name="_Returns"> </a>  Returns </h6>
+<pre>
+&lt;element name="addWSDLFileAdvertResponse" type="string" /&gt;
+</pre>
+A string representing the WSDL key, which is the UUID for this WSDL file.
+<p />
+<h4><a name="getWSDLAdvertContent"> </a> getWSDLAdvertContent </h4>
+This operation retrieves the WSDL content of the advert identified by the given key.
+<p />
+<h6><a name="Syntax"> </a><a name="_Syntax"> </a>  Syntax </h6>
+<pre>
+&lt;getWSDLAdvertContentRequest/&gt;
+</pre>
+The corresponding XML schema is:
+<pre>
+&lt;element name="getWSDLAdvertContentRequest" type="string" /&gt;
+</pre>
+<p />
+<h6><a name="Auguments"> </a><a name="_Auguments"> </a>  Arguments </h6>
+WSDL key.
+<p />
+<h6><a name="Returns"> </a><a name="_Returns"> </a>  Returns </h6>
+<pre>
+&lt;element name="getWSDLAdvertContentResponse" type="string" /&gt;
+</pre>
+the content of WSDL file.
+<p />
+<h4><a name="getWSDLAdvertContentByURL"> </a> getWSDLAdvertContentByURL </h4>
+This operation retrieves the WSDL content of the advert identified by the url of WSDL.
+<p />
+<h6><a name="Syntax"> </a><a name="_Syntax"> </a>  Syntax </h6>
+<pre>
+&lt;getWSDLAdvertContentByURLRequest/&gt;
+</pre>
+The corresponding XML schema is:
+<pre>
+&lt;element name="getWSDLAdvertContentByURLRequest" type="string" /&gt;
+</pre>
+<p />
+<h6><a name="Auguments"> </a><a name="_Auguments"> </a>  Arguments </h6>
+The url of WSDL file.
+<p />
+<h6><a name="Returns"> </a><a name="_Returns"> </a>  Returns </h6>
+<pre>
+&lt;element name="getWSDLAdvertContentByURLResponse" type="string" /&gt;
+</pre>
+the content of WSDL file.
+<p />
+<h4><a name="removeWSDLFile"> </a> removeWSDLFile </h4>
+This operation deletes a WSDL file from the repository.
+<p />
+<h6><a name="Syntax"> </a><a name="_Syntax"> </a>  Syntax </h6>
+<pre>
+&lt;removeWSDLFileRequest/&gt;
+</pre>
+The corresponding XML schema is:
+<pre>
+&lt;element name="removeWSDLFileRequest" type="string" /&gt;
+</pre>
+<p />
+<h6><a name="Auguments"> </a><a name="_Auguments"> </a>  Arguments </h6>
+<p />
+The url of WSDL file.
+<p />
+<h6><a name="Returns"> </a><a name="_Returns"> </a>  Returns </h6>
+<pre>
+&lt;element name="removeWSDLFileResponse" type="boolean" /&gt;
+</pre>
+True or false indicating whether the deletion operation is successful.
+<p />
+<h4><a name="findServicesByInterface"> </a> findServicesByInterface </h4>
+This operation retrieves all UDDI services that are registered as implementing the WSDL interface at the given url.
+<p />
+<h6><a name="Syntax"> </a><a name="_Syntax"> </a>  Syntax </h6>
+<pre>
+&lt;findServicesByInterfaceRequest/&gt;   
+</pre>
+The corresponding XML schema is:
+<pre>
+&lt;element name="findServicesByInterfaceRequest" type="string" /&gt;   
+</pre>
+<p />
+<h6><a name="Auguments"> </a><a name="_Auguments"> </a>  Arguments </h6>
+<p />
+The url of wsdl file.
+<p />
+<h6><a name="Returns"> </a><a name="_Returns"> </a>  Returns </h6>
+<pre>
+&lt;complexType name="findServicesByInterfaceResponse"&gt;
+  &lt;sequence&gt;
+     &lt;element maxOccurs="unbounded" minOccurs="0" name="serviceKey" type="string" /&gt;
+  &lt;/sequence&gt;
+&lt;/complexType&gt;
+</pre>
+The UDDI service keys.
+<p />
+<h4><a name="getAllWSDLFiles"> </a> getAllWSDLFiles </h4>
+This operation retrieves the URLs of all WSDL adverts registered in Grimoires.
+<p />
+<h6><a name="Syntax"> </a><a name="_Syntax"> </a>  Syntax </h6>
+<pre>
+&lt;getAllWSDLFilesRequest/&gt;
+</pre>
+The corresponding XML schema is:
+<pre>
+&lt;complexType name="getAllWSDLFilesRequest"/&gt;
+</pre>
+<p />
+<h6><a name="Auguments"> </a><a name="_Auguments"> </a>  Arguments </h6>
+<p />
+Null.
+<p />
+<h6><a name="Returns"> </a><a name="_Returns"> </a>  Returns </h6>
+<pre>
+&lt;complexType name="getAllWSDLFilesResponse"&gt;
+  &lt;sequence&gt;
+    &lt;element maxOccurs="unbounded" minOccurs="0" name="url" type="string" /&gt;
+  &lt;/sequence&gt;
+&lt;/complexType&gt;
+</pre>
+the urls of all registered WSDLs.
+<p />
+<h4><a name="getOperationsByURL"> </a> getOperationsByURL </h4>
+This operation retrieves the names of all operations in a WSDL file.
+<p />
+<h6><a name="Syntax"> </a><a name="_Syntax"> </a>  Syntax </h6>
+<pre>
+&lt;getOperationsByURLRequest/&gt;
+</pre>
+The corresponding XML schema is:
+<pre>
+&lt;element name="getOperationsByURLRequest" type="string" /&gt;
+</pre>
+<p />
+<h6><a name="Auguments"> </a><a name="_Auguments"> </a>  Arguments </h6>
+<p />
+The url of the WSDL.
+<p />
+<h6><a name="Returns"> </a><a name="_Returns"> </a>  Returns </h6>
+<pre>
+&lt;complexType name="getOperationsByURLResponse"&gt;
+  &lt;sequence&gt;
+    &lt;element maxOccurs="unbounded" minOccurs="0" name="operationDetail" type="tns:operationDetail" /&gt;
+  &lt;/sequence&gt;
+&lt;/complexType&gt;
+
+&lt;complexType name="operationDetail"&gt;
+  &lt;sequence&gt;
+    &lt;element name="portTypeNamespace" type="string"/&gt;
+    &lt;element name="portTypeName" type="string"/&gt;
+    &lt;element name="operationName" type="string"/&gt;
+  &lt;/sequence&gt;
+&lt;/complexType&gt;
+</pre>
+an array of OperationDetail that describes the names of all operations defined in this WSDL. Each OperationDetail unambiguously describes the name of an operation.
+<p />
+<h4><a name="getInputMessageOfOperation"> </a> getInputMessageOfOperation </h4>
+<h4><a name="getOutputMessageOfOperation"> </a> getOutputMessageOfOperation </h4>
+<h4><a name="getFaultMessageOfOperation"> </a> getFaultMessageOfOperation </h4>
+<p />
+These operations retrieve the input, output, or fault message information for a certain operation, 
+respectively.      
+<p />
+<h6><a name="Syntax"> </a><a name="_Syntax"> </a>  Syntax </h6>
+<pre>
+&lt;getInputMessageOfOperationRequest/&gt;
+&lt;getOutputMessageOfOperationRequest/&gt;
+&lt;getFaultMessageOfOperationRequest/&gt;
+</pre>
+The corresponding XML schema is:
+<pre>
+&lt;element name="getInputMessageOfOperationRequest" type="tns:operationDetail" /&gt;
+&lt;element name="getOutputMessageOfOperationRequest" type="tns:operationDetail" /&gt;
+&lt;element name="getFaultMessageOfOperationRequest" type="tns:operationDetail" /&gt;
+</pre>
+<p />
+<h6><a name="Auguments"> </a><a name="_Auguments"> </a>  Arguments </h6>
+An OperationDetail object describing a certain operation.
+<p />
+<h6><a name="Returns"> </a><a name="_Returns"> </a>  Returns </h6>
+<pre>
+&lt;element name="getInputMessageOfOperationResponse" type="tns:messageDetail" /&gt;
+&lt;element name="getOutputMessageOfOperationResponse" type="tns:messageDetail" /&gt;
+&lt;element name="getFaultMessageOfOperationResponse" type="tns:messageDetail" /&gt;
+
+&lt;complexType name="messageDetail"&gt;
+  &lt;sequence&gt;
+    &lt;element name="messageNamespace" type="string"/&gt;
+    &lt;element name="messageName" type="string"/&gt;
+    &lt;element name="partsName" type="tns:partsName"/&gt;
+  &lt;/sequence&gt;
+&lt;/complexType&gt;
+
+&lt;complexType name="partsName"&gt;
+  &lt;sequence&gt;
+    &lt;element maxOccurs="unbounded" minOccurs="0" name="name" type="string" /&gt;
+  &lt;/sequence&gt;
+&lt;/complexType&gt;
+</pre>
+An MessageDetail object that gives the information for an input, output, or fault message: the namespace of the message, the name of the message, and the names of all parts of the message.
+<p />
+<h4><a name="findInterfaceByOperation"> </a> findInterfaceByOperation </h4>
+This operation seraches an WSDL interface by one of its operation.
+<p />
+<h6><a name="Syntax"> </a><a name="_Syntax"> </a>  Syntax </h6>
+<pre>
+&lt;findInterfaceByOperationRequest/&gt;
+</pre>
+The corresponding XML schema is:
+<pre>
+&lt;element name="findInterfaceByOperationRequest" type="tns:operationDetail" /&gt;
+</pre>
+<p />
+<h6><a name="Auguments"> </a><a name="_Auguments"> </a>  Arguments </h6>
+<p />
+An OperationDetail object describing a certain operation.
+<p />
+<h6><a name="Returns"> </a><a name="_Returns"> </a>  Returns </h6>
+<pre>
+&lt;element name="findInterfaceByOperationResponse" type="string" /&gt;
+</pre>
+The url of the found WSDL.
+<p />
+<p />
+<h4><a name="findOperationByMessagePart"> </a> findOperationByMessagePart </h4>
+This operation searches an operation by one of its message part.
+<p />
+<h6><a name="Syntax"> </a><a name="_Syntax"> </a>  Syntax </h6>
+<pre>
+&lt;findOperationByMessagePartRequest&gt;
+  &lt;messageNamespace/&gt;
+  &lt;messageName/&gt;
+  &lt;partName/&gt;
+&lt;/findOperationByMessagePartRequest&gt;
+</pre>
+The corresponding XML schema is:
+<pre>
+&lt;element name="findOperationByMessagePartRequest" type="tns:messagePartDetail" /&gt;
+
+&lt;complexType name="messagePartDetail"&gt;
+  &lt;sequence&gt;
+    &lt;element name="messageNamespace" type="string"/&gt;
+    &lt;element name="messageName" type="string"/&gt;
+   &lt;element name="partName" type="string"/&gt;
+  &lt;/sequence&gt;
+&lt;/complexType&gt;
+</pre>
+<p />
+<h6><a name="Auguments"> </a><a name="_Auguments"> </a>  Arguments </h6>
+An messagePartDetail describes a message part.
+<p />
+<h6><a name="Returns"> </a><a name="_Returns"> </a>  Returns </h6>
+<pre>
+&lt;element name="findOperationByMessagePartResponse" type="tns:operationDetail" /&gt;
+</pre>
+The found operation.
+<p />
+</div>
+
+</body></html>

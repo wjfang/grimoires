@@ -1,0 +1,27 @@
+<!-- A complicated sample -->
+<authlist>
+	<groupIdentity groupName = "admin"
+		identityList = "EMAILADDRESS=client1@hotmail.com, CN=client1, OU=UK, O=UK, L=none, ST=UK, C=UK //
+		EMAILADDRESS=client2@hotmail.com, CN=client2, OU=UK, O=UK, L=none, ST=UK, C=UK"/>
+
+	<groupIdentity groupName = "staff"
+		identityList = "EMAILADDRESS=client3@hotmail.com, CN=client3, OU=UK, O=UK, L=none, ST=UK, C=UK //
+		EMAILADDRESS=client4@hotmail.com, CN=client4, OU=UK, O=UK, L=none, ST=UK, C=UK"/>
+
+	<groupOperation groupName = "save" 
+		operationList = " save_business // save_service // save_binding // save_service // save_tModel "/>
+
+	<groupOperation groupName = "find" 
+		operationList = " find_binding  //  find_business  //  find_service "/>
+
+	<groupOperation groupName = "get" 
+		operationList = " get_bindingDetail  //  get_serviceDetail  // get_bindingDetail  "/>
+
+	<permission identity = "#AllUsers#" operationList = "#AllOperations#" mode = "allow" />
+	
+	<permission identity= "admin" operationList = " save // find // get " mode = "allow"/>
+
+	<permission identity = "staff" operationList = "save " mode="restrict"/>
+</authlist>
+
+ 

@@ -1,0 +1,131 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#" >
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#BindingBag"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:_2 rdf:nodeID="A2"/>
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#MessageBag"/>
+    <rdf:_1 rdf:nodeID="A3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:_1 rdf:nodeID="A5"/>
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#OperationBag"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#PortType"/>
+    <j.0:hasTypeName rdf:nodeID="A7"/>
+    <j.0:hasOperation rdf:nodeID="A4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <j.0:hasLocalName>string</j.0:hasLocalName>
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#QName"/>
+    <j.0:hasNameSpace>http://www.w3.org/2001/XMLSchema</j.0:hasNameSpace>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <j.0:hasMessage rdf:nodeID="A2"/>
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#Input"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <j.0:hasTypeName rdf:nodeID="A11"/>
+    <j.0:hasName>sample</j.0:hasName>
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#MessagePart"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <rdf:_1 rdf:nodeID="A13"/>
+    <rdf:_2 rdf:nodeID="A10"/>
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#PartBag"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#QName"/>
+    <j.0:hasNameSpace>http://www.w3.org/2001/XMLSchema</j.0:hasNameSpace>
+    <j.0:hasLocalName>string</j.0:hasLocalName>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#Message"/>
+    <j.0:hasMessagePart rdf:nodeID="A14"/>
+    <j.0:hasQName rdf:nodeID="A15"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#QName"/>
+    <j.0:hasLocalName>response</j.0:hasLocalName>
+    <j.0:hasNameSpace>http://test/gcode</j.0:hasNameSpace>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <j.0:hasMessage rdf:nodeID="A3"/>
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#Output"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#WSDLOverviewDoc"/>
+    <j.0:hasWSDLKey>511a0adc-3fdc-42b0-b1e3-e38857f363f0</j.0:hasWSDLKey>
+    <j.0:hasMessage rdf:nodeID="A1"/>
+    <j.0:hasWSDLContent>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;definitions targetNamespace="http://test/gcode" xmlns:tns="http://test/gcode" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  &lt;message name="response">
+    &lt;part name="recoded" type="xsd:string"/>
+  &lt;/message>
+  &lt;message name="request">
+    &lt;part name="sample" type="xsd:string"/>
+    &lt;part name="groups" type="xsd:string"/>
+  &lt;/message>
+  &lt;portType name="DefaultPort">
+    &lt;operation name="DefaultOperation">
+      &lt;input message="tns:request"/>
+      &lt;output message="tns:response"/>
+    &lt;/operation>
+  &lt;/portType>
+&lt;/definitions>
+</j.0:hasWSDLContent>
+    <j.0:hasPortType rdf:nodeID="A18"/>
+    <j.0:hasFilename>http://www.ecs.soton.ac.uk/~wf/grimoires/wsdl/gcode.wsdl</j.0:hasFilename>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <j.0:hasNameSpace>http://test/gcode</j.0:hasNameSpace>
+    <j.0:hasLocalName>request</j.0:hasLocalName>
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#QName"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#FaultBag"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#PartBag"/>
+    <rdf:_1 rdf:nodeID="A21"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <j.0:hasTypeName rdf:nodeID="A22"/>
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#MessagePart"/>
+    <j.0:hasName>groups</j.0:hasName>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <rdf:_1 rdf:nodeID="A6"/>
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#PortTypeBag"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <j.0:hasNameSpace>http://test/gcode</j.0:hasNameSpace>
+    <j.0:hasLocalName>DefaultPort</j.0:hasLocalName>
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#QName"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#QName"/>
+    <j.0:hasLocalName>string</j.0:hasLocalName>
+    <j.0:hasNameSpace>http://www.w3.org/2001/XMLSchema</j.0:hasNameSpace>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <j.0:hasOperationStyle>REQUEST_RESPONSE</j.0:hasOperationStyle>
+    <j.0:hasName>DefaultOperation</j.0:hasName>
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#Operation"/>
+    <j.0:hasInput rdf:nodeID="A9"/>
+    <j.0:hasOutput rdf:nodeID="A16"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#MessagePart"/>
+    <j.0:hasTypeName rdf:nodeID="A8"/>
+    <j.0:hasName>recoded</j.0:hasName>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <j.0:hasMessagePart rdf:nodeID="A12"/>
+    <rdf:type rdf:resource="http://www.mygrid.ecs.soton.ac.uk/wsdl.rdfs#Message"/>
+    <j.0:hasQName rdf:nodeID="A19"/>
+  </rdf:Description>
+</rdf:RDF>

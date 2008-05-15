@@ -1,0 +1,1108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=SARA-MATRIX,mds-vo-name=SARA-MATRIX">
+    <Name>SARA-MATRIX</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:grid.support@sara.nl</UserSupportContact>
+    <SysAdminContact>mailto:grid.support@sara.nl</SysAdminContact>
+    <SecurityContact>mailto:grid.support@sara.nl</SecurityContact>
+    <Location>Amsterdam, The Netherlands</Location>
+    <Latitude>52.378181</Latitude>
+    <Longitude>5.229089</Longitude>
+    <Web>http://www.sara.nl</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-1</OtherInfo>
+    <OtherInfo>CERN-CIC</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ce.gina.sara.nl,mds-vo-name=SARA-MATRIX">
+        <Name>ce.gina.sara.nl</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce.gina.sara.nl,GlueClusterUniqueID=ce.gina.sara.nl,mds-vo-name=SARA-MATRIX">
+            <Name>ce.gina.sara.nl</Name>
+            <PhysicalCPUs>160</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/scratch</TmpDir>
+            <WNTmpDir>/scratch</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.8" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="Intel" Model="P4" ClockSpeed="2670"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="16384" RAMSize="16384"/>
+            <Architecture SMPSize="8"/>
+            <Benchmark SI00="2700" SF00="2531"/>
+            <Location LocalID="VO-atlas-cloud-NL">
+                <Name>VO-atlas-cloud-NL</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.31">
+                <Name>VO-atlas-production-12.0.31</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6">
+                <Name>VO-atlas-production-12.0.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.10">
+                <Name>VO-atlas-production-13.0.10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-tier-T1">
+                <Name>VO-atlas-tier-T1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r9">
+                <Name>VO-lhcb-Gauss-v25r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v22r2">
+                <Name>VO-lhcb-XmlDDDB-v22r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-XmlDDDB-v30r14">
+                <Name>VO-lhcb-XmlDDDB-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Boole-v12r10">
+                <Name>VO-lhcb-Boole-v12r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v12r18">
+                <Name>VO-lhcb-DaVinci-v12r18</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r6">
+                <Name>VO-lhcb-DaVinci-v17r6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r7">
+                <Name>VO-lhcb-DaVinci-v17r7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v17r8">
+                <Name>VO-lhcb-DaVinci-v17r8</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v18r0">
+                <Name>VO-lhcb-DaVinci-v18r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r0">
+                <Name>VO-lhcb-DaVinci-v19r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r14">
+                <Name>VO-lhcb-Brunel-v30r14</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r15">
+                <Name>VO-lhcb-Brunel-v30r15</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r9">
+                <Name>VO-lhcb-DecFiles-v13r9</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-ParamFiles-v5r0">
+                <Name>VO-lhcb-ParamFiles-v5r0</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r1">
+                <Name>VO-lhcb-DaVinci-v19r1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Brunel-v30r17">
+                <Name>VO-lhcb-Brunel-v30r17</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-Gauss-v25r10">
+                <Name>VO-lhcb-Gauss-v25r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DaVinci-v19r2">
+                <Name>VO-lhcb-DaVinci-v19r2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-lhcb-DecFiles-v13r10">
+                <Name>VO-lhcb-DecFiles-v13r10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_LHCB_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=srm.grid.sara.nl,mds-vo-name=SARA-MATRIX">
+        <InformationServiceURL>ldap://srm.grid.sara.nl:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>129047</SizeTotal>
+        <SizeFree>18710</SizeFree>
+        <Architecture>tape</Architecture>
+        <StorageArea LocalID="ops">
+            <Path>/pnfs/grid.sara.nl/data/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>411077214</UsedSpace>
+            <AvailableSpace>8353185</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="tutor">
+            <Path>/pnfs/grid.sara.nl/data/tutor</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1154</UsedSpace>
+            <AvailableSpace>104856445</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/pnfs/grid.sara.nl/data/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>411077214</UsedSpace>
+            <AvailableSpace>8353185</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas">
+            <Path>/pnfs/grid.sara.nl/data/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1540079262</UsedSpace>
+            <AvailableSpace>32784737</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/pnfs/grid.sara.nl/data/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1048247200</UsedSpace>
+            <AvailableSpace>328799</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/pnfs/grid.sara.nl/data/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>419430400</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lofar/ops">
+            <Path>/pnfs/grid.sara.nl/data/lofar/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>783289714</UsedSpace>
+            <AvailableSpace>265286285</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lofar/trans">
+            <Path>/pnfs/grid.sara.nl/data/lofar/trans</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3072</UsedSpace>
+            <AvailableSpace>524284927</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lofar/eor">
+            <Path>/pnfs/grid.sara.nl/data/lofar/eor</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>209715200</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lofar/surveys">
+            <Path>/pnfs/grid.sara.nl/data/lofar/surveys</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>209715200</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lofar/cosmics">
+            <Path>/pnfs/grid.sara.nl/data/lofar/cosmics</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>209715200</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dans">
+            <Path>/pnfs/grid.sara.nl/data/dans</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>522797190</UsedSpace>
+            <AvailableSpace>1490809</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="esr">
+            <Path>/pnfs/grid.sara.nl/data/esr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>104857600</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="omegac">
+            <Path>/pnfs/grid.sara.nl/data/omegac</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>411077214</UsedSpace>
+            <AvailableSpace>8353185</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ncf">
+            <Path>/pnfs/grid.sara.nl/data/ncf/generic</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ncf/rugmd">
+            <Path>/pnfs/grid.sara.nl/data/ncf/rugmd</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vlemed">
+            <Path>/pnfs/grid.sara.nl/data/vlemed</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vlefi">
+            <Path>/pnfs/grid.sara.nl/data/vlefi</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="astron">
+            <Path>/pnfs/grid.sara.nl/data/astron</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="pvier">
+            <Path>/pnfs/grid.sara.nl/data/pvier</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="emutd">
+            <Path>/pnfs/grid.sara.nl/data/emutd</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="beapps">
+            <Path>/pnfs/grid.sara.nl/data/beapps</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="GFTP-bee16@gridftp-bee16Domain">
+            <Endpoint>gsiftp://bee16.grid.sara.nl:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-bee15@gridftp-bee15Domain">
+            <Endpoint>gsiftp://bee15.grid.sara.nl:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-gsi-srm@gsidcap-srmDomain">
+            <Endpoint>gsidcap://srm.grid.sara.nl:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-bee12@gridftp-bee12Domain">
+            <Endpoint>gsiftp://bee12.grid.sara.nl:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-bee6@gridftp-bee6Domain">
+            <Endpoint>gsiftp://bee6.grid.sara.nl:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-bee9@gridftp-bee9Domain">
+            <Endpoint>gsiftp://bee9.grid.sara.nl:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-bee14@gridftp-bee14Domain">
+            <Endpoint>gsiftp://bee14.grid.sara.nl:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="Xrootd-srm@xrootd-srmDomain">
+            <Endpoint>Xrootd://srm.grid.sara.nl:1094</Endpoint>
+            <Type>Xrootd</Type>
+            <Version>2.4</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-bee8@gridftp-bee8Domain">
+            <Endpoint>gsiftp://bee8.grid.sara.nl:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-bee13@gridftp-bee13Domain">
+            <Endpoint>gsiftp://bee13.grid.sara.nl:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-bee7@gridftp-bee7Domain">
+            <Endpoint>gsiftp://bee7.grid.sara.nl:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-bee11@gridftp-bee11Domain">
+            <Endpoint>gsiftp://bee11.grid.sara.nl:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-bee19@gridftp-bee19Domain">
+            <Endpoint>gsiftp://bee19.grid.sara.nl:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-bee18@gridftp-bee18Domain">
+            <Endpoint>gsiftp://bee18.grid.sara.nl:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-bee17@gridftp-bee17Domain">
+            <Endpoint>gsiftp://bee17.grid.sara.nl:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-bee10@gridftp-bee10Domain">
+            <Endpoint>gsiftp://bee10.grid.sara.nl:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://srm.grid.sara.nl</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+        <ControlProtocol LocalID="SRM-srm@srm-srmDomain">
+            <Endpoint>httpg://srm.grid.sara.nl:8443/srm/managerv1</Endpoint>
+            <Type>SRM</Type>
+            <Version>1.1.1</Version>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=ant2.grid.sara.nl,mds-vo-name=SARA-MATRIX">
+        <StorageArea LocalID="dteam">
+            <Path>/pnfs/grid.sara.nl/data/dteam</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/pnfs/grid.sara.nl/data/ops</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/pnfs/grid.sara.nl/data/lhcb</Path>
+            <Quota>0</Quota>
+            <MinFileSize>0</MinFileSize>
+            <MaxFileSize>2000000</MaxFileSize>
+            <MaxData>0</MaxData>
+            <MaxNumFiles>0</MaxNumFiles>
+            <MaxPinDuration>0</MaxPinDuration>
+            <UsedSpace>500000000000</UsedSpace>
+            <AvailableSpace>1000000000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb:LHCb_RAW">
+            <Path>/pnfs/grid.sara.nl/data/lhcb</Path>
+            <UsedSpace>3900000000000</UsedSpace>
+            <AvailableSpace>4187593113600</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam:srm2_d0t1">
+            <Path>/pnfs/grid.sara.nl/data/dteam</Path>
+            <UsedSpace>214748364800</UsedSpace>
+            <AvailableSpace>214748312476</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam:DTEAM_RAW">
+            <Path>/pnfs/grid.sara.nl/data/dteam</Path>
+            <UsedSpace>1048576</UsedSpace>
+            <AvailableSpace>214748312476</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb:LHCb_RDST">
+            <Path>/pnfs/grid.sara.nl/data/lhcb</Path>
+            <UsedSpace>600000000000</UsedSpace>
+            <AvailableSpace>644245094400</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam:srm2_d1t0">
+            <Path>/pnfs/grid.sara.nl/data/dteam</Path>
+            <UsedSpace>80530636800</UsedSpace>
+            <AvailableSpace>80530636800</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsidcap">
+            <Type>gsidcap</Type>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-ant5@gridftp-ant5Domain">
+            <Endpoint>gsiftp://ant5.grid.sara.nl:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-ant2@gridftp-ant2Domain">
+            <Endpoint>gsiftp://ant2.grid.sara.nl:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-ant3@gridftp-ant3Domain">
+            <Endpoint>gsiftp://ant3.grid.sara.nl:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-gsi-ant2@gsidcap-ant2Domain">
+            <Endpoint>gsidcap://ant2.grid.sara.nl:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <ControlProtocol LocalID="SRM-ant2@srm-ant2Domain">
+            <Endpoint>httpg://ant2.grid.sara.nl:8443/srm/managerv1</Endpoint>
+            <Type>SRM</Type>
+            <Version>1.1.1</Version>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=httpg://srm.grid.sara.nl:8443/srm/managerv1,mds-vo-name=SARA-MATRIX">
+        <Name>SARA-MATRIX-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://srm.grid.sara.nl:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-ITEP_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>STAR-ITEP_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-JINR_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>STAR-JINR_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-NIKHEF_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>STAR-NIKHEF_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-RRC_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>STAR-RRC_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-SINP_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>STAR-SINP_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-PNPI_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>STAR-PNPI_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-IHEP_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>STAR-IHEP_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-SARA_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>STAR-SARA_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNL-SARA_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>BNL-SARA_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=GRIDKA-SARA_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>GRIDKA-SARA_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=IN2P3-SARA_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>IN2P3-SARA_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CNAF-SARA_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>CNAF-SARA_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ITEP-STAR_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>ITEP-STAR_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=JINR-STAR_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>JINR-STAR_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=NDGF-SARA_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>NDGF-SARA_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=NIKHEF-STAR_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>NIKHEF-STAR_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=PIC-SARA_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>PIC-SARA_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=RAL-SARA_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>RAL-SARA_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=RRC-STAR_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>RRC-STAR_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=SINP-STAR_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>SINP-STAR_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=PNPI-STAR_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>PNPI-STAR_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=IHEP-STAR_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>IHEP-STAR_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-SARA_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>ASGC-SARA_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TRIUMF-SARA_fts.grid.sara.nl_org.glite.ChannelAgent,mds-vo-name=SARA-MATRIX">
+        <Name>TRIUMF-SARA_fts.grid.sara.nl_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_fts.grid.sara.nl_org.glite.FileTransfer,mds-vo-name=SARA-MATRIX">
+        <Name>glite-data-transfer-fts_fts.grid.sara.nl</Name>
+        <Type>org.glite.FileTransfer</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://fts.grid.sara.nl:8443/glite-data-transfer-fts/services/FileTransfer</Endpoint>
+        <WSDL>https://fts.grid.sara.nl:8443/glite-data-transfer-fts/services/FileTransfer?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_fts.grid.sara.nl_org.glite.ChannelManagement,mds-vo-name=SARA-MATRIX">
+        <Name>glite-data-transfer-fts_fts.grid.sara.nl-channel</Name>
+        <Type>org.glite.ChannelManagement</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://fts.grid.sara.nl:8443/glite-data-transfer-fts/services/ChannelManagement</Endpoint>
+        <WSDL>https://fts.grid.sara.nl:8443/glite-data-transfer-fts/services/ChannelManagement?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_fts.grid.sara.nl_org.glite.FileTransferStats,mds-vo-name=SARA-MATRIX">
+        <Name>glite-data-transfer-fts_fts.grid.sara.nl-stats</Name>
+        <Type>org.glite.FileTransferStats</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://fts.grid.sara.nl:8443/glite-data-transfer-fts/services/FileTransferStats</Endpoint>
+        <WSDL>https://fts.grid.sara.nl:8443/glite-data-transfer-fts/services/FileTransferStats?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_fts.grid.sara.nl_org.glite.Delegation,mds-vo-name=SARA-MATRIX">
+        <Name>glite-data-transfer-fts_fts.grid.sara.nl-stats</Name>
+        <Type>org.glite.Delegation</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://fts.grid.sara.nl:8443/glite-data-transfer-fts/services/Delegation</Endpoint>
+        <WSDL>https://fts.grid.sara.nl:8443/glite-data-transfer-fts/services/Delegation?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-09-20T13:04:00.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=http://lfc.grid.sara.nl:8085/,mds-vo-name=SARA-MATRIX">
+        <Name>SARA-MATRIX-lfc-dli</Name>
+        <Type>data-location-interface</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>http://lfc.grid.sara.nl:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-07-02T15:53:18.000+02:00</StartTime>
+        <Owner>emutd</Owner>
+        <Owner>esr</Owner>
+        <Owner>ncf</Owner>
+        <Owner>pheno</Owner>
+        <Owner>pvier</Owner>
+        <Owner>tutor</Owner>
+        <Owner>vledut</Owner>
+        <Owner>vlemed</Owner>
+        <Owner>phicos</Owner>
+        <Owner>prtms</Owner>
+        <Owner>biowur</Owner>
+        <Owner>vlibu</Owner>
+        <Owner>vldbi</Owner>
+        <Owner>vlefi</Owner>
+        <Owner>dans</Owner>
+        <Owner>lofar</Owner>
+        <Owner>lofar/trans</Owner>
+        <Owner>lofar/eor</Owner>
+        <Owner>lofar/surveys</Owner>
+        <Owner>lofar/cosmics</Owner>
+        <Owner>lofar/ops</Owner>
+        <Owner>lsgrid</Owner>
+        <Owner>omegac</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=lfc.grid.sara.nl,mds-vo-name=SARA-MATRIX">
+        <Name>SARA-MATRIX-lfc</Name>
+        <Type>lcg-file-catalog</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>lfc.grid.sara.nl</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-07-02T15:53:18.000+02:00</StartTime>
+        <Owner>emutd</Owner>
+        <Owner>esr</Owner>
+        <Owner>ncf</Owner>
+        <Owner>pheno</Owner>
+        <Owner>pvier</Owner>
+        <Owner>tutor</Owner>
+        <Owner>vledut</Owner>
+        <Owner>vlemed</Owner>
+        <Owner>phicos</Owner>
+        <Owner>prtms</Owner>
+        <Owner>biowur</Owner>
+        <Owner>vlibu</Owner>
+        <Owner>vldbi</Owner>
+        <Owner>vlefi</Owner>
+        <Owner>dans</Owner>
+        <Owner>lofar</Owner>
+        <Owner>lofar/trans</Owner>
+        <Owner>lofar/eor</Owner>
+        <Owner>lofar/surveys</Owner>
+        <Owner>lofar/cosmics</Owner>
+        <Owner>lofar/ops</Owner>
+        <Owner>lsgrid</Owner>
+        <Owner>omegac</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-http://lfc-atlas.grid.sara.nl:8085/,mds-vo-name=SARA-MATRIX">
+        <Name>SARA-MATRIX-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>http://lfc-atlas.grid.sara.nl:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-07-26T15:34:56.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-lfc-atlas.grid.sara.nl,mds-vo-name=SARA-MATRIX">
+        <Name>SARA-MATRIX-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.6.5</Version>
+        <Endpoint>lfc-atlas.grid.sara.nl</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-07-26T15:34:56.000+02:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=px.grid.sara.nl:7512,mds-vo-name=SARA-MATRIX">
+        <Name>SARA-MATRIX-myproxy</Name>
+        <Type>MyProxy</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>px.grid.sara.nl:7512</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rb.grid.sara.nl:7772,mds-vo-name=SARA-MATRIX">
+        <Name>SARA-MATRIX-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rb.grid.sara.nl:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>alice</Owner>
+        <Owner>atlas</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>biomed</Owner>
+        <Owner>geant4</Owner>
+        <Owner>esr</Owner>
+        <Owner>pvier</Owner>
+        <Owner>tutor</Owner>
+        <Owner>emutd</Owner>
+        <Owner>dzero</Owner>
+        <Owner>vlemed</Owner>
+        <Owner>phicos</Owner>
+        <Owner>prtms</Owner>
+        <Owner>biowur</Owner>
+        <Owner>lsgrid</Owner>
+        <Owner>omegac</Owner>
+        <Owner>ncf</Owner>
+        <Owner>beapps</Owner>
+        <Owner>lofar</Owner>
+        <Owner>vlefi</Owner>
+        <Owner>vldbi</Owner>
+        <Owner>vlibu</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://ant2.grid.sara.nl:8443/srm/managerv1,mds-vo-name=SARA-MATRIX">
+        <Name>SARA-MATRIX</Name>
+        <Type>SRM</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://ant2.grid.sara.nl:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://ant2.grid.sara.nl:8443/srm/managerv2,mds-vo-name=SARA-MATRIX">
+        <Name>SARA-MATRIX</Name>
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://ant2.grid.sara.nl:8443/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=gsissh://vobox-alice.grid.sara.nl:1975,mds-vo-name=SARA-MATRIX">
+        <Name>SARA-MATRIX-vobox</Name>
+        <Type>VOBOX</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>gsissh://vobox-alice.grid.sara.nl:1975</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=gsissh://mu14.matrix.sara.nl:1975,mds-vo-name=SARA-MATRIX">
+        <Name>SARA-MATRIX-vobox</Name>
+        <Type>VOBOX</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>gsissh://mu14.matrix.sara.nl:1975</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

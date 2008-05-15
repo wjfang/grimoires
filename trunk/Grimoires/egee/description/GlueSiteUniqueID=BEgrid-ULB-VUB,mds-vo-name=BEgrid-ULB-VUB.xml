@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=BEgrid-ULB-VUB,mds-vo-name=BEgrid-ULB-VUB">
+    <Name>BEgrid-ULB-VUB</Name>
+    <Description>EGEE/LCG Site</Description>
+    <UserSupportContact>mailto: grid_admin@listserv.vub.ac.be</UserSupportContact>
+    <SysAdminContact>mailto: grid_admin@listserv.vub.ac.be</SysAdminContact>
+    <SecurityContact>mailto: grid_admin@listserv.vub.ac.be</SecurityContact>
+    <Location>Brussels, Belgium</Location>
+    <Latitude>50.8333</Latitude>
+    <Longitude>4.3333</Longitude>
+    <Web>http://w3.iihe.ac.be/</Web>
+    <OtherInfo>TIER 2</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=gridce.iihe.ac.be,mds-vo-name=BEgrid-ULB-VUB">
+        <Name>gridce.iihe.ac.be</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=gridce.iihe.ac.be,GlueClusterUniqueID=gridce.iihe.ac.be,mds-vo-name=BEgrid-ULB-VUB">
+            <Name>gridce.iihe.ac.be</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.4" Name="ScientificSL"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="Opteron" ClockSpeed="2200"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1024" RAMSize="1024"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1150" SF00="1250"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=maite.iihe.ac.be,mds-vo-name=BEgrid-ULB-VUB">
+        <InformationServiceURL>ldap://maite.iihe.ac.be:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>60972</SizeTotal>
+        <SizeFree>34711</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="beapps">
+            <Path>/pnfs/iihe//beapps</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2173666139</UsedSpace>
+            <AvailableSpace>3765199889</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="becms">
+            <Path>/pnfs/iihe//becms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>26261599710</UsedSpace>
+            <AvailableSpace>27190342031</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="betest">
+            <Path>/pnfs/iihe//betest</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2173666139</UsedSpace>
+            <AvailableSpace>3765199889</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/pnfs/iihe//cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>26261599710</UsedSpace>
+            <AvailableSpace>27190342031</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/pnfs/iihe//dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2173666139</UsedSpace>
+            <AvailableSpace>3765199889</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="hone">
+            <Path>/pnfs/iihe//hone</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2173666139</UsedSpace>
+            <AvailableSpace>3765199889</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/pnfs/iihe//ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2173666139</UsedSpace>
+            <AvailableSpace>3765199889</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsidcap">
+            <Endpoint>httpg://maite.iihe.ac.be:8443/srm/managerv1</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://maite.iihe.ac.be:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-gsi-behar5@gsidcap-behar5Domain">
+            <Endpoint>gsidcap://behar5.wn.iihe.ac.be:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-gsi-behar7@gsidcap-behar7Domain">
+            <Endpoint>gsidcap://behar7.wn.iihe.ac.be:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-behar7@dcap-behar7Domain">
+            <Endpoint>dcap://behar7.wn.iihe.ac.be:22125</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-behar4@gridftp-behar4Domain">
+            <Endpoint>gsiftp://behar4.iihe.ac.be:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-gsi-behar4@gsidcap-behar4Domain">
+            <Endpoint>gsidcap://behar4.wn.iihe.ac.be:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-behar5@dcap-behar5Domain">
+            <Endpoint>dcap://behar5.wn.iihe.ac.be:22125</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-behar2@gridftp-behar2Domain">
+            <Endpoint>gsiftp://behar2.iihe.ac.be:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-behar2@dcap-behar2Domain">
+            <Endpoint>dcap://behar2.wn.iihe.ac.be:22125</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-maite@gridftp-maiteDomain">
+            <Endpoint>gsiftp://maite.iihe.ac.be:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-behar3@dcap-behar3Domain">
+            <Endpoint>dcap://behar3.wn.iihe.ac.be:22125</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-maite@dcap-maiteDomain">
+            <Endpoint>dcap://maite.wn.iihe.ac.be:22125</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-gsi-behar2@gsidcap-behar2Domain">
+            <Endpoint>gsidcap://behar2.wn.iihe.ac.be:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-gsi-behar3@gsidcap-behar3Domain">
+            <Endpoint>gsidcap://behar3.wn.iihe.ac.be:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-gsi-behar@gsidcap-beharDomain">
+            <Endpoint>gsidcap://behar.wn.iihe.ac.be:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-gsi-maite@gsidcap-maiteDomain">
+            <Endpoint>gsidcap://maite.wn.iihe.ac.be:22128</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-behar@gridftp-beharDomain">
+            <Endpoint>gsiftp://behar.iihe.ac.be:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-behar5@gridftp-behar5Domain">
+            <Endpoint>gsiftp://behar5.iihe.ac.be:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-behar@dcap-beharDomain">
+            <Endpoint>dcap://behar.wn.iihe.ac.be:22125</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-behar6@dcap-behar6Domain">
+            <Endpoint>dcap://behar6.wn.iihe.ac.be:22125</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-behar3@gridftp-behar3Domain">
+            <Endpoint>gsiftp://behar3.iihe.ac.be:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="DCap-behar4@dcap-behar4Domain">
+            <Endpoint>dcap://behar4.wn.iihe.ac.be:22125</Endpoint>
+            <Type>dcap</Type>
+            <Version>1.3.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-behar7@gridftp-behar7Domain">
+            <Endpoint>gsiftp://behar7.iihe.ac.be:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="GFTP-behar6@gridftp-behar6Domain">
+            <Endpoint>gsiftp://behar6.iihe.ac.be:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://maite.iihe.ac.be:8443/srm/managerv1</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+        <ControlProtocol LocalID="SRM-maite@srm-maiteDomain">
+            <Endpoint>httpg://maite.iihe.ac.be:8443/srm/managerv1</Endpoint>
+            <Type>SRM</Type>
+            <Version>1.1.0</Version>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=laranja.iihe.ac.be:2136,mds-vo-name=BEgrid-ULB-VUB">
+        <Name>BEgrid-ULB-VUB-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://laranja.iihe.ac.be:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>betest</Owner>
+        <Owner>becms</Owner>
+        <Owner>beapps</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>hone</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=laranja.iihe.ac.be:7512,mds-vo-name=BEgrid-ULB-VUB">
+        <Name>BEgrid-ULB-VUB-myproxy</Name>
+        <Type>myproxy</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>laranja.iihe.ac.be:7512</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=laranja.iihe.ac.be:7772,mds-vo-name=BEgrid-ULB-VUB">
+        <Name>BEgrid-ULB-VUB-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>laranja.iihe.ac.be:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>betest</Owner>
+        <Owner>becms</Owner>
+        <Owner>beapps</Owner>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>hone</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://maite.iihe.ac.be:8443/srm/managerv1,mds-vo-name=BEgrid-ULB-VUB">
+        <Name>httpg://maite.iihe.ac.be:8443/srm/managerv1</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://maite.iihe.ac.be:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+    </Service>
+</Site>

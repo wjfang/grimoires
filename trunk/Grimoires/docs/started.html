@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Grimoires Documentation - Getting Started</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url('i_arrow_down.gif');
+	}
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script>
+</head>
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1>  Getting Started Guide </h1>
+<p />
+<div class="twikiToc">
+<ul>
+<li> <a href="#Getting_Started_Guide">Getting Started Guide</a>
+<ul>
+<li> <a href="#Download">Download </a>
+</li>
+<li> <a href="#Configure">Configure</a>
+</li>
+<li> <a href="#Deploy">Deploy</a>
+</li>
+<li> <a href="#Test_installation">Test installation</a>
+</li>
+<li> <a href="#Start_to_use_Grimoires">Start to use Grimoires</a>
+<ul>
+<li> <a href="#Publish_a_business">Publish a business </a>
+</li>
+<li> <a href="#Inquire_a_business">Inquire a business</a>
+</li>
+</ul>
+</li>
+<li><a href="#Undeploy">Undeploy and re-deploy</a> </li>
+<li><a href="#Where_to_go_from_here">Where to go from here</a> </li>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p />
+This Getting Started Guide explains how to deploy Grimoires and use GShell - which is a command line client tool - to perform the publish and inquire operations for a business. Grimoires must be deployed into an appropriate Web Services container, which must be up and running prior to deployment. There are 3 possible container environments that are supported: <b><u><a class="twikiLink" href="http://jakarta.apache.org/tomcat">Tomcat</a></b></u> / <b><u><a class="twikiLink" href="http://ws.apache.org/axis/">Axis</a></b></u>, <b><u><a class="twikiLink" href="http://www.globus.org/toolkit/">Globus Toolkit 4</a></b></u> and <b><u><a class="twikiLink" href="http://www.omii.ac.uk/">OMII</a></b></u>. For OMII, the required container environment (henceforth refered to as the OMII container) corresponds to a <b><u><a class="twikiLink" href="http://www.omii.ac.uk/downloads/documentation/omii_2_0_0/index.htm">Base and Extensions Installation</a></b></u>. It is assumed that you are acquainted with the operation of the container environment of your choice, have downloaded it and started it before proceeding with the rest of this quick start guide, and that your classpath for Ant and Java has been set appropriately. This guide does not require UDDI specific knowledge.
+<p />
+<h2><a name="Download"> </a> Download  </h2>
+<p />
+Download the Grimoires source release and unzip it. There is a build.xml and an init.properties
+file in the root directory, whose parameters need to be configured correctly in order to deploy Grimoires.
+<p />
+<h2><a name="Configure"> </a> Configure </h2>
+<p />
+Parameter configuration is described for the case of an OMII container. It is assumed that the Tomcat in OMII is active at the port http://your.host.name:18080, and there is a manager account whose username is "tomcat" and password is "tomcat". Grimoires will be deployed at http://your.host.name:18080/grimoires. The parameter details are as follows:
+
+<pre>
+container = omii
+
+tomcat.host = http://your.host.name
+tomcat.port = 18080
+
+# Grimoires install path
+omii.context.path = grimoires
+
+# username/password for a manager role
+omii.tomcat.username = tomcat
+omii.tomcat.password = tomcat
+</pre>
+<p />
+<h2><a name="Deploy"> </a> Deploy </h2>
+<p />
+Run "ant deploy" to deploy Grimoires.
+<p />
+<h2><a name="Test_installation"> </a> Test installation </h2>
+<p />
+Run "ant test-install" to test whether Grimoires is successfully deployed. If Grimoires is successfully installed, you will see something like:
+<p />
+<pre>
+&lt;h1&gt;publish&lt;/h1&gt;
+&lt;p&gt;Hi there, this is an AXIS service!&lt;/p&gt;
+&lt;i&gt;Perhaps there will be a form for invoking the service here...&lt;/i&gt;
+</pre>
+<p />
+It means a Grimoires publish web service is successfully deployed.
+<h2><a name="Start_to_use_Grimoires"> </a> Start to use Grimoires </h2>
+<p />
+Go to the "GShell" subdirectory under the Grimoires release.
+<p />
+Type "ant" to compile.
+<p />
+Type "run http://your.host.name:18080/grimoires" (on Windows) or "./run.sh http://your.host.name:18080/grimoires" (on Linux/Unix) to run GShell, which is a command line client tool.
+<p />
+On Linux/Unix, you may need to make &quot;run.sh&quot; executable by typing &quot;chmod +x 
+run.sh&quot;.<p />
+You can publish/inquire a business as follows:
+<p />
+<h3><a name="Publish_a_business"> </a> Publish a business  </h3>
+<p />
+Publish a business called "Univ. of Southampton". A business is the
+UDDI's terminology for an organization. You will get a business
+key. On the screen, you will see:
+<p />
+<pre>
+><b>run PublishBusiness</b>
+==== Publish a business ====
+Input the business name:
+<b>Univ. of Southampton</b>
+Input the business description:
+<b>University</b>
+Business key[$1]: ca5bdb5b-cf1c-4054-8626-65862727b9ff
+</pre>
+<p />
+<h3><a name="Inquire_a_business"> </a> Inquire a business </h3>
+<p />
+Inquire a business by name. On the screen, you will see:
+<p />
+<pre>
+><b>run InquireBusiness</b>
+==== Inquire a business ====
+Input the business name:
+<b>Univ. of Southampton</b>
+Business key[$2]: ca5bdb5b-cf1c-4054-8626-65862727b9ff</pre>
+<h2><a name="Undeploy"></a>Undeploy and re-deploy</h2>
+<p />
+Run "ant undeploy" to undeploy Grimoires.
+<p />
+Run &quot;ant undeploy&quot; then run &quot;ant deploy&quot; to re-deploy Grimoires.<br>
+<p />
+<h2><a name="Where_to_go_from_here"> </a> Where to go from here </h2>
+<p />
+<ul>
+<li> You can also use <a href="./ubguide.html" target="_top">UDDI browser</a> to publish web services to and inquire web services from the deployed Grimories.
+</li>
+<li> Read more Grimoires documentation.
+</li>
+</ul>
+<p />
+</div>
+
+</body></html>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+	<serviceDescription>
+		<serviceName>SHoundProteinsFromChromosomeList</serviceName>
+		<organisation>
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundProteinsFromChromosomeList</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundProteinsFromChromosomeList?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Get the protein gi's for an array of chromosome identifiers</serviceDescriptionText>
+		<operations>
+			<serviceOperation>
+				<operationName>SHoundProteinsFromChromosomeList</operationName>
+				<operationInputs>
+					<parameter>
+						<parameterName>chromList</parameterName>
+						<parameterDescription>A list of genes from a chromosome or plasmid etc</parameterDescription>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Collection</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs>
+					<parameter>
+						<parameterName>result</parameterName>
+						<parameterDescription>A list of gi identifiers from the list of genes inputted (the order is not maintained).</parameterDescription>
+						<semanticType>http://www.mygrid.org.uk/ontology#GenBank_gene_id_%28GI%29</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Collection</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#retrieving</operationTask>
+				<operationResource>http://www.mygrid.org.uk/ontology#Genbank_nucleotide_sequence_database</operationResource>
+				<operationResourceContent>http://www.mygrid.org.uk/ontology#model_organism</operationResourceContent>
+				<operationMethod>http://www.mygrid.org.uk/ontology#bioinformatics_algorithm</operationMethod>
+				<operationApplication>http://www.mygrid.org.uk/ontology#bioinformatics_application</operationApplication>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

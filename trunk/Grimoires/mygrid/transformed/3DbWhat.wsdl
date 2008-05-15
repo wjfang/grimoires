@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://seqhound.blueprint.org/" tns:dummy="" xmlns:feta="http://www.mygrid.org.uk/feta/" xmlns:sawsdl="http://www.w3.org/2002/ws/sawsdl/spec/sawsdl#" xmlns:tns="http://seqhound.blueprint.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:documentation>
+Finds out what kind of molecules are contained in a 3-D structure. </wsdl:documentation>
+ <wsdl:message name="request">
+  <wsdl:part name="mmdbid" type="xsd:string"/>
+ </wsdl:message>
+ <wsdl:message name="response">
+  <wsdl:part name="result" type="xsd:string"/>
+ </wsdl:message>
+ <wsdl:portType name="SHound3DbWhat">
+  <wsdl:operation name="SHound3DbWhat">
+   <wsdl:input message="tns:request"/>
+   <wsdl:output message="tns:response"/>
+  </wsdl:operation>
+ </wsdl:portType>
+</wsdl:definitions>

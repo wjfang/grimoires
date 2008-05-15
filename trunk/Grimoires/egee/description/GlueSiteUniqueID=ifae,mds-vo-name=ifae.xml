@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=ifae,mds-vo-name=ifae">
+    <Name>ifae</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:lcg.support@pic.es</UserSupportContact>
+    <SysAdminContact>mailto:lcg.support@pic.es</SysAdminContact>
+    <SecurityContact>mailto:lcg.support@pic.es</SecurityContact>
+    <Location>Barcelona, Spain</Location>
+    <Latitude>41.4984</Latitude>
+    <Longitude>2.1069</Longitude>
+    <Web>www.ifae.es</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>pic</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ifaece01.pic.es,mds-vo-name=ifae">
+        <Name>ifaece01.pic.es</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ifaece01.pic.es,GlueClusterUniqueID=ifaece01.pic.es,mds-vo-name=ifae">
+            <Name>ifaece01.pic.es</Name>
+            <PhysicalCPUs>16</PhysicalCPUs>
+            <LogicalCPUs>16</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.6" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="P4" ClockSpeed="4000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1025" RAMSize="1024"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1200" SF00="0"/>
+            <Location LocalID="VO-atlas-cloud-ES">
+                <Name>VO-atlas-cloud-ES</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.31">
+                <Name>VO-atlas-production-12.0.31</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6">
+                <Name>VO-atlas-production-12.0.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6.3">
+                <Name>VO-atlas-production-12.0.6.3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.7">
+                <Name>VO-atlas-production-12.0.7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.95">
+                <Name>VO-atlas-production-12.0.95</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.10">
+                <Name>VO-atlas-production-13.0.10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.10.1">
+                <Name>VO-atlas-production-13.0.10.1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.20">
+                <Name>VO-atlas-production-13.0.20</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.42">
+                <Name>VO-atlas-release-11.0.42</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.5">
+                <Name>VO-atlas-release-11.0.5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-tier-T2">
+                <Name>VO-atlas-tier-T2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-dteam-ITUtest1">
+                <Name>VO-dteam-ITUtest1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=ifaese01.pic.es,mds-vo-name=ifae">
+        <InformationServiceURL>ldap://ifaece01.pic.es:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>3400000000</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/nfs/atlas-data00</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>612778376</UsedSpace>
+            <AvailableSpace>208326048</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/nfs/atlas-data00/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3622036</UsedSpace>
+            <AvailableSpace>56422808</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/nfs/atlas-data00/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3622036</UsedSpace>
+            <AvailableSpace>56422808</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas_data01">
+            <Path>/nfs/atlas-data01</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>680190912</UsedSpace>
+            <AvailableSpace>140913504</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas_data02">
+            <Path>/nfs/atlas-data02</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>89980064</UsedSpace>
+            <AvailableSpace>731124360</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas_data03">
+            <Path>/nfs/atlas-data03</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>703695392</UsedSpace>
+            <AvailableSpace>117409032</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas_data04">
+            <Path>/nfs/atlas-data04</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>67401872</UsedSpace>
+            <AvailableSpace>160699624</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas_data05">
+            <Path>/nfs/atlas-data05</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>815076160</UsedSpace>
+            <AvailableSpace>617980768</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas_data06">
+            <Path>/nfs/atlas-data06</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2361694080</UsedSpace>
+            <AvailableSpace>23625056</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas_data07">
+            <Path>/nfs/atlas-data07</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>615158912</UsedSpace>
+            <AvailableSpace>1770156832</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas_data08">
+            <Path>/nfs/atlas-data08</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>33424</UsedSpace>
+            <AvailableSpace>1726959784</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas_data09">
+            <Path>/nfs/atlas-data08</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>33424</UsedSpace>
+            <AvailableSpace>1726959784</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas_data10">
+            <Path>/nfs/atlas-data10</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>894274144</UsedSpace>
+            <AvailableSpace>1491053024</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas_data11">
+            <Path>/nfs/atlas-data11</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>32</UsedSpace>
+            <AvailableSpace>2385330816</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas_data12">
+            <Path>/nfs/atlas-data12</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>32</UsedSpace>
+            <AvailableSpace>1433069472</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas_data13">
+            <Path>/nfs/atlas-data13</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>32</UsedSpace>
+            <AvailableSpace>2385331104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas_data14">
+            <Path>/nfs/atlas-data14</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>32</UsedSpace>
+            <AvailableSpace>2385331104</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="atlas_data15">
+            <Path>/nfs/atlas-data15</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>6374720</UsedSpace>
+            <AvailableSpace>2378956416</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://ifaese01.pic.es:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm">
+            <Endpoint>httpg://ifaese01.pic.es:8443/srm/managerv1</Endpoint>
+            <Type>srmv1</Type>
+            <Version>1.0</Version>
+            <Capability>space allocation</Capability>
+            <Capability>space management</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <StorageElement UniqueID="GlueSEUniqueID=ifaesrm.pic.es,mds-vo-name=ifae">
+        <InformationServiceURL>ldap://ifaece01.pic.es:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>3400000000</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/nfs/atlas-data00</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>612778376</UsedSpace>
+            <AvailableSpace>208326048</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/nfs/atlas-data00/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>999999</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>3622036</UsedSpace>
+            <AvailableSpace>56422808</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://ifaesrm.pic.es:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm">
+            <Endpoint>httpg://ifaesrm.pic.es:8443</Endpoint>
+            <Type>srmv1</Type>
+            <Version>1.0</Version>
+            <Capability>space allocation</Capability>
+            <Capability>space management</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=httpg://ifaese01.pic.es:8443/srm/managerv1,mds-vo-name=ifae">
+        <Name>disksrm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://ifaese01.pic.es:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://ifaesrm.pic.es:8443/srm/managerv1,mds-vo-name=ifae">
+        <Name>disksrm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://ifaesrm.pic.es:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ifaece01.pic.es:2136,mds-vo-name=ifae">
+        <Name>ifae-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://ifaece01.pic.es:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>swetest</Owner>
+        <Owner>cdf</Owner>
+        <Owner>ops</Owner>
+    </Service>
+</Site>

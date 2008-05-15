@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<operations>
+ <serviceOperation>
+  <operationName>
+SHound3DbWhat  </operationName>
+  <operationInputs>
+   <parameter>
+    <parameterName>
+mmdbid    </parameterName>
+    <semanticType>
+http://www.mygrid.org.uk/ontology#bioinformatics_record_id    </semanticType>
+    <transportDataType>
+String    </transportDataType>
+    <collectionSemanticType>
+Single    </collectionSemanticType>
+   </parameter>
+  </operationInputs>
+  <operationOutputs>
+   <parameter>
+    <parameterName>
+result    </parameterName>
+    <semanticType>
+http://www.mygrid.org.uk/ontology#bioinformatics_record_id    </semanticType>
+    <transportDataType>
+String    </transportDataType>
+    <collectionSemanticType>
+Single    </collectionSemanticType>
+   </parameter>
+  </operationOutputs>
+  <operationTask>
+
+http://www.mygrid.org.uk/ontology#searching      </operationTask>
+  <operationResource>
+
+http://www.mygrid.org.uk/ontology#PDB      </operationResource>
+  <operationResourceContent>
+
+http://www.mygrid.org.uk/ontology#model_organism      </operationResourceContent>
+  <operationMethod/>
+  <operationApplication/>
+ </serviceOperation>
+</operations>

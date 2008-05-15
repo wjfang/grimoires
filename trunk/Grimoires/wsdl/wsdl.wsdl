@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="wsdl"
+	targetNamespace="http://www.grimoires.org/wsdl"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://www.grimoires.org/wsdl"
+	xmlns:mytypes="http://www.grimoires.org/wsdl/type"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+  <wsdl:types>
+	<schema targetNamespace="http://www.grimoires.org/wsdl/type"
+	xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://www.grimoires.org/wsdl/type">
+	<element name="addWSDLFileAdvertRequest" type="tns:addWSDLFileAdvertRequest" />
+	<complexType name="addWSDLFileAdvertRequest">
+		<sequence>
+			<element name="url" type="string" />
+			<element name="content" type="string" />
+		</sequence>
+	</complexType>
+	<element name="addWSDLFileAdvertResponse" type="string" />
+	<element name="addWSDLFileRequest" type="string" />
+	<element name="addWSDLFileResponse" type="string" />
+	<element name="getWSDLAdvertContentRequest" type="string" />
+	<element name="getWSDLAdvertContentResponse" type="string" />
+	<element name="getWSDLAdvertContentByURLRequest" type="string" />
+	<element name="getWSDLAdvertContentByURLResponse"
+		type="string" />
+	<element name="removeWSDLFileRequest" type="string" />
+	<element name="removeWSDLFileResponse" type="boolean" />
+	<element name="findServicesByInterfaceRequest" type="string" />
+	<element name="findServicesByInterfaceResponse"
+		type="tns:findServicesByInterfaceResponse" />
+	<complexType name="findServicesByInterfaceResponse">
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="0"
+				name="serviceKey" type="string" />
+		</sequence>
+	</complexType>
+	<element name="getAllWSDLFilesRequest" type="tns:getAllWSDLFilesRequest"/>
+	<complexType name="getAllWSDLFilesRequest"/>
+	<element name="getAllWSDLFilesResponse"
+		type="tns:getAllWSDLFilesResponse" />
+	<complexType name="getAllWSDLFilesResponse">
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="0" name="url"
+				type="string" />
+		</sequence>
+	</complexType>
+	<element name="getOperationsByURLRequest" type="string" />
+	<element name="getOperationsByURLResponse"
+		type="tns:getOperationsByURLResponse" />
+	<complexType name="operationDetail">
+		<sequence>
+			<element name="portTypeNamespace" type="string">
+			</element>
+			<element name="portTypeName" type="string">
+			</element>
+			<element name="operationName" type="string">
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="getOperationsByURLResponse">
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="0"
+				name="operationDetail" type="tns:operationDetail" />
+		</sequence>
+	</complexType>
+	<element name="getInputMessageOfOperationRequest"
+		type="tns:operationDetail" />
+	<element name="getInputMessageOfOperationResponse"
+		type="tns:messageDetail" />
+	<element name="getOutputMessageOfOperationRequest"
+		type="tns:operationDetail" />
+	<element name="getOutputMessageOfOperationResponse"
+		type="tns:messageDetail" />
+	<element name="getFaultMessageOfOperationRequest"
+		type="tns:operationDetail" />
+	<element name="getFaultMessageOfOperationResponse"
+		type="tns:messageDetail" />
+	<complexType name="partsName">
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="0" name="name"
+				type="string" />
+		</sequence>
+	</complexType>
+	<complexType name="messageDetail">
+		<sequence>
+			<element name="messageNamespace" type="string">
+			</element>
+			<element name="messageName" type="string"></element>
+			<element name="partsName" type="tns:partsName">
+			</element>
+		</sequence>
+	</complexType>
+	<element name="findInterfaceByOperationRequest"
+		type="tns:operationDetail" />
+	<element name="findInterfaceByOperationResponse" 
+		type="string" />
+	<element name="findOperationByMessagePartRequest"
+		type="tns:messagePartDetail" />
+	<element name="findOperationByMessagePartResponse" 
+		type="tns:operationDetail" />
+	<complexType name="messagePartDetail">
+		<sequence>
+			<element name="messageNamespace" type="string">
+			</element>
+			<element name="messageName" type="string"></element>
+			<element name="partName" type="string">
+			</element>
+		</sequence>
+	</complexType>
+</schema>
+</wsdl:types>
+
+	<wsdl:message name="addWSDLFileAdvertResponse">
+		<wsdl:part name="body"
+			element="mytypes:addWSDLFileAdvertResponse" />
+	</wsdl:message>
+	<wsdl:message name="addWSDLFileAdvertRequest">
+		<wsdl:part name="body"
+			element="mytypes:addWSDLFileAdvertRequest" />
+	</wsdl:message>
+	<wsdl:message name="addWSDLFileResponse">
+		<wsdl:part name="body" element="mytypes:addWSDLFileResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="addWSDLFileRequest">
+		<wsdl:part name="body" element="mytypes:addWSDLFileRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getWSDLAdvertContentRequest">
+		<wsdl:part name="body"
+			element="mytypes:getWSDLAdvertContentRequest">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getWSDLAdvertContentResponse">
+		<wsdl:part name="body"
+			element="mytypes:getWSDLAdvertContentResponse">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getWSDLAdvertContentByURLResponse">
+		<wsdl:part name="body"
+			element="mytypes:getWSDLAdvertContentByURLResponse">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getWSDLAdvertContentByURLRequest">
+		<wsdl:part name="body"
+			element="mytypes:getWSDLAdvertContentByURLRequest">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="removeWSDLFileResponse">
+		<wsdl:part name="body"
+			element="mytypes:removeWSDLFileResponse">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="removeWSDLFileRequest">
+		<wsdl:part name="body"
+			element="mytypes:removeWSDLFileRequest">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="findServicesByInterfaceResponse">
+		<wsdl:part name="body"
+			element="mytypes:findServicesByInterfaceResponse">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="findServicesByInterfaceRequest">
+		<wsdl:part name="body"
+			element="mytypes:findServicesByInterfaceRequest">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getAllWSDLFilesRequest">
+		<wsdl:part name="body"
+			element="mytypes:getAllWSDLFilesRequest">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getAllWSDLFilesResponse">
+		<wsdl:part name="body"
+			element="mytypes:getAllWSDLFilesResponse">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getOperationsByURLRequest">
+		<wsdl:part name="body"
+			element="mytypes:getOperationsByURLRequest">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getOperationsByURLResponse">
+		<wsdl:part name="body"
+			element="mytypes:getOperationsByURLResponse">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getInputMessageOfOperationRequest">
+		<wsdl:part name="body"
+			element="mytypes:getInputMessageOfOperationRequest">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getInputMessageOfOperationResponse">
+		<wsdl:part name="body"
+			element="mytypes:getInputMessageOfOperationResponse">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getOutputMessageOfOperationRequest">
+		<wsdl:part name="body"
+			element="mytypes:getOutputMessageOfOperationRequest">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getOutputMessageOfOperationResponse">
+		<wsdl:part name="body"
+			element="mytypes:getOutputMessageOfOperationResponse">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getFaultMessageOfOperationRequest">
+		<wsdl:part name="body"
+			element="mytypes:getFaultMessageOfOperationRequest">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getFaultMessageOfOperationResponse">
+		<wsdl:part name="body"
+			element="mytypes:getFaultMessageOfOperationResponse">
+		</wsdl:part>
+	</wsdl:message>
+	
+	<wsdl:message name="findInterfaceByOperationRequest">
+		<wsdl:part name="body"
+			element="mytypes:findInterfaceByOperationRequest">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="findInterfaceByOperationResponse">
+		<wsdl:part name="body"
+			element="mytypes:findInterfaceByOperationResponse">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="findOperationByMessagePartRequest">
+		<wsdl:part name="body"
+			element="mytypes:findOperationByMessagePartRequest">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="findOperationByMessagePartResponse">
+		<wsdl:part name="body"
+			element="mytypes:findOperationByMessagePartResponse">
+		</wsdl:part>
+	</wsdl:message>
+
+
+	<wsdl:portType name="WSDL">
+		<wsdl:operation name="addWSDLFileAdvert">
+			<wsdl:input message="tns:addWSDLFileAdvertRequest" />
+			<wsdl:output message="tns:addWSDLFileAdvertResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="addWSDLFile">
+			<wsdl:input message="tns:addWSDLFileRequest"></wsdl:input>
+			<wsdl:output message="tns:addWSDLFileResponse"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getWSDLAdvertContent">
+			<wsdl:input message="tns:getWSDLAdvertContentRequest"></wsdl:input>
+			<wsdl:output message="tns:getWSDLAdvertContentResponse"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getWSDLAdvertContentByURL">
+			<wsdl:input
+				message="tns:getWSDLAdvertContentByURLRequest">
+			</wsdl:input>
+			<wsdl:output
+				message="tns:getWSDLAdvertContentByURLResponse">
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="removeWSDLFile">
+			<wsdl:input message="tns:removeWSDLFileRequest"></wsdl:input>
+			<wsdl:output message="tns:removeWSDLFileResponse"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="findServicesByInterface">
+			<wsdl:input message="tns:findServicesByInterfaceRequest"></wsdl:input>
+			<wsdl:output
+				message="tns:findServicesByInterfaceResponse">
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getAllWSDLFiles">
+			<wsdl:input message="tns:getAllWSDLFilesRequest"></wsdl:input>
+			<wsdl:output message="tns:getAllWSDLFilesResponse"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getOperationsByURL">
+			<wsdl:input message="tns:getOperationsByURLRequest"></wsdl:input>
+			<wsdl:output message="tns:getOperationsByURLResponse"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getInputMessageOfOperation">
+			<wsdl:input
+				message="tns:getInputMessageOfOperationRequest">
+			</wsdl:input>
+			<wsdl:output
+				message="tns:getInputMessageOfOperationResponse">
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getOutputMessageOfOperation">
+			<wsdl:input
+				message="tns:getOutputMessageOfOperationRequest">
+			</wsdl:input>
+			<wsdl:output
+				message="tns:getOutputMessageOfOperationResponse">
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getFaultMessageOfOperation">
+			<wsdl:input
+				message="tns:getFaultMessageOfOperationRequest">
+			</wsdl:input>
+			<wsdl:output
+				message="tns:getFaultMessageOfOperationResponse">
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="findInterfaceByOperation">
+			<wsdl:input
+				message="tns:findInterfaceByOperationRequest">
+			</wsdl:input>
+			<wsdl:output
+				message="tns:findInterfaceByOperationResponse">
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="findOperationByMessagePart">
+			<wsdl:input
+				message="tns:findOperationByMessagePartRequest">
+			</wsdl:input>
+			<wsdl:output
+				message="tns:findOperationByMessagePartResponse">
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="wsdlSoapBinding" type="tns:WSDL">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="addWSDLFileAdvert">
+			<soap:operation
+				soapAction="http://www.grimoires.org/wsdl/addWSDLFileAdvert" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="addWSDLFile">
+			<soap:operation
+				soapAction="http://www.grimoires.org/wsdl/addWSDLFile" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getWSDLAdvertContent">
+			<soap:operation
+				soapAction="http://www.grimoires.org/wsdl/getWSDLAdvertContent" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getWSDLAdvertContentByURL">
+			<soap:operation
+				soapAction="http://www.grimoires.org/wsdl/getWSDLAdvertContentByURL" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="removeWSDLFile">
+			<soap:operation
+				soapAction="http://www.grimoires.org/wsdl/removeWSDLFile" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="findServicesByInterface">
+			<soap:operation
+				soapAction="http://www.grimoires.org/wsdl/findServicesByInterface" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getAllWSDLFiles">
+			<soap:operation
+				soapAction="http://www.grimoires.org/wsdl/getAllWSDLFiles" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getOperationsByURL">
+			<soap:operation
+				soapAction="http://www.grimoires.org/wsdl/getOperationsByURL" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getInputMessageOfOperation">
+			<soap:operation
+				soapAction="http://www.grimoires.org/wsdl/getInputMessageOfOperation" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getOutputMessageOfOperation">
+			<soap:operation
+				soapAction="http://www.grimoires.org/wsdl/getOutputMessageOfOperation" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getFaultMessageOfOperation">
+			<soap:operation
+				soapAction="http://www.grimoires.org/wsdl/getFaultMessageOfOperation" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="findInterfaceByOperation">
+			<soap:operation
+				soapAction="http://www.grimoires.org/wsdl/findInterfaceByOperation" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="findOperationByMessagePart">
+			<soap:operation
+				soapAction="http://www.grimoires.org/wsdl/findOperationByMessagePart" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="Grimoires">
+		<wsdl:port binding="tns:wsdlSoapBinding" name="wsdl">
+			<soap:address
+				location="http://localhost:8080/axis/services/wsdl" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+<!-- Configure how to translate an XML element representing a native    -->
+<!-- description, which may or may not be a service description, to an  -->
+<!-- XML element according to Grimoires' schema.						-->
+<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+<translatorConfiguration>
+	<!-- A set of translators for the GLUE schema -->
+	<!-- nativeSchemaID is uniqueID defined by users. Each corresponds to 
+		one application's native schema. -->
+	<translators nativeSchemaID="glue">
+		<!-- From native description to Grimoires description -->
+		<!-- elementNamespace and elementlocalname specify which XML element
+			will be applied with this translation. -->
+		<!-- Set validate="true" to enable schema validation on transformed
+			Grimoires element. -->
+		<n2gTranslator
+				elementNamespaceURI="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2"
+				elementLocalname="Site" 
+				validate="true">
+			<action type="saveBusiness" xsl="glue/toUDDIBusiness.xsl" />
+			<action type="saveMetadata" xsl="glue/toBusinessMetadata.xsl" />
+		</n2gTranslator>
+
+		<!-- From Grimoires description to native description -->
+		<g2nTranslator grimoiresElementID="service">
+			<action type="loadService" xsl="glue/fromUDDIService.xsl" />
+		</g2nTranslator>
+		
+		<g2nTranslator grimoiresElementID="business">
+			<action type="loadBusinessB" xsl="glue/fromUDDIBusiness.xsl" />
+			<action type="loadBusinessMetadataB" 
+				xsl="glue/fromBusinessMetadata.xsl" mergePoint="/" />
+		</g2nTranslator>
+	</translators>
+	
+	<!-- A set of translators for the Feta schema -->
+	<translators nativeSchemaID="feta">
+		<n2gTranslator
+				elementNamespaceURI="http://www.mygrid.org.uk/feta/"
+				elementLocalname="serviceDescription" 
+				validate="true">
+			<action type="saveBusiness" xsl="feta/toUDDIBusiness.xsl" />
+			<action type="saveService" xsl="feta/toUDDIService.xsl" />
+			<action type="saveTModel" xsl="feta/toUDDITModel.xsl" />
+			<action type="saveWSDL" xsl="feta/toWSDL.xsl" />
+			<action type="saveMetadata" xsl="feta/toServiceMetadata.xsl" />
+			<action type="saveMetadata" xsl="feta/toOperationMetadata.xsl" />
+			<action type="saveMetadata" xsl="feta/toMessagePartMetadata.xsl" />
+		</n2gTranslator>
+
+		<!-- From uddi:businessService -->
+		<!-- grimoiresElementID is currently either business (uddi:businessEntity) 
+			or service (uddi:businessService). It corresponds 
+			to one Grimoires data model element that could be transformed to
+			application schema element. -->
+		<g2nTranslator grimoiresElementID="service">
+			<!-- Process: generate corresponding native data models and combine them together
+				according to mountPoint, mergePoint and filter. 
+				<action type="type" xsl="xslt.xsl" mountPoint="mountPoint" /> 
+				<action type="type" xslt="xsl.xsl" mergePoint="mergePoint" /> 
+				<action type="type" xslt="xsl.xsl" mergePoint="mergePoint" filter="filter" /> 			 
+			-->
+			<!-- All the following actions are working on uddi service element. -->
+			<action type="loadService" xsl="feta/fromUDDIService.xsl" />
+			<action type="loadBusiness" xsl="feta/fromUDDIBusiness.xsl" 
+				mountPoint="/" />
+			<action type="loadWSDL" xsl="feta/fromWSDL.xsl" mountPoint="/" />
+			<action type="loadServiceMetadata" 
+				xsl="feta/fromServiceMetadata.xsl"
+				mergePoint="/" />
+			<action type="loadOperationMetadata" 
+				xsl="feta/fromOperationMetadata.xsl"
+				mergePoint="//*[local-name()='serviceOperation']" />
+			<action type="loadMessagePartMetadata"
+				xsl="feta/fromMessagePartMetadata.xsl"
+				mergePoint="//*[local-name()='parameter']"
+				filter="parameterName" />
+		</g2nTranslator>
+	</translators>
+	
+	<translators nativeSchemaID="uddi">
+		<n2gTranslator
+				elementNamespaceURI="urn:uddi-org:api_v2"
+				elementLocalname="businessEntity" 
+				validate="true">
+			<action type="saveBusiness" xsl="uddi/toUDDIBusiness.xsl" />
+		</n2gTranslator>
+		
+		<n2gTranslator
+				elementNamespaceURI="urn:uddi-org:api_v2"
+				elementLocalname="businessService" 
+				validate="true">
+			<action type="saveService" xsl="uddi/toUDDIService.xsl" />
+		</n2gTranslator>
+	</translators>
+</translatorConfiguration>

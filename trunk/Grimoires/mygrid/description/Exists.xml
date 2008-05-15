@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+	<serviceDescription>
+		<serviceName>SHoundExists</serviceName>
+		<organisation>
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundExists</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundExists?wsdl</interfaceWSDL>
+		<serviceDescriptionText>reports whether a given gi exists in the SeqHound database.</serviceDescriptionText>
+		<operations>
+			<serviceOperation>
+				<operationName>SHoundExists</operationName>
+				<operationInputs>
+					<parameter>
+						<parameterName>gi</parameterName>
+						<semanticType>file:/C:/descriptions/mygrid-services-lite.rdfs#GenBank_record</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs>
+					<parameter>
+						<parameterName>result</parameterName>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#retrieving</operationTask>
+				<operationResource>http://www.mygrid.org.uk/ontology#bioinformatics_database</operationResource>
+				<operationResourceContent>http://www.mygrid.org.uk/ontology#model_organism</operationResourceContent>
+				<operationMethod>http://www.mygrid.org.uk/ontology#bioinformatics_algorithm</operationMethod>
+				<operationApplication>http://www.mygrid.org.uk/ontology#bioinformatics_application</operationApplication>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

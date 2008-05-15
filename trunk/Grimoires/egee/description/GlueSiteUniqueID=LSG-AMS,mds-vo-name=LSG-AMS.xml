@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=LSG-AMS,mds-vo-name=LSG-AMS">
+    <Name>LSG-AMS</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:grid.support@sara.nl</UserSupportContact>
+    <SysAdminContact>mailto:grid.support@sara.nl</SysAdminContact>
+    <SecurityContact>mailto:grid.support@sara.nl</SecurityContact>
+    <Location>Amsterdam, The Netherlands</Location>
+    <Latitude>52.356269</Latitude>
+    <Longitude>4.953333</Longitude>
+    <Web>http://www.sara.nl</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-</OtherInfo>
+    <OtherInfo>SARA-MATRIX</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=gb-ce-ams.els.sara.nl,mds-vo-name=LSG-AMS">
+        <Name>gb-ce-ams.els.sara.nl</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=gb-ce-ams.els.sara.nl,GlueClusterUniqueID=gb-ce-ams.els.sara.nl,mds-vo-name=LSG-AMS">
+            <Name>gb-ce-ams.els.sara.nl</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.5" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Xeon" ClockSpeed="2793"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="2048"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1050" SF00="1025"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=gb-se-ams.els.sara.nl,mds-vo-name=LSG-AMS">
+        <InformationServiceURL>ldap://gb-se-ams.els.sara.nl:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>1390</SizeTotal>
+        <SizeFree>1310</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/els.sara.nl/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>541</UsedSpace>
+            <AvailableSpace>1310000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="pvier">
+            <Path>/dpm/els.sara.nl/home/pvier</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>5</UsedSpace>
+            <AvailableSpace>1310000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lsgrid">
+            <Path>/dpm/els.sara.nl/home/lsgrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>5005255</UsedSpace>
+            <AvailableSpace>1310000000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="tutor">
+            <Path>/dpm/els.sara.nl/home/tutor</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>1310000000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://gb-se-ams.els.sara.nl</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://gb-se-ams.els.sara.nl</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://gb-se-ams.els.sara.nl</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=gb-ce-ams.els.sara.nl:2136,mds-vo-name=LSG-AMS">
+        <Name>LSG-AMS-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://gb-ce-ams.els.sara.nl:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>pvier</Owner>
+        <Owner>lsgrid</Owner>
+        <Owner>tutor</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=gb-rb-ams.els.sara.nl:7772,mds-vo-name=LSG-AMS">
+        <Name>LSG-AMS-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>gb-rb-ams.els.sara.nl:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>pvier</Owner>
+        <Owner>lsgrid</Owner>
+        <Owner>tutor</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://gb-se-ams.els.sara.nl:8443/srm/managerv1,mds-vo-name=LSG-AMS">
+        <Name>LSG-AMS-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://gb-se-ams.els.sara.nl:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://gb-se-ams.els.sara.nl:8446/srm/managerv2,mds-vo-name=LSG-AMS">
+        <Name>LSG-AMS-srm</Name>
+        <Type>srm</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://gb-se-ams.els.sara.nl:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

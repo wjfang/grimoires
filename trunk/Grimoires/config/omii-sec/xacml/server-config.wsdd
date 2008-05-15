@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+ <globalConfiguration>
+  <parameter name="adminPassword" value="admin"/>
+  <parameter name="attachments.Directory" value="/usr/local/OMII/jakarta-tomcat-5.0.25/webapps/grimoires/WEB-INF/attachments"/>
+  <parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
+  <parameter name="sendXsiTypes" value="true"/>
+  <parameter name="sendMultiRefs" value="true"/>
+  <parameter name="sendXMLDeclaration" value="true"/>
+  <parameter name="enableNamespacePrefixOptimization" value="false"/>
+  <requestFlow>
+   <handler type="java:org.apache.axis.handlers.JWSHandler">
+    <parameter name="scope" value="session"/>
+   </handler>
+   <handler type="java:org.apache.axis.handlers.JWSHandler">
+    <parameter name="scope" value="request"/>
+    <parameter name="extension" value=".jwr"/>
+   </handler>
+  </requestFlow>
+ </globalConfiguration>
+ <handler name="ACLAuthHandler" type="java:uk.ac.soton.ecs.grimoires.server.security.AuthHandler"/>
+ <handler name="ServiceContextInitHandler" type="java:uk.ac.soton.itinnovation.grid.gridservit.axis.handlers.ServiceContextInitHandler"/>
+ <handler name="SecurityContextInitHandler" type="java:uk.ac.soton.itinnovation.grid.gridservit.wss4j.handler.SecurityContextInitHandler"/>
+ <handler name="LocalResponder" type="java:org.apache.axis.transport.local.LocalResponder"/>
+ <handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper"/>
+ <handler name="Authenticate" type="java:org.apache.axis.handlers.SimpleAuthenticationHandler"/>
+ <handler name="IntegrityEnforcementHandler" type="java:uk.ac.soton.itinnovation.grid.utils.wss4j.handler.WSOutboundHandler"/>
+ <service name="inquire" provider="java:RPC" style="document" use="literal">
+  <requestFlow>
+   <handler name="ServiceContextInitHandler" type="java:uk.ac.soton.itinnovation.grid.gridservit.axis.handlers.ServiceContextInitHandler">
+   </handler>
+   <handler name="SecurityContextInitHandler" type="java:uk.ac.soton.itinnovation.grid.gridservit.wss4j.handler.SecurityContextInitHandler">
+               <parameter name="action" value="Signature"/>
+               <parameter name="signaturePropFile" value="crypto.properties" />
+   </handler>
+   <handler name="ACLAuthHandler" type="java:uk.ac.soton.ecs.grimoires.server.security.AuthHandler">
+   </handler>
+  </requestFlow>
+  <responseFlow>
+  <handler name="IntegrityEnforcementHandler" type="java:uk.ac.soton.itinnovation.grid.utils.wss4j.handler.WSOutboundHandler">
+             <parameter name="action" value="Signature"/>
+             <parameter name="signaturePropFile" value="crypto.properties" />
+             <parameter name="signatureKeyIdentifier" value="DirectReference" />
+             <parameter name="passwordCallbackClass" value="uk.ac.soton.ecs.iam.grid.utils.PWCallback"/>
+             <parameter name="signatureParts" value="Body"/>
+   </handler>
+  </responseFlow>
+  <wsdlFile>inquire_v2.wsdl</wsdlFile>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="wsdlPortType" value="Inquire"/>
+  <parameter name="className" value="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.handlers.GrimoiresUDDIv2InquireSkeleton"/>
+  <parameter name="wsdlServicePort" value="inquire"/>
+  <parameter name="wsdlTargetNamespace" value="urn:uddi-org:inquiry_v2"/>
+  <parameter name="sendXsiTypes" value="false"/>
+  <parameter name="sendMultiRefs" value="false"/>
+  <parameter name="wsdlServiceElement" value="Grimoires"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns1:relatedBusinessesList" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.RelatedBusinessesList" xmlns:ns1="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns2:get_serviceDetail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Get_serviceDetail" xmlns:ns2="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns3:tModelKey" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:java.lang.String" xmlns:ns3="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns4:find_service" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Find_service" xmlns:ns4="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns5:bindingTemplate" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BindingTemplate" xmlns:ns5="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns6:categoryBag" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.CategoryBag" xmlns:ns6="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns7:save_business" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Save_business" xmlns:ns7="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.EnumDeserializerFactory" encodingStyle="" qname="ns8:truncated" serializer="org.apache.axis.encoding.ser.EnumSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Truncated" xmlns:ns8="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns9:save_service" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Save_service" xmlns:ns9="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns10:identifierBag" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.IdentifierBag" xmlns:ns10="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns11:validate_values" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Validate_values" xmlns:ns11="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns12:contacts" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Contacts" xmlns:ns12="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns13:contact" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Contact" xmlns:ns13="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns14:businessEntityExt" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BusinessEntityExt" xmlns:ns14="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns15:phone" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Phone" xmlns:ns15="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns16:get_businessDetailExt" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Get_businessDetailExt" xmlns:ns16="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns17:get_assertionStatusReport" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Get_assertionStatusReport" xmlns:ns17="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns18:tModelDetail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.TModelDetail" xmlns:ns18="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns19:bindingDetail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BindingDetail" xmlns:ns19="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns20:set_publisherAssertions" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Set_publisherAssertions" xmlns:ns20="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns21:accessPoint" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.AccessPoint" xmlns:ns21="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns22:get_authToken" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Get_authToken" xmlns:ns22="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns23:hostingRedirector" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.HostingRedirector" xmlns:ns23="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns24:sharedRelationships" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.SharedRelationships" xmlns:ns24="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns25:address" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Address" xmlns:ns25="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns26:find_business" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Find_business" xmlns:ns26="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns27:businessList" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BusinessList" xmlns:ns27="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns28:find_tModel" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Find_tModel" xmlns:ns28="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns29:serviceInfos" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.ServiceInfos" xmlns:ns29="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns30:serviceKey" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:java.lang.String" xmlns:ns30="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns31:businessDetailExt" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BusinessDetailExt" xmlns:ns31="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns32:dispositionReport" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.DispositionReport" xmlns:ns32="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns33:relatedBusinessInfo" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.RelatedBusinessInfo" xmlns:ns33="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns34:find_binding" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Find_binding" xmlns:ns34="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns35:serviceList" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.ServiceList" xmlns:ns35="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns36:publisherAssertion" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.PublisherAssertion" xmlns:ns36="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns37:authToken" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.AuthToken" xmlns:ns37="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns38:delete_service" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Delete_service" xmlns:ns38="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns39:findQualifiers" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.FindQualifiers" xmlns:ns39="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns40:businessService" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BusinessService" xmlns:ns40="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns41:discoveryURLs" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.DiscoveryURLs" xmlns:ns41="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns42:discard_authToken" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Discard_authToken" xmlns:ns42="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns43:delete_binding" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Delete_binding" xmlns:ns43="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns44:tModel" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.TModel" xmlns:ns44="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns45:tModelInfos" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.TModelInfos" xmlns:ns45="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns46:businessServices" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BusinessServices" xmlns:ns46="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns47:result" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Result" xmlns:ns47="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns48:get_businessDetail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Get_businessDetail" xmlns:ns48="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns49:add_publisherAssertions" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Add_publisherAssertions" xmlns:ns49="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns50:get_bindingDetail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Get_bindingDetail" xmlns:ns50="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns51:tModelInstanceDetails" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.TModelInstanceDetails" xmlns:ns51="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns52:tModelBag" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.TModelBag" xmlns:ns52="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns53:tModelList" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.TModelList" xmlns:ns53="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns54:keysOwned" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.KeysOwned" xmlns:ns54="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns55:delete_business" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Delete_business" xmlns:ns55="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns56:assertionStatusReport" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.AssertionStatusReport" xmlns:ns56="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns57:delete_tModel" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Delete_tModel" xmlns:ns57="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns58:bindingTemplates" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BindingTemplates" xmlns:ns58="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns59:keyedReference" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.KeyedReference" xmlns:ns59="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns60:tModelInstanceInfo" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.TModelInstanceInfo" xmlns:ns60="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns61:businessEntity" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BusinessEntity" xmlns:ns61="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns62:email" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Email" xmlns:ns62="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns63:publisherAssertions" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.PublisherAssertions" xmlns:ns63="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.EnumDeserializerFactory" encodingStyle="" qname="ns64:URLType" serializer="org.apache.axis.encoding.ser.EnumSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.URLType" xmlns:ns64="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns65:get_publisherAssertions" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Get_publisherAssertions" xmlns:ns65="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.EnumDeserializerFactory" encodingStyle="" qname="ns66:direction" serializer="org.apache.axis.encoding.ser.EnumSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Direction" xmlns:ns66="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns67:description" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Description" xmlns:ns67="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns68:find_relatedBusinesses" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Find_relatedBusinesses" xmlns:ns68="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns69:serviceInfo" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.ServiceInfo" xmlns:ns69="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns70:businessDetail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BusinessDetail" xmlns:ns70="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns71:addressLine" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.AddressLine" xmlns:ns71="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns72:save_tModel" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Save_tModel" xmlns:ns72="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns73:get_registeredInfo" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Get_registeredInfo" xmlns:ns73="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns74:get_tModelDetail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Get_tModelDetail" xmlns:ns74="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns75:businessInfo" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BusinessInfo" xmlns:ns75="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns76:name" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Name" xmlns:ns76="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns77:bindingKey" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:java.lang.String" xmlns:ns77="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns78:delete_publisherAssertions" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Delete_publisherAssertions" xmlns:ns78="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns79:businessInfos" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BusinessInfos" xmlns:ns79="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns80:discoveryURL" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.DiscoveryURL" xmlns:ns80="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns81:tModelInfo" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.TModelInfo" xmlns:ns81="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns82:relatedBusinessInfos" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.RelatedBusinessInfos" xmlns:ns82="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.EnumDeserializerFactory" encodingStyle="" qname="ns83:keyType" serializer="org.apache.axis.encoding.ser.EnumSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.KeyType" xmlns:ns83="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns84:serviceDetail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.ServiceDetail" xmlns:ns84="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns85:instanceDetails" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.InstanceDetails" xmlns:ns85="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns86:overviewDoc" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.OverviewDoc" xmlns:ns86="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns87:save_binding" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Save_binding" xmlns:ns87="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns88:businessKey" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:java.lang.String" xmlns:ns88="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns89:registeredInfo" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.RegisteredInfo" xmlns:ns89="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns90:assertionStatusItem" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.AssertionStatusItem" xmlns:ns90="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns91:errInfo" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.ErrInfo" xmlns:ns91="urn:uddi-org:api_v2"/>
+ </service>
+ <service name="AdminService" provider="java:MSG">
+  <parameter name="allowedMethods" value="AdminService"/>
+  <parameter name="enableRemoteAdmin" value="false"/>
+  <parameter name="className" value="org.apache.axis.utils.Admin"/>
+  <namespace>http://xml.apache.org/axis/wsdd/</namespace>
+ </service>
+ <service name="Version" provider="java:RPC">
+  <parameter name="allowedMethods" value="getVersion"/>
+  <parameter name="className" value="org.apache.axis.Version"/>
+ </service>
+ <service name="inquire_uddiMetadata" provider="java:RPC" style="document" use="literal">
+ <wsdlFile>inquire_uddiMetadata.wsdl</wsdlFile>
+  <requestFlow>
+   <handler name="ServiceContextInitHandler" type="java:uk.ac.soton.itinnovation.grid.gridservit.axis.handlers.ServiceContextInitHandler">
+   </handler>
+   <handler name="SecurityContextInitHandler" type="java:uk.ac.soton.itinnovation.grid.gridservit.wss4j.handler.SecurityContextInitHandler">
+               <parameter name="action" value="Signature"/>
+               <parameter name="signaturePropFile" value="crypto.properties" />
+   </handler>
+   <handler name="ACLAuthHandler" type="java:uk.ac.soton.ecs.grimoires.server.security.AuthHandler">
+   </handler>
+  </requestFlow>
+  <responseFlow>
+  <handler name="IntegrityEnforcementHandler" type="java:uk.ac.soton.itinnovation.grid.utils.wss4j.handler.WSOutboundHandler">
+             <parameter name="action" value="Signature"/>
+             <parameter name="signaturePropFile" value="crypto.properties" />
+             <parameter name="signatureKeyIdentifier" value="DirectReference" />
+             <parameter name="passwordCallbackClass" value="uk.ac.soton.ecs.iam.grid.utils.PWCallback"/>
+             <parameter name="signatureParts" value="Body"/>
+   </handler>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="wsdlPortType" value="InquireUddiMetadataPort"/>
+  <parameter name="className" value="uk.ac.soton.ecs.grimoires.server.impl.metadata.handlers.GrimoiresInquireUddiMetadataSoapSkeleton"/>
+  <parameter name="wsdlServicePort" value="inquire_uddiMetadata"/>
+  <parameter name="wsdlTargetNamespace" value="http://www.grimoires.org/inquire_uddiMetadata.wsdl"/>
+  <parameter name="sendXsiTypes" value="false"/>
+  <parameter name="sendMultiRefs" value="false"/>
+  <parameter name="wsdlServiceElement" value="Grimoires"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns92:tModelKey" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:java.lang.String" xmlns:ns92="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns93:categoryBag" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.CategoryBag" xmlns:ns93="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.EnumDeserializerFactory" encodingStyle="" qname="ns94:truncated" serializer="org.apache.axis.encoding.ser.EnumSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Truncated" xmlns:ns94="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns95:MetadataQueryBag" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MetadataQueryBag" xmlns:ns95="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns96:serviceList" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.ServiceList" xmlns:ns96="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns97:tModelBag" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.TModelBag" xmlns:ns97="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns98:findQualifiers" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.FindQualifiers" xmlns:ns98="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns99:MetadataQuery" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MetadataQuery" xmlns:ns99="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns100:MetadataValue" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MetadataValue" xmlns:ns100="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns101:TriplesAssertion" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.TriplesAssertion" xmlns:ns101="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns102:serviceInfos" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.ServiceInfos" xmlns:ns102="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns103:serviceKey" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:java.lang.String" xmlns:ns103="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns104:Find_service" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.Find_service" xmlns:ns104="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns105:FaultDetailList" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.FaultDetailList" xmlns:ns105="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns106:keyedReference" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.KeyedReference" xmlns:ns106="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns107:serviceInfo" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.ServiceInfo" xmlns:ns107="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns108:MetadataType" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:org.apache.axis.types.URI" xmlns:ns108="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns109:name" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Name" xmlns:ns109="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns110:FaultDetail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.FaultDetail" xmlns:ns110="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns111:businessKey" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:java.lang.String" xmlns:ns111="urn:uddi-org:api_v2"/>
+ </service>
+ <service name="inquire_metadata" provider="java:RPC" style="document" use="literal">
+  <requestFlow>
+   <handler name="ServiceContextInitHandler" type="java:uk.ac.soton.itinnovation.grid.gridservit.axis.handlers.ServiceContextInitHandler">
+   </handler>
+   <handler name="SecurityContextInitHandler" type="java:uk.ac.soton.itinnovation.grid.gridservit.wss4j.handler.SecurityContextInitHandler">
+               <parameter name="action" value="Signature"/>
+               <parameter name="signaturePropFile" value="crypto.properties" />
+   </handler>
+   <handler name="ACLAuthHandler" type="java:uk.ac.soton.ecs.grimoires.server.security.AuthHandler">
+   </handler>
+  </requestFlow>
+  <responseFlow>
+  <handler name="IntegrityEnforcementHandler" type="java:uk.ac.soton.itinnovation.grid.utils.wss4j.handler.WSOutboundHandler">
+             <parameter name="action" value="Signature"/>
+             <parameter name="signaturePropFile" value="crypto.properties" />
+             <parameter name="signatureKeyIdentifier" value="DirectReference" />
+             <parameter name="passwordCallbackClass" value="uk.ac.soton.ecs.iam.grid.utils.PWCallback"/>
+             <parameter name="signatureParts" value="Body"/>
+   </handler>
+  </responseFlow>
+  <wsdlFile>inquire_metadata.wsdl</wsdlFile>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="wsdlPortType" value="InquireMetadataPort"/>
+  <parameter name="className" value="uk.ac.soton.ecs.grimoires.server.impl.metadata.handlers.GrimoiresInquireMetadataSoapSkeleton"/>
+  <parameter name="wsdlServicePort" value="inquire_metadata"/>
+  <parameter name="wsdlTargetNamespace" value="http://www.grimoires.org/inquire_metadata.wsdl"/>
+  <parameter name="sendXsiTypes" value="false"/>
+  <parameter name="sendMultiRefs" value="false"/>
+  <parameter name="wsdlServiceElement" value="Grimoires"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns112:Find_entityByMetadata" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.Find_entityByMetadata" xmlns:ns112="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns113:MetadataQueryBag" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MetadataQueryBag" xmlns:ns113="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns114:findQualifiers" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.FindQualifiers" xmlns:ns114="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns115:Get_metadataDetail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.Get_metadataDetail" xmlns:ns115="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns116:uriBag" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.UriBag" xmlns:ns116="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns117:MetadataQuery" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MetadataQuery" xmlns:ns117="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns118:Get_entityMetadata" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.Get_entityMetadata" xmlns:ns118="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns119:MetadataValue" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MetadataValue" xmlns:ns119="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns120:EntityReference" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.EntityReference" xmlns:ns120="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns121:MessagePartReference" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MessagePartReference" xmlns:ns121="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns122:TriplesAssertion" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.TriplesAssertion" xmlns:ns122="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns123:MetadataInfos" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MetadataInfos" xmlns:ns123="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns124:EntityReferenceList" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.EntityReferenceList" xmlns:ns124="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns125:FaultDetailList" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.FaultDetailList" xmlns:ns125="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns126:MetadataKey" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:java.lang.String" xmlns:ns126="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns127:OperationReference" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.OperationReference" xmlns:ns127="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns128:Get_supportedEntityType" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.Get_supportedEntityType" xmlns:ns128="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns129:MetadataType" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:org.apache.axis.types.URI" xmlns:ns129="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns130:FaultDetail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.FaultDetail" xmlns:ns130="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns131:MetadataInfo" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MetadataInfo" xmlns:ns131="http://www.grimoires.org/metadata.xsd"/>
+ </service>
+ <service name="wsdl" provider="java:RPC" style="document" use="literal">
+  <requestFlow>
+   <handler name="ServiceContextInitHandler" type="java:uk.ac.soton.itinnovation.grid.gridservit.axis.handlers.ServiceContextInitHandler">
+   </handler>
+   <handler name="SecurityContextInitHandler" type="java:uk.ac.soton.itinnovation.grid.gridservit.wss4j.handler.SecurityContextInitHandler">
+               <parameter name="action" value="Signature"/>
+               <parameter name="signaturePropFile" value="crypto.properties" />
+   </handler>
+   <handler name="ACLAuthHandler" type="java:uk.ac.soton.ecs.grimoires.server.security.AuthHandler">
+   </handler>
+  </requestFlow>
+  <responseFlow>
+  <handler name="IntegrityEnforcementHandler" type="java:uk.ac.soton.itinnovation.grid.utils.wss4j.handler.WSOutboundHandler">
+             <parameter name="action" value="Signature"/>
+             <parameter name="signaturePropFile" value="crypto.properties" />
+             <parameter name="signatureKeyIdentifier" value="DirectReference" />
+             <parameter name="passwordCallbackClass" value="uk.ac.soton.ecs.iam.grid.utils.PWCallback"/>
+             <parameter name="signatureParts" value="Body"/>
+   </handler>
+  </responseFlow>
+  	  <wsdlFile>wsdl.wsdl</wsdlFile>
+      <parameter name="wsdlTargetNamespace" value="http:/www.grimoires.org/wsdl"/>
+      <parameter name="wsdlServiceElement" value="Grimoires"/>
+      <parameter name="wsdlServicePort" value="wsdl"/>
+      <parameter name="className" value="uk.ac.soton.ecs.grimoires.server.impl.wsdl.handlers.GrimoiresWSDLSkeleton"/>
+      <parameter name="wsdlPortType" value="WSDL"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+
+      <typeMapping
+        xmlns:ns="http:/www.grimoires.org/wsdl/type"
+        qname="ns:getAllWSDLFilesResponse"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.wsdl.autogen.GetAllWSDLFilesResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http:/www.grimoires.org/wsdl/type"
+        qname="ns:messagePartDetail"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.wsdl.autogen.MessagePartDetail"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http:/www.grimoires.org/wsdl/type"
+        qname="ns:messageDetail"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.wsdl.autogen.MessageDetail"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http:/www.grimoires.org/wsdl/type"
+        qname="ns:findServicesByInterfaceResponse"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.wsdl.autogen.FindServicesByInterfaceResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http:/www.grimoires.org/wsdl/type"
+        qname="ns:getOperationsByURLResponse"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.wsdl.autogen.GetOperationsByURLResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http:/www.grimoires.org/wsdl/type"
+        qname="ns:getAllWSDLFilesRequest"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.wsdl.autogen.GetAllWSDLFilesRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http:/www.grimoires.org/wsdl/type"
+        qname="ns:addWSDLFileAdvertRequest"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.wsdl.autogen.AddWSDLFileAdvertRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http:/www.grimoires.org/wsdl/type"
+        qname="ns:partsName"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.wsdl.autogen.PartsName"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http:/www.grimoires.org/wsdl/type"
+        qname="ns:operationDetail"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.wsdl.autogen.OperationDetail"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      /> 
+ </service>
+ <service name="inquire_wsdlMetadata" provider="java:RPC" style="document" use="literal">
+  <wsdlFile>inquire_wsdlMetadata.wsdl</wsdlFile> 
+  <requestFlow>
+   <handler name="ServiceContextInitHandler" type="java:uk.ac.soton.itinnovation.grid.gridservit.axis.handlers.ServiceContextInitHandler">
+   </handler>
+   <handler name="SecurityContextInitHandler" type="java:uk.ac.soton.itinnovation.grid.gridservit.wss4j.handler.SecurityContextInitHandler">
+               <parameter name="action" value="Signature"/>
+               <parameter name="signaturePropFile" value="crypto.properties" />
+   </handler>
+   <handler name="ACLAuthHandler" type="java:uk.ac.soton.ecs.grimoires.server.security.AuthHandler">
+   </handler>
+  </requestFlow>
+  <responseFlow>
+  <handler name="IntegrityEnforcementHandler" type="java:uk.ac.soton.itinnovation.grid.utils.wss4j.handler.WSOutboundHandler">
+             <parameter name="action" value="Signature"/>
+             <parameter name="signaturePropFile" value="crypto.properties" />
+             <parameter name="signatureKeyIdentifier" value="DirectReference" />
+             <parameter name="passwordCallbackClass" value="uk.ac.soton.ecs.iam.grid.utils.PWCallback"/>
+             <parameter name="signatureParts" value="Body"/>
+   </handler>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="wsdlPortType" value="InquireWsdlMetadataPort"/>
+  <parameter name="className" value="uk.ac.soton.ecs.grimoires.server.impl.metadata.handlers.GrimoiresInquireWsdlMetadataSoapSkeleton"/>
+  <parameter name="wsdlServicePort" value="inquire_wsdlMetadata"/>
+  <parameter name="wsdlTargetNamespace" value="http://www.grimoires.org/inquire_wsdlMetadata.wsdl"/>
+  <parameter name="sendXsiTypes" value="false"/>
+  <parameter name="sendMultiRefs" value="false"/>
+  <parameter name="wsdlServiceElement" value="Grimoires"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns136:MetadataQueryBag" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MetadataQueryBag" xmlns:ns136="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns137:Find_operation" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.Find_operation" xmlns:ns137="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns138:OperationReferenceList" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.OperationReferenceList" xmlns:ns138="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns139:findQualifiers" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.FindQualifiers" xmlns:ns139="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns140:Find_interfaceByMessagePartMetadata" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.Find_interfaceByMessagePartMetadata" xmlns:ns140="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns141:uriBag" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.UriBag" xmlns:ns141="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns142:MetadataQuery" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MetadataQuery" xmlns:ns142="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns143:MetadataValue" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MetadataValue" xmlns:ns143="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns144:EntityReference" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.EntityReference" xmlns:ns144="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns145:MessagePartReference" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MessagePartReference" xmlns:ns145="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns146:TriplesAssertion" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.TriplesAssertion" xmlns:ns146="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns147:Find_interfaceByOperationMetadata" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.Find_interfaceByOperationMetadata" xmlns:ns147="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns148:FaultDetailList" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.FaultDetailList" xmlns:ns148="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns149:MessagePartMetadataQueryBag" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MessagePartMetadataQueryBag" xmlns:ns149="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns150:MetadataKey" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:java.lang.String" xmlns:ns150="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns151:OperationMetadataQueryBag" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.OperationMetadataQueryBag" xmlns:ns151="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns152:OperationReference" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.OperationReference" xmlns:ns152="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns153:MetadataType" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:org.apache.axis.types.URI" xmlns:ns153="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns154:FaultDetail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.FaultDetail" xmlns:ns154="http://www.grimoires.org/metadata.xsd"/>
+ </service>
+ <service name="publish_metadata" provider="java:RPC" style="document" use="literal">
+ <wsdlFile>publish_metadata.wsdl</wsdlFile> 
+  <requestFlow>
+   <handler name="ServiceContextInitHandler" type="java:uk.ac.soton.itinnovation.grid.gridservit.axis.handlers.ServiceContextInitHandler">
+   </handler>
+   <handler name="SecurityContextInitHandler" type="java:uk.ac.soton.itinnovation.grid.gridservit.wss4j.handler.SecurityContextInitHandler">
+               <parameter name="action" value="Signature"/>
+               <parameter name="signaturePropFile" value="crypto.properties" />
+   </handler>
+   <handler name="ACLAuthHandler" type="java:uk.ac.soton.ecs.grimoires.server.security.AuthHandler">
+   </handler>
+  </requestFlow>
+  <responseFlow>
+  <handler name="IntegrityEnforcementHandler" type="java:uk.ac.soton.itinnovation.grid.utils.wss4j.handler.WSOutboundHandler">
+             <parameter name="action" value="Signature"/>
+             <parameter name="signaturePropFile" value="crypto.properties" />
+             <parameter name="signatureKeyIdentifier" value="DirectReference" />
+             <parameter name="passwordCallbackClass" value="uk.ac.soton.ecs.iam.grid.utils.PWCallback"/>
+             <parameter name="signatureParts" value="Body"/>
+   </handler>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="wsdlPortType" value="PublishMetadataPort"/>
+  <parameter name="className" value="uk.ac.soton.ecs.grimoires.server.impl.metadata.handlers.GrimoiresPublishMetadataSoapSkeleton"/>
+  <parameter name="wsdlServicePort" value="publish_metadata"/>
+  <parameter name="wsdlTargetNamespace" value="http://www.grimoires.org/publish_metadata.wsdl"/>
+  <parameter name="sendXsiTypes" value="false"/>
+  <parameter name="sendMultiRefs" value="false"/>
+  <parameter name="wsdlServiceElement" value="Grimoires"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns155:AddMetadataToEntity" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.AddMetadataToEntity" xmlns:ns155="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns156:DeleteMetadata" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.DeleteMetadata" xmlns:ns156="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns157:MetadataValue" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MetadataValue" xmlns:ns157="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns158:Metadata" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.Metadata" xmlns:ns158="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns159:EntityReference" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.EntityReference" xmlns:ns159="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns160:MessagePartReference" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MessagePartReference" xmlns:ns160="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns161:TriplesAssertion" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.TriplesAssertion" xmlns:ns161="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns162:FaultDetailList" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.FaultDetailList" xmlns:ns162="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns163:MetadataKey" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:java.lang.String" xmlns:ns163="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns164:OperationReference" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.OperationReference" xmlns:ns164="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns165:MetadataType" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:org.apache.axis.types.URI" xmlns:ns165="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns166:FaultDetail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.FaultDetail" xmlns:ns166="http://www.grimoires.org/metadata.xsd"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns167:MetadataInfo" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.metadata.datamodel.MetadataInfo" xmlns:ns167="http://www.grimoires.org/metadata.xsd"/>
+ </service>
+ <service name="publish" provider="java:RPC" style="document" use="literal">
+ <wsdlFile>publish_v2.wsdl</wsdlFile> 
+  <requestFlow>
+   <handler name="ServiceContextInitHandler" type="java:uk.ac.soton.itinnovation.grid.gridservit.axis.handlers.ServiceContextInitHandler">
+   </handler>
+   <handler name="SecurityContextInitHandler" type="java:uk.ac.soton.itinnovation.grid.gridservit.wss4j.handler.SecurityContextInitHandler">
+               <parameter name="action" value="Signature"/>
+               <parameter name="signaturePropFile" value="crypto.properties" />
+   </handler>
+   <handler name="ACLAuthHandler" type="java:uk.ac.soton.ecs.grimoires.server.security.AuthHandler">
+   </handler>
+  </requestFlow>
+  <responseFlow>
+  <handler name="IntegrityEnforcementHandler" type="java:uk.ac.soton.itinnovation.grid.utils.wss4j.handler.WSOutboundHandler">
+             <parameter name="action" value="Signature"/>
+             <parameter name="signaturePropFile" value="crypto.properties" />
+             <parameter name="signatureKeyIdentifier" value="DirectReference" />
+             <parameter name="passwordCallbackClass" value="uk.ac.soton.ecs.iam.grid.utils.PWCallback"/>
+             <parameter name="signatureParts" value="Body"/>
+   </handler>
+  </responseFlow>
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="wsdlPortType" value="Publish"/>
+  <parameter name="className" value="uk.ac.soton.ecs.grimoires.server.impl.uddiv2.handlers.GrimoiresUDDIv2PublishSkeleton"/>
+  <parameter name="wsdlServicePort" value="publish"/>
+  <parameter name="wsdlTargetNamespace" value="urn:uddi-org:publication_v2"/>
+  <parameter name="sendXsiTypes" value="false"/>
+  <parameter name="sendMultiRefs" value="false"/>
+  <parameter name="wsdlServiceElement" value="Grimoires"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns168:relatedBusinessesList" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.RelatedBusinessesList" xmlns:ns168="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns169:get_serviceDetail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Get_serviceDetail" xmlns:ns169="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns170:tModelKey" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:java.lang.String" xmlns:ns170="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns171:find_service" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Find_service" xmlns:ns171="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns172:bindingTemplate" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BindingTemplate" xmlns:ns172="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns173:categoryBag" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.CategoryBag" xmlns:ns173="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns174:save_business" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Save_business" xmlns:ns174="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.EnumDeserializerFactory" encodingStyle="" qname="ns175:truncated" serializer="org.apache.axis.encoding.ser.EnumSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Truncated" xmlns:ns175="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns176:save_service" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Save_service" xmlns:ns176="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns177:identifierBag" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.IdentifierBag" xmlns:ns177="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns178:validate_values" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Validate_values" xmlns:ns178="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns179:contacts" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Contacts" xmlns:ns179="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns180:contact" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Contact" xmlns:ns180="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns181:businessEntityExt" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BusinessEntityExt" xmlns:ns181="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns182:phone" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Phone" xmlns:ns182="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns183:get_businessDetailExt" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Get_businessDetailExt" xmlns:ns183="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns184:get_assertionStatusReport" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Get_assertionStatusReport" xmlns:ns184="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns185:tModelDetail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.TModelDetail" xmlns:ns185="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns186:bindingDetail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BindingDetail" xmlns:ns186="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns187:set_publisherAssertions" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Set_publisherAssertions" xmlns:ns187="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns188:accessPoint" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.AccessPoint" xmlns:ns188="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns189:get_authToken" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Get_authToken" xmlns:ns189="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns190:hostingRedirector" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.HostingRedirector" xmlns:ns190="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns191:sharedRelationships" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.SharedRelationships" xmlns:ns191="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns192:address" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Address" xmlns:ns192="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns193:find_business" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Find_business" xmlns:ns193="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns194:businessList" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BusinessList" xmlns:ns194="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns195:find_tModel" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Find_tModel" xmlns:ns195="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns196:serviceInfos" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.ServiceInfos" xmlns:ns196="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns197:serviceKey" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:java.lang.String" xmlns:ns197="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns198:businessDetailExt" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BusinessDetailExt" xmlns:ns198="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns199:dispositionReport" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.DispositionReport" xmlns:ns199="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns200:relatedBusinessInfo" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.RelatedBusinessInfo" xmlns:ns200="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns201:find_binding" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Find_binding" xmlns:ns201="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns202:serviceList" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.ServiceList" xmlns:ns202="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns203:publisherAssertion" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.PublisherAssertion" xmlns:ns203="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns204:authToken" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.AuthToken" xmlns:ns204="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns205:delete_service" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Delete_service" xmlns:ns205="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns206:findQualifiers" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.FindQualifiers" xmlns:ns206="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns207:businessService" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BusinessService" xmlns:ns207="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns208:discoveryURLs" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.DiscoveryURLs" xmlns:ns208="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns209:discard_authToken" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Discard_authToken" xmlns:ns209="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns210:delete_binding" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Delete_binding" xmlns:ns210="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns211:tModel" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.TModel" xmlns:ns211="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns212:tModelInfos" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.TModelInfos" xmlns:ns212="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns213:businessServices" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BusinessServices" xmlns:ns213="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns214:result" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Result" xmlns:ns214="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns215:get_businessDetail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Get_businessDetail" xmlns:ns215="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns216:add_publisherAssertions" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Add_publisherAssertions" xmlns:ns216="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns217:get_bindingDetail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Get_bindingDetail" xmlns:ns217="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns218:tModelInstanceDetails" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.TModelInstanceDetails" xmlns:ns218="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns219:tModelBag" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.TModelBag" xmlns:ns219="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns220:tModelList" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.TModelList" xmlns:ns220="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns221:keysOwned" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.KeysOwned" xmlns:ns221="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns222:delete_business" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Delete_business" xmlns:ns222="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns223:assertionStatusReport" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.AssertionStatusReport" xmlns:ns223="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns224:delete_tModel" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Delete_tModel" xmlns:ns224="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns225:bindingTemplates" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BindingTemplates" xmlns:ns225="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns226:keyedReference" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.KeyedReference" xmlns:ns226="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns227:tModelInstanceInfo" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.TModelInstanceInfo" xmlns:ns227="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns228:businessEntity" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BusinessEntity" xmlns:ns228="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns229:email" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Email" xmlns:ns229="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns230:publisherAssertions" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.PublisherAssertions" xmlns:ns230="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.EnumDeserializerFactory" encodingStyle="" qname="ns231:URLType" serializer="org.apache.axis.encoding.ser.EnumSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.URLType" xmlns:ns231="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns232:get_publisherAssertions" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Get_publisherAssertions" xmlns:ns232="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.EnumDeserializerFactory" encodingStyle="" qname="ns233:direction" serializer="org.apache.axis.encoding.ser.EnumSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Direction" xmlns:ns233="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns234:description" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Description" xmlns:ns234="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns235:find_relatedBusinesses" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Find_relatedBusinesses" xmlns:ns235="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns236:serviceInfo" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.ServiceInfo" xmlns:ns236="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns237:businessDetail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BusinessDetail" xmlns:ns237="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns238:addressLine" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.AddressLine" xmlns:ns238="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns239:save_tModel" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Save_tModel" xmlns:ns239="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns240:get_registeredInfo" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Get_registeredInfo" xmlns:ns240="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns241:get_tModelDetail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Get_tModelDetail" xmlns:ns241="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns242:businessInfo" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BusinessInfo" xmlns:ns242="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns243:name" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Name" xmlns:ns243="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns244:bindingKey" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:java.lang.String" xmlns:ns244="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns245:delete_publisherAssertions" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Delete_publisherAssertions" xmlns:ns245="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns246:businessInfos" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.BusinessInfos" xmlns:ns246="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns247:discoveryURL" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.DiscoveryURL" xmlns:ns247="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns248:tModelInfo" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.TModelInfo" xmlns:ns248="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns249:relatedBusinessInfos" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.RelatedBusinessInfos" xmlns:ns249="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.EnumDeserializerFactory" encodingStyle="" qname="ns250:keyType" serializer="org.apache.axis.encoding.ser.EnumSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.KeyType" xmlns:ns250="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns251:serviceDetail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.ServiceDetail" xmlns:ns251="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns252:instanceDetails" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.InstanceDetails" xmlns:ns252="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns253:overviewDoc" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.OverviewDoc" xmlns:ns253="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns254:save_binding" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.Save_binding" xmlns:ns254="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns255:businessKey" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:java.lang.String" xmlns:ns255="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns256:registeredInfo" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.RegisteredInfo" xmlns:ns256="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns257:assertionStatusItem" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.AssertionStatusItem" xmlns:ns257="urn:uddi-org:api_v2"/>
+  <typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory" encodingStyle="" qname="ns258:errInfo" serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory" type="java:uk.ac.soton.ecs.grimoires.server.impl.uddiv2.datamodel.ErrInfo" xmlns:ns258="urn:uddi-org:api_v2"/>
+ </service>
+ 
+   <service name="rdf" provider="java:RPC" style="document" use="literal">
+  	  <wsdlFile>rdf.wsdl</wsdlFile>  
+      <parameter name="wsdlTargetNamespace" value="http://www.grimoires.org/rdf"/>
+      <parameter name="wsdlServiceElement" value="Grimoires"/>
+      <parameter name="wsdlServicePort" value="rdfSOAP"/>
+      <parameter name="className" value="uk.ac.soton.ecs.grimoires.server.impl.rdf.RdfSOAPSkeleton"/>
+      <parameter name="wsdlPortType" value="RDF"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/rdf"
+        qname="ns:inquireRequest"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.rdf.InquireRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/rdf"
+        qname="ns:record"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.rdf.Record"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/rdf"
+        qname="ns:inquireResponse"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.rdf.InquireResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+
+  <service name="xmlview" provider="java:RPC" style="document" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://www.grimoires.org/xmlview/"/>
+      <parameter name="wsdlServiceElement" value="XMLViewService"/>
+      <parameter name="wsdlServicePort" value="XMLViewSOAPBinding"/>
+      <parameter name="className" value="uk.ac.soton.ecs.grimoires.server.impl.xmlview.impl.XMLViewSkeleton"/>
+      <parameter name="wsdlPortType" value="XMLViewPortType"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/xmlview/"
+        qname="ns:>PublishResponse"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.xmlview.stub.PublishResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/xmlview/"
+        qname="ns:>QueryResponse"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.xmlview.stub.QueryResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/xmlview/"
+        qname="ns:XMLViewFaultType"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.xmlview.stub.XMLViewFaultType"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/xmlview/"
+        qname="ns:>DeleteRequest"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.xmlview.stub.DeleteRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/xmlview/"
+        qname="ns:>FindServiceResponse"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.xmlview.stub.FindServiceResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/xmlview/"
+        qname="ns:>PublishRequest"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.xmlview.stub.PublishRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/xmlview/"
+        qname="ns:>FindServiceRequest"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.xmlview.stub.FindServiceRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/xmlview/"
+        qname="ns:>DeleteResponse"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.xmlview.stub.DeleteResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/xmlview/"
+        qname="ns:>QueryRequest"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.xmlview.stub.QueryRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/xmlview/"
+        qname="ns:QueryExpressionType"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.xmlview.stub.QueryExpressionType"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+ 
+ <transport name="http">
+  <requestFlow>
+   <handler type="URLMapper"/>
+   <handler type="java:org.apache.axis.handlers.http.HTTPAuthHandler"/>
+  </requestFlow>
+  <parameter name="qs:list" value="org.apache.axis.transport.http.QSListHandler"/>
+  <parameter name="qs:wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+  <parameter name="qs:method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+ </transport>
+ <transport name="local">
+  <responseFlow>
+   <handler type="LocalResponder"/>
+  </responseFlow>
+ </transport>
+</deployment>

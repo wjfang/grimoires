@@ -1,0 +1,603 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Grimoires Documentation - Tutorial - Grimoires Service</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url('i_arrow_down.gif');
+	}	        
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script>
+</head>
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1><a name="Grimoires_Tutorial"> </a> Tutorial - Grimoires Service</h1>
+<p />
+<div class="twikiToc">
+<ul>
+<li> <a href="#Grimoires_Tutorial">Tutorial - Grimoires Service</a><ul>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#UDDI_Interface">UDDI Interface</a>
+<ul>
+	<li><a href="#Intro_meta_wsdl">Introduction</a> </li>
+	<li><a href="#Publication_of_services">Publication of services</a>
+	<ul>
+		<li><a href="#SOAP_web_services">SOAP web services</a>
+		<ul>
+			<li><a href="#Create_a_new_business_enitity">Create a new business entity</a>
+			</li>
+			<li><a href="#Create_a_new_tModel">Create a new tModel</a> </li>
+			<li><a href="#Create_a_new_business_service">Create a new business service</a>
+			</li>
+		</ul></li>
+		<li><a href="#Service_from_java_classes">Service from java classes</a>
+		<ul>
+			<li><a href="#Create_a_new_business_entity">Create a new business entity</a>
+			</li>
+			<li><a href="#Create_a_new_tModel">Create a new tModel</a> </li>
+			<li><a href="#Create_a_new_business_service">Create a new business service</a>
+			</li>
+		</ul></li>
+		<li><a href="#Workflows">Workflows</a>
+		<ul>
+			<li><a href="#Create_a_new_business_entity">Create a new business entity</a>
+			</li>
+			<li><a href="#Create_a_new_tModel">Create a new tModel</a> </li>
+			<li><a href="#Create_a_new_business_service">Create a new business service</a>
+			</li>
+		</ul></li>
+	</ul></li>
+	<li><a href="#Discovery_of_services">Discovery of services</a> </li>
+	<li><a href="#Appendix_SOAP_Messages">Appendix: SOAP Messages</a> </li>
+</ul></li>
+<li><a href="#Metadata_Interface">WSDL Interface and Metadata Interface</a>
+<ul>
+	<li><a href="#Intro_meta_wsdl">Introduction</a> </li>
+	<li><a href="#soap_publish_wsdl">Publish the WSDL file</a> </li>
+	<li><a href="#soap_publish_metadata">Publish metadata</a> </li>
+	<li><a href="#soap_inquire_metadata">Inquire by metadata</a></li>
+</ul></li>
+</ul>
+</li>
+</ul>
+</div>
+<p />
+<h2><a name="intro"></a>Introduction</h2>
+<p>This document contains a tutorial for the Grimoires service. It consists of a 
+small execution scenario, illustrating the behaviour of the Grimoires. For each 
+step in the scenario, we provide an input message sent to the registry, and the 
+output message that is returned as a response. We refer the reader to the 
+Tutorial on GShell client and the Tutorial on Java Client Side API for 
+techniques by which such messages can be submitted to the registry.</p>
+<h2><a name="UDDI_Interface"> </a>UDDI Interface </h2>
+<p />
+<h3><a name="Introduction"> </a> Introduction </h3>
+This section describes the publication and discovery of web services in the Grimoires.  Examples will be in the form of UDDI messages, so basic familiarity with UDDI is assumed. For more information on UDDI, consult the <a href="http://www.uddi.org" target="_top">UDDI.org website</a>.
+<p />
+The first part of this section details how to publish a sample service.  This includes creating a business entity, a tModel, and lastly a business service.  The second part of this section decribes how to query the Grimoires about published services.  Examples include finding services by name, by business entities and by tModels.
+<p />
+<h3><a name="Publication_of_services"> </a> Publication of services </h3>
+<h4><a name="SOAP_web_services"> </a> SOAP web services </h4>
+<p />
+In this section, we will publish the BLAST service from the DNA Data Bank of Japan (DDBJ).  The service is described using WSDL as the description language.  The 
+WSDL file is located at <a href="http://xml.nig.ac.jp/wsdl/Blast.wsdl" target="_top">http://xml.nig.ac.jp/wsdl/Blast.wsdl</a>.
+<p />
+All the UDDI messages listed in the section should be sent to the publish URL of your Grimoires server.
+<p />
+<h5><a name="Create_a_new_business_enitity"> </a> Create a new business entity </h5>
+<p />
+All services published in the Grimoires registry (and all UDDI registries) must be owned by a business entity.  Therefore, we will need to create a new business entity for the DDBJ first.  This is achieved using the save_business message.
+<pre>
+&lt;save_business xmlns="urn:uddi-org:api_v2" generic="2.0"&gt; 
+   &lt;businessEntity businessKey=""&gt;
+       &lt;name&gt;DDBJ&lt;/name&gt;
+   &lt;/businessEntity&gt;
+&lt;/save_business&gt;
+</pre>
+<p />
+<a name="BusinessKey"></a>
+The Grimoires registry will reply with a business detail message.  This reply message reflects the information supplied in the save_business call.  It will also contain the <code>businessKey</code> assigned to the newly registered business entity by the Grimoires.  This <code>businessKey</code> will be used later. it will be referred to as <code>$your business key$</code>. (In this example, <code>$your business key$</code> = <code>5f3a6bb1-3d2c-4568-9510-229ba6ba5f6e</code>, but your Grimoires installation will assign you a different value).
+<p />
+<pre>
+&lt;businessDetail xmlns="urn:uddi-org:api_v2"&gt;    
+   &lt;businessEntity businessKey="5f3a6bb1-3d2c-4568-9510-229ba6ba5f6e"&gt;     
+       &lt;name&gt;DDBJ&lt;/name&gt; 
+   &lt;/businessEntity&gt;   
+&lt;/businessDetail&gt;  
+</pre>
+<p />
+It is possible to supply more information about the business entity besides its name in the <code>save_business</code> call.  The following example creates a business
+entity for DDBJ with a name, a description and some contact
+information (email, phone and address).
+<p />
+<pre>
+&lt;save_business xmlns="urn:uddi-org:api_v2" generic="2.0"&gt;
+   &lt;authInfo/&gt;
+     &lt;businessEntity businessKey=""&gt;     
+     &lt;name&gt;DDBJ&lt;/name&gt;     
+     &lt;description&gt;DNA Data Bank of Japan&lt;/description&gt;     
+        &lt;contacts&gt;       
+           &lt;contact&gt;
+              &lt;description&gt;Inquiry&lt;/description&gt;         
+              &lt;email&gt;ddbj@ddbj.nig.ac.jp&lt;/email&gt;
+              &lt;phone&gt;+81-55-981-6849&lt;/phone&gt;
+              &lt;address&gt;
+                 &lt;addressLine&gt;Center for Information Biology and DNA Data Bank
+                              of Japan&lt;/addressLine&gt;                  
+                 &lt;addressLine&gt;National Institute of Genetics&lt;/addressLine&gt;
+                 &lt;addressLine&gt;1111 Yata, Mishima, 411-8540, Japan&lt;/addressLine&gt;
+              &lt;/address&gt;                      
+          &lt;/contact&gt;     
+      &lt;/contacts&gt;   
+  &lt;/businessEntity&gt;
+&lt;/save_business&gt;
+</pre>
+<p />
+<p />
+<h5><a name="Create_a_new_tModel"> </a> Create a new tModel </h5>
+<p />
+TModels provide information about technical interfaces.  Since WSDL service interface definitions are intended to describe service instances, it is therefore consequently natural to register them as tModels.  This is also the recommendation made by the <a href="http://www.ws-i.org/Profiles/BasicProfile-1.0-2004-04-16.html#discovery" target="_top">Web Services Interoperability Organisation</a>.
+<p />
+The save_tModel function is used to publish a tModel in a UDDI registry:
+<pre>
+&lt;save_tModel generic="2.0" xmlns="urn:uddi-org:api_v2" &gt;
+   &lt;authInfo/&gt;
+   &lt;tModel&gt;
+       &lt;name/&gt;
+       &lt;description/&gt;
+       &lt;overviewDoc/&gt;
+       &lt;categoryBag/&gt;
+   &lt;/tModel&gt;
+&lt;/save_tModel&gt;
+</pre>
+<p />
+To assert that a tModel uses WSDL as its technical interface, we classify it using the uddi-org:types taxonomy, as being of type "wsdlSpec".
+<p />
+<pre>
+&lt;categoryBag&gt;
+   &lt;keyedReference keyName="uddi-org:types" keyValue="wsdlSpec"
+       tModelKey="uuid:C1ACF26D-9672-4404-9D70-39B756E62AB4"/&gt;
+&lt;/categoryBag&gt;
+</pre>
+<p />
+We must also specify an overviewDoc whose overviewURL points to the relevant WSDL document:
+<p />
+<pre>
+&lt;overviewDoc&gt;
+   &lt;overviewURL&gt;http://xml.nig.ac.jp/wsdl/Blast.wsdl&lt;/overviewURL&gt;
+&lt;/overviewDoc&gt;
+</pre>
+<p />
+If the WSDL document includes multiple bindings, we can refer to a single binding (Blast in this case) by:
+<p />
+<pre>
+&lt;overviewDoc&gt;
+  &lt;overviewURL&gt;
+    http://xml.nig.ac.jp/wsdl/Blast.wsdl#xmlns(wsdl=http://schemas.xmlsoap.org/wsdl/)xpointer(//wsdl:binding[@name='Blast'])
+  &lt;/overviewURL&gt;
+&lt;/overviewDoc&gt;
+</pre>
+<p />
+Now we are ready to publish the WSDL as a tModel using the save_tModel message.  The following example publishes a tModel with a name, 4 descriptions, and the overviewDoc and categoryBag as described before:
+<p />
+<pre>
+&lt;save_tModel generic="2.0" xmlns="urn:uddi-org:api_v2"&gt;
+   &lt;authInfo/&gt;
+   &lt;tModel tModelKey=""&gt;
+      &lt;name&gt;DNA Databank of Japan: Blast&lt;/name&gt;
+      &lt;description&gt;SHORT DESCRIPTION: Execute BLAST specified with program,
+         database and query.&lt;/description&gt;
+      &lt;description&gt;DETAILED DESCRIPTION: For more information on the DNA
+         Databank of Japan, please see http://www.ddbj.nig.ac.jp/intro-e.html&lt;/description&gt;
+      &lt;description&gt;USAGE NOTES: Please see the service homepage for more
+         information.&lt;/description&gt;
+      &lt;description&gt;HOMEPAGE URL:http://xml.nig.ac.jp/doc/Blast.txt&lt;/description&gt;
+      &lt;overviewDoc&gt;
+         &lt;description&gt;wsdl link&lt;/description&gt;
+         &lt;overviewURL&gt;http://xml.nig.ac.jp/wsdl/Blast.wsdl&lt;/overviewURL&gt;
+      &lt;/overviewDoc&gt;
+      &lt;categoryBag&gt;
+         &lt;keyedReference keyName="uddi-org:types" keyValue="wsdlSpec"
+            tModelKey="uuid:C1ACF26D-9672-4404-9D70-39B756E62AB4"/&gt;
+      &lt;/categoryBag&gt;
+   &lt;/tModel&gt;
+&lt;/save_tModel&gt;
+</pre>
+<p />
+<a name="TmodelKey"></a>
+The Grimoires will reply with a tModel detail message.  This reply message reflects the information supplied in the save_tModel call.  It will also contain the <code>tModelKey</code> assigned to the newly registered tModel by the Grimoires.  This <code>tModelKey</code> will be used later. It will be referred to as <code>$your tModel key$</code>. (In this example, <code>$your tModel key$</code> = <code>e78ed689-9e32-4e81-b90b-86ac806051dc</code>, but your Grimoires installation will assign you a different value).
+<p />
+<pre>
+&lt;tModelDetail xmlns="urn:uddi-org:api_v2"&gt;    
+   &lt;tModel tModelKey="e78ed689-9e32-4e81-b90b-86ac806051dc"&gt;     
+      &lt;name&gt;DNA Databank of Japan: Blast&lt;/name&gt;
+      ....
+   &lt;/tModel&gt;   
+&lt;/tModelDetail&gt;  
+</pre>
+<p />
+<p />
+<h5><a name="Create_a_new_business_service"> </a> Create a new business service </h5>
+<p />
+A business service is published with the save_service message:
+<pre>
+&lt;save_service generic="2.0" xmlns="urn:uddi-org:api_v2" &gt;
+   &lt;authInfo/&gt;
+   &lt;businessService&gt;
+      &lt;name/&gt;
+      &lt;description/&gt;
+      &lt;bindingTemplates&gt;
+         &lt;bindingTemplate&gt;
+            &lt;accessPoint/&gt;
+            &lt;tModelInstanceDetails/&gt;
+         &lt;/bindingTemplate&gt;
+      &lt;/bindingTemplates&gt;
+   &lt;/businessService&gt;
+&lt;/save_service&gt;
+</pre>
+<p />
+UDDI represents Web service instances as bindingTemplate elements.  The accessPoint refers to the network address of the access point of the service.  Assuming that the address specified for the service/port (soap:address) in the WSDL document is http://xml.nig.ac.jp/xddbj/Blast, then
+<pre>
+&lt;accessPoint URLType="http"&gt;
+   http://xml.nig.ac.jp/xddbj/Blast
+&lt;/accessPoint&gt;
+</pre>
+<p />
+The tModelInstanceInfo refers to the tModels that are relevent to the service end point being described. Here, <code>$your tmodel key$</code> is the tModelKey you obtained from the reply message from save_tModel.
+<p />
+<pre>
+&lt;tModelInstanceDetails&gt;
+   &lt;tModelInstanceInfo tModelKey="$your tmodel key$"/&gt;
+&lt;/tModelInstanceDetails&gt;
+</pre>
+<p />
+Together with the <code>businessKey</code> created earlier (replace <code>$your business key$</code> with that), we can publish the BLAST service as
+<p />
+<pre>
+&lt;save_service generic="2.0" xmlns="urn:uddi-org:api_v2"&gt;
+   &lt;authInfo/&gt;
+   &lt;businessService serviceKey="" businessKey="$your business key$"&gt;
+      &lt;name&gt;DNA Databank of Japan: Blast&lt;/name&gt;
+      &lt;description&gt;Endpoint for service&lt;/description&gt;
+      &lt;description&gt;IMPLEMENTATION: apachesoap&lt;/description&gt;
+      &lt;bindingTemplates&gt;
+         &lt;bindingTemplate bindingKey=""&gt;
+            &lt;accessPoint URLType="http"&gt;http://xml.nig.ac.jp/xddbj/Blast
+            &lt;/accessPoint&gt;
+            &lt;tModelInstanceDetails&gt;
+              &lt;tModelInstanceInfo tModelKey="$your tmodel key$"/&gt;
+            &lt;/tModelInstanceDetails&gt;
+         &lt;/bindingTemplate&gt;
+      &lt;/bindingTemplates&gt;
+    &lt;/businessService&gt;
+&lt;/save_service&gt;
+</pre>
+<p />
+<h4><a name="Service_from_java_classes"> </a> Service from java classes </h4>
+The <a href="http://ws.apache.org/wsif/providers/wsdl_extensions/java_extension.html" target="_top">java binding</a> provided by the <a href="http://ws.apache.org/wsif/" target="_top">Web Services Invocation Framework (WSIF)</a> allows functionality in a WSDL service description to be mapped to the functionality provided by a Java class directly.  In other words,  a Java class can be described using WSDL, and can be accessed as a WSDL-described service through WSIF.
+<p />
+In this section, we will publish the service provided by the function addEntry within a java class 
+<a href="AddressBookImpl.java">AddressBookImpl</a> which implements an 
+AddressBook interface. A <a class="twikiLink" href="./JavaAddressBookWsdl.html">WSDL description</a> has been written for this function using the WSIF extension.
+<p />
+<h5><a name="Create_a_new_business_entity"> </a> Create a new business entity </h5>
+<p />
+Similar to the SOAP web service example, the published service has to be owned by a business entity. We will create a business entity called 
+JavaClassRepository.  This business entity can be used to publish all the functionalities provided by all your local java classes.
+<p />
+<pre>
+&lt;save_business xmlns="urn:uddi-org:api_v2" generic="2.0"&gt; 
+   &lt;businessEntity businessKey=""&gt;
+       &lt;name&gt;my java classes&lt;/name&gt;
+   &lt;/businessEntity&gt;
+&lt;/save_business&gt;
+</pre>
+<p />
+<h5><a name="Create_a_new_tModel"> </a> Create a new tModel </h5>
+A tModel is created for the WSDL interface in this <a class="twikiLink" href="./JavaAddressBookWsdl.html">WSDL description</a>. In the following example, the WSDL file is available on the local hard disk at c:\My Documents\AddressBook.wsdl.
+<p />
+<pre>
+&lt;save_tModel generic="2.0" xmlns="urn:uddi-org:api_v2"&gt;
+   &lt;authInfo/&gt;
+   &lt;tModel tModelKey=""&gt;
+      &lt;name&gt;addressbook.wsiftypes.AddressBook::addEntry&lt;/name&gt;
+      &lt;description&gt;Add entry to an address book&lt;/description&gt;
+      &lt;overviewDoc&gt;
+         &lt;description&gt;wsdl link&lt;/description&gt;
+         &lt;overviewURL&gt;file://c:/my%20documents/addressbook.wsdl&lt;/overviewURL&gt;
+      &lt;/overviewDoc&gt;
+      &lt;categoryBag&gt;
+         &lt;keyedReference keyName="uddi-org:types" keyValue="wsdlSpec"
+            tModelKey="uuid:C1ACF26D-9672-4404-9D70-39B756E62AB4"/&gt;
+      &lt;/categoryBag&gt;
+   &lt;/tModel&gt;
+&lt;/save_tModel&gt;
+</pre>
+<p />
+For a UNIX path name (eg /home/luser/Address.wsdl)
+<p />
+<pre>
+         &lt;overviewURL&gt;file:///home/luser/Addressbook.wsdl&lt;/overviewURL&gt;
+</pre>
+<p />
+Or, if you have put the WSDL up on your personal webspace (eg http://www.example.com/~abc/AddressBook.wsdl)
+<pre>
+         &lt;overviewURL&gt;http://www.example.com/~abc/AddressBook.wsdl&lt;/overviewURL&gt;
+</pre>
+<p />
+<h5><a name="Create_a_new_business_service"> </a> Create a new business service </h5>
+Now we are ready to publish the addEntry service.
+<p />
+<pre>
+&lt;save_service generic="2.0" xmlns="urn:uddi-org:api_v2"&gt;
+   &lt;authInfo/&gt;
+   &lt;businessService serviceKey="" businessKey="$your business key$"&gt;
+      &lt;name&gt;AddEntry to AddressBook&lt;/name&gt;
+      &lt;bindingTemplates&gt;
+         &lt;bindingTemplate bindingKey=""&gt;
+            &lt;accessPoint URLType="other"&gt;addressbook.wsiftypes.AddressBook
+            &lt;/accessPoint&gt;
+            &lt;tModelInstanceDetails&gt;
+              &lt;tModelInstanceInfo tModelKey="$your tmodel key$"/&gt;
+            &lt;/tModelInstanceDetails&gt;
+         &lt;/bindingTemplate&gt;
+      &lt;/bindingTemplates&gt;
+    &lt;/businessService&gt;
+&lt;/save_service&gt;
+</pre>
+<p />
+<h4><a name="Workflows"> </a> Workflows </h4>
+Grimoires can also be used to publish descriptions of workflows, like a UDDI 
+service. For instance, below, we publish <a class="twikiLink" href="./ScuflExample.html">this 
+SCUFL workflow</a> (SCUFL is the workflow notation supported by myGrid Taverna 
+and Freefluo development environment and enactment engines).  A WSDL description is created for this workflow:
+<p />
+<pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;definitions name="CandidateGeneAnalysis" targetNamespace="http://www.mygrid.org.uk" 
+             xmlns:tns="http://www.mygrid.org.uk" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+             xmlns="http://schemas.xmlsoap.org/wsdl/"&gt;
+  &lt;message name="WholeWorkflowRunResponse"&gt;
+    &lt;part name="outfile_emblEntryWithSNPs" type="xsd:string"/&gt;
+  &lt;/message&gt;
+  &lt;message name="WholeWorkflowRunRequest"&gt;
+    &lt;part name="probeSetId" type="xsd:string"/&gt;
+  &lt;/message&gt;
+  &lt;portType name="WholeWorkflowIO"&gt;
+    &lt;operation name="WholeWorkflowRun"&gt;
+      &lt;input name="WholeWorkflowRunInput" message="WholeWorkflowRunRequest"/&gt;
+      &lt;output name="WholeWorkflowRunOutput" message="WholeWorkflowRunResponse"/&gt;
+    &lt;/operation&gt;
+  &lt;/portType&gt;
+&lt;/definitions&gt;
+</pre>
+<p />
+<h5><a name="Create_a_new_business_entity"> </a> Create a new business entity </h5>
+We will create a business entity that owns all the local workflows.
+<pre>
+&lt;save_business xmlns="urn:uddi-org:api_v2" generic="2.0"&gt; 
+   &lt;businessEntity businessKey=""&gt;
+       &lt;name&gt;workflowRepository&lt;/name&gt;
+   &lt;/businessEntity&gt;
+&lt;/save_business&gt;
+</pre>
+<p />
+<h5><a name="Create_a_new_tModel"> </a> Create a new tModel </h5>
+A tModel is created for the WSDL interface of the workflow. We will assume that the WSDL file is available on the local hard disk at c:\My Documents\workflow.wsdl.
+<p />
+<pre>
+&lt;save_tModel generic="2.0" xmlns="urn:uddi-org:api_v2"&gt;
+   &lt;authInfo/&gt;
+   &lt;tModel tModelKey=""&gt;
+      &lt;name&gt;a workflow&lt;/name&gt;
+      &lt;overviewDoc&gt;
+         &lt;overviewURL&gt;file://c:/my%20documents/workflow.wsdl&lt;/overviewURL&gt;
+      &lt;/overviewDoc&gt;
+      &lt;categoryBag&gt;
+         &lt;keyedReference keyName="uddi-org:types" keyValue="wsdlSpec"
+            tModelKey="uuid:C1ACF26D-9672-4404-9D70-39B756E62AB4"/&gt;
+      &lt;/categoryBag&gt;
+   &lt;/tModel&gt;
+&lt;/save_tModel&gt;
+</pre>
+<p />
+<h5><a name="Create_a_new_business_service"> </a> Create a new business service </h5>
+Lastly, we can publish the workflow as a service.
+<p />
+<pre>
+&lt;save_service generic="2.0" xmlns="urn:uddi-org:api_v2"&gt;
+   &lt;authInfo/&gt;
+   &lt;businessService serviceKey="" businessKey="$your business key$"&gt;
+      &lt;name&gt;a simple workflow&lt;/name&gt;
+      &lt;bindingTemplates&gt;
+         &lt;bindingTemplate bindingKey=""&gt;
+            &lt;accessPoint URLType="other"&gt;file://c:/my%20documents/workflow.scufl
+            &lt;/accessPoint&gt;
+            &lt;tModelInstanceDetails&gt;
+              &lt;tModelInstanceInfo tModelKey="$your tmodel key$"/&gt;
+            &lt;/tModelInstanceDetails&gt;
+         &lt;/bindingTemplate&gt;
+      &lt;/bindingTemplates&gt;
+    &lt;/businessService&gt;
+&lt;/save_service&gt;
+</pre>
+<p />
+<h3><a name="Discovery_of_services"> </a> Discovery of services </h3>
+<p />
+This section demonstrates a few different ways to query about the BLAST service created previously.  All the UDDI messages here should be sent to the inquiry endpoint of the Grimoires.
+<p />
+You can search for a service with its name using find_serivce.  The following message searches for all businessServices called <em>DNA Databank of Japan: Blast</em> from all business entities registered with the server.
+<pre>
+&lt;find_service xmlns="urn:uddi-org:api_v2" generic="2.0" businessKey=""&gt;    
+   &lt;name&gt;DNA Databank of Japan: Blast&lt;/name&gt;
+&lt;/find_service&gt;  
+</pre>
+<p />
+The Grimoires replies with a serviceList message, which contains a list of businessService elements that matches the search criterion.
+<p />
+If you know the businessKey of the businessEntity that provides the service, you can limit the search to the specific business entity instance.
+<pre>
+&lt;find_service xmlns="urn:uddi-org:api_v2" generic="2.0" businessKey="$your business key$"&gt;    
+   &lt;name&gt;DNA Databank of Japan: Blast&lt;/name&gt;
+&lt;/find_service&gt;  
+</pre>
+<p />
+Wildcard searches are also possible. % is the wildcard character for UDDI.  The following message searches for all services that contain the word blast in its name.
+<pre>
+&lt;find_service xmlns="urn:uddi-org:api_v2" generic="2.0" businessKey=""&gt;    
+   &lt;name&gt;%Blast%&lt;/name&gt;
+&lt;/find_service&gt;  
+</pre>
+<p />
+Alternatively, with the find_business message, you can retrieve all services provided by a given business.  (Wildcard searches with % are allowed).
+<pre>
+&lt;find_business xmlns="urn:uddi-org:api_v2" generic="2.0"&gt;   
+   &lt;name&gt;DDBJ&lt;/name&gt;
+&lt;/find_business&gt; 
+</pre>
+<p />
+The Grimoires registry will respond with a businessList message.  This structure contains information about each matching business, including summaries of the businessServices exposed.
+<p />
+If you have the tModelKey, you can also search for services that are defined with a specific WSDL document (tModel).
+<pre>
+&lt;find_service xmlns="urn:uddi-org:api_v2" generic="2.0" businessKey=""&gt;
+   &lt;tModelBag&gt;
+      &lt;tModel tModelKey="$your tModel key$"&gt;
+   &lt;/tModelBag&gt;
+&lt;/find_service&gt;
+</pre>
+<p />
+<h3><a name="Appendix_SOAP_Messages"> </a> Appendix: SOAP Messages </h3>
+<p />
+All the XML messages in this document are shown without their SOAP envelopes. The full SOAP message for
+<pre>
+&lt;find_business xmlns="urn:uddi-org:api_v2" generic="2.0"&gt;   
+   &lt;name&gt;DDBJ&lt;/name&gt;
+&lt;/find_business&gt; 
+</pre>
+<p />
+is
+<p />
+<pre>
+&lt;?xml version='1.0' ?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+   &lt;SOAP-ENV:Header /&gt;
+   &lt;SOAP-ENV:Body&gt;
+      &lt;find_business xmlns="urn:uddi-org:api_v2" maxRows="5" generic="2.0"&gt;   
+         &lt;name&gt;DDBJ&lt;/name&gt;
+      &lt;/find_business&gt;
+   &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+</pre>
+<p />
+This is then placed in the body of a HTTP POST request:
+<pre>
+POST /services/grimoires/inquire HTTP/1.1
+Host: grimoires.hosted.here
+Content-Type: application/soap+xml; charset="utf-8"
+Content-Length: nnnn
+SOAPAction: ""
+
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+   &lt;SOAP-ENV:Header /&gt;
+   &lt;SOAP-ENV:Body&gt;
+   ......
+</pre>
+<p />
+<h2><a name="Metadata_Interface"> </a> WSDL Interface and Metadata Interface </h2>
+<p />
+<h3><a name="Intro_meta_wsdl"></a>Introduction</h3>
+<p>We will also publish the service's WSDL file, and attach a 
+piece of metadata to a message part inside the WSDL description. The metadata 
+describes the semantic type, i.e., a DNA sequence, of the message part, which is 
+syntactically a string. Finally, we discover the message part based on the 
+metadata. Given the message part, we can further discover which operation this 
+message part belongs to, which WSDL description the operation belongs to, and 
+which service has implemented the WSDL description. Following these steps, a 
+service can be discovered by its metadata.</p>
+<h3><a name="soap_publish_wsdl"></a>Publish the WSDL file</h3>
+<p>Publish a WSDL file which is located at http://xml.nig.ac.jp/wsdl/Blast.wsdl.</p>
+<pre>&lt;addWSDLFileRequest xmlns=&quot;http:/www.grimoires.org/wsdl/type&quot;&gt;
+	http://xml.nig.ac.jp/wsdl/Blast.wsdl
+&lt;/addWSDLFileRequest&gt;</pre>
+<p>A WSDL key is returned.</p>
+<pre>&lt;addWSDLFileResponse xmlns=&quot;http:/www.grimoires.org/wsdl/type&quot;&gt;
+	50999bee-a167-4380-9420-8ee12e7b178e
+&lt;/addWSDLFileResponse&gt;
+</pre>
+<h3><a name="soap_publish_metadata"></a>Publish metadada</h3>
+<p>Attach a metadata to a message part. The metadata is of the type &quot;http://www.grimoires.org/SemanticType&quot;, 
+and has the value &quot;DNA_Sequence&quot;. The message part has the name &quot;param&quot;, and it 
+belongs to the message &quot;http://www.themindelectric.com/wsdl/Blast#searchParam0In&quot;. </p>
+<pre>&lt;addMetadataToEntity xmlns=&quot;http://www.grimoires.org/metadata.xsd&quot;&gt;
+	&lt;entityReference entityType=&quot;http://www.grimoires.org/metadata.xsd#messagePartReference&quot;&gt;
+		&lt;messagePartReference&gt;
+			&lt;messageNamespace&gt;http://www.themindelectric.com/wsdl/Blast/&lt;/messageNamespace&gt;
+			&lt;messageName&gt;searchParam0In&lt;/messageName&gt;
+			&lt;messagePartName&gt;param&lt;/messagePartName&gt;
+		&lt;/messagePartReference&gt;
+	&lt;/entityReference&gt;
+	&lt;metadata&gt;
+		&lt;metadataType&gt;http://www.grimoires.org/SemanticType&lt;/metadataType&gt;
+		&lt;metadataValue&gt;
+			&lt;stringValue&gt;DNA_Sequence&lt;/stringValue&gt;
+		&lt;/metadataValue&gt;
+	&lt;/metadata&gt;
+&lt;/addMetadataToEntity&gt;</pre>
+<p>A piece of metadata information is returned.</p>
+<pre>&lt;metadataInfo ns1:metadataKey=&quot;9e060eca-7642-4317-af6c-c203d292d86c&quot;
+		xmlns=&quot;http://www.grimoires.org/metadata.xsd&quot;
+		xmlns:ns1=&quot;http://www.grimoires.org/metadata.xsd&quot;&gt;
+	&lt;metadataType&gt;http://www.grimoires.org/SemanticType&lt;/metadataType&gt;
+	&lt;metadataValue&gt;&lt;stringValue&gt;DNA_Sequence&lt;/stringValue&gt;&lt;/metadataValue&gt;
+	&lt;date&gt;Wed Sep 07 10:33:23 BST 2005&lt;/date&gt;
+&lt;/metadataInfo&gt;
+</pre>
+<h3><a name="soap_inquire_metadata"></a>Inquire by metadata</h3>
+<p>Inquire for a message part attached with a metadata that is of the type 
+&quot;http://www.grimoires.org/SemanticType&quot;, and has the value &quot;DNA_Sequence&quot;. </p>
+<pre>&lt;find_entityByMetadata xmlns=&quot;http://www.grimoires.org/metadata.xsd&quot;&gt;
+	&lt;metadataQueryBag&gt;
+		&lt;metadataQuery&gt;
+			&lt;metadataType&gt;http://www.grimoires.org/SemanticType&lt;/metadataType&gt;
+			&lt;metadataValue&gt;
+				&lt;stringValue&gt;DNA_Sequence&lt;/stringValue&gt;
+			&lt;/metadataValue&gt;
+		&lt;/metadataQuery&gt;
+	&lt;/metadataQueryBag&gt;
+&lt;/find_entityByMetadata&gt;</pre>
+<p>A matched message part is returned.</p>
+<pre>&lt;entityReferenceList xmlns=&quot;http://www.grimoires.org/metadata.xsd&quot;&gt;
+	&lt;entityReference entityType=&quot;http://www.grimoires.org/metadata.xsd#messagePartReference&quot;&gt;
+		&lt;messagePartReference&gt;
+			&lt;messageNamespace&gt;http://www.themindelectric.com/wsdl/Blast/&lt;/messageNamespace&gt;
+			&lt;messageName&gt;searchParam0In&lt;/messageName&gt;
+			&lt;messagePartName&gt;param&lt;/messagePartName&gt;
+		&lt;/messagePartReference&gt;
+	&lt;/entityReference&gt;
+&lt;/entityReferenceList&gt;</pre>
+</div>
+
+</div></div>
+
+</body></html>

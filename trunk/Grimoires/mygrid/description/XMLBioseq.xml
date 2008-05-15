@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+	<serviceDescription>
+		<serviceName>SHoundXMLBioseq</serviceName>
+		<organisation>
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundXMLBioseq</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundXMLBioseq?wsdl</interfaceWSDL>
+		<serviceDescriptionText>A wrap function to get an XML Formated Bioseq structure which contains sequence information and all available annotations. To consist with other remote APIs</serviceDescriptionText>
+		<operations>
+			<serviceOperation>
+				<operationName>SHoundXMLBioseq</operationName>
+				<operationInputs>
+					<parameter>
+						<parameterName>gi</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#biological_sequence_id</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs>
+					<parameter>
+						<parameterName>result</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#biological_sequence</semanticType>
+						<transportDataType>XMLString</transportDataType>
+						<collectionSemanticType>Single</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationResource>http://www.mygrid.org.uk/ontology#sequence_database</operationResource>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

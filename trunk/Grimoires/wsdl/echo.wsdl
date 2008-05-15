@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions 
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:tns="http://www.grimoires.org/echo/"
+	targetNamespace="http://www.grimoires.org/echo/" 
+	name="echo">
+	
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.grimoires.org/echo/">
+      <xsd:element name="echoRequest" type="xsd:string"/>      
+      <xsd:element name="echoResponse" type="xsd:string"/>
+    </xsd:schema>
+  </wsdl:types>
+  
+  <wsdl:message name="echoRequest">
+    <wsdl:part element="tns:echoRequest" name="parameters"/>
+  </wsdl:message>
+  
+  <wsdl:message name="echoResponse">
+    <wsdl:part element="tns:echoResponse" name="parameters"/>
+  </wsdl:message>
+  
+  <wsdl:portType name="echo">
+    <wsdl:operation name="echo">
+      <wsdl:input message="tns:echoRequest"/>
+      <wsdl:output message="tns:echoResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  
+  <wsdl:binding name="echoSOAP" type="tns:echo">
+  	<soap:binding style="document"
+  		transport="http://schemas.xmlsoap.org/soap/http" />
+  		
+  	<wsdl:operation name="echo">
+  		<soap:operation
+  			soapAction="http://www.grimoires.org/echo/echo" />
+  		<wsdl:input>
+  			<soap:body use="literal" />
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal" />
+  		</wsdl:output>
+  	</wsdl:operation>
+  </wsdl:binding>
+
+  <wsdl:service name="echo">
+    <wsdl:port binding="tns:echoSOAP" name="echoSOAP">
+      <soap:address location="http://localhost:8080/grimoires/services/echo"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

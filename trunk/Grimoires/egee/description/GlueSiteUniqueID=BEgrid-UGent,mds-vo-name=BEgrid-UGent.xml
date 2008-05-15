@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=BEgrid-UGent,mds-vo-name=BEgrid-UGent">
+    <Name>BEgrid-UGent</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:ugent-grid-adm@atlantis.ugent.be</UserSupportContact>
+    <SysAdminContact>mailto:ugent-grid-adm@atlantis.ugent.be</SysAdminContact>
+    <SecurityContact>mailto:ugent-grid-adm@atlantis.ugent.be</SecurityContact>
+    <Location>Ghent, Belgium</Location>
+    <Latitude>51.0333</Latitude>
+    <Longitude>3.7</Longitude>
+    <Web>http://begrid.atlantis.ugent.be</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-3</OtherInfo>
+    <OtherInfo>atlantis.ugent.be</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=gridce.atlantis.ugent.be,mds-vo-name=BEgrid-UGent">
+        <Name>gridce.atlantis.ugent.be</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=gridce.atlantis.ugent.be,GlueClusterUniqueID=gridce.atlantis.ugent.be,mds-vo-name=BEgrid-UGent">
+            <Name>gridce.atlantis.ugent.be</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.4" Name="ScientificSL"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="Opteron" ClockSpeed="1600"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="2048" RAMSize="1024"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="380" SF00="400"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=gridce.atlantis.ugent.be,mds-vo-name=BEgrid-UGent">
+        <InformationServiceURL>ldap://gridce.atlantis.ugent.be:2170/mds-vo-name=resource,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="ops">
+            <Path>/storage/LCG/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>212339728</UsedSpace>
+            <AvailableSpace>32584052</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/storage/LCG/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>212339728</UsedSpace>
+            <AvailableSpace>32584052</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>/storage/LCG/cms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>212339728</UsedSpace>
+            <AvailableSpace>32584052</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="becms">
+            <Path>/storage/LCG/becms</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>212339728</UsedSpace>
+            <AvailableSpace>32584052</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="betest">
+            <Path>/storage/LCG/betest</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>212339728</UsedSpace>
+            <AvailableSpace>32584052</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomath">
+            <Path>/storage/LCG/biomath</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>212339728</UsedSpace>
+            <AvailableSpace>32584052</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="beapps">
+            <Path>/storage/LCG/beapps</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>212339728</UsedSpace>
+            <AvailableSpace>32584052</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="elis">
+            <Path>/storage/LCG/elis</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>212339728</UsedSpace>
+            <AvailableSpace>32584052</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="intec">
+            <Path>/storage/LCG/intec</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>212339728</UsedSpace>
+            <AvailableSpace>32584052</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://gridce.atlantis.ugent.be</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=local-http://gridlfc.atlantis.ugent.be:8085/,mds-vo-name=BEgrid-UGent">
+        <Name>BEgrid-UGent-lfc-dli</Name>
+        <Type>local-data-location-interface</Type>
+        <Version>1.6.3</Version>
+        <Endpoint>http://gridlfc.atlantis.ugent.be:8085/</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-10T20:31:31.000+02:00</StartTime>
+        <Owner>intec</Owner>
+        <Owner>elis</Owner>
+        <Owner>biomath</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=local-gridlfc.atlantis.ugent.be,mds-vo-name=BEgrid-UGent">
+        <Name>BEgrid-UGent-lfc</Name>
+        <Type>lcg-local-file-catalog</Type>
+        <Version>1.6.3</Version>
+        <Endpoint>gridlfc.atlantis.ugent.be</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <StartTime>2007-10-10T20:31:31.000+02:00</StartTime>
+        <Owner>intec</Owner>
+        <Owner>elis</Owner>
+        <Owner>biomath</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=gridpx.atlantis.ugent.be:7512,mds-vo-name=BEgrid-UGent">
+        <Name>BEgrid-UGent-myproxy</Name>
+        <Type>MyProxy</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>gridpx.atlantis.ugent.be:7512</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=gridrb.atlantis.ugent.be:7772,mds-vo-name=BEgrid-UGent">
+        <Name>BEgrid-UGent-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>gridrb.atlantis.ugent.be:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>cms</Owner>
+        <Owner>becms</Owner>
+        <Owner>betest</Owner>
+        <Owner>biomath</Owner>
+        <Owner>beapps</Owner>
+        <Owner>elis</Owner>
+        <Owner>intec</Owner>
+    </Service>
+</Site>

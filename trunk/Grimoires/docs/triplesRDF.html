@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Grimoires Documentation - HOWTO - Query for TriplesAssertion Metadata</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url('i_arrow_down.gif');
+	}
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script>
+</head>
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1>  HOWTO - Query for TriplesAssertion Metadata</h1>
+<p />
+<div class="twikiToc">
+<ul>
+<li> <a href="#Lifetime">HOWTO - Query for TriplesAssertion Metadata</a>
+<ul>
+<li> <a href="#TriplesAssertion">TriplesAssertion</a></li>
+<li> <a href="#Query">RDF Query for TriplesAssertion</a></li>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p />
+This
+document describes 
+how to query for an entity by a piece of metadata that is in the form of 
+TriplesAssertion.<p />
+<h2><a name="TriplesAssertion"></a>TriplesAssertion</h2>
+Grimoires supports attaching a metadata to an entity. A metadata has a metadata 
+type, which dictates the type of this annotation, and a metadata value, which 
+dictates the value of this annotation. For instance, a service can be attached 
+with a metadata type/value pair (http://someNameSpace/QoS, 5) to state that this 
+service has observed to have a quality of service at a value of 5.<p>
+Furthermore, three forms of metadata value are supported in Grimoires: string to 
+describe some simple fact, URI to refer to some defined ontology concept, and 
+TriplesAssertion to describe some complicated metadata. By using 
+TriplesAssertion, we can attach a RDF graph that contains multiple RDF 
+statements to an entity.</p>
+<p>The XML schema for metadata value:</p>
+<pre>
+  &lt;xsd:element name="metadataValue" type="meta:MetadataValue"/&gt;
+  &lt;xsd:complexType name="MetadataValue"&gt;
+    &lt;xsd:choice&gt;
+      &lt;xsd:element ref="meta:triplesAssertion"/&gt;
+      &lt;xsd:element ref="meta:stringValue"/&gt;
+      &lt;xsd:element ref="meta:uriValue"/&gt;
+    &lt;/xsd:choice&gt;
+  &lt;/xsd:complexType&gt;
+  
+  &lt;xsd:element name="stringValue" type="xsd:string"/>
+  &lt;xsd:element name="uriValue" type="xsd:anyURI"/>
+
+  &lt;xsd:element name="triplesAssertion" type="meta:TriplesAssertion"/&gt;
+  &lt;xsd:complexType name="TriplesAssertion"&gt;
+    &lt;xsd:sequence&gt;
+      &lt;xsd:element name="triples" type="xsd:string"/&gt;
+      &lt;xsd:element name="resourceIdentifier" type="xsd:string"/&gt;
+      &lt;xsd:element name="language" type="xsd:string"/&gt;
+      &lt;xsd:element name="base" type="xsd:string"/&gt;
+    &lt;/xsd:sequence&gt;
+  &lt;/xsd:complexType&gt;
+</pre>
+<p />In the TriplesAssertion structure, &quot;triples&quot; is the RDF graph encoded n a 
+string. &quot;language&quot; is the format in which the RDF graph is encoded. Predefined 
+values are &quot;RDF/XML&quot;, &quot;N-TRIPLE&quot; and &quot;N3&quot;.&nbsp; &quot;base&quot; is used when converting 
+relative URI's to absolute URI's in the RDF graph. The base URI may be null if 
+there are no relative URIs to convert. A base URI of &quot;&quot; may permit relative URIs 
+to be used in the model.<p />The usage of &quot;resourceIdentifier&quot; is as follows:<p />
+The metadata attachment looks like to set up a new RDF triple (annotatedEntity, 
+hasMetadataType, metadataValue). Let's call it Triple M. The metadataValue in 
+Triple M can be a &nbsp;RDF resource if you attach a URI metadata or a
+<span id="st" name="st" class="st0">triplesAssertion</span> metadata. The 
+triples assertion contains multiple RDF triples, which in fact is able to forms 
+a RDF graph. If the triples assertion only forms a tree, we know the root of the 
+tree must be the metadataValue in Triple M. However, when the triples assertion 
+forms a graph, there is no way for us to tell which RDF resource should be the 
+metadataValue in Triple M. Therefore, the &quot;resourceIdentifier&quot; is used to tell 
+Grimoires which resource inside the triples assertion is used as the 
+metadataValue in Triple M.<p />For instance, we have a service description for 
+Grimoires, and we want to attach a metadata to say Grimoires has a developer 
+called Weijian. We also want to annotate some information for Weijian, such as 
+Weijian is a Research Fellow working in the school of ECS, while ECS is a part 
+of Univ. of Southampton. By using TriplesAssertion, we can model this 
+information in the following way:<p />We attach a TriplesAssertion metadata to 
+the Grimoires service, the metadata type is http://someNameSpace/hasDeveloper. 
+The metadata value is a TriplesAssertion. Its language is RDF/XML. Its base is 
+omitted. its triples is
+<pre>
+&lt;rdf:RDF xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot; xmlns:tns=&quot;http://someNameSpace/&quot;&gt;
+  &lt;rdf:description rdf:about=&quot;tns:Weijian&quot;&gt;
+    &lt;tns:worksIn rdf:nodeID=&quot;tns:ECS&quot;/&gt;
+  &lt;/rdf:description&gt;  
+  &lt;rdf:description rdf:about=&quot;tns:ECS&quot;&gt;
+    &lt;tns:belongsTo rdf:nodeID=&quot;tns:SOTON&quot;/&gt;
+  &lt;/rdf:description&gt;
+&lt;/rdf:RDF&gt;  
+
+</pre>
+<p/>Obviously, the resourceIdentifier of the above triplesAssertion is http://someNameSpace/Weijian.<h2><a name="Query"></a>RDF Query for TriplesAssertion</h2>
+<p />
+Grimoires provides a findEntityByMetadata operation, through which an entity can 
+be found by specifying the metadata attached to it. In findEntityByMetadata, we 
+need to specify the both the metadata type and metadata value. This works fine 
+for the string metadata and the URI metadata. But more flexibility is required 
+for the TriplesAssertion metadata. The motive is that since a RDF graph is 
+provided as a metadata value, the user should be able to locate the metadata by 
+only giving some pattern of the RDF graph instead of the whole graph. For 
+instance, in the above triplesAssertion example, the user may want to find all 
+services that are developed in Univ. of Southampton.<p />
+The solution is that a RDF query language is allowed to be used to describe the 
+pattern of the TriplesAssertion when constructing the metadata value. More 
+precisely, when constructing a TriplesAssertion which makes the metadata value, 
+the language is set to be a RDF query language (currently, we only support RDQL), 
+and the triples is a query segment in that language and describes the pattern of 
+the triples. This query segment will then be incorporated into the findEntityByMetadata RDF query clause generated by Grimoires.<p />
+For instance, to find all services that are developed in Univ. of Southampton, 
+the metadata looks like:
+
+<pre>
+&lt;meta:metadata meta:metadataKey=&quot;&quot;&gt;
+  &lt;meta:metadataType&gt;http://someNameSpace/hasDeveloper&lt;/meta:metadataType&gt;
+  &lt;meta:metadataValue&gt;
+    &lt;meta:triplesAssertion&gt;
+      &lt;meta:triples&gt;
+        (?developer, &lt;http://someNameSpace/worksIn&gt;, ?school)
+        (?school, &lt;http://someNameSpace/belongsTo&gt;, &lt;http://someNameSpace/SOTON&gt;)
+      &lt;/meta:triples&gt;
+      &lt;meta:resourceIdentifier&gt;?developer&lt;/meta:resourceIdentifier&gt;
+      &lt;meta:language&gt;RDQL&lt;/meta:language&gt;
+    &lt;/meta:triplesAssertion&gt;
+  &lt;/meta:metadataValue&gt;
+&lt;/meta:metadata&gt;
+</pre>
+
+<p/>
+The &quot;triples&quot; in the &quot;triplesAssertion&quot; actually describes the RDF graph pattern 
+in RDQL, with variables allowed. In the RDQL segment, the AND clause is allowed. 
+Do not use the USING clause to define the name space prefix.</div>
+</body></html>

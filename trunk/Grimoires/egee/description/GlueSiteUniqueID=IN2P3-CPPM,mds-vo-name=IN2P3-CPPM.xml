@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=IN2P3-CPPM,mds-vo-name=IN2P3-CPPM">
+    <Name>IN2P3-CPPM</Name>
+    <Description>EGEE/LCG Site</Description>
+    <UserSupportContact>mailto: gridadmin@mrs.grid.cnrs.fr</UserSupportContact>
+    <SysAdminContact>mailto: gridadmin@mrs.grid.cnrs.fr</SysAdminContact>
+    <SecurityContact>mailto: gridadmin@mrs.grid.cnrs.fr</SecurityContact>
+    <Location>Marseille, France</Location>
+    <Latitude>43.231</Latitude>
+    <Longitude>5.441</Longitude>
+    <Web>http://marianne.in2p3.fr/egee/</Web>
+    <OtherInfo>TIER 3</OtherInfo>
+    <OtherInfo>IN2P3-CC</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=marseillece01.mrs.grid.cnrs.fr,mds-vo-name=IN2P3-CPPM">
+        <Name>marseillece01.mrs.grid.cnrs.fr</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=marseillece01.mrs.grid.cnrs.fr,GlueClusterUniqueID=marseillece01.mrs.grid.cnrs.fr,mds-vo-name=IN2P3-CPPM">
+            <Name>marseillece01.mrs.grid.cnrs.fr</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="Beryllium" Release="4.4" Name="ScientificSL"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="AMD" Model="Opteron" ClockSpeed="2400"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="4096" RAMSize="4096"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="1500" SF00="1701"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=sedpm.mrs.grid.cnrs.fr,mds-vo-name=IN2P3-CPPM">
+        <InformationServiceURL>ldap://sedpm.mrs.grid.cnrs.fr:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>12409</SizeTotal>
+        <SizeFree>9342</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/dpm/mrs.grid.cnrs.fr/home/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>2566634675</UsedSpace>
+            <AvailableSpace>5055480000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="auvergrid">
+            <Path>/dpm/mrs.grid.cnrs.fr/home/auvergrid</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="biomed">
+            <Path>/dpm/mrs.grid.cnrs.fr/home/biomed</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1636468</UsedSpace>
+            <AvailableSpace>2715480000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cppm">
+            <Path>/dpm/mrs.grid.cnrs.fr/home/cppm</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2715480000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dpm/mrs.grid.cnrs.fr/home/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>5810495</UsedSpace>
+            <AvailableSpace>2715480000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dzero">
+            <Path>/dpm/mrs.grid.cnrs.fr/home/dzero</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>3574940000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="egeode">
+            <Path>/dpm/mrs.grid.cnrs.fr/home/egeode</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="esr">
+            <Path>/dpm/mrs.grid.cnrs.fr/home/esr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>89182692</UsedSpace>
+            <AvailableSpace>3935480000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="hone">
+            <Path>/dpm/mrs.grid.cnrs.fr/home/hone</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="lhcb">
+            <Path>/dpm/mrs.grid.cnrs.fr/home/lhcb</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>362</UsedSpace>
+            <AvailableSpace>3672110000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/dpm/mrs.grid.cnrs.fr/home/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1830</UsedSpace>
+            <AvailableSpace>2715480000</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="vo.lapp.in2p3.fr">
+            <Path>/dpm/mrs.grid.cnrs.fr/home/vo.lapp.in2p3.fr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>0</UsedSpace>
+            <AvailableSpace>2715480000</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://sedpm.mrs.grid.cnrs.fr:2811</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>httpg://sedpm.mrs.grid.cnrs.fr:8443/srm/managerv1</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://sedpm.mrs.grid.cnrs.fr:8443/srm/managerv1</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=marseillemon.mrs.grid.cnrs.fr:2136,mds-vo-name=IN2P3-CPPM">
+        <Name>IN2P3-CPPM-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://marseillemon.mrs.grid.cnrs.fr:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>biomed</Owner>
+        <Owner>dteam</Owner>
+        <Owner>esr</Owner>
+        <Owner>egeode</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>hone</Owner>
+        <Owner>dzero</Owner>
+        <Owner>ops</Owner>
+        <Owner>cppm</Owner>
+        <Owner>auvergrid</Owner>
+        <Owner>vo.lapp.in2p3.fr</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rbroker.mrs.grid.cnrs.fr:7772,mds-vo-name=IN2P3-CPPM">
+        <Name>IN2P3-CPPM-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rbroker.mrs.grid.cnrs.fr:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>atlas</Owner>
+        <Owner>biomed</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+        <Owner>esr</Owner>
+        <Owner>egeode</Owner>
+        <Owner>lhcb</Owner>
+        <Owner>hone</Owner>
+        <Owner>dzero</Owner>
+        <Owner>auvergrid</Owner>
+        <Owner>cppm</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://sedpm.mrs.grid.cnrs.fr:8443/srm/managerv1,mds-vo-name=IN2P3-CPPM">
+        <Name>IN2P3-CPPM-srm</Name>
+        <Type>srm</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://sedpm.mrs.grid.cnrs.fr:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://sedpm.mrs.grid.cnrs.fr:8446/srm/managerv2,mds-vo-name=IN2P3-CPPM">
+        <Name>IN2P3-CPPM-srm</Name>
+        <Type>SRM</Type>
+        <Version>2.2.0</Version>
+        <Endpoint>httpg://sedpm.mrs.grid.cnrs.fr:8446/srm/managerv2</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+	<serviceDescription>
+		<serviceName>SHoundRedundantGroupList</serviceName>
+		<organisation>
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundRedundantGroupList</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundRedundantGroupList?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Gets all protein entries with the same sequence from the system</serviceDescriptionText>
+		<operations>
+			<serviceOperation>
+				<operationName>SHoundRedundantGroupList</operationName>
+				<operationDescriptionText>Looks for gi protein accessions that share the same sequence</operationDescriptionText>
+				<operationInputs>
+					<parameter>
+						<parameterName>giList</parameterName>
+						<parameterDescription>List of protein sequences</parameterDescription>
+						<semanticType>http://www.mygrid.org.uk/ontology#protein_sequence</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Ordered Collection</collectionSemanticType>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs>
+					<parameter>
+						<parameterName>result</parameterName>
+						<semanticType>http://www.mygrid.org.uk/ontology#GenBank_gene_id_%28GI%29</semanticType>
+						<transportDataType>String</transportDataType>
+						<collectionSemanticType>Collection</collectionSemanticType>
+					</parameter>
+
+				</operationOutputs>
+
+				<operationTask>http://www.mygrid.org.uk/ontology#searching</operationTask>
+				<operationResource>file:/C:/descriptions/mygrid-services-lite.rdfs#Entrez_%28GenBank%29_protein</operationResource>
+				<operationResourceContent>http://www.mygrid.org.uk/ontology#model_organism</operationResourceContent>
+				<operationMethod>http://www.mygrid.org.uk/ontology#bioinformatics_algorithm</operationMethod>
+				<operationApplication>http://www.mygrid.org.uk/ontology#blastp</operationApplication>
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

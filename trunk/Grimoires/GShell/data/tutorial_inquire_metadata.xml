@@ -1,0 +1,10 @@
+<find_entityByMetadata xmlns="http://www.grimoires.org/metadata.xsd">
+<metadataQueryBag>
+<metadataQuery>
+<metadataType>http://www.grimoires.org/SemanticType</metadataType>
+<metadataValue>
+<stringValue>DNA_Sequence</stringValue>
+</metadataValue>
+</metadataQuery>
+</metadataQueryBag>
+</find_entityByMetadata>

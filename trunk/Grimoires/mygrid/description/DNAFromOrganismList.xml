@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceDescriptions xmlns="http://www.mygrid.org.uk/feta/">
+	<serviceDescription>
+		<serviceName>SHoundDNAFromOrganismList</serviceName>
+		<organisation>
+			<organisationName>Blueprint</organisationName>
+			<organisationDescriptionText>The Blueprint Initiative</organisationDescriptionText>
+		</organisation>
+
+		<locationURL>http://seqhound.blueprint.org/SHoundDNAFromOrganismList</locationURL>
+		<interfaceWSDL>http://seqhound.blueprint.org/SHoundDNAFromOrganismList?wsdl</interfaceWSDL>
+		<serviceDescriptionText>Get an array of dna gi's for a given taxonomy array. 
+</serviceDescriptionText>
+		<operations>
+			<serviceOperation>
+				<operationName>SHoundDNAFromOrganismList</operationName>
+				<operationDescriptionText>Gets all DNA identifiers from a complete genomes list. Complete genome annotations are available from NCBI.
+</operationDescriptionText>
+				<operationInputs>
+					<parameter>
+						<parameterName>taxList</parameterName>
+					</parameter>
+
+					<parameter>
+						<parameterName>chromflags</parameterName>
+					</parameter>
+
+				</operationInputs>
+
+				<operationOutputs>
+					<parameter>
+						<parameterName>result</parameterName>
+					</parameter>
+
+				</operationOutputs>
+
+			</serviceOperation>
+
+		</operations>
+
+		<serviceType>SeqHound service</serviceType>
+	</serviceDescription>
+
+</serviceDescriptions>

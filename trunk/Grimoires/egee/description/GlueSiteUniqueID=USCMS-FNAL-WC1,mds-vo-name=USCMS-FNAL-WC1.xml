@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=USCMS-FNAL-WC1,mds-vo-name=USCMS-FNAL-WC1">
+    <Name>USCMS-FNAL-WC1</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto: cms-t1@fnal.gov</UserSupportContact>
+    <SysAdminContact>mailto: cms-t1@fnal.gov</SysAdminContact>
+    <SecurityContact>mailto: cms-t1@fnal.gov</SecurityContact>
+    <Location>Batavia, Illinois, USA</Location>
+    <Latitude>41.83296</Latitude>
+    <Longitude>-88.2523</Longitude>
+    <Web>http://uscms.org</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER 1</OtherInfo>
+    <OtherInfo>uscms.org</OtherInfo>
+    <StorageElement UniqueID="GlueSEUniqueID=cmssrm.fnal.gov,mds-vo-name=USCMS-FNAL-WC1">
+        <InformationServiceURL>ldap://uscmsbdii.fnal.gov:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="cms">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="mis">
+            <Path>/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="cms">
+            <Path>cms:/</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>959139712539</UsedSpace>
+            <AvailableSpace>1483929309836</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>ops:/NotWrittenToTape/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>959139712539</UsedSpace>
+            <AvailableSpace>1483929309836</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>dteam:/resilient/dteam/volatile</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>959139712539</UsedSpace>
+            <AvailableSpace>1483929309836</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://cmssrm.fnal.gov</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://cmssrm.fnal.gov</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://cmssrm.fnal.gov</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=httpg://cmssrm.fnal.gov:8443/srm/managerv1,mds-vo-name=USCMS-FNAL-WC1-CE">
+        <Name>USCMS-FNAL-WC1-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://cmssrm.fnal.gov:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>OSG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FNAL-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=UERJ-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>UERJ-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=PURDUE-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>PURDUE-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=WISCONSIN-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>WISCONSIN-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FLORIDA-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FLORIDA-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=UCSD-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>UCSD-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-UERJ_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FNAL-UERJ_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-FLORIDA_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FNAL-FLORIDA_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-UCSD_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FNAL-UCSD_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-NEBRASKA_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FNAL-NEBRASKA_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FZK-WISCONSIN_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FZK-WISCONSIN_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FZK-MIT_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FZK-MIT_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>ASGC-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=GRIDKA-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>GRIDKA-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=IN2P3-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>IN2P3-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=INFN-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>INFN-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=NDGF-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>NDGF-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=PIC-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>PIC-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=RAL-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>RAL-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-ASGC_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FNAL-ASGC_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-GRIDKA_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FNAL-GRIDKA_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-IN2P3_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FNAL-IN2P3_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-INFN_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FNAL-INFN_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-NDGF_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FNAL-NDGF_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-PIC_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FNAL-PIC_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-RAL_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FNAL-RAL_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FZK-CALTECH_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FZK-CALTECH_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CALTECH-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>CALTECH-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=NEBRASKA-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>NEBRASKA-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FZK-NEBRASKA_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FZK-NEBRASKA_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FZK-FLORIDA_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FZK-FLORIDA_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=SPRACE-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>SPRACE-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=MIT-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>MIT-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-CALTECH_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FNAL-CALTECH_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-PURDUE_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FNAL-PURDUE_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-WISCONSIN_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FNAL-WISCONSIN_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-SPRACE_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FNAL-SPRACE_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-MIT_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FNAL-MIT_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ESTONIA-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>ESTONIA-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>STAR-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-STAR_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FNAL-STAR_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-ESTONIA_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FNAL-ESTONIA_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FZK-PURDUE_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FZK-PURDUE_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FZK-UCSD_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FZK-UCSD_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CERN-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>CERN-FNAL_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FNAL-CERN_cmsstor20.fnal.gov_org.glite.ChannelAgent,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>FNAL-CERN_cmsstor20.fnal.gov_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_cmsstor20.fnal.gov_org.glite.FileTransfer,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>glite-data-transfer-fts_cmsstor20.fnal.gov</Name>
+        <Type>org.glite.FileTransfer</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://cmsstor20.fnal.gov:8443/glite-data-transfer-fts/services/FileTransfer</Endpoint>
+        <WSDL>https://cmsstor20.fnal.gov:8443/glite-data-transfer-fts/services/FileTransfer?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_cmsstor20.fnal.gov_org.glite.ChannelManagement,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>glite-data-transfer-fts_cmsstor20.fnal.gov-channel</Name>
+        <Type>org.glite.ChannelManagement</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://cmsstor20.fnal.gov:8443/glite-data-transfer-fts/services/ChannelManagement</Endpoint>
+        <WSDL>https://cmsstor20.fnal.gov:8443/glite-data-transfer-fts/services/ChannelManagement?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_cmsstor20.fnal.gov_org.glite.Delegation,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>glite-data-transfer-fts_cmsstor20.fnal.gov-delegation</Name>
+        <Type>org.glite.Delegation</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://cmsstor20.fnal.gov:8443/glite-data-transfer-fts/services/gridsite-delegation</Endpoint>
+        <WSDL>https://cmsstor20.fnal.gov:8443/glite-data-transfer-fts/services/gridsite-delegation?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-09T13:40:49.000-05:00</StartTime>
+        <Owner>cms</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://cmssrm.fnal.gov:8443/srm/managerv1,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>USCMS-FNAL-WC1-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://cmssrm.fnal.gov:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=uscmsbdii.fnal.gov:2136,mds-vo-name=USCMS-FNAL-WC1">
+        <Name>USCMS-FNAL-WC1-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://uscmsbdii.fnal.gov:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>cms</Owner>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+    </Service>
+</Site>

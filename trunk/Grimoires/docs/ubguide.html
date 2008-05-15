@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"><title>UDDI Browser User Guide - Updated for Grimoires</title></head>
+
+<body>
+<div style="text-align: center; color: rgb(0, 0, 102);">
+<div style="text-align: left;"> </div>
+<h1 style="text-align: left;">UDDI Browser 1.0-beta1 - User Guide<br>
+</h1>
+</div>
+<h2>Download <a href="http://www.uddibrowser.org/">UDDI Browser</a></h2>
+<h2>Contents</h2>
+<ul>
+  <li><a href="#Main_Window">The Main Window</a><br>
+  </li>
+  <li><a href="#Config_Reg">Configuring UDDI Registries</a><ul>
+  <li><a href="#fantasio">Configuration for Grimoires on fantasio</a></li>
+</ul>
+	</li>
+  <li><a href="#Searching">Searching</a></li>
+  <li><a href="#Deleting">Deleting</a></li>
+  <li><a href="#Scriptlets">Scriptlets</a></li>
+</ul>
+<h3><a name="Main_Window"></a>Main Window<br>
+</h3>
+When the UDDI Browser is launched the user is presented with a window
+that is split into three sections, containing search results, details on
+items selected in the search results and a log area detailing UDDI
+operations.<br>
+<br>
+<h3><a name="Config_Reg"></a>Configuring UDDI Registries</h3>
+The UDDI registry configuration can be acessed by selecting the
+"Manage" menu and by selecting the "UDDI Registries..." menu item.
+&nbsp;Multiple registries may be configured, and the UDDI Browser comes
+pre-configured with the following public registries:<br>
+<ul>
+  <li>IBM Test Registry</li>
+  <li>IBM Production Registry</li>
+  <li>Microsoft Test Registry</li>
+  <li>Microsoft Production Registry</li>
+  <li>SAP Registry</li>
+  <li>...<br>
+  </li>
+</ul>
+Each registry is configured with both the inquery and publish URL's,
+however please note that they will have to be updated with usernames and
+passwords for any registry writes to succeed (creation, updates and
+deletions).<br>
+<br>
+There are four pieces of information, of which only the inquery URL is
+mandatory. &nbsp;The UDDI specification requires no authentication for
+inquiries, so the username and password are only required for publishing
+purposes.<br>
+<br>
+<table style="text-align: left; width: 80%;" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">Name<br>
+      </td>
+      <td style="vertical-align: top;">Description<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Inquiry URL<br>
+      </td>
+      <td style="vertical-align: top;">This is the URL of the UDDI
+registry for inquiries<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Publish URL<br>
+      </td>
+      <td style="vertical-align: top;">This is the URL of the UDDI
+registry for publishing</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Username<br>
+      </td>
+      <td style="vertical-align: top;">The username used for publishing<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Password<br>
+      </td>
+      <td style="vertical-align: top;">The password used for publishing<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<span style="font-weight: bold;">Please note</span>: Only UDDI version
+2 registries are supported by this release.<p><a name="Searching0"></a>
+<h4><a name="fantasio">Configuration for Grimoires on fantasio</h4>
+There is a Grimoires registry deployed on fantasio.ecs.soton.ac.uk for public 
+access. To point the UDDI browser to it, set the inquiry URL to be 
+<a href="http://fantasio.ecs.soton.ac.uk:8080/grimoires/services/inquire">http://fantasio.ecs.soton.ac.uk:8080/grimoires/services/inquire</a>, and the publish 
+URL to be <a href="http://fantasio.ecs.soton.ac.uk:8080/grimoires/services/publish">http://fantasio.ecs.soton.ac.uk:8080/grimoires/services/publish</a>. Let the username and password empty.<br>
+</p>
+<h3><a name="Searching"></a>Searching</h3>
+The UDDI registry configuration can be acessed by selecting the
+"Manage" menu and by selecting the "Find..." menu item, or by selecting
+the "Search" toolbar button. Businesses, services and tModels can be
+searched using this screen. &nbsp;The target registry must be selected.
+&nbsp;To keep the results of previous searches de-select the checkbox
+titled "Clear contents from previous searches". Finally the find
+criteria must be supplied, which varies depending on whether you're
+searching for businesses, services or tModels.<br>
+<br>
+<h3><a name="Deleting"></a>Deleting</h3>
+There are currently two ways of deleting entries in a registry.
+&nbsp;The first method involves querying for the item and using the user
+interface to delete hte item. &nbsp;The second method is using
+scriplets. please refer to the <a href="#Scriptlets">Scriplets</a>
+section for more details. &nbsp;To delete items, select them in the
+results pane and select the toolbar button with "X".<br>
+<br>
+<h3><a name="Scriptlets"></a>Scriptlets</h3>
+The UDDI registry configuration can be acessed by selecting the
+"Manage" menu and by selecting the "Scriptlets..." menu item.
+&nbsp;Scriptlets allow users to define actions that can be stored and
+executed directly to target registries.<br>
+<br>
+</body></html>

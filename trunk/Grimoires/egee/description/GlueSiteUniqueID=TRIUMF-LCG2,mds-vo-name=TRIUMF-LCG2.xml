@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=TRIUMF-LCG2,mds-vo-name=TRIUMF-LCG2">
+    <Name>TRIUMF-LCG2</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:lcg_support@triumf.ca</UserSupportContact>
+    <SysAdminContact>mailto:lcg_support@triumf.ca</SysAdminContact>
+    <SecurityContact>mailto:lcg_support@triumf.ca</SecurityContact>
+    <Location>Vancouver, Canada</Location>
+    <Latitude>49.16</Latitude>
+    <Longitude>-123.07</Longitude>
+    <Web>http://grid.triumf.ca</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-1</OtherInfo>
+    <OtherInfo>CERN-CIC</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=ce1.triumf.ca,mds-vo-name=TRIUMF-LCG2">
+        <Name>ce1.triumf.ca</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce1.triumf.ca,GlueClusterUniqueID=ce1.triumf.ca,mds-vo-name=TRIUMF-LCG2">
+            <Name>ce1.triumf.ca</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="4.5" Name="ScientificSL"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Intel(R) Xeon(R) CPU            5160  @ 3.00GHz" ClockSpeed="3000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="3112" RAMSize="2600"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="3000" SF00="3000"/>
+            <Location LocalID="VO-atlas-cloud-CA">
+                <Name>VO-atlas-cloud-CA</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.31">
+                <Name>VO-atlas-production-12.0.31</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6">
+                <Name>VO-atlas-production-12.0.6</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6.1">
+                <Name>VO-atlas-production-12.0.6.1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6.2">
+                <Name>VO-atlas-production-12.0.6.2</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6.3">
+                <Name>VO-atlas-production-12.0.6.3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6.4">
+                <Name>VO-atlas-production-12.0.6.4</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.6.5">
+                <Name>VO-atlas-production-12.0.6.5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.7">
+                <Name>VO-atlas-production-12.0.7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.7.1">
+                <Name>VO-atlas-production-12.0.7.1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.95">
+                <Name>VO-atlas-production-12.0.95</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-12.0.95.1">
+                <Name>VO-atlas-production-12.0.95.1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.10">
+                <Name>VO-atlas-production-13.0.10</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.20">
+                <Name>VO-atlas-production-13.0.20</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.20.1">
+                <Name>VO-atlas-production-13.0.20.1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.42">
+                <Name>VO-atlas-release-11.0.42</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-release-11.0.5">
+                <Name>VO-atlas-release-11.0.5</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-tier-T1">
+                <Name>VO-atlas-tier-T1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=ce2.triumf.ca,mds-vo-name=TRIUMF-LCG2">
+        <Name>ce2.triumf.ca</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=ce2.triumf.ca,GlueClusterUniqueID=ce2.triumf.ca,mds-vo-name=TRIUMF-LCG2">
+            <Name>ce2.triumf.ca</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="4.5" Name="ScientificSL"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Intel(R) Xeon(R) CPU            5160  @ 3.00GHz" ClockSpeed="3000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="3112" RAMSize="2600"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="3000" SF00="3000"/>
+            <Location LocalID="VO-atlas-production-12.0.7">
+                <Name>VO-atlas-production-12.0.7</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+            <Location LocalID="VO-atlas-production-13.0.20.3">
+                <Name>VO-atlas-production-13.0.20.3</Name>
+                <Version>Prod</Version>
+                <Path>$VO_ATLAS_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=srm.triumf.ca,mds-vo-name=TRIUMF-LCG2">
+        <InformationServiceURL>ldap://srm.triumf.ca:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>129539</SizeTotal>
+        <SizeFree>68651</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="atlas">
+            <Path>/atlas</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="ops">
+            <Path>/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>1</UsedSpace>
+            <AvailableSpace>1</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://srm.triumf.ca</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="gsidcap">
+            <Endpoint>httpg://srm.triumf.ca</Endpoint>
+            <Type>gsidcap</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="srm_v1">
+            <Endpoint>httpg://srm.triumf.ca</Endpoint>
+            <Type>srm_v1</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=ALBERTA-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>ALBERTA-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=ASGC-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>ASGC-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=CNAF-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>CNAF-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=BNL-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>BNL-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=FZK-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>FZK-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=IN2P3-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>IN2P3-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=MCGILL-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>MCGILL-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=MONTREAL-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>MONTREAL-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=NDGF-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>NDGF-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=PIC-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>PIC-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=RAL-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>RAL-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=SARA-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>SARA-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=SFU-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>SFU-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TORONTO-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>TORONTO-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=VICTORIA-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>VICTORIA-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TRIUMF-ALBERTA_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>TRIUMF-ALBERTA_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TRIUMF-MCGILL_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>TRIUMF-MCGILL_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TRIUMF-MONTREAL_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>TRIUMF-MONTREAL_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TRIUMF-SFU_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>TRIUMF-SFU_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TRIUMF-TORONTO_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>TRIUMF-TORONTO_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TRIUMF-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>TRIUMF-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=TRIUMF-VICTORIA_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>TRIUMF-VICTORIA_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-ALBERTA_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>STAR-ALBERTA_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-MCGILL_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>STAR-MCGILL_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-MONTREAL_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>STAR-MONTREAL_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-SFU_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>STAR-SFU_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-TORONTO_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>STAR-TORONTO_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>STAR-TRIUMF_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=STAR-VICTORIA_fts.triumf.ca_org.glite.ChannelAgent,mds-vo-name=TRIUMF-LCG2">
+        <Name>STAR-VICTORIA_fts.triumf.ca_org.glite.ChannelAgent</Name>
+        <Type>org.glite.ChannelAgent</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>none</Endpoint>
+        <WSDL>none</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_fts.triumf.ca_org.glite.FileTransfer,mds-vo-name=TRIUMF-LCG2">
+        <Name>glite-data-transfer-fts_fts.triumf.ca</Name>
+        <Type>org.glite.FileTransfer</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://fts.triumf.ca:8443/glite-data-transfer-fts/services/FileTransfer</Endpoint>
+        <WSDL>https://fts.triumf.ca:8443/glite-data-transfer-fts/services/FileTransfer?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_fts.triumf.ca_org.glite.ChannelManagement,mds-vo-name=TRIUMF-LCG2">
+        <Name>glite-data-transfer-fts_fts.triumf.ca-channel</Name>
+        <Type>org.glite.ChannelManagement</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://fts.triumf.ca:8443/glite-data-transfer-fts/services/ChannelManagement</Endpoint>
+        <WSDL>https://fts.triumf.ca:8443/glite-data-transfer-fts/services/ChannelManagement?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=glite-data-transfer-fts_fts.triumf.ca_org.glite.Delegation,mds-vo-name=TRIUMF-LCG2">
+        <Name>glite-data-transfer-fts_fts.triumf.ca-delegation</Name>
+        <Type>org.glite.Delegation</Type>
+        <Version>3.3.0</Version>
+        <Endpoint>https://fts.triumf.ca:8443/glite-data-transfer-fts/services/gridsite-delegation</Endpoint>
+        <WSDL>https://fts.triumf.ca:8443/glite-data-transfer-fts/services/gridsite-delegation?wsdl</WSDL>
+        <Semantics>normal</Semantics>
+        <StartTime>2007-10-11T14:18:43.000-07:00</StartTime>
+        <Owner>atlas</Owner>
+        <Owner>dteam</Owner>
+        <Owner>ops</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=httpg://srm.triumf.ca:8443/srm/managerv1,mds-vo-name=TRIUMF-LCG2">
+        <Name>TRIUMF-LCG2-srm</Name>
+        <Type>srm_v1</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>httpg://srm.triumf.ca:8443/srm/managerv1</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

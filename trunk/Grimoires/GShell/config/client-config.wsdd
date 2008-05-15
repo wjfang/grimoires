@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+ <globalConfiguration>
+  <parameter name="adminPassword" value="admin"/>
+  <parameter name="sendXsiTypes" value="true"/>
+  <parameter name="sendMultiRefs" value="true"/>
+  <parameter name="sendXMLDeclaration" value="true"/>
+  <requestFlow>
+   <handler type="java:uk.ac.soton.itinnovation.grid.utils.wss4j.handler.WSOutboundHandler" >
+    <parameter name="action" value="Signature"/>
+    <parameter name="signaturePropFile" value="crypto.properties" />
+    <parameter name="signatureKeyIdentifier" value="DirectReference" />
+    <parameter name="passwordCallbackClass"
+      value="uk.ac.soton.ecs.iam.grid.utils.PWCallback"/>
+   </handler>
+  </requestFlow>
+  <responseFlow>
+   <handler type="java:org.apache.ws.axis.security.WSDoAllReceiver">
+    <parameter name="action" value="Signature"/>
+    <parameter name="signaturePropFile" value="crypto.properties" />
+    <parameter name="passwordCallbackClass"
+      value="uk.ac.soton.ecs.iam.grid.utils.PWCallback"/>
+   </handler>
+  </responseFlow>
+ </globalConfiguration>
+
+ <transport name="http" pivot="java:org.apache.axis.transport.http.CommonsHTTPSender"/>
+
+</deployment>

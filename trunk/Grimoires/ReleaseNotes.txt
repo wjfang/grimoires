@@ -1,0 +1,138 @@
+==========================================================
+Grimoires v1.1.1 Notes
+==========================================================
+- The following bugs are fixed in this release:
+1934 Remove SOAPMonitor invocation from web.xml
+1963 'Unauthorised' exception in GShell client not user-friendly
+1970 Source distribution doesn't create compatible binaries
+1971 Produced server binary should have acl + omii-sec by default
+1972 Produced client binary should have omii-sec by default
+1977 Produced server binary to use sesame backing store by def...
+
+- A common crypto.properties installed by OMII server and OMII client is used.
+
+- A common jar set installed by OMII server and OMII client is used:
+activation.jar                  jaxrpc.jar
+axis-ant.jar                    jdom-b8.jar
+axis.jar                        log4j-1.2.8.jar
+axis-jaxrpc-1.3.jar             log4j.properties
+axis-saaj-1.3.jar               mail.jar
+axis-wsdl4j-1.3.jar             opensaml-1.0.1.jar
+bouncycastle-jce-jdk13-119.jar  saaj.jar
+commons-codec-1.3.jar           wsdl4j.jar
+commons-discovery-0.2.jar       wss4j-itinnov-4.jar
+commons-discovery.jar           xalan-2.5.1.jar
+commons-httpclient-3.0-rc2.jar  xercesImpl-2.6.0.jar
+commons-logging-1.0.3.jar       xercesImpl.jar
+commons-logging.jar             xml-apis-2.0.2.jar
+itinnov-grid-auth-omii1.jar     xml-apis.jar
+itinnov-gridservit-omii1.jar    xmlParserAPIs-2.2.1.jar
+itinnov-grid-types-omii1.jar    xmlsec-1.2.1.jar
+itinnov-grid-utils-omii1.jar    xmlsec.jar
+
+==========================================================
+Grimoires v1.1.2 Notes
+==========================================================
+- Created a Grimoires client that complies with the OMII managed programme integration specification.
+
+- GShell/build.xml was removed and its content was merged into Grimoires/build.xml. The ant target jar-gshell 
+generates gshell.jar and build-client creates the client-side binary release.
+
+- Grimoires binary release's run.bat and run.sh (GShell scripts) are inside bin/.
+
+==========================================================
+Grimoires v1.2.0 Notes
+==========================================================
+- Fixed a concurrency bug. The concurrency framework is set up.
+
+- Added FETA support.
+
+- Implemented GrimoiresProxy that provides more convenient client side methods.
+
+==========================================================
+Grimoires v1.2.3 Notes
+==========================================================
+- This is an incremental release for v1.2.0.
+
+==========================================================
+Grimoires v1.5.0 Notes
+==========================================================
+- The following bugs are fixed in this release:
+2208	Port Grimoires to JDK 1.5
+2406	[FEATURE REQUEST] An easy-to-use client API
+2430	File should be manifest.properties and not Manifest.prope...
+2579	FINS version 1.1.2 document update
+2680	[OMII_3.2.0] End-of-line characters invalid for Mac OS X
+2686	[OMII_3.2.0] 'ls' function fails to work
+2890	Write permissions for files in Grimoires-1.2.2/lib required
+2891	Missing gshell.properties
+2892	Missing commons-beanutils-core.jar in grimoires/lib
+2955	client Gshell bug
+2968	Should not be able to enter null as input entry in GShell
+2974	Entity with lifetime not expiring
+
+- Added XMLView interface. See docs/xmlview.html.
+
+- Implemented XMLView configuration for mygrid feta schema.
+
+- Fixed the bug of getOperationByMessagePartReference() when there are
+two operations of the same name but in different namespace. See
+uk.ac.soton.ecs.grimoires.test.wsdl.BusinessLogicTestCase.testFindOperationByMessagePart().
+
+==========================================================
+Grimoires v1.5.1 Notes
+==========================================================
+- The following bugs are fixed in this release:
+2939	MIssing jars in the CLIENT lib
+2967	Release Notes and JUnit docs are out of date
+3058	Upgrade security to latest OMII WSS4j/handler configuration
+3358	[1.5.0] all the links on the deployed server site are wrong
+
+- Support XML as metadata value. See uk.ac.soton.ecs.grimoires.test.metadata.XmlValueTest.
+
+- Added web content at http://hostname:port/grimoires/.
+
+- A Grimoires monitor at http://hostname:port/grimoires/monitor.jsp.
+
+- A GrimoiresScript interpreter at http://hostname:port/grimoires/interpreter.html.
+
+- Re-organized junit tests. See uk.ac.soton.ecs.grimoires.test.BusinessLogicTestSuite
+and uk.ac.soton.ecs.grimoires.test.WebServiceTestSuite.
+
+- Implemented XMLView configuration for EGEE GLUE schema.
+
+==========================================================
+Grimoires v1.5.2 Notes
+==========================================================
+- The following bugs are fixed in this release:
+3396	Add remove entity into Gshell document
+
+- Updated GShell test.
+
+- Updated documentation: GShell, XMLView, etc.
+
+==========================================================
+Grimoires v1.6.0 Notes
+==========================================================
+- The following bugs are fixed in this release:
+3431	[NEW FEATURES] ListALL*** in gshell will be handy
+3432	Problems with version 1.5.1 - next ersion release check list
+
+- In build.xml, the "sesameMemory2Native" target is provided to convert 
+a file backup in-memory sesame triple store to a native sesame triple store.
+The target in build.xml shows converting 
+C:/Grimoires Triple Store Samples/sesame10.rdf
+to
+C:/Grimoires Triple Store Samples/sesame10.
+The arguments can be modified in order to convert users' stores.
+
+- Added a namespace mapping property file: nsmapping.properties. The 
+namespace mappings defined here can be used in XPath query in XMLView.
+
+- Added scalability-test.sh and throughtput-test.sh under OMII Grimoires client.
+
+==========================================================
+Grimoires v1.7.0 Notes
+==========================================================
+- Fixed a multi-threading bug in XMLView. XSL transformer is not thread safe.
+Use thread local transformer now.

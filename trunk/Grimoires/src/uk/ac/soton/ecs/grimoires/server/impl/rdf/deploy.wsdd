@@ -1,0 +1,49 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from Grimoires WSDL service -->
+
+  <service name="rdfSOAP" provider="java:RPC" style="document" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://www.grimoires.org/rdf"/>
+      <parameter name="wsdlServiceElement" value="Grimoires"/>
+      <parameter name="wsdlServicePort" value="rdfSOAP"/>
+      <parameter name="className" value="uk.ac.soton.ecs.grimoires.server.impl.rdf.RdfSOAPSkeleton"/>
+      <parameter name="wsdlPortType" value="RDF"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/rdf"
+        qname="ns:inquireRequest"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.rdf.InquireRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/rdf"
+        qname="ns:record"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.rdf.Record"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.grimoires.org/rdf"
+        qname="ns:inquireResponse"
+        type="java:uk.ac.soton.ecs.grimoires.server.impl.rdf.InquireResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

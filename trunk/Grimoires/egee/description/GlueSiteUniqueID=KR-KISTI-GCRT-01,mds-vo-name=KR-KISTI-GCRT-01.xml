@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=KR-KISTI-GCRT-01,mds-vo-name=KR-KISTI-GCRT-01">
+    <Name>KR-KISTI-GCRT-01</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto: jhkwak@kisti.re.kr</UserSupportContact>
+    <SysAdminContact>mailto: jhkwak@kisti.re.kr</SysAdminContact>
+    <SecurityContact>mailto: jhkwak@kisti.re.kr</SecurityContact>
+    <Location>Daejeon, Korea</Location>
+    <Latitude>36.366</Latitude>
+    <Longitude>127.366</Longitude>
+    <Web>unset</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>unset</OtherInfo>
+    <OtherInfo>unset</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=venus.gridcenter.or.kr,mds-vo-name=KR-KISTI-GCRT-01">
+        <Name>venus.gridcenter.or.kr</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=venus.gridcenter.or.kr,GlueClusterUniqueID=venus.gridcenter.or.kr,mds-vo-name=KR-KISTI-GCRT-01">
+            <Name>venus.gridcenter.or.kr</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.4" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="P4" ClockSpeed="2000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1024" RAMSize="512"/>
+            <Architecture SMPSize="1"/>
+            <Benchmark SI00="653" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <Cluster UniqueID="GlueClusterUniqueID=darthvader.kisti.re.kr,mds-vo-name=KR-KISTI-GCRT-01">
+        <Name>darthvader.kisti.re.kr</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=darthvader.kisti.re.kr,GlueClusterUniqueID=darthvader.kisti.re.kr,mds-vo-name=KR-KISTI-GCRT-01">
+            <Name>darthvader.kisti.re.kr</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.8" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="Pentium-D" ClockSpeed="3000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1025" RAMSize="2048"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="381" SF00="0"/>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=se-classic.gridcenter.or.kr,mds-vo-name=KR-KISTI-GCRT-01">
+        <InformationServiceURL>ldap://se-classic.gridcenter.or.kr:2135/mds-vo-name=local,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>multidisk</Architecture>
+        <StorageArea LocalID="ops">
+            <Path>/storage/gridcenter.or.kr/grid/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>7488448</UsedSpace>
+            <AvailableSpace>27926376</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/storage/gridcenter.or.kr/grid/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>7488452</UsedSpace>
+            <AvailableSpace>27926372</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="alice">
+            <Path>/storage/gridcenter.or.kr/grid/alice</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>7488452</UsedSpace>
+            <AvailableSpace>27926372</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://se-classic.gridcenter.or.kr</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=proxysrv.gridcenter.or.kr:7512,mds-vo-name=KR-KISTI-GCRT-01">
+        <Name>KR-KISTI-GCRT-01-myproxy</Name>
+        <Type>MyProxy</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>proxysrv.gridcenter.or.kr:7512</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=rbsrv.gridcenter.or.kr:7772,mds-vo-name=KR-KISTI-GCRT-01">
+        <Name>KR-KISTI-GCRT-01-rb</Name>
+        <Type>ResourceBroker</Type>
+        <Version>1.2.0</Version>
+        <Endpoint>rbsrv.gridcenter.or.kr:7772</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>alice</Owner>
+        <Owner>biomed</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=gsissh://vobox.gridcenter.or.kr:1975,mds-vo-name=KR-KISTI-GCRT-01">
+        <Name>KR-KISTI-GCRT-01-vobox</Name>
+        <Type>VOBOX</Type>
+        <Version>1.0.0</Version>
+        <Endpoint>gsissh://vobox.gridcenter.or.kr:1975</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>LCG</Owner>
+    </Service>
+</Site>

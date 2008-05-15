@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Site xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" UniqueID="GlueSiteUniqueID=ru-Moscow-GCRAS-LCG2,mds-vo-name=ru-Moscow-GCRAS-LCG2">
+    <Name>ru-Moscow-GCRAS-LCG2</Name>
+    <Description>LCG Site</Description>
+    <UserSupportContact>mailto:novikov@wdcb.ru</UserSupportContact>
+    <SysAdminContact>mailto:novikov@wdcb.ru</SysAdminContact>
+    <SecurityContact>mailto:novikov@wdcb.ru</SecurityContact>
+    <Location>Moscow, Russia</Location>
+    <Latitude>55.5</Latitude>
+    <Longitude>37.37</Longitude>
+    <Web>http://www.wdcb.ru</Web>
+    <Sponsor>none</Sponsor>
+    <OtherInfo>TIER-2</OtherInfo>
+    <OtherInfo>my-bigger-site.cern.ch</OtherInfo>
+    <Cluster UniqueID="GlueClusterUniqueID=grid8.wdcb.ru,mds-vo-name=ru-Moscow-GCRAS-LCG2">
+        <Name>grid8.wdcb.ru</Name>
+        <SubCluster UniqueID="GlueSubClusterUniqueID=grid8.wdcb.ru,GlueClusterUniqueID=grid8.wdcb.ru,mds-vo-name=ru-Moscow-GCRAS-LCG2">
+            <Name>grid8.wdcb.ru</Name>
+            <PhysicalCPUs>0</PhysicalCPUs>
+            <LogicalCPUs>0</LogicalCPUs>
+            <TmpDir>/tmp</TmpDir>
+            <WNTmpDir>/tmp</WNTmpDir>
+            <OperatingSystem Version="SL" Release="3.0.6" Name="Scientific Linux"/>
+            <Processor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ProcessorFullType" Vendor="intel" Model="P4" ClockSpeed="3000"/>
+            <NetworkAdapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="NetworkAdapterFullType" OutboundIP="true" InboundIP="false"/>
+            <MainMemory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MainMemoryFullType" VirtualSize="1025" RAMSize="512"/>
+            <Architecture SMPSize="2"/>
+            <Benchmark SI00="420" SF00="295"/>
+            <Location LocalID="VO-dteam-ITUtest1">
+                <Name>VO-dteam-ITUtest1</Name>
+                <Version>Prod</Version>
+                <Path>$VO_DTEAM_SW_DIR</Path>
+            </Location>
+        </SubCluster>
+    </Cluster>
+    <StorageElement UniqueID="GlueSEUniqueID=grid7.wdcb.ru,mds-vo-name=ru-Moscow-GCRAS-LCG2">
+        <InformationServiceURL>ldap://grid7.wdcb.ru:2170/mds-vo-name=resource,o=grid</InformationServiceURL>
+        <SizeTotal>0</SizeTotal>
+        <SizeFree>0</SizeFree>
+        <Architecture>disk</Architecture>
+        <StorageArea LocalID="ops">
+            <Path>/data/ops</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>76595436</UsedSpace>
+            <AvailableSpace>32921292</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="dteam">
+            <Path>/data/dteam</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>76595436</UsedSpace>
+            <AvailableSpace>32921292</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="eearth">
+            <Path>/data/eearth</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>76595436</UsedSpace>
+            <AvailableSpace>32921292</AvailableSpace>
+        </StorageArea>
+        <StorageArea LocalID="esr">
+            <Path>/data/esr</Path>
+            <Type>permanent</Type>
+            <Quota>0</Quota>
+            <MinFileSize>1</MinFileSize>
+            <MaxFileSize>10000</MaxFileSize>
+            <MaxData>100</MaxData>
+            <MaxNumFiles>10</MaxNumFiles>
+            <MaxPinDuration>10</MaxPinDuration>
+            <UsedSpace>76595436</UsedSpace>
+            <AvailableSpace>32921292</AvailableSpace>
+        </StorageArea>
+        <AccessProtocol LocalID="gsiftp">
+            <Endpoint>gsiftp://grid7.wdcb.ru</Endpoint>
+            <Type>gsiftp</Type>
+            <Version>1.0.0</Version>
+            <Capability>file transfer</Capability>
+        </AccessProtocol>
+        <AccessProtocol LocalID="rfio">
+            <Endpoint>classic</Endpoint>
+            <Type>rfio</Type>
+            <Version>1.0.0</Version>
+            <Capability>byte access</Capability>
+        </AccessProtocol>
+        <ControlProtocol LocalID="classic">
+            <Endpoint>classic</Endpoint>
+            <Type>classic</Type>
+            <Version>1.0.0</Version>
+            <Capability>control</Capability>
+        </ControlProtocol>
+    </StorageElement>
+    <Service UniqueID="GlueServiceUniqueID=grid8.wdcb.ru:2119,mds-vo-name=ru-Moscow-GCRAS-LCG2">
+        <Name>ru-Moscow-GCRAS-LCG2-org.glite.ce</Name>
+        <Type>org.glite.ce</Type>
+        <Version>2.4.20</Version>
+        <Endpoint>grid8.wdcb.ru:</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>esr</Owner>
+        <Owner>dteam</Owner>
+        <Owner>eearth</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=grid8.wdcb.ru:2136,mds-vo-name=ru-Moscow-GCRAS-LCG2">
+        <Name>ru-Moscow-GCRAS-LCG2-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://grid8.wdcb.ru:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>eearth</Owner>
+        <Owner>esr</Owner>
+    </Service>
+    <Service UniqueID="GlueServiceUniqueID=grid7.wdcb.ru:2136,mds-vo-name=ru-Moscow-GCRAS-LCG2">
+        <Name>ru-Moscow-GCRAS-LCG2-gridice</Name>
+        <Type>gridice</Type>
+        <Version>1.1.0</Version>
+        <Endpoint>ldap://grid7.wdcb.ru:2136/mds-vo-name=local,o=grid</Endpoint>
+        <Status>OK</Status>
+        <StatusInfo>No Problems</StatusInfo>
+        <WSDL>unset</WSDL>
+        <Semantics>unset</Semantics>
+        <Owner>ops</Owner>
+        <Owner>dteam</Owner>
+        <Owner>eearth</Owner>
+        <Owner>esr</Owner>
+    </Service>
+</Site>

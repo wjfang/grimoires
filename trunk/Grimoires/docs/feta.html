@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Grimoires Documentation - Publication and Discovery of Feta Description</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url('i_arrow_down.gif');
+	}
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script>
+</head>
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1>  Publication and Discovery of Feta Description</h1>
+<p>  <b><font color="#FF0000">This functionality has been retired. Please refer 
+to <a href="xmlview.html">the XMLView interface</a> for publishing and 
+discovering Feta description.</font></b></p>
+<p />
+<div class="twikiToc">
+<ul>
+<li> <a href="#Lifetime">Publication and Discovery of Feta Description</a>
+<ul>
+<li> <a href="#Feta">Feta Description</a>
+<li> <a href="#Publication">Publication</a></li>
+<li> <a href="#Retrieval">Retrieval</a></li>
+<li> <a href="#Discovery">Discovery</a></li>
+<ul><li><a href="#ByTask">By task</a></li>
+<li><a href="#ByInput">By input/output semantic type</a></li>
+<li><a href="#ByApplication">By application</a></li>
+<li><a href="#ByMethod">By method</a></li>
+<li><a href="#ByResource">By resource</a></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p />
+This document describes a scenario where users can<ul>
+	<li>publish a feta description into the Grimoires registry,</li>
+	<li>retrieve a published feta description from the Grimoires registry, and 
+	</li>
+	<li>discover a feta description using either canned query or free form 
+	query.</li>
+	</ul>
+<p>The described scenario will be implemented as a prototype for the demo 
+purpose.</p>
+<h2><a name="Feta"></a>Feta Description </h2>
+	The schema of a feta description can be found <a href="common.xsd">here</a>.
+	<p>A sample feta description looks like:</p>
+<pre>
+&lt;serviceDescriptions  xmlns="pd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="pd /C:/Program Files/taverna-workbench-1.2/./plugins/pedro/services/model/common.xsd">
+	&lt;serviceDescription >
+		&lt;serviceName>SHound3DbWhat&lt;/serviceName>
+		&lt;organisation >
+			&lt;organisationName>Blueprint&lt;/organisationName>
+			&lt;organisationDescriptionText>The Blueprint Initiative&lt;/organisationDescriptionText>
+		&lt;/organisation>
+		&lt;locationURL>http://seqhound.blueprint.org/&lt;/locationURL>
+		&lt;interfaceWSDL>http://seqhound.blueprint.org/&lt;/interfaceWSDL>
+		&lt;serviceDescriptionText>Finds out what kind of molecules are contained in a 3-D structure.&lt;/serviceDescriptionText>
+		&lt;operations >
+			&lt;serviceOperation >
+				&lt;operationName>SHound3DbWhat&lt;/operationName>
+				&lt;operationInputs >
+					&lt;parameter >
+						&lt;parameterName>mmdbid&lt;/parameterName>
+						&lt;semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_record_id&lt;/semanticType>
+						&lt;transportDataType>String&lt;/transportDataType>
+						&lt;collectionSemanticType>Single&lt;/collectionSemanticType>
+					&lt;/parameter>
+				&lt;/operationInputs>
+				&lt;operationOutputs >
+					&lt;parameter >
+						&lt;parameterName>result&lt;/parameterName>
+						&lt;semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_record_id&lt;/semanticType>
+						&lt;transportDataType>String&lt;/transportDataType>
+						&lt;collectionSemanticType>Single&lt;/collectionSemanticType>
+					&lt;/parameter>
+				&lt;/operationOutputs>
+				&lt;operationTask>http://www.mygrid.org.uk/ontology#searching&lt;/operationTask>
+				&lt;operationResource>http://www.mygrid.org.uk/ontology#PDB&lt;/operationResource>
+				&lt;operationResourceContent>http://www.mygrid.org.uk/ontology#model_organism&lt;/operationResourceContent>
+			&lt;/serviceOperation>
+		&lt;/operations>
+		&lt;serviceType>SeqHound service&lt;/serviceType>
+	&lt;/serviceDescription>
+&lt;/serviceDescriptions>
+</pre>
+<p/>
+<h2><a name="Publication"></a>Publication </h2>
+When being published into Grimoires, the feta description will be transformed 
+into Grimiores' data model, which is UDDI + WSDL + Metadata. In particular,<ul>
+	<li>serviceDescription is transformed to a UDDI service,</li>
+	<li>serviceDescription/serviceType to the metadata attached to the above 
+	service,</li>
+	<li>serviceDescription/Organization to a UDDI business who owns the above 
+	service,</li>
+	<li>serviceDescription/locationURL to the service end point in the UDDI 
+	binding template,</li>
+	<li>serviceDescription/operations to a WSDL, which is also represented by a 
+	tModel that acts as the technical interface of the above binding template,</li>
+	<li>serviceDescription/operations/serviceOperation to WSDL operation,</li>
+	<li>serviceDescription/operations/serviceOperation/operationInputs and 
+	serviceDescription/operations/serviceOperation/operationOutputs to WSDL 
+	message parts,</li>
+	<li>serviceDescription/operations/serviceOperation/operationTask etc. to 
+	metadata attached to the corresponding WSDL operation</li>
+	<li>serviceDescription/operations/serviceOperation/operationInputs/semanticType 
+	etc. to metadata attached to the corresponding WSDL message part,</li>
+	<li>etc.</li>
+</ul>
+<h2><a name="Retrieval"></a>Retrieval</h2>
+<p>The retrieval of published feta description is supported. The result of the 
+retrieval must be no different from the previously published one.</p>
+<h2><a name="Discovery"></a>Discovery</h2>
+<p />
+All canned feta queries can be supported by using the feta description schema as 
+the expression for queries. That is, &lt;serviceDescription/&gt; is used as a service 
+template, with searching criteria filled in and unknown information left blank. 
+Further benefits are:<ul>
+	<li>Multiple queries can be issued at the same time to save the 
+	communication time,</li>
+	<li>Multiple searching criteria can be combined in one query, leaving the 
+	join work to the registry.</li>
+	</ul>
+<p />
+<h4><a name="ByTask"></a>By task</h4>
+<p>Find a feta service description which has an operation doing &quot;searching&quot;.</p>
+<h5>Feta RDF query</h5>
+<pre>
+SELECT 
+       ?descLoc, ?servName, ?opName 
+WHERE
+       (?s mg:hasServiceDescriptionLocation ?descLoc)
+       (?s mg:hasServiceNameText ?servName)
+       (?s mg:hasOperation ?op)
+       (?op mg:hasOperationNameText ?opName)
+       (?op mg:performsTask ?t)
+       (?t rdf:type mg:searching)
+ USING
+     mg for &lt;http://www.mygrid.org.uk/ontology#>
+</pre>
+<h5>An equivalent service template in XML</h5>
+<pre>
+&lt;serviceDescriptions  xmlns="pd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="pd /C:/Program Files/taverna-workbench-1.2/./plugins/pedro/services/model/common.xsd">
+	&lt;serviceDescription >
+		&lt;operations >
+			&lt;serviceOperation >
+				&lt;operationTask>http://www.mygrid.org.uk/ontology#searching&lt;/operationTask>
+			&lt;/serviceOperation>
+		&lt;/operations>
+	&lt;/serviceDescription>
+&lt;/serviceDescriptions>
+</pre>
+<h5>Expected result</h5>
+<p>The matched feta description is retrieved.</p>
+<p />
+<h4><a name="ByInput"></a>By input/output semantic type</h4>
+<p>Find a feta service description which has an operation accepts or returns 
+data of the given semantic type.</p>
+<h5>Feta RDF query</h5>
+<pre>
+SELECT 
+       ?descLoc, ?servName, ?opName 
+WHERE
+       (?s mg:hasServiceDescriptionLocation ?descLoc)
+       (?s mg:hasServiceNameText ?servName)
+       (?s mg:hasOperation ?op)
+       (?op mg:hasOperationNameText ?opName)
+       (?op mg:inputParameter ?par)
+       (?par mg:mygInstance ?Y)
+       (mg:biological_sequence_id rdfs:subClassOf ?Y)
+ USING
+     mg for &lt;http://www.mygrid.org.uk/ontology#>
+     rdfs for &lt;http://www.w3.org/2000/01/rdf-schema#> 
+</pre>
+<h5>An equivalent service template in XML</h5>
+<pre>
+&lt;serviceDescriptions  xmlns="pd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="pd /C:/Program Files/taverna-workbench-1.2/./plugins/pedro/services/model/common.xsd">
+	&lt;serviceDescription >
+		&lt;operations >
+			&lt;serviceOperation >
+				&lt;operationInputs >
+					&lt;parameter >
+						&lt;semanticType>http://www.mygrid.org.uk/ontology#bioinformatics_record_id&lt;/semanticType>
+					&lt;/parameter>
+				&lt;/operationInputs>
+			&lt;/serviceOperation>
+		&lt;/operations>
+	&lt;/serviceDescription>
+&lt;/serviceDescriptions></pre>
+<h5>Expected result</h5>
+<p>The matched feta description is retrieved.</p><h4><a name="ByApplication"></a>By application</h4>
+<p>Todo. <p/>
+<p />
+<h4><a name="ByMethod"></a>By method</h4>
+	<p>Todo. </p>
+<p />
+<h4><a name="ByResource"></a>By resource</h4>
+<p>Todo. <p/>
+<p />
+	<p/>
+<p />
+</div>
+
+</body></html>

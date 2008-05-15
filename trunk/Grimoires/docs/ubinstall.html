@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Grimoires Documentation - Installation Guide - UDDI Browser</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+<style type="text/css" media="all">
+	/* Default TWiki layout */
+	@import url("./layout.css");
+	/* Default TWiki style */
+	@import url("./style.css");
+	/* Custom overriding layout per web or per topic */
+	@import url("%USERLAYOUTURL%");
+	/* Custom overriding style per web or per topic */
+	@import url("%USERSTYLEURL%");
+	.twikiToc li {
+		list-style-image:url('i_arrow_down.gif');
+	}
+	.twikiWebIndicator {
+		background-color:#D0D0D0;
+	}
+</style>
+<style type="text/css" media="all"></style>
+<script type="text/javascript">
+<!-- HIDE
+	function initPage() { }
+-->
+</script>
+</head>
+<body class="twikiViewPage twikiPrintPage">
+<div class="twikiMiddleContainer"><div class="twikiMain"><div class="twikiTopic">
+<h1><a name="Grimoires_Release_Notes"> </a> Installation Guide - UDDI Browser</h1>
+<p />
+<div class="twikiToc">
+<ul>
+<li> <a href="#Grimoires_Release_Notes">Installation Guide - UDDI Browser</a>
+<ul>
+<li> <a href="#pre">Prerequisite</a>
+</li>
+<li> <a href="#installation">Installation</a></li>
+<li> <a href="#secure">Make SOAP message signed for UDDI browser</a></li>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+This document describes how to install UDDI browser, and how to make UDDI 
+browser work in the OMII client environment that requires all SOAP messages 
+signed using the X509 certificate managed by the OMII client.<h2><a name="pre"> </a>Prerequisite</h2>
+<ol>
+	<li>Download UDDI Browser 0.2. When this document is being written, it is at
+	<a href="http://prdownloads.sourceforge.net/uddibrowser/ub-0.2-bin.zip?download">
+	http://prdownloads.sourceforge.net/uddibrowser/ub-0.2-bin.zip?download</a></li>
+	<li>Install OMII client 2.0 according to OMII's documentation. Assume it is 
+	installed at the &quot;/OMIICLIENT/&quot; directory. </li>
+</ol>
+<p />
+<p />
+<h2><a name="installation"></a>Installation </h2>
+<p>The installation is straightforward. Just unzip the previously downloaded zip 
+file. Assume it is unzipped to the &quot;/ub/&quot; directory. In the &quot;/ub/bin/&quot; 
+directory, you will see two files: &quot;ub.bat&quot; and &quot;build.xml&quot;. On the Windows 
+platform, invoke &quot;ub.bat&quot; to run UDDI Browser. Or, on both Windows and 
+Linux/Unix, use &quot;ant&quot; to run UDDI browser.</p>
+<h2><a name="secure"></a> Make SOAP message signed for UDDI browser </h2>
+<p>By default, UDDI Browser does not support signing SOAP message using X509 
+certificate that is standardized in WS-Security. In this section, we show how to 
+configure UDDI browser in order to make that SOAP messages sent and received by 
+UDDI browser are signed using the X509 certificate managed by the OMII client 
+environment.</p>
+<ol>
+	<li>Modify the &quot;/ub/config/saop-transport.prop&quot; file: set the value of the 
+	property &quot;TransportClassName&quot; to be 
+	&quot;org.uddi4j.transport.ApacheAxisTransport&quot;. </li>
+	<li>Copy all the files in the &quot;/OMIICLIENT/conf&quot; directory to &quot;/ub/bin/&quot; 
+	directory. </li>
+	<li>
+	Add the following content to the &quot;/ub/bin/build.xml&quot; file, before &quot;&lt;/project&gt;&quot;: 
+<pre>
+&lt;property name=&quot;omii.client.home&quot; value=&quot;/OMIICLIENT&quot;/&gt;
+
+&lt;path id=&quot;omii.classpath&quot;&gt;
+	&lt;pathelement location=&quot;bin&quot;/&gt;
+	&lt;fileset dir=&quot;${omii.client.home}/lib&quot;&gt; 
+		&lt;include name=&quot;*.*&quot;/&gt;
+	&lt;/fileset&gt;
+	&lt;path refid=&quot;classpath&quot;/&gt;
+&lt;/path&gt;
+
+&lt;target name=&quot;omii&quot;&gt;
+	&lt;java classname=&quot;org.uddibrowser.UDDIBrowser&quot; fork=&quot;yes&quot; failonerror=&quot;yes&quot;&gt;
+	&lt;sysproperty key=&quot;uddibrowser.configdir&quot; value=&quot;config&quot;/&gt;
+	&lt;classpath refid=&quot;omii.classpath&quot;/&gt; &lt;/java&gt;
+&lt;/target&gt;
+</pre>
+	<li>
+	Make sure the &quot;server-config.wsdd&quot; file at the Grimoires server
+contains the following line:
+	</li>
+
+
+</ol>
+<pre>    &lt;parameter name=&quot;enableNamespacePrefixOptimization&quot; value=&quot;false&quot;/&gt; </pre>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+This line should be inside the &quot;&lt;globalConfiguration&gt;&quot; element.
+</div>
+
+</body></html>
